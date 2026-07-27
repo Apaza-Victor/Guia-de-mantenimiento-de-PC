@@ -97,6 +97,7 @@ function closeNav() {
 /* === ACCORDIONS === */
 function initAccordions() {
   document.querySelectorAll('.accordion-header').forEach(header => {
+    if (header.hasAttribute('onclick')) return;
     header.addEventListener('click', () => {
       const item = header.parentElement;
       const wasOpen = item.classList.contains('open');
