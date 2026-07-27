@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redes - TechGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <i class="bi bi-cpu"></i>
+    <span>Tech<span>Guide</span></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">Inicio</div>
+    <a class="sidebar-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Ensamblaje</div>
+    <a class="sidebar-link" href="ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
+    <a class="sidebar-link" href="ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
+    <a class="sidebar-link" href="ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
+    <a class="sidebar-link" href="ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
+    <a class="sidebar-link" href="ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Mantenimiento</div>
+    <a class="sidebar-link" href="mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Redes</div>
+    <a class="sidebar-link active" href="redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
+    <a class="sidebar-link" href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
+    <a class="sidebar-link" href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
+    <a class="sidebar-link" href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
+    <a class="sidebar-link" href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Referencia</div>
+    <a class="sidebar-link" href="recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+    <a class="sidebar-link" href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
+  </div>
+</aside>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content" data-aos="fade-up">
+      <h1><i class="bi bi-globe2" style="color:var(--accent2);"></i> <span class="hl">Redes</span> de Computadoras</h1>
+      <p>Fundamentos de redes, protocolos TCP/IP y OSI, topologias, dispositivos, direccionamiento IP y comandos esenciales de diagnostico.</p>
+      <div class="page-hero-chips">
+        <span class="pchip pchip-b">TCP/IP</span>
+        <span class="pchip pchip-b">Modelo OSI</span>
+        <span class="pchip pchip-b">Topologias</span>
+        <span class="pchip pchip-b">IP &amp; Subred</span>
+        <span class="pchip pchip-b">Comandos CMD</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TCP/IP Y OSI -->
+  <div class="content-section" id="tcp-osi" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-globe2"></i> Fundamentos de Redes</h2>
+    <p class="section-subtitle">TCP/IP · Modelo OSI · Tipos de red</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon">🌐</span>
+      <div class="content"><strong>¿Que es una red informatica?</strong> Un enlace a traves del cual dos o mas dispositivos se comunican mediante medios fisicos o inalambricos para intercambiar datos. La red domestica tipica: Proveedor de Internet → Router/Modem (procesa y redirige paquetes) → dispositivos conectados.</div>
+    </div>
+
+    <div class="accordion open" id="osi-acc">
+      <div class="accordion-header" onclick="toggleAccordion('osi-acc')">
+        <div class="accordion-title-row"><span class="accordion-icon">📶</span><div><div class="accordion-title">Modelo OSI y Pila TCP/IP</div><div class="accordion-subtitle">Comparativa de capas · protocolos · PDUs · correspondencia funcional</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="grid-2">
+          <div>
+            <p class="subhead">Modelo OSI (7 capas)</p>
+            <table class="osi-table">
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">7</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Aplicacion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">HTTP, FTP, DNS, SMTP, SNMP, RIP</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">6</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Presentacion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">SSL/TLS, JPEG, ZIP — semantica</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">5</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Sesion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">NetBIOS, RPC — mantiene enlace</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-green)">4</span></td><td style="color:var(--accent-green);font-weight:700;font-size:.8rem">Transporte</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">TCP, UDP — Segmento</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-yellow)">3</span></td><td style="color:var(--accent-yellow);font-weight:700;font-size:.8rem">Red</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">IP, ICMP, ARP, IGMP — Paquete</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-orange)">2</span></td><td style="color:var(--accent-orange);font-weight:700;font-size:.8rem">Enlace datos</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">Ethernet, Wi-Fi, Frame Relay — Trama</td></tr>
+              <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-orange)">1</span></td><td style="color:var(--accent-orange);font-weight:700;font-size:.8rem">Fisica</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">Cable, señal electrica/optica, bits</td></tr>
+            </table>
+          </div>
+          <div>
+            <p class="subhead">Pila TCP/IP (4 capas)</p>
+            <div class="tcpip-stack">
+              <div class="layer-block layer-app"><span class="layer-name">Aplicacion</span><span class="layer-pdu">HTTP · FTP · DNS · SMTP</span></div>
+              <div class="layer-block layer-trans"><span class="layer-name">Transporte</span><span class="layer-pdu">TCP · UDP · Segmento</span></div>
+              <div class="layer-block layer-inet"><span class="layer-name">Internet</span><span class="layer-pdu">IP · ICMP · ARP · Paquete</span></div>
+              <div class="layer-block layer-link"><span class="layer-name">Acceso a Red</span><span class="layer-pdu">Ethernet · Wi-Fi · Trama</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>Mnemonico OSI (7→1)</strong> "All People Seem To Need Data Processing" → Application, Presentation, Session, Transport, Network, Data-link, Physical. TCP/IP se remonta a 1972 cuando el Departamento de Defensa de EE.UU. lo uso para enlazar su red.</div>
+        </div>
+        <div class="info-box info-note mt-1">
+          <span class="icon">📦</span>
+          <div class="content"><strong>Contenido de los paquetes de red</strong> Cada paquete contiene Cabecera (Direcciones MAC + Direcciones IP + Puertos) + Datos + CRC (Comprobacion de Redundancia Ciclica para deteccion de errores). El overhead es toda la informacion adicional a los datos puros.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="tipos-red">
+      <div class="accordion-header" onclick="toggleAccordion('tipos-red')">
+        <div class="accordion-title-row"><span class="accordion-icon">🗺️</span><div><div class="accordion-title">Tipos de Redes por Extension</div><div class="accordion-subtitle">PAN · LAN · MAN · WAN · GAN</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Nombre completo</th><th>Extension</th><th>Ejemplo tipico</th></tr>
+          <tr><td>PAN</td><td>Personal Area Network</td><td>~10 metros</td><td>Bluetooth entre 2 dispositivos</td></tr>
+          <tr><td>LAN</td><td>Local Area Network</td><td>Hasta 200 metros</td><td>Red domestica u oficina; conecta hw y sw en entorno proximo</td></tr>
+          <tr><td>MAN</td><td>Metropolitan Area Network</td><td>Hasta 50 km</td><td>Varias LAN corporativas enlazadas en una ciudad</td></tr>
+          <tr><td>WAN</td><td>Wide Area Network</td><td>Kilometros / global</td><td>Internet; se extiende por ciudades, paises y continentes</td></tr>
+          <tr><td>GAN</td><td>Generic Access Network</td><td>Global / movil</td><td>Redes celulares con handoff entre LAN y WAN</td></tr>
+        </table></div>
+        <div class="info-box info-note mt-2">
+          <span class="icon">📡</span>
+          <div class="content"><strong>Redes inalambricas vs cableadas</strong> Las redes cableadas poseen mayor tasa de transferencia de datos y mayor seguridad. Las inalambricas admiten mas tipos de dispositivos. Toda red inalambrica moderna tiene como base una interconexion de dispositivos cableados.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="ethernet">
+      <div class="accordion-header" onclick="toggleAccordion('ethernet')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔗</span><div><div class="accordion-title">Normas Ethernet (IEEE 802)</div><div class="accordion-subtitle">10BaseT · 100BaseTX · 1000BaseT · 10GBaseT</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Las normas Ethernet (IEEE 802 — Institute of Electrical and Electronic Engineer) estandarizan el funcionamiento de las redes mediante protocolos para enviar y recibir informacion en tramas o paquetes bajo una identificacion especifica.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Norma</th><th>Velocidad</th><th>Cable</th><th>Longitud max.</th><th>Notas clave</th></tr>
+          <tr><td>10BaseT</td><td>10 Mbit/s</td><td>UTP CAT3</td><td>100 m</td><td>Primera Ethernet practica; obsoleta</td></tr>
+          <tr><td>100BaseTX</td><td>100 Mbps</td><td>UTP 8 hilos</td><td>100 m</td><td>Fast Ethernet; ancho de banda 25 MHz</td></tr>
+          <tr><td>1000BaseT</td><td>1 Gbit/s</td><td>UTP CAT5e (4 pares)</td><td>100 m</td><td>Gigabit Ethernet; estandar actual</td></tr>
+          <tr><td>1000BaseTX</td><td>1 Gbit/s</td><td>UTP CAT6</td><td>100 m</td><td>Para servidores exigentes</td></tr>
+          <tr><td>10GBaseT</td><td>10 Gbit/s</td><td>UTP CAT6a / CAT7</td><td>100 m</td><td>Data centers, backbone corporativo</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="protocolos">
+      <div class="accordion-header" onclick="toggleAccordion('protocolos')">
+        <div class="accordion-title-row"><span class="accordion-icon">📋</span><div><div class="accordion-title">Protocolos de Red Esenciales</div><div class="accordion-subtitle">Aplicacion · transporte · red · funcion de cada uno</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Protocolo</th><th>Capa OSI</th><th>Puerto</th><th>Funcion</th></tr>
+          <tr><td>HTTP / HTTPS</td><td>7 Aplicacion</td><td>80 / 443</td><td>Transferencia web. HTTPS = cifrado TLS.</td></tr>
+          <tr><td>FTP / SFTP</td><td>7 Aplicacion</td><td>21 / 22</td><td>Transferencia de archivos. SFTP usa tunel SSH.</td></tr>
+          <tr><td>DNS</td><td>7 Aplicacion</td><td>53</td><td>Traduce nombres de dominio a IPs.</td></tr>
+          <tr><td>DHCP</td><td>7 Aplicacion</td><td>67/68 UDP</td><td>Asigna IPs automaticamente a dispositivos.</td></tr>
+          <tr><td>SMTP / IMAP / POP3</td><td>7 Aplicacion</td><td>25 / 143 / 110</td><td>Envio y recepcion de correo electronico.</td></tr>
+          <tr><td>SSH</td><td>7 Aplicacion</td><td>22</td><td>Acceso remoto seguro a servidores Linux.</td></tr>
+          <tr><td>Telnet</td><td>7 Aplicacion</td><td>23</td><td>Acceso remoto sin cifrado. Obsoleto e inseguro.</td></tr>
+          <tr><td>SNMP</td><td>7 Aplicacion</td><td>161/162</td><td>Monitoreo y gestion de dispositivos de red.</td></tr>
+          <tr><td>TCP</td><td>4 Transporte</td><td>Variable</td><td>Orientado a conexion, fiable, control de errores.</td></tr>
+          <tr><td>UDP</td><td>4 Transporte</td><td>Variable</td><td>Sin conexion, rapido, sin garantia. Streaming/gaming.</td></tr>
+          <tr><td>IP (IPv4/IPv6)</td><td>3 Red</td><td>---</td><td>Direccionamiento y enrutamiento de paquetes.</td></tr>
+          <tr><td>ICMP</td><td>3 Red</td><td>---</td><td>Mensajes de control: ping, traceroute, errores.</td></tr>
+          <tr><td>ARP</td><td>2/3</td><td>---</td><td>Resuelve IP a direccion MAC en la LAN.</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="ipv6">
+      <div class="accordion-header" onclick="toggleAccordion('ipv6')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔢</span><div><div class="accordion-title">IPv6 — Fundamentos</div><div class="accordion-subtitle">Formato · tipos de direccion · diferencias con IPv4</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Caracteristica</th><th>IPv4</th><th>IPv6</th></tr>
+          <tr><td>Longitud</td><td>32 bits</td><td>128 bits</td></tr>
+          <tr><td>Formato</td><td>192.168.1.1 (decimal)</td><td>2001:db8::1 (hexadecimal)</td></tr>
+          <tr><td>Direcciones totales</td><td>~4.3 mil millones</td><td>3.4 x 10^38</td></tr>
+          <tr><td>Config. automatica</td><td>Requiere DHCP</td><td>SLAAC (sin servidor)</td></tr>
+          <tr><td>NAT requerido</td><td>Si (por escasez)</td><td>No (cada dispositivo tiene IP publica)</td></tr>
+          <tr><td>Loopback</td><td>127.0.0.1</td><td>::1</td></tr>
+          <tr><td>Broadcast</td><td>Si</td><td>No (usa multicast)</td></tr>
+          <tr><td>Seguridad integrada</td><td>Opcional (IPSec)</td><td>IPSec nativo</td></tr>
+        </table></div>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="code-lang">comandos IPv6 — Windows y Linux</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Ver configuracion IPv6 Windows</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span>                  <span class="cmd-comment"># Muestra IPv4 e IPv6</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-6</span> google.com        <span class="cmd-comment"># Ping forzando IPv6</span>
+
+<span class="cmd-comment"># Ver configuracion IPv6 Linux</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip</span> <span class="cmd-flag">-6</span> addr show           <span class="cmd-comment"># Mostrar direcciones IPv6</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ping6</span> google.com          <span class="cmd-comment"># Ping IPv6</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">traceroute6</span> google.com    <span class="cmd-comment"># Traceroute IPv6</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="wifi-estandares">
+      <div class="accordion-header" onclick="toggleAccordion('wifi-estandares')">
+        <div class="accordion-title-row"><span class="accordion-icon">📶</span><div><div class="accordion-title">Estandares Wi-Fi (IEEE 802.11)</div><div class="accordion-subtitle">Wi-Fi 4 al 7 · frecuencias · velocidades · alcance</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Estandar</th><th>Nombre Wi-Fi</th><th>Frecuencia</th><th>Velocidad max.</th><th>Alcance aprox.</th><th>Anio</th></tr>
+          <tr><td>802.11n</td><td>Wi-Fi 4</td><td>2.4 / 5 GHz</td><td>600 Mbps</td><td>70 m interior</td><td>2009</td></tr>
+          <tr><td>802.11ac</td><td>Wi-Fi 5</td><td>5 GHz</td><td>3.5 Gbps</td><td>35 m interior</td><td>2013</td></tr>
+          <tr><td>802.11ax</td><td>Wi-Fi 6</td><td>2.4 / 5 GHz</td><td>9.6 Gbps</td><td>30 m interior</td><td>2019</td></tr>
+          <tr><td>802.11ax</td><td>Wi-Fi 6E</td><td>2.4 / 5 / 6 GHz</td><td>9.6 Gbps</td><td>Menor en 6 GHz</td><td>2021</td></tr>
+          <tr><td>802.11be</td><td>Wi-Fi 7</td><td>2.4 / 5 / 6 GHz</td><td>46 Gbps</td><td>Similar Wi-Fi 6</td><td>2024</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>2.4 GHz vs 5 GHz vs 6 GHz</strong> 2.4 GHz: mayor alcance, mas interferencias. 5 GHz: mas velocidad, menor alcance, menos interferencias. 6 GHz (Wi-Fi 6E/7): maxima velocidad, minima interferencia, alcance mas corto.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TOPOLOGIAS -->
+  <div class="content-section" id="topologias" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-diagram-3"></i> Topologias de Red</h2>
+    <p class="section-subtitle">Cableadas e inalambricas · Ventajas · Desventajas · Redes mixtas</p>
+
+    <div class="topo-grid">
+      <div class="topo-card">
+        <h4>🚌 Bus / Lineal</h4>
+        <p>Terminales y dispositivos conectados a una sola linea (bus) con terminador en cada extremo. Cable coaxial o Ethernet 10Base2. Un paquete se envia y es presentado a todas las computadoras; cada una analiza la direccion para saber si le corresponde.</p>
+        <span class="topo-pro">+ Mas facil de armar y configurar</span>
+        <span class="topo-pro">+ Menos cableado, mas economica</span>
+        <span class="topo-con">− No regeneran senal: ruido y perdida de fidelidad</span>
+        <span class="topo-con">− Un usuario desconectado corta la red</span>
+      </div>
+      <div class="topo-card">
+        <h4>⭐ Estrella</h4>
+        <p>La mas comun en LAN hogarenas y corporativas. Los equipos se interconectan mediante un hub o switch central. El hub repite y potencia la senal recibida, detecta errores y los corrige. La perdida de un nodo no afecta al resto.</p>
+        <span class="topo-pro">+ Si un terminal falla, la red sigue</span>
+        <span class="topo-pro">+ No se pierde conexion al agregar o retirar nodos</span>
+        <span class="topo-con">− El punto critico es el hub/switch central</span>
+        <span class="topo-con">− Mas cableado; cada PC necesita cable independiente al hub</span>
+      </div>
+      <div class="topo-card">
+        <h4>💍 Anillo</h4>
+        <p>Los dos terminales extremos estan interconectados formando un circulo. La senal viaja en un solo sentido. Cada computadora actua como repetidor y regenerador de senal, reduciendo el trayecto recorrido.</p>
+        <span class="topo-pro">+ Problemas faciles de detectar y resolver</span>
+        <span class="topo-pro">+ La informacion sufre menos ruidos</span>
+        <span class="topo-con">− Incorporar una nueva PC rompe el anillo temporalmente</span>
+        <span class="topo-con">− El soporte tecnico requiere desactivar la red</span>
+      </div>
+      <div class="topo-card">
+        <h4>🕸 Mesh (Malla)</h4>
+        <p>Todas las computadoras estan interconectadas entre si sin intermediarios. La red se satura rapidamente porque el envio de informacion a otra maquina provoca un efecto en cadena. Muy costosa de implementar.</p>
+        <span class="topo-pro">+ Todas las computadoras interconectadas sin intermediarios</span>
+        <span class="topo-con">− Conexiones costosas y demasiado cableado</span>
+        <span class="topo-con">− Cada dispositivo necesita tantas placas como computadoras haya</span>
+      </div>
+      <div class="topo-card">
+        <h4>📶 Ad-Hoc (inalambrica)</h4>
+        <p>Conexion inalambrica punto a punto sin medios fisicos, a traves de senales de radio. Los equipos deben estar dentro de un rango determinado; a medida que se alejan, se pierde la fidelidad de la senal.</p>
+        <span class="topo-pro">+ Sin medios fisicos para la interconexion</span>
+        <span class="topo-pro">+ Movilidad y versatilidad dentro del rango</span>
+        <span class="topo-con">− Rango muy limitado de trabajo</span>
+        <span class="topo-con">− Velocidad inferior a la de redes fisicas cableadas</span>
+      </div>
+      <div class="topo-card">
+        <h4>🏗 Infraestructura (inalambrica)</h4>
+        <p>Requiere un elemento central que coordine y sirva como punto base de informacion: una estacion central inalambrica (access point). Combina conexiones Ethernet e inalambricas. Si todos los elementos trabajan bajo el mismo SSID, todos tendran acceso.</p>
+        <span class="topo-pro">+ Combina Ethernet e inalambrico eficientemente</span>
+        <span class="topo-pro">+ Gran cobertura y escalabilidad</span>
+        <span class="topo-con">− Requiere access point central coordinador</span>
+      </div>
+    </div>
+    <div class="info-box info-note mt-2">
+      <span class="icon">🔀</span>
+      <div class="content"><strong>Redes Mixtas</strong> Para seleccionar la topologia mas conveniente, considera: capacidad maxima de computadoras disponibles, tasa de transferencia de informacion requerida y distancia entre equipos. El presupuesto disponible es un factor determinante.</div>
+    </div>
+  </div>
+
+  <!-- DISPOSITIVOS DE RED -->
+  <div class="content-section" id="dispositivos-red" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-router"></i> Dispositivos de Red</h2>
+    <p class="section-subtitle">NIC · Switch · Router · Hub · Repetidor · Gateway · Cables</p>
+
+    <div class="device-grid">
+      <div class="device-card nic">
+        <h4>🖧 Tarjeta de Red (NIC)</h4>
+        <p>Placa PCB de insercion interna o externa. Interfaces PCI, PCIe, USB o ExpressCard. Puerto Ethernet o fibra optica con indicador luminico de actividad. Velocidad 10–1000 Mbps. Direccion MAC unica incorporada en fabricacion.</p>
+      </div>
+      <div class="device-card switch-">
+        <h4>🔀 Switch (Conmutador)</h4>
+        <p>Dispositivo puente con tabla de direcciones MAC que administra datos por direccion origen→destino. Disminuye colisiones, aumenta ancho de banda y mejora simultaneidad de transmisiones vs hub. Los "inteligentes" permiten configurar VLANs.</p>
+      </div>
+      <div class="device-card router">
+        <h4>📶 Router</h4>
+        <p>Opera a nivel de direcciones IP (capa 3). Permite interconexion entre subredes y WAN. Diseña tabla origen/destino trazando posibles rutas. Puede integrar switch, hub, firewall y manejar LAN + WLAN simultaneamente.</p>
+      </div>
+      <div class="device-card hub">
+        <h4>🔌 Hub (Concentrador)</h4>
+        <p>Actualmente en desuso pero aun util en pequenas redes hogarenas. Conecta varias computadoras en topologia estrella. Retransmite los datos recibidos amplificados y limpiados de errores.</p>
+      </div>
+      <div class="device-card rep">
+        <h4>📡 Repetidor / Access Point</h4>
+        <p>Recibe senal media o baja y la retransmite amplificada. Bajo estas caracteristicas puede considerarse al access point como un repetidor. Recibe senales de medios inalambricos o cableados y las retransmite.</p>
+      </div>
+      <div class="device-card gw">
+        <h4>🌉 Gateway</h4>
+        <p>Dispositivo nodo dentro de la red local que sirve para enlazar con otra red de protocolo diferente. Puede ser un modem, router o computadora. El ejemplo mas habitual: conexion de una red hogarenia a Internet.</p>
+      </div>
+    </div>
+
+    <div class="accordion open" id="cables-red">
+      <div class="accordion-header" onclick="toggleAccordion('cables-red')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔌</span><div><div class="accordion-title">Tipos de Cables de Red y Como Armar un UTP</div><div class="accordion-subtitle">UTP · STP · FTP · Fibra optica · Coaxial · RJ-45</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>UTP — Unshielded Twisted Pair</h4><p>Filamentos de cobre entrelazados. Sin blindaje (mas susceptible a interferencias electromagneticas). De facil manejo y aplicacion. Uso habitual en redes locales. El mas economico.</p></div>
+          <div class="conn-card"><h4>STP — Shielded Twisted Pair</h4><p>Cada par esta aislado del otro por una malla individual que disminuye considerablemente la interferencia. Mas costoso que UTP pero ofrece mayor proteccion contra la diafonia.</p></div>
+          <div class="conn-card"><h4>FTP — Foiled Twisted Pair</h4><p>Blindaje global que abarca todo el conjunto de pares trenzados (no por filamentos individuales como STP). El blindaje global protege contra interferencias externas. Precio intermedio entre UTP y STP.</p></div>
+          <div class="conn-card"><h4>Fibra Optica</h4><p>Nucleo de vidrio o material plastico. Usa senal luminica (impulsos de luz) en lugar de electrica. Senales concentradas que no desaparecen hasta llegar a destino. Ideal para conexiones extensas y de alta velocidad.</p></div>
+          <div class="conn-card"><h4>Cable Coaxial</h4><p>Nucleo central de cobre + dielectrico + malla (cuerpo de retorno de datos) + malla plastica exterior. Habituales para senales televisivas por cable y cablemodem.</p></div>
+          <div class="conn-card"><h4>Categorias UTP</h4><p>CAT3: 10 Mbps. CAT5: 100 Mbps (100BaseTX). CAT5e: 1 Gbps (1000BaseT). CAT6: 1–10 Gbps (a 55m). CAT6a: 10 Gbps (100m). CAT7: 10 Gbps blindado.</p></div>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">🔧</span>
+          <div class="content"><strong>Armar un cable UTP RJ-45 (T568A / T568B)</strong> Materiales: pinza crimpeadora, tester de red, fichas RJ-45 y cable UTP CAT5/6. ① Retirar ~2 cm de vaina protectora con la crimpeadora. ② Separar los 4 pares y ordenar segun la norma deseada. ③ Colocar en la ficha RJ-45 en el orden correcto. ④ Insertar la ficha en la crimpeadora y presionar para el cierre y fijacion del cable. ⑤ Repetir en el extremo opuesto. ⑥ Verificar con tester de red. Agregar 10–20% de longitud extra para imprevistos.</div>
+        </div>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="code-lang">norma T568B — orden de colores en RJ-45</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># T568B (mas comun en instalaciones)   T568A</span>
+<span class="cmd-value">Pin 1</span>: Blanco/Naranja               <span class="cmd-output">Blanco/Verde</span>
+<span class="cmd-value">Pin 2</span>: Naranja                       <span class="cmd-output">Verde</span>
+<span class="cmd-value">Pin 3</span>: Blanco/Verde                  <span class="cmd-output">Blanco/Naranja</span>
+<span class="cmd-value">Pin 4</span>: Azul                          <span class="cmd-output">Azul</span>
+<span class="cmd-value">Pin 5</span>: Blanco/Azul                   <span class="cmd-output">Blanco/Azul</span>
+<span class="cmd-value">Pin 6</span>: Verde                         <span class="cmd-output">Naranja</span>
+<span class="cmd-value">Pin 7</span>: Blanco/Marron                 <span class="cmd-output">Blanco/Marron</span>
+<span class="cmd-value">Pin 8</span>: Marron                        <span class="cmd-output">Marron</span>
+
+<span class="cmd-comment"># Cable cruzado: T568A en un extremo + T568B en el otro</span>
+<span class="cmd-comment"># Cable directo: misma norma en ambos extremos (mas comun)</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECCIONAMIENTO IP -->
+  <div class="content-section" id="ip-address" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-ethernet"></i> Direccionamiento IP</h2>
+    <p class="section-subtitle">IPv4 · rangos privados · CIDR · calculadora interactiva</p>
+
+    <div class="table-scroll"><table class="cmd-table mb-2">
+      <tr><th>Rango privado (RFC 1918)</th><th>CIDR</th><th>Mascara</th><th>Hosts</th><th>Uso</th></tr>
+      <tr><td>10.0.0.0 – 10.255.255.255</td><td>/8</td><td>255.0.0.0</td><td>16,777,214</td><td>Empresas grandes</td></tr>
+      <tr><td>172.16.0.0 – 172.31.255.255</td><td>/12</td><td>255.240.0.0</td><td>1,048,574</td><td>Empresas medianas</td></tr>
+      <tr><td>192.168.0.0 – 192.168.255.255</td><td>/16</td><td>255.255.0.0</td><td>65,534</td><td>Hogar / PYME</td></tr>
+      <tr><td>127.0.0.0 – 127.255.255.255</td><td>/8</td><td>—</td><td>—</td><td>Loopback (localhost)</td></tr>
+      <tr><td>169.254.0.0 – 169.254.255.255</td><td>/16</td><td>—</td><td>—</td><td>APIPA (sin DHCP disponible)</td></tr>
+    </table></div>
+    <p class="subhead">Calculadora de Subred Interactiva</p>
+    <div class="subnet-calc">
+      <div class="subnet-row">
+        <div><div class="subnet-label">Direccion IP</div><input type="text" class="subnet-input" id="subnet-ip" placeholder="192.168.1.100" value="192.168.1.100"></div>
+        <div><div class="subnet-label">Prefijo CIDR (1-32)</div><input type="number" class="subnet-input" id="subnet-cidr" placeholder="24" value="24" min="1" max="32"></div>
+      </div>
+      <button class="subnet-btn" onclick="calcSubnet()">▶ CALCULAR</button>
+      <div class="subnet-result" id="subnet-result">
+        <div class="subnet-result-row"><span class="subnet-result-key">Direccion de red</span><span class="subnet-result-val" id="sr-net"></span></div>
+        <div class="subnet-result-row"><span class="subnet-result-key">Mascara de subred</span><span class="subnet-result-val" id="sr-mask"></span></div>
+        <div class="subnet-result-row"><span class="subnet-result-key">Primer host (Gateway)</span><span class="subnet-result-val" id="sr-first"></span></div>
+        <div class="subnet-result-row"><span class="subnet-result-key">Ultimo host</span><span class="subnet-result-val" id="sr-last"></span></div>
+        <div class="subnet-result-row"><span class="subnet-result-key">Broadcast</span><span class="subnet-result-val" id="sr-bc"></span></div>
+        <div class="subnet-result-row"><span class="subnet-result-key">Hosts utilizables</span><span class="subnet-result-val" id="sr-hosts"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMANDOS DE RED -->
+  <div class="content-section" id="cmd-red" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-terminal-fill"></i> Comandos de Red</h2>
+    <p class="section-subtitle">ping · ipconfig · tracert · nslookup · netstat · arp · nmap</p>
+
+    <div class="code-block">
+      <div class="code-block-header"><span class="code-lang">ping · ipconfig · tracert</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+      <pre><span class="cmd-comment"># PING — conectividad y latencia</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-value">8.8.8.8</span>                  <span class="cmd-comment"># Ping basico (4 pings en Windows)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-t</span> google.com           <span class="cmd-comment"># Ping continuo (Ctrl+C para detener)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-n</span> <span class="cmd-value">10</span> google.com        <span class="cmd-comment"># 10 pings Windows</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-c</span> <span class="cmd-value">10</span> google.com        <span class="cmd-comment"># 10 pings Linux/macOS</span>
+<span class="cmd-success"># TTL=64 → Linux/macOS  |  TTL=128 → Windows</span>
+<span class="cmd-output"># Latencia ideal: &lt;10ms LAN · &lt;50ms ISP · &lt;150ms internet</span>
+<span class="cmd-error"># Request timeout → host bloqueado o inaccesible</span>
+
+<span class="cmd-comment"># IPCONFIG — configuracion de red Windows</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span>                  <span class="cmd-comment"># Ver IPs y adaptadores</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/all</span>            <span class="cmd-comment"># MAC, DHCP, DNS servers</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/release</span>        <span class="cmd-comment"># Liberar IP de DHCP</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/renew</span>          <span class="cmd-comment"># Solicitar nueva IP al DHCP</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/flushdns</span>       <span class="cmd-comment"># Limpiar cache DNS local</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip addr</span>                   <span class="cmd-comment"># Linux: equivalente a ipconfig</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip route show</span>            <span class="cmd-comment"># Tabla de enrutamiento Linux</span>
+
+<span class="cmd-comment"># TRACERT — ruta de paquetes</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">tracert</span> google.com         <span class="cmd-comment"># Windows: muestra cada salto (hop)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">tracert</span> <span class="cmd-flag">-d</span> google.com     <span class="cmd-comment"># Sin resolucion DNS (mas rapido)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">traceroute</span> google.com     <span class="cmd-comment"># Linux/macOS</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">mtr</span> google.com            <span class="cmd-comment"># ping + traceroute en tiempo real</span>
+<span class="cmd-output"># * * * = router no responde ICMP (no siempre indica fallo)</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header"><span class="code-lang">nslookup · netstat · arp · wifi · reset</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+      <pre><span class="cmd-comment"># NSLOOKUP / DIG — consultas DNS</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> google.com           <span class="cmd-comment"># Consulta DNS por defecto</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> google.com <span class="cmd-value">8.8.8.8</span>   <span class="cmd-comment"># Usar DNS de Google</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> <span class="cmd-flag">-type=MX</span> gmail.com   <span class="cmd-comment"># Registros de correo</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dig</span> <span class="cmd-flag">+short</span> google.com         <span class="cmd-comment"># Solo la IP resultante</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dig</span> <span class="cmd-flag">-x</span> <span class="cmd-value">8.8.8.8</span>               <span class="cmd-comment"># Reverse DNS lookup</span>
+
+<span class="cmd-comment"># NETSTAT — conexiones y puertos</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-ano</span>                  <span class="cmd-comment"># Conexiones con PID</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-ano</span> | findstr :<span class="cmd-value">80</span>   <span class="cmd-comment"># Proceso usando el puerto 80</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-a</span>                    <span class="cmd-comment"># Ver si hay virus/malware por conexiones inusuales</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ss</span> <span class="cmd-flag">-tulpn</span>                    <span class="cmd-comment"># Linux: puertos en escucha con proceso</span>
+
+<span class="cmd-comment"># ARP — tabla de direcciones MAC</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">arp</span> <span class="cmd-flag">-a</span>                       <span class="cmd-comment"># Ver tabla ARP (IP → MAC)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">arp</span> <span class="cmd-flag">-d</span> <span class="cmd-value">192.168.1.100</span>         <span class="cmd-comment"># Eliminar entrada ARP</span>
+
+<span class="cmd-comment"># WIFI Y RESET DE PILA DE RED</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh wlan show profiles</span>           <span class="cmd-comment"># Redes WiFi guardadas</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh wlan show profile name=</span>"<span class="cmd-value">MiRed</span>" <span class="cmd-flag">key=clear</span>  <span class="cmd-comment"># Ver contrasena</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh interface ip reset</span>           <span class="cmd-comment"># Resetear TCP/IP stack</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh winsock reset</span>               <span class="cmd-comment"># Resetear Winsock (problemas de conexion)</span>
+
+<span class="cmd-comment"># NMAP — escaneo de red (instalar por separado)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">nmap</span> <span class="cmd-flag">-sn</span> <span class="cmd-value">192.168.1.0/24</span>       <span class="cmd-comment"># Ping scan: hosts activos en la red</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">nmap</span> <span class="cmd-flag">-sV</span> <span class="cmd-value">192.168.1.1</span>          <span class="cmd-comment"># Detectar servicios y versiones</span></pre>
+    </div>
+    <div class="info-box info-tip mt-2">
+      <span class="icon">🔍</span>
+      <div class="content"><strong>Flujo de solucion de problemas de conectividad</strong> ① Deshabilitar y rehabilitar la placa de red en Centro de Redes. ② ipconfig /release + /renew + /flushdns. ③ Apagar y reiniciar el router/modem. ④ Probar el cable de red con un tester de red. ⑤ Conectar el modem directamente a la PC para descartar router. ⑥ Cambiar entre Ethernet y WiFi para descartar placa de red. ⑦ Si persiste, contactar al ISP ya que la falla puede estar en el DSLAM de la central telefonica.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

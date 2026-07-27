@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - TechGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <i class="bi bi-cpu"></i>
+    <span>Tech<span>Guide</span></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">Inicio</div>
+    <a class="sidebar-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Ensamblaje</div>
+    <a class="sidebar-link" href="ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
+    <a class="sidebar-link" href="ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
+    <a class="sidebar-link" href="ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
+    <a class="sidebar-link" href="ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
+    <a class="sidebar-link" href="ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Mantenimiento</div>
+    <a class="sidebar-link" href="mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Redes</div>
+    <a class="sidebar-link" href="redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
+    <a class="sidebar-link" href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
+    <a class="sidebar-link" href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
+    <a class="sidebar-link" href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
+    <a class="sidebar-link" href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Referencia</div>
+    <a class="sidebar-link active" href="recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+    <a class="sidebar-link" href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
+  </div>
+</aside>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content" data-aos="fade-up">
+      <h1><i class="bi bi-keyboard" style="color:var(--warn);"></i> <span class="hl">Referencia</span> y Recursos</h1>
+      <p>Atajos de teclado para Windows, Linux y BIOS. Recursos web recomendados para hardware, redes y soporte tecnico en espanol.</p>
+      <div class="page-hero-chips">
+        <span class="pchip pchip-y">Atajos</span>
+        <span class="pchip pchip-y">Linux</span>
+        <span class="pchip pchip-y">BIOS</span>
+        <span class="pchip pchip-y">Recursos Web</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATAJOS WINDOWS -->
+  <div class="content-section" id="atajos" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
+      <div class="section-title">
+        <h2>Atajos de Teclado</h2>
+        <p>// Windows, Linux y BIOS / UEFI</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent);">Windows</h3>
+    <div class="shortcut-grid">
+      <div class="shortcut-item"><span class="shortcut-desc">Abrir Explorador</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Ejecutar</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Configuracion</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Menu avanzado</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>X</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Bloquear PC</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Admin. tareas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>Esc</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Deshacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Mostrar escritorio</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Captura pantalla</span><div class="shortcut-keys"><kbd>PrtSc</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Pegar sin formato</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Buscar en Windows</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Centro de accion</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Emoji picker</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>.</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Task View</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+    </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent2);">Linux (Terminal)</h3>
+    <div class="shortcut-grid">
+      <div class="shortcut-item"><span class="shortcut-desc">Interrumpir proceso</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Suspender proceso</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Salir / EOF</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Buscar en historial</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Autocompletar</span><div class="shortcut-keys"><kbd>Tab</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Inicio de linea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Final de linea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Limpiar terminal</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Repetir con sudo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>r</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Borrar palabra</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>W</kbd></div></div>
+    </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent3);">BIOS / UEFI</h3>
+    <div class="shortcut-grid">
+      <div class="shortcut-item"><span class="shortcut-desc">Entrar a BIOS</span><div class="shortcut-keys"><kbd>DEL</kbd> / <kbd>F2</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Menu de boot</span><div class="shortcut-keys"><kbd>F8</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Boot temporal</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Guardar y salir</span><div class="shortcut-keys"><kbd>F10</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Salir / Volver</span><div class="shortcut-keys"><kbd>ESC</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Ayuda</span><div class="shortcut-keys"><kbd>F1</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Cambiar orden boot</span><div class="shortcut-keys"><kbd>+</kbd> / <kbd>-</kbd></div></div>
+      <div class="shortcut-item"><span class="shortcut-desc">Restaurar defaults</span><div class="shortcut-keys"><kbd>F9</kbd></div></div>
+    </div>
+
+    <div class="alert-box alert-warn" style="margin-top:1.5rem;">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div>Las teclas de BIOS varian segun el fabricante: Dell (F2), HP (F10), Lenovo (F2/Del), ASUS (DEL), MSI (DEL). Consulta la documentacion de tu equipo.</div>
+    </div>
+  </div>
+
+  <!-- RECURSOS WEB -->
+  <div class="content-section" id="recursos" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-link-45deg"></i></div>
+      <div class="section-title">
+        <h2>Recursos Web</h2>
+        <p>// Sitios de utilidad en espanol y anglés</p>
+      </div>
+    </div>
+
+    <div class="rec-grid">
+      <div class="rec-card hw" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>PCPartPicker</h4>
+          <span class="pchip pchip-a" style="font-size:.55rem;">Hardware</span>
+        </div>
+        <p>Herramienta para compatibilidad de componentes, comparar precios y armar configuraciones de PC virtualmente.</p>
+        <a href="https://pcpartpicker.com" target="_blank" class="rec-link">pcpartpicker.com</a>
+      </div>
+      <div class="rec-card hw" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>Tom's Hardware</h4>
+          <span class="pchip pchip-a" style="font-size:.55rem;">Hardware</span>
+        </div>
+        <p>Reviews detalladas, benchmarks y guias de hardware. Una de las fuentes mas confiables del mundo.</p>
+        <a href="https://www.tomshardware.com" target="_blank" class="rec-link">tomshardware.com</a>
+      </div>
+      <div class="rec-card net" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>NetworkCalc</h4>
+          <span class="pchip pchip-g" style="font-size:.55rem;">Redes</span>
+        </div>
+        <p>Calculadora de subredes CIDR. Calcula rangos de IPs, mascaras y numero de hosts automaticamente.</p>
+        <a href="https://networkcalc.com" target="_blank" class="rec-link">networkcalc.com</a>
+      </div>
+      <div class="rec-card net" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>SubnetMask.com</h4>
+          <span class="pchip pchip-g" style="font-size:.55rem;">Redes</span>
+        </div>
+        <p>Calculadora de subredes con visualizacion grafica de rangos IP, broadcast y hosts disponibles.</p>
+        <a href="https://www.subnetmask.com" target="_blank" class="rec-link">subnetmask.com</a>
+      </div>
+      <div class="rec-card hw" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>TechPowerUp</h4>
+          <span class="pchip pchip-a" style="font-size:.55rem;">Hardware</span>
+        </div>
+        <p>Reviews de GPU, CPU y perifericos. Base de datos de especificaciones de tarjetas graficas muy completa.</p>
+        <a href="https://www.techpowerup.com" target="_blank" class="rec-link">techpowerup.com</a>
+      </div>
+      <div class="rec-card net" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>Wireshark</h4>
+          <span class="pchip pchip-g" style="font-size:.55rem;">Redes</span>
+        </div>
+        <p>Analizador de protocolos de red (packet sniffer). Indispensable para diagnostico y aprendizaje de redes.</p>
+        <a href="https://www.wireshark.org" target="_blank" class="rec-link">wireshark.org</a>
+      </div>
+      <div class="rec-card hw" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>PassMark</h4>
+          <span class="pchip pchip-a" style="font-size:.55rem;">Hardware</span>
+        </div>
+        <p>Benchmarks de CPU, GPU, discos y RAM. Comparativa entre cientos de modelos con graficos detallados.</p>
+        <a href="https://www.passmark.com" target="_blank" class="rec-link">passmark.com</a>
+      </div>
+      <div class="rec-card hw" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>MemTest86</h4>
+          <span class="pchip pchip-a" style="font-size:.55rem;">Diagnostico</span>
+        </div>
+        <p>El estandar para testeo de memoria RAM. Version gratuita y pagada. Se ejecuta desde USB booteable.</p>
+        <a href="https://www.memtest86.com" target="_blank" class="rec-link">memtest86.com</a>
+      </div>
+      <div class="rec-card net" data-aos="fade-up">
+        <div class="rec-card-header">
+          <h4>Cisco Networking Academy</h4>
+          <span class="pchip pchip-g" style="font-size:.55rem;">Certificacion</span>
+        </div>
+        <p>Cursos oficiales de redes, seguridad y programacion de Cisco. Certificaciones CCNA, CCNP y mas.</p>
+        <a href="https://www.netacad.com" target="_blank" class="rec-link">netacad.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+      <span class="footer-tag">Recursos</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

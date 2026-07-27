@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento - TechGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <i class="bi bi-cpu"></i>
+    <span>Tech<span>Guide</span></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">Inicio</div>
+    <a class="sidebar-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Ensamblaje</div>
+    <a class="sidebar-link" href="ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
+    <a class="sidebar-link" href="ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
+    <a class="sidebar-link" href="ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
+    <a class="sidebar-link" href="ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
+    <a class="sidebar-link" href="ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Mantenimiento</div>
+    <a class="sidebar-link active" href="mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Redes</div>
+    <a class="sidebar-link" href="redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
+    <a class="sidebar-link" href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
+    <a class="sidebar-link" href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
+    <a class="sidebar-link" href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
+    <a class="sidebar-link" href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Referencia</div>
+    <a class="sidebar-link" href="recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+    <a class="sidebar-link" href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
+  </div>
+</aside>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content" data-aos="fade-up">
+      <h1><i class="bi bi-shield-check" style="color:var(--accent2);"></i> <span class="hl">Mantenimiento</span> de PC</h1>
+      <p>Mantenimiento preventivo, correctivo y herramientas de diagnostico por software para mantener tu computadora en optimas condiciones.</p>
+      <div class="page-hero-chips">
+        <span class="pchip pchip-g">Preventivo</span>
+        <span class="pchip pchip-g">Correctivo</span>
+        <span class="pchip pchip-g">Software de Diag.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREVENTIVO -->
+  <div class="content-section" id="preventivo" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+      <div class="section-title">
+        <h2>Mantenimiento Preventivo</h2>
+        <p>// Cuida tu PC para prolongar su vida util</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div>El mantenimiento preventivo regular puede evitar el 80% de los problemas comunes de hardware. RealizaRevisiones cada 3 a 6 meses.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-wind accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Limpieza interna (cada 3-6 meses)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Usa aire comprimido para limpiar ventiladores, disipadores de calor y filtros del gabinete. Manten las latas de aire a 15-20cm de distancia.</p>
+        <ul>
+          <li>Desconecta SIEMPRE la PSU y presiona el boton de encendido antes de abrir el gabinete (descarga capacitores).</li>
+          <li>Sostén los ventiladores con el dedo para que no giren libremente al limpiar con aire (pueden generar voltaje inverso).</li>
+          <li>NO uses aspiradora directamente (genera estatica). Usa aire comprimido o aspiradora especializada para electronica.</li>
+          <li>Limpia los filtros del gabinete con agua y jabon, deja secar completamente antes de reinstallar.</li>
+          <li>Revisa y limpia las conexiones de cables que puedan tener polvo acumulado.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-display accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Limpieza externa</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Monitor:</strong> Usa un paño de microfibra ligeramente humedecido con solucion de limpieza para pantallas. Nunca pulverizes directamente sobre la pantalla.</li>
+          <li><strong>Teclado:</strong> Voltea y sacude para sacar residuos. Usa aire comprimido entre las teclas. Limpia la superficie con alcohol isopropilico al 70%.</li>
+          <li><strong>Mouse:</strong> Limpia la superficie con paño humedo. Para mouse optico, limpia el sensor con aire comprimido.</li>
+          <li><strong>Gabinete:</strong> Paño ligeramente humedo en superficies externas. Evita productos abrasivos.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-thermometer-half accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Monitoreo de temperaturas</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Usa herramientas como <strong>HWMonitor</strong>, <strong>Core Temp</strong> o <strong>Open Hardware Monitor</strong> para revisar temperaturas regularmente.</p>
+        <ul>
+          <li><strong>CPU:</strong> Ideal: 30-50°C en idle, 60-80°C bajo carga. Superior a 85°C es preocupante.</li>
+          <li><strong>GPU:</strong> Idle: 30-45°C, Bajo carga: 65-85°C. Los modelos modernos soportan hasta 90-95°C.</li>
+          <li><strong>Discos:</strong> HDD: 25-45°C. SSD: 30-55°C. Superar 60°C reduce vida util.</li>
+          <li><strong>Ambiente:</strong> Temperatura ideal del cuarto: 20-25°C. Un ambiente caluroso afecta todo el sistema.</li>
+        </ul>
+        <p>Si las temperaturas son altas, revisa: pasta termica, flujo de aire, ventiladores funcionando, filtros limpios.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Actualizacion de software</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Windows Update:</strong> Activa actualizaciones automaticas. Revisa cada semana que no haya pendientes criticas.</li>
+          <li><strong>Drivers de GPU:</strong> Descarga desde NVIDIA (GeForce Experience) o AMD (Adrenalin) periodicamente.</li>
+          <li><strong>BIOS/UEFI:</strong> Actualiza SOLO si hay un beneficio especifico (compatibilidad, seguridad). Sigue instrucciones del fabricante.</li>
+          <li><strong>Antivirus:</strong> Manten definiciones actualizadas. Escaneo completo semanal.</li>
+          <li><strong>Programas:</strong> Desinstala software que no uses. Actualiza navegadores y java/flash si los necesitas.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-bezier2 accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Gestion de cables (Cable Management)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Un buen cableado interno mejora el flujo de aire, facilita limpiezas futuras y se ve mas profesional.</p>
+        <ul>
+          <li>Usa bridas (cable zip) o velcro para agrupar cables.</li>
+          <li>Pasa cables por detrás de la bandeja de la motherboard.</li>
+          <li>Evita que cables sueltos toquen ventiladores.</li>
+          <li>En gabinetes con panel de vidrio, prioriza un cableado estetico.</li>
+          <li>Deja espacio suficiente para que el aire circule sin obstaculos.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-fan accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Revision de ventiladores</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>Verifica que todos los ventiladores (CPU, GPU, gabinete, PSU) giren correctamente.</li>
+          <li>Escucha ruidos anormales: chirridos o zumbidos pueden indicar rodamientos desgastados.</li>
+          <li>Limpia los filtros de polvo del gabinete regularmente.</li>
+          <li>Configura curvas de ventilacion en BIOS/UEFI o software de control.</li>
+          <li>Reemplaza ventiladores ruidosos o defectuosos. Marcas recomendadas: Noctua, be quiet!, Arctic.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- CORRECTIVO -->
+  <div class="content-section" id="correctivo" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.25);color:var(--accent3);"><i class="bi bi-heart-pulse"></i></div>
+      <div class="section-title">
+        <h2>Mantenimiento Correctivo</h2>
+        <p>// Solucion de problemas comunes</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-danger">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div>Antes de intentar cualquier reparacion, descarga la electricidad estatica y desconecta la PSU. Si no te sientes seguro, consulta a un tecnico.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-power accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">PC no enciende</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Diagnostico paso a paso cuando la PC no responde al presionar el boton de encendido:</p>
+        <ul>
+          <li><strong>1.</strong> Verifica que la PSU tenga el switch trasero en ON y el cable de poder bien conectado.</li>
+          <li><strong>2.</strong> Prueba otro enchufe o regleta. Verifica que la regleta encienda.</li>
+          <li><strong>3.</strong> Reinserta la RAM: retira, limpia contactos con goma, vuelve a colocar firmemente.</li>
+          <li><strong>4.</strong> Revisa si hay cortocircuitos: tornillos sueltos debajo de la motherboard, cables pelados.</li>
+          <li><strong>5.</strong> Prueba la PSU con el "clip test": conecta un puente verde-negro en el conector 24-pin para forzar encendido.</li>
+          <li><strong>6.</strong> Prueba sin GPU dedicada (usa graficos integrados si la CPU lo soporta).</li>
+          <li><strong>7.</strong> Si nada funciona, prueba con otra PSU o motherboard (aislar componente).</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-window-x accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">Pantalla azul (BSOD)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Las pantallas azules (Blue Screen of Death) indican un error critico del sistema. Anota el codigo de error que aparece.</p>
+        <ul>
+          <li><strong>Memtest86:</strong> Crea un USB booteable y ejecuta el test de memoria RAM. Si hay errores, reemplaza la RAM.</li>
+          <li><strong>CHKDSK:</strong> En cmd como administrador: <code>chkdsk C: /f /r</code> para revisar y reparar el disco.</li>
+          <li><strong>SFC:</strong> <code>sfc /scannow</code> para reparar archivos del sistema dañados.</li>
+          <li><strong>Drivers:</strong> Desinstala o actualiza el ultimo driver instalado. Los mas comunes: GPU, red, audio.</li>
+          <li><strong>Temperatura:</strong> Si ocurre bajo carga, verifica que no sea sobrecalentamiento.</li>
+          <li><strong>Windows Reset:</strong> Como ultima opcion, restaura o reinstala Windows conservando archivos.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-speedometer accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">Rendimiento lento</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Desfragmentar HDD:</strong> Solo discos mecanicos (NUNCA SSD). Windows: Optimizar unidades.</li>
+          <li><strong>Programas de inicio:</strong> Abre el administrador de tareas > Inicio y desactiva lo que no necesites.</li>
+          <li><strong>Desinstalar software:</strong> Elimina programas que no uses. Revisa Programs and Features.</li>
+          <li><strong>Malware:</strong> Escanea con Malwarebytes o Windows Defender en modo seguro.</li>
+          <li><strong>Temperatura CPU:</strong> Si la CPU esta caliente, reduce frecuencia automaticamente (throttling).</li>
+          <li><strong>Aggregar RAM:</strong> Si tienes 4GB o menos, agregar mas RAM marca una gran diferencia.</li>
+          <li><strong>Cambiar a SSD:</strong> Si usas HDD como disco principal, un SSD NVMe cambia completamente la experiencia.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-thermometer-high accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">Sobrecalentamiento</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>1.</strong> Limpia todo el polvo del sistema con aire comprimido.</li>
+          <li><strong>2.</strong> Verifica que todos los ventiladores esten funcionando (CPU, GPU, gabinete).</li>
+          <li><strong>3.</strong> Cambia la pasta termica si tiene mas de 2-3 años. Limpia la vieja con alcohol isopropilico.</li>
+          <li><strong>4.</strong> Mejora el flujo de aire: 2 ventiladores frontales (entrada) + 1 trasero (salida) como minimo.</li>
+          <li><strong>5.</strong> Verifica que el cooler del CPU este bien montado y con buena presion.</li>
+          <li><strong>6.</strong> Considera upgrade a un cooler de torre o AIO liquido si el stock no es suficiente.</li>
+          <li><strong>7.</strong> Ajusta curvas de ventilacion: mas RPM a temperaturas altas.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-hdd-stack accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">Disco duro fallando</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Los discos duros mecanicos pueden presentar signos de falla progresiva:</p>
+        <ul>
+          <li><strong>Señales de alarma:</strong> Ruidos de clics, zumbidos extraños, grajeos. Si los escuchas, haz backup INMEDIATO.</li>
+          <li><strong>CrystalDiskInfo:</strong> Revisa el estado S.M.A.R.T. "Saludable" = bien. "Precaucion" o "Peligro" = reemplazar pronto.</li>
+          <li><strong>Bad sectors:</strong> Ejecuta <code>chkdsk D: /f /r</code> para detectar y marcar sectores defectuosos.</li>
+          <li><strong>Backup urgente:</strong> Copia todos los datos importantes a otro disco o nube antes de que falle completamente.</li>
+          <li><strong>Reemplazo:</strong> Migra a SSD si es posible. Los SSD no tienen partes moviles y son mucho mas confiables.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-puzzle accordion-icon" style="color:var(--accent3);"></i>
+        <span class="accordion-title">No detecta hardware</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>RAM no detectada:</strong> Reinserta en otros slots. Prueba una barra a la vez. Limpia contactos con goma.</li>
+          <li><strong>Disco no aparece:</strong> Verifica cable SATA y power. Prueba otro puerto SATA. Revisa en BIOS si esta habilitado.</li>
+          <li><strong>GPU no detectada:</strong> Verifica que este bien insertada en PCIe. Conecta cables de poder. Prueba otro slot.</li>
+          <li><strong>No aparece red:</strong> Verifica cable Ethernet. Actualiza driver de red. Prueba USB de red temporal.</li>
+          <li><strong>Actualiza BIOS:</strong> A veces una BIOS desactualizada no reconoce hardware nuevo.</li>
+          <li><strong>Prueba fuera del gabinete:</strong> Monta la motherboard sobre una superficie no conductiva y prueba para aislar cortocircuitos.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- SOFTWARE DIAG -->
+  <div class="content-section" id="software-diag" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25);"><i class="bi bi-terminal"></i></div>
+      <div class="section-title">
+        <h2>Software de Diagnostico</h2>
+        <p>// Herramientas para diagnosticar tu PC</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div>Siempre descarga software de sitios oficiales para evitar malware. Verifica la URL antes de descargar.</div>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-thermometer-half"></i>
+        <h5>HWMonitor</h5>
+        <p>Monitoreo de temperaturas, voltajes y RPM de ventiladores en tiempo real. Soporta la mayoria de sensores del motherboard.</p>
+        <span class="card-tag">Temperaturas</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-hdd-stack"></i>
+        <h5>CrystalDiskInfo</h5>
+        <p>Muestra la salud de discos duros y SSDs mediante datos S.M.A.R.T. Alerta de sectores reasignados y temperatura.</p>
+        <span class="card-tag">Discos</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-memory"></i>
+        <h5>Memtest86</h5>
+        <p>Test exhaustivo de memoria RAM. Se ejecuta desde USB booteable antes de cargar el SO. Requiere multiples pasadas.</p>
+        <span class="card-tag">RAM</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-info-circle"></i>
+        <h5>CPU-Z</h5>
+        <p>Informacion detallada del procesador, chipset, RAM (frecuencia, timings, canal) y motherboard.</p>
+        <span class="card-tag">CPU / RAM</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-controller"></i>
+        <h5>GPU-Z</h5>
+        <p>Estadisticas completas de la tarjeta grafica: GPU, VRAM, clock speeds, temperatura y sensores en tiempo real.</p>
+        <span class="card-tag">GPU</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-fire"></i>
+        <h5>FurMark</h5>
+        <p>Test de estres para GPU (burn-in test). Genera carga maxima para verificar estabilidad y temperaturas extremas.</p>
+        <span class="card-tag">GPU Stress</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-cpu"></i>
+        <h5>Prime95</h5>
+        <p>Test de estres para CPU. Los "Small FFTs" generan calor maximo. Ideal para probar estabilidad despues de overclock.</p>
+        <span class="card-tag">CPU Stress</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-speedometer2"></i>
+        <h5>AIDA64</h5>
+        <p>Diagnostico completo del sistema: hardware, software, sensores, benchmarks. Suite profesional de diagnostico.</p>
+        <span class="card-tag">Completo</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-journal-text"></i>
+        <h5>Event Viewer</h5>
+        <p>Registro de eventos de Windows (eventvwr.msc). Errores criticos, warnings y logs del sistema y aplicaciones.</p>
+        <span class="card-tag">Windows</span>
+      </div>
+      <div class="tool-card" data-aos="fade-up">
+        <i class="bi bi-graph-up"></i>
+        <h5>CrystalDiskMark</h5>
+        <p>Benchmark de velocidad de discos. Mide lectura y escritura secuencial y aleatoria (4K). Compara SSD vs HDD.</p>
+        <span class="card-tag">Benchmark</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

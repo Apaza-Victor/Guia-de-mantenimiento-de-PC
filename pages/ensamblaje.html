@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ensamblaje - TechGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <i class="bi bi-cpu"></i>
+    <span>Tech<span>Guide</span></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">Inicio</div>
+    <a class="sidebar-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Ensamblaje</div>
+    <a class="sidebar-link active" href="ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
+    <a class="sidebar-link" href="ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
+    <a class="sidebar-link" href="ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
+    <a class="sidebar-link" href="ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
+    <a class="sidebar-link" href="ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Mantenimiento</div>
+    <a class="sidebar-link" href="mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
+    <a class="sidebar-link" href="mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Redes</div>
+    <a class="sidebar-link" href="redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
+    <a class="sidebar-link" href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
+    <a class="sidebar-link" href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
+    <a class="sidebar-link" href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
+    <a class="sidebar-link" href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Referencia</div>
+    <a class="sidebar-link" href="recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+    <a class="sidebar-link" href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
+  </div>
+</aside>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content" data-aos="fade-up">
+      <h1><i class="bi bi-tools" style="color:var(--accent);"></i> <span class="hl">Ensamblaje</span> de PC</h1>
+      <p>Herramientas, componentes, guia paso a paso, cableado y checklist interactivo para armar tu computadora de escritorio.</p>
+      <div class="page-hero-chips">
+        <span class="pchip pchip-a">Herramientas</span>
+        <span class="pchip pchip-a">Componentes</span>
+        <span class="pchip pchip-a">Paso a Paso</span>
+        <span class="pchip pchip-a">Cableado</span>
+        <span class="pchip pchip-a">Checklist</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERRAMIENTAS -->
+  <div class="content-section" id="herramientas" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.25);color:var(--accent);"><i class="bi bi-tools"></i></div>
+      <div class="section-title">
+        <h2>Herramientas y Seguridad</h2>
+        <p>// Prepara tu espacio y equipo antes de tocar cualquier componente</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-warn">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div><strong>Precaucion ESD:</strong> La electricidad estatica puede danar permanentemente los circuitos. Siempre usa pulsera antiestatica o toca una superficie metalica aterrizada antes de manipular componentes.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-zap-off accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Electricidad Estatica (ESD)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>La descarga electrostatica (ESD) es la principal amenaza al ensamblar componentes electronicos. Una descarga que no sientes puede destruir chips silenciosamente.</p>
+        <ul>
+          <li><strong>Pulsera antiestatica:</strong> Se conecta a tierra para disipar la carga estatica de tu cuerpo. Obligatoria para manipular CPU, RAM y GPU.</li>
+          <li><strong>Mat antiestatica:</strong> Alfombrilla conductora que se conecta a tierra. Los componentes pueden apoyarse sobre ella con seguridad.</li>
+          <li><strong>Superficie de trabajo:</strong> Mesa despejada y amplia (minimo 80x60 cm). Superficie no alfombrada preferiblemente.</li>
+          <li><strong>Evita:</strong> Alfombras, ropa sintetica, recipientes de plastico, calor seco ambiental.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-tools accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Herramientas de Mano Esenciales</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-tools"></i>
+            <h5>Destornillador Phillips #2</h5>
+            <p>El mas utilizado en el ensamblaje. Sirve para tornillos de la placa base, fuente de poder y carcasa.</p>
+            <span class="card-tag">Esencial</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-tools"></i>
+            <h5>Destornillador Phillips #1</h5>
+            <p>Tamano mas pequeno para tornillos de SSD M.2, unidades opticas y paneles delgados.</p>
+            <span class="card-tag">Esencial</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-magnet"></i>
+            <h5>Destornillador Magnetico</h5>
+            <p>Facilita trabajar en espacios reducidos. El magnetismo es debil y no dania discos mecanicos.</p>
+            <span class="card-tag">Recomendado</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-lightbulb"></i>
+            <h5>Linterna / Luz LED</h5>
+            <p>Para ver el interior oscuro del gabinete, verificar serigrafia de la placa y evitar errores de insercion.</p>
+            <span class="card-tag">Recomendado</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-eye"></i>
+            <h5>Pinzas de Plastico</h5>
+            <p>Para recoger tornillos caidos en espacios estrechos sin riesgo de cortocircuito.</p>
+            <span class="card-tag">Util</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-wind"></i>
+            <h5>Spray de Aire Comprimido</h5>
+            <p>Elimina polvo de ranuras de RAM, PCIe y ventiladores sin contacto fisico. Manten las latas a 15-20cm.</p>
+            <span class="card-tag">Esencial</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-thermometer-snowflake"></i>
+            <h5>Pasta Termica</h5>
+            <p>Mejora la transferencia de calor entre el procesador y su disipador. Aplicar en cantidad de grano de arroz.</p>
+            <span class="card-tag">Esencial</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-layout-grid accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Preparacion del Espacio de Trabajo</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Mesa despejada y amplia:</strong> Minimo 80x60 cm libres. Superficie no alfombrada preferiblemente para reducir ESD.</li>
+          <li><strong>Buena iluminacion:</strong> Luz blanca fria o natural. Evita las sombras que ocultan serigrafia y clips de retencion.</li>
+          <li><strong>Manual de la Motherboard:</strong> Siempre a mano. Contiene el mapa de conectores, slots, jumpers y procedimientos de reset de BIOS.</li>
+          <li><strong>Camara o telefono:</strong> Fotografia la posicion de conectores y cables antes de desconectarlos. Invaluable en mantenimiento.</li>
+          <li><strong>Guarda los tornillos:</strong> En vasos pequenos por categoria para evitar perderlos.</li>
+          <li><strong>Buenas practicas:</strong> Conecta la PSU a la corriente pero no la enciendas — esto mantiene el chasis a tierra.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- COMPONENTES -->
+  <div class="content-section" id="componentes" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25);"><i class="bi bi-motherboard"></i></div>
+      <div class="section-title">
+        <h2>Componentes de Hardware</h2>
+        <p>// Explora cada componente: su funcion y puntos criticos de compatibilidad</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-warn">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div><strong>Verifica compatibilidad primero.</strong> Un CPU incompatible con el socket de tu motherboard es el error mas frecuente y costoso. Usa PCPartPicker para validar tu build antes de comprar.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-cpu accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Procesador (CPU)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Es el cerebro del sistema. Ejecuta instrucciones, procesa datos y coordina todos los demas componentes. Su velocidad se mide en GHz y su capacidad en nucleos (cores) e hilos (threads).</p>
+        <ul>
+          <li><strong>Tipos:</strong> Intel Core (i3/i5/i7/i9) y AMD Ryzen (3/5/7/9).</li>
+          <li><strong>Sockets:</strong> Intel: LGA 1700, LGA 1851 | AMD: AM4, AM5. El socket determina compatibilidad total — no hay adaptadores.</li>
+          <li><strong>Verifica el TDP (watts)</strong> para asegurarte de que tu disipador sea suficiente.</li>
+          <li><strong>Revisa la lista QVL</strong> de la motherboard para CPUs soportados.</li>
+          <li>Los cores de eficiencia (E-cores) en Intel manejan tareas en segundo plano para ahorrar energia.</li>
+        </ul>
+        <span class="spec-tag">Compatibilidad Critica</span>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-gpu-card accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Tarjeta Grafica (GPU)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Procesa y renderiza imagenes, video y graficos 3D. Indispensable para juegos, diseno 3D, edicion de video e IA. Tiene su propia memoria de video (VRAM).</p>
+        <ul>
+          <li><strong>Slot PCIe x16</strong> en la placa base (generacion 3.0, 4.0 o 5.0 — compatibilidad hacia atras garantizada).</li>
+          <li><strong>Longitud fisica:</strong> mide el espacio disponible en el gabinete antes de comprar.</li>
+          <li><strong>Requerimiento de potencia:</strong> revisa los pines de energia (6+2 pin PCIe) y el consumo TGP.</li>
+          <li><strong>Conectores de display:</strong> HDMI 2.1 o DisplayPort 1.4 segun tu monitor.</li>
+          <li><strong>VRAM:</strong> Minimo 8 GB para gaming 1080p/1440p moderno. 16 GB+ para IA/ML.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-memory accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Memoria RAM</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Memoria de acceso aleatorio de trabajo. Almacena temporalmente los datos del sistema operativo, aplicaciones abiertas y procesos activos. Mas RAM = mas tareas simultaneas.</p>
+        <ul>
+          <li><strong>Tipo:</strong> DDR4 o DDR5 — no son intercambiables ni fisicamente ni funcionalmente.</li>
+          <li><strong>Velocidad (MHz):</strong> consulta la QVL de tu motherboard. Frecuencias mas altas requieren XMP/EXPO para activarse.</li>
+          <li><strong>Dual Channel:</strong> instala en los slots recomendados por el manual para activar Dual Channel. Puede mejorar el rendimiento hasta un 15-20%.</li>
+          <li><strong>Latencia:</strong> CL16 a CL30. Menor CL = menor latencia = mayor rendimiento.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-motherboard accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Placa Base (Motherboard)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>El hub central que conecta todos los componentes. Determina que CPU, RAM y caracteristicas de expansion soporta el sistema. Su chipset define el conjunto de funciones disponibles.</p>
+        <ul>
+          <li><strong>Form factor:</strong> ATX, Micro-ATX, Mini-ITX — debe coincidir con el tamano del gabinete.</li>
+          <li><strong>Socket de CPU:</strong> el dato mas critico. No hay adaptadores entre sockets diferentes.</li>
+          <li><strong>Chipset:</strong> Intel: Z790, B760, H610 | AMD: X670E, X670, B650. Las placas Z/X permiten overclocking.</li>
+          <li><strong>Conectores:</strong> ATX 24-pin, CPU 8-pin, PCIe 16x, M.2, SATA, USB headers.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-lightning accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Fuente de Poder (PSU)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Convierte la corriente alterna (AC) de la pared en corriente continua (DC) para los componentes. Su calidad impacta directamente en la estabilidad y longevidad del sistema.</p>
+        <ul>
+          <li><strong>Wattaje:</strong> usa una calculadora de consumo. Agrega 20-30% de margen sobre el total.</li>
+          <li><strong>Certificacion 80 PLUS:</strong> Bronze, Gold, Platinum — mayor eficiencia energetica.</li>
+          <li><strong>Modular vs no modular:</strong> los modulares permiten conectar solo los cables que necesitas, mejorando flujo de aire.</li>
+          <li><strong>Una PSU de mala calidad puede danar todos los demas componentes al fallar. No escatimes aqui.</strong></li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-hdd accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Almacenamiento (SSD/HDD)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Guarda el sistema operativo, programas y archivos de forma permanente. Los SSD NVMe son hasta 30x mas rapidos que un HDD mecanico para lecturas secuenciales.</p>
+        <ul>
+          <li><strong>M.2 NVMe:</strong> verifica que la placa tenga slot M.2 y soporte PCIe 4.0 o 5.0 para maxima velocidad.</li>
+          <li><strong>SATA SSD:</strong> usa cables SATA III y conector de alimentacion SATA de la PSU (~550 MB/s).</li>
+          <li><strong>HDD:</strong> solo SATA III. No olvides el tornillo de soporte en el bay del gabinete.</li>
+          <li><strong>Velocidades:</strong> SATA SSD: ~550 MB/s | NVMe PCIe 3.0: ~3500 MB/s | NVMe PCIe 4.0: ~7000 MB/s.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-fan accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Sistema de Refrigeracion</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Disipa el calor generado por el CPU (y opcionalmente la GPU) para mantener temperaturas optimas de operacion. Sin refrigeracion adecuada, el CPU hace throttling o se apaga.</p>
+        <ul>
+          <li><strong>Socket:</strong> el cooler debe soportar el socket de tu CPU (LGA1700, AM5, etc.). Muchos incluyen multiples brackets.</li>
+          <li><strong>TDP:</strong> el TDP del cooler debe ser igual o mayor al TDP del CPU + margen de overclocking.</li>
+          <li><strong>Tipos:</strong> Air cooler (stock/tower) y AIO Liquida. Un cooler Noctua NH-D15 puede competir con AIO de 240 mm a menor ruido.</li>
+          <li><strong>Altura del cooler:</strong> verifica el clearance del gabinete (en mm de altura maxima de CPU cooler).</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PASO A PASO -->
+  <div class="content-section" id="paso-a-paso" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.25);color:var(--success);"><i class="bi bi-list-check"></i></div>
+      <div class="section-title">
+        <h2>Ensamblaje Paso a Paso</h2>
+        <p>// Sigue esta secuencia optimizada para ensamblar tu PC sin errores</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div>Marca cada paso al completarlo para llevar un registro de tu progreso. Sigue el orden exacto: cada paso depende del anterior.</div>
+    </div>
+
+    <div class="steps-timeline" id="stepsTimeline">
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 01</span>
+            <span class="step-title">Instalar el procesador (CPU)</span>
+          </div>
+          <div class="step-desc">Abre el mecanismo de retencion del socket en la placa base. Alinea la muesca o la flecha dorada del procesador con la del socket. Colocalo SIN FUERZA — debe caer solo. Cierra la palanca de retencion con firmeza pero controlada.</div>
+          <div class="step-tip"><strong>Nunca dobles pines!</strong> Los sockets AMD tienen pines en la placa (LGA = pines en el CPU en Intel). Si hay resistencia, detente y reverifica la orientacion.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 02</span>
+            <span class="step-title">Instalar la refrigeracion del CPU</span>
+          </div>
+          <div class="step-desc">Si el cooler no incluye pasta termica preinstalada, aplica una pequena cantidad del tamano de un grano de arroz en el centro del IHS (tapa metalica del CPU). Fija el cooler siguiendo el patron en cruz para distribuir presion uniformemente. Conecta el conector del ventilador al header CPU_FAN de la placa.</div>
+          <div class="step-tip"><strong>Pasta termica:</strong> menos es mas. El exceso causa conductividad lateral sin mejorar el contacto termico.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 03</span>
+            <span class="step-title">Instalar la memoria RAM</span>
+          </div>
+          <div class="step-desc">Identifica los slots correctos segun el manual (generalmente A2 y B2 para Dual Channel). Abre los clips de retencion laterales. Alinea las muescas de la RAM con las del slot y empuja con fuerza uniforme desde ambos extremos hasta escuchar un click y que los clips cierren.</div>
+          <div class="step-tip"><strong>Dual Channel:</strong> instala en slots del mismo color o los indicados en el manual. Mezclar configuraciones reduce el rendimiento.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 04</span>
+            <span class="step-title">Montar la placa base en el gabinete</span>
+          </div>
+          <div class="step-desc">Antes de insertar la placa, instala el I/O Shield (placa metalica trasera) en el panel del gabinete — encaja a presion. Coloca los separadores (standoffs) de laton en los agujeros correspondientes al form factor de la placa. Introduce la placa alineando los puertos traseros con el I/O Shield y ajusta todos los tornillos en patron de estrella.</div>
+          <div class="step-tip"><strong>Standoffs correctos:</strong> un standoff en posicion incorrecta puede causar un cortocircuito catastrofico. Verifica que cada tornillo de la placa tenga su separador.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 05</span>
+            <span class="step-title">Instalar SSD M.2 (si aplica)</span>
+          </div>
+          <div class="step-desc">Localiza el slot M.2 en la placa base. Inserta el SSD en un angulo de 30 grados aprox. hasta que encaje. Empuja la placa hacia abajo y asegura con el pequeno tornillo M.2 provisto. Si la placa incluye disipador para M.2, installalo sobre el SSD.</div>
+          <div class="step-tip"><strong>PCIe vs SATA M.2:</strong> verifica que el protocolo del SSD coincida con el slot. Hay slots M.2 solo SATA, solo NVMe, o ambos.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 06</span>
+            <span class="step-title">Instalar la fuente de poder (PSU)</span>
+          </div>
+          <div class="step-desc">Coloca la PSU en su compartimento del gabinete (generalmente en la parte inferior). El ventilador debe apuntar hacia fuera del gabinete o hacia la abertura de ventilacion inferior. Ajusta los 4 tornillos del panel trasero. Conecta los cables principales a la placa: ATX 24-pin y EPS CPU 8-pin.</div>
+          <div class="step-tip"><strong>Ventilador de PSU:</strong> si hay rejilla en el piso del gabinete, ventilador hacia abajo para tomar aire fresco. Si no, hacia arriba.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 07</span>
+            <span class="step-title">Instalar la tarjeta grafica (GPU)</span>
+          </div>
+          <div class="step-desc">Retira las cubiertas del slot PCIe x16 en el panel trasero del gabinete. Presiona el clip de retencion del slot PCIe. Inserta la GPU firmemente en el slot PCIe x16 hasta escuchar el click. Asegura la GPU con los tornillos del bracket trasero. Conecta los cables de alimentacion PCIe de la PSU.</div>
+          <div class="step-tip"><strong>Peso de la GPU:</strong> las tarjetas grandes pueden flectar la placa base. Muchos gabinetes incluyen soportes anti-flex; usalos si estan disponibles.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 08</span>
+            <span class="step-title">Gestion de cables y conectores del panel</span>
+          </div>
+          <div class="step-desc">Conecta los cables del panel frontal del gabinete a los headers del panel en la motherboard: Power SW, Reset SW, Power LED+/-, HDD LED. Consulta el manual — la polaridad importa en los LEDs. Organiza los cables pasandolos por los pasamuros del gabinete. Conecta SATA data (si aplica) y demas perifericos.</div>
+          <div class="step-tip"><strong>Cable management:</strong> cables ordenados = mejor flujo de aire = temperaturas mas bajas. Usa bridas de plastico o velcro incluidos con el gabinete.</div>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-up">
+        <div class="step-dot"></div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-num">PASO 09</span>
+            <span class="step-title">Primer encendido y configuracion BIOS</span>
+          </div>
+          <div class="step-desc">Antes de cerrar el gabinete: conecta monitor, teclado y cable de alimentacion. Presiona el boton de power. Si enciende: entra al BIOS (generalmente tecla DEL o F2). Verifica que el CPU, RAM y almacenamiento sean detectados correctamente. Activa XMP/EXPO para velocidad de RAM. Configura el boot order y guarda.</div>
+          <div class="step-tip"><strong>No paniques si no enciende:</strong> verifica el interruptor de la PSU (posicion I), el conector Power SW del panel, y que la RAM este bien insertada. El 80% de los "no enciende" se resuelven con estos tres puntos.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CABLEADO -->
+  <div class="content-section" id="cableado" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.25);color:var(--accent3);"><i class="bi bi-usb"></i></div>
+      <div class="section-title">
+        <h2>Cableado y Conexiones</h2>
+        <p>// Guia completa de los cables internos y externos de una computadora</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div>Los colores de los cables de la PSU siguen un estandar: Amarillo = +12V, Rojo = +5V, Naranja = +3.3V, Negro = Tierra (GND). Consulta siempre el manual de tu motherboard.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-lightning accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Cables de Alimentacion Internos</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-plug"></i>
+            <h5>ATX 24-pin</h5>
+            <p>Suministro electrico principal de la PSU a la placa madre. Es el primer cable que se conecta al ensamblar. Tiene llave antipolariedad: solo entra en un sentido.</p>
+            <span class="card-tag">+3.3V, +5V, +12V</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-plug"></i>
+            <h5>EPS / ATX 12V 8-pin (CPU)</h5>
+            <p>Provee +12V al regulador de voltaje del procesador. Sin este conector el sistema no enciende aunque todo este conectado. Existe en versiones 4 pines (legacy) y 8 pines.</p>
+            <span class="card-tag">+12V x4, GND x4</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-plug"></i>
+            <h5>PCIe 6+2 pin (GPU)</h5>
+            <p>Alimenta la GPU directamente desde la PSU. El conector 6-pin entrega 75W; anadir el +2 convierte en 8-pin (150W). Las RTX 40xx usan el nuevo conector 16-pin (600W).</p>
+            <span class="card-tag">6-pin: 75W, 8-pin: 150W</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-plug"></i>
+            <h5>SATA Power 15-pin</h5>
+            <p>Conector plano que alimenta discos SATA, SSDs y unidades opticas. Tres grupos: +3.3V (naranja), +5V (rojo) y +12V (amarillo). Forma en L garantiza insercion correcta.</p>
+            <span class="card-tag">15 pines, 3 grupos</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-plug"></i>
+            <h5>Conector Molex 4-pin</h5>
+            <p>Conector blanco con 4 pines redondos. Alimenta ventiladores adicionales, tiras LED y dispositivos IDE o PATA. Aun presente en muchas PSU modernas como adaptador.</p>
+            <span class="card-tag">+12V, +5V</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-toggle-on"></i>
+            <h5>Cables del Panel Frontal</h5>
+            <p>Power SW (sin polaridad), Reset SW (sin polaridad), Power LED+/- (con polaridad), HDD LED (con polaridad). Consulta SIEMPRE el mapa de pines del manual.</p>
+            <span class="card-tag">Señales de control</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-hdd accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Cables de Datos y Almacenamiento</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-cable"></i>
+            <h5>Cable SATA III (Datos)</h5>
+            <p>Cable delgado de 7 pines con conectores en L que impiden insercion incorrecta. Conecta placa madre con HDD, SSD SATA y unidades opticas. Maximo 1 metro.</p>
+            <span class="card-tag">6 Gbps</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-cable"></i>
+            <h5>SSD M.2 / NVMe (sin cable)</h5>
+            <p>No usa cable externo: se inserta directamente en el slot M.2 de la placa a 30 grados y se atornilla. Formato 2280 es el mas comun. PCIe 5.0 alcanza 14 GB/s.</p>
+            <span class="card-tag">PCIe 4.0: ~7 GB/s</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-cable"></i>
+            <h5>Cable IDE / PATA (Legado)</h5>
+            <p>Cable plano y gris con 40 o 80 conductores. El cable rojo/azul indica el pin 1. Permite dos dispositivos (maestro + esclavo). Completamente reemplazado por SATA.</p>
+            <span class="card-tag">Hasta 133 MB/s</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-display accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Cables de Video</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-display"></i>
+            <h5>HDMI</h5>
+            <p>Audio + video en un cable. HDMI 2.0: 4K@60Hz. HDMI 2.1: 8K@60Hz y 4K@120Hz con VRR. El estandar actual para monitores y TVs. 19 pines.</p>
+            <span class="card-tag">HDMI 2.1: 48 Gbps</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-display"></i>
+            <h5>DisplayPort (DP)</h5>
+            <p>Estandar VESA preferido en monitores para PC. DP 1.4: 8K@60Hz o 4K@120Hz. DP 2.1: 16K@60Hz. Permite conectar multiples monitores en cadena (daisy-chain).</p>
+            <span class="card-tag">DP 2.1: 80 Gbps</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-display"></i>
+            <h5>Cable VGA (D-Sub 15)</h5>
+            <p>Conector azul trapezoidal con 15 pines. Senal analogica: calidad degrada con cables largos. Presente en monitores hasta ~2015. Hoy reemplazado por HDMI y DP.</p>
+            <span class="card-tag">Analogico, legado</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-display"></i>
+            <h5>Cable DVI</h5>
+            <p>Digital Visual Interface. Tres variantes: DVI-D (digital), DVI-A (analogico) y DVI-I (ambos). Single Link: 1920x1200; Dual Link: 2560x1600.</p>
+            <span class="card-tag">Digital, legado</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-usb accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Familia USB</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-usb"></i>
+            <h5>USB Tipo A</h5>
+            <p>El conector rectangular universal. No reversible. USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.1 (10 Gbps), USB 3.2 (20 Gbps). El color del interior indica la version.</p>
+            <span class="card-tag">Universal</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-usb"></i>
+            <h5>USB-C (Type-C)</h5>
+            <p>Conector reversible de 24 pines. Soporta datos (USB4: 40 Gbps), video (Alt Mode), carga (Power Delivery hasta 240W) y Thunderbolt. Estandar universal moderno.</p>
+            <span class="card-tag">Reversible, moderno</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-usb"></i>
+            <h5>USB Tipo B</h5>
+            <p>Conector cuadrado con dos esquinas biseladas. Usado en impresoras, escaneres, hubs USB y monitores. Extremo dispositivo del cable USB-A a USB-B.</p>
+            <span class="card-tag">Impresoras, escaneres</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-lightning"></i>
+            <h5>Thunderbolt 3/4/5</h5>
+            <p>Desarrollado por Intel. Usa conector USB-C pero con logo del rayo. TB3/4: 40 Gbps, carga 100W, video 8K. TB5: 120 Gbps. Compatible con USB-C pero no al reves.</p>
+            <span class="card-tag">TB5: 120 Gbps</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-volume-up accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Cables de Audio y Red</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="tools-grid">
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-volume-up"></i>
+            <h5>Jack 3.5 mm (TRS/TRRS)</h5>
+            <p>Conector circular de 3.5 mm. Verde = salida, Rosa = microfono, Azul = entrada de linea. TRS (3 contactos) para audio estereo; TRRS (4 contactos) anade microfono.</p>
+            <span class="card-tag">Audio analogico</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-volume-up"></i>
+            <h5>S/PDIF Optico (TOSLINK)</h5>
+            <p>Transmite audio digital por fibra optica. Conector cuadrado negro; cuando esta activo emite luz roja visible. Soporta Dolby Digital y DTS. Inmune a interferencias electromagneticas.</p>
+            <span class="card-tag">Audio digital</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-ethernet"></i>
+            <h5>Cable UTP Cat5e / Cat6 (RJ-45)</h5>
+            <p>Cable de red mas usado con conector RJ-45 de 8 pines. 4 pares trenzados por colores con estandar T568B. Cat5e: 1 Gbps. Cat6: 10 Gbps a 55m.</p>
+            <span class="card-tag">Ethernet</span>
+          </div>
+          <div class="tool-card" data-aos="fade-up">
+            <i class="bi bi-fan"></i>
+            <h5>Conector de Ventilador 3/4-pin</h5>
+            <p>Conecta ventiladores de CPU y caja a la placa madre. 3 pines (+12V, GND, tacometro). 4 pines anaden senal PWM para control digital preciso de velocidad.</p>
+            <span class="card-tag">CPU_FAN / SYS_FAN</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="content-section" id="checklist" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.25);color:var(--accent);"><i class="bi bi-clipboard-check"></i></div>
+      <div class="section-title">
+        <h2>Checklist Interactivo</h2>
+        <p>// Marca cada tarea en tiempo real mientras armas tu equipo</p>
+      </div>
+    </div>
+
+    <div class="checklist-box" data-aos="fade-up">
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Mesa de trabajo limpia y despejada</strong>
+          <p>Minimo 80x60 cm. Superficie no alfombrada.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Pulsera antiestatica colocada o superficie aterrizada</strong>
+          <p>Proteccion ESD antes de tocar componentes.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Manual de la placa base impreso o en pantalla</strong>
+          <p>Mapa de conectores, slots y jumpers.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Herramientas organizadas: destornilladores #1 y #2</strong>
+          <p>Air comprimido, pasta termica, bridas.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>CPU inspeccionado: sin pines danados</strong>
+          <p>Verificar orientacion antes de insertar.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>RAM verificada: tipo y frecuencia compatibles</strong>
+          <p>DDR4 o DDR5 segun la placa.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>SSD/HDD revisado: interfaz M.2 o SATA correcta</strong>
+          <p>Verificar compatibilidad con la placa.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>PSU potencia suficiente para el build</strong>
+          <p>Minimo 20-30% de margen sobre el consumo total.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>CPU instalado sin forzar en el socket</strong>
+          <p>Debe caer libremente. Cerrar palanca con cuidado.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Pasta termica aplicada correctamente</strong>
+          <p>Grano de arroz en el centro del IHS.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Cooler fijo y ventilador conectado al CPU_FAN</strong>
+          <p>Patron en cruz para presion uniforme.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>RAM instalada en los slots de Dual Channel correctos</strong>
+          <p>Consultar manual para A2+B2 u otros.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Standoffs colocados en posicion correcta</strong>
+          <p>Evitar cortocircuitos. Patron correcto ATX/mATX.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>I/O Shield del gabinete instalado antes de la placa</strong>
+          <p>Encajar desde el interior hacia el exterior.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Placa base atornillada en patron de estrella</strong>
+          <p>No apretar un tornillo completamente antes de poner los demas.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>SSD M.2 instalado y asegurado</strong>
+          <p>Insertar a 30 grados, atornillar tornillo M.2.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>PSU montada y cables ATX 24-pin + EPS 8-pin conectados</strong>
+          <p>Ventilador hacia aire fresco.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>GPU instalada y cables PCIe conectados</strong>
+          <p>Click en el slot, atornillar bracket, conectar alimentacion.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Cables de panel frontal conectados</strong>
+          <p>Power SW, Reset SW, Power LED+/-, HDD LED.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Cables organizados y asegurados con bridas</strong>
+          <p>Mejor flujo de aire y estetica.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Monitor, teclado y mouse conectados</strong>
+          <p>Preparar para el primer encendido.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Interruptor trasero de PSU en posicion ON (I)</strong>
+          <p>Verificar antes de presionar power.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>PC enciende correctamente (POST exitoso)</strong>
+          <p>Verificar que aparezca imagen en el monitor.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>CPU, RAM y almacenamiento detectados en BIOS</strong>
+          <p>Entrar con DEL o F2 al BIOS.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>XMP/EXPO activado para velocidad correcta de RAM</strong>
+          <p>Velocidad por defecto puede ser menor.</p>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-box"></div>
+        <div>
+          <strong>Boot order configurado (SSD/USB como prioridad)</strong>
+          <p>Guardar cambios y reiniciar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
