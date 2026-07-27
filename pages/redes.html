@@ -15,8 +15,7 @@
 <header class="topbar">
   <div class="topbar-brand">
     <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
-    <i class="bi bi-cpu"></i>
-    <span>Tech<span>Guide</span></span>
+    <a href="../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
@@ -45,7 +44,9 @@
         <a href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
         <a href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
         <a href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
-        <a href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+        <a href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos Red</a>
+        <a href="redes.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+        <a href="redes.html#comandos"><i class="bi bi-terminal"></i> Comandos Técnicos</a>
       </div>
     </li>
     <li class="nav-item">
@@ -68,8 +69,10 @@
 
   <!-- PAGE HERO -->
   <div class="page-hero">
+    <div class="page-hero-glow"></div>
     <div class="page-hero-content" data-aos="fade-up">
-      <h1><i class="bi bi-globe2" style="color:var(--accent2);"></i> <span class="hl">Redes</span> de Computadoras</h1>
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-globe2"></i></div>
+      <h1><span class="hl">Redes</span> de Computadoras</h1>
       <p>Fundamentos de redes, protocolos TCP/IP y OSI, topologias, dispositivos, direccionamiento IP y comandos esenciales de diagnostico.</p>
       <div class="page-hero-chips">
         <span class="pchip pchip-b">TCP/IP</span>
@@ -472,6 +475,1086 @@
     <div class="info-box info-tip mt-2">
       <span class="icon">🔍</span>
       <div class="content"><strong>Flujo de solucion de problemas de conectividad</strong> ① Deshabilitar y rehabilitar la placa de red en Centro de Redes. ② ipconfig /release + /renew + /flushdns. ③ Apagar y reiniciar el router/modem. ④ Probar el cable de red con un tester de red. ⑤ Conectar el modem directamente a la PC para descartar router. ⑥ Cambiar entre Ethernet y WiFi para descartar placa de red. ⑦ Si persiste, contactar al ISP ya que la falla puede estar en el DSLAM de la central telefonica.</div>
+    </div>
+  </div>
+
+  <!-- ATAJOS DE TECLADO -->
+  <div class="content-section" id="atajos" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-keyboard"></i> Atajos de Teclado</h2>
+    <p class="section-subtitle">Windows · Linux GNOME · Navegadores · Office / LibreOffice</p>
+
+    <div class="accordion open" id="win-shortcuts">
+      <div class="accordion-header" onclick="toggleAccordion('win-shortcuts')">
+        <div class="accordion-title-row"><span class="accordion-icon">🪟</span><div><div class="accordion-title">Windows — Atajos esenciales</div><div class="accordion-subtitle">Sistema · ventanas · escritorios virtuales · consola</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// SISTEMA Y GENERAL</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Menú Inicio</span><div class="shortcut-keys"><kbd>Win</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Configuración del sistema</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Explorador de archivos</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mostrar escritorio</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bloquear sesión</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ejecutar (Run)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en Windows</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Notificaciones</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura recorte</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pantalla completa</span><div class="shortcut-keys"><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Administrador de tareas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>Esc</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Opciones de seguridad</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Del</kbd></div></div>
+        </div>
+        <p class="subhead">// GESTIÓN DE VENTANAS</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana activa</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Vista de tareas</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Anclar izquierda / derecha</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>← / →</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Maximizar ventana</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>↑</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Minimizar ventana</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>↓</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nuevo escritorio virtual</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover entre escritorios</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>←/→</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar escritorio virtual</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+        </div>
+        <p class="subhead">// CMD / POWERSHELL</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Autocompletar ruta/comando</span><div class="shortcut-keys"><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Historial de comandos</span><div class="shortcut-keys"><kbd>↑</kbd><span class="key-sep">/</span><kbd>↓</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cancelar comando actual</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Limpiar pantalla</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Inicio de línea</span><div class="shortcut-keys"><kbd>Home</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Fin de línea</span><div class="shortcut-keys"><kbd>End</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-linux">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-linux')">
+        <div class="accordion-title-row"><span class="accordion-icon">🐧</span><div><div class="accordion-title">Linux (GNOME / KDE) — Atajos esenciales</div><div class="accordion-subtitle">Escritorio · terminal Bash/ZSH</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// GNOME DESKTOP</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Actividades / Lanzador</span><div class="shortcut-keys"><kbd>Super</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ejecutar aplicación</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F2</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura pantalla completa</span><div class="shortcut-keys"><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura ventana activa</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Abrir terminal</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Alt</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bloquear pantalla</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Maximizar ventana</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>↑</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover entre espacios</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>PgUp/PgDn</kbd></div></div>
+        </div>
+        <p class="subhead">// TERMINAL BASH / ZSH</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Cancelar proceso actual</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Suspender proceso (bg)</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Salir del shell / EOF</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Limpiar pantalla</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Inicio de línea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Fin de línea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar hasta inicio</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>U</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar hasta fin</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>K</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en historial</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar texto cortado</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Y</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover palabra atrás</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>←</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover palabra adelante</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>→</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-navegadores">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-navegadores')">
+        <div class="accordion-title-row"><span class="accordion-icon">🌐</span><div><div class="accordion-title">Atajos de Navegadores Web</div><div class="accordion-subtitle">Chrome · Firefox · Edge · productividad web</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// PESTAÑAS Y NAVEGACIÓN</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva pestaña</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar pestaña</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>W</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Reabrir pestaña cerrada</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Navegar entre pestañas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva ventana</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ventana incógnito/privada</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Recargar página</span><div class="shortcut-keys"><kbd>F5</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Recargar sin caché</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ir a barra de URL</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en página</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>F</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Herramientas desarrollador</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Zoom + / Zoom - / Reset</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>+ / - / 0</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Historial de navegación</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Descargas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>J</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-office">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-office')">
+        <div class="accordion-title-row"><span class="accordion-icon">📄</span><div><div class="accordion-title">Atajos de Productividad — Office / LibreOffice</div><div class="accordion-subtitle">Atajos universales · Word · Excel · PowerPoint</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// UNIVERSALES (funcionan en casi todos los programas)</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Deshacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Rehacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Y</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Guardar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Guardar como</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Abrir archivo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>O</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Imprimir</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>P</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Seleccionar todo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Copiar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cortar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>X</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar y reemplazar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Negrita</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>B</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cursiva</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Subrayado</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>U</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nuevo documento</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar sin formato</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMANDOS TÉCNICOS -->
+  <div class="content-section" id="comandos" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-terminal-fill"></i> Referencia de Comandos Técnicos</h2>
+    <p class="section-subtitle">CMD / PowerShell · Bash/Linux · Administración del sistema</p>
+
+    <div class="accordion open" id="cmd-windows">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-windows')">
+        <div class="accordion-title-row"><span class="accordion-icon">🪟</span><div><div class="accordion-title">Windows CMD / PowerShell</div><div class="accordion-subtitle">Procesos · servicios · hardware · drivers · apagado</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Descripción</th><th>Ejemplo útil</th></tr>
+          <tr><td>systeminfo</td><td>Info completa del sistema (OS, RAM, CPU, red)</td><td>systeminfo | findstr /C:"RAM"</td></tr>
+          <tr><td>tasklist</td><td>Lista todos los procesos activos</td><td>tasklist /FI "STATUS eq running"</td></tr>
+          <tr><td>taskkill</td><td>Terminar proceso por nombre o PID</td><td>taskkill /IM notepad.exe /F</td></tr>
+          <tr><td>sc</td><td>Gestión de servicios de Windows</td><td>sc query | sc start/stop nombre</td></tr>
+          <tr><td>net user</td><td>Gestión de cuentas de usuario locales</td><td>net user Admin * (cambiar contraseña)</td></tr>
+          <tr><td>wmic</td><td>Información detallada de hardware</td><td>wmic cpu get Name,MaxClockSpeed</td></tr>
+          <tr><td>gpupdate</td><td>Aplicar directivas de grupo</td><td>gpupdate /force</td></tr>
+          <tr><td>robocopy</td><td>Copia robusta de archivos y directorios</td><td>robocopy src dst /E /Z /LOG:log.txt</td></tr>
+          <tr><td>driverquery</td><td>Listar todos los drivers instalados</td><td>driverquery | findstr "net"</td></tr>
+          <tr><td>Get-Process</td><td>PS: listar procesos con detalles</td><td>Get-Process | Sort CPU -Desc</td></tr>
+          <tr><td>Get-Service</td><td>PS: estado de todos los servicios</td><td>Get-Service | Where {$_.Status -eq "Running"}</td></tr>
+          <tr><td>Test-NetConnection</td><td>PS: test de conectividad TCP</td><td>Test-NetConnection -Port 443 google.com</td></tr>
+          <tr><td>shutdown</td><td>Apagar / reiniciar / cancelar</td><td>shutdown /r /t 0 (reinicio inmediato)</td></tr>
+          <tr><td>shutdown /r /o</td><td>Reiniciar en modo recuperación avanzada</td><td>shutdown /r /o /t 0</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-linux">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-linux')">
+        <div class="accordion-title-row"><span class="accordion-icon">🐧</span><div><div class="accordion-title">Linux / Bash — Administración del sistema</div><div class="accordion-subtitle">Hardware · procesos · systemd · paquetes · usuarios · archivos</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">bash · comandos esenciales de administración</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># ── SISTEMA Y HARDWARE ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">uname</span> <span class="cmd-flag">-a</span>              <span class="cmd-comment"># Info del kernel</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lscpu</span>                 <span class="cmd-comment"># CPU detallada</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">free</span> <span class="cmd-flag">-h</span>              <span class="cmd-comment"># RAM y swap</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">df</span> <span class="cmd-flag">-h</span>               <span class="cmd-comment"># Uso de discos montados</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lsblk</span>                <span class="cmd-comment"># Dispositivos de bloque</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lspci</span>                <span class="cmd-comment"># Dispositivos PCI (GPU, etc.)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lsusb</span>                <span class="cmd-comment"># Dispositivos USB</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dmidecode</span> <span class="cmd-flag">-t</span> memory  <span class="cmd-comment"># Info física RAM (sudo)</span>
+
+<span class="cmd-comment"># ── PROCESOS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">top</span>                  <span class="cmd-comment"># Monitor interactivo</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">htop</span>                 <span class="cmd-comment"># top mejorado (apt install htop)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ps aux</span>              <span class="cmd-comment"># Todos los procesos</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ps aux</span> | grep nginx  <span class="cmd-comment"># Filtrar proceso</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">kill</span> <span class="cmd-value">-9 1234</span>         <span class="cmd-comment"># Matar PID (forzado)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">killall</span> <span class="cmd-value">firefox</span>      <span class="cmd-comment"># Matar por nombre</span>
+
+<span class="cmd-comment"># ── SERVICIOS (systemd) ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl status</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl start|stop|restart|reload</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl enable|disable</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">journalctl</span> <span class="cmd-flag">-u</span> nginx <span class="cmd-flag">-n</span> <span class="cmd-value">50</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">journalctl</span> <span class="cmd-flag">-xe</span>          <span class="cmd-comment"># Logs de error recientes</span>
+
+<span class="cmd-comment"># ── PAQUETES (APT — Debian/Ubuntu) ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt update && sudo apt upgrade</span> <span class="cmd-flag">-y</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt install</span> <span class="cmd-value">htop</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt remove</span> <span class="cmd-value">htop</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt purge</span> <span class="cmd-value">htop</span>   <span class="cmd-comment"># Borrar también config</span>
+
+<span class="cmd-comment"># ── USUARIOS Y PERMISOS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo useradd</span> <span class="cmd-flag">-m</span> <span class="cmd-value">newuser</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo passwd</span> <span class="cmd-value">newuser</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo usermod</span> <span class="cmd-flag">-aG</span> sudo <span class="cmd-value">user</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">chmod</span> <span class="cmd-value">755</span> archivo.sh
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">chown</span> <span class="cmd-value">user:grupo</span> archivo
+
+<span class="cmd-comment"># ── ARCHIVOS Y LOGS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">find</span> / <span class="cmd-flag">-name</span> <span class="cmd-value">"*.conf"</span> <span class="cmd-flag">-type f</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">grep</span> <span class="cmd-flag">-r</span> <span class="cmd-value">"error"</span> /var/log/
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tar</span> <span class="cmd-flag">-czf</span> backup.tar.gz /datos
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tar</span> <span class="cmd-flag">-xzf</span> backup.tar.gz
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">du</span> <span class="cmd-flag">-sh</span> /var/log/*
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tail</span> <span class="cmd-flag">-f</span> /var/log/syslog    <span class="cmd-comment"># Log en tiempo real</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="ports-acc">
+      <div class="accordion-header" onclick="toggleAccordion('ports-acc')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔌</span><div><div class="accordion-title">Puertos de Red — Referencia rápida</div><div class="accordion-subtitle">TCP/UDP más usados en soporte técnico</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Puerto</th><th>Proto</th><th>Servicio</th><th>Descripción</th></tr>
+          <tr><td>21</td><td>TCP</td><td>FTP</td><td>Transferencia de archivos (control)</td></tr>
+          <tr><td>22</td><td>TCP</td><td>SSH</td><td>Shell seguro, acceso remoto cifrado</td></tr>
+          <tr><td>23</td><td>TCP</td><td>Telnet</td><td>Shell remoto sin cifrar — inseguro</td></tr>
+          <tr><td>25</td><td>TCP</td><td>SMTP</td><td>Envío de correo electrónico</td></tr>
+          <tr><td>53</td><td>TCP/UDP</td><td>DNS</td><td>Resolución de nombres de dominio</td></tr>
+          <tr><td>67/68</td><td>UDP</td><td>DHCP</td><td>Asignación automática de IP (server/client)</td></tr>
+          <tr><td>80</td><td>TCP</td><td>HTTP</td><td>Web sin cifrar</td></tr>
+          <tr><td>110</td><td>TCP</td><td>POP3</td><td>Recepción de correo (descarga local)</td></tr>
+          <tr><td>143</td><td>TCP</td><td>IMAP</td><td>Acceso a correo en servidor</td></tr>
+          <tr><td>161/162</td><td>UDP</td><td>SNMP</td><td>Monitoreo de dispositivos de red</td></tr>
+          <tr><td>389</td><td>TCP</td><td>LDAP</td><td>Directorio activo / autenticación</td></tr>
+          <tr><td>443</td><td>TCP</td><td>HTTPS</td><td>Web cifrada con TLS/SSL</td></tr>
+          <tr><td>445</td><td>TCP</td><td>SMB</td><td>Compartir archivos e impresoras Windows</td></tr>
+          <tr><td>587</td><td>TCP</td><td>SMTP TLS</td><td>Envío de correo cifrado (STARTTLS)</td></tr>
+          <tr><td>3389</td><td>TCP</td><td>RDP</td><td>Escritorio remoto Windows</td></tr>
+          <tr><td>5900</td><td>TCP</td><td>VNC</td><td>Control remoto de escritorio</td></tr>
+          <tr><td>8080</td><td>TCP</td><td>HTTP Alt.</td><td>Web alternativa / proxies / desarrollo</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-vs-ps">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-vs-ps')">
+        <div class="accordion-title-row"><span class="accordion-icon">⚡</span><div><div class="accordion-title">CMD vs PowerShell — Comparativa y equivalencias</div><div class="accordion-subtitle">Comandos equivalentes · cuándo usar cada uno</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tarea</th><th>CMD</th><th>PowerShell</th></tr>
+          <tr><td>Listar archivos</td><td>dir</td><td>Get-ChildItem (ls)</td></tr>
+          <tr><td>Copiar archivos</td><td>copy / xcopy</td><td>Copy-Item</td></tr>
+          <tr><td>Mover archivos</td><td>move</td><td>Move-Item</td></tr>
+          <tr><td>Borrar archivos</td><td>del</td><td>Remove-Item</td></tr>
+          <tr><td>Crear directorio</td><td>mkdir</td><td>New-Item -Type Directory</td></tr>
+          <tr><td>Listar procesos</td><td>tasklist</td><td>Get-Process</td></tr>
+          <tr><td>Matar proceso</td><td>taskkill /PID 1234</td><td>Stop-Process -Id 1234</td></tr>
+          <tr><td>Servicios</td><td>sc query</td><td>Get-Service</td></tr>
+          <tr><td>Información red</td><td>ipconfig /all</td><td>Get-NetIPConfiguration</td></tr>
+          <tr><td>Test de red</td><td>ping host</td><td>Test-NetConnection host</td></tr>
+          <tr><td>Variables entorno</td><td>set / echo %VAR%</td><td>$env:VAR</td></tr>
+          <tr><td>Ayuda de comando</td><td>comando /?</td><td>Get-Help Comando</td></tr>
+          <tr><td>Ejecutar como admin</td><td>runas /user:admin cmd</td><td>Start-Process -Verb RunAs</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>CMD o PowerShell</strong> Usa CMD para tareas rápidas y simples. Usa PowerShell para automatización, scripting avanzado, administración de Active Directory y Azure. PowerShell puede ejecutar todos los comandos de CMD más sus propios cmdlets. En Windows 11, PowerShell es el intérprete por defecto.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="variables-entorno">
+      <div class="accordion-header" onclick="toggleAccordion('variables-entorno')">
+        <div class="accordion-title-row"><span class="accordion-icon">📦</span><div><div class="accordion-title">Variables de Entorno Windows</div><div class="accordion-subtitle">Rutas del sistema · uso en CMD y PowerShell</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Variable</th><th>Ruta / Valor típico</th><th>Uso</th></tr>
+          <tr><td>%SystemRoot%</td><td>C:\Windows</td><td>Directorio de Windows</td></tr>
+          <tr><td>%SystemDrive%</td><td>C:</td><td>Unidad del sistema</td></tr>
+          <tr><td>%USERPROFILE%</td><td>C:\Users\Usuario</td><td>Carpeta del usuario actual</td></tr>
+          <tr><td>%APPDATA%</td><td>C:\Users\Usuario\AppData\Roaming</td><td>Datos de aplicaciones por usuario</td></tr>
+          <tr><td>%TEMP% / %TMP%</td><td>...\AppData\Local\Temp</td><td>Archivos temporales (limpiar periódicamente)</td></tr>
+          <tr><td>%ProgramFiles%</td><td>C:\Program Files</td><td>Aplicaciones de 64 bits</td></tr>
+          <tr><td>%ProgramFiles(x86)%</td><td>C:\Program Files (x86)</td><td>Aplicaciones de 32 bits</td></tr>
+          <tr><td>%COMPUTERNAME%</td><td>MiPC</td><td>Nombre del equipo en la red</td></tr>
+          <tr><td>%USERNAME%</td><td>Usuario</td><td>Usuario actualmente conectado</td></tr>
+          <tr><td>%PATH%</td><td>Lista de rutas separadas por ;</td><td>Directorios buscados al ejecutar comandos</td></tr>
+        </table></div>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="code-lang">cmd / powershell · usar variables de entorno</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># CMD: abrir carpeta temp del usuario</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">explorer</span> <span class="cmd-value">%TEMP%</span>
+
+<span class="cmd-comment"># CMD: listar todas las variables de entorno</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">set</span>
+
+<span class="cmd-comment"># PowerShell: ver variable específica</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">echo</span> <span class="cmd-value">$env:USERPROFILE</span>
+
+<span class="cmd-comment"># PowerShell: listar todas las variables de entorno</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ChildItem</span> <span class="cmd-value">Env:</span>
+
+<span class="cmd-comment"># Abrir editor GUI de variables de entorno</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">rundll32</span> sysdm.cpl,EditEnvironmentVariables</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SISTEMAS OPERATIVOS DE RED -->
+  <div class="content-section" id="so-red" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-hdd-network"></i> Sistemas Operativos de Red</h2>
+    <p class="section-subtitle">Windows Server · Linux Server · NAS OS · Comparativa de uso</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Que es un SO de red?</strong> Un sistema operativo de red gestiona hardware, servicios de comunicacion entre multiples equipos, procesamiento distribuido, seguridad de datos y recuperacion ante fallos. A diferencia de un SO de escritorio, esta optimizado para ejecutar servicios 24/7 y manejar multiples conexiones simultaneas.</div>
+    </div>
+
+    <div class="accordion open" id="windows-server">
+      <div class="accordion-header" onclick="toggleAccordion('windows-server')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-microsoft"></i></span><div><div class="accordion-title">Windows Server</div><div class="accordion-subtitle">Roles esenciales · Active Directory · DNS · DHCP · IIS</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Windows Server es el sistema operativo de red de Microsoft disenado para entornos corporativos. Ofrece una interfaz grafica familiar y herramientas de administracion centralizadas. Cada version incluye roles especificos que se instalan segun la necesidad del servidor.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Version</th><th>Anio</th><th>Soporte hasta</th><th>Caracteristicas clave</th></tr>
+          <tr><td>Server 2016</td><td>2016</td><td>2027</td><td>Contenedores Docker, Nano Server, Shielded VMs</td></tr>
+          <tr><td>Server 2019</td><td>2018</td><td>2029</td><td>Administracion hibrida con Azure, SDN mejorado</td></tr>
+          <tr><td>Server 2022</td><td>2021</td><td>2031</td><td>Seguridad avanzada, Azure Arc, SMB over QUIC</td></tr>
+        </table></div>
+        <p class="subhead">Roles principales de Windows Server</p>
+        <div class="device-grid">
+          <div class="device-card router">
+            <h4><i class="bi bi-diagram-3"></i> Active Directory DS</h4>
+            <p>Servicio de dominio que centraliza la autenticacion y autorizacion de usuarios y equipos. Permite politicas de grupo (GPO), gestión de cuentas y seguridad en toda la red corporativa.</p>
+          </div>
+          <div class="device-card switch-">
+            <h4><i class="bi bi-globe2"></i> DNS Server</h4>
+            <p>Resolucion de nombres de dominio a direcciones IP. Servidor DNS primario, secundario o de caché. Fundamental para que los servicios internos (AD, SharePoint, Exchange) funcionen correctamente.</p>
+          </div>
+          <div class="device-card hub">
+            <h4><i class="bi bi-ethernet"></i> DHCP Server</h4>
+            <p>Asigna direcciones IP automaticamente a los dispositivos de la red. Gestion de rangos, reservas, exclusiones y opciones de red (gateway, DNS, dominio).</p>
+          </div>
+          <div class="device-card nic">
+            <h4><i class="bi bi-globe"></i> IIS (Web Server)</h4>
+            <p>Servidor web integrado para alojar sitios web, aplicaciones ASP.NET y servicios WCF. Soporte para HTTPS, certificados SSL y reescritura de URL.</p>
+          </div>
+        </div>
+        <div class="info-box info-note mt-2">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Licenciamiento</strong>Windows Server se licencia por nucleos fisicos del servidor. La edicion Essentials (hasta 25 usuarios/50 dispositivos) es ideal para pequenas empresas. Las ediciones Standard y Datacenter permiten virtualizacion con licencia incluida.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="linux-server">
+      <div class="accordion-header" onclick="toggleAccordion('linux-server')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-terminal-fill"></i></span><div><div class="accordion-title">Linux Server</div><div class="accordion-subtitle">Ubuntu Server · CentOS/Rocky · Debian</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Linux es el sistema operativo dominante en servidores a nivel mundial. Su estabilidad, seguridad, bajo consumo de recursos y licencia gratuita lo hacen ideal para servidores web, bases de datos, firewalls y contenedores.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Distribucion</th><th>Base</th><th>Ciclo de soporte</th><th>Ideal para</th></tr>
+          <tr><td>Ubuntu Server LTS</td><td>Debian</td><td>5 anos (LTS)</td><td>Servidores web, contenedores Docker/K8s, cloud</td></tr>
+          <tr><td>Rocky Linux</td><td>RHEL (comunidad)</td><td>10 anos</td><td>Reemplazo de CentOS, entornos empresariales</td></tr>
+          <tr><td>CentOS Stream</td><td>RHEL (upstream)</td><td>Rolacion continuo</td><td>Desarrollo, prueba de funcionalidades RHEL</td></tr>
+          <tr><td>Debian Stable</td><td>Propia</td><td>~3 anos + 2 LTS</td><td>Servidores que requieren maxima estabilidad</td></tr>
+        </table></div>
+        <p class="subhead">Servicios comunes en Linux</p>
+        <div class="device-grid">
+          <div class="device-card router">
+            <h4><i class="bi bi-hdd-stack"></i> Apache / Nginx</h4>
+            <p>Servidores web de alto rendimiento. Apache: modular y flexible. Nginx: orientado a concurrencia masiva, proxy reverso y equilibrio de carga.</p>
+          </div>
+          <div class="device-card switch-">
+            <h4><i class="bi bi-database"></i> MySQL / PostgreSQL</h4>
+            <p>Bases de datos relacionales para aplicaciones web, ERP y sistemas de gestion. PostgreSQL ofrece mayor funcionalidad SQL avanzada.</p>
+          </div>
+          <div class="device-card hub">
+            <h4><i class="bi bi-shield-lock"></i> iptables / nftables</h4>
+            <p>Firewalls nativos de Linux para filtrar trafico, configurar NAT, port forwarding y proteccion del servidor contra accesos no autorizados.</p>
+          </div>
+          <div class="device-card nic">
+            <h4><i class="bi bi-box-seam"></i> Docker / Podman</h4>
+            <p>Contenedores ligeros para desplegar aplicaciones de forma aislada y reproducible. Kubernetes para orquestacion a gran escala.</p>
+          </div>
+        </div>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="code-lang">bash · comandos esenciales de servidor Linux</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Instalar un servidor web Nginx</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt update</span> && <span class="cmd-keyword">sudo apt install</span> <span class="cmd-value">nginx</span> <span class="cmd-flag">-y</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo systemctl enable</span> <span class="cmd-value">nginx</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo systemctl start</span> <span class="cmd-value">nginx</span>
+
+<span class="cmd-comment"># Verificar servicios activos</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl</span> <span class="cmd-flag">list-units</span> <span class="cmd-flag">--type=service</span> <span class="cmd-flag">--state=running</span>
+
+<span class="cmd-comment"># Abrir puerto en firewall (UFW)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo ufw allow</span> <span class="cmd-value">80/tcp</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo ufw allow</span> <span class="cmd-value">443/tcp</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo ufw enable</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="nas-os">
+      <div class="accordion-header" onclick="toggleAccordion('nas-os')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-rack"></i></span><div><div class="accordion-title">NAS OS — Sistemas de Almacenamiento en Red</div><div class="accordion-subtitle">TrueNAS · Synology DSM · OpenMediaVault</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Un NAS (Network Attached Storage) es un dispositivo dedicado al almacenamiento y comparticion de archivos en red. Su sistema operativo esta optimizado para gestionar discos, RAID, cuotas de usuario y servicios de respaldo.</p>
+        <div class="device-grid">
+          <div class="device-card router">
+            <h4><i class="bi bi-shield-check"></i> TrueNAS (iXsystems)</h4>
+            <p>Basado en FreeBSD. TrueNAS CORE (gratuito) con ZFS para integridad de datos, snapshots y compresion. TrueNAS SCALE (Linux) agrega contenedores Docker y virtualizacion KVM. Ideal para entornos que requieren maxima fiabilidad.</p>
+          </div>
+          <div class="device-card switch-">
+            <h4><i class="bi bi-app-indicator"></i> Synology DSM</h4>
+            <p>Interfaz web muy pulida y facil de usar. Paquetes de aplicaciones (Surveillance Station, Drive, MailPlus). Soporte Btrfs, snapshots y sincronizacion remota. Perfecto para PYMES y uso doméstico.</p>
+          </div>
+          <div class="device-card hub">
+            <h4><i class="bi bi-gear"></i> OpenMediaVault</h4>
+            <p>Basado en Debian Linux, completamente gratuito y de codigo abierto. Interfaz web sencilla para gestionar SMB/NFS, plugins de Docker, rsync y BTsync. Ideal para montar un NAS con hardware antiguo o Raspberry Pi.</p>
+          </div>
+        </div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+          <div class="content"><strong>ZFS vs Btrfs en NAS</strong>ZFS (TrueNAS): snapshots eficientes, compresion LZ4, deduplicacion, reparacion automatica de datos corrompidos. Btrfs (Synology): snapshots rapidos, clonacion eficiente, pero con historial de estabilidad en RAID 5/6. Para datos criticos, ZFS es la opcion mas robusta.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="comparativa-so">
+      <div class="accordion-header" onclick="toggleAccordion('comparativa-so')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-bar-chart"></i></span><div><div class="accordion-title">Comparativa de SO de Red</div><div class="accordion-subtitle">Costo · facilidad de uso · rendimiento · casos de uso ideales</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Criterio</th><th>Windows Server</th><th>Linux Server</th><th>NAS OS</th></tr>
+          <tr><td>Costo</td><td>Alto (licencia por nucleo)</td><td>Gratuito (comunidad) o soporte comercial (RHEL, Ubuntu Pro)</td><td>Gratuito a bajo costo</td></tr>
+          <tr><td>Facilidad de uso</td><td>Alta (GUI familiar)</td><td>Media-Baja (requiere linea de comandos)</td><td>Alta (GUI web simplificada)</td></tr>
+          <tr><td>Rendimiento</td><td>Bueno, mas consumo de RAM/CPU</td><td>Excelente, optimizado para servidores</td><td>Optimizado para almacenamiento</td></tr>
+          <tr><td>Seguridad</td><td>Buena con politicas de grupo</td><td>Excelente (permisos Unix,SELinux)</td><td>Basica a buena segun configuracion</td></tr>
+          <tr><td>Servicios soportados</td><td>AD, DNS, DHCP, IIS, Exchange, SQL</td><td>Web, DB, mail, DNS, contenedores, VPN</td><td>Almacenamiento, copias, multimedia</td></tr>
+          <tr><td>Comunidad / Soporte</td><td>Documentacion Microsoft extensa</td><td>Comunidad enorme, foros activos</td><td>Foros por fabricante</td></tr>
+          <tr><td>Hardware minimo</td><td>1.4 GHz 64-bit, 2 GB RAM</td><td>512 MB RAM (CLI), 1 GB (GUI)</td><td>Depende del dispositivo NAS</td></tr>
+        </table></div>
+        <p class="subhead">Cual elegir segun el escenario</p>
+        <div class="info-box info-tip">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Escenario → SO recomendado</strong>Red corporativa con Active Directory y Exchange: Windows Server. Servidor web, API o base de datos en la nube: Ubuntu Server o Rocky Linux. NAS para respaldos y comparticion de archivos en PYME: TrueNAS o Synology. Firewall/router para laboratorio: pfSense o OPNsense. Servidor de medios (Plex/Jellyfin) casero: OpenMediaVault. Laboratorio de aprendizaje: Debian minimal o Ubuntu Server.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECCION A: COMPONENTES DE RED -->
+  <div class="content-section" id="componentes-red" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-hdd-network"></i> Componentes de Red</h2>
+    <p class="section-subtitle">Servidor · Estacion de trabajo · Nodo · Tarjeta de Red (NIC)</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Que es un componente de red?</strong> Los componentes de una red tienen funciones especificas y se utilizan dependiendo de las necesidades y los recursos economicos de quien se desea conectar. Para elegirlos se requiere conocer las caracteristicas tecnicas de cada componente.</div>
+    </div>
+
+    <div class="accordion open" id="servidor">
+      <div class="accordion-header" onclick="toggleAccordion('servidor')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-server"></i></span><div><div class="accordion-title">Servidor</div><div class="accordion-subtitle">Definicion · tipos · servicios que ofrece</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Son computadoras que controlan las redes y se encargan de permitir o no el acceso de los usuarios a los recursos. Tambien controlan los permisos que determinan si un nodo puede o no pertenecer a una red. La finalidad de los servidores es controlar el funcionamiento de una red.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo de Servidor</th><th>Funcion</th></tr>
+          <tr><td>Servidor de Archivos</td><td>Almacena y comparte archivos en la red. Gestiona permisos de acceso y cuotas de disco para los usuarios.</td></tr>
+          <tr><td>Servidor Web</td><td>Aloja sitios web y servicios HTTP/HTTPS. Ejemplos: Apache, Nginx, IIS.</td></tr>
+          <tr><td>Servidor de Base de Datos</td><td>Gestiona bases de datos centralizadas (MySQL, PostgreSQL, SQL Server). Permite consultas concurrentes desde multiples clientes.</td></tr>
+          <tr><td>Servidor Proxy</td><td>Actua como intermediario entre los clientes e Internet. Filtra contenido, cachea paginas y mejora la seguridad de la red.</td></tr>
+          <tr><td>Servidor de Correo</td><td>Gestiona envio y recepcion de correo electronico via SMTP, IMAP y POP3. Ejemplos: Exchange, Postfix, Zimbra.</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="estacion-trabajo">
+      <div class="accordion-header" onclick="toggleAccordion('estacion-trabajo')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-pc-display"></i></span><div><div class="accordion-title">Estacion de Trabajo</div><div class="accordion-subtitle">Computadoras conectadas a la red que no la controlan</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary">Es el nombre que reciben las computadoras conectadas a una red pero que no pueden controlarla, ni alguno de sus nodos o recursos de la misma. Cualquier computadora puede ser estacion de trabajo, siempre que este conectada y se comunique con la red. Son los dispositivos finales que consumen los servicios que ofrecen los servidores.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="nodo-red">
+      <div class="accordion-header" onclick="toggleAccordion('nodo-red')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3"></i></span><div><div class="accordion-title">Nodo de Red</div><div class="accordion-subtitle">Cualquier elemento conectado y comunicado en la red</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary">Es cualquier elemento que se encuentre conectado y comunicado a una red. Los perifericos que se conectan a una computadora se convierten en nodo si estan conectados a la red y pueden compartir sus servicios para ser utilizados por los usuarios, como impresoras o carpetas compartidas. Cada nodo tiene una direccion unica (MAC) que lo identifica en la red.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="nic">
+      <div class="accordion-header" onclick="toggleAccordion('nic')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-ethernet"></i></span><div><div class="accordion-title">Tarjeta de Red (NIC)</div><div class="accordion-subtitle">Network Interface Card · direccion MAC · velocidades</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Son tarjetas de circuitos integrados que se insertan en los puertos de expansion de la placa madre y cuya funcion es recibir el cable que conecta a la computadora con una red informatica. Placa PCB de insercion interna o externa con interfaces PCI, PCIe, USB o ExpressCard.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Caracteristica</th><th>Detalle</th></tr>
+          <tr><td>Direccion MAC</td><td>Direccion fisica unica de 48 bits incorporada en fabricacion (例: 00:1A:2B:3C:4D:5E)</td></tr>
+          <tr><td>Velocidades</td><td>10 Mbps · 100 Mbps (Fast Ethernet) · 1000 Mbps (Gigabit) · 10 Gbps</td></tr>
+          <tr><td>Interfaces</td><td>PCIe x1 (comun) · USB externa · Integrada en placa madre</td></tr>
+          <tr><td>Puerto</td><td>Ethernet RJ-45 con indicador luminico de actividad</td></tr>
+        </table></div>
+        <div class="info-box info-note mt-2">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>MAC vs IP</strong> La direccion MAC es permanente y fisica (grabada en la NIC). La direccion IP es logica y puede cambiar segun la red. ARP resuelve IP a MAC en la red local.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION B: MEDIOS DE TRANSMISION -->
+  <div class="content-section" id="medios-transmision" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-usb-cable"></i> Medios de Transmision</h2>
+    <p class="section-subtitle">Coaxial · Par trenzado · Fibra optica · Inalambrico</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Medios de transmision</strong> Estos elementos hacen posible la comunicacion entre dos computadoras. Son cables que conectan a las computadoras y a traves de los cuales viaja la informacion. Su eleccion depende de las necesidades de la comunicacion de red.</div>
+    </div>
+
+    <div class="accordion open" id="coaxial">
+      <div class="accordion-header" onclick="toggleAccordion('coaxial')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-circle"></i></span><div><div class="accordion-title">Cable Coaxial</div><div class="accordion-subtitle">RG-6 · RG-59 · nucleo de cobre · malla de retorno</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Constituido por un hilo principal de cobre cubierto por una capa plastica, rodeada por una pelicula reflejante que reduce las interferencias. Alrededor de ella existe una malla de hilos metalicos, y todo esto esta cubierto por una capa de hule que protege a los conductores.</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>RG-6</h4><p>Cable coaxial de mayor grosor (75 ohm). Usado para TV por cable, Internet via cablemodem y senales de video HD. Mayor capacidad de transferencia y menor atenuacion que RG-59.</p></div>
+          <div class="conn-card"><h4>RG-59</h4><p>Cable coaxial mas delgado (75 ohm). Usado para video analogico CCTV y conexiones de corta distancia. Menor ancho de banda que RG-6, mas susceptible a interferencias.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="par-trenzado">
+      <div class="accordion-header" onclick="toggleAccordion('par-trenzado')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Par Trenzado</div><div class="accordion-subtitle">UTP · STP · FTP · Categorias CAT5 a CAT8</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Se utiliza para la conexion de redes; es el cable que tiene 4 pares de hilos, aunque existen 3 variaciones principales:</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>UTP — Unshielded Twisted Pair</h4><p>Par trenzado no apantallado. La variante mas utilizada por su bajo costo, facil manejo y porque no requiere herramientas especiales. Sin blindaje (mas susceptible a interferencias electromagneticas).</p></div>
+          <div class="conn-card"><h4>STP — Shielded Twisted Pair</h4><p>Par trenzado apantallado. Tiene una malla metalica que cubre cada par de cables, ademas de una pelicula reflejante que evita interferencias. Mas costoso pero ofrece mayor proteccion contra diafonia.</p></div>
+          <div class="conn-card"><h4>FTP — Foiled Twisted Pair</h4><p>Par trenzado con pantalla global. Tiene una pelicula reflejante que cubre a cada uno de los pares de cables (no por filamentos individuales como STP). Precio intermedio entre UTP y STP.</p></div>
+        </div>
+        <p class="subhead">Categorias UTP</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Categoria</th><th>Velocidad</th><th>Ancho de Banda</th><th>Distancia max.</th></tr>
+          <tr><td>CAT3</td><td>10 Mbps</td><td>16 MHz</td><td>100 m</td></tr>
+          <tr><td>CAT5</td><td>100 Mbps</td><td>100 MHz</td><td>100 m</td></tr>
+          <tr><td>CAT5e</td><td>1 Gbps</td><td>100 MHz</td><td>100 m</td></tr>
+          <tr><td>CAT6</td><td>1-10 Gbps</td><td>250 MHz</td><td>100 m (10G a 55m)</td></tr>
+          <tr><td>CAT6a</td><td>10 Gbps</td><td>500 MHz</td><td>100 m</td></tr>
+          <tr><td>CAT7</td><td>10 Gbps</td><td>600 MHz</td><td>100 m (blindado)</td></tr>
+          <tr><td>CAT8</td><td>25-40 Gbps</td><td>2000 MHz</td><td>30 m (centros de datos)</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="fibra-optica">
+      <div class="accordion-header" onclick="toggleAccordion('fibra-optica')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-lightning"></i></span><div><div class="accordion-title">Fibra Optica</div><div class="accordion-subtitle">Monomodo vs Multimodo · senal luminica · alta velocidad</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Nucleo de vidrio o material plastico que usa senal luminica (impulsos de luz) en lugar de electrica. Senales concentradas que no desaparecen hasta llegar a destino. Ideal para conexiones extensas y de alta velocidad. Resistente a la corrosion y a las altas temperaturas.</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>Fibra Monomodo (SMF)</h4><p>Nucleo muy estrecho (~9 micras). Un solo haz de luz viaja por el nucleo. Alcances de hasta 100+ km. Usada en conexiones de larga distancia, telecomunicaciones y backbones de Internet.</p></div>
+          <div class="conn-card"><h4>Fibra Multimodo (MMF)</h4><p>Nucleo mas amplio (50-62.5 micras). Multiples haces de luz rebotan dentro del nucleo. Alcances de hasta 2 km. Usada en centros de datos, redes LAN y distancias cortas-medias.</p></div>
+        </div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+          <div class="content"><strong>Desventajas de la fibra optica</strong> Su costo es elevado ya que para su elaboracion se requiere vidrio de alta calidad. Ademas es sumamente fragil de manipular durante su fabricacion. Sin embargo, su inmunidad a interferencias electromagneticas y su enorme ancho de banda la hacen insustituible en redes modernas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="inalambrico">
+      <div class="accordion-header" onclick="toggleAccordion('inalambrico')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-wifi"></i></span><div><div class="accordion-title">Comunicacion Inalambrica</div><div class="accordion-subtitle">WiFi · Bluetooth · Infrarrojos</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">La comunicacion inalambrica es la transferencia de informacion sin ninguna conexion fisica entre el emisor y el receptor, que utilizan el espectro de frecuencia de radio, hardware, software y diversas tecnologias para transmitir informacion.</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>WiFi (WLAN)</h4><p>Wireless Fidelity — tecnologia de comunicacion inalambrica mediante ondas de radio. Requiere un punto de acceso (access point) conectado al modem y un dispositivo WiFi conectado al equipo. Estandares: 802.11n/ac/ax (Wi-Fi 4/5/6).</p></div>
+          <div class="conn-card"><h4>Bluetooth</h4><p>Tecnologia de red inalambrica de corto alcance que conecta dispositivos sin cables, sin requerir linea de visualizacion directa. Transmite voz o datos entre equipos con circuitos de radio de bajo costo, en un rango de 10 a 100 metros, usando poca energia.</p></div>
+          <div class="conn-card"><h4>Infrarrojos</h4><p>Permite establecer una conexion directa entre dos dispositivos habilitados para infrarrojos sin necesidad de cables o hardware de red. Se alinean dos dispositivos para establecer el vinculo. Alcance muy limitado y en desuso actualmente.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION C: ARQUITECTURA DE RED -->
+  <div class="content-section" id="arquitectura-red" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-diagram-3"></i> Arquitectura de Red</h2>
+    <p class="section-subtitle">Cliente-Servidor vs P2P · Dominio de broadcast · OSI vs TCP/IP · Topologia</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Que es la arquitectura de red?</strong> Es el plan con el que se conectan los protocolos y otros programas de software. La arquitectura de una red viene definida por su topologia, el metodo de acceso a la red y los protocolos de comunicacion.</div>
+    </div>
+
+    <div class="accordion open" id="cliente-servidor-p2p">
+      <div class="accordion-header" onclick="toggleAccordion('cliente-servidor-p2p')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">Cliente-Servidor vs Peer-to-Peer</div><div class="accordion-subtitle">Modelos de red · ventajas y desventajas</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Caracteristica</th><th>Cliente-Servidor</th><th>Peer-to-Peer (P2P)</th></tr>
+          <tr><td>Control</td><td>Centralizado en el servidor</td><td>Distribuido entre todos los nodos</td></tr>
+          <tr><td>Costo</td><td>Alto (requiere servidor dedicado)</td><td>Bajo (sin servidor dedicado)</td></tr>
+          <tr><td>Seguridad</td><td>Alta (autenticacion centralizada)</td><td>Baja (cada usuario gestiona su seguridad)</td></tr>
+          <tr><td>Escalabilidad</td><td>Alta (agregar clientes es facil)</td><td>Baja (degrada con mas nodos)</td></tr>
+          <tr><td>Administracion</td><td>Centralizada, mas facil</td><td>Distribuida, mas compleja</td></tr>
+          <tr><td>Dependencia</td><td>Si el servidor falla, la red cae</td><td>No hay punto unico de fallo</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="dominio-broadcast">
+      <div class="accordion-header" onclick="toggleAccordion('dominio-broadcast')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-broadcast"></i></span><div><div class="accordion-title">Dominio de Broadcast</div><div class="accordion-subtitle">Area de difusion · colision de paquetes</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">Un dominio de broadcast es el conjunto de todos los dispositivos que pueden recibir paquetes de difusion (broadcast) entre si. En una LAN con un switch, todos los puertos pertenecen al mismo dominio de broadcast. Los routers separan dominios de broadcast, limitando el trafico innecesario.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Descripcion</th></tr>
+          <tr><td>Dominio de colision</td><td>Grupo de dispositivos donde las transmisiones pueden colisionar (segmento CSMA/CD). Un switch divide los dominios de colision.</td></tr>
+          <tr><td>Dominio de broadcast</td><td>Grupo de dispositivos que reciben los paquetes broadcast. Un router separa dominios de broadcast.</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="osi-vs-tcpip">
+      <div class="accordion-header" onclick="toggleAccordion('osi-vs-tcpip')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-layers"></i></span><div><div class="accordion-title">Comparativa OSI vs TCP/IP</div><div class="accordion-subtitle">7 capas vs 4 capas · modelo teorico vs practico</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>OSI (7 capas)</th><th>TCP/IP (4 capas)</th><th>Protocolos</th></tr>
+          <tr><td>7. Aplicacion</td><td rowspan="3">Aplicacion</td><td>HTTP, FTP, DNS, SMTP</td></tr>
+          <tr><td>6. Presentacion</td><td>SSL/TLS, JPEG</td></tr>
+          <tr><td>5. Sesion</td><td>NetBIOS, RPC</td></tr>
+          <tr><td>4. Transporte</td><td>Transporte</td><td>TCP, UDP</td></tr>
+          <tr><td>3. Red</td><td>Internet</td><td>IP, ICMP, ARP</td></tr>
+          <tr><td>2. Enlace de datos</td><td rowspan="2">Acceso a Red</td><td>Ethernet, Wi-Fi</td></tr>
+          <tr><td>1. Fisica</td><td>Cable, senal electrica/optica</td></tr>
+        </table></div>
+        <div class="info-box info-note mt-2">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Modelo OSI vs TCP/IP</strong> OSI es un modelo teorico de referencia (ISO). TCP/IP es el modelo practico implementado en Internet. TCP/IP combina las capas 5, 6 y 7 de OSI en una sola capa de aplicacion.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="topologia-fisica-logica">
+      <div class="accordion-header" onclick="toggleAccordion('topologia-fisica-logica')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3-fill"></i></span><div><div class="accordion-title">Topologia Fisica vs Logica</div><div class="accordion-subtitle">Diseno del medio vs trayectoria de la senal</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Definicion</th><th>Ejemplo</th></tr>
+          <tr><td>Topologia Fisica</td><td>Se refiere al diseno actual del medio de transmision de la red — como estan conectados fisicamente los cables y dispositivos.</td><td>Cable UTP conectando PCs a un switch en forma de estrella</td></tr>
+          <tr><td>Topologia Logica</td><td>Se refiere a la trayectoria logica que sigue una senal a su paso por los nodos de la red — como viajan los datos.</td><td>Un anillo token ring puede ser fisicamente estrella pero logicamente anillo</td></tr>
+        </table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION D: GUIA VISUAL DE PUERTOS -->
+  <div class="content-section" id="guia-puertos" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-usb-plug"></i> Guia Visual de Puertos</h2>
+    <p class="section-subtitle">USB · Video · Red · Audio · Serial · Almacenamiento · Expansion</p>
+
+    <div class="accordion open" id="puertos-usb">
+      <div class="accordion-header" onclick="toggleAccordion('puertos-usb')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-usb-symbol"></i></span><div><div class="accordion-title">Puertos USB</div><div class="accordion-subtitle">USB-A · USB-B · USB-C · Mini-USB · Micro-USB</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>USB-A</h4><p>Conector rectangular estandar, el mas comun en PCs. No reversible — solo se inserta en una orientacion. Presente en teclados, ratones, memorias USB y la mayoria de perifericos.</p></div>
+          <div class="conn-card"><h4>USB-B</h4><p>Conector cuadrado con esquinas biseladas. Usado en impresoras, escaneres, hubs USB y monitores. Extremo dispositivo del cable USB-A a USB-B. Muy robusto.</p></div>
+          <div class="conn-card"><h4>USB-C</h4><p>Conector reversible de 24 pines. Soporta datos (USB4: 40 Gbps), video (Alt Mode: DP/HDMI), carga (Power Delivery hasta 240W) y Thunderbolt. Estandar universal moderno.</p></div>
+          <div class="conn-card"><h4>Mini-USB</h4><p>Version compacta con 5 pines. Fue popular en camaras digitales y reproductores MP3. En desuso, reemplazado por Micro-USB y USB-C.</p></div>
+          <div class="conn-card"><h4>Micro-USB</h4><p>Version compacta con 5 pines. Fue el estandar para telefonos Android antes de USB-C. Aun presente en dispositivos economicos y gadgets.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="puertos-video">
+      <div class="accordion-header" onclick="toggleAccordion('puertos-video')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-display"></i></span><div><div class="accordion-title">Puertos de Video</div><div class="accordion-subtitle">HDMI · DisplayPort · VGA · DVI</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>HDMI (High Definition Multimedia)</h4><p>Transmite audio y video en un cable. Tipos: Standard (A), Mini (C), Micro (D). Versiones: 1.4 (4K@30Hz), 2.0 (4K@60Hz), 2.1 (8K@60Hz, 4K@120Hz). Estandar en TVs, monitores y GPUs.</p></div>
+          <div class="conn-card"><h4>DisplayPort (DP)</h4><p>Interfaz digital de alta gama para video y audio. Superior a HDMI para configuraciones multi-monitor o altas frecuencias de actualizacion. DP 2.0 alcanza 80 Gbps. Orientado al mercado de PCs.</p></div>
+          <div class="conn-card"><h4>VGA (Video Graphics Array)</h4><p>Conector analogo azul trapezoidal con 15 pines en 3 filas. Solo transmite video (sin audio). Senal analogica que degrada con cables largos. Reemplazado por HDMI y DisplayPort.</p></div>
+          <div class="conn-card"><h4>DVI (Digital Visual Interface)</h4><p>Conector blanco con senal digital, mejor calidad que VGA. No transmite audio. Varias variantes: DVI-D (solo digital), DVI-A (solo analogo), DVI-I (ambos). Siendo reemplazado por HDMI/DP.</p></div>
+        </div>
+        <div class="table-scroll mt-2"><table class="cmd-table">
+          <tr><th>Puerto</th><th>Ancho de banda</th><th>Tipo</th><th>Uso ideal</th></tr>
+          <tr><td>VGA</td><td>~400 MHz</td><td>Analogico</td><td>Equipos heredados, proyectores antiguos</td></tr>
+          <tr><td>DVI</td><td>~9.9 Gbps</td><td>Digital</td><td>Monitores digitales sin audio</td></tr>
+          <tr><td>HDMI 2.1</td><td>48 Gbps</td><td>Digital</td><td>Gaming, TVs, pantallas 8K</td></tr>
+          <tr><td>DisplayPort 2.0</td><td>80 Gbps</td><td>Digital</td><td>Monitores profesionales, multi-monitor</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="puertos-red-audio">
+      <div class="accordion-header" onclick="toggleAccordion('puertos-red-audio')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-ethernet"></i></span><div><div class="accordion-title">Puertos de Red, Audio y Serial</div><div class="accordion-subtitle">RJ-45 · RJ-11 · Jack 3.5mm · Thunderbolt · PS/2 · RS-232</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>RJ-45 (Ethernet)</h4><p>Conector de red con 8 pines. Interfaz fisica comunmente usada para conectar redes de cableado estructurado. Categorias 5/5e/6/6a/7/8. Proporciona conexion estable de alta velocidad (10/100/1000/10000 Mbps).</p></div>
+          <div class="conn-card"><h4>RJ-11 (Telefono)</h4><p>Conector mas pequeno que el RJ-45. 6 posiciones pero solo 2 o 4 pines activos. Usado para lineas telefonicas analogicas, modems ADSL y faxes. El cable modem DSL usa este conector.</p></div>
+          <div class="conn-card"><h4>Jack 3.5mm (Audio)</h4><p>Conector de audio analogico. Verde: auriculares/salida. Rosa/celeste: entrada de microfono. Azul: linea-in. Estandar universal para auriculares y parlantes. Existe version combinada (headset) con 4 polos (TRRS).</p></div>
+          <div class="conn-card"><h4>Thunderbolt</h4><p>Tecnologia de Intel que usa conector Mini DisplayPort o USB-C. Hasta 40 Gbps (TB4). Permite conexion en cadena de multiples dispositivos, GPUs externas y monitores. Confundido con USB-C pero con mayor rendimiento.</p></div>
+          <div class="conn-card"><h4>PS/2</h4><p>Conector circular de 6 pines. Morado = teclado, Verde = raton. No son intercambiables. Soporta N-Key Rollover completo. Aun usado en teclados gaming y servidores por su fiabilidad.</p></div>
+          <div class="conn-card"><h4>RS-232 (Serial)</h4><p>Puerto serial de 9 pines para configurar routers, switches, UPS y equipos industriales via consola serial. Aun presente en servidores. Adaptadores USB-to-Serial muy usados por tecnicos.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="puertos-otros">
+      <div class="accordion-header" onclick="toggleAccordion('puertos-otros')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd"></i></span><div><div class="accordion-title">Otros Puertos y Slots</div><div class="accordion-subtitle">LPT · FireWire · eSATA · RCA · BNC · M.2 · SATA · PCIe</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>LPT (Paralelo)</h4><p>Puerto paralelo de 25 pines (DB-25). Usado historicamente para impresoras (centronics) y escaneres. Estandar IEEE 1284. Practicamente obsoleto, reemplazado por USB.</p></div>
+          <div class="conn-card"><h4>FireWire (IEEE 1394)</h4><p>Conocido tambien como i.Link. Puertos de 4 u 8 pines. Velocidades de 400-800 Mbps. Popular en camaras de video y discos externos. Reemplazado por USB 3.0 y Thunderbolt.</p></div>
+          <div class="conn-card"><h4>eSATA</h4><p>Version externa de SATA para discos duros externos de alta velocidad. Hasta 6 Gbps. Raramente usado hoy, reemplazado por USB 3.x y Thunderbolt.</p></div>
+          <div class="conn-card"><h4>RCA</h4><p>Conectores coaxiales de color: Amarillo (video composite), Blanco/Rojo (audio estereo analogico). Usado en equipos de audio/video legacy, consolas retro y sistemas de CCTV.</p></div>
+          <div class="conn-card"><h4>BNC</h4><p>Conector coaxial de conexion rapida por bayoneta (un cuarto de vuelta). Usado en redes Ethernet 10BASE2 y equipos de video profesional/CCTV.</p></div>
+          <div class="conn-card"><h4>M.2</h4><p>Slot compacto en la placa base para SSDs NVMe (hasta 14 GB/s) y modulos WiFi. Clave M (NVMe) o clave B (SATA). Estandar actual de almacenamiento interno de alta velocidad.</p></div>
+          <div class="conn-card"><h4>SATA</h4><p>Puerto de datos serial para discos duros y SSDs de 2.5". SATA III: hasta 6 Gbps (~550 MB/s real). Conector L-shaped para datos y cable de alimentacion de 15 pines.</p></div>
+          <div class="conn-card"><h4>Slots PCIe</h4><p>Slots de expansion en la placa base: x1, x4, x8, x16. Usados para GPU (x16), tarjetas de red (x1), NVMe adaptadores (x4). PCIe 5.0: 64 GB/s en x16.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION E: GABINETE -->
+  <div class="content-section" id="gabinete" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-pc-display"></i> Gabinete (Case)</h2>
+    <p class="section-subtitle">Tipos · Panel frontal · Flujo de aire · Cable management · Bahias</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Por que importa el gabinete?</strong> El gabinete define que placa base cabe, cuanto espacio hay para componentes y como circula el aire. Elegir bien el gabinete es tan importante como elegir la placa base.</div>
+    </div>
+
+    <div class="accordion open" id="tipos-gabinete">
+      <div class="accordion-header" onclick="toggleAccordion('tipos-gabinete')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box"></i></span><div><div class="accordion-title">Tipos de Gabinete y Factores de Forma</div><div class="accordion-subtitle">Full Tower · Mid Tower · Mini Tower · Mini-ITX · HTPC</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Placa base</th><th>Caracteristicas</th></tr>
+          <tr><td>Full Tower</td><td>E-ATX / ATX / mATX</td><td>Maxima expansion, radiadores de 360-420mm, varios discos. Ideal para workstations y servidores.</td></tr>
+          <tr><td>Mid Tower</td><td>ATX / mATX / ITX</td><td>El mas comun — buen balance entre espacio y tamano. Soporta la mayoria de builds.</td></tr>
+          <tr><td>Mini Tower</td><td>mATX / ITX</td><td>Compacto, menor ventilacion, ideal para ofimatica y usos basicos.</td></tr>
+          <tr><td>Mini-ITX</td><td>ITX</td><td>Muy compacto para placas ITX. Popular en HTPCs y builds portatiles. Menos slots de expansion.</td></tr>
+          <tr><td>HTPC</td><td>ITX / mATX</td><td>Diseado para sala de estar. Factor de forma bajo y ancho, similar a un equipo de audio.</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="panel-frontal">
+      <div class="accordion-header" onclick="toggleAccordion('panel-frontal')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-toggle2-on"></i></span><div><div class="accordion-title">Panel Frontal del Gabinete</div><div class="accordion-subtitle">Botones · Puertos USB · LEDs de estado</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">La cara frontal del gabinete contiene los controles e indicadores fisicos del sistema que se conectan a los headers de la placa base.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Elemento</th><th>Funcion</th></tr>
+          <tr><td>Power Button</td><td>Boton momentaneo que senala al chipset que encienda la placa. Sin polaridad.</td></tr>
+          <tr><td>Reset Button</td><td>Conectado al pin RESET. Reinicia el sistema. Util cuando el equipo congela.</td></tr>
+          <tr><td>Power LED</td><td>Indica que el sistema esta encendido o en suspension (parpadea en S3). Tiene polaridad.</td></tr>
+          <tr><td>HDD LED</td><td>Parpadea cuando hay lectura/escritura en cualquier disco SATA o NVMe. Tiene polaridad.</td></tr>
+          <tr><td>USB frontal</td><td>Conectado internamente a un header USB 2.0 (9 pines) o USB 3.0 (19 pines) de la placa base.</td></tr>
+          <tr><td>Audio frontal</td><td>Conectado al header HD Audio de la placa base (estandar Intel HD Audio).</td></tr>
+        </table></div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+          <div class="content"><strong>Cuidado con la polaridad</strong> Los LEDs (Power LED y HDD LED) tienen polaridad — el cable de color es positivo. Power SW y Reset SW no tienen polaridad: pueden invertirse sin problema. Consultar el manual de la placa base para la ubicacion de cada pin.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="flujo-aire">
+      <div class="accordion-header" onclick="toggleAccordion('flujo-aire')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-wind"></i></span><div><div class="accordion-title">Flujo de Aire (Airflow)</div><div class="accordion-subtitle">Intake vs Exhaust · Presion positiva/negativa</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">El flujo de aire dentro del gabinete sigue el principio de que el aire frio entra por la parte baja/frontal y el aire caliente sube y sale por arriba/atras.</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>Intake (Entrada de aire)</h4><p>Ventiladores frontales e inferiores que succionan aire fresco hacia el interior. Generalmente montados en la parte frontal del gabinete apuntando hacia adentro.</p></div>
+          <div class="conn-card"><h4>Exhaust (Salida de aire)</h4><p>Ventiladores traseros y superiores que expulsan el aire caliente. El ventilador trasero es el mas comun (120mm estandar). Los superiores son ideales para refrigeracion liquida.</p></div>
+        </div>
+        <div class="table-scroll mt-2"><table class="cmd-table">
+          <tr><th>Configuracion</th><th>Descripcion</th><th>Ideal para</th></tr>
+          <tr><td>Presion positiva</td><td>Mas ventiladores de entrada que salida. El aire solo entra por filtros — menos polvo.</td><td>Mayor vida util, menos limpieza</td></tr>
+          <tr><td>Presion negativa</td><td>Mas ventiladores de salida que entrada. El aire entra por todas las ranuras — mas polvo.</td><td>Mejor refrigeracion de CPU/GPU</td></tr>
+          <tr><td>Equilibrada</td><td>Igual numero de intake y exhaust. Balance entre polvo y refrigeracion.</td><td>La mas comun</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cable-management">
+      <div class="accordion-header" onclick="toggleAccordion('cable-management')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-through-end"></i></span><div><div class="accordion-title">Cable Management</div><div class="accordion-subtitle">Gestion de cables · bridas · espacio trasero</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">La gestion de cables tiene impacto real mas alla de la estetica:</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>Flujo de aire</h4><p>Cables sueltos en la camara principal bloquean el paso del aire entre el front intake y el rear exhaust — puede subir temperaturas 5-10 grados C.</p></div>
+          <div class="conn-card"><h4>Mantenimiento</h4><p>Cables bien organizados permiten acceder a los componentes y limpiarlos sin desmontar todo. Facilita el diagnostico de problemas.</p></div>
+        </div>
+        <p class="subhead">Herramientas de cable management</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Herramienta</th><th>Descripcion</th></tr>
+          <tr><td>Bridas de velcro</td><td>Preferibles a las de plastico — se abren y cierran sin cortar. Las hay de 10-30 cm.</td></tr>
+          <tr><td>Fundas de cable</td><td>Cubiertas textiles o plasticas que agrupan cables en un mazo ordenado.</td></tr>
+          <tr><td>Canales de cable</td><td>Ranuras y ojales en el chasis para pasar cables por detras del tray de la placa base.</td></tr>
+          <tr><td>PSU modular</td><td>Permite conectar solo los cables que necesitas, reduciendo desorden.</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="bay-storage">
+      <div class="accordion-header" onclick="toggleAccordion('bay-storage')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-stack"></i></span><div><div class="accordion-title">Bahias de Almacenamiento</div><div class="accordion-subtitle">Bahia 3.5" · Bahia 2.5" · Slot M.2</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="conn-grid">
+          <div class="conn-card"><h4>Bahia 3.5"</h4><p>Para HDDs de escritorio. Generalmente en el fondo del gabinete con rieles deslizantes. Los HDDs de 2.5" tambien caben con adaptadores.</p></div>
+          <div class="conn-card"><h4>Bahia 2.5"</h4><p>Para SSDs SATA. Suelen estar en la parte trasera del tray de la placa base para ocultar los cables SATA.</p></div>
+          <div class="conn-card"><h4>Slot M.2</h4><p>No es una bahia independiente — el SSD M.2 se instala directamente en la placa base (slot M.2), no en el gabinete. Velocidades de hasta 14 GB/s con NVMe PCIe Gen4.</p></div>
+          <div class="conn-card"><h4>Bandeja modular</h4><p>Muchos gabinetes modernos tienen bahias desmontables — si no usas HDDs, se pueden retirar para mejorar el flujo de aire frontal.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION F: ATAJOS DE BIOS Y BOOT -->
+  <div class="content-section" id="atajos-bios" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-keyboard"></i> Atajos de BIOS y Boot</h2>
+    <p class="section-subtitle">Teclas de entrada por fabricante · Boot Menu · Metodos desde Windows/Linux</p>
+
+    <div class="info-box info-tip mb-2">
+      <span class="icon"><i class="bi bi-info-circle"></i></span>
+      <div class="content"><strong>Como entrar al BIOS/UEFI</strong> Presiona repetidamente la tecla correspondiente justo despues de presionar el boton de encendido. El mensaje "Press Del to Enter BIOS Setup" aparece por breve tiempo durante el POST.</div>
+    </div>
+
+    <div class="accordion open" id="bios-laptops-table">
+      <div class="accordion-header" onclick="toggleAccordion('bios-laptops-table')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-laptop"></i></span><div><div class="accordion-title">Laptops por Marca</div><div class="accordion-subtitle">HP · Dell · Lenovo · ASUS · Acer · MSI · Toshiba</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Marca</th><th>Tecla BIOS/UEFI</th><th>Tecla Boot Menu</th></tr>
+          <tr><td>HP</td><td>F10 (a veces Esc luego F10)</td><td>F9 / Esc</td></tr>
+          <tr><td>Dell</td><td>F2</td><td>F12</td></tr>
+          <tr><td>Lenovo ThinkPad</td><td>F1 o F2 (Enter luego F1)</td><td>F12</td></tr>
+          <tr><td>Lenovo IdeaPad</td><td>F2 (a veces Fn+F2)</td><td>F12 (a veces Fn+F12)</td></tr>
+          <tr><td>ASUS (laptop)</td><td>F2 (mantener desde apagado) o Del</td><td>Esc / F8</td></tr>
+          <tr><td>Acer</td><td>F2 (a veces Del)</td><td>F12</td></tr>
+          <tr><td>Toshiba</td><td>F2 (a veces F1 o Esc)</td><td>F12</td></tr>
+          <tr><td>Samsung</td><td>F2</td><td>F10 / Esc</td></tr>
+          <tr><td>Sony VAIO</td><td>F2 (a veces boton ASSIST)</td><td>F11 / Esc</td></tr>
+          <tr><td>MSI (laptop)</td><td>Del o F2</td><td>F11</td></tr>
+          <tr><td>Microsoft Surface</td><td>Mantener subir volumen + Power</td><td>Mismo metodo</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="bios-desktop-table">
+      <div class="accordion-header" onclick="toggleAccordion('bios-desktop-table')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-pc-display-horizontal"></i></span><div><div class="accordion-title">Escritorio y Placas Madre</div><div class="accordion-subtitle">ASUS · MSI · Gigabyte · ASRock · Genericas</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Fabricante de placa</th><th>Tecla BIOS/UEFI</th><th>Tecla Boot Menu</th></tr>
+          <tr><td>ASUS</td><td>Del o F2</td><td>F8</td></tr>
+          <tr><td>MSI</td><td>Del</td><td>F11</td></tr>
+          <tr><td>Gigabyte</td><td>Del</td><td>F12</td></tr>
+          <tr><td>ASRock</td><td>Del o F2</td><td>F11</td></tr>
+          <tr><td>Biostar</td><td>Del</td><td>F9</td></tr>
+          <tr><td>EVGA</td><td>Del</td><td>F7</td></tr>
+          <tr><td>Genericas (AMI/Award)</td><td>Del (a veces F2)</td><td>F12 (varia)</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Tip universal</strong> Si no sabes la tecla exacta, presiona repetidamente ESC, DEL, F1, F2, F10, F11 y F12 (en ese orden) justo despues de presionar el boton de encendido.</div>
+        </div>
+        <p class="subhead">Entrar a BIOS desde Windows (sin reiniciar manualmente)</p>
+        <div class="code-block mt-1">
+          <div class="code-block-header"><span class="code-lang">cmd / powershell — entrar a BIOS</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Comando directo (como administrador)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">shutdown</span> <span class="cmd-flag">/r /fw /t</span> <span class="cmd-value">0</span>
+<span class="cmd-comment"># Reinicia directamente a la configuracion de firmware UEFI</span>
+<span class="cmd-comment"># Solo funciona en equipos con UEFI (no BIOS Legacy antigua)</span></pre>
+        </div>
+        <p class="subhead">Entrar a BIOS desde Linux</p>
+        <div class="code-block mt-1">
+          <div class="code-block-header"><span class="code-lang">bash — systemctl reboot-to-firmware</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># En distribuciones con systemd (Ubuntu, Fedora, Debian, Arch...)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl reboot</span> <span class="cmd-flag">--firmware-setup</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION G: CONCEPTOS CLAVE -->
+  <div class="content-section" id="conceptos-clave" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-book"></i> Conceptos Clave</h2>
+    <p class="section-subtitle">BIOS/UEFI · Overclocking · Undervolting · XMP/EXPO · POST · CMOS</p>
+
+    <div class="accordion open" id="bios-uefi">
+      <div class="accordion-header" onclick="toggleAccordion('bios-uefi')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-chip"></i></span><div><div class="accordion-title">BIOS / UEFI</div><div class="accordion-subtitle">Basic Input Output System · firmware de arranque</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">La BIOS (Basic Input Output System) identifica componentes del equipo (CPU, RAM, almacenamiento, chipset) y los entrega al SO. Se almacena en memoria flash EEPROM; su configuracion en memoria CMOS, alimentada por pila CR-2032 de 3.3V. Fabricantes principales: AMI y AWARD-Phoenix.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Caracteristica</th><th>BIOS (Legacy)</th><th>UEFI</th></tr>
+          <tr><td>Interfaz</td><td>Texto, solo teclado</td><td>Grafica, soporte raton</td></tr>
+          <tr><td>Tabla de particiones</td><td>MBR (max 2 TB)</td><td>GPT (hasta 9.4 ZB)</td></tr>
+          <tr><td>Arranque</td><td>Secuencial</td><td>Paralelo, mas rapido</td></tr>
+          <tr><td>Seguridad</td><td>Sin Secure Boot</td><td>Secure Boot incluido</td></tr>
+          <tr><td>Particiones</td><td>4 primarias</td><td>128+ particiones</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="overclocking">
+      <div class="accordion-header" onclick="toggleAccordion('overclocking')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-speedometer2"></i></span><div><div class="accordion-title">Overclocking</div><div class="accordion-subtitle">Aumento de frecuencia por encima de especificaciones de fabrica</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary">El overclocking consiste en aumentar la frecuencia de reloj de la CPU, GPU o RAM por encima de los valores de fabrica para obtener mayor rendimiento. Requiere buena refrigeracion, una fuente de poder estable y una placa base con opciones de overclocking en la BIOS. Aumenta el consumo electrico y genera mas calor. Puede acortar la vida util del componente.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="undervolting">
+      <div class="accordion-header" onclick="toggleAccordion('undervolting')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-battery-half"></i></span><div><div class="accordion-title">Undervolting</div><div class="accordion-subtitle">Reduccion de voltaje para bajar temperaturas sin perder rendimiento</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary">Con Intel XTU o AMD Ryzen Master, reducir el voltaje del CPU un 5-10% puede bajar temperaturas 10-15 grados C sin perdida de rendimiento. Es lo opuesto al overclocking — busca eficiencia termica sin sacrificar velocidad. Muy util en laptops donde la refrigeracion es limitada. Un undervolt excesivo puede causar inestabilidad y cuelgues.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="xmp-expo">
+      <div class="accordion-header" onclick="toggleAccordion('xmp-expo')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-memory"></i></span><div><div class="accordion-title">XMP / EXPO</div><div class="accordion-subtitle">Perfiles de memoria para velocidad optimizada</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">XMP (Intel XMP) y EXPO (AMD EXPO) son perfiles preconfigurados en los modulos de memoria RAM que permiten que funcione a su velocidad anunciada. Sin activar el perfil, la RAM corre a la velocidad estandar JEDEC (mas lenta).</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Perfil</th><th>Plataforma</th><th>Ubicacion en BIOS</th></tr>
+          <tr><td>XMP (Extreme Memory Profile)</td><td>Intel</td><td>AI Tweaker / Extreme Tweaker</td></tr>
+          <tr><td>EXPO (Extended Profiles for OC)</td><td>AMD</td><td>EXPO / Memory Context Restore</td></tr>
+        </table></div>
+        <div class="info-box info-note mt-2">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Latencia real = (CAS / Frecuencia) x 2000</strong> Una DDR4-3200 CL16 tiene la misma latencia real que una DDR4-3600 CL18 (~10ns). DDR4 y DDR5 NO son fisicamente compatibles.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="post">
+      <div class="accordion-header" onclick="toggleAccordion('post')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-boot"></i></span><div><div class="accordion-title">POST (Power-On Self-Test)</div><div class="accordion-subtitle">Diagnostico de hardware al encender · pitidos de error</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">El POST es la primera accion que ejecuta la BIOS al encender el equipo: verifica que el CPU, RAM, tarjeta de video, teclado y demas componentes criticos esten presentes y funcionando. Si detecta un error, emite pitidos o muestra un codigo en la placa (Debug LED).</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Pitido (BIOS AMI)</th><th>Significado</th><th>Accion</th></tr>
+          <tr><td>1 corto</td><td>POST exitoso — arranque normal</td><td>Sin accion requerida</td></tr>
+          <tr><td>3 cortos</td><td>Error basico de memoria (base 64K)</td><td>Reinstalar o reemplazar modulos RAM</td></tr>
+          <tr><td>5 cortos</td><td>Error de CPU</td><td>Verificar socket, reseating del CPU</td></tr>
+          <tr><td>1 largo, 3 cortos</td><td>Error de video (GPU)</td><td>Reinstalar GPU, verificar cable de video</td></tr>
+          <tr><td>Largo continuo</td><td>Falla critica de memoria o placa</td><td>Revisar RAM, probar modulo individual</td></tr>
+        </table></div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+          <div class="content"><strong>Pantallas de error comunes</strong> "CMOS Checksum Error" = pila CMOS agotada. "Reboot and Select proper Boot device" = orden de arranque incorrecto. "Missing Operating System" = MBR/GPT danado. "No Signal" = revisar cable de video y GPU.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmos">
+      <div class="accordion-header" onclick="toggleAccordion('cmos')">
+        <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-battery"></i></span><div><div class="accordion-title">CMOS (Complementary Metal-Oxide Semiconductor)</div><div class="accordion-subtitle">Memoria de configuracion · pila CR-2032 · reset CMOS</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="text-sm text-secondary mb-2">La memoria CMOS almacena la configuracion de la BIOS (hora, fecha, orden de arranque, ajustes de overclocking, etc.). Se mantiene activa por una pila de litio CR-2032 de 3.3V mientras el PC esta apagado.</p>
+        <p class="subhead">Reset CMOS — dos metodos</p>
+        <div class="conn-grid">
+          <div class="conn-card"><h4>Metodo 1: Pila CR-2032</h4><p>Retirar la pila durante ~10 segundos usando utensilio de plastico (nunca metalico). Siempre desconectar el cable de corriente antes. La BIOS pierde toda su configuracion.</p></div>
+          <div class="conn-card"><h4>Metodo 2: Jumper CLRCMOS</h4><p>Puentear el jumper CLRCMOS en la placa (3 pines: mover de 1-2 a 2-3, esperar 10 segundos, regresar). Tambien requiere apagar el equipo antes.</p></div>
+        </div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+          <div class="content"><strong>Cuando cambiar la pila CMOS</strong> Si el sistema muestra "CMOS Checksum Invalid" o pierde la hora/fecha constantemente, la pila esta agotada y necesita ser reemplazada por una CR-2032 nueva.</div>
+        </div>
+      </div>
     </div>
   </div>
 

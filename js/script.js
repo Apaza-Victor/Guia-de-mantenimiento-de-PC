@@ -262,6 +262,37 @@ function toggleAccordion(id) {
   }
 }
 
+/* === TOGGLE ITEM (inline onclick for accordion headers) === */
+function toggleItem(header) {
+  const item = header.closest('.accordion-item') || header.parentElement;
+  if (!item) return;
+  const wasOpen = item.classList.contains('open');
+  item.classList.toggle('open');
+  const body = item.querySelector('.accordion-body');
+  if (body) {
+    body.style.maxHeight = wasOpen ? '0' : body.scrollHeight + 'px';
+  }
+}
+
+/* === COPY CODE (standalone for inline onclick) === */
+function copyCode(btn) {
+  const block = btn.closest('.code-block') || btn.closest('.code-block-header')?.parentElement;
+  if (!block) return;
+  const pre = block.querySelector('pre');
+  if (!pre) return;
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Copiado!';
+    btn.style.color = 'var(--accent2)';
+    btn.style.borderColor = 'var(--accent2)';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }, 1500);
+  });
+}
+
 /* === SUBNET CALCULATOR === */
 function calcSubnet() {
   const ipInput = document.getElementById('subnet-ip');

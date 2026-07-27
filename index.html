@@ -15,8 +15,7 @@
 <header class="topbar">
   <div class="topbar-brand">
     <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
-    <i class="bi bi-cpu"></i>
-    <span>Tech<span>Guide</span></span>
+    <a href="index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
@@ -67,45 +66,72 @@
 <div class="main-content">
 
   <section id="hero" class="hero">
-    <div class="hero-content" data-aos="fade-up">
+    <div class="hero-glow"></div>
+    <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
       <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> Plataforma Educativa v1.0</div>
       <h1>Guia Integral de<br><span class="hl">Hardware, Mantenimiento</span><br>y Redes</h1>
-      <p>Aprende a ensamblar, mantener y diagnosticar computadoras. Incluye fundamentos de redes, comandos de diagnostico y recursos en espanol.</p>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="val">5+</div><div class="lbl">Bloques tematicos</div></div>
-        <div class="hero-stat"><div class="val">30+</div><div class="lbl">Secciones</div></div>
-        <div class="hero-stat"><div class="val">100%</div><div class="lbl">En espanol</div></div>
-      </div>
+      <p>Aprende a ensamblar, mantener y diagnosticar computadoras. Fundamentos de redes, comandos de diagnostico y recursos en espanol.</p>
       <div class="hero-cta">
         <a href="pages/ensamblaje.html" class="btn-primary"><i class="bi bi-play-fill"></i> Comenzar Ensamblaje</a>
         <a href="pages/ensamblaje.html#checklist" class="btn-outline"><i class="bi bi-clipboard-check"></i> Ver Checklist</a>
       </div>
     </div>
-    <div class="landing-grid" data-aos="fade-up" data-aos-delay="200">
-      <a href="pages/ensamblaje.html" class="lcard" style="text-decoration:none;color:inherit;">
-        <div class="lcard-icon"><i class="bi bi-tools"></i></div>
-        <h4>Ensamblaje</h4>
-        <p>Herramientas, componentes, guia paso a paso y checklist interactivo.</p>
-        <span class="card-tag">5 secciones</span>
-      </a>
-      <a href="pages/mantenimiento.html" class="lcard" style="text-decoration:none;color:inherit;">
-        <div class="lcard-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
-        <h4>Mantenimiento</h4>
-        <p>Preventivo, correctivo y software de diagnostico para tu PC.</p>
-        <span class="card-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">3 secciones</span>
-      </a>
-      <a href="pages/redes.html" class="lcard" style="text-decoration:none;color:inherit;">
-        <div class="lcard-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-globe2"></i></div>
-        <h4>Redes</h4>
-        <p>TCP/IP, OSI, topologias, dispositivos, IP y comandos de red.</p>
-        <span class="card-tag" style="background:rgba(255,107,107,.1);color:var(--accent3);border-color:rgba(255,107,107,.25);">5 secciones</span>
-      </a>
-      <a href="pages/recursos.html" class="lcard" style="text-decoration:none;color:inherit;">
-        <div class="lcard-icon" style="background:rgba(255,193,7,.1);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
-        <h4>Referencia</h4>
-        <p>Atajos de teclado, comandos de consola y recursos web en espanol.</p>
-        <span class="card-tag" style="background:rgba(255,193,7,.1);color:var(--warn);border-color:rgba(255,193,7,.25);">2 secciones</span>
-      </a>
+  </section>
+
+  <section id="modulos" class="home-modulos">
+    <div class="home-modulos-inner">
+      <div class="home-modulos-header" data-aos="fade-up">
+        <div class="section-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+        <div>
+          <h2>Explora los Modulos</h2>
+          <p class="text-secondary text-sm">Elige un area para comenzar a aprender</p>
+        </div>
+      </div>
+      <div class="home-modulos-grid" data-aos="fade-up" data-aos-delay="100">
+        <a href="pages/ensamblaje.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon"><i class="bi bi-tools"></i></div>
+          <h4>Ensamblaje</h4>
+          <p>Herramientas, componentes, guia paso a paso y checklist interactivo.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">5 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/mantenimiento.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+          <h4>Mantenimiento</h4>
+          <p>Preventivo, correctivo y software de diagnostico para tu PC.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">3 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/redes.html" class="mod-card" data-accent="var(--accent3)">
+          <div class="mod-card-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-globe2"></i></div>
+          <h4>Redes</h4>
+          <p>TCP/IP, OSI, topologias, dispositivos, IP y comandos de red.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(255,107,107,.1);color:var(--accent3);border-color:rgba(255,107,107,.25);">5 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/recursos.html" class="mod-card" data-accent="var(--warn)">
+          <div class="mod-card-icon" style="background:rgba(255,193,7,.1);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
+          <h4>Referencia</h4>
+          <p>Atajos de teclado, comandos de consola y recursos web en espanol.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(255,193,7,.1);color:var(--warn);border-color:rgba(255,193,7,.25);">2 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="home-stats-bar" data-aos="fade-up" data-aos-delay="200">
+        <div class="home-stat"><div class="home-stat-val">5+</div><div class="home-stat-lbl">Bloques tematicos</div></div>
+        <div class="home-stat-sep"></div>
+        <div class="home-stat"><div class="home-stat-val">30+</div><div class="home-stat-lbl">Secciones</div></div>
+        <div class="home-stat-sep"></div>
+        <div class="home-stat"><div class="home-stat-val">100%</div><div class="home-stat-lbl">En espanol</div></div>
+      </div>
     </div>
   </section>
 
