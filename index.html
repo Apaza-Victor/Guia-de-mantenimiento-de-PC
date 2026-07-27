@@ -12,61 +12,60 @@
 </head>
 <body>
 
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-<!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-brand">
     <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <i class="bi bi-cpu"></i>
     <span>Tech<span>Guide</span></span>
   </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Ensamblaje <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="pages/ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
+        <a href="pages/ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
+        <a href="pages/ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
+        <a href="pages/ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
+        <a href="pages/ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Mantenimiento <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="pages/mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
+        <a href="pages/mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
+        <a href="pages/mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Redes <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="pages/redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
+        <a href="pages/redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
+        <a href="pages/redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
+        <a href="pages/redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
+        <a href="pages/redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Referencia <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="pages/recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
+        <a href="pages/recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
+      </div>
+    </li>
+  </ul>
   <div class="topbar-actions">
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
   </div>
 </header>
+<div class="nav-overlay" id="navOverlay"></div>
 
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-section">
-    <div class="sidebar-label">Inicio</div>
-    <a class="sidebar-link active" href="index.html"><i class="bi bi-house"></i> Inicio</a>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-label">Ensamblaje</div>
-    <a class="sidebar-link" href="pages/ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
-    <a class="sidebar-link" href="pages/ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
-    <a class="sidebar-link" href="pages/ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
-    <a class="sidebar-link" href="pages/ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
-    <a class="sidebar-link" href="pages/ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-label">Mantenimiento</div>
-    <a class="sidebar-link" href="pages/mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
-    <a class="sidebar-link" href="pages/mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
-    <a class="sidebar-link" href="pages/mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-label">Redes</div>
-    <a class="sidebar-link" href="pages/redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
-    <a class="sidebar-link" href="pages/redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
-    <a class="sidebar-link" href="pages/redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
-    <a class="sidebar-link" href="pages/redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
-    <a class="sidebar-link" href="pages/redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-label">Referencia</div>
-    <a class="sidebar-link" href="pages/recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
-    <a class="sidebar-link" href="pages/recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
-  </div>
-</aside>
-
-<!-- MAIN -->
 <div class="main-content">
 
-  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-content" data-aos="fade-up">
       <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> Plataforma Educativa v1.0</div>
@@ -112,7 +111,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div>
