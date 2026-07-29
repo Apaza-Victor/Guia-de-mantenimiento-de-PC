@@ -17,8 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* === THEME TOGGLE === */
+function getSavedTheme() {
+  try { return localStorage.getItem('tg-theme'); }
+  catch(e) { return null; }
+}
+function setSavedTheme(val) {
+  try { localStorage.setItem('tg-theme', val); }
+  catch(e) {}
+}
 function initTheme() {
-  const saved = localStorage.getItem('tg-theme') || 'dark';
+  const saved = getSavedTheme() || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
   updateThemeBtn(saved);
 }
@@ -26,7 +34,7 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('tg-theme', next);
+  setSavedTheme(next);
   updateThemeBtn(next);
 }
 function updateThemeBtn(theme) {
@@ -77,10 +85,14 @@ function initNav() {
     });
   });
 
-  /* Close nav when clicking a dropdown link (mobile) */
-  document.querySelectorAll('.nav-dropdown a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 991) closeNav();
+  /* Close nav when clicking any link (mobile) */
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        closeNav();
+        location.href = link.getAttribute('href');
+      }
     });
   });
 }
@@ -91,6 +103,7 @@ function closeNav() {
   const toggle = document.getElementById('navToggle');
   menu?.classList.remove('open');
   overlay?.classList.remove('show');
+  document.querySelectorAll('.nav-item.open').forEach(el => el.classList.remove('open'));
   if (toggle) toggle.querySelector('i').className = 'bi bi-list';
 }
 
