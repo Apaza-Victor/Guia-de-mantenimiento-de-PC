@@ -59,14 +59,11 @@ function initNav() {
 
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
+      const isOpen = menu.classList.toggle('open');
       overlay?.classList.toggle('show');
+      document.body.classList.toggle('nav-open', isOpen);
       const icon = toggle.querySelector('i');
-      if (menu.classList.contains('open')) {
-        icon.className = 'bi bi-x-lg';
-      } else {
-        icon.className = 'bi bi-list';
-      }
+      icon.className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
     });
   }
 
@@ -103,6 +100,7 @@ function closeNav() {
   const toggle = document.getElementById('navToggle');
   menu?.classList.remove('open');
   overlay?.classList.remove('show');
+  document.body.classList.remove('nav-open');
   document.querySelectorAll('.nav-item.open').forEach(el => el.classList.remove('open'));
   if (toggle) toggle.querySelector('i').className = 'bi bi-list';
 }
