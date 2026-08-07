@@ -769,6 +769,7 @@ kbd{
 }
 .footer-brand{font-family:var(--font-mono);font-weight:700;color:var(--accent);font-size:.85rem;}
 .footer-copy{font-size:.75rem;color:var(--text-muted);}
+.footer-legal{font-size:.72rem;color:var(--text-muted);margin-top:.45rem;}
 .footer-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
 .footer-tag{
   font-family:var(--font-mono);font-size:.6rem;
