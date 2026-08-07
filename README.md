@@ -120,6 +120,6 @@ js/script.js            → Funcionalidad interactiva
 
 ## License
 
-MIT
-
 © 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.
+
+Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.
