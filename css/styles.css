@@ -719,6 +719,7 @@ kbd{
 .rec-card.so::before{background:#bc8cff;}
 .rec-card.cert::before{background:var(--warn);}
 .rec-card.ref::before{background:#f78166;}
+.rec-card.sec::before{background:var(--accent3);}
 .rec-card:hover{border-color:var(--accent);transform:translateY(-2px);}
 .rec-card h4{font-size:.9rem;}
 .rec-card p{font-size:.76rem;color:var(--text-sec);line-height:1.55;}
@@ -1005,6 +1006,36 @@ kbd{
 .info-note{background:rgba(var(--accent2-rgb),.06);border:1px solid rgba(var(--accent2-rgb),.15);color:var(--text-sec);}
 .info-warn{background:rgba(var(--warn-rgb),.06);border:1px solid rgba(var(--warn-rgb),.15);color:var(--warn);}
 .info-danger{background:rgba(var(--accent3-rgb),.06);border:1px solid rgba(var(--accent3-rgb),.15);color:var(--accent3);}
+
+/* === TIPS LIST === */
+.tips-list{display:grid;gap:.6rem;margin:.5rem 0 1.25rem;}
+.tip-item{
+  display:flex;gap:.7rem;align-items:flex-start;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-left:3px solid var(--accent-green);
+  border-radius:var(--radius-sm);padding:.75rem 1rem;
+}
+.tip-item .tip-n{
+  font-family:var(--font-mono);font-size:.65rem;font-weight:700;
+  color:var(--accent-green);flex-shrink:0;margin-top:2px;
+}
+.tip-item strong{display:block;color:var(--text);font-size:.85rem;margin-bottom:.1rem;}
+.tip-item p{font-size:.8rem;color:var(--text-sec);line-height:1.55;}
+
+/* === VIDEO LIST === */
+.video-list{display:grid;gap:.5rem;margin:.5rem 0 1.25rem;}
+.video-item{
+  display:flex;align-items:center;gap:.75rem;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-left:3px solid var(--warn);
+  border-radius:var(--radius-sm);padding:.65rem 1rem;
+  text-decoration:none;transition:border-color .2s,transform .2s;
+}
+.video-item:hover{border-color:var(--warn);transform:translateX(3px);}
+.video-item i{color:var(--warn);font-size:1.05rem;flex-shrink:0;}
+.video-item .v-meta{display:flex;flex-direction:column;min-width:0;}
+.video-item .v-title{font-size:.8rem;color:var(--text);font-weight:600;line-height:1.35;}
+.video-item .v-chan{font-size:.68rem;color:var(--text-muted);}
 
 /* === TABLE SCROLL + CMD TABLE === */
 .table-scroll{overflow-x:auto;margin:1rem 0;}

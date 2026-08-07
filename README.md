@@ -79,7 +79,8 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 - Checklist post-instalacion (10 items)
 - Ajustes de BIOS: Boot Order, XMP, Secure Boot, TPM, Virtualizacion
 - Glosario de terminos tecnicos (30+ terminos)
-- 65+ recursos web: hardware, redes, SO, certificaciones, comunidades, foros
+- 140+ recursos web organizados en 8 categorias filtrables: hardware y benchmarks, redes, sistemas operativos, herramientas de diagnostico, simuladores y practica, seguridad y privacidad, formacion y certificaciones, comunidades y soporte
+- Videos de descarga de simuladores: enlaces a tutoriales de YouTube (Packet Tracer, GNS3, VirtualBox, VMware, PC Building Simulator)
 
 ## Caracteristicas
 
@@ -89,6 +90,8 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 - **Logo enlazado**: click en TechGuide lleva al inicio
 - **Animaciones**: transiciones suaves con AOS (Animate On Scroll)
 - **Calculadora de subred**: herramienta interactiva para calcular rangos IP
+- **Filtro de recursos**: pills de categoria para filtrar los 140+ recursos web
+- **Tips de simuladores**: lista de consejos para descargar y ejecutar los simuladores de practica
 - **Checklist interactivo**: marcar pasos completados del ensamblaje
 - **Bloques de codigo**: con boton de copiar al portapapeles
 - **Acordeones**: contenido expandible/colapsable en todas las secciones

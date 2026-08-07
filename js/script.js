@@ -216,6 +216,10 @@ function initNetPills() {
       container.querySelectorAll('.net-group').forEach(g => {
         g.style.display = (group === 'all' || g.dataset.group === group) ? '' : 'none';
       });
+      container.querySelectorAll('.net-group').forEach(g => {
+        if (g.style.display === 'none') return;
+        g.querySelectorAll('[data-aos]').forEach(el => el.classList.add('aos-animate'));
+      });
     });
   });
 }
