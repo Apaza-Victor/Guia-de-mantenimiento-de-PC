@@ -4,13 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechGuide - Guia Integral de Hardware, Mantenimiento y Redes</title>
+  <meta name="description" content="Guia Integral de Hardware, Mantenimiento y Redes. Aprende a ensamblar, mantener y diagnosticar computadoras. Fundamentos de redes, comandos de diagnostico y...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TechGuide - Guia Integral de Hardware, Mantenimiento y Redes">
+  <meta property="og:description" content="Guia Integral de Hardware, Mantenimiento y Redes. Aprende a ensamblar, mantener y diagnosticar computadoras. Fundamentos de redes, comandos de diagnostico y...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/css/home.css" rel="stylesheet">
 </head>
 <body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
 
 <header class="topbar">
   <div class="topbar-brand">
@@ -19,43 +28,27 @@
   </div>
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="pages/ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="pages/mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="pages/redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
     <li class="nav-item">
-      <button class="nav-drop-btn">Ensamblaje <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
       <div class="nav-dropdown">
-        <a href="pages/ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
-        <a href="pages/ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
-        <a href="pages/ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
-        <a href="pages/ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
-        <a href="pages/ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+        <a href="pages/faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="pages/comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="pages/cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="pages/presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="pages/referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="pages/instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
       </div>
     </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Mantenimiento <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="pages/mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
-        <a href="pages/mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
-        <a href="pages/mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Redes <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="pages/redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
-        <a href="pages/redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
-        <a href="pages/redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
-        <a href="pages/redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
-        <a href="pages/redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Referencia <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="pages/recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
-        <a href="pages/recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="pages/recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="pages/comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="pages/glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
   </ul>
   <div class="topbar-actions">
+
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
@@ -67,13 +60,14 @@
 
   <section id="hero" class="hero">
     <div class="hero-glow"></div>
+    <canvas id="hero3d" class="particles-bg"></canvas>
     <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
       <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> Plataforma Educativa v1.0</div>
       <h1>Guia Integral de<br><span class="hl">Hardware, Mantenimiento</span><br>y Redes</h1>
       <p>Aprende a ensamblar, mantener y diagnosticar computadoras. Fundamentos de redes, comandos de diagnostico y recursos en espanol.</p>
       <div class="hero-cta">
-        <a href="pages/ensamblaje.html" class="btn-primary"><i class="bi bi-play-fill"></i> Comenzar Ensamblaje</a>
-        <a href="pages/ensamblaje.html#checklist" class="btn-outline"><i class="bi bi-clipboard-check"></i> Ver Checklist</a>
+        <a href="pages/ensamblaje/ensamblaje.html" class="btn-primary"><i class="bi bi-play-fill"></i> Comenzar Ensamblaje</a>
+        <a href="pages/ensamblaje/ens-checklist.html" class="btn-outline"><i class="bi bi-clipboard-check"></i> Ver Checklist</a>
       </div>
     </div>
   </section>
@@ -88,7 +82,7 @@
         </div>
       </div>
       <div class="home-modulos-grid" data-aos="fade-up" data-aos-delay="100">
-        <a href="pages/ensamblaje.html" class="mod-card" data-accent="var(--accent)">
+        <a href="pages/ensamblaje/ensamblaje.html" class="mod-card" data-accent="var(--accent)">
           <div class="mod-card-icon"><i class="bi bi-tools"></i></div>
           <h4>Ensamblaje</h4>
           <p>Herramientas, componentes, guia paso a paso y checklist interactivo.</p>
@@ -97,7 +91,7 @@
             <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
-        <a href="pages/mantenimiento.html" class="mod-card" data-accent="var(--accent2)">
+        <a href="pages/mantenimiento/mantenimiento.html" class="mod-card" data-accent="var(--accent2)">
           <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
           <h4>Mantenimiento</h4>
           <p>Preventivo, correctivo y software de diagnostico para tu PC.</p>
@@ -106,7 +100,7 @@
             <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
-        <a href="pages/redes.html" class="mod-card" data-accent="var(--accent3)">
+        <a href="pages/redes/redes.html" class="mod-card" data-accent="var(--accent3)">
           <div class="mod-card-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-globe2"></i></div>
           <h4>Redes</h4>
           <p>TCP/IP, OSI, topologias, dispositivos, IP y comandos de red.</p>
@@ -115,12 +109,48 @@
             <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
-        <a href="pages/recursos.html" class="mod-card" data-accent="var(--warn)">
-          <div class="mod-card-icon" style="background:rgba(255,193,7,.1);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
-          <h4>Referencia</h4>
-          <p>Atajos de teclado, comandos de consola y recursos web en espanol.</p>
+        <a href="pages/comandos.html" class="mod-card" data-accent="var(--accent3)">
+          <div class="mod-card-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-terminal"></i></div>
+          <h4>Comandos</h4>
+          <p>CMD, PowerShell, Linux y atajos de teclado.</p>
           <div class="mod-card-meta">
-            <span class="mod-tag" style="background:rgba(255,193,7,.1);color:var(--warn);border-color:rgba(255,193,7,.25);">2 secciones</span>
+            <span class="mod-tag" style="background:rgba(255,107,107,.1);color:var(--accent3);border-color:rgba(255,107,107,.25);">2 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/recursos.html#recursos" class="mod-card" data-accent="var(--warn)">
+          <div class="mod-card-icon" style="background:rgba(255,193,7,.1);color:var(--warn);"><i class="bi bi-link-45deg"></i></div>
+          <h4>Recursos</h4>
+          <p>Recursos web en espanol para hardware, redes y soporte tecnico.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(255,193,7,.1);color:var(--warn);border-color:rgba(255,193,7,.25);">1 seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/referencia.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-cpu"></i></div>
+          <h4>Referencia Hardware</h4>
+          <p>Especificaciones de RAM, PCIe, SATA, PSU, BIOS y codigos POST.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">3 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/instalacion.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-hdd"></i></div>
+          <h4>Instalacion y Almacenamiento</h4>
+          <p>Sistemas de archivos, RAID, USB booteable, particionado y post-install.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">5 secciones</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="pages/glosario.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-book"></i></div>
+          <h4>Glosario</h4>
+          <p>Definiciones de terminos tecnicos de hardware y redes.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">3 secciones</span>
             <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
@@ -134,7 +164,7 @@
           </div>
         </div>
         <div class="home-featured-grid">
-          <a href="pages/ensamblaje.html#paso-a-paso" class="feat-card">
+          <a href="pages/ensamblaje/ens-paso-a-paso.html" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(108,99,255,.1);color:var(--accent);"><i class="bi bi-list-check"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Paso a Paso</div>
@@ -142,7 +172,7 @@
             </div>
             <span class="feat-tag">Ensamblaje</span>
           </a>
-          <a href="pages/ensamblaje.html#checklist" class="feat-card">
+          <a href="pages/ensamblaje/ens-checklist.html" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(108,99,255,.1);color:var(--accent);"><i class="bi bi-clipboard-check"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Checklist</div>
@@ -150,7 +180,7 @@
             </div>
             <span class="feat-tag">Ensamblaje</span>
           </a>
-          <a href="pages/mantenimiento.html#software-diag" class="feat-card">
+          <a href="pages/mantenimiento/man-software-diag.html" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-terminal"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Software Diagnostico</div>
@@ -158,7 +188,7 @@
             </div>
             <span class="feat-tag">Mantenimiento</span>
           </a>
-          <a href="pages/redes.html#ip-address" class="feat-card">
+          <a href="pages/redes/red-ip-address.html" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-calculator"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Calculadora de Subred</div>
@@ -166,28 +196,76 @@
             </div>
             <span class="feat-tag">Redes</span>
           </a>
-          <a href="pages/redes.html#cmd-red" class="feat-card">
+          <a href="pages/comandos.html#comandos" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(255,107,107,.1);color:var(--accent3);"><i class="bi bi-terminal-fill"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Comandos de Red</div>
               <div class="feat-card-desc">CMD, Linux y PowerShell</div>
             </div>
-            <span class="feat-tag">Redes</span>
+            <span class="feat-tag">Comandos</span>
           </a>
-          <a href="pages/recursos.html#atajos" class="feat-card">
+          <a href="pages/comandos.html#comandos" class="feat-card">
             <div class="feat-card-icon" style="background:rgba(255,193,7,.1);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
             <div class="feat-card-body">
               <div class="feat-card-title">Atajos de Teclado</div>
               <div class="feat-card-desc">Windows, Linux y navegadores</div>
             </div>
+            <span class="feat-tag">Comandos</span>
+          </a>
+          <a href="pages/referencia.html#beep-codes" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-soundwave"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">Codigos POST Beep</div>
+              <div class="feat-card-desc">Diagnostica fallas por pitidos</div>
+            </div>
             <span class="feat-tag">Referencia</span>
+          </a>
+          <a href="pages/instalacion.html#usb-boot" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-usb-drive"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">USB Booteable</div>
+              <div class="feat-card-desc">Rufus y Ventoy paso a paso</div>
+            </div>
+            <span class="feat-tag">Instalacion</span>
+          </a>
+          <a href="pages/faq.html" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(23,162,184,.1);color:var(--info);"><i class="bi bi-question-circle"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">FAQ / Troubleshooting</div>
+              <div class="feat-card-desc">Errores comunes y soluciones</div>
+            </div>
+            <span class="feat-tag">Ayuda</span>
+          </a>
+          <a href="pages/comparativas.html" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(63,185,80,.1);color:var(--accent-green);"><i class="bi bi-git-compare"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">Comparativas</div>
+              <div class="feat-card-desc">AMD vs Intel, HDD vs SSD</div>
+            </div>
+            <span class="feat-tag">Compra</span>
+          </a>
+          <a href="pages/cuestionarios.html" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(227,179,65,.1);color:var(--accent-yellow);"><i class="bi bi-journal-check"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">Cuestionarios</div>
+              <div class="feat-card-desc">Pon a prueba tus conocimientos</div>
+            </div>
+            <span class="feat-tag">Practica</span>
+          </a>
+          <a href="pages/presupuesto.html" class="feat-card">
+            <div class="feat-card-icon" style="background:rgba(247,129,102,.1);color:var(--accent-orange);"><i class="bi bi-cash-coin"></i></div>
+            <div class="feat-card-body">
+              <div class="feat-card-title">Armado por Presupuesto</div>
+              <div class="feat-card-desc">Componentes segun tu rango</div>
+            </div>
+            <span class="feat-tag">Compra</span>
           </a>
         </div>
       </div>
       <div class="home-stats-bar" data-aos="fade-up" data-aos-delay="200">
-        <div class="home-stat"><div class="home-stat-val">5+</div><div class="home-stat-lbl">Bloques tematicos</div></div>
+        <div class="home-stat"><div class="home-stat-val">12</div><div class="home-stat-lbl">Bloques tematicos</div></div>
         <div class="home-stat-sep"></div>
-        <div class="home-stat"><div class="home-stat-val">30+</div><div class="home-stat-lbl">Secciones</div></div>
+        <div class="home-stat"><div class="home-stat-val">40+</div><div class="home-stat-lbl">Secciones</div></div>
         <div class="home-stat-sep"></div>
         <div class="home-stat"><div class="home-stat-val">100%</div><div class="home-stat-lbl">En espanol</div></div>
       </div>
@@ -216,6 +294,19 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="assets/js/vendor/MTLLoader.js"></script>
+<script src="assets/js/vendor/OBJLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/subnet.js"></script>
+<script src="assets/js/home.js"></script>
+<script src="assets/js/home3d.js"></script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/reading-progress.js"></script>
 </body>
 </html>

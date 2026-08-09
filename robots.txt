@@ -1,0 +1,10 @@
+https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Block internal assets
+Disallow: /assets/
+
+Sitemap: https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/sitemap.xml

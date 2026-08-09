@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit del Tecnico - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Kit del Tecnico. 11 herramientas esenciales.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kit del Tecnico - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Kit del Tecnico. 11 herramientas esenciales.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-tools"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Kit del Tecnico</h1>
+      <p>11 herramientas esenciales.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip active' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Kit del Tecnico</span></nav>
+<div class="content-section" id="kit-tecnico" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-tools"></i></div>
+        <div class="section-title">
+          <h2>Kit del Tecnico</h2>
+          <p>// Herramientas esenciales para mantenimiento y diagnostico</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info" data-aos="fade-up">
+        <i class="bi bi-info-circle"></i>
+        <div>Con estas herramientas puedes cubrir el 90% de las tareas de mantenimiento, diagnostico y reparacion de PCs de escritorio y portatiles.</div>
+      </div>
+
+      <div class="table-wrap" data-aos="fade-up">
+        <table class="cmd-table">
+          <thead>
+            <tr><th><i class="bi bi-wrench"></i> Herramienta</th><th>Prioridad</th><th>Descripcion</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Destornillador Phillips (PH1, PH0)</td><td>Imprescindible</td><td>Para abrir gabinetes, montar componentes y ajustar tornillos de disipadores</td></tr>
+            <tr><td>Pulsera ESD (anti-estatica)</td><td>Alta</td><td>Evita descargas estaticas que pueden danar componentes electronicos sensibles</td></tr>
+            <tr><td>Aire comprimido (&lt;30 psi)</td><td>Alta</td><td>Limpieza de polvo de ventiladores, disipadores, filtros y PCBs sin contacto</td></tr>
+            <tr><td>Pasta termica</td><td>Alta</td><td>Reemplazo cada 2-3 anos. Transferencia termica entre CPU/GPU y disipador</td></tr>
+            <tr><td>Alcohol isopropilico (90%+)</td><td>Alta</td><td>Limpieza de contactos, pasta termica vieja y componentes electronicos</td></tr>
+            <tr><td>Multimetro digital</td><td>Media</td><td>Mide voltajes de PSU (+12V, +5V, +3.3V), continuidad de cables y resistencia</td></tr>
+            <tr><td>Tester de red (cable tester)</td><td>Media</td><td>Verifica integridad de cables Ethernet (RJ45) y detecta cortos o cables cruzados</td></tr>
+            <tr><td>Pinza crimpeadora RJ45</td><td>Media</td><td>Para fabricar y reparar cables de red Ethernet con conectores RJ45</td></tr>
+            <tr><td>Linterna LED / lampara de trabajo</td><td>Media</td><td>Iluminacion del interior del gabinete para trabajar con precision enespacios reducidos</td></tr>
+            <tr><td>USB Ventoy (multi-ISO)</td><td>Media</td><td>USB booteable que carga multiples ISOs (Windows, Linux, herramientas) sin reformatear</td></tr>
+            <tr><td>Spudger / palanca plastica</td><td>Baja</td><td>Para desconectar conectores fragiles (ZIF, flex, displays) sin danar pines</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-header" style="margin-top:2rem;">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-boxes"></i></div>
+        <div class="section-title">
+          <h2>Visores 3D</h2>
+          <p>// Explora las herramientas del kit en tres dimensiones</p>
+        </div>
+      </div>
+      <p class="three-note">Arrastra para girar, usa la rueda del mouse o gesto de pinza para acercar:</p>
+      <div class="cable-3d-grid" data-aos="fade-up">
+        <div class="three-canvas" data-model="screwdriver" data-title="Destornillador Phillips (PH1, PH0)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Destornillador Phillips</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="esd_strap" data-title="Pulsera ESD (anti-estatica)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Pulsera ESD</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="air_duster" data-title="Aire comprimido (&lt;30 psi)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Aire comprimido</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="thermal_paste" data-title="Pasta termica (jeringa + gota)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Pasta termica</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="isopropyl" data-title="Alcohol isopropilico (90%+)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Alcohol isopropilico</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="multimeter" data-title="Multimetro digital">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Multimetro digital</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="tester_net" data-title="Tester de red (cable tester)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Tester de red</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="crimper" data-title="Pinza crimpeadora RJ45">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Crimpadora RJ45</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="flashlight" data-title="Linterna LED / lampara de trabajo">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Linterna LED</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="ventoy_usb" data-title="USB Ventoy (multi-ISO)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">USB Ventoy</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="spudger" data-title="Spudger / palanca plastica">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Spudger</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top:2rem;">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-cpu"></i></div>
+        <div class="section-title">
+          <h2>Explorador 3D Interactivo</h2>
+          <p>// GLTFLoader + OrbitControls + Raycaster sobre el CPU realista</p>
+        </div>
+      </div>
+      <div class="viewer-gltf-wrap" data-aos="fade-up">
+        <div class="viewer-gltf-stage" id="viewerGltfStage">
+          <div class="viewer-gltf-loading" id="viewerGltfLoading">
+            <span class="viewer-gltf-spinner"></span> Cargando modelo GLB...
+          </div>
+          <div class="viewer-gltf-info">
+            <div class="viewer-gltf-info-tag"><i class="bi bi-mouse"></i> clic para inspeccionar</div>
+            <div class="viewer-gltf-info-title" id="viewerGltfInfoTitle">CPU Realista (GLB)</div>
+            <div class="viewer-gltf-info-desc" id="viewerGltfInfoDesc">Haz clic sobre una pieza del procesador para ver su informacion. Arrastra para girar y usa la rueda para acercar.</div>
+          </div>
+          <div class="viewer-gltf-hint">Arrastra para girar &middot; Rueda / gesto para zoom &middot; Clic en una pieza para su info</div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+<script type="module" src="../../assets/js/viewer-gltf.js"></script>
+</body>
+</html>

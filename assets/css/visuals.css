@@ -1,0 +1,261 @@
+/* ============================================================
+   TECHGUIDE - visuals.css
+   Ejemplos visuales reutilizables (diagramas, secuencias, esquemas)
+   Usa las variables de tema de styles.css (claro/oscuro automatico)
+   ============================================================ */
+
+/* === Contenedor base de un ejemplo visual === */
+.vis {
+  position: relative;
+  margin: 18px 0;
+  padding: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.vis-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  font-size: .9rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.vis-title i { color: var(--accent-cyan); }
+.vis-sub {
+  font-size: .75rem;
+  color: var(--text-sec);
+  margin-bottom: 14px;
+}
+.vis-grid {
+  display: grid;
+  gap: 12px;
+}
+.vis-2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.vis-3 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.vis-4 { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.vis-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  font-size: .78rem;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--accent-rgb), .07);
+  border: 1px solid rgba(var(--accent-rgb), .18);
+  color: var(--text-sec);
+}
+.vis-note strong { color: var(--accent); }
+
+/* === Barra OSI (7 capas) === */
+.osi-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: .72rem;
+}
+.osi-bar {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: center;
+  border-radius: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.osi-bar .n {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: .8rem;
+}
+.osi-bar .nm { font-weight: 700; font-size: .78rem; }
+.osi-bar .pd { text-align: right; font-family: var(--font-mono); font-size: .62rem; color: var(--text-muted); }
+.osi-l7 { color: #39d0d8; }
+.osi-l6 { color: #39d0d8; }
+.osi-l5 { color: #39d0d8; }
+.osi-l4 { color: #3fb950; }
+.osi-l3 { color: #e3b341; }
+.osi-l2 { color: #f78166; }
+.osi-l1 { color: #f78166; }
+
+/* === Tarjetas de protocolos === */
+.proto-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.proto-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.proto-card .ico {
+  flex: 0 0 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+.proto-card .nm { font-weight: 700; font-size: .82rem; color: var(--text); }
+.proto-card .fd { font-size: .7rem; color: var(--text-sec); }
+.proto-card .prt { font-family: var(--mono); font-size: .62rem; color: var(--accent-cyan); }
+
+/* === Tipos de red (escala) === */
+.range-scale {
+  position: relative;
+  height: 10px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, rgba(57,208,216,.25), rgba(108,99,255,.25), rgba(255,107,107,.35));
+  margin: 30px 6px 16px;
+}
+.range-scale .dot {
+  position: absolute;
+  top: 50%;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid var(--bg-card);
+  box-shadow: 0 0 0 2px var(--border);
+}
+.range-scale .dot span {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .62rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text-sec);
+}
+
+/* === Diagramas SVG (topologias / motherboard) === */
+.vis-svg { width: 100%; height: auto; display: block; }
+.vis-svg text {
+  font-family: var(--font-main);
+  font-size: 10px;
+  fill: var(--text-sec);
+}
+.vis-svg .t-node {
+  fill: var(--bg-card);
+  stroke: var(--border-hover);
+  stroke-width: 1.4;
+  rx: 8;
+}
+.vis-svg .t-core { stroke-width: 2; }
+.vis-svg .t-edge { stroke: var(--text-muted); stroke-width: 1.6; }
+.vis-svg .t-edge-core { stroke: var(--accent-cyan); stroke-width: 2; }
+.vis-svg .t-tag { font-size: 9px; font-weight: 700; fill: var(--text); }
+.vis-svg .t-arrow { fill: none; stroke: var(--accent2); stroke-width: 1.6; marker-end: url(#visArrow); }
+
+/* === Secuencia de mantenimiento / armado (pasos) === */
+.seq {
+  display: grid;
+  gap: 0;
+  position: relative;
+}
+.seq::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(var(--accent-cyan), var(--accent2));
+}
+.seq-step {
+  position: relative;
+  padding: 6px 0 16px 52px;
+}
+.seq-step .dot {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: .62rem;
+  color: #06121a;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 0 4px var(--bg-card), 0 0 12px rgba(57,208,216,.5);
+}
+.seq-step .h { font-weight: 700; font-size: .85rem; color: var(--text); }
+.seq-step .d { font-size: .74rem; color: var(--text-sec); margin-top: 2px; }
+.seq-step .tool { display: inline-block; margin-top: 6px; font-size: .66rem; font-family: var(--mono); color: var(--accent2); background: rgba(0,212,170,.08); border: 1px solid rgba(0,212,170,.2); padding: 2px 8px; border-radius: 99px; }
+
+/* === Tablero de headers motherboard === */
+.hdr-board {
+  position: relative;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(108,99,255,.08), transparent 60%),
+    var(--bg-card);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.hdr-board .zone {
+  position: relative;
+  border: 1px dashed var(--border-hover);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.hdr-board .zone-tag {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  background: var(--bg-card);
+  padding: 0 8px;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+}
+.hdr-pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.hdr-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .68rem;
+  font-family: var(--font-mono);
+  color: var(--text);
+  background: var(--bg-body);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+.hdr-pin i { color: var(--accent-cyan); font-size: .72rem; }
+.hdr-pin.bad { border-color: var(--accent3); color: var(--accent3); }
+.hdr-pin.bad i { color: var(--accent3); }
+
+/* === Flujo de aplicacion de pasta termica === */
+.paste-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.paste-box {
+  text-align: center;
+  padding: 14px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+.paste-box .svg-mini { height: 54px; margin: 0 auto 8px; }
+.paste-box .nm { font-weight: 700; font-size: .74rem; color: var(--text); }
+.paste-box .ds { font-size: .66rem; color: var(--text-sec); }
+.paste-box.ok { border-color: rgba(63,185,80,.4); }
+.paste-box.no { border-color: rgba(255,107,107,.4); opacity: .75; }

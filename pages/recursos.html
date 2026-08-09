@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recursos - TechGuide</title>
+  <meta name="description" content="Recursos. Recursos web recomendados para hardware, redes y soporte tecnico en espanol.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recursos - TechGuide">
+  <meta property="og:description" content="Recursos. Recursos web recomendados para hardware, redes y soporte tecnico en espanol.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
 
 <header class="topbar">
   <div class="topbar-brand">
@@ -19,41 +27,24 @@
   </div>
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
     <li class="nav-item">
-      <button class="nav-drop-btn">Ensamblaje <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
       <div class="nav-dropdown">
-        <a href="ensamblaje.html#herramientas"><i class="bi bi-tools"></i> Herramientas</a>
-        <a href="ensamblaje.html#componentes"><i class="bi bi-motherboard"></i> Componentes</a>
-        <a href="ensamblaje.html#paso-a-paso"><i class="bi bi-list-check"></i> Paso a Paso</a>
-        <a href="ensamblaje.html#cableado"><i class="bi bi-usb"></i> Cableado</a>
-        <a href="ensamblaje.html#checklist"><i class="bi bi-clipboard-check"></i> Checklist</a>
+        <a href="faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
       </div>
     </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Mantenimiento <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="mantenimiento.html#preventivo"><i class="bi bi-shield-check"></i> Preventivo</a>
-        <a href="mantenimiento.html#correctivo"><i class="bi bi-heart-pulse"></i> Correctivo</a>
-        <a href="mantenimiento.html#software-diag"><i class="bi bi-terminal"></i> Software</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Redes <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="redes.html#tcp-osi"><i class="bi bi-globe2"></i> TCP/IP y OSI</a>
-        <a href="redes.html#topologias"><i class="bi bi-diagram-3"></i> Topologias</a>
-        <a href="redes.html#dispositivos-red"><i class="bi bi-router"></i> Dispositivos</a>
-        <a href="redes.html#ip-address"><i class="bi bi-ethernet"></i> IP</a>
-        <a href="redes.html#cmd-red"><i class="bi bi-terminal-fill"></i> Comandos</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Referencia <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="recursos.html#atajos"><i class="bi bi-keyboard"></i> Atajos</a>
-        <a href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
   </ul>
   <div class="topbar-actions">
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
@@ -69,87 +60,34 @@
   <div class="page-hero">
     <div class="page-hero-glow"></div>
     <div class="page-hero-content" data-aos="fade-up">
-      <div class="page-hero-icon" style="background:rgba(255,193,7,.1);border:1px solid rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
-      <h1><span class="hl">Referencia</span> y Recursos</h1>
-      <p>Atajos de teclado para Windows, Linux y BIOS. Recursos web recomendados para hardware, redes y soporte tecnico en espanol.</p>
+      <div class="page-hero-icon" style="background:rgba(255,193,7,.1);border:1px solid rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-link-45deg"></i></div>
+      <h1><span class="hl">Recursos</span></h1>
+      <p>Recursos web recomendados para hardware, redes y soporte tecnico en espanol.</p>
       <div class="page-hero-chips">
-        <span class="pchip pchip-y">Atajos</span>
-        <span class="pchip pchip-y">Linux</span>
-        <span class="pchip pchip-y">BIOS</span>
         <span class="pchip pchip-y">Recursos Web</span>
+        <span class="pchip pchip-y">Hardware</span>
+        <span class="pchip pchip-y">Redes</span>
       </div>
-    </div>
-  </div>
-
-  <!-- ATAJOS WINDOWS -->
-  <div class="content-section" id="atajos" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-keyboard"></i></div>
-      <div class="section-title">
-        <h2>Atajos de Teclado</h2>
-        <p>// Windows, Linux y BIOS / UEFI</p>
-      </div>
-    </div>
-
-    <h3 class="sub-heading" style="border-bottom-color:var(--accent);">Windows</h3>
-    <div class="shortcut-grid">
-      <div class="shortcut-item"><span class="shortcut-desc">Abrir Explorador</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Ejecutar</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Configuracion</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Menu avanzado</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>X</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Bloquear PC</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Admin. tareas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>Esc</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Deshacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Mostrar escritorio</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Captura pantalla</span><div class="shortcut-keys"><kbd>PrtSc</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Pegar sin formato</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Buscar en Windows</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Centro de accion</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Emoji picker</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>.</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Task View</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
-    </div>
-
-    <h3 class="sub-heading" style="border-bottom-color:var(--accent2);">Linux (Terminal)</h3>
-    <div class="shortcut-grid">
-      <div class="shortcut-item"><span class="shortcut-desc">Interrumpir proceso</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Suspender proceso</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Salir / EOF</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Buscar en historial</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Autocompletar</span><div class="shortcut-keys"><kbd>Tab</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Inicio de linea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Final de linea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Limpiar terminal</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Repetir con sudo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>r</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Borrar palabra</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>W</kbd></div></div>
-    </div>
-
-    <h3 class="sub-heading" style="border-bottom-color:var(--accent3);">BIOS / UEFI</h3>
-    <div class="shortcut-grid">
-      <div class="shortcut-item"><span class="shortcut-desc">Entrar a BIOS</span><div class="shortcut-keys"><kbd>DEL</kbd> / <kbd>F2</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Menu de boot</span><div class="shortcut-keys"><kbd>F8</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Boot temporal</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Guardar y salir</span><div class="shortcut-keys"><kbd>F10</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Salir / Volver</span><div class="shortcut-keys"><kbd>ESC</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Ayuda</span><div class="shortcut-keys"><kbd>F1</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Cambiar orden boot</span><div class="shortcut-keys"><kbd>+</kbd> / <kbd>-</kbd></div></div>
-      <div class="shortcut-item"><span class="shortcut-desc">Restaurar defaults</span><div class="shortcut-keys"><kbd>F9</kbd></div></div>
-    </div>
-
-    <div class="alert-box alert-warn" style="margin-top:1.5rem;">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div>Las teclas de BIOS varian segun el fabricante: Dell (F2), HP (F10), Lenovo (F2/Del), ASUS (DEL), MSI (DEL). Consulta la documentacion de tu equipo.</div>
     </div>
   </div>
 
   <!-- RECURSOS WEB -->
-  <div class="content-section" id="recursos" data-aos="fade-up">
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../index.html">Inicio</a><span class="sep">/</span><span class="current">Recursos</span></nav>
+<div class="content-section" id="recursos" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-link-45deg"></i></div>
       <div class="section-title">
         <h2>Recursos Web</h2>
-        <p>// 140+ sitios de utilidad organizados por categoria</p>
+        <p>// Sitios de utilidad organizados por categoria, con buscador en vivo</p>
+      </div>
+    </div>
+
+    <div class="rec-tools" data-aos="fade-up">
+      <div class="rec-search-wrap">
+        <i class="bi bi-search rec-search-icon"></i>
+        <input type="text" id="searchInput" class="rec-search" placeholder="Buscar recurso o programa (ej: Rufus, Wireshark, clonar disco)...">
+        <button type="button" class="rec-search-clear" id="recSearchClear" title="Limpiar"><i class="bi bi-x-circle"></i></button>
       </div>
     </div>
 
@@ -158,16 +96,19 @@
       <span class="net-pill" data-group="hardware">Hardware</span>
       <span class="net-pill" data-group="redes">Redes</span>
       <span class="net-pill" data-group="sistemas">Sistemas Operativos</span>
+      <span class="net-pill" data-group="usbs">USBs Booteables</span>
       <span class="net-pill" data-group="herramientas">Herramientas</span>
       <span class="net-pill" data-group="simuladores">Simuladores</span>
+      <span class="net-pill" data-group="descargables">Simuladores Descargables</span>
       <span class="net-pill" data-group="seguridad">Seguridad</span>
+      <span class="net-pill" data-group="anonimato">Anonimato y Privacidad</span>
       <span class="net-pill" data-group="formacion">Formacion</span>
       <span class="net-pill" data-group="comunidades">Comunidades</span>
     </div>
 
     <!-- ============ HARDWARE ============ -->
     <div class="net-group" data-group="hardware">
-      <h3 class="sub-heading" style="border-bottom-color:var(--accent);">Hardware y Benchmarks</h3>
+      <h3 class="sub-heading" id="cat-hardware" style="border-bottom-color:var(--accent);">Hardware y Benchmarks</h3>
       <div class="rec-grid">
         <div class="rec-card hw" data-aos="fade-up">
           <div class="rec-card-header">
@@ -297,12 +238,44 @@
           <p>Calculadora de vataje para fuentes de poder. Selecciona tus componentes y estima el consumo real para elegir la PSU adecuada.</p>
           <a href="https://www.bequiet.com/en/psucalculator" target="_blank" class="rec-link">bequiet.com/psucalculator</a>
         </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>MSI Afterburner</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">GPU</span>
+          </div>
+          <p>El estandar para monitorear y hacer overclock de tarjetas graficas. Overlay en tiempo real con FPS, temperaturas y uso de GPU/CPU dentro de los juegos.</p>
+          <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank" class="rec-link">msi.com/afterburner</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>HWMonitor</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Temperaturas</span>
+          </div>
+          <p>Monitorea temperaturas, voltajes, velocidades de ventilador y consumo de todos los sensores del sistema en tiempo real. De los creadores de CPU-Z.</p>
+          <a href="https://www.cpuid.com/softwares/hwmonitor.html" target="_blank" class="rec-link">cpuid.com/hwmonitor</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Prime95</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Stress Test</span>
+          </div>
+          <p>Test de estabilidad clasico para CPU y RAM. Somete el procesador a cargas extremas para detectar inestabilidad, sobrecalentamiento o errores de calculo.</p>
+          <a href="https://www.mersenne.org/download/" target="_blank" class="rec-link">mersenne.org</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>FurMark</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Stress Test</span>
+          </div>
+          <p>Test de estres exclusivo para GPU que lleva la tarjeta grafica al limite con renderizado 3D continuo. Ideal para detectar fallos, artifacts y problemas de temperatura.</p>
+          <a href="https://geeks3d.com/furmark/" target="_blank" class="rec-link">geeks3d.com/furmark</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ REDES ============ -->
     <div class="net-group" data-group="redes">
-      <h3 class="sub-heading" style="border-bottom-color:var(--accent2);">Redes y Herramientas de Red</h3>
+      <h3 class="sub-heading" id="cat-redes" style="border-bottom-color:var(--accent2);">Redes y Herramientas de Red</h3>
       <div class="rec-grid">
         <div class="rec-card net" data-aos="fade-up">
           <div class="rec-card-header">
@@ -440,12 +413,52 @@
           <p>Archivo oficial de los documentos RFC, los estandares que definen Internet (TCP, IP, HTTP, DNS). Consulta la fuente original de cualquier protocolo.</p>
           <a href="https://www.rfc-editor.org" target="_blank" class="rec-link">rfc-editor.org</a>
         </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>OpenWrt</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Firmware</span>
+          </div>
+          <p>Firmware de codigo abierto para routers. Reemplaza el firmware de fabrica y agrega VPN, control de ancho de banda, QoS, DNS y funciones avanzadas de red.</p>
+          <a href="https://openwrt.org" target="_blank" class="rec-link">openwrt.org</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>pfSense</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Firewall</span>
+          </div>
+          <p>Distribucion de firewall/roter basada en FreeBSD. Convierte un PC en un router profesional con filtrado, VPN, balanceo y monitoreo de trafico.</p>
+          <a href="https://www.pfsense.org" target="_blank" class="rec-link">pfsense.org</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Pi-hole</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">DNS</span>
+          </div>
+          <p>Bloqueador de publicidad a nivel de red. Actua como DNS local que filtra anuncios y rastreadores en todos los dispositivos conectados a tu red.</p>
+          <a href="https://pi-hole.net" target="_blank" class="rec-link">pi-hole.net</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>NetSpot</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">WiFi</span>
+          </div>
+          <p>Analizador de redes WiFi con mapa de calor. Visualiza la cobertura, intensidad de senal e interferencia de canales para optimizar tu red inalambrica.</p>
+          <a href="https://www.netspotapp.com" target="_blank" class="rec-link">netspotapp.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Ekahau / Site Survey</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">WiFi</span>
+          </div>
+          <p>Herramientas profesionales de diseno y analisis de redes WiFi. Usadas por ingenieros para planificar cobertura en empresas y estadios.</p>
+          <a href="https://www.ekahau.com" target="_blank" class="rec-link">ekahau.com</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ SISTEMAS OPERATIVOS ============ -->
     <div class="net-group" data-group="sistemas">
-      <h3 class="sub-heading" style="border-bottom-color:#bc8cff;">Sistemas Operativos</h3>
+      <h3 class="sub-heading" id="cat-sistemas" style="border-bottom-color:#bc8cff;">Sistemas Operativos</h3>
       <div class="rec-grid">
         <div class="rec-card so" data-aos="fade-up">
           <div class="rec-card-header">
@@ -543,12 +556,75 @@
           <p>Pagina de ranking y noticias de distribuciones Linux. Tablas comparativas, anuncios de versiones y el famoso ranking de popularidad de distros.</p>
           <a href="https://distrowatch.com" target="_blank" class="rec-link">distrowatch.com</a>
         </div>
+        <div class="rec-card so" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Windows 10 ISO (Micrososoft)</h4>
+            <span class="pchip pchip-b" style="font-size:.55rem;">Descargas</span>
+          </div>
+          <p>Pagina oficial de Microsoft para descargar la ISO de Windows 10 y la herramienta de creacion de medios, util para equipos con requisitos antiguos.</p>
+          <a href="https://www.microsoft.com/es-es/software-download/windows10" target="_blank" class="rec-link">microsoft.com/windows10</a>
+        </div>
+        <div class="rec-card so" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Raspberry Pi OS</h4>
+            <span class="pchip pchip-b" style="font-size:.55rem;">SBC</span>
+          </div>
+          <p>Sistema operativo oficial para placas Raspberry Pi, basado en Debian. Ideal para montar servidores caseros, media centers y proyectos de red.</p>
+          <a href="https://www.raspberrypi.com/software/" target="_blank" class="rec-link">raspberrypi.com/software</a>
+        </div>
+        <div class="rec-card so" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>WSL (Linux en Windows)</h4>
+            <span class="pchip pchip-b" style="font-size:.55rem;">Linux</span>
+          </div>
+          <p>Windows Subsystem for Linux: ejecuta una distribucion Linux completa dentro de Windows sin maquina virtual. Documentacion oficial para instalarlo y usarlo.</p>
+          <a href="https://learn.microsoft.com/es-es/windows/wsl/" target="_blank" class="rec-link">learn.microsoft.com/wsl</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ USBs BOOTEABLES ============ -->
+    <div class="net-group" data-group="usbs">
+      <h3 class="sub-heading" id="cat-usbs" style="border-bottom-color:var(--accent3);">USBs Booteables</h3>
+      <div class="rec-grid">
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Rufus</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
+          </div>
+          <p>La herramienta mas popular para crear USBs de arranque. Soporta UEFI y BIOS legacy, formatos GPT/MBR y permite descargar ISOs de Windows desde Microsoft.</p>
+          <a href="https://rufus.ie" target="_blank" class="rec-link">rufus.ie</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Ventoy</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Multiboot</span>
+          </div>
+          <p>Multiples ISOs en un solo USB: se instala una vez y luego solo copias archivos .iso como si fuera una carpeta. Al arrancar, muestra un menu para elegir cual bootear.</p>
+          <a href="https://www.ventoy.net" target="_blank" class="rec-link">ventoy.net</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Balena Etcher</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
+          </div>
+          <p>Graba imagenes de sistema operativo a USBs y tarjetas SD de forma segura y sencilla, con verificacion de escritura integrada. Multiplataforma.</p>
+          <a href="https://etcher.balena.io" target="_blank" class="rec-link">etcher.balena.io</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>UNetbootin</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
+          </div>
+          <p>Utilidad gratuita para crear USBs booteables desde ISOs o descargar distribuciones Linux directamente desde la aplicacion.</p>
+          <a href="https://unetbootin.github.io" target="_blank" class="rec-link">unetbootin.github.io</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ HERRAMIENTAS ============ -->
     <div class="net-group" data-group="herramientas">
-      <h3 class="sub-heading" style="border-bottom-color:var(--info);">Herramientas de Diagnostico y Utilidades</h3>
+      <h3 class="sub-heading" id="cat-herramientas" style="border-bottom-color:var(--info);">Herramientas de Diagnostico y Utilidades</h3>
       <div class="rec-grid">
         <div class="rec-card hw" data-aos="fade-up">
           <div class="rec-card-header">
@@ -688,38 +764,6 @@
         </div>
         <div class="rec-card hw" data-aos="fade-up">
           <div class="rec-card-header">
-            <h4>Rufus</h4>
-            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
-          </div>
-          <p>La herramienta mas popular para crear USBs de arranque. Soporta UEFI y BIOS legacy, formatos GPT/MBR y permite descargar ISOs de Windows desde Microsoft.</p>
-          <a href="https://rufus.ie" target="_blank" class="rec-link">rufus.ie</a>
-        </div>
-        <div class="rec-card hw" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>Ventoy</h4>
-            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
-          </div>
-          <p>Multiples ISOs en un solo USB: se instala una vez y luego solo copias archivos .iso como si fuera una carpeta. Al arrancar, muestra un menu para elegir cual bootear.</p>
-          <a href="https://www.ventoy.net" target="_blank" class="rec-link">ventoy.net</a>
-        </div>
-        <div class="rec-card hw" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>Balena Etcher</h4>
-            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
-          </div>
-          <p>Graba imagenes de sistema operativo a USBs y tarjetas SD de forma segura y sencilla, con verificacion de escritura integrada. Multiplataforma.</p>
-          <a href="https://etcher.balena.io" target="_blank" class="rec-link">etcher.balena.io</a>
-        </div>
-        <div class="rec-card hw" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>UNetbootin</h4>
-            <span class="pchip pchip-a" style="font-size:.55rem;">USB Booteable</span>
-          </div>
-          <p>Utilidad gratuita para crear USBs booteables desde ISOs o descargar distribuciones Linux directamente desde la aplicacion.</p>
-          <a href="https://unetbootin.github.io" target="_blank" class="rec-link">unetbootin.github.io</a>
-        </div>
-        <div class="rec-card hw" data-aos="fade-up">
-          <div class="rec-card-header">
             <h4>GParted Live</h4>
             <span class="pchip pchip-a" style="font-size:.55rem;">Particionado</span>
           </div>
@@ -758,12 +802,52 @@
           <p>Escaneo portable y gratuito de Microsoft para detectar y eliminar malware especifico. No requiere instalacion y no interfiere con otros antivirus.</p>
           <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52337" target="_blank" class="rec-link">microsoft.com</a>
         </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>CrystalDiskMark</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Benchmark</span>
+          </div>
+          <p>Mide las velocidades de lectura y escritura de discos SSD y HDD. Imprescindible para verificar que un disco rinde lo que promete y detectar degradacion.</p>
+          <a href="https://crystalmark.info" target="_blank" class="rec-link">crystalmark.info</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Macrium Reflect</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Backup</span>
+          </div>
+          <p>Software de imagen y clonado de discos con copias de seguridad programadas. La edicion gratuita cubre respaldos completos de disco y particiones.</p>
+          <a href="https://www.macrium.com/reflect" target="_blank" class="rec-link">macrium.com/reflect</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Ninite</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Instalador</span>
+          </div>
+          <p>Instala y actualiza en lote las aplicaciones mas populares de Windows en un solo paso, sin barras de herramientas ni bloatware. Perfecto tras formatear.</p>
+          <a href="https://ninite.com" target="_blank" class="rec-link">ninite.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>7-Zip</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Compresion</span>
+          </div>
+          <p>Compresor de archivos de codigo abierto con el formato 7z y soporte para ZIP, RAR, TAR y mas. Mas rapido y liviano que WinRAR y sin licencias.</p>
+          <a href="https://www.7-zip.org" target="_blank" class="rec-link">7-zip.org</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Recuva</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Recuperacion</span>
+          </div>
+          <p>Recupera archivos borrados de discos, memorias USB y tarjetas SD. Util cuando se vacio la papelera o se formateo un dispositivo por accidente.</p>
+          <a href="https://www.ccleaner.com/recuva" target="_blank" class="rec-link">ccleaner.com/recuva</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ SIMULADORES ============ -->
     <div class="net-group" data-group="simuladores">
-      <h3 class="sub-heading" style="border-bottom-color:var(--accent-green);">Simuladores y Practica</h3>
+      <h3 class="sub-heading" id="cat-simuladores" style="border-bottom-color:var(--accent-green);">Simuladores y Practica</h3>
 
       <div class="alert-box alert-info" data-aos="fade-up">
         <i class="bi bi-lightbulb"></i>
@@ -881,6 +965,60 @@
             <span class="v-chan">GameRiot (gameplay)</span>
           </span>
         </a>
+        <a class="video-item" href="https://www.youtube.com/watch?v=-DSCUtnCNTY" target="_blank" rel="noopener">
+          <i class="bi bi-youtube"></i>
+          <span class="v-meta">
+            <span class="v-title">Simulador de ensamble de PC Cisco: armar una computadora paso a paso</span>
+            <span class="v-chan">Tutorial en espanol</span>
+          </span>
+        </a>
+        <a class="video-item" href="https://www.youtube.com/watch?v=b2nIwFyvu2M" target="_blank" rel="noopener">
+          <i class="bi bi-youtube"></i>
+          <span class="v-meta">
+            <span class="v-title">Error Flash Player en el simulador Cisco: descarga y ejecuta con Chrome Portable</span>
+            <span class="v-chan">Solucion rapida</span>
+          </span>
+        </a>
+        <a class="video-item" href="https://www.youtube.com/watch?v=nqbBDGGr2Co" target="_blank" rel="noopener">
+          <i class="bi bi-youtube"></i>
+          <span class="v-meta">
+            <span class="v-title">Simulador de ensamblar laptop (Cisco): paso a paso y gratis</span>
+            <span class="v-chan">Tutorial en espanol</span>
+          </span>
+        </a>
+      </div>
+
+      <h4 class="sub-heading" style="border-bottom-color:var(--accent-green);">Paso a paso: ejecutar un simulador que se descarga</h4>
+      <div class="alert-box alert-warn" data-aos="fade-up">
+        <i class="bi bi-exclamation-triangle"></i>
+        <div><strong>Estos simuladores corren "en navegador" pero necesitan descargar un archivo:</strong> el archivo trae un .swf (Flash) o un .html que abre el juego en el navegador. Si el tuyo pide Adobe Flash, usa el Chrome Portable que trae el Flash incluido.</div>
+      </div>
+      <div class="steps-timeline" data-aos="fade-up">
+        <div class="step-item">
+          <div class="step-num">PASO 1</div>
+          <div class="step-title">Descarga el archivo comprimido</div>
+          <div class="step-desc">Usa el enlace de la tarjeta (Google Drive). Es un .rar o .zip de pocos MB. Descarga tambien el Chrome Portable si el simulador es Flash.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">PASO 2</div>
+          <div class="step-title">Descomprime en una carpeta propia</div>
+          <div class="step-desc">Clic derecho sobre el .rar y "Extraer aqui" (WinRAR o 7-Zip). NO lo ejecutes dentro del comprimido.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">PASO 3</div>
+          <div class="step-title">Abre la carpeta extraida</div>
+          <div class="step-desc">Busca el archivo llamado Index.html o el .exe principal dentro de la subcarpeta del simulador (p. ej. "Simulador de Ensamble para PC'S").</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">PASO 4</div>
+          <div class="step-title">Abre Index.html con el Chrome Portable</div>
+          <div class="step-desc">Clic derecho sobre Index.html, "Abrir con", elige el Chrome Portable extraido. El Flash ya esta incluido y el simulador carga en el navegador.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">PASO 5</div>
+          <div class="step-title">Usa el modo Learn y luego Test</div>
+          <div class="step-desc">En Learn el simulador te guia instalando placa, CPU, RAM y fuente. En Test armas solo. Repite hasta dominar el orden de ensamblaje.</div>
+        </div>
       </div>
 
       <div class="rec-grid">
@@ -923,6 +1061,54 @@
           </div>
           <p>Simulador enfocado en certificaciones Cisco (CCNA, ENCOR, ENARSI) con labs guiados paso a paso y explicaciones. Hay version de prueba gratuita con set de comandos limitado.</p>
           <a href="https://boson.com/netsim-cisco-network-simulator" target="_blank" class="rec-link">boson.com/netsim</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>NetLab (The CyberSec Guru)</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Simulador de redes que corre en el navegador, alternativa gratuita a Packet Tracer. Arma topologias, configura routers y switches, simula DHCP y practica comandos CLI sin descargar nada.</p>
+          <a href="https://netlab.thecybersecguru.com/" target="_blank" class="rec-link">netlab.thecybersecguru.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>SwitchLab</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Labs CLI de switches en el navegador: VLANs, trunks, routing y troubleshooting. Practica comandos de networking reales con lecciones guiadas desde cero, sin instalacion.</p>
+          <a href="https://switchlab.dev/" target="_blank" class="rec-link">switchlab.dev</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Cisco Simulators (ASecuritySite)</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Simuladores de router y switch de Cisco que corren en el navegador con retos graduados por nivel (CCNA, CCNP). Incluye practicas de VLANs, STP, OSPF, ACL y mas.</p>
+          <a href="https://asecuritysite.com/cisco" target="_blank" class="rec-link">asecuritysite.com/cisco</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Subnetting Practice</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Practica de subnetting en el navegador con preguntas ilimitadas, calculadora de subredes y cheat sheet. Ideal para dominar el calculo de subredes para CCNA y trabajos reales.</p>
+          <a href="https://subnettingpractice.com/subnets.html" target="_blank" class="rec-link">subnettingpractice.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Subnetting.net</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Preguntas de subnetting, juego cronometrado contra el mundo y herramientas para practicar en el navegador. Con calculadora integrada para verificar cada respuesta.</p>
+          <a href="https://www.subnetting.net" target="_blank" class="rec-link">subnetting.net</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>NetPilot</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Simulador de redes 100% en el navegador con CLI reales de varios fabricantes y tier gratuito. Describe el lab que necesitas y arma topologias de OSPF, VLANs y ACL al instante.</p>
+          <a href="https://app.netpilot.io/sign-in" target="_blank" class="rec-link">app.netpilot.io</a>
         </div>
         <div class="rec-card so" data-aos="fade-up">
           <div class="rec-card-header">
@@ -1060,6 +1246,70 @@
           <p>Verificador de compatibilidad en tiempo real: socket de CPU, formato de placa, tipo de RAM, potencia de fuente y espacio dentro del gabinete, sin registro.</p>
           <a href="https://planmypc.com/compatibility-checker" target="_blank" class="rec-link">planmypc.com</a>
         </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PC Building Simulator 3D (movil)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>App gratuita de ensamblaje de PC para Android e iOS. Arma equipos componente por componente con instrucciones paso a paso y gestiona pedidos como tecnico. Ideal para practicar en movil.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.nexttechgamesstudios.pc.simulator.game" target="_blank" class="rec-link">play.google.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PC Building Simulator 2 Demo</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Demo gratuita del PCBS2 que permite jugar los primeros 5 niveles del modo carrera: diagnostica, desarma, repara y ensambla PCs reales. Requiere Epic Games Launcher pero no cuesta nada.</p>
+          <a href="https://store.epicgames.com/p/pc-building-simulator-2--demo" target="_blank" class="rec-link">store.epicgames.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Computer Repair Simulator (navegador)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Juego gratuito en el navegador donde reparas PCs de clientes: diagnosticas virus, BSOD, lentitud y problemas de red aplicando las herramientas correctas. Corre sin instalacion.</p>
+          <a href="https://idev.games/game/computer-repair-simulator" target="_blank" class="rec-link">idev.games</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PC Repair Simulator (Browning PC)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Simulador educativo en el navegador: lee el sintoma, inspecciona los componentes dentro del gabinete, diagnostica la causa real y elige la reparacion correcta. Sin descargas.</p>
+          <a href="https://apps.browningpc.com/coding/pc-repair-simulator/" target="_blank" class="rec-link">apps.browningpc.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Disassembly 3D (Microsoft Store)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Juego gratuito de la Microsoft Store con fisica de desarmado realista: retira tornillos, paneles y componentes de dispositivos paso a paso. Practica el orden de desarme de aparatos.</p>
+          <a href="https://apps.microsoft.com/detail/9wzdncrdc2xx" target="_blank" class="rec-link">apps.microsoft.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PC Builder Simulator (TOR50)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Simulador de ensamblaje 100% en el navegador: elige componentes, verifica compatibilidad de sockets y RAM, y ejecuta benchmarks con vista 3D animada del gabinete. Gratis, sin registro.</p>
+          <a href="https://tor50.github.io/pc-builder-simulator/" target="_blank" class="rec-link">tor50.github.io</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>BuildCores</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Constructor de PC en el navegador con vista 3D del gabinete: ubica CPU, GPU, RAM y enfriamiento con verificacion de espacio y compatibilidad en tiempo real. Miles de modelos 3D.</p>
+          <a href="https://www.buildcores.com" target="_blank" class="rec-link">buildcores.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PC Building Simulator (PC Master Studio)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Simulador de ensamblaje online sin descargas: selecciona componentes, revisa compatibilidad y estima el consumo de la fuente directamente en el navegador.</p>
+          <a href="https://www.pcmasterstudio.com/en/pc-tools/pc-building-simulator" target="_blank" class="rec-link">pcmasterstudio.com</a>
+        </div>
         <div class="rec-card so" data-aos="fade-up">
           <div class="rec-card-header">
             <h4>Tinkercad Circuits</h4>
@@ -1103,34 +1353,48 @@
       </div>
     </div>
 
+    <!-- ============ SIMULADORES DESCARGABLES ============ -->
+    <div class="net-group" data-group="descargables">
+      <h3 class="sub-heading" id="cat-descargables" style="border-bottom-color:var(--warn);">Simuladores Descargables</h3>
+      <div class="alert-box alert-warn" data-aos="fade-up">
+        <i class="bi bi-download"></i>
+        <div><strong>Corren "en navegador" pero requieren descargar un archivo.</strong> Son los simuladores de ensamble de Cisco, en formato Flash (.swf/.html). Descarga el .rar, extraelo y abre el Index.html con el Chrome Portable que incluye Flash.</div>
+      </div>
+      <div class="rec-grid">
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Simulador Ensamble PC (Cisco)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Simulador educativo de Cisco para practicar el armado completo de un PC en 3D: placa base, CPU, RAM, fuente y discos. El archivo Index.html se abre en el navegador con un Chrome Portable que trae Flash incluido.</p>
+          <a href="https://drive.google.com/file/d/0B4Sn6ESKjJhNNFZiUHA5RnNEUHc/view" target="_blank" class="rec-link">Descargar (Google Drive)</a>
+          <a href="https://www.youtube.com/watch?v=-DSCUtnCNTY" target="_blank" class="rec-link rec-yt">Tutorial YouTube</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Simulador Ensamble Laptop (Cisco)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Gratis</span>
+          </div>
+          <p>Version del simulador de Cisco para armar una laptop paso a paso: pantalla, teclado, placa, RAM y disco sin riesgo de dañar hardware real. Igual que el de PC, se ejecuta en el navegador via Chrome Portable.</p>
+          <a href="https://drive.google.com/file/d/0B3e6DTnaUsdCSnltOFJYSGJ2T0E/view" target="_blank" class="rec-link">Descargar (Google Drive)</a>
+          <a href="https://www.youtube.com/watch?v=nqbBDGGr2Co" target="_blank" class="rec-link rec-yt">Tutorial YouTube</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Chrome Portable con Flash (para Cisco)</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Necesario</span>
+          </div>
+          <p>Version portable de Google Chrome que todavia incluye Adobe Flash Player. Necesaria para ejecutar los simuladores de ensamble de Cisco en navegadores modernos, que ya no soportan Flash.</p>
+          <a href="https://drive.google.com/file/d/1yL07Ev5DRWHz9ZRsfgM4nrLaf8QG4CGE/view" target="_blank" class="rec-link">Descargar (Google Drive)</a>
+          <a href="https://www.youtube.com/watch?v=b2nIwFyvu2M" target="_blank" class="rec-link rec-yt">Tutorial YouTube</a>
+        </div>
+      </div>
+    </div>
+
     <!-- ============ SEGURIDAD ============ -->
     <div class="net-group" data-group="seguridad">
-      <h3 class="sub-heading" style="border-bottom-color:var(--accent3);">Seguridad y Privacidad</h3>
+      <h3 class="sub-heading" id="cat-seguridad" style="border-bottom-color:var(--accent3);">Seguridad y Privacidad</h3>
       <div class="rec-grid">
-        <div class="rec-card sec" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>Tails</h4>
-            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
-          </div>
-          <p>Sistema operativo portable basado en Debian que arranca desde USB y enruta todo su trafico por Tor. Deja cero rastros al apagar el equipo. Desarrollado por el Tor Project.</p>
-          <a href="https://tails.net/" target="_blank" class="rec-link">tails.net</a>
-        </div>
-        <div class="rec-card sec" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>Tor Project</h4>
-            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
-          </div>
-          <p>Navegador Tor, la red de anonimato mas usada del mundo, y el Onion Service Browser. Herramientas para proteger tu identidad y sortear la censura.</p>
-          <a href="https://www.torproject.org" target="_blank" class="rec-link">torproject.org</a>
-        </div>
-        <div class="rec-card sec" data-aos="fade-up">
-          <div class="rec-card-header">
-            <h4>Qubes OS</h4>
-            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
-          </div>
-          <p>Sistema operativo basado en el aislamiento de cuarentenas (qubes). Separa tu vida personal, laboral y online en maquinas virtuales para contener amenazas.</p>
-          <a href="https://www.qubes-os.org" target="_blank" class="rec-link">qubes-os.org</a>
-        </div>
         <div class="rec-card sec" data-aos="fade-up">
           <div class="rec-card-header">
             <h4>VeraCrypt</h4>
@@ -1203,12 +1467,143 @@
           <p>Emisor gratuito de certificados SSL/TLS. Por que el candado de seguridad (HTTPS) es basico y como obtener certificados validos sin costo en cualquier servidor.</p>
           <a href="https://letsencrypt.org" target="_blank" class="rec-link">letsencrypt.org</a>
         </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Kali Linux</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Pentesting</span>
+          </div>
+          <p>Distribucion Linux de pruebas de seguridad con mas de 600 herramientas de pentesting preinstaladas (Nmap, Wireshark, Metasploit, John the Ripper). El estandar en ciberseguridad.</p>
+          <a href="https://www.kali.org" target="_blank" class="rec-link">kali.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>uBlock Origin</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Extension</span>
+          </div>
+          <p>Bloqueador de anuncios y rastreadores de codigo abierto, liviano y eficiente. Reduce el consumo de datos y mejora la privacidad en cualquier navegador.</p>
+          <a href="https://ublockorigin.com" target="_blank" class="rec-link">ublockorigin.com</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Proton VPN</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">VPN</span>
+          </div>
+          <p>VPN de codigo abierto y auditada con plan gratuito sin limite de datos. Política de no registros y sede en Suiza, uno de los mejores equilibrios entre privacidad y velocidad.</p>
+          <a href="https://protonvpn.com" target="_blank" class="rec-link">protonvpn.com</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Spybot Anti-Beacon</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
+          </div>
+          <p>Herramienta de los creadores de Spybot para bloquear la telemetria y los rastreadores de Windows 10/11. Desactiva las funciones de diagnostico que envian datos a Microsoft.</p>
+          <a href="https://www.safer-networking.org/products/spybot-anti-beacon/" target="_blank" class="rec-link">safer-networking.org</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ANONIMATO Y PRIVACIDAD ============ -->
+    <div class="net-group" data-group="anonimato">
+      <h3 class="sub-heading" id="cat-anonimato" style="border-bottom-color:var(--accent3);">Anonimato y Privacidad</h3>
+      <div class="alert-box alert-info" data-aos="fade-up">
+        <i class="bi bi-incognito"></i>
+        <div><strong>Navega sin dejar rastro:</strong> sistemas operativos amnesicos, redes de anonimato y navegadores que enrutan tu trafico por Tor. Ideales para proteger identidad y sortear censura.</div>
+      </div>
+      <div class="rec-grid">
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Tails</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
+          </div>
+          <p>Sistema operativo portable basado en Debian que arranca desde USB y enruta todo su trafico por Tor. Deja cero rastros al apagar el equipo. Desarrollado por el Tor Project.</p>
+          <a href="https://tails.net/" target="_blank" class="rec-link">tails.net</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Tor Project</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Anonimato</span>
+          </div>
+          <p>Navegador Tor, la red de anonimato mas usada del mundo, y el Onion Service Browser. Herramientas para proteger tu identidad y sortear la censura.</p>
+          <a href="https://www.torproject.org" target="_blank" class="rec-link">torproject.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Whonix</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Anonimato</span>
+          </div>
+          <p>Sistema operativo enfocado al anonimato que aísla todas tus aplicaciones en una maquina virtual separada de la red. Todo el trafico pasa obligatoriamente por Tor.</p>
+          <a href="https://www.whonix.org" target="_blank" class="rec-link">whonix.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Qubes OS</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Privacidad</span>
+          </div>
+          <p>Sistema operativo basado en el aislamiento de cuarentenas (qubes). Separa tu vida personal, laboral y online en maquinas virtuales para contener amenazas.</p>
+          <a href="https://www.qubes-os.org" target="_blank" class="rec-link">qubes-os.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>GrapheneOS</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Movil</span>
+          </div>
+          <p>Sistema operativo privado y seguro para Android enfocado en la privacidad: cifrado, control de permisos granular y sin servicios de Google por defecto.</p>
+          <a href="https://grapheneos.org" target="_blank" class="rec-link">grapheneos.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Mullvad Browser</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Navegador</span>
+          </div>
+          <p>Navegador basado en Firefox diseñado con las resistencias anti-huella del Tor Browser, pero para usarse con cualquier VPN. Minimiza la huella digital al navegar.</p>
+          <a href="https://mullvad.net/en/browser" target="_blank" class="rec-link">mullvad.net/en/browser</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Snowflake</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Anti-censura</span>
+          </div>
+          <p>Herramienta del Tor Project para sortear la censura: tu navegador conecta por una red de "copos de nieve" (proxy de voluntarios) que ocultan la conexion a Tor.</p>
+          <a href="https://snowflake.torproject.org" target="_blank" class="rec-link">snowflake.torproject.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>OnionShare</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Archivos</span>
+          </div>
+          <p>Comparte archivos, mensajes y hasta sirve webs de forma anonima a traves de servicios onion de Tor. Sin servidores intermedios; la conexion es punto a punto.</p>
+          <a href="https://onionshare.org" target="_blank" class="rec-link">onionshare.org</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>I2P</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Red Anonima</span>
+          </div>
+          <p>Red de anonimato alternativa a Tor que oculta el origen de tus conexiones mediante capas de cifrado. Ideal para servicios onion propios y aplicaciones P2P.</p>
+          <a href="https://geti2p.net" target="_blank" class="rec-link">geti2p.net</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>DuckDuckGo</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Buscador</span>
+          </div>
+          <p>Buscador que no te rastrea: sin perfiles de busqueda, sin historial y con resultado para versiones privadas de los sitios. Compatible con Tor en modo onion.</p>
+          <a href="https://duckduckgo.com" target="_blank" class="rec-link">duckduckgo.com</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Privoxy</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Proxy</span>
+          </div>
+          <p>Proxy web de filtrado que elimina rastreadores, cookies y banners antes de que lleguen a tu navegador. Complemento clasico de Tor y Whonix para una navegacion mas limpia.</p>
+          <a href="https://www.privoxy.org" target="_blank" class="rec-link">privoxy.org</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ FORMACION ============ -->
     <div class="net-group" data-group="formacion">
-      <h3 class="sub-heading" style="border-bottom-color:var(--warn);">Certificaciones y Formacion</h3>
+      <h3 class="sub-heading" id="cat-formacion" style="border-bottom-color:var(--warn);">Certificaciones y Formacion</h3>
       <div class="rec-grid">
         <div class="rec-card cert" data-aos="fade-up">
           <div class="rec-card-header">
@@ -1298,12 +1693,44 @@
           <p>Explicaciones didacticas y gratuitas sobre como funcionan las computadoras e Internet desde cero, ideales para principiantes en tecnologia.</p>
           <a href="https://www.khanacademy.org/computing/computers-and-the-internet" target="_blank" class="rec-link">khanacademy.org</a>
         </div>
+        <div class="rec-card cert" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Cisco Networking Academy</h4>
+            <span class="pchip pchip-y" style="font-size:.55rem;">Certificacion</span>
+          </div>
+          <p>Curso gratuito y oficial de fundamentos de redes, base para la certificacion CCNA. Incluye lab virtuales y, si se completa, descuentos para el examen de certificacion.</p>
+          <a href="https://www.netacad.com" target="_blank" class="rec-link">netacad.com</a>
+        </div>
+        <div class="rec-card cert" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>edX</h4>
+            <span class="pchip pchip-y" style="font-size:.55rem;">E-learning</span>
+          </div>
+          <p>Plataforma de universidades de elite (MIT, Harvard) con cursos auditables gratis y certificados opcionales. Cursos sobre redes, Linux, ciberseguridad y administracion de sistemas.</p>
+          <a href="https://www.edx.org" target="_blank" class="rec-link">edx.org</a>
+        </div>
+        <div class="rec-card cert" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Udemy</h4>
+            <span class="pchip pchip-y" style="font-size:.55rem;">E-learning</span>
+          </div>
+          <p>Mercado de cursos con ofertas frecuentes de descuento. Busca rutas de "Soporte de TI" y "Redes" en español: cubren desde armar una PC hasta CCNA y Windows Server.</p>
+          <a href="https://www.udemy.com" target="_blank" class="rec-link">udemy.com</a>
+        </div>
+        <div class="rec-card cert" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Microsoft Learn</h4>
+            <span class="pchip pchip-y" style="font-size:.55rem;">Certificacion</span>
+          </div>
+          <p>Documentacion, rutas de aprendizaje y examenes de practica gratuitos de Microsoft: Windows, Azure, Microsoft 365 y Administrador. Cursos oficiales en español para certificarse.</p>
+          <a href="https://learn.microsoft.com/es-es/" target="_blank" class="rec-link">learn.microsoft.com</a>
+        </div>
       </div>
     </div>
 
     <!-- ============ COMUNIDADES ============ -->
     <div class="net-group" data-group="comunidades">
-      <h3 class="sub-heading" style="border-bottom-color:#f78166;">Comunidades, Foros y Soporte</h3>
+      <h3 class="sub-heading" id="cat-comunidades" style="border-bottom-color:#f78166;">Comunidades, Foros y Soporte</h3>
       <div class="rec-grid">
         <div class="rec-card ref" data-aos="fade-up">
           <div class="rec-card-header">
@@ -1473,597 +1900,26 @@
           <p>Contenido tecnico de alto nivel sobre hardware, virtualizacion, Linux y networking. Analisis profundos y un foro muy activo de la comunidad.</p>
           <a href="https://www.level1techs.com" target="_blank" class="rec-link">level1techs.com</a>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       REFERENCIA RAPIDA DE HARDWARE
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="ref-hardware" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-cpu"></i></div>
-      <div class="section-title">
-        <h2>Referencia Rapida de Hardware</h2>
-        <p>// Tablas de especificaciones para consulta rapida</p>
-      </div>
-    </div>
-
-    <!-- RAM SPECS -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-memory"></i></span>
-        <span class="accordion-title">Especificaciones de Memoria RAM</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Tipo</th><th>Frecuencia</th><th>Ancho de banda</th><th>Latencia CAS</th><th>Latencia real</th><th>Uso</th></tr>
-              <tr><td>DDR4-2400</td><td>2400 MHz</td><td>19.2 GB/s</td><td>CL16</td><td>13.3 ns</td><td>Oficina basica</td></tr>
-              <tr><td>DDR4-3200</td><td>3200 MHz</td><td>25.6 GB/s</td><td>CL16</td><td>10.0 ns</td><td>Gaming / trabajo estandar</td></tr>
-              <tr><td>DDR4-3600</td><td>3600 MHz</td><td>28.8 GB/s</td><td>CL18</td><td>10.0 ns</td><td>Ideal para AMD Ryzen</td></tr>
-              <tr><td>DDR5-4800</td><td>4800 MHz</td><td>38.4 GB/s</td><td>CL40</td><td>16.7 ns</td><td>Base DDR5</td></tr>
-              <tr><td>DDR5-6000</td><td>6000 MHz</td><td>48.0 GB/s</td><td>CL30</td><td>10.0 ns</td><td>Gaming / edicion alto nivel</td></tr>
-              <tr><td>DDR5-7200</td><td>7200 MHz</td><td>57.6 GB/s</td><td>CL34</td><td>9.4 ns</td><td>Overclocking extremo</td></tr>
-            </table>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Disco Duro de Roer (YouTube)</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Video</span>
           </div>
-          <div class="info-box info-warn" style="margin-top:.75rem;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Latencia real = (CAS / Frecuencia) * 2000</strong>Una DDR4-3200 CL16 tiene la misma latencia real que una DDR4-3600 CL18 (~10ns). Activar perfil XMP (Intel) o EXPO (AMD) en BIOS para que la RAM funcione a su velocidad anunciada. DDR4 y DDR5 NO son fisicamente compatibles.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PCIe VERSIONS -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-hdd-network"></i></span>
-        <span class="accordion-title">Versiones de PCIe</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Version</th><th>Ancho de banda por lane</th><th>Uso tipico</th></tr>
-              <tr><td>PCIe 2.0</td><td>500 MB/s</td><td>Dispositivos legacy (tarjetas de sonido, red)</td></tr>
-              <tr><td>PCIe 3.0</td><td>985 MB/s (~1 GB/s)</td><td>GPUs de gama media, SSDs NVMe basicos</td></tr>
-              <tr><td>PCIe 4.0</td><td>1969 MB/s (~2 GB/s)</td><td>GPUs modernas, SSDs NVMe rapidos (7000 MB/s)</td></tr>
-              <tr><td>PCIe 5.0</td><td>3938 MB/s (~4 GB/s)</td><td>GPUs de gama alta, SSDs NVMe next-gen (14000 MB/s)</td></tr>
-            </table>
-          </div>
-          <div class="info-box info-note" style="margin-top:.75rem;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Nota:</strong> Un SSD NVMe x4 en PCIe 3.0 alcanza ~3500 MB/s. En PCIe 4.0 x4 puede superar los 7000 MB/s. La compatibilidad es retroactiva: un dispositivo PCIe 3.0 funciona en un slot PCIe 4.0, pero a la velocidad del 3.0.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SATA VERSIONS -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-hdd"></i></span>
-        <span class="accordion-title">Versiones de SATA</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Version</th><th>Velocidad</th><th>Ancho de banda</th></tr>
-              <tr><td>SATA I (1.5 Gbps)</td><td>150 MB/s</td><td>1.5 Gbps</td></tr>
-              <tr><td>SATA II (3 Gbps)</td><td>300 MB/s</td><td>3 Gbps</td></tr>
-              <tr><td>SATA III (6 Gbps)</td><td>600 MB/s</td><td>6 Gbps</td></tr>
-            </table>
-          </div>
-          <div class="info-box info-tip" style="margin-top:.75rem;">
-            <i class="bi bi-lightbulb"></i>
-            <div><strong>SATA III es el estandar actual.</strong> La mayoria de SSD SATA modernos saturan la conexion SATA III (550 MB/s). Para mayor velocidad, se requiere un SSD NVMe conectado via PCIe (hasta 14000 MB/s).</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- VOLTAJES PSU -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-lightning-charge"></i></span>
-        <span class="accordion-title">Voltajes de la Fuente de Poder (PSU)</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Rango</th><th>Voltaje</th><th>Uso principal</th></tr>
-              <tr><td>+12V</td><td>12V (amarillo)</td><td>CPU, GPU, ventiladores — el rail mas importante y demandado</td></tr>
-              <tr><td>+5V</td><td>5V (rojo)</td><td>USB, discos duros, placa base (logica digital)</td></tr>
-              <tr><td>+3.3V</td><td>3.3V (naranja)</td><td>RAM, SSD M.2, circuitos de baja potencia</td></tr>
-              <tr><td>-12V</td><td>-12V (azul)</td><td>Puertos seriales (obsoleto), algunos puertos PCI antiguos</td></tr>
-              <tr><td>+5VSB</td><td>5V Standby (morado)</td><td>Encendido remoto, Wake-on-LAN, cargando USB en standby</td></tr>
-            </table>
-          </div>
-          <div class="info-box info-danger" style="margin-top:.75rem;">
-            <i class="bi bi-exclamation-octagon"></i>
-            <div><strong>El rail +12V es el critico.</strong> En una PSU moderna, CPU + GPU pueden consumir el 80-90% de la potencia total desde el rail de 12V. Verifica la capacidad del +12V (en Amperios o Watts) al elegir una PSU, no solo la potencia total declarada.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- AJUSTES BIOS -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-gear"></i></span>
-        <span class="accordion-title">Ajustes Esenciales de BIOS / UEFI</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Ajuste</th><th>Que hace</th><th>Recomendacion</th></tr>
-              <tr><td>Boot Order</td><td>Define que dispositivo arranca primero</td><td>SSD/NVMe primero, luego USB</td></tr>
-              <tr><td>XMP / EXPO</td><td>Activa la velocidad real de la RAM</td><td>Siempre activar</td></tr>
-              <tr><td>Secure Boot</td><td>Solo arranca SO firmados (Windows 11 lo requiere)</td><td>Activar en uso normal</td></tr>
-              <tr><td>Virtualizacion (VT-x / AMD-V)</td><td>Habilita VMs y WSL2 en Windows</td><td>Activar si usas VMs</td></tr>
-              <tr><td>TPM 2.0</td><td>Modulo de seguridad requerido para Windows 11</td><td>Activar para Windows 11</td></tr>
-              <tr><td>Fan Curves</td><td>Control de velocidad PWM de ventiladores segun temperatura</td><td>Configurar curva personalizada</td></tr>
-              <tr><td>AHCI / NVMe</td><td>Modo de controlador de almacenamiento</td><td>AHCI para SSD SATA; NVMe para M.2 NVMe</td></tr>
-              <tr><td>Load Defaults</td><td>Restablecer valores de fabrica</td><td>Usar cuando el sistema es inestable</td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       FORMATS DE MOTHERBOARD
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="form-mb" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(138,180,248,.12);border-color:rgba(138,180,248,.25);color:#8ab4f8;"><i class="bi bi-motherboard"></i></div>
-      <div class="section-title">
-        <h2>Formatos de Motherboard</h2>
-        <p>// Factor de forma y dimensiones de placas base</p>
-      </div>
-    </div>
-
-    <div class="table-scroll" data-aos="fade-up">
-      <table class="cmd-table">
-        <tr><th>Formato</th><th>Dimensiones</th><th>Uso tipico</th><th>Caracteristica clave</th></tr>
-        <tr><td>E-ATX</td><td>305 x 330 mm</td><td>Servidores, workstations</td><td>Mas espacio, mas slots, mejor ventilacion</td></tr>
-        <tr><td>ATX</td><td>305 x 244 mm</td><td>Desktop estandar</td><td>El mas comun; optimizado para ventilacion y cable management</td></tr>
-        <tr><td>Micro-ATX</td><td>244 x 244 mm</td><td>Desktop compacto</td><td>Menos slots PCIe; gabinetes mas economicos</td></tr>
-        <tr><td>Mini-ITX</td><td>170 x 170 mm</td><td>HTPC, NUC, compactos</td><td>1 slot PCIe, 2 slots RAM; muy popular para builds pequenos</td></tr>
-        <tr><td>Nano-ITX</td><td>120 x 120 mm</td><td>Embebidos, IPC</td><td>RAM SO-DIMM como portatiles</td></tr>
-        <tr><td>Pico-ITX</td><td>100 x 72 mm</td><td>IoT, barebones</td><td>Reduccion drastica de espacio; componentes soldados</td></tr>
-      </table>
-    </div>
-
-    <div class="alert-box alert-warn" style="margin-top:1rem;" data-aos="fade-up">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div>Verifica que el gabinete sea compatible con el factor de forma de tu placa. Un gabinete ATX acepta ATX, Micro-ATX y Mini-ITX. Un gabinete Mini-ITX solo acepta Mini-ITX.</div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       CODIGOS POST BEEP
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="beep-codes" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(252,165,165,.12);border-color:rgba(252,165,165,.25);color:#fca5a5;"><i class="bi bi-volume-up"></i></div>
-      <div class="section-title">
-        <h2>Codigos POST Beep</h2>
-        <p>// Pitidos de la BIOS para diagnostico de hardware</p>
-      </div>
-    </div>
-
-    <div class="info-box info-note" style="margin-bottom:1rem;" data-aos="fade-up">
-      <i class="bi bi-info-circle"></i>
-      <div><strong>Que son los beep codes?</strong>El POST (Power-On Self Test) es la verificacion inicial de hardware que realiza la BIOS/UEFI al encender el PC. Si el POST falla, la BIOS emite una secuencia de pitidos para indicar que componente esta fallando — antes de que haya imagen en pantalla.</div>
-    </div>
-
-    <div class="table-scroll" data-aos="fade-up">
-      <table class="cmd-table">
-        <tr><th>Pitidos</th><th>Significado</th><th>Solucion probable</th></tr>
-        <tr><td>1 corto</td><td>POST exitoso — arranque normal</td><td>Sin accion requerida</td></tr>
-        <tr><td>2 cortos</td><td>Error de paridad en memoria</td><td>Retirar y reasentar modulos RAM</td></tr>
-        <tr><td>3 cortos</td><td>Fallo en primeros 64KB de RAM</td><td>Testear RAM con MemTest86</td></tr>
-        <tr><td>5 cortos</td><td>Error en procesador</td><td>Reasentar CPU, verificar socket</td></tr>
-        <tr><td>8 cortos</td><td>Fallo en memoria de tarjeta de video</td><td>Reasentar GPU, probar en otro slot PCIe</td></tr>
-        <tr><td>1 largo + 3 cortos</td><td>Error de RAM convencional</td><td>Probar modulos de uno en uno</td></tr>
-        <tr><td>Sin pitido</td><td>Sin senal — fallo grave de hardware</td><td>Verificar PSU, placa base y CPU</td></tr>
-      </table>
-    </div>
-
-    <div class="info-box info-tip" style="margin-top:1rem;" data-aos="fade-up">
-      <i class="bi bi-lightbulb"></i>
-      <div><strong>Placas modernas con Debug LED</strong>Las placas base actuales tienen 4 LEDs indicadores (CPU, DRAM, VGA, BOOT) que muestran exactamente donde se detiene el POST. Si el LED de CPU parpadea, el problema es el procesador. Si DRAM permanece encendido, revisa la RAM.</div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       SISTEMAS DE ARCHIVOS
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="sistemas-archivos" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(138,180,248,.12);border-color:rgba(138,180,248,.25);color:#8ab4f8;"><i class="bi bi-folder2-open"></i></div>
-      <div class="section-title">
-        <h2>Sistemas de Archivos</h2>
-        <p>// Comparativa de sistemas de archivos para discos y USB</p>
-      </div>
-    </div>
-
-    <div class="table-scroll" data-aos="fade-up">
-      <table class="cmd-table">
-        <tr><th>Sistema</th><th>Max tamano archivo</th><th>Max volumen</th><th>OS compatible</th><th>Caracteristicas</th></tr>
-        <tr><td>FAT32</td><td>4 GB</td><td>8 TB</td><td>Todos</td><td>Compatible universal. Sin permisos. Para USB y SD.</td></tr>
-        <tr><td>exFAT</td><td>16 EB</td><td>128 PB</td><td>Todos</td><td>FAT32 moderno. Ideal para USB/SD con archivos &gt;4GB.</td></tr>
-        <tr><td>NTFS</td><td>16 EB</td><td>256 TB</td><td>Windows</td><td>Permisos, journaling, compresion, cifrado EFS. Estandar Windows.</td></tr>
-        <tr><td>ext4</td><td>16 TB</td><td>1 EB</td><td>Linux</td><td>Journaling, permisos Unix. Estandar Linux actual.</td></tr>
-        <tr><td>Btrfs</td><td>16 EB</td><td>16 EB</td><td>Linux</td><td>Snapshots, RAID integrado, compresion, checksums.</td></tr>
-        <tr><td>APFS</td><td>8 EB</td><td>8 EB</td><td>macOS / iOS</td><td>Snapshots, cifrado nativo, clones de archivos. Solo Apple.</td></tr>
-      </table>
-    </div>
-
-    <div class="info-box info-tip" style="margin-top:1rem;" data-aos="fade-up">
-      <i class="bi bi-lightbulb"></i>
-      <div><strong>Cual usar segun el caso:</strong>USB compartido entre Windows y Mac: exFAT. Disco interno Windows: NTFS. Linux: ext4 o Btrfs. El formateo rapido solo marca el espacio como libre; el formateo completo escribe ceros y verifica sectores danados.</div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       NIVELES RAID
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="raid" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(252,165,165,.12);border-color:rgba(252,165,165,.25);color:#fca5a5;"><i class="bi bi-hdd-stack"></i></div>
-      <div class="section-title">
-        <h2>Niveles de RAID</h2>
-        <p>// Redundancia, rendimiento y capacidad de arreglos de discos</p>
-      </div>
-    </div>
-
-    <div class="table-scroll" data-aos="fade-up">
-      <table class="cmd-table">
-        <tr><th>Nivel</th><th>Descripcion</th><th>Min. discos</th><th>Tolerancia fallos</th><th>Uso recomendado</th></tr>
-        <tr><td>RAID 0</td><td>Striping — distribuye datos entre discos para doble velocidad de lectura/escritura</td><td>2</td><td>Ninguna — si falla 1 disco, se pierden todos los datos</td><td>Edicion video temporal, cache, rendimiento puro</td></tr>
-        <tr><td>RAID 1</td><td>Mirroring — copia identica en 2 discos. Si falla uno, el otro sigue funcionando</td><td>2</td><td>1 disco</td><td>SO, datos criticos, servidores peque&ntilde;os</td></tr>
-        <tr><td>RAID 5</td><td>Striping con paridad distribuida. Buena velocidad de lectura y tolerancia a fallos</td><td>3</td><td>1 disco</td><td>NAS empresarial, equilibrio entre velocidad y seguridad</td></tr>
-        <tr><td>RAID 6</td><td>Striping con doble paridad. Tolerante a 2 fallos simultaneos</td><td>4</td><td>2 discos</td><td>Datos criticos, discos grandes (&gt;4TB)</td></tr>
-        <tr><td>RAID 10</td><td>Combinacion de mirroring y striping. El mas robusto para alto rendimiento</td><td>4</td><td>1 por cada espejo</td><td>Bases de datos, servidores de alto rendimiento</td></tr>
-      </table>
-    </div>
-
-    <div class="alert-box alert-danger" style="margin-top:1rem;" data-aos="fade-up">
-      <i class="bi bi-exclamation-octagon"></i>
-      <div><strong>RAID no es un backup.</strong>RAID protege contra fallo de disco pero NO contra borrado accidental, virus, incendio o robo. Siempre mantener copias externas siguiendo la regla 3-2-1: 3 copias, 2 medios distintos, 1 copia offsite (nube).</div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       GUIA USB BOOTEABLE
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="usb-boot" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(138,180,248,.12);border-color:rgba(138,180,248,.25);color:#8ab4f8;"><i class="bi bi-usb-symbol"></i></div>
-      <div class="section-title">
-        <h2>Guia USB Booteable</h2>
-        <p>// Crear USBs de arranque con Rufus y Ventoy</p>
-      </div>
-    </div>
-
-    <!-- RUFUS -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-usb-drive"></i></span>
-        <span class="accordion-title">Metodo 1: Rufus (Windows)</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">Rufus es la herramienta mas popular y confiable para crear USBs booteables. Soporta BIOS legacy y UEFI, esquemas MBR y GPT, y puede descargar ISOs de Windows directamente desde Microsoft.</p>
-          <div class="steps-timeline">
-            <div class="step-item">
-              <div class="step-num">PASO 1</div>
-              <div class="step-title">Descargar Rufus desde rufus.ie</div>
-              <div class="step-desc">Version portable — no requiere instalacion. Ejecutar como administrador.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 2</div>
-              <div class="step-title">Seleccionar dispositivo e imagen ISO</div>
-              <div class="step-desc">Device: tu USB. Boot selection: SELECT y elegir el archivo ISO descargado.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 3</div>
-              <div class="step-title">Configurar esquema de particion</div>
-              <div class="step-desc">GPT si tu PC usa UEFI (la mayoria desde 2012). MBR si usa BIOS Legacy antiguo.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 4</div>
-              <div class="step-title">Sistema de archivos</div>
-              <div class="step-desc">NTFS para Windows 11 (soporta archivos grandes). FAT32 solo si tu placa es muy antigua.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 5</div>
-              <div class="step-title">Iniciar y esperar</div>
-              <div class="step-desc">Click START, confirmar el borrado del USB. Espera 10-15 minutos hasta ver READY.</div>
-            </div>
-          </div>
-          <div class="info-box info-tip" style="margin-top:1rem;">
-            <i class="bi bi-lightbulb"></i>
-            <div><strong>Extended Windows 11:</strong>Rufus permite instalar Windows 11 en PCs sin TPM 2.0 ni Secure Boot. Al seleccionar la ISO, Rufus ofrece la opcion "Extended Windows 11 Installation".</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- VENTOY -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-usb-micro"></i></span>
-        <span class="accordion-title">Metodo 2: Ventoy (Multiples ISOs en un solo USB)</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="info-box info-note" style="margin-bottom:1rem;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Por que usar Ventoy?</strong>Se instala UNA sola vez en el USB y luego solo copias archivos .iso directamente como si fuera una carpeta. Al arrancar, Ventoy muestra un menu para elegir cual ISO bootear. Ideal para tecnicos que cargan Windows, varios Linux, Hiren's BootCD y herramientas de diagnostico en el mismo pendrive.</div>
-          </div>
-          <div class="steps-timeline">
-            <div class="step-item">
-              <div class="step-num">PASO 1</div>
-              <div class="step-title">Descargar Ventoy desde ventoy.net</div>
-              <div class="step-desc">Disponible para Windows y Linux. Extraer el zip descargado.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 2</div>
-              <div class="step-title">Instalar Ventoy en el USB</div>
-              <div class="step-desc">Windows: ejecutar Ventoy2Disk.exe como administrador, seleccionar USB, click Install. Linux: <code style="font-family:var(--font-mono);color:var(--accent);">sudo sh Ventoy2Disk.sh -i /dev/sdX</code></div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 3</div>
-              <div class="step-title">Copiar archivos ISO al USB</div>
-              <div class="step-desc">Simplemente copia y pega los archivos .iso al USB como archivos normales. No necesitas formatear de nuevo.</div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">PASO 4</div>
-              <div class="step-title">Arrancar desde el USB</div>
-              <div class="step-desc">Reiniciar y seleccionar el USB como dispositivo de arranque. Ventoy mostrara un menu con todas las ISOs disponibles.</div>
-            </div>
-          </div>
-          <div class="info-box info-tip" style="margin-top:1rem;">
-            <i class="bi bi-lightbulb"></i>
-            <div><strong>KIT USB recomendado para tecnico:</strong>Usa Ventoy en una memoria de 32-64 GB y copia las ISOs de Hiren's BootCD PE, MemTest86, GParted Live, Clonezilla y el instalador de Windows 10/11. Un solo USB resuelve el 95% de emergencias.</div>
-          </div>
+          <p>Canal español de divulgacion tecnologica con explicaciones claras sobre hardware, redes, sistemas operativos y ciberseguridad. Perfecto para aprender conceptos desde cero.</p>
+          <a href="https://www.youtube.com/@DiscoDurodeRoer" target="_blank" class="rec-link">youtube.com/@DiscoDurodeRoer</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════
-       PARTICIONADO DE DISCO
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="particionado" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(138,180,248,.12);border-color:rgba(138,180,248,.25);color:#8ab4f8;"><i class="bi bi-grid-3x3"></i></div>
-      <div class="section-title">
-        <h2>Particionado de Disco</h2>
-        <p>// Guias de particionado para Windows 11 y Ubuntu</p>
-      </div>
-    </div>
-
-    <!-- WINDOWS 11 -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-windows"></i></span>
-        <span class="accordion-title">Particionado recomendado — Windows 11 (GPT/UEFI)</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>#</th><th>Particion</th><th>FS</th><th>Tamano</th><th>Funcion</th></tr>
-              <tr><td>1</td><td>EFI System Partition</td><td>FAT32</td><td>100-500 MB</td><td>Bootloader UEFI</td></tr>
-              <tr><td>2</td><td>Microsoft Reserved</td><td>RAW (MSR)</td><td>128 MB</td><td>Reservado por Windows</td></tr>
-              <tr><td>3</td><td>Windows (C:)</td><td>NTFS</td><td>&ge;100 GB</td><td>Sistema operativo</td></tr>
-              <tr><td>4</td><td>Datos (D:)</td><td>NTFS</td><td>Resto del disco</td><td>Archivos de usuario</td></tr>
-              <tr><td>5</td><td>Recovery (WinRE)</td><td>NTFS</td><td>650-1000 MB</td><td>Entorno de recuperacion</td></tr>
-            </table>
-          </div>
-          <div class="info-box info-tip" style="margin-top:1rem;">
-            <i class="bi bi-lightbulb"></i>
-            <div><strong>Regla practica:</strong>Particion C: con 100-150 GB para el SO y programas. Resto del disco como particion D: para datos. Esto facilita reinstalar el SO sin perder datos personales.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- UBUNTU -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-terminal"></i></span>
-        <span class="accordion-title">Particionado recomendado — Ubuntu/Debian (GPT)</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>#</th><th>Montaje</th><th>FS</th><th>Tamano</th><th>Funcion</th></tr>
-              <tr><td>1</td><td>/boot/efi</td><td>FAT32</td><td>512 MB</td><td>EFI bootloader</td></tr>
-              <tr><td>2</td><td>/boot</td><td>ext4</td><td>1 GB</td><td>Kernel e initramfs</td></tr>
-              <tr><td>3</td><td>/</td><td>ext4 / Btrfs</td><td>30-50 GB</td><td>Sistema raiz</td></tr>
-              <tr><td>4</td><td>/home</td><td>ext4 / Btrfs</td><td>Resto</td><td>Datos de usuario</td></tr>
-              <tr><td>5</td><td>swap</td><td>linux-swap</td><td>= RAM</td><td>Memoria virtual / hibernacion</td></tr>
-            </table>
-          </div>
-          <div class="info-box info-note" style="margin-top:1rem;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>GParted Live:</strong>Es un USB booteable independiente con GParted que permite particionar discos sin necesidad de tener Linux instalado. Descarga la ISO desde gparted.org, crea el USB con Rufus o Ventoy, y arranca desde el.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="rec-empty" id="recEmpty">
+    <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:.5rem;"></i>
+    No se encontraron recursos para ese termino. Prueba con otra palabra o revisa el indice de categorias.
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════
-       CHECKLIST POST-INSTALACION
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="post-install" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(74,222,128,.12);border-color:rgba(74,222,128,.25);color:#4ade80;"><i class="bi bi-clipboard-check"></i></div>
-      <div class="section-title">
-        <h2>Checklist Post-Instalacion</h2>
-        <p>// Pasos esenciales despues de instalar el sistema operativo</p>
-      </div>
-    </div>
+</div>
 
-    <div class="checklist-box" data-aos="fade-up">
-      <div class="checklist-head">
-        <span id="post-count">0/10 completadas</span>
-        <div class="checklist-progress"><div class="checklist-progress-fill" id="post-bar" style="width:0%"></div></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Instalar drivers de chipset desde sitio oficial del fabricante de la MB</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Instalar drivers GPU: NVIDIA GeForce Experience o AMD Adrenalin</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Ejecutar Windows Update / apt upgrade hasta no tener actualizaciones pendientes</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Configurar Windows Defender o instalar antivirus de preferencia</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Activar licencia de Windows (Settings &gt; System &gt; Activation)</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Crear punto de restauracion inicial del sistema</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Instalar .NET Framework 3.5 y VC++ Redistributables (All-in-One)</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Configurar plan de energia segun uso: Alto rendimiento o Equilibrado</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Habilitar BitLocker (Pro/Enterprise) o VeraCrypt para cifrado del disco</span>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this,'cl-post')">
-        <div class="check-box"><i class="bi bi-check-lg"></i></div>
-        <span class="check-text">Crear imagen de respaldo con DISM, Macrium Reflect o Clonezilla antes de instalar software</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       GLOSARIO DE TERMINOS
-       ══════════════════════════════════════════════════════════════ -->
-  <div class="content-section" id="glosario" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(252,165,165,.12);border-color:rgba(252,165,165,.25);color:#fca5a5;"><i class="bi bi-book"></i></div>
-      <div class="section-title">
-        <h2>Glosario de Terminos</h2>
-        <p>// Definiciones de terminos tecnicos de hardware y redes</p>
-      </div>
-    </div>
-
-    <!-- HARDWARE A-G -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-cpu"></i></span>
-        <span class="accordion-title">Terminos de Hardware — A a G</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Termino</th><th>Definicion</th></tr>
-              <tr><td>BIOS</td><td>Basic Input Output System — firmware que inicializa el hardware al encender el PC y cede el control al SO</td></tr>
-              <tr><td>BCLK</td><td>Base Clock — frecuencia base del sistema desde la que se multiplican la CPU, RAM y PCIe</td></tr>
-              <tr><td>Cache L1/L2/L3</td><td>Memoria ultrarrapida dentro del CPU; L1 es la mas rapida y pequena, L3 es la mas lenta y grande</td></tr>
-              <tr><td>Chipset</td><td>Conjunto de circuitos integrados que controlan la comunicacion entre CPU, RAM, GPU y dispositivos</td></tr>
-              <tr><td>CMOS</td><td>Complementary Metal-Oxide Semiconductor — memoria que almacena la configuracion de la BIOS; alimentada por pila CR2032</td></tr>
-              <tr><td>Die</td><td>El chip de silicio fisico dentro de un CPU o GPU</td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HARDWARE I-Z -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-gear"></i></span>
-        <span class="accordion-title">Terminos de Hardware — I a Z</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Termino</th><th>Definicion</th></tr>
-              <tr><td>NVMe</td><td>Non-Volatile Memory Express — protocolo de comunicacion para SSDs via PCIe, mucho mas rapido que SATA</td></tr>
-              <tr><td>POST</td><td>Power-On Self Test — verificacion inicial de hardware que realiza la BIOS al encender el PC</td></tr>
-              <tr><td>PSU Efficiency (80 Plus)</td><td>Certificacion de eficiencia energetica: White 80%, Bronze 82%, Gold 87%, Platinum 90%, Titanium 94%</td></tr>
-              <tr><td>RAID</td><td>Redundant Array of Independent Disks — combina multiples discos para obtener redundancia o velocidad</td></tr>
-              <tr><td>SATA</td><td>Serial ATA — interfaz para conectar discos duros, SSDs y unidades opticas a la placa base</td></tr>
-              <tr><td>TDP</td><td>Thermal Design Power — calor maximo que el cooler debe disipar; indica potencia tipica del CPU</td></tr>
-              <tr><td>UEFI</td><td>Unified Extensible Firmware Interface — version moderna de la BIOS con interfaz grafica y soporte GPT</td></tr>
-              <tr><td>VRM</td><td>Voltage Regulator Module — circuito en la placa base que regula y estabiliza el voltaje al CPU</td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- REDES -->
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header" onclick="toggleItem(this)">
-        <span class="accordion-icon"><i class="bi bi-globe2"></i></span>
-        <span class="accordion-title">Terminos de Redes y Conectividad</span>
-        <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
-      </div>
-      <div class="accordion-body">
-        <div class="accordion-content">
-          <div class="table-scroll">
-            <table class="cmd-table">
-              <tr><th>Termino</th><th>Definicion</th></tr>
-              <tr><td>DHCP</td><td>Asigna direcciones IP automaticamente a los dispositivos de la red</td></tr>
-              <tr><td>DNS</td><td>Traduce nombres de dominio (google.com) a direcciones IP numericas</td></tr>
-              <tr><td>Gateway</td><td>Puerta de enlace — dispositivo (generalmente el router) que conecta tu red a Internet</td></tr>
-              <tr><td>IP Publica / Privada</td><td>Publica: visible en Internet. Privada: solo dentro de tu red local (192.168.x.x)</td></tr>
-              <tr><td>LAN / WAN</td><td>Local Area Network (red local) / Wide Area Network (red extensa, como Internet)</td></tr>
-              <tr><td>Latencia / Ping</td><td>Tiempo en ms que tarda un dato en ir y volver — importante en juegos online</td></tr>
-              <tr><td>NAT</td><td>Network Address Translation — permite que multiples dispositivos compartan una IP publica</td></tr>
-              <tr><td>VPN</td><td>Red Privada Virtual — cifra tu trafico y oculta tu IP real</td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-brand">TechGuide v1.0</div>
@@ -2082,6 +1938,12 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="../js/script.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/subnet.js"></script>
+<script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="../assets/js/reading-progress.js"></script>
 </body>
 </html>

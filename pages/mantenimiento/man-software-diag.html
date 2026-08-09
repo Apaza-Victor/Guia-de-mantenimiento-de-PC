@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software de Diag. - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Software de Diag.. HWMonitor, CrystalDiskInfo, MemTest86 y mas.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software de Diag. - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Software de Diag.. HWMonitor, CrystalDiskInfo, MemTest86 y mas.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-terminal"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Software de Diag.</h1>
+      <p>HWMonitor, CrystalDiskInfo, MemTest86 y mas.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip active' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Software de Diag.</span></nav>
+<div class="content-section" id="software-diag" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25);"><i class="bi bi-terminal"></i></div>
+        <div class="section-title">
+          <h2>Software de Diagnostico</h2>
+          <p>// Herramientas para diagnosticar tu PC</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <i class="bi bi-info-circle"></i>
+        <div>Siempre descarga software de sitios oficiales para evitar malware. Verifica la URL antes de descargar.</div>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-thermometer-half"></i>
+          <h5>HWMonitor</h5>
+          <p>Monitoreo de temperaturas, voltajes y RPM de ventiladores en tiempo real. Soporta la mayoria de sensores del motherboard.</p>
+          <span class="card-tag">Temperaturas</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-hdd-stack"></i>
+          <h5>CrystalDiskInfo</h5>
+          <p>Muestra la salud de discos duros y SSDs mediante datos S.M.A.R.T. Alerta de sectores reasignados y temperatura.</p>
+          <span class="card-tag">Discos</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-memory"></i>
+          <h5>Memtest86</h5>
+          <p>Test exhaustivo de memoria RAM. Se ejecuta desde USB booteable antes de cargar el SO. Requiere multiples pasadas.</p>
+          <span class="card-tag">RAM</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-info-circle"></i>
+          <h5>CPU-Z</h5>
+          <p>Informacion detallada del procesador, chipset, RAM (frecuencia, timings, canal) y motherboard.</p>
+          <span class="card-tag">CPU / RAM</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-controller"></i>
+          <h5>GPU-Z</h5>
+          <p>Estadisticas completas de la tarjeta grafica: GPU, VRAM, clock speeds, temperatura y sensores en tiempo real.</p>
+          <span class="card-tag">GPU</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-fire"></i>
+          <h5>FurMark</h5>
+          <p>Test de estres para GPU (burn-in test). Genera carga maxima para verificar estabilidad y temperaturas extremas.</p>
+          <span class="card-tag">GPU Stress</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-cpu"></i>
+          <h5>Prime95</h5>
+          <p>Test de estres para CPU. Los "Small FFTs" generan calor maximo. Ideal para probar estabilidad despues de overclock.</p>
+          <span class="card-tag">CPU Stress</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-speedometer2"></i>
+          <h5>AIDA64</h5>
+          <p>Diagnostico completo del sistema: hardware, software, sensores, benchmarks. Suite profesional de diagnostico.</p>
+          <span class="card-tag">Completo</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-journal-text"></i>
+          <h5>Event Viewer</h5>
+          <p>Registro de eventos de Windows (eventvwr.msc). Errores criticos, warnings y logs del sistema y aplicaciones.</p>
+          <span class="card-tag">Windows</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-graph-up"></i>
+          <h5>CrystalDiskMark</h5>
+          <p>Benchmark de velocidad de discos. Mide lectura y escritura secuencial y aleatoria (4K). Compara SSD vs HDD.</p>
+          <span class="card-tag">Benchmark</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-cpu"></i>
+          <h5>HWiNFO</h5>
+          <p>Considerado el toolset mas completo de informacion de hardware. Usado por fabricantes y profesionales. Soporta los componentes mas recientes antes que la mayoria de programas competidores. No envia datos por red.</p>
+          <span class="card-tag">Monitoreo &#183; Gratuito</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-speedometer2"></i>
+          <h5>MSI Afterburner</h5>
+          <p>Herramienta de overclocking y monitoreo de GPU compatible con cualquier marca (no solo MSI). Permite personalizar curvas de ventilador, mostrar overlay en juegos y exportar registros de temperatura.</p>
+          <span class="card-tag">GPU &#183; Gratuito</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-bar-chart-line"></i>
+          <h5>Cinebench R23/2024</h5>
+          <p>El benchmark de CPU mas respetado. Usa el motor de renderizado de Cinema 4D para medir rendimiento single-core y multi-core. Sus resultados son directamente comparables en la base de datos online de Maxon.</p>
+          <span class="card-tag">CPU &#183; Benchmark</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-controller"></i>
+          <h5>3DMark</h5>
+          <p>Benchmark de rendimiento de GPU con escenas de juego reales. Mide FPS, puntajes comparables y estabilidad. Incluye pruebas ray tracing y pruebas de carga para verificar que el sistema esta bien balanceado.</p>
+          <span class="card-tag">GPU &#183; Benchmark</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-hdd-stack"></i>
+          <h5>HD Tune</h5>
+          <p>Verifica la salud de discos duros con pruebas SMART completas, mapa de errores y pruebas de transferencia. Permite detectar sectores defectuosos antes de que el disco falle completamente.</p>
+          <span class="card-tag">Disco &#183; Diagnostico</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-flame"></i>
+          <h5>ThrottleStop</h5>
+          <p>Herramienta avanzada para monitorear y controlar el throttling del CPU Intel. Permite ajustar voltajes, multiplicadores y desactivar limitaciones de potencia para maximizar el rendimiento.</p>
+          <span class="card-tag">CPU &#183; Avanzado</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-display"></i>
+          <h5>OBS Studio</h5>
+          <p>Software de grabacion y streaming de pantalla. Util para capturar problemas visuales, artefactos de GPU o documentar procedimientos de diagnostico durante sesiones de soporte remoto.</p>
+          <span class="card-tag">Grabacion &#183; Open Source</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-chat-dots"></i>
+          <h5>Discord</h5>
+          <p>Servidores de hardware activos en espanol: PC Master Race ES, HardZone Discord. Ventaja: respuesta en tiempo real para dudas de compatibilidad, overclocking y ayuda tecnica vs foros donde puede tomar horas.</p>
+          <span class="card-tag">Comunidad &#183; Gratuito</span>
+        </div>
+        <div class="tool-card" data-aos="fade-up">
+          <i class="bi bi-bar-chart-steps"></i>
+          <h5>UserBenchmark</h5>
+          <p>Comparador online de rendimiento de CPU, GPU, RAM y SSD con millones de resultados reales de usuarios. Util para valorar si un sistema rinde segun lo esperado para su hardware.</p>
+          <span class="card-tag">Benchmark &#183; Web</span>
+        </div>
+      </div>
+
+      <div class="alert-box alert-success" data-aos="fade-up">
+        <i class="bi bi-check-circle"></i>
+        <div><strong>Kit minimo recomendado:</strong> HWMonitor + CPU-Z + CrystalDiskInfo + MemTest86 (USB booteable) + DDU. Con estas 5 herramientas puedes diagnosticar el 90% de los problemas comunes de hardware.</div>
+      </div>
+
+      <p class="subhead" data-aos="fade-up">Que Herramienta Usar segun el Sintoma</p>
+      <div class="table-wrap" data-aos="fade-up">
+        <table class="cmd-table">
+          <thead>
+            <tr><th><i class="bi bi-activity"></i> Sintoma</th><th>Herramienta</th><th>Que verificar / como leerla</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>PC lenta o se congela</td><td>Task Manager + HWMonitor</td><td>Proceso al 100% de CPU/RAM, temperaturas altas, throttling</td></tr>
+            <tr><td>Sobrecalentamiento / apagados</td><td>HWMonitor, HWiNFO</td><td>Temperaturas CPU/GPU vs tabla de limites; ventiladores RPM</td></tr>
+            <tr><td>BSOD o errores de memoria</td><td>MemTest86, BlueScreenView</td><td>Errores en pasadas de memoria; driver causante en Minidump</td></tr>
+            <tr><td>Archivos corruptos o lentitud de disco</td><td>CrystalDiskInfo, HD Tune</td><td>Salud SMART, sectores reasignados, errores de lectura</td></tr>
+            <tr><td>El disco no rinde lo esperado</td><td>CrystalDiskMark</td><td>Velocidad secuencial/4K vs especificaciones del modelo</td></tr>
+            <tr><td>GPU con artefactos o crashea en juegos</td><td>GPU-Z + FurMark</td><td>Temperaturas y VRAM durante el test; si da artefactos, GPU o VRAM</td></tr>
+            <tr><td>Inestabilidad tras overclock</td><td>Prime95 (CPU), OCCT (todo)</td><td>Errores de calculo en Small FFTs; hay que bajar frecuencia/voltaje</td></tr>
+            <tr><td>No reconoce hardware nuevo</td><td>CPU-Z, GPU-Z</td><td>Verifica que el sistema vea el componente y sus specs</td></tr>
+            <tr><td>Windows falla sin motivo claro</td><td>Event Viewer</td><td>Errores criticos recientes en Sistema/Aplicaciones</td></tr>
+            <tr><td>Fallos intermitentes de todo</td><td>OCCT</td><td>Test de PSU (voltajes) bajo carga</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-box info-tip" data-aos="fade-up" style="margin-top:12px;">
+        <span class="icon"><i class="bi bi-lightbulb"></i></span>
+        <div class="content"><strong>Orden recomendado:</strong> empieza por lo mas barato de descartar — temperatura (HWMonitor) y disco (CrystalDiskInfo) — antes de lanzar tests de estres. Un test de estres con una falla termica previa puede danar el equipo.</div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" style="margin-top:1.5rem;">
+        <div class="accordion-header">
+          <i class="bi bi-terminal accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Comandos de diagnostico integrados en Windows</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">cmd / powershell · ejecutar como Administrador</span>
+            </div>
+            <pre><span class="cmd-comment"># INTEGRIDAD DE ARCHIVOS DEL SISTEMA</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">sfc</span> <span class="cmd-flag">/scannow</span>                        <span class="cmd-comment"># Escanea y repara archivos de sistema</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">DISM</span> <span class="cmd-flag">/Online /Cleanup-Image /CheckHealth</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">DISM</span> <span class="cmd-flag">/Online /Cleanup-Image /RestoreHealth</span>
+
+  <span class="cmd-comment"># VERIFICAR DISCO (reinicia si C: esta en uso)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">chkdsk</span> <span class="cmd-value">C:</span> <span class="cmd-flag">/f /r /x</span>              <span class="cmd-comment"># /f=corregir /r=sectores /x=forzar desmontaje</span>
+
+  <span class="cmd-comment"># REPORTE DE BATERIA (portatiles)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">powercfg</span> <span class="cmd-flag">/batteryreport</span> <span class="cmd-value">/output C:\battery.html</span>
+
+  <span class="cmd-comment"># TEST DE MEMORIA (programa reinicio)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">mdsched.exe</span>
+
+  <span class="cmd-comment"># INFORMACION DEL SISTEMA</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">systeminfo</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">msinfo32</span>                           <span class="cmd-comment"># GUI completa con hardware y software</span>
+
+  <span class="cmd-comment"># HARDWARE DETALLADO (WMIC)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic cpu get</span> Name,NumberOfCores,MaxClockSpeed
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic memorychip get</span> Capacity,Speed,MemoryType
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic diskdrive get</span> Model,Size,Status
+
+  <span class="cmd-comment"># EVENTOS DE ERROR RECIENTES (PowerShell)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-EventLog</span> <span class="cmd-flag">-LogName</span> System <span class="cmd-flag">-EntryType</span> Error <span class="cmd-flag">-Newest</span> <span class="cmd-value">20</span></pre>
+          </div>
+
+          <div class="alert-box alert-info" data-aos="fade-up" style="margin-top:1rem;">
+            <i class="bi bi-info-circle"></i>
+            <div>
+              <strong>WhoCrashed:</strong> Analiza automaticamente los archivos de volcado en C:\Windows\Minidump y senala el driver o modulo responsable de un BSOD. Gratuito para uso personal.<br>
+              <strong>BlueScreenView (NirSoft):</strong> Muestra el driver causante en lenguaje simple sobre los archivos minidump. Alternativa ligera sin instalacion.
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

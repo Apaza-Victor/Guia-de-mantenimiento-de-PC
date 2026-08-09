@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headers - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Headers. USB, USB-C, HD Audio, RGB y fans.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Headers - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Headers. USB, USB-C, HD Audio, RGB y fans.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/visuals.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-usb-symbol"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Headers</h1>
+      <p>USB, USB-C, HD Audio, RGB y fans.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip active' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Headers</span></nav>
+<div class="content-section" id="headers-motherboard" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25);color:#6C63FF;"><i class="bi bi-usb-symbol"></i></div>
+        <div class="section-title">
+          <h2>Headers Internos de la Motherboard</h2>
+          <p>// Conectores internos para panel frontal y ventiladores</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info" data-aos="fade-up">
+        <i class="bi bi-info-circle"></i>
+        <div>Consulta SIEMPRE el manual de tu placa base para la ubicacion exacta de cada header. Conectar un cable al header incorrecto puede danar el controlador.</div>
+      </div>
+
+      <div class="vis" data-aos="fade-up">
+        <div class="vis-title"><i class="bi bi-grid"></i> Mapa de Headers — Motherboard vista superior</div>
+        <div class="vis-sub">Posiciones tipicas. La ubicacion exacta varia segun marca/modelo: verifica el manual.</div>
+        <div class="hdr-board">
+          <svg class="vis-svg" viewBox="0 0 720 360" role="img" aria-label="Mapa de headers de la motherboard">
+            <defs><marker id="visArrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="var(--accent2)"/></marker></defs>
+            <rect x="30" y="20" width="660" height="320" rx="16" fill="var(--bg-body)" stroke="var(--border-hover)" stroke-width="2"/>
+            <rect x="46" y="36" width="120" height="90" rx="8" fill="rgba(57,208,216,.08)" stroke="var(--accent-cyan)" stroke-width="1.4"/>
+            <text x="56" y="52" class="t-tag" style="fill:#39d0d8">CPU + Socket</text>
+            <text x="56" y="66" style="font-size:8px">LGA / AM5</text>
+            <rect x="600" y="120" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent-cyan)"/>
+            <text x="637" y="135" text-anchor="middle" style="font-size:9px;font-weight:700">CPU_FAN</text>
+            <line x1="600" y1="131" x2="620" y2="131" class="t-edge-core"/>
+            <rect x="430" y="46" width="96" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="478" y="61" text-anchor="middle" style="font-size:9px;font-weight:700">DIMM A1 A2</text>
+            <rect x="430" y="72" width="96" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="478" y="87" text-anchor="middle" style="font-size:9px;font-weight:700">DIMM B1 B2</text>
+            <text x="478" y="110" text-anchor="middle" style="font-size:8px">RAM — usa A2+B2</text>
+            <rect x="46" y="180" width="120" height="40" rx="6" fill="var(--bg-card)" stroke="var(--border-hover)"/>
+            <text x="56" y="198" class="t-tag" style="fill:#3fb950">M.2 NVMe</text>
+            <text x="56" y="212" style="font-size:8px">SSD (angulo 30°)</text>
+            <rect x="600" y="200" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="637" y="215" text-anchor="middle" style="font-size:9px;font-weight:700">SYS_FAN</text>
+            <rect x="600" y="230" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="637" y="245" text-anchor="middle" style="font-size:9px;font-weight:700">CHA_FAN</text>
+            <rect x="46" y="150" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent3)"/>
+            <text x="106" y="165" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#ff6b6b">24-pin ATX</text>
+            <rect x="46" y="255" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent3)"/>
+            <text x="83" y="270" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#ff6b6b">EPS 8-pin</text>
+            <rect x="300" y="180" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="360" y="195" text-anchor="middle" style="font-size:9px;font-weight:700">JFP1 Front Panel</text>
+            <text x="360" y="214" text-anchor="middle" style="font-size:8px">Power / Reset / LEDs</text>
+            <rect x="300" y="235" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="360" y="250" text-anchor="middle" style="font-size:9px;font-weight:700">JAUD1 HD Audio</text>
+            <rect x="300" y="130" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
+            <text x="360" y="145" text-anchor="middle" style="font-size:9px;font-weight:700">USB 2.0 (negro)</text>
+            <rect x="500" y="300" width="120" height="22" fill="var(--bg-card)" stroke="#4a90e2"/>
+            <text x="560" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#4a90e2">USB 3.0 (azul)</text>
+            <rect x="300" y="300" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent-cyan)"/>
+            <text x="360" y="315" text-anchor="middle" style="font-size:9px;font-weight:700">USB-C Key-E</text>
+            <rect x="150" y="300" width="120" height="22" fill="var(--bg-card)" stroke="#E91E63"/>
+            <text x="210" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#E91E63">RGB 4-pin 12V</text>
+            <text x="150" y="334" text-anchor="middle" style="font-size:8px;fill:#E91E63">ARGB 3-pin 5V</text>
+            <rect x="540" y="60" width="80" height="22" fill="var(--bg-card)" stroke="var(--border-hover)"/>
+            <text x="580" y="75" text-anchor="middle" style="font-size:9px;font-weight:700">PCIe x16 GPU</text>
+            <text x="580" y="95" text-anchor="middle" style="font-size:8px">bracket anti-sag</text>
+          </svg>
+          <div class="vis-note"><strong>Regla de color:</strong> azul = USB 3.0, negro = USB 2.0, rosa/rojo = RGB, verde = fans, borde placa = pines del panel frontal.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-usb accordion-icon" style="color:#6C63FF;"></i>
+          <span class="accordion-title">USB 3.0 Header (20-pin azul)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Conector interno de 20 pines (19 activos + 1 guia) de color azul que conecta los puertos USB 3.0 frontales del gabinete a la placa base. Proporciona hasta 5 Gbps de ancho de banda.</p>
+          <ul>
+            <li><strong>Identificacion:</strong> Conector azul mas ancho que USB 2.0, generalmente ubicado en el borde derecho de la motherboard.</li>
+            <li><strong>Pin 1:</strong> Marcado con una flecha o triangulo en el conector.</li>
+            <li><strong>Precaucion:</strong> Los pines son fragiles. Alinea el conector correctamente antes de presionar. Nunca fuerces.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-usb-micro accordion-icon" style="color:#6C63FF;"></i>
+          <span class="accordion-title">USB-C Header (Key-E / USB 3.2 Gen2)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Header interno USB-C de tipo Key-E que permite conectar puertos USB-C frontales del gabinete. Soporta velocidades de hasta 10 Gbps (USB 3.2 Gen2) o 20 Gbps (USB 3.2 Gen2x2) segun la motherboard.</p>
+          <ul>
+            <li><strong>Identificacion:</strong> Conector metalico mas pequeno y plano que el USB 3.0, reversible por diseno.</li>
+            <li><strong>Requisito:</strong> No todas las placas base lo incluyen. Las de gama media/alta lo traen desde ~2019.</li>
+            <li><strong>Compatibilidad:</strong> Requiere gabinete con puerto USB-C frontal y cable USB-E dedicado.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-volume-up accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">HD Audio Header (10-pin)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Conector de 10 pines (9 activos + 1 guia) que enruta los jacks de auriculares y microfono del panel frontal hacia el codec de audio de la placa madre, usando el estandar Intel HD Audio.</p>
+          <ul>
+            <li><strong>Identificacion:</strong> Generalmente en la esquina inferior izquierda de la motherboard. Marcado como "HD_AUDIO" o "JAUD1".</li>
+            <li><strong>Funcion:</strong> Permite usar los puertos de auriculares y microfono del gabinete sin llegar a la parte trasera.</li>
+            <li><strong>Diferencia con AC'97:</strong> HD Audio soporta deteccion automatica de dispositivos conectados. AC'97 (legado) no lo hace. No son compatibles entre si.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-palette accordion-icon" style="color:#E91E63;"></i>
+          <span class="accordion-title">RGB Headers (4-pin / 3-pin)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Conectores para iluminacion RGB/ARGB del gabinete. Son fundamentalmente diferentes y NO son compatibles entre si &#8212; conectar un dispositivo ARGB en un header RGB (o viceversa) puede destruir los LEDs.</p>
+          <ul>
+            <li><strong>RGB 4-pin (12V):</strong> Controla un solo color para toda la tira/ventilador a la vez. Cables: +12V, R, G, B.</li>
+            <li><strong>ARGB 3-pin (5V):</strong> Permite controlar cada LED individualmente para efectos de arcoiris, ondas y patrones complejos. Cables: +5V, Data, GND.</li>
+            <li><strong>Software:</strong> ASUS Aura Sync, MSI Mystic Light, Gigabyte RGB Fusion, Corsair iCUE. OpenRGB unifica control entre marcas.</li>
+          </ul>
+          <p>Los headers RGB generalmente estan marcados en la placa base. La mayoria incluyen 2 headers de cada tipo.</p>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-fan accordion-icon" style="color:var(--success);"></i>
+          <span class="accordion-title">Fan Headers (SYS_FAN, CPU_FAN, CHA_FAN)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Pequeños conectores en la placa base donde se conectan los ventiladores del sistema. Los de 3 pines solo permiten control de velocidad por voltaje; los de 4 pines (PWM) permiten un control mas preciso por senal digital.</p>
+          <ul>
+            <li><strong>CPU_FAN:</strong> Obligatorio para el cooler del CPU. Sin conexion aqui, el sistema no arranca y muestra "CPU Fan Error".</li>
+            <li><strong>SYS_FAN / CHA_FAN:</strong> Para ventiladores del gabinete. Puedes conectar multiples ventiladores a cada header usando un hub.</li>
+            <li><strong>3-pin (voltaje):</strong> +12V, GND, Tacometro &#8212; control de velocidad basico.</li>
+            <li><strong>4-pin (PWM):</strong> +12V, GND, Tacometro, PWM &#8212; control digital preciso desde BIOS o software.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-power accordion-icon" style="color:var(--success);"></i>
+          <span class="accordion-title">Front Panel Header (Power SW, Reset, LEDs)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El bloque de cables pequenos que viene del gabinete (pins individuales) se conecta al header F_PANEL / JFP1 de la placa base. Conectarlos mal es la causa mas comun de "el boton de encendido no hace nada" o LEDs que no funcionan.</p>
+          <div class="table-wrap">
+            <table class="cmd-table">
+              <thead>
+                <tr><th>Cable</th><th>Marcado</th><th>Funcion</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Power SW</td><td>PWR_BTN / PWRSW</td><td>Boton de encendido/apagado (2 pines, sin polaridad)</td></tr>
+                <tr><td>Reset SW</td><td>RESET / RST</td><td>Boton de reinicio (2 pines, sin polaridad)</td></tr>
+                <tr><td>Power LED</td><td>PWR_LED (+) / (-)</td><td>Led de encendido (tiene polaridad: el cable de color es +)</td></tr>
+                <tr><td>HDD LED</td><td>HDD_LED (+) / (-)</td><td>Led de actividad del disco (polaridad importa)</td></tr>
+                <tr><td>Speaker (opcional)</td><td>SPK</td><td>Buzzer para beep codes (2 o 4 pines)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-box info-warn" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Errores frecuentes:</strong> 1) Conectar Power SW en el pin de Reset (el boton enciende pero el reset no funciona o viceversa). 2) Invertir polaridad de los LEDs (no encienden, no danan nada — solo dales vuelta). 3) La posicion de los pines varia segun marca (ASUS, MSI, Gigabyte): mira el diagrama en el manual o impreso en la placa.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-grid accordion-icon" style="color:#6C63FF;"></i>
+          <span class="accordion-title">Tabla Comparativa de Headers</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <div class="table-wrap">
+            <table class="cmd-table">
+              <thead>
+                <tr><th>Header</th><th>Pines</th><th>Voltaje</th><th>Conecta</th><th>Clave</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Front Panel (JFP1)</td><td>9-10</td><td>5V (LEDs)</td><td>Botones y LEDs del gabinete</td><td>Respetar el diagrama de pines</td></tr>
+                <tr><td>CPU_FAN</td><td>4</td><td>12V</td><td>Cooler del procesador</td><td>Obligatorio, sin el no arranca</td></tr>
+                <tr><td>SYS_FAN / CHA_FAN</td><td>4</td><td>12V</td><td>Ventiladores del gabinete</td><td>Varios por header con hub</td></tr>
+                <tr><td>USB 2.0</td><td>9</td><td>5V</td><td>Puertos USB frontales (480 Mbps)</td><td>Azul? No — el USB 2.0 es negro</td></tr>
+                <tr><td>USB 3.0 / 3.2</td><td>20</td><td>5V</td><td>Puertos USB frontales (5-10 Gbps)</td><td>Conector azul, pines fragiles</td></tr>
+                <tr><td>USB-C (Key-E)</td><td>20 (plano)</td><td>5V/20V</td><td>Puerto USB-C frontal</td><td>Reversible, requiere cable USB-E</td></tr>
+                <tr><td>HD Audio (JAUD1)</td><td>10</td><td>—</td><td>Auriculares y microfono frontales</td><td>HD Audio, no confundir con AC'97</td></tr>
+                <tr><td>RGB 4-pin</td><td>4</td><td>12V</td><td>Tiras RGB (color unico)</td><td>NO compatible con ARGB</td></tr>
+                <tr><td>ARGB 3-pin</td><td>3</td><td>5V</td><td>Iluminacion direccionable</td><td>NO conectar en header 12V</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Regla de oro:</strong> los headers USB 2.0, USB 3.0 y USB-C tienen GUIA que impide conectar el cable al reves, pero todos los cables del gabinete tienen la misma forma similar. Verifica el conector y el manual antes de presionar: un USB 3.0 forzado en un header USB 2.0 rompe los pines.</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cables de PSU - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Cables de PSU. Conectores de alimentacion con colores.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cables de PSU - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Cables de PSU. Conectores de alimentacion con colores.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-plug"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Cables de PSU</h1>
+      <p>Conectores de alimentacion con colores.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip active' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Cables de PSU</span></nav>
+<div class="content-section" id="cables-alimentacion" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.25);color:var(--accent3);"><i class="bi bi-plug"></i></div>
+        <div class="section-title">
+          <h2>Cables de Alimentacion</h2>
+          <p>// Conectores de poder de la fuente (PSU)</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-danger" data-aos="fade-up">
+        <i class="bi bi-exclamation-triangle"></i>
+        <div>NUNCA fuerces un conector. Todos los conectores de alimentacion tienen forma asimetrica o llave que impide insercion incorrecta. Si no entra facilmente, revisa la orientacion.</div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-grid-1x2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Colores de Cables y Voltajes (estandar ATX)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El estandar ATX define el color de cada cable segun el voltaje. Memorizar estos colores permite identificar el cable correcto y usar el multimetro sobre la fuente sin abrirla.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Color</th><th>Voltaje</th><th>Uso</th></tr>
+            <tr><td>Rojo</td><td>+5V</td><td>Logica de discos, USB, SATA</td></tr>
+            <tr><td>Amarillo</td><td>+12V</td><td>CPU, GPU, motores de HDD, ventiladores — el mas importante hoy</td></tr>
+            <tr><td>Naranja</td><td>+3.3V</td><td>RAM, chipset, algunos SSD</td></tr>
+            <tr><td>Negro</td><td>GND (tierra)</td><td>Referencia comun de todos los voltajes</td></tr>
+            <tr><td>Azul</td><td>-12V</td><td>Legado (puertos seriales) — casi sin uso</td></tr>
+            <tr><td>Blanco</td><td>-5V</td><td>Obsoleto (desde ATX 1.2) — ya no se usa</td></tr>
+            <tr><td>Gris</td><td>Power Good</td><td>Senal de la PSU: "los voltajes estan estables"</td></tr>
+            <tr><td>Verde</td><td>PS_ON</td><td>Control de encendido: puenteado a GND enciende la PSU (paperclip test)</td></tr>
+            <tr><td>Morado</td><td>+5VSB (standby)</td><td>Alimenta USB para encender y el encendido remoto</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Paperclip test:</strong> para encender una PSU sin PC, haz un puente entre el cable VERDE (PS_ON) y un cable NEGRO (GND) del conector 24-pin con un clip o trozo de cable. Si el ventilador de la PSU gira, la fuente recibe corriente. Eso NO garantiza que entregue los voltajes correctos — para eso mide con multimetro.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-cpu accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Conector ATX 24-pin (placa base)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El conector principal que alimenta la motherboard. Entrega +3.3V, +5V y +12V simultaneamente y el pin PS_ON que controla el encendido. En muchas PSU modernas es 20+4 (el +4 se desmonta para placas antiguas de 20 pines).</p>
+          <ul>
+            <li><strong>Watts:</strong> dependiendo de la fuente, el 24-pin entrega entre 300 y 450W repartidos entre los rieles.</li>
+            <li><strong>Enganche:</strong> tiene un clip lateral que se presiona para retirarlo. NUNCA lo saques con el PC encendido.</li>
+            <li><strong>Precaucion:</strong> al probar la PSU con el multimetro, el pin verde debe estar puenteado a GND para que la fuente entregue voltaje.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-motherboard accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Conector EPS 12V 8-pin (CPU)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Alimenta el VRM de la CPU con +12V. Es similar al PCIe 8-pin de GPU pero con distinta distribucion de pines — NO los intercambies (el enganche tiene una forma distinta, pero en muchas PSU ambos comparten 8 pines y se pueden confundir).</p>
+          <ul>
+            <li><strong>4+4 pin:</strong> se divide en dos bloques de 4 para placas con solo conector 4-pin.</li>
+            <li><strong>Watts:</strong> un EPS 8-pin entrega ~235W; las placas para CPUs potentes tienen 8+8 o 8+4 (para overclocking o i9/Ryzen 9).</li>
+            <li><strong>Si falta el segundo EPS:</strong> muchas placas exigen ambos para CPUs muy potentes; conecta los dos si tu PSU los tiene.</li>
+            <li><strong>Diferenciar de PCIe:</strong> el EPS tiene pines 12V en un lado y GND en el otro; el PCIe 8-pin tiene 3 GND y 5 de 12V con forma de "T" en el conector. Mira el clip y el manual.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-tools accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Tabla Resumen de Conectores PSU</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Conector</th><th>Pines</th><th>Alimenta</th><th>Potencia tipica</th></tr>
+            <tr><td>ATX 24-pin</td><td>24 (20+4)</td><td>Placa base (todo)</td><td>300-450W (repartidos)</td></tr>
+            <tr><td>EPS/ATX 12V</td><td>8 (4+4)</td><td>CPU (VRM)</td><td>~235W por conector</td></tr>
+            <tr><td>PCIe 6-pin</td><td>6</td><td>GPU</td><td>75W</td></tr>
+            <tr><td>PCIe 8-pin</td><td>8 (6+2)</td><td>GPU</td><td>150W</td></tr>
+            <tr><td>PCIe 12VHPWR</td><td>16</td><td>GPU RTX 40xx / RX 7xxx</td><td>hasta 600W</td></tr>
+            <tr><td>SATA Power</td><td>15</td><td>Discos SATA, SSDs</td><td>~54W</td></tr>
+            <tr><td>Molex</td><td>4</td><td>Ventiladores, LEDs, IDE</td><td>~54W</td></tr>
+            <tr><td>Berg (disquetera)</td><td>4 (mini)</td><td>Disquetera 3.5"</td><td>~10W</td></tr>
+          </table></div>
+          <div class="info-box info-warn" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>No mezcles cables modulares entre marcas:</strong> los cables modulares de PSU NO son estandar. Un cable PCIe de marca A conectado a una PSU marca B puede entregar voltaje por el pin equivocado y quemar la GPU. Usa siempre los cables de tu propia fuente.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-gpu-card accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">PCIe 6+2 pin (GPU)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Alimenta la GPU directamente desde la PSU. El conector 6-pin entrega 75W; anadir el +2 convierte en 8-pin (150W). Las GPUs de gama alta necesitan 2 o 3 conectores. Las RTX 40xx usan el nuevo conector 16-pin (600W / PCIe 5.0).</p>
+          <ul>
+            <li><strong>6-pin:</strong> 75W &#8212; GPUs de gama baja/media.</li>
+            <li><strong>8-pin (6+2):</strong> 150W &#8212; GPUs de gama media/alta.</li>
+            <li><strong>12VHPWR 16-pin:</strong> 600W &#8212; RTX 40xx series. Conector nuevo, no confundir con 8-pin.</li>
+          </ul>
+          <p>Los cables 6+2 pin tienen un segmento desmontable de 2 pines para mantener compatibilidad con slots de 6 pines.</p>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-hdd-stack accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">SATA Power 15-pin</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Conector plano de 15 pines que alimenta discos SATA, SSDs y unidades opticas. Forma en L garantiza insercion correcta. Tres grupos de cables por voltaje:</p>
+          <ul>
+            <li><strong>Cable naranja:</strong> +3.3V &#8212; usado por algunos SSDs de bajo consumo.</li>
+            <li><strong>Cable rojo:</strong> +5V &#8212; voltaje principal para logica y controladores.</li>
+            <li><strong>Cable amarillo:</strong> +12V &#8212; alimenta el motor del disco mecanico.</li>
+            <li><strong>Cables negros:</strong> GND (tierra) &#8212; referencia comun para todos los voltajes.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-lightning accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Conector Molex 4-pin</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Conector blanco con 4 pines redondos. Aun presente en muchas PSU modernas como adaptador.</p>
+          <ul>
+            <li><strong>Cable amarillo:</strong> +12V &#8212; alimenta ventiladores y bombas de AIO.</li>
+            <li><strong>Cable negro (centro):</strong> GND &#8212; tierra.</li>
+            <li><strong>Cable rojo:</strong> +5V &#8212; usado por algunos dispositivos LED.</li>
+          </ul>
+          <p>Usado para ventiladores adicionales, tiras LED y dispositivos IDE o PATA (legado). En sistemas modernos, la mayoria de componentes usan SATA Power.</p>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-disc accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">PATA / Berg (Disquetera)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p><strong>Conector Berg (4-pin):</strong> Mini conector de alimentacion para disqueteras 3.5". Mucho mas pequeno que el Molex estandar. Entrega +5V y +12V. Praticamente en desuso, pero aun se encuentra en PSUs antiguas o como adaptador.</p>
+          <p><strong>Cable IDE / PATA (datos):</strong> Cable de cinta ancho (40 u 80 hilos) utilizado para conectar discos duros e unidades opticas a la placa base antes de SATA. Los conectores son de 40 pines con una muesca de alineacion. El conector azul va a la placa base, el gris al dispositivo maestro y el negro al esclavo.</p>
+          <ul>
+            <li><strong>Velocidad maxima:</strong> ATA-133 (133 MB/s) &#8212; mucho mas lento que SATA III (6 Gbps).</li>
+            <li><strong>Canales IDE:</strong> 2 canales (primario y secundario), maximo 2 dispositivos por canal.</li>
+            <li><strong>Compatibilidad:</strong> No confundir con SATA &#8212; los conectores son completamente diferentes.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="section-header" style="margin-top:2rem;">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-boxes"></i></div>
+        <div class="section-title">
+          <h2>Visores 3D</h2>
+          <p>// Explora los conectores en tres dimensiones</p>
+        </div>
+      </div>
+      <p class="three-note">Arrastra para girar, usa la rueda del mouse o gesto de pinza para acercar:</p>
+      <div class="cable-3d-grid" data-aos="fade-up">
+        <div class="three-canvas" data-model="atx24" data-title="ATX 24-pin (20+4)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">ATX 24-pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="eps8" data-title="EPS 12V 8-pin (CPU)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">EPS 8-pin (CPU)</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="pcie62" data-title="PCIe 6+2 pin (GPU)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">PCIe 6+2 pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="sata-power" data-title="SATA Power 15-pin">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">SATA Power</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="molex" data-title="Molex 4-pin">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Molex 4-pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="paperclip" data-title="Paperclip test (PS_ON + GND)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Paperclip test</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="eps4" data-title="EPS 4-pin (CPU)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">EPS 4-pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="12vhpwr" data-title="12VHPWR 16-pin (PCIe 5.0)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">12VHPWR 16-pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="atx20" data-title="ATX 20-pin (legado)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">ATX 20-pin</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="ac-cable" data-title="Cordon AC C13/C14 (PSU)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Cordon AC</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="dc-jack" data-title="Conector DC de portatil (barril)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">DC jack (laptop)</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

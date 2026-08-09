@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comandos - TechGuide</title>
+  <meta name="description" content="Comandos de Consola. Referencia de comandos tecnicos para Windows (CMD / PowerShell) y Linux (Bash), atajos de teclado, puertos de red, equivalencias y varia...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Comandos - TechGuide">
+  <meta property="og:description" content="Comandos de Consola. Referencia de comandos tecnicos para Windows (CMD / PowerShell) y Linux (Bash), atajos de teclado, puertos de red, equivalencias y varia...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-terminal-fill"></i></div>
+      <h1><span class="hl">Comandos</span> de Consola</h1>
+      <p>Referencia de comandos tecnicos para Windows (CMD / PowerShell) y Linux (Bash), atajos de teclado, puertos de red, equivalencias y variables de entorno.</p>
+      <div class="page-hero-chips">
+        <span class="pchip pchip-b">CMD</span>
+        <span class="pchip pchip-b">PowerShell</span>
+        <span class="pchip pchip-b">Bash / Linux</span>
+        <span class="pchip pchip-b">Atajos</span>
+        <span class="pchip pchip-b">Puertos TCP/UDP</span>
+        <span class="pchip pchip-b">Variables</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFERENCIA DE COMANDOS Y ATAJOS -->
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../index.html">Inicio</a><span class="sep">/</span><span class="current">Comandos de Consola</span></nav>
+<div class="content-section" id="comandos" data-aos="fade-up">
+    <h2 class="section-title"><i class="bi bi-terminal-fill"></i> Referencia de Comandos y Atajos</h2>
+    <p class="section-subtitle">CMD / PowerShell · Bash/Linux · Atajos de teclado · Puertos · Variables</p>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent);">Atajos de Teclado</h3>
+
+    <div class="accordion open" id="win-shortcuts">
+      <div class="accordion-header" onclick="toggleAccordion('win-shortcuts')">
+        <div class="accordion-title-row"><span class="accordion-icon">🪟</span><div><div class="accordion-title">Windows — Atajos esenciales</div><div class="accordion-subtitle">Sistema · ventanas · escritorios virtuales · consola</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// SISTEMA Y GENERAL</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Menú Inicio</span><div class="shortcut-keys"><kbd>Win</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Configuración del sistema</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Explorador de archivos</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mostrar escritorio</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bloquear sesión</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ejecutar (Run)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en Windows</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Notificaciones</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura recorte</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pantalla completa</span><div class="shortcut-keys"><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Administrador de tareas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>Esc</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Opciones de seguridad</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Del</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Configuración rápida (WiFi, brillo, Bluetooth)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Minimizar todas las ventanas</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>M</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Panel de proyección (segundo monitor)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>P</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Menú de usuario avanzado (Win+X)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>X</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Dictado de voz</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Enlazar dispositivo (Bluetooth rápido)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>K</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Lupa (zoom de pantalla)</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>+</kbd></div></div>
+        </div>
+        <p class="subhead">// GESTIÓN DE VENTANAS</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana activa</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Vista de tareas</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Anclar izquierda / derecha</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>← / →</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Maximizar ventana</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>↑</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Minimizar ventana</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>↓</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nuevo escritorio virtual</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover entre escritorios</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>←/→</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar escritorio virtual</span><div class="shortcut-keys"><kbd>Win</kbd><span class="key-sep">+</span><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+        </div>
+        <p class="subhead">// CMD / POWERSHELL</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Autocompletar ruta/comando</span><div class="shortcut-keys"><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Historial de comandos</span><div class="shortcut-keys"><kbd>↑</kbd><span class="key-sep">/</span><kbd>↓</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cancelar comando actual</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Limpiar pantalla</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Inicio de línea</span><div class="shortcut-keys"><kbd>Home</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Fin de línea</span><div class="shortcut-keys"><kbd>End</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-linux">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-linux')">
+        <div class="accordion-title-row"><span class="accordion-icon">🐧</span><div><div class="accordion-title">Linux (GNOME / KDE) — Atajos esenciales</div><div class="accordion-subtitle">Escritorio · terminal Bash/ZSH</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// GNOME DESKTOP</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Actividades / Lanzador</span><div class="shortcut-keys"><kbd>Super</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ejecutar aplicación</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F2</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura pantalla completa</span><div class="shortcut-keys"><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura ventana activa</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>PrtScn</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cambiar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>F4</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Abrir terminal</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Alt</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bloquear pantalla</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Maximizar ventana</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>↑</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover entre espacios</span><div class="shortcut-keys"><kbd>Super</kbd><span class="key-sep">+</span><kbd>PgUp/PgDn</kbd></div></div>
+        </div>
+        <p class="subhead">// TERMINAL BASH / ZSH</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Cancelar proceso actual</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Suspender proceso (bg)</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Salir del shell / EOF</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>D</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Limpiar pantalla</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Inicio de línea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Fin de línea</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>E</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar hasta inicio</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>U</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar hasta fin</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>K</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en historial</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar texto cortado</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Y</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover palabra atrás</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>←</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mover palabra adelante</span><div class="shortcut-keys"><kbd>Alt</kbd><span class="key-sep">+</span><kbd>→</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-macos">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-macos')">
+        <div class="accordion-title-row"><span class="accordion-icon">🍎</span><div><div class="accordion-title">macOS — Atajos esenciales</div><div class="accordion-subtitle">Sistema · Finder · terminal zsh</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// SISTEMA Y GENERAL</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Copiar / Cortar / Pegar</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>C / X / V</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar Spotlight</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Barra</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar ventana</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>W</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar aplicación</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Q</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Forzar salida</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Alt</kbd><span class="key-sep">+</span><kbd>Esc</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cambiar entre apps</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Minimizar ventana</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>M</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ocultar ventana</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura pantalla</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>3</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Captura de área</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>4</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bloquear pantalla</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Q</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Papelera vacía</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>Backspace</kbd></div></div>
+        </div>
+        <p class="subhead">// FINDER</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva ventana Finder</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ir a carpeta (Go To)</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>G</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mostrar ruta / get info</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar archivo</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>Backspace</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Renombrar</span><div class="shortcut-keys"><kbd>Enter</kbd></div></div>
+        </div>
+        <p class="subhead">// TERMINAL (ZSH)</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Cancelar comando</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva pestaña terminal</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Abrir nueva ventana</span><div class="shortcut-keys"><kbd>Cmd</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Borrar línea completa</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>U</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en historial</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-navegadores">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-navegadores')">
+        <div class="accordion-title-row"><span class="accordion-icon">🌐</span><div><div class="accordion-title">Atajos de Navegadores Web</div><div class="accordion-subtitle">Chrome · Firefox · Edge · productividad web</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// PESTAÑAS Y NAVEGACIÓN</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva pestaña</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cerrar pestaña</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>W</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Reabrir pestaña cerrada</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Navegar entre pestañas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Tab</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nueva ventana</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ventana incógnito/privada</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Recargar página</span><div class="shortcut-keys"><kbd>F5</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Recargar sin caché</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>R</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ir a barra de URL</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en página</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>F</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Herramientas desarrollador</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Zoom + / Zoom - / Reset</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>+ / - / 0</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Historial de navegación</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Descargas</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>J</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="atajos-office">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-office')">
+        <div class="accordion-title-row"><span class="accordion-icon">📄</span><div><div class="accordion-title">Atajos de Productividad — Office / LibreOffice</div><div class="accordion-subtitle">Atajos universales · Word · Excel · PowerPoint</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// UNIVERSALES (funcionan en casi todos los programas)</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Deshacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Z</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Rehacer</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Y</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Guardar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>S</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Guardar como</span><div class="shortcut-keys"><kbd>F12</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Abrir archivo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>O</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Imprimir</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>P</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Seleccionar todo</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>A</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Copiar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>C</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cortar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>X</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar y reemplazar</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>H</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Negrita</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>B</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Cursiva</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Subrayado</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>U</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Nuevo documento</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pegar sin formato</span><div class="shortcut-keys"><kbd>Ctrl</kbd><span class="key-sep">+</span><kbd>Shift</kbd><span class="key-sep">+</span><kbd>V</kbd></div></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent2);">Referencia de Comandos Técnicos</h3>
+
+    <div class="accordion open" id="cmd-windows">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-windows')">
+        <div class="accordion-title-row"><span class="accordion-icon">🪟</span><div><div class="accordion-title">Windows CMD / PowerShell</div><div class="accordion-subtitle">Procesos · servicios · hardware · drivers · apagado</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Descripción</th><th>Ejemplo útil</th></tr>
+          <tr><td>systeminfo</td><td>Info completa del sistema (OS, RAM, CPU, red)</td><td>systeminfo | findstr /C:"RAM"</td></tr>
+          <tr><td>tasklist</td><td>Lista todos los procesos activos</td><td>tasklist /FI "STATUS eq running"</td></tr>
+          <tr><td>taskkill</td><td>Terminar proceso por nombre o PID</td><td>taskkill /IM notepad.exe /F</td></tr>
+          <tr><td>sc</td><td>Gestión de servicios de Windows</td><td>sc query | sc start/stop nombre</td></tr>
+          <tr><td>net user</td><td>Gestión de cuentas de usuario locales</td><td>net user Admin * (cambiar contraseña)</td></tr>
+          <tr><td>wmic</td><td>Información detallada de hardware</td><td>wmic cpu get Name,MaxClockSpeed</td></tr>
+          <tr><td>gpupdate</td><td>Aplicar directivas de grupo</td><td>gpupdate /force</td></tr>
+          <tr><td>robocopy</td><td>Copia robusta de archivos y directorios</td><td>robocopy src dst /E /Z /LOG:log.txt</td></tr>
+          <tr><td>driverquery</td><td>Listar todos los drivers instalados</td><td>driverquery | findstr "net"</td></tr>
+          <tr><td>Get-Process</td><td>PS: listar procesos con detalles</td><td>Get-Process | Sort CPU -Desc</td></tr>
+          <tr><td>Get-Service</td><td>PS: estado de todos los servicios</td><td>Get-Service | Where {$_.Status -eq "Running"}</td></tr>
+          <tr><td>Test-NetConnection</td><td>PS: test de conectividad TCP</td><td>Test-NetConnection -Port 443 google.com</td></tr>
+          <tr><td>shutdown</td><td>Apagar / reiniciar / cancelar</td><td>shutdown /r /t 0 (reinicio inmediato)</td></tr>
+          <tr><td>shutdown /r /o</td><td>Reiniciar en modo recuperación avanzada</td><td>shutdown /r /o /t 0</td></tr>
+          <tr><td>winget</td><td>Instalador de aplicaciones (Windows Package Manager)</td><td>winget install 7zip.7zip --silent</td></tr>
+          <tr><td>winget search</td><td>Buscar aplicaciones en el repositorio</td><td>winget search firefox</td></tr>
+          <tr><td>winget upgrade --all</td><td>Actualizar todas las apps instaladas</td><td>winget upgrade --all</td></tr>
+          <tr><td>wsl --install</td><td>Instalar el subsistema Linux en Windows</td><td>wsl --install -d Ubuntu</td></tr>
+          <tr><td>wsl --status</td><td>Estado y versión del WSL</td><td>wsl --status</td></tr>
+          <tr><td>sfc /scannow</td><td>Reparar archivos protegidos del sistema</td><td>sfc /scannow (ejecutar como admin)</td></tr>
+          <tr><td>DISM</td><td>Reparar imagen del sistema (fallos de Windows Update)</td><td>DISM /Online /Cleanup-Image /RestoreHealth</td></tr>
+          <tr><td>powercfg /h on</td><td>Habilitar hibernación</td><td>powercfg /h on</td></tr>
+          <tr><td>net localgroup Administradores</td><td>Ver miembros del grupo Administradores</td><td>net localgroup Administradores</td></tr>
+          <tr><td>netsh wlan show profiles</td><td>Listar redes WiFi guardadas</td><td>netsh wlan show profile "Red" key=clear</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-diagnostico">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-diagnostico')">
+        <div class="accordion-title-row"><span class="accordion-icon">🩺</span><div><div class="accordion-title">Windows — Diagnóstico y Reparación</div><div class="accordion-subtitle">sfc · DISM · chkdsk · discos · memoria</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Descripción</th><th>Ejemplo útil</th></tr>
+          <tr><td>sfc /scannow</td><td>Verifica y repara archivos protegidos del sistema</td><td>sfc /scannow (ejecutar como admin)</td></tr>
+          <tr><td>sfc /verifyonly</td><td>Solo verifica (sin reparar) — más rápido</td><td>sfc /verifyonly</td></tr>
+          <tr><td>DISM /Online /Cleanup-Image</td><td>Repara la imagen del sistema (fuente de Windows Update)</td><td>DISM /Online /Cleanup-Image /RestoreHealth</td></tr>
+          <tr><td>chkdsk C: /f /r</td><td>Revisa y repara errores de disco</td><td>chkdsk C: /f /r (pide reinicio)</td></tr>
+          <tr><td>chkdsk /scan</td><td>Escaneo rápido sin fijar nada</td><td>chkdsk /scan</td></tr>
+          <tr><td>diskpart</td><td>Utilidad de particionado avanzado</td><td>diskpart → list disk → select disk N → clean</td></tr>
+          <tr><td>powercfg /a</td><td>Estados de suspensión disponibles</td><td>powercfg /a</td></tr>
+          <tr><td>powercfg /energy</td><td>Informe de energía (batería, drivers, eficiencia)</td><td>powercfg /energy → abre energy-report.html</td></tr>
+          <tr><td>mdsched</td><td>Windows Memory Diagnostic (RAM)</td><td>mdsched → reiniciar y analizar</td></tr>
+          <tr><td>cleanmgr</td><td>Liberador de espacio en disco</td><td>cleanmgr /d C:</td></tr>
+          <tr><td>msconfig</td><td>Configuración del sistema (arranque, servicios)</td><td>msconfig → pestaña Servicios</td></tr>
+          <tr><td>compmgmt.msc</td><td>Administración de equipos (discos, usuarios, eventos)</td><td>compmgmt.msc</td></tr>
+          <tr><td>eventvwr</td><td>Visor de eventos del sistema</td><td>eventvwr → Registros de Windows/ Sistema</td></tr>
+          <tr><td>dxdiag</td><td>Diagnóstico de DirectX (GPU, audio)</td><td>dxdiag /t dx.txt</td></tr>
+          <tr><td>verifier</td><td>Verificador de drivers</td><td>verifier (avanzado, evitar en producción)</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>Orden de reparación recomendado:</strong> primero <b>DISM /RestoreHealth</b>, luego <b>sfc /scannow</b> y por último <b>chkdsk /f /r</b>. Hacerlos en este orden evita que sfc sobrescriba con archivos corruptos de la imagen local.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-linux">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-linux')">
+        <div class="accordion-title-row"><span class="accordion-icon">🐧</span><div><div class="accordion-title">Linux / Bash — Administración del sistema</div><div class="accordion-subtitle">Hardware · procesos · systemd · paquetes · usuarios · archivos</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">bash · comandos esenciales de administración</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># ── SISTEMA Y HARDWARE ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">uname</span> <span class="cmd-flag">-a</span>              <span class="cmd-comment"># Info del kernel</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lscpu</span>                 <span class="cmd-comment"># CPU detallada</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">free</span> <span class="cmd-flag">-h</span>              <span class="cmd-comment"># RAM y swap</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">df</span> <span class="cmd-flag">-h</span>               <span class="cmd-comment"># Uso de discos montados</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lsblk</span>                <span class="cmd-comment"># Dispositivos de bloque</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lspci</span>                <span class="cmd-comment"># Dispositivos PCI (GPU, etc.)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lsusb</span>                <span class="cmd-comment"># Dispositivos USB</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dmidecode</span> <span class="cmd-flag">-t</span> memory  <span class="cmd-comment"># Info física RAM (sudo)</span>
+
+<span class="cmd-comment"># ── PROCESOS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">top</span>                  <span class="cmd-comment"># Monitor interactivo</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">htop</span>                 <span class="cmd-comment"># top mejorado (apt install htop)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ps aux</span>              <span class="cmd-comment"># Todos los procesos</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ps aux</span> | grep nginx  <span class="cmd-comment"># Filtrar proceso</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">kill</span> <span class="cmd-value">-9 1234</span>         <span class="cmd-comment"># Matar PID (forzado)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">killall</span> <span class="cmd-value">firefox</span>      <span class="cmd-comment"># Matar por nombre</span>
+
+<span class="cmd-comment"># ── SERVICIOS (systemd) ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl status</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl start|stop|restart|reload</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">systemctl enable|disable</span> nginx
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">journalctl</span> <span class="cmd-flag">-u</span> nginx <span class="cmd-flag">-n</span> <span class="cmd-value">50</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">journalctl</span> <span class="cmd-flag">-xe</span>          <span class="cmd-comment"># Logs de error recientes</span>
+
+<span class="cmd-comment"># ── PAQUETES (APT — Debian/Ubuntu) ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt update && sudo apt upgrade</span> <span class="cmd-flag">-y</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt install</span> <span class="cmd-value">htop</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt remove</span> <span class="cmd-value">htop</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt purge</span> <span class="cmd-value">htop</span>   <span class="cmd-comment"># Borrar también config</span>
+
+<span class="cmd-comment"># ── USUARIOS Y PERMISOS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo useradd</span> <span class="cmd-flag">-m</span> <span class="cmd-value">newuser</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo passwd</span> <span class="cmd-value">newuser</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo usermod</span> <span class="cmd-flag">-aG</span> sudo <span class="cmd-value">user</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">chmod</span> <span class="cmd-value">755</span> archivo.sh
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">chown</span> <span class="cmd-value">user:grupo</span> archivo
+
+<span class="cmd-comment"># ── ARCHIVOS Y LOGS ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">find</span> / <span class="cmd-flag">-name</span> <span class="cmd-value">"*.conf"</span> <span class="cmd-flag">-type f</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">grep</span> <span class="cmd-flag">-r</span> <span class="cmd-value">"error"</span> /var/log/
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tar</span> <span class="cmd-flag">-czf</span> backup.tar.gz /datos
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tar</span> <span class="cmd-flag">-xzf</span> backup.tar.gz
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">du</span> <span class="cmd-flag">-sh</span> /var/log/*
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">tail</span> <span class="cmd-flag">-f</span> /var/log/syslog    <span class="cmd-comment"># Log en tiempo real</span>
+
+<span class="cmd-comment"># ── RED ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip a</span>                      <span class="cmd-comment"># Interfaces y direcciones IP</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip route</span>                  <span class="cmd-comment"># Tabla de enrutamiento</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip addr add</span> <span class="cmd-value">192.168.1.50/24 dev eth0</span>  <span class="cmd-comment"># IP estatica temporal</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ss -tulpn</span>                 <span class="cmd-comment"># Puertos en escucha</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">nmcli dev status</span>          <span class="cmd-comment"># Estado de conexiones (NetworkManager)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">nmtui</span>                     <span class="cmd-comment"># Interfaz grafica de red en terminal</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ssh</span> <span class="cmd-value">usuario@ip</span>            <span class="cmd-comment"># Conexion SSH remota</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">rsync -av</span> <span class="cmd-value">dir/ usuario@ip:/destino</span>  <span class="cmd-comment"># Sincronizar carpetas por red</span>
+
+<span class="cmd-comment"># ── DISCOS Y PARTICIONES ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">lsblk -f</span>                   <span class="cmd-comment"># Discos con sistema de archivos</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo fdisk -l</span>             <span class="cmd-comment"># Listar discos y particiones</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo blkid</span>                <span class="cmd-comment"># UUID de particiones (para fstab)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">df -h</span>                     <span class="cmd-comment"># Espacio libre por montaje</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">mount</span> <span class="cmd-value">/dev/sdb1 /mnt/usb</span>  <span class="cmd-comment"># Montar una particion</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">umount</span> <span class="cmd-value">/mnt/usb</span>          <span class="cmd-comment"># Desmontar</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo smartctl -a</span> <span class="cmd-value">/dev/sda</span> <span class="cmd-comment"># Salud del disco (SMART)</span>
+
+<span class="cmd-comment"># ── PAQUETES (otros gestores) ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo dnf install</span> <span class="cmd-value">htop</span>    <span class="cmd-comment"># Fedora / RHEL</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo pacman -S</span> <span class="cmd-value">htop</span>      <span class="cmd-comment"># Arch / Manjaro</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo yay -S</span> <span class="cmd-value">paquete</span>      <span class="cmd-comment"># AUR (Arch)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">flatpak install</span> flathub <span class="cmd-value">org.videolan.VLC</span>  <span class="cmd-comment"># Apps universales Flatpak</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">snap install</span> <span class="cmd-value">htop</span>        <span class="cmd-comment"># Snap (Ubuntu)</span>
+
+<span class="cmd-comment"># ── BUSQUEDA Y TEXTO ──</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">grep -n</span> <span class="cmd-value">"error"</span> archivo.log  <span class="cmd-comment"># Buscar con numero de linea</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">awk '{print $1}'</span> <span class="cmd-value">archivo</span>  <span class="cmd-comment"># Imprimir primera columna</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">sed 's/antiguo/nuevo/g'</span> <span class="cmd-value">archivo</span>  <span class="cmd-comment"># Reemplazar texto</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">wc -l</span> <span class="cmd-value">archivo</span>            <span class="cmd-comment"># Contar lineas</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="ports-acc">
+      <div class="accordion-header" onclick="toggleAccordion('ports-acc')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔌</span><div><div class="accordion-title">Puertos de Red — Referencia rápida</div><div class="accordion-subtitle">TCP/UDP más usados en soporte técnico</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Puerto</th><th>Proto</th><th>Servicio</th><th>Descripción</th></tr>
+          <tr><td>21</td><td>TCP</td><td>FTP</td><td>Transferencia de archivos (control)</td></tr>
+          <tr><td>22</td><td>TCP</td><td>SSH</td><td>Shell seguro, acceso remoto cifrado</td></tr>
+          <tr><td>23</td><td>TCP</td><td>Telnet</td><td>Shell remoto sin cifrar — inseguro</td></tr>
+          <tr><td>25</td><td>TCP</td><td>SMTP</td><td>Envío de correo electrónico</td></tr>
+          <tr><td>53</td><td>TCP/UDP</td><td>DNS</td><td>Resolución de nombres de dominio</td></tr>
+          <tr><td>67/68</td><td>UDP</td><td>DHCP</td><td>Asignación automática de IP (server/client)</td></tr>
+          <tr><td>80</td><td>TCP</td><td>HTTP</td><td>Web sin cifrar</td></tr>
+          <tr><td>110</td><td>TCP</td><td>POP3</td><td>Recepción de correo (descarga local)</td></tr>
+          <tr><td>143</td><td>TCP</td><td>IMAP</td><td>Acceso a correo en servidor</td></tr>
+          <tr><td>161/162</td><td>UDP</td><td>SNMP</td><td>Monitoreo de dispositivos de red</td></tr>
+          <tr><td>389</td><td>TCP</td><td>LDAP</td><td>Directorio activo / autenticación</td></tr>
+          <tr><td>443</td><td>TCP</td><td>HTTPS</td><td>Web cifrada con TLS/SSL</td></tr>
+          <tr><td>445</td><td>TCP</td><td>SMB</td><td>Compartir archivos e impresoras Windows</td></tr>
+          <tr><td>587</td><td>TCP</td><td>SMTP TLS</td><td>Envío de correo cifrado (STARTTLS)</td></tr>
+          <tr><td>3389</td><td>TCP</td><td>RDP</td><td>Escritorio remoto Windows</td></tr>
+          <tr><td>5900</td><td>TCP</td><td>VNC</td><td>Control remoto de escritorio</td></tr>
+          <tr><td>8080</td><td>TCP</td><td>HTTP Alt.</td><td>Web alternativa / proxies / desarrollo</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-vs-ps">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-vs-ps')">
+        <div class="accordion-title-row"><span class="accordion-icon">⚡</span><div><div class="accordion-title">CMD vs PowerShell — Comparativa y equivalencias</div><div class="accordion-subtitle">Comandos equivalentes · cuándo usar cada uno</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tarea</th><th>CMD</th><th>PowerShell</th></tr>
+          <tr><td>Listar archivos</td><td>dir</td><td>Get-ChildItem (ls)</td></tr>
+          <tr><td>Copiar archivos</td><td>copy / xcopy</td><td>Copy-Item</td></tr>
+          <tr><td>Mover archivos</td><td>move</td><td>Move-Item</td></tr>
+          <tr><td>Borrar archivos</td><td>del</td><td>Remove-Item</td></tr>
+          <tr><td>Crear directorio</td><td>mkdir</td><td>New-Item -Type Directory</td></tr>
+          <tr><td>Listar procesos</td><td>tasklist</td><td>Get-Process</td></tr>
+          <tr><td>Matar proceso</td><td>taskkill /PID 1234</td><td>Stop-Process -Id 1234</td></tr>
+          <tr><td>Servicios</td><td>sc query</td><td>Get-Service</td></tr>
+          <tr><td>Información red</td><td>ipconfig /all</td><td>Get-NetIPConfiguration</td></tr>
+          <tr><td>Test de red</td><td>ping host</td><td>Test-NetConnection host</td></tr>
+          <tr><td>Variables entorno</td><td>set / echo %VAR%</td><td>$env:VAR</td></tr>
+          <tr><td>Ayuda de comando</td><td>comando /?</td><td>Get-Help Comando</td></tr>
+          <tr><td>Ejecutar como admin</td><td>runas /user:admin cmd</td><td>Start-Process -Verb RunAs</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>CMD o PowerShell</strong> Usa CMD para tareas rápidas y simples. Usa PowerShell para automatización, scripting avanzado, administración de Active Directory y Azure. PowerShell puede ejecutar todos los comandos de CMD más sus propios cmdlets. En Windows 11, PowerShell es el intérprete por defecto.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="variables-entorno">
+      <div class="accordion-header" onclick="toggleAccordion('variables-entorno')">
+        <div class="accordion-title-row"><span class="accordion-icon">📦</span><div><div class="accordion-title">Variables de Entorno Windows</div><div class="accordion-subtitle">Rutas del sistema · uso en CMD y PowerShell</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Variable</th><th>Ruta / Valor típico</th><th>Uso</th></tr>
+          <tr><td>%SystemRoot%</td><td>C:\Windows</td><td>Directorio de Windows</td></tr>
+          <tr><td>%SystemDrive%</td><td>C:</td><td>Unidad del sistema</td></tr>
+          <tr><td>%USERPROFILE%</td><td>C:\Users\Usuario</td><td>Carpeta del usuario actual</td></tr>
+          <tr><td>%APPDATA%</td><td>C:\Users\Usuario\AppData\Roaming</td><td>Datos de aplicaciones por usuario</td></tr>
+          <tr><td>%TEMP% / %TMP%</td><td>.../AppData\Local\Temp</td><td>Archivos temporales (limpiar periódicamente)</td></tr>
+          <tr><td>%ProgramFiles%</td><td>C:\Program Files</td><td>Aplicaciones de 64 bits</td></tr>
+          <tr><td>%ProgramFiles(x86)%</td><td>C:\Program Files (x86)</td><td>Aplicaciones de 32 bits</td></tr>
+          <tr><td>%COMPUTERNAME%</td><td>MiPC</td><td>Nombre del equipo en la red</td></tr>
+          <tr><td>%USERNAME%</td><td>Usuario</td><td>Usuario actualmente conectado</td></tr>
+          <tr><td>%PATH%</td><td>Lista de rutas separadas por ;</td><td>Directorios buscados al ejecutar comandos</td></tr>
+        </table></div>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="code-lang">cmd / powershell · usar variables de entorno</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># CMD: abrir carpeta temp del usuario</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">explorer</span> <span class="cmd-value">%TEMP%</span>
+
+<span class="cmd-comment"># CMD: listar todas las variables de entorno</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">set</span>
+
+<span class="cmd-comment"># PowerShell: ver variable específica</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">echo</span> <span class="cmd-value">$env:USERPROFILE</span>
+
+<span class="cmd-comment"># PowerShell: listar todas las variables de entorno</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ChildItem</span> <span class="cmd-value">Env:</span>
+
+<span class="cmd-comment"># Abrir editor GUI de variables de entorno</span>
+          <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">rundll32</span> sysdm.cpl,EditEnvironmentVariables</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="cmd-git">
+      <div class="accordion-header" onclick="toggleAccordion('cmd-git')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔀</span><div><div class="accordion-title">Git — Comandos esenciales</div><div class="accordion-subtitle">Repositorios · ramas · deshacer · remotos</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Descripción</th><th>Ejemplo útil</th></tr>
+          <tr><td>git init</td><td>Crea un repositorio nuevo</td><td>git init -b main</td></tr>
+          <tr><td>git clone</td><td>Clona un repositorio remoto</td><td>git clone https://github.com/usuario/repo.git</td></tr>
+          <tr><td>git status</td><td>Estado del árbol de trabajo</td><td>git status --short</td></tr>
+          <tr><td>git add</td><td>Agrega cambios al área de staging</td><td>git add .</td></tr>
+          <tr><td>git commit</td><td>Guarda los cambios con mensaje</td><td>git commit -m "fix: corregir bug de login"</td></tr>
+          <tr><td>git log</td><td>Historial de commits</td><td>git log --oneline -10</td></tr>
+          <tr><td>git branch</td><td>Lista / crea ramas</td><td>git branch -a</td></tr>
+          <tr><td>git checkout / switch</td><td>Cambia de rama o recupera archivos</td><td>git switch main</td></tr>
+          <tr><td>git merge</td><td>Integra otra rama en la actual</td><td>git merge feature</td></tr>
+          <tr><td>git pull</td><td>Trae cambios del remoto</td><td>git pull origin main</td></tr>
+          <tr><td>git push</td><td>Sube commits al remoto</td><td>git push origin main</td></tr>
+          <tr><td>git stash</td><td>Guarda temporalmente cambios sin commitear</td><td>git stash && git stash pop</td></tr>
+          <tr><td>git reset</td><td>Deshace commits (cuidado con --hard)</td><td>git reset --soft HEAD~1</td></tr>
+          <tr><td>git diff</td><td>Diferencias de archivos</td><td>git diff --stat</td></tr>
+          <tr><td>git remote</td><td>Gestiona los remotos</td><td>git remote -v</td></tr>
+        </table></div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">⚠️</span>
+          <div class="content"><strong>Regla de oro:</strong> nunca uses <b>git reset --hard</b> o <b>git push --force</b> sobre historial compartido sin confirmar con el equipo. Si borraste un commit por accidente, <b>git reflog</b> permite recuperarlo.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent3);">Comandos de Red</h3>
+    <div class="code-block">
+      <div class="code-block-header"><span class="code-lang">ping · ipconfig · tracert</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+      <pre><span class="cmd-comment"># PING — conectividad y latencia</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-value">8.8.8.8</span>                  <span class="cmd-comment"># Ping basico (4 pings en Windows)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-t</span> google.com           <span class="cmd-comment"># Ping continuo (Ctrl+C para detener)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-n</span> <span class="cmd-value">10</span> google.com        <span class="cmd-comment"># 10 pings Windows</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ping</span> <span class="cmd-flag">-c</span> <span class="cmd-value">10</span> google.com        <span class="cmd-comment"># 10 pings Linux/macOS</span>
+<span class="cmd-success"># TTL=64 → Linux/macOS  |  TTL=128 → Windows</span>
+<span class="cmd-output"># Latencia ideal: &lt;10ms LAN · &lt;50ms ISP · &lt;150ms internet</span>
+<span class="cmd-error"># Request timeout → host bloqueado o inaccesible</span>
+
+<span class="cmd-comment"># IPCONFIG — configuracion de red Windows</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span>                  <span class="cmd-comment"># Ver IPs y adaptadores</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/all</span>            <span class="cmd-comment"># MAC, DHCP, DNS servers</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/release</span>        <span class="cmd-comment"># Liberar IP de DHCP</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/renew</span>          <span class="cmd-comment"># Solicitar nueva IP al DHCP</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ipconfig</span> <span class="cmd-flag">/flushdns</span>       <span class="cmd-comment"># Limpiar cache DNS local</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip addr</span>                   <span class="cmd-comment"># Linux: equivalente a ipconfig</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip route show</span>            <span class="cmd-comment"># Tabla de enrutamiento Linux</span>
+
+<span class="cmd-comment"># TRACERT — ruta de paquetes</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">tracert</span> google.com         <span class="cmd-comment"># Windows: muestra cada salto (hop)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">tracert</span> <span class="cmd-flag">-d</span> google.com     <span class="cmd-comment"># Sin resolucion DNS (mas rapido)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">traceroute</span> google.com     <span class="cmd-comment"># Linux/macOS</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">mtr</span> google.com            <span class="cmd-comment"># ping + traceroute en tiempo real</span>
+<span class="cmd-output"># * * * = router no responde ICMP (no siempre indica fallo)</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header"><span class="code-lang">nslookup · netstat · arp · wifi · reset</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+      <pre><span class="cmd-comment"># NSLOOKUP / DIG — consultas DNS</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> google.com           <span class="cmd-comment"># Consulta DNS por defecto</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> google.com <span class="cmd-value">8.8.8.8</span>   <span class="cmd-comment"># Usar DNS de Google</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">nslookup</span> <span class="cmd-flag">-type=MX</span> gmail.com   <span class="cmd-comment"># Registros de correo</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dig</span> <span class="cmd-flag">+short</span> google.com         <span class="cmd-comment"># Solo la IP resultante</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">dig</span> <span class="cmd-flag">-x</span> <span class="cmd-value">8.8.8.8</span>               <span class="cmd-comment"># Reverse DNS lookup</span>
+
+<span class="cmd-comment"># NETSTAT — conexiones y puertos</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-ano</span>                  <span class="cmd-comment"># Conexiones con PID</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-ano</span> | findstr :<span class="cmd-value">80</span>   <span class="cmd-comment"># Proceso usando el puerto 80</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netstat</span> <span class="cmd-flag">-a</span>                    <span class="cmd-comment"># Ver si hay virus/malware por conexiones inusuales</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ss</span> <span class="cmd-flag">-tulpn</span>                    <span class="cmd-comment"># Linux: puertos en escucha con proceso</span>
+
+<span class="cmd-comment"># ARP — tabla de direcciones MAC</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">arp</span> <span class="cmd-flag">-a</span>                       <span class="cmd-comment"># Ver tabla ARP (IP → MAC)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">arp</span> <span class="cmd-flag">-d</span> <span class="cmd-value">192.168.1.100</span>         <span class="cmd-comment"># Eliminar entrada ARP</span>
+
+<span class="cmd-comment"># WIFI Y RESET DE PILA DE RED</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh wlan show profiles</span>           <span class="cmd-comment"># Redes WiFi guardadas</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh wlan show profile name=</span>"<span class="cmd-value">MiRed</span>" <span class="cmd-flag">key=clear</span>  <span class="cmd-comment"># Ver contrasena</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh interface ip reset</span>           <span class="cmd-comment"># Resetear TCP/IP stack</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh winsock reset</span>               <span class="cmd-comment"># Resetear Winsock (problemas de conexion)</span>
+
+<span class="cmd-comment"># NMAP — escaneo de red (instalar por separado)</span>
+          <span class="cmd-prompt">$</span> <span class="cmd-keyword">nmap</span> <span class="cmd-flag">-sn</span> <span class="cmd-value">192.168.1.0/24</span>       <span class="cmd-comment"># Ping scan: hosts activos en la red</span>
+          <span class="cmd-prompt">$</span> <span class="cmd-keyword">nmap</span> <span class="cmd-flag">-sV</span> <span class="cmd-value">192.168.1.1</span>          <span class="cmd-comment"># Detectar servicios y versiones</span>
+
+<span class="cmd-comment"># CURL — pruebas HTTP (cliente de red)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">curl</span> <span class="cmd-flag">-I</span> https://google.com       <span class="cmd-comment"># Solo headers HTTP (status code)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">curl</span> <span class="cmd-flag">-v</span> https://mi-sitio.com      <span class="cmd-comment"># Detallado: TLS, DNS, handshake</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">curl</span> <span class="cmd-flag">-s</span> ifconfig.me               <span class="cmd-comment"># IP publica actual</span>
+
+<span class="cmd-comment"># HOSTNAME / DOMINIO / IP</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">hostname</span>                    <span class="cmd-comment"># Nombre del equipo</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">whoami</span>                      <span class="cmd-comment"># Usuario actual</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">hostname</span> <span class="cmd-flag">-I</span>                  <span class="cmd-comment"># IPs locales Linux</span>
+
+<span class="cmd-comment"># TROUBLESHOOTING AVANZADO</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">pathping</span> google.com           <span class="cmd-comment"># tracert + estadisticas de perdida</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">getmac</span> /v                    <span class="cmd-comment"># Direcciones MAC del equipo</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">netsh</span> <span class="cmd-value">interface show interface</span>  <span class="cmd-comment"># Estado de adaptadores</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ip neigh</span>                    <span class="cmd-comment"># Tabla ARP en Linux (vecinos)</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ethtool</span> eth0                  <span class="cmd-comment"># Estado y velocidad del enlace</span></pre>
+    </div>
+    <div class="info-box info-tip mt-2">
+      <span class="icon">🔍</span>
+      <div class="content"><strong>Flujo de solucion de problemas de conectividad</strong> ① Deshabilitar y rehabilitar la placa de red en Centro de Redes. ② ipconfig /release + /renew + /flushdns. ③ Apagar y reiniciar el router/modem. ④ Probar el cable de red con un tester de red. ⑤ Conectar el modem directamente a la PC para descartar router. ⑥ Cambiar entre Ethernet y WiFi para descartar placa de red. ⑦ Si persiste, contactar al ISP ya que la falla puede estar en el DSLAM de la central telefonica.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/subnet.js"></script>
+<script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="../assets/js/reading-progress.js"></script>
+</body>
+</html>

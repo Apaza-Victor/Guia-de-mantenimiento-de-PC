@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cables, Conectores y Puertos - Redes de Computadoras | TechGuide</title>
+  <meta name="description" content="Redes · Cables, conectores y puertos. UTP, coaxial, fibra optica, RJ-45, RJ-11, NIC, switch, router y patch panel con visores 3D.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cables, Conectores y Puertos - Redes de Computadoras | TechGuide">
+  <meta property="og:description" content="Redes · Cables, conectores y puertos. UTP, coaxial, fibra optica, RJ-45, RJ-11, NIC, switch, router y patch panel con visores 3D.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-plug"></i></div>
+      <h1><span class="hl">Redes</span> · Cables, Conectores y Puertos</h1>
+      <p>UTP, coaxial, fibra optica, RJ-45, NIC, switch, router y patch panel con visores 3D.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
+    <a class='chip active' href='red-cables-conectores.html'><i class='bi bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi bi-diagram-3'></i>Arquitectura</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Cables y Conectores</span></nav>
+
+<div class="content-section" id="cables" data-aos="fade-up">
+  <h2 class="section-title"><i class="bi bi-usb-cable"></i> Cables de Red</h2>
+  <p class="section-subtitle">Par trenzado · Coaxial · Fibra optica</p>
+
+  <div class="info-box info-tip mb-2">
+    <span class="icon"><i class="bi bi-info-circle"></i></span>
+    <div class="content"><strong>El cable es el medio fisico</strong> por el que viaja la informacion entre las computadoras. Ninguna red funciona sin el: conectar una tarjeta de red (NIC) a un switch o router requiere el cable correcto, ponchado con el conector correcto y en el puerto correcto. Esta pagina reune los tres eslabones: cable, conector y puerto.</div>
+  </div>
+
+  <div class="accordion open" id="par-trenzado">
+    <div class="accordion-header" onclick="toggleAccordion('par-trenzado')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Par Trenzado</div><div class="accordion-subtitle">UTP · STP · FTP · Categorias CAT3 a CAT8</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">Es el cable de red mas usado. Estructura basica: 8 hilos de cobre agrupados en 4 pares trenzados, cada par con un color solido y su version rayada (blanca con franja de color). El trenzado reduce la interferencia electromagnetica (EMI) y la diafonia (crosstalk) entre pares.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>UTP — Unshielded Twisted Pair</h4><p>Par trenzado sin apantallar. La variante mas utilizada por su bajo costo, facil manejo y porque no requiere herramientas especiales. Mas susceptible a interferencias electromagneticas.</p></div>
+        <div class="conn-card"><h4>STP — Shielded Twisted Pair</h4><p>Par trenzado apantallado. Tiene una malla metalica que cubre cada par de cables, ademas de una pelicula reflejante que evita interferencias. Mas costoso pero ofrece mayor proteccion contra diafonia.</p></div>
+        <div class="conn-card"><h4>FTP — Foiled Twisted Pair</h4><p>Par trenzado con pantalla global. Una pelicula reflejante cubre todos los pares de cables (no por filamentos individuales como STP). Precio intermedio entre UTP y STP.</p></div>
+      </div>
+
+      <div class="cable-3d-grid tight" data-aos="fade-up">
+        <div class="three-canvas" data-model="utp" data-title="Cable UTP (4 pares trenzados)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Cable UTP</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="rj45" data-title="Cable UTP con conector RJ-45">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">UTP + RJ-45</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+
+      <p class="subhead">Categorias UTP</p>
+      <div class="table-scroll"><table class="cmd-table">
+        <tr><th>Categoria</th><th>Velocidad</th><th>Ancho de Banda</th><th>Distancia max.</th></tr>
+        <tr><td>CAT3</td><td>10 Mbps</td><td>16 MHz</td><td>100 m</td></tr>
+        <tr><td>CAT5</td><td>100 Mbps</td><td>100 MHz</td><td>100 m</td></tr>
+        <tr><td>CAT5e</td><td>1 Gbps</td><td>100 MHz</td><td>100 m</td></tr>
+        <tr><td>CAT6</td><td>1-10 Gbps</td><td>250 MHz</td><td>100 m (10G a 55m)</td></tr>
+        <tr><td>CAT6a</td><td>10 Gbps</td><td>500 MHz</td><td>100 m</td></tr>
+        <tr><td>CAT7</td><td>10 Gbps</td><td>600 MHz</td><td>100 m (blindado)</td></tr>
+        <tr><td>CAT8</td><td>25-40 Gbps</td><td>2000 MHz</td><td>30 m (centros de datos)</td></tr>
+      </table></div>
+      <div class="info-box info-warn mt-2">
+        <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+        <div class="content"><strong>Regla de los 100 metros:</strong> la distancia maxima del segmento de cable horizontal es 100 m (90 m de cable instalado + 10 m de cables de conexion/patch cords). Mas alla de eso la senal se degrada y el enlace falla.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="cable-coaxial">
+    <div class="accordion-header" onclick="toggleAccordion('cable-coaxial')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-circle"></i></span><div><div class="accordion-title">Cable Coaxial</div><div class="accordion-subtitle">RG-6 · RG-59 · nucleo de cobre · malla de retorno</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">Constituido por un hilo principal de cobre cubierto por una capa plastica, rodeada por una pelicula reflejante que reduce las interferencias. Alrededor de ella existe una malla de hilos metalicos, y todo esto esta cubierto por una capa de hule que protege a los conductores.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>RG-6</h4><p>Cable coaxial de mayor grosor (75 ohm). Usado para TV por cable, Internet via cablemodem y senales de video HD. Mayor capacidad de transferencia y menor atenuacion que RG-59.</p></div>
+        <div class="conn-card"><h4>RG-59</h4><p>Cable coaxial mas delgado (75 ohm). Usado para video analogico CCTV y conexiones de corta distancia. Menor ancho de banda que RG-6, mas susceptible a interferencias.</p></div>
+      </div>
+      <div class="cable-3d-grid tight" data-aos="fade-up">
+        <div class="three-canvas" data-model="coaxial" data-title="Cable coaxial (corte con capas)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Cable Coaxial</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="coax-fconn" data-title="Cable coaxial con conector F">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Coaxial + F</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="fibra-optica">
+    <div class="accordion-header" onclick="toggleAccordion('fibra-optica')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-lightning"></i></span><div><div class="accordion-title">Fibra Optica</div><div class="accordion-subtitle">Monomodo vs Multimodo · senal luminica · alta velocidad</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">Nucleo de vidrio o material plastico que usa senal luminica (impulsos de luz) en lugar de electrica. Senales concentradas que no desaparecen hasta llegar a destino. Ideal para conexiones extensas y de alta velocidad. Resistente a la corrosion y a las altas temperaturas.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Fibra Monomodo (SMF)</h4><p>Nucleo muy estrecho (~9 micras). Un solo haz de luz viaja por el nucleo. Alcances de hasta 100+ km. Usada en conexiones de larga distancia, telecomunicaciones y backbones de Internet.</p></div>
+        <div class="conn-card"><h4>Fibra Multimodo (MMF)</h4><p>Nucleo mas amplio (50-62.5 micras). Multiples haces de luz rebotan dentro del nucleo. Alcances de hasta 2 km. Usada en centros de datos, redes LAN y distancias cortas-medias.</p></div>
+      </div>
+      <div class="table-scroll mt-2"><table class="cmd-table">
+        <tr><th>Caracteristica</th><th>Monomodo (SMF)</th><th>Multimodo (MMF)</th></tr>
+        <tr><td>Diametro del nucleo</td><td>~9 micras</td><td>50 / 62.5 micras</td></tr>
+        <tr><td>Fuente de luz</td><td>Laser (un solo haz)</td><td>LED / VCSEL (multiples haces)</td></tr>
+        <tr><td>Distancia maxima</td><td>100+ km</td><td>~2 km (OM3/OM4 hasta 550m a 10G)</td></tr>
+        <tr><td>Ancho de banda</td><td>Muy alto</td><td>Alto (menor que SMF)</td></tr>
+        <tr><td>Costo</td><td>Mayor (laser y transceptores caros)</td><td>Menor (LED baratos)</td></tr>
+        <tr><td>Uso tipico</td><td>Backbones, WAN, telecomunicaciones</td><td>Centros de datos, LAN, campus</td></tr>
+        <tr><td>Color de jacket tipico</td><td>Amarillo</td><td>Naranja / Aqua (OM3/OM4)</td></tr>
+      </table></div>
+      <div class="cable-3d-grid tight" data-aos="fade-up">
+        <div class="three-canvas" data-model="fiber-sc" data-title="Fibra optica + conector SC">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra SC</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="fiber-lc" data-title="Fibra duplex LC">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra LC</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="fiber-st" data-title="Fibra ST (bayoneta, legado)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra ST</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+      <div class="info-box info-tip mt-2">
+        <span class="icon"><i class="bi bi-lightbulb"></i></span>
+        <div class="content"><strong>Como elegir:</strong> para distancias cortas dentro de un edificio o centro de datos usa multimodo (mas economica). Para enlaces largos entre ciudades o proveedores de Internet, usa monomodo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="comparativa-medios">
+    <div class="accordion-header" onclick="toggleAccordion('comparativa-medios')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-bar-chart"></i></span><div><div class="accordion-title">Comparativa de Medios</div><div class="accordion-subtitle">Par trenzado · Coaxial · Fibra · Inalambrico</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="table-scroll"><table class="cmd-table">
+        <tr><th>Medio</th><th>Velocidad tipica</th><th>Distancia</th><th>Costo</th><th>Uso principal</th></tr>
+        <tr><td>Par trenzado (UTP)</td><td>10 Mbps - 40 Gbps</td><td>100 m</td><td>Bajo</td><td>Redes LAN, escritorio</td></tr>
+        <tr><td>Coaxial</td><td>Hasta ~1 Gbps (DOCSIS)</td><td>500+ m</td><td>Medio</td><td>TV por cable, Internet</td></tr>
+        <tr><td>Fibra optica</td><td>100 Mbps - 400+ Gbps</td><td>2 - 100+ km</td><td>Alto</td><td>Backbones, WAN, LAN modernas</td></tr>
+        <tr><td>Inalambrico</td><td>Hasta ~9.6 Gbps (Wi-Fi 7)</td><td>50 - 100 m</td><td>Medio</td><td>Movilidad, accesos remotos</td></tr>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section" id="conectores" data-aos="fade-up">
+  <h2 class="section-title" style="margin-top:2rem;"><i class="bi bi-plug"></i> Conectores y Herramientas</h2>
+  <p class="section-subtitle">RJ-45 · RJ-11 · F · Fibra SC/LC/ST · Crimpadora</p>
+
+  <div class="info-box info-tip mb-2">
+    <span class="icon"><i class="bi bi-mouse2"></i></span>
+    <div class="content">Arrastra cualquier visor 3D para girar el modelo. Usa la rueda del mouse o el gesto de pinza para acercar/alejar.</div>
+  </div>
+
+  <div class="accordion open" id="rj45-conector">
+    <div class="accordion-header" onclick="toggleAccordion('rj45-conector')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-ethernet"></i></span><div><div class="accordion-title">RJ-45 — Ethernet</div><div class="accordion-subtitle">8 pines · normas T568A / T568B · 8P8C</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">El conector RJ-45 (registro Jack 45, tecnicamente 8P8C) tiene 8 pines y 8 contactos dorados. Es el conector estandar de las redes Ethernet. Se usa en los extremos de los cables UTP/STP/FTP. La norma <strong>TIA/EIA-568</strong> define dos ordenes de cableado: <strong>T568A</strong> y <strong>T568B</strong> (el mas comun en la practica).</p>
+      <div class="table-scroll"><table class="cmd-table">
+        <tr><th>Pin</th><th>T568A</th><th>T568B</th><th>Par</th></tr>
+        <tr><td>1</td><td>Blanco/Verde rayado</td><td>Blanco/Naranja rayado</td><td>Par 3 (Tx+)</td></tr>
+        <tr><td>2</td><td>Verde entero</td><td>Naranja entero</td><td>Par 3 (Tx-)</td></tr>
+        <tr><td>3</td><td>Blanco/Naranja rayado</td><td>Blanco/Verde rayado</td><td>Par 2 (Rx+)</td></tr>
+        <tr><td>4</td><td>Azul entero</td><td>Azul entero</td><td>Par 1</td></tr>
+        <tr><td>5</td><td>Blanco/Azul rayado</td><td>Blanco/Azul rayado</td><td>Par 1</td></tr>
+        <tr><td>6</td><td>Naranja entero</td><td>Verde entero</td><td>Par 2 (Rx-)</td></tr>
+        <tr><td>7</td><td>Blanco/Marron rayado</td><td>Blanco/Marron rayado</td><td>Par 4</td></tr>
+        <tr><td>8</td><td>Marron entero</td><td>Marron entero</td><td>Par 4</td></tr>
+      </table></div>
+      <p class="three-note">Visualizacion 3D del orden de los pares — presiona T568A / T568B para cambiar la norma:</p>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="rj45" data-mode="b" data-title="RJ-45 T568A / T568B">
+          <div class="three-stage"></div>
+          <div class="three-bar">
+            <span class="three-title">RJ-45 T568A / T568B</span>
+            <span class="three-actions">
+              <button class="three-btn" data-norm="a">T568A</button>
+              <button class="three-btn active" data-norm="b">T568B</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="alert-box alert-info" style="margin-top:12px;">
+        <i class="bi bi-info-circle"></i>
+        <div><strong>Cable directo vs cruzado:</strong> Si ambos extremos usan la <em>misma</em> norma (T568B-T568B) obtienes un cable <strong>directo</strong> (PC&rarr;Router, PC&rarr;Switch). Si un extremo usa T568A y el otro T568B obtienes un cable <strong>cruzado</strong> (PC&rarr;PC, Switch&rarr;Switch). Los switches modernos auto-detectan esto con Auto-MDIX.</div>
+      </div>
+      <p class="three-note">Ejemplos 3D de los dos tipos de cable — el verde es directo (mismo orden en ambos extremos) y el rojo es cruzado (T568A vs T568B). Observa el orden de los hilos en cada conector:</p>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="rj45_directo" data-title="Cable directo — T568B en ambos extremos (mismo orden)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Directo · T568B = T568B</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="rj45_cruzado" data-title="Cable cruzado — T568A en un extremo y T568B en el otro">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Cruzado · T568A &ne; T568B</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+      <ul class="info-list mt-2">
+        <li>Mantener los pares trenzados hasta el minimo posible antes del contacto (ideal &le; 13 mm).</li>
+        <li>Usar 2 mm de revestimiento del cable dentro del conector para la fijacion de la lengueta.</li>
+        <li>El pin 1 corresponde al lado izquierdo con la lengueta del conector hacia abajo, mirando los contactos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion" id="otros-conectores">
+    <div class="accordion-header" onclick="toggleAccordion('otros-conectores')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-plug-fill"></i></span><div><div class="accordion-title">RJ-11 y Conector F</div><div class="accordion-subtitle">Telefono · Coaxial para TV/cablemodem</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="conn-grid">
+        <div class="conn-card"><h4>RJ-11</h4><p>Conector mas pequeno (6 posiciones, 2 o 4 contactos usados). Se usa en telefonia y en los modems DSL de los proveedores. Aparentemente similar al RJ-45 pero tiene la mitad de contactos y no se puede insertar en puertos Ethernet.</p></div>
+        <div class="conn-card"><h4>Conector F</h4><p>Conector roscado usado en cable coaxial para TV por cable y cablemodem. El hilo central del cable actua como pin; el conector se atornilla sobre la malla. Conexion firme y de baja perdida.</p></div>
+      </div>
+      <div class="cable-3d-grid tight" data-aos="fade-up">
+        <div class="three-canvas" data-model="rj11" data-title="RJ-11 (telefono, 4 hilos)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">RJ-11</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="coax-fconn" data-title="Conector F (coaxial, cablemodem/TV)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Conector F</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="conectores-fibra">
+    <div class="accordion-header" onclick="toggleAccordion('conectores-fibra')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-soundwave"></i></span><div><div class="accordion-title">Conectores de Fibra Optica</div><div class="accordion-subtitle">SC · LC · ST</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">Los cables de fibra terminan en conectores que deben estar perfectamente pulidos para no perder luz. Los mas comunes:</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>SC — Subscriber Connector</h4><p>Cuadrado, de insercion directa (push-pull). Muy usado en patch panels y en los ONT de fibra al hogar (FTTH). Cuerpo de plastico azul/verde.</p></div>
+        <div class="conn-card"><h4>LC — Lucent Connector</h4><p>Pequeno (half-size del SC) con clip tipo latchet. Dominante en centros de datos y en transceptores SFP. Duplex: dos conectores unidos por un clip.</p></div>
+        <div class="conn-card"><h4>ST — Straight Tip</h4><p>Con rotacion tipo bayoneta (girar y encajar). Redes LAN de fibra mas antiguas. Aun presente en instalaciones de legado.</p></div>
+      </div>
+      <div class="cable-3d-grid tight" data-aos="fade-up">
+        <div class="three-canvas" data-model="fiber-sc" data-title="Fibra optica + conector SC">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra SC</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="fiber-lc" data-title="Fibra duplex LC">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra LC</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="fiber-st" data-title="Fibra ST (bayoneta, legado)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Fibra ST</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+      <div class="info-box info-warn mt-2">
+        <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+        <div class="content"><strong>No mires al laser:</strong> jamas mires directamente a un puerto o conector de fibra activo. La luz de fibra puede danar la retina. Tapa siempre los conectores sin usar con sus protectores.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="herramientas-cableado">
+    <div class="accordion-header" onclick="toggleAccordion('herramientas-cableado')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-tools"></i></span><div><div class="accordion-title">Herramientas de Cableado</div><div class="accordion-subtitle">Crimpadora · Ponchadora · Tester · Pelacables</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Crimpadora (ponchadora RJ-45)</h4><p>Herramienta que presiona el conector RJ-45 sobre los 8 hilos para fijar los contactos. Incluye cuchilla para pelar el cable y para cortar el sobrante.</p></div>
+        <div class="conn-card"><h4>Ponchadora tipo Impacto (punch down)</h4><p>Inserta los hilos en los contactos de un keystone o patch panel y corta el sobrante. El cable se coloca por codigo de colores (A o B) grabado en el jack.</p></div>
+        <div class="conn-card"><h4>Tester de red</h4><p>Verifica la continuidad de los 8 pines. Un LED por pin se enciende en orden: si alguno no enciende o va fuera de orden, el cable esta mal ponchado. Detecta pares abiertos, cortos o cruzados.</p></div>
+        <div class="conn-card"><h4>Pelacables y tijeras</h4><p>Pelacables ajustables para retirar el revestimiento sin danar los hilos y tijeras de precision para cortar los conductores a 90 grados antes de insertarlos.</p></div>
+      </div>
+      <p class="three-note">Modelos 3D de las herramientas — arrastra para girar, usa la rueda para acercar:</p>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="crimper" data-title="Crimpadora RJ-45 (pone los contactos y corta)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Crimpadora</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="punchdown" data-title="Ponchadora de impacto (punch down)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Ponchadora de impacto</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="tester_net" data-title="Tester de red (8 LEDs, uno por pin)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Tester de red</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="stripper" data-title="Pelacables con cable pelado en las mordazas">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Pelacables</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+      <p class="subhead">Secuencia para ponchar un RJ-45 (norma T568B)</p>
+      <ol class="steps-list">
+        <li>Pela ~2 cm del revestimiento del cable UTP.</li>
+        <li>Ordena los 8 hilos segun la norma: B-N, N, B-V, A, B-A, V, B-M, M.</li>
+        <li>Deja solo ~12 mm de hilos visibles y corta en linea recta.</li>
+        <li>Inserta los hilos en el RJ-45 con la lengueta hacia abajo.</li>
+        <li>Verifica que cada hilo llegue al fondo del conector y que el revestimiento quede dentro de la lengueta.</li>
+        <li>Crimpa con presion firme y completa.</li>
+        <li>Prueba con el tester antes de instalarlo.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="content-section" id="puertos" data-aos="fade-up">
+  <h2 class="section-title" style="margin-top:2rem;"><i class="bi bi-router"></i> Puertos y Dispositivos de Red</h2>
+  <p class="section-subtitle">NIC · Switch · Router · Patch panel · Keystone</p>
+
+  <div class="info-box info-tip mb-2">
+    <span class="icon"><i class="bi bi-info-circle"></i></span>
+    <div class="content">Los cables terminan en <strong>puertos</strong>: el conector hembra montado en un dispositivo. Reconoce el puerto correcto de tu equipo y del equipo de red para elegir el cable adecuado.</div>
+  </div>
+
+  <div class="accordion open" id="nic-puerto">
+    <div class="accordion-header" onclick="toggleAccordion('nic-puerto')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-network"></i></span><div><div class="accordion-title">Tarjeta de Red — NIC</div><div class="accordion-subtitle">Puerto RJ-45 en el PC · 1 Gbps tipico</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">La tarjeta de interfaz de red (NIC) es el componente que conecta la computadora a la red. Puede estar integrada en la placa madre (lo mas comun) o ser una tarjeta de expansion PCIe. Su puerto RJ-45 suele tener dos LEDs: el de actividad (parpadea al transmitir) y el de velocidad/duplex.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Puerto RJ-45</h4><p>Acepta el cable UTP directo. En equipos modernos es Gigabit Ethernet (1000BASE-T) o 2.5G. Cuenta con Auto-MDIX: usa cable directo sin importar que conectes a otro PC o a un switch.</p></div>
+        <div class="conn-card"><h4>LEDs de estado</h4><p>LED de enlace (encendido = hay enlace, parpadeo = trafico) y LED de velocidad (verde/ambar segun 100 Mbps o 1 Gbps). Util para diagnosticar conexion.</p></div>
+      </div>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="nic-port" data-title="Tarjeta de red (NIC) con RJ-45">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">NIC RJ-45</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="switch-puerto">
+    <div class="accordion-header" onclick="toggleAccordion('switch-puerto')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-stack"></i></span><div><div class="accordion-title">Switch y Puertos SFP</div><div class="accordion-subtitle">Concentrador de puertos RJ-45 · uplinks de fibra</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">El switch es el corazon de una red LAN: recibe los cables de cada equipo en sus puertos RJ-45 y reenvia los datos solo al puerto destinatario. Los puertos <strong>SFP</strong> (Small Form-factor Pluggable) son modulos extraibles que permiten uplinks de fibra o cobre de mayor velocidad.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Puertos RJ-45 (1-48)</h4><p>Conectan PCs, impresoras y camaras a 100 Mbps, 1 Gbps, 10 Gbps. Cada puerto tiene LEDs de enlace/actividad y velocidad.</p></div>
+        <div class="conn-card"><h4>Puertos SFP / SFP+</h4><p>Modulos opticos (fibra) o de cobre (10G-T) para uplinks a otros switches o al router. SFP: hasta 1 Gbps. SFP+: hasta 10 Gbps.</p></div>
+      </div>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="switch-sfp" data-title="Switch con puertos RJ-45 y SFP">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Switch + SFP</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="router-puerto">
+    <div class="accordion-header" onclick="toggleAccordion('router-puerto')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-router"></i></span><div><div class="accordion-title">Router</div><div class="accordion-subtitle">Puerto WAN (Internet) · Puertos LAN · Antenas</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">El router conecta la red local con la del proveedor (Internet). En el hogar combina modem, router, switch y punto de acceso WiFi en un solo equipo. Su puerto <strong>WAN</strong> recibe el cable del modem/ONT y sus puertos <strong>LAN</strong> alimentan a los equipos.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Puerto WAN</h4><p>Conecta hacia el modem del proveedor (cable RJ-45 o conector F si es cablemodem). A veces de color distinto (gris/azul) para distinguirlo de los LAN.</p></div>
+        <div class="conn-card"><h4>Puertos LAN</h4><p>Conectan PCs, switches y APs a la red local. Suelen ser 4 puertos Gigabit. El trafico LAN interno no sale a Internet.</p></div>
+        <div class="conn-card"><h4>Puerto USB / Antenas</h4><p>El USB puede servir para impresora o disco compartido (NAS). Las antenas proveen WiFi (2.4 y 5/6 GHz).</p></div>
+      </div>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="router-back" data-title="Router: WAN/LAN, antenas y USB">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Router</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="patch-keystone">
+    <div class="accordion-header" onclick="toggleAccordion('patch-keystone')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2-fill"></i></span><div><div class="accordion-title">Patch Panel y Jack Keystone</div><div class="accordion-subtitle">Cableado estructurado · Placas de pared</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <p class="text-sm text-secondary mb-2">En cableado estructurado los cables no van directos a los equipos: terminan en un <strong>patch panel</strong> (panel de parcheo) dentro del rack. Desde el patch panel se conecta con <em>patch cords</em> cortos hasta el switch. En la pared, los <strong>jacks keystone</strong> reciben los cables que bajan de los tomas de cada oficina.</p>
+      <div class="conn-grid">
+        <div class="conn-card"><h4>Patch panel</h4><p>Panel de 12/24/48 puertos RJ-45 donde se ponchan (punchean) los cables verticales. Detras los puertos son tipo keystone; al frente se conectan los patch cords al switch.</p></div>
+        <div class="conn-card"><h4>Jack keystone</h4><p>Conector hembra modular que se inserta en placas de pared (faceplates) o en el patch panel. Cada jack se poncha segun el codigo de colores T568A/T568B.</p></div>
+      </div>
+      <div class="cable-3d-grid two" data-aos="fade-up">
+        <div class="three-canvas" data-model="patch-panel" data-title="Patch panel (8 puertos)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Patch panel</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+        <div class="three-canvas" data-model="keystone" data-title="Jack keystone RJ-45 (placa de pared)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Keystone RJ-45</span><span class="three-hint">girar / zoom</span></div>
+        </div>
+      </div>
+      <div class="info-box info-tip mt-2">
+        <span class="icon"><i class="bi bi-lightbulb"></i></span>
+        <div class="content"><strong>Cadena completa del cableado:</strong> PC &#8594; patch cord &#8594; toma de pared (keystone) &#8594; cable horizontal &#8594; patch panel &#8594; patch cord &#8594; switch. Todo con la misma norma (usa T568B en toda la instalacion) para evitar errores.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="buenas-practicas">
+    <div class="accordion-header" onclick="toggleAccordion('buenas-practicas')">
+      <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-shield-check"></i></span><div><div class="accordion-title">Buenas Practicas de Cableado</div><div class="accordion-subtitle">Evita fallas · Etiqueta · Rack ordenado</div></div></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="conn-grid">
+        <div class="conn-card"><h4>No doblar en angulo</h4><p>Radio de curvatura minimo 4x el diametro del cable. Doblarlo demasiado rompe los pares y degrada la velocidad. Usa ductos y canaletas.</p></div>
+        <div class="conn-card"><h4>Separar de cables de poder</h4><p>No tender cables de red paralelos a cables electricos (interferencia EMI). Cruzalos a 90 grados cuando sea inevitable.</p></div>
+        <div class="conn-card"><h4>Respetar los 100 m</h4><p>El segmento UTP maximo es 100 m. Para mas distancia usa switch intermedio o fibra optica.</p></div>
+        <div class="conn-card"><h4>Etiquetar todo</h4><p>Etiqueta ambos extremos de cada cable y cada puerto del patch panel. Un cable sin etiqueta es un cable que alguien tendra que rastrear con el tester.</p></div>
+      </div>
+      <div class="info-box info-warn mt-2">
+        <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+        <div class="content"><strong>Sintomas de mal cableado:</strong> enlace que se cae, velocidad que se degrada de 1 Gbps a 100 Mbps, paquetes perdidos y parpadeo de LEDs. Revisa con el tester los 8 pines en orden: un par cruzado o sin contacto produce exactamente esos sintomas.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

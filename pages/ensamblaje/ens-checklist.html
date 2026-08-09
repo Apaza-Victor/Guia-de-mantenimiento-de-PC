@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Checklist. Lista interactiva de verificacion.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Checklist - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Checklist. Lista interactiva de verificacion.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-clipboard-check"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Checklist</h1>
+      <p>Lista interactiva de verificacion.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
+    <a class='chip active' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi bi-book'></i>Conceptos Clave</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Checklist</span></nav>
+<div class="content-section" id="checklist" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.25);color:var(--accent);"><i class="bi bi-clipboard-check"></i></div>
+        <div class="section-title">
+          <h2>Checklist Interactivo</h2>
+          <p>// Marca cada tarea en tiempo real mientras armas tu equipo</p>
+        </div>
+      </div>
+
+      <div class="checklist-box" data-aos="fade-up">
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Mesa de trabajo limpia y despejada</strong>
+            <p>Minimo 80x60 cm. Superficie no alfombrada.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Pulsera antiestatica colocada o superficie aterrizada</strong>
+            <p>Proteccion ESD antes de tocar componentes.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Manual de la placa base impreso o en pantalla</strong>
+            <p>Mapa de conectores, slots y jumpers.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Herramientas organizadas: destornilladores #1 y #2</strong>
+            <p>Air comprimido, pasta termica, bridas.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>CPU inspeccionado: sin pines danados</strong>
+            <p>Verificar orientacion antes de insertar.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>RAM verificada: tipo y frecuencia compatibles</strong>
+            <p>DDR4 o DDR5 segun la placa.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>SSD/HDD revisado: interfaz M.2 o SATA correcta</strong>
+            <p>Verificar compatibilidad con la placa.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>PSU potencia suficiente para el build</strong>
+            <p>Minimo 20-30% de margen sobre el consumo total.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>CPU instalado sin forzar en el socket</strong>
+            <p>Debe caer libremente. Cerrar palanca con cuidado.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Pasta termica aplicada correctamente</strong>
+            <p>Grano de arroz en el centro del IHS.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Cooler fijo y ventilador conectado al CPU_FAN</strong>
+            <p>Patron en cruz para presion uniforme.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>RAM instalada en los slots de Dual Channel correctos</strong>
+            <p>Consultar manual para A2+B2 u otros.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Standoffs colocados en posicion correcta</strong>
+            <p>Evitar cortocircuitos. Patron correcto ATX/mATX.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>I/O Shield del gabinete instalado antes de la placa</strong>
+            <p>Encajar desde el interior hacia el exterior.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Placa base atornillada en patron de estrella</strong>
+            <p>No apretar un tornillo completamente antes de poner los demas.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>SSD M.2 instalado y asegurado</strong>
+            <p>Insertar a 30 grados, atornillar tornillo M.2.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>PSU montada y cables ATX 24-pin + EPS 8-pin conectados</strong>
+            <p>Ventilador hacia aire fresco.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>GPU instalada y cables PCIe conectados</strong>
+            <p>Click en el slot, atornillar bracket, conectar alimentacion.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Cables de panel frontal conectados</strong>
+            <p>Power SW, Reset SW, Power LED+/-, HDD LED.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Cables organizados y asegurados con bridas</strong>
+            <p>Mejor flujo de aire y estetica.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Monitor, teclado y mouse conectados</strong>
+            <p>Preparar para el primer encendido.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Interruptor trasero de PSU en posicion ON (I)</strong>
+            <p>Verificar antes de presionar power.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>PC enciende correctamente (POST exitoso)</strong>
+            <p>Verificar que aparezca imagen en el monitor.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>CPU, RAM y almacenamiento detectados en BIOS</strong>
+            <p>Entrar con DEL o F2 al BIOS.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>XMP/EXPO activado para velocidad correcta de RAM</strong>
+            <p>Velocidad por defecto puede ser menor.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box"></div>
+          <div>
+            <strong>Boot order configurado (SSD/USB como prioridad)</strong>
+            <p>Guardar cambios y reiniciar.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="subhead mt-3">Si algo falla en el primer arranque</p>
+      <div class="table-scroll mt-1"><table class="cmd-table">
+        <tr><th>Sintoma</th><th>Causa probable</th><th>Que revisar</th></tr>
+        <tr><td>Nada enciende</td><td>PSU o boton de encendido</td><td>Interruptor trasero en I, Power SW conectado al header, ATX 24-pin firme</td></tr>
+        <tr><td>Ventiladores giran, sin imagen</td><td>Cable de video o GPU</td><td>Conector en la GPU (no en la placa), GPU bien asentada en el slot</td></tr>
+        <tr><td>Pitidos al arrancar</td><td>RAM o GPU mal insertadas</td><td>Reinsertar modulos RAM, probar con uno solo, reasentar GPU</td></tr>
+        <tr><td>Se apaga solo a los segundos</td><td>Overheating del CPU</td><td>Cooler fijado con pasta termica y ventilador en CPU_FAN</td></tr>
+        <tr><td>Reinicio en bucle</td><td>CPU o RAM inestable</td><td>Verificar EPS 8-pin, memoria en slots correctos, desactivar overclock</td></tr>
+        <tr><td>Entra al BIOS pero no al SO</td><td>Boot order o medio de instalacion</td><td>Prioridad de arranque, USB booteable, modo AHCI/GPT correcto</td></tr>
+      </table></div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

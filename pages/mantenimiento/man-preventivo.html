@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preventivo - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Preventivo. Limpieza, pasta termica y monitoreo termico.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Preventivo - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Preventivo. Limpieza, pasta termica y monitoreo termico.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/visuals.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Preventivo</h1>
+      <p>Limpieza, pasta termica y monitoreo termico.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip active' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Preventivo</span></nav>
+<div class="content-section" id="preventivo" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+        <div class="section-title">
+          <h2>Mantenimiento Preventivo</h2>
+          <p>// Cuida tu PC para prolongar su vida util</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <i class="bi bi-info-circle"></i>
+        <div>El mantenimiento preventivo regular puede evitar el 80% de los problemas comunes de hardware. RealizaRevisiones cada 3 a 6 meses.</div>
+      </div>
+
+      <div class="vis" data-aos="fade-up">
+        <div class="vis-title"><i class="bi bi-shield-check"></i> Rutina de Mantenimiento Preventivo — Secuencia</div>
+        <div class="vis-sub">Orden recomendado de trabajo, de lo mas seguro a lo mas rapido</div>
+        <div class="seq">
+          <div class="seq-step"><div class="dot">1</div><div class="h">Seguridad primero</div><div class="d">Apaga, desconecta la PSU de la corriente y presiona el boton de encendido 3-5s para descargar capacitores. Trabaja en superficie antiestatica.</div><span class="tool">pulsera antiestatica · pinza de descarga</span></div>
+          <div class="seq-step"><div class="dot">2</div><div class="h">Limpieza de filtros</div><div class="d">Retira los filtros del gabinete y lavalos con agua y jabon. Deja secar completamente antes de reinstallar (evita humedad).</div><span class="tool">agua y jabon · paño</span></div>
+          <div class="seq-step"><div class="dot">3</div><div class="h">Aire en ventiladores y disipadores</div><div class="d">Sujeta cada ventilador con el dedo y sopla aire comprimido a 15-20cm. Limpia polvo de disipadores y rejillas sin tocar componentes con la boquilla.</div><span class="tool">aire comprimido · brocha antiestatica</span></div>
+          <div class="seq-step"><div class="dot">4</div><div class="h">Revision de conectores y cables</div><div class="d">Verifica que los conectores de PSU, SATA y panel frontal esten firmes. Reordena cables para no obstruir el flujo de aire.</div><span class="tool">bridas · velcro</span></div>
+          <div class="seq-step"><div class="dot">5</div><div class="h">Pasta termica (1-2 anios)</div><div class="d">Si las temperaturas subieron o pasaron 1-2 anios: limpia el IHS con alcohol isopropilico 90%+, aplica un grano de arroz y rearma.</div><span class="tool">alcohol isopropilico · pasta nueva</span></div>
+          <div class="seq-step"><div class="dot">6</div><div class="h">Software: monitoreo y diagnostico</div><div class="d">Enciende y verifica con HWMonitor o Core Temp que las temperaturas vuelvan a rango. Revisa SMART de discos y escanea malware.</div><span class="tool">HWMonitor · CrystalDiskInfo</span></div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-wind accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Limpieza interna (cada 3-6 meses)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Usa aire comprimido para limpiar ventiladores, disipadores de calor y filtros del gabinete. Manten las latas de aire a 15-20cm de distancia.</p>
+          <ul>
+            <li>Desconecta SIEMPRE la PSU y presiona el boton de encendido antes de abrir el gabinete (descarga capacitores).</li>
+            <li>Sostén los ventiladores con el dedo para que no giren libremente al limpiar con aire (pueden generar voltaje inverso).</li>
+            <li>NO uses aspiradora directamente (genera estatica). Usa aire comprimido o aspiradora especializada para electronica.</li>
+            <li>Limpia los filtros del gabinete con agua y jabon, deja secar completamente antes de reinstallar.</li>
+            <li>Revisa y limpia las conexiones de cables que puedan tener polvo acumulado.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-display accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Limpieza externa</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <ul>
+            <li><strong>Monitor:</strong> Usa un paño de microfibra ligeramente humedecido con solucion de limpieza para pantallas. Nunca pulverizes directamente sobre la pantalla.</li>
+            <li><strong>Teclado:</strong> Voltea y sacude para sacar residuos. Usa aire comprimido entre las teclas. Limpia la superficie con alcohol isopropilico al 70%.</li>
+            <li><strong>Mouse:</strong> Limpia la superficie con paño humedo. Para mouse optico, limpia el sensor con aire comprimido.</li>
+            <li><strong>Gabinete:</strong> Paño ligeramente humedo en superficies externas. Evita productos abrasivos.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-thermometer-half accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Monitoreo de temperaturas</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Usa herramientas como <strong>HWMonitor</strong>, <strong>Core Temp</strong> o <strong>Open Hardware Monitor</strong> para revisar temperaturas regularmente.</p>
+          <ul>
+            <li><strong>CPU:</strong> Ideal: 30-50°C en idle, 60-80°C bajo carga. Superior a 85°C es preocupante.</li>
+            <li><strong>GPU:</strong> Idle: 30-45°C, Bajo carga: 65-85°C. Los modelos modernos soportan hasta 90-95°C.</li>
+            <li><strong>Discos:</strong> HDD: 25-45°C. SSD: 30-55°C. Superar 60°C reduce vida util.</li>
+            <li><strong>Ambiente:</strong> Temperatura ideal del cuarto: 20-25°C. Un ambiente caluroso afecta todo el sistema.</li>
+          </ul>
+          <div class="table-scroll" style="margin-top:12px;"><table class="cmd-table">
+            <tr><th>Componente</th><th>Idle (reposo)</th><th>Carga normal</th><th>Critico</th><th>Accion recomendada</th></tr>
+            <tr><td>CPU</td><td>30-50°C</td><td>60-80°C</td><td>&gt;85°C</td><td>Revisar pasta termica y cooler</td></tr>
+            <tr><td>GPU</td><td>30-45°C</td><td>65-85°C</td><td>&gt;90°C</td><td>Limpiar ventiladores y mejorar airflow</td></tr>
+            <tr><td>SSD NVMe</td><td>30-45°C</td><td>45-65°C</td><td>&gt;70°C</td><td>Instalar disipador M.2</td></tr>
+            <tr><td>HDD</td><td>25-40°C</td><td>35-50°C</td><td>&gt;55°C</td><td>Mejorar ventilacion de la bahia</td></tr>
+            <tr><td>RAM</td><td>30-40°C</td><td>40-55°C</td><td>&gt;60°C</td><td>Revisar voltaje XMP/EXPO</td></tr>
+            <tr><td>VRM (placa)</td><td>35-45°C</td><td>60-85°C</td><td>&gt;90°C</td><td>Flujo de aire sobre el VRM</td></tr>
+            <tr><td>PSU</td><td>30-45°C</td><td>45-65°C</td><td>&gt;80°C</td><td>Limpiar rejillas y filtros</td></tr>
+          </table></div>
+          <div class="vis" style="margin-top:12px;">
+            <div class="vis-title"><i class="bi bi-thermometer-half"></i> Rango de temperatura — Referencia rapida</div>
+            <div class="vis-sub">Zona verde = normal · amarilla = vigilancia · roja = accion inmediata</div>
+            <div class="vis-grid vis-3">
+              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-cpu"></i></div><div><div class="nm">CPU</div><div class="fd">Idle 30-50°C · Carga 60-80°C</div><div class="prt">critico &gt;85°C</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-gpu-card"></i></div><div><div class="nm">GPU</div><div class="fd">Idle 30-45°C · Carga 65-85°C</div><div class="prt">critico &gt;90°C</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(227,179,65,.12);color:#e3b341;"><i class="bi bi-hdd"></i></div><div><div class="nm">SSD NVMe</div><div class="fd">30-45°C · Carga 45-65°C</div><div class="prt">critico &gt;70°C</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(227,179,65,.12);color:#e3b341;"><i class="bi bi-hard-drive"></i></div><div><div class="nm">HDD</div><div class="fd">25-40°C · Carga 35-50°C</div><div class="prt">critico &gt;55°C</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(255,107,107,.12);color:#ff6b6b;"><i class="bi bi-memory"></i></div><div><div class="nm">RAM</div><div class="fd">30-40°C · Carga 40-55°C</div><div class="prt">critico &gt;60°C</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(255,107,107,.12);color:#ff6b6b;"><i class="bi bi-power"></i></div><div><div class="nm">PSU</div><div class="fd">30-45°C · Carga 45-65°C</div><div class="prt">critico &gt;80°C</div></div></div>
+            </div>
+          </div>
+          <p>Si las temperaturas son altas, revisa: pasta termica, flujo de aire, ventiladores funcionando, filtros limpios.</p>
+        </div></div>
+      </div>
+
+      <!-- TABLA: Tipos de pasta termica -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-eyedropper accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Tipos de Pasta Termica Comparados</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La pasta termica rellena las micro-imperfecciones entre el IHS del CPU y la base del cooler para transferir calor. Su composicion define rendimiento, duracion y riesgos.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Conductividad</th><th>Duracion</th><th>Electroconductiva</th><th>Recomendada para</th></tr>
+            <tr><td>Ceramica</td><td>Media</td><td>3-5 anios</td><td>No</td><td>Usuarios casuales y novatos</td></tr>
+            <tr><td>Metalica (plata/zinc)</td><td>Alta</td><td>5+ anios</td><td>Si</td><td>Enthusiasts con experiencia</td></tr>
+            <tr><td>Silicona</td><td>Baja</td><td>2-3 anios</td><td>No</td><td>Uso basico, no recomendada para CPUs potentes</td></tr>
+            <tr><td>Carbono / Grafito</td><td>Media-alta</td><td>Larga</td><td>Leve</td><td>Rendimiento a buen precio</td></tr>
+            <tr><td>Metal liquido</td><td>Muy alta</td><td>Larga</td><td>Si (muy)</td><td>Overclocking extremo, solo en IHS de cobre/niquel</td></tr>
+            <tr><td>Diamante sintetico</td><td>Alta</td><td>Larga</td><td>No</td><td>Gama alta sin riesgo de corto</td></tr>
+          </table></div>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Peligro del metal liquido:</strong> es electroconductivo. Si se derrama sobre componentes o VRMs cercanos causa cortocircuitos y danos permanentes. NUNCA lo uses sobre disipadores de aluminio ni en laptops sin proteccion.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- METODO: Aplicacion de pasta termica -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-droplet-half accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Metodo de Aplicacion de Pasta Termica</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La cantidad y el patron importan: demasiada pasta actua como aislante, muy poca deja puntos sin cubrir. Para CPUs de escritorio (die grande), el patron en punto central o en linea es el mas eficaz.</p>
+          <div class="paste-flow" style="margin:14px 0;">
+            <div class="paste-box ok">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="5" fill="#c9a45c"/></svg>
+              <div class="nm">Punto central</div>
+              <div class="ds">Grano de arroz · AM4 / LGA1700</div>
+            </div>
+            <div class="paste-box ok">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><rect x="22" y="21" width="36" height="8" rx="4" fill="#c9a45c"/></svg>
+              <div class="nm">Linea horizontal</div>
+              <div class="ds">Dies alargados · AM5</div>
+            </div>
+            <div class="paste-box ok">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><path d="M40 15 L40 35 M30 20 L50 20 M30 30 L50 30 M35 15 L35 35 M45 15 L45 35" stroke="#c9a45c" stroke-width="3"/></svg>
+              <div class="nm">Cruz (X)</div>
+              <div class="ds">GPUs / dies grandes</div>
+            </div>
+            <div class="paste-box no">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><rect x="14" y="12" width="52" height="26" rx="4" fill="#c9a45c" opacity=".5"/></svg>
+              <div class="nm">Capa extendida</div>
+              <div class="ds">Riesgo de burbujas</div>
+            </div>
+            <div class="paste-box no">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="11" fill="#c9a45c" opacity=".7"/></svg>
+              <div class="nm">Exceso</div>
+              <div class="ds">Actua como aislante</div>
+            </div>
+            <div class="paste-box no">
+              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="2" fill="#c9a45c"/></svg>
+              <div class="nm">Deficiente</div>
+              <div class="ds">Deja puntos sin cubrir</div>
+            </div>
+          </div>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Patron</th><th>Cantidad</th><th>Ideal para</th><th>Nota</th></tr>
+            <tr><td>Punto central (X pequeña)</td><td>Grano de arroz (0.5-1g)</td><td>CPUs de escritorio (AM4, LGA1700)</td><td>La presion del cooler la expande</td></tr>
+            <tr><td>Linea horizontal</td><td>Banda fina al centro</td><td>CPUs con die alargado (Ryzen AM5)</td><td>Cubre los CCD y el I/O die</td></tr>
+            <tr><td>Cruz (X)</td><td>Cuatro puntos</td><td>GPUs o dies muy grandes</td><td>Cobertura uniforme con mas area</td></tr>
+            <tr><td>Capa extendida</td><td>Capa fina con espatula</td><td>IHS pulido o re-aplicaciones</td><td>Riesgo de burbujas si se hace mal</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Paso a paso:</strong> 1) Limpia la pasta vieja con alcohol isopropilico al 90%+ y un paño que no deje pelusa (los bastoncillos de cafe funcionan bien). 2) Aplica la cantidad de un grano de arroz al centro del IHS. 3) Coloca el cooler y aprieta en cruz (poco a poco, alternando esquinas). 4) Verifica que la base haga contacto completo. 5) Si sacas el cooler, reemplaza la pasta — no reutilices.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- TABLA: Backup 3-2-1 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-cloud-arrow-up accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Respaldo de Datos — Estrategia 3-2-1</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El backup es parte del mantenimiento preventivo: los discos fallan sin aviso y el ransomware no avisa. La regla 3-2-1 es el estandar del sector:</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Numero</th><th>Regla</th><th>En la practica</th></tr>
+            <tr><td>3</td><td>3 copias de tus datos</td><td>Original + 2 respaldos</td></tr>
+            <tr><td>2</td><td>2 soportes diferentes</td><td>Disco interno + externo (o nube)</td></tr>
+            <tr><td>1</td><td>1 copia fuera de sitio</td><td>Nube, casa de un familiar, caja a prueba de fuego</td></tr>
+          </table></div>
+          <div class="table-scroll" style="margin-top:12px;"><table class="cmd-table">
+            <tr><th>Metodo</th><th>Coste</th><th>Ventaja</th><th>Riesgo</th></tr>
+            <tr><td>Disco externo (copia manual)</td><td>$50-100</td><td>Control total, sin suscripcion</td><td>Solo si te acuerdas de hacerlo</td></tr>
+            <tr><td>Nube (OneDrive, Google Drive, iCloud)</td><td>Gratis hasta ~15GB / pago</td><td>Automatico, accesible desde cualquier lugar</td><td>Depende de Internet y de terceros</td></tr>
+            <tr><td>NAS (Red de almacenamiento)</td><td>$150-400</td><td>Automatico, centralizado, accesible en red</td><td>Costo y configuracion inicial</td></tr>
+            <tr><td>Clon de disco (imagen)</td><td>0 (si tienes disco extra)</td><td>Recuperas todo el sistema igual</td><td>No te protege del borrado accidental a nivel archivo</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Herramientas:</strong> en Windows puedes usar el Historico de archivos o Copia de seguridad de Windows. Para automatico, usa las apps de sincronizacion de tu nube. Herramientas de imagen: Macrium Reflect Free, Clonezilla, Veeam Agent Free. Programa el backup y verifica de vez en cuando que se restaure — un backup que no pruebas no existe.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- TABLA: Frecuencia de mantenimiento -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-calendar-check accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Frecuencia de Mantenimiento por Componente</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Guia de rutina segun la frecuencia recomendada. Ajusta segun el ambiente (polvo, humedad, mascotas) y horas de uso diarias.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tarea</th><th>Frecuencia</th><th>Herramienta</th><th>Tiempo estimado</th></tr>
+            <tr><td>Limpieza externa (gabinete, monitor, teclado)</td><td>Semanal - Mensual</td><td>Microfibra, aire comprimido</td><td>10-15 min</td></tr>
+            <tr><td>Limpieza de filtros de polvo</td><td>Cada 1-2 meses</td><td>Agua y jabon</td><td>5-10 min</td></tr>
+            <tr><td>Limpieza interna (ventiladores, disipadores)</td><td>Cada 3-6 meses</td><td>Aire comprimido, brocha antiestatica</td><td>20-40 min</td></tr>
+            <tr><td>Reemplazo de pasta termica</td><td>Cada 1-2 anios (o si suben temperaturas)</td><td>Alcohol isopropilico, pasta nueva</td><td>30-45 min</td></tr>
+            <tr><td>Actualizacion de drivers y SO</td><td>Mensual</td><td>Windows Update, GeForce/Adrenalin</td><td>15-30 min</td></tr>
+            <tr><td>Escaneo de malware</td><td>Semanal</td><td>Antivirus, Malwarebytes</td><td>30-60 min</td></tr>
+            <tr><td>Verificacion de discos (SMART)</td><td>Cada 3 meses</td><td>CrystalDiskInfo, smartctl</td><td>5 min</td></tr>
+            <tr><td>Reemplazo de pila CMOS</td><td>Cada 3-5 anios (o al perder fecha/hora)</td><td>Pila CR2032</td><td>10 min</td></tr>
+            <tr><td>Reemplazo de PSU (envejecimiento)</td><td>Cada 5-7 anios (segun calidad)</td><td>PSU nueva certificada</td><td>30-60 min</td></tr>
+          </table></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Actualizacion de software</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <ul>
+            <li><strong>Windows Update:</strong> Activa actualizaciones automaticas. Revisa cada semana que no haya pendientes criticas.</li>
+            <li><strong>Drivers de GPU:</strong> Descarga desde NVIDIA (GeForce Experience) o AMD (Adrenalin) periodicamente.</li>
+            <li><strong>BIOS/UEFI:</strong> Actualiza SOLO si hay un beneficio especifico (compatibilidad, seguridad). Sigue instrucciones del fabricante.</li>
+            <li><strong>Antivirus:</strong> Manten definiciones actualizadas. Escaneo completo semanal.</li>
+            <li><strong>Programas:</strong> Desinstala software que no uses. Actualiza navegadores y java/flash si los necesitas.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-bezier2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Gestion de cables (Cable Management)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Un buen cableado interno mejora el flujo de aire, facilita limpiezas futuras y se ve mas profesional.</p>
+          <ul>
+            <li>Usa bridas (cable zip) o velcro para agrupar cables.</li>
+            <li>Pasa cables por detrás de la bandeja de la motherboard.</li>
+            <li>Evita que cables sueltos toquen ventiladores.</li>
+            <li>En gabinetes con panel de vidrio, prioriza un cableado estetico.</li>
+            <li>Deja espacio suficiente para que el aire circule sin obstaculos.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-fan accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Revision de ventiladores</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <ul>
+            <li>Verifica que todos los ventiladores (CPU, GPU, gabinete, PSU) giren correctamente.</li>
+            <li>Escucha ruidos anormales: chirridos o zumbidos pueden indicar rodamientos desgastados.</li>
+            <li>Limpia los filtros de polvo del gabinete regularmente.</li>
+            <li>Configura curvas de ventilacion en BIOS/UEFI o software de control.</li>
+            <li>Reemplaza ventiladores ruidosos o defectuosos. Marcas recomendadas: Noctua, be quiet!, Arctic.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

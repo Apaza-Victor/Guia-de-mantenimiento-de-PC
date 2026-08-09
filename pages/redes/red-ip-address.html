@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direccionamiento IP - Redes de Computadoras | TechGuide</title>
+  <meta name="description" content="Redes · Direccionamiento IP. IPv4, IPv6, mascaras y calculadora.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Direccionamiento IP - Redes de Computadoras | TechGuide">
+  <meta property="og:description" content="Redes · Direccionamiento IP. IPv4, IPv6, mascaras y calculadora.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-ethernet"></i></div>
+      <h1><span class="hl">Redes</span> · Direccionamiento IP</h1>
+      <p>IPv4, IPv6, mascaras y calculadora.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
+    <a class='chip active' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi bi-diagram-3'></i>Arquitectura</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Direccionamiento IP</span></nav>
+<div class="content-section" id="ip-address" data-aos="fade-up">
+      <h2 class="section-title"><i class="bi bi-ethernet"></i> Direccionamiento IP</h2>
+      <p class="section-subtitle">IPv4 · rangos privados · CIDR · calculadora interactiva</p>
+
+      <div class="table-scroll"><table class="cmd-table mb-2">
+        <tr><th>Rango privado (RFC 1918)</th><th>CIDR</th><th>Mascara</th><th>Hosts</th><th>Uso</th></tr>
+        <tr><td>10.0.0.0 – 10.255.255.255</td><td>/8</td><td>255.0.0.0</td><td>16,777,214</td><td>Empresas grandes</td></tr>
+        <tr><td>172.16.0.0 – 172.31.255.255</td><td>/12</td><td>255.240.0.0</td><td>1,048,574</td><td>Empresas medianas</td></tr>
+        <tr><td>192.168.0.0 – 192.168.255.255</td><td>/16</td><td>255.255.0.0</td><td>65,534</td><td>Hogar / PYME</td></tr>
+        <tr><td>127.0.0.0 – 127.255.255.255</td><td>/8</td><td>—</td><td>—</td><td>Loopback (localhost)</td></tr>
+        <tr><td>169.254.0.0 – 169.254.255.255</td><td>/16</td><td>—</td><td>—</td><td>APIPA (sin DHCP disponible)</td></tr>
+      </table></div>
+      <p class="subhead">Clases de Direcciones IPv4</p>
+      <div class="table-scroll mb-2"><table class="cmd-table">
+        <tr><th>Clase</th><th>Rango inicial</th><th>Rango final</th><th>Mascara por defecto</th><th>Bits de red/host</th><th>Uso</th></tr>
+        <tr><td>A</td><td>0.0.0.0</td><td>127.255.255.255</td><td>255.0.0.0 (/8)</td><td>8 / 24</td><td>Redes muy grandes (16 millones de hosts)</td></tr>
+        <tr><td>B</td><td>128.0.0.0</td><td>191.255.255.255</td><td>255.255.0.0 (/16)</td><td>16 / 16</td><td>Redes medianas (65,534 hosts)</td></tr>
+        <tr><td>C</td><td>192.0.0.0</td><td>223.255.255.255</td><td>255.255.255.0 (/24)</td><td>24 / 8</td><td>Redes pequenas (254 hosts) — la mas comun</td></tr>
+        <tr><td>D</td><td>224.0.0.0</td><td>239.255.255.255</td><td>—</td><td>—</td><td>Multicast (grupos de difusion)</td></tr>
+        <tr><td>E</td><td>240.0.0.0</td><td>255.255.255.255</td><td>—</td><td>—</td><td>Experimental / reservada (no se usa publicamente)</td></tr>
+      </table></div>
+      <div class="info-box info-tip mb-2">
+        <span class="icon"><i class="bi bi-lightbulb"></i></span>
+        <div class="content"><strong>Dato util:</strong> 127.0.0.0/8 pertenece a la clase A pero esta reservado para loopback (localhost). Con CIDR las clases perdieron rigidez — hoy se divide con prefijos /24, /25, /30 etc., pero entender las clases ayuda a leer rangos historicos.</div>
+      </div>
+      <p class="subhead">Calculadora de Subred Interactiva</p>
+      <div class="subnet-calc">
+        <div class="subnet-row">
+          <div><div class="subnet-label">Direccion IP</div><input type="text" class="subnet-input" id="subnet-ip" placeholder="192.168.1.100" value="192.168.1.100"></div>
+          <div><div class="subnet-label">Prefijo CIDR (1-32)</div><input type="number" class="subnet-input" id="subnet-cidr" placeholder="24" value="24" min="1" max="32"></div>
+        </div>
+        <button class="subnet-btn" onclick="calcSubnet()">▶ CALCULAR</button>
+        <div class="subnet-result" id="subnet-result">
+          <div class="subnet-result-row"><span class="subnet-result-key">Direccion de red</span><span class="subnet-result-val" id="sr-net"></span></div>
+          <div class="subnet-result-row"><span class="subnet-result-key">Mascara de subred</span><span class="subnet-result-val" id="sr-mask"></span></div>
+          <div class="subnet-result-row"><span class="subnet-result-key">Primer host (Gateway)</span><span class="subnet-result-val" id="sr-first"></span></div>
+          <div class="subnet-result-row"><span class="subnet-result-key">Ultimo host</span><span class="subnet-result-val" id="sr-last"></span></div>
+          <div class="subnet-result-row"><span class="subnet-result-key">Broadcast</span><span class="subnet-result-val" id="sr-bc"></span></div>
+          <div class="subnet-result-row"><span class="subnet-result-key">Hosts utilizables</span><span class="subnet-result-val" id="sr-hosts"></span></div>
+        </div>
+      </div>
+
+      <p class="subhead">IP Publica vs Privada · Estatica vs Dinamica</p>
+      <div class="table-scroll mb-2"><table class="cmd-table">
+        <tr><th>Tipo</th><th>Caracteristica</th><th>Quien la asigna</th><th>Ejemplo</th></tr>
+        <tr><td>Publica</td><td>Unica en todo Internet, identifica tu conexion hacia afuera</td><td>Tu ISP</td><td>181.65.x.x (tu IP de salida)</td></tr>
+        <tr><td>Privada</td><td>Solo valida dentro de tu red local (RFC 1918)</td><td>Tu router (DHCP)</td><td>192.168.1.5</td></tr>
+        <tr><td>Estatica</td><td>Fija, no cambia nunca</td><td>Manual o reserva DHCP</td><td>Servidores, impresoras, NAS</td></tr>
+        <tr><td>Dinamica</td><td>Cambia en cada renovacion de concesion</td><td>DHCP</td><td>La mayoria de dispositivos de hogar</td></tr>
+      </table></div>
+      <div class="info-box info-tip mb-2">
+        <span class="icon"><i class="bi bi-lightbulb"></i></span>
+        <div class="content"><strong>¿Donde esta tu IP publica?</strong> La IP publica es la de tu router hacia Internet; TODOS los equipos de tu casa salen a Internet con la misma IP gracias al NAT. Busca "mi ip" en Google para verla. Esa IP identifica tu conexion, por eso los servicios de streaming la usan para detectar tu pais.</div>
+      </div>
+
+      <div class="accordion" id="nat-pat">
+        <div class="accordion-header" onclick="toggleAccordion('nat-pat')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">NAT y PAT — Traduccion de Direcciones de Red</div><div class="accordion-subtitle">Como una IP publica da servicio a toda la red · port forwarding</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">NAT (Network Address Translation) es el mecanismo que permite que decenas de dispositivos con IP privada compartan UNA sola IP publica. El router traduce las direcciones de cada paquete al pasar de la LAN a Internet y viceversa.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Termino</th><th>Significado</th><th>Ejemplo</th></tr>
+            <tr><td>NAT 1:1</td><td>Una IP publica ↔ una IP privada</td><td>Exponer un servidor web con IP propia</td></tr>
+            <tr><td>NAT estatico</td><td>Traduccion fija entre IPs</td><td>Un servidor interno siempre alcanzable</td></tr>
+            <tr><td>NAT dinamico</td><td>IP publica de un pool al que se asigna</td><td>ISP con mas clientes que IPs</td></tr>
+            <tr><td>PAT / NAT overloading</td><td>Muchas IP privadas ↔ UNA IP publica usando puertos</td><td>Tu router de casa (el mas comun)</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Port Forwarding (redireccion de puertos)</strong> Con PAT, para que Internet llegue a un servicio interno (ej: un servidor de juegos en tu PC) configuras en el router: puerto publico → IP privada + puerto interno. Ejemplo: <code>8080 → 192.168.1.50:8080</code>. Sin esa regla, el router no sabe a cual de tus equipos entregar el trafico entrante.</div>
+          </div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>DMZ (Zona Desmilitarizada)</strong> Algunos routers ofrecen "DMZ host": envía TODO el trafico no solicitado a un equipo. Suena facil, pero expone ese equipo completamente a Internet. Mejor usa Port Forwarding con puertos especificos que dejar DMZ activa.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="subnetting-manual">
+        <div class="accordion-header" onclick="toggleAccordion('subnetting-manual')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3"></i></span><div><div class="accordion-title">Subnetting Manual — Como Calcular una Subred a Mano</div><div class="accordion-subtitle">Formula de hosts · ejemplo paso a paso con /26 · tabla rapida de prefijos</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Antes de la calculadora, saber calcular a mano te permite responder rapido en entrevistas o sin herramientas: cuantas subredes, cuantos hosts, cual es el broadcast.</p>
+          <div class="table-scroll"><table class="cmd-table mb-2">
+            <tr><th>Prefijo</th><th>Mascara</th><th>Hosts utiles</th><th>Uso tipico</th></tr>
+            <tr><td>/24</td><td>255.255.255.0</td><td>254</td><td>Red local estandar</td></tr>
+            <tr><td>/25</td><td>255.255.255.128</td><td>126</td><td>Dividir una red en 2 partes</td></tr>
+            <tr><td>/26</td><td>255.255.255.192</td><td>62</td><td>Departamentos / segmentos pequenos</td></tr>
+            <tr><td>/27</td><td>255.255.255.224</td><td>30</td><td>Redes muy pequenas</td></tr>
+            <tr><td>/30</td><td>255.255.255.252</td><td>2</td><td>Enlaces punto a punto (router a router)</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Formula de hosts:</strong> Hosts utilizables = 2^(32 - prefijo) - 2. El "-2" se debe a la direccion de red (primera) y de broadcast (ultima). Ejemplo /26: 2^6 - 2 = 62 hosts. Para calcular la direccion de red, aplica la mascara con AND binario sobre la IP.</div>
+          </div>
+          <div class="code-block mt-2">
+            <div class="code-block-header"><span class="code-lang">Ejemplo: subred de 192.168.1.0/26</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+            <pre><span class="cmd-comment"># Bloque /26 = 64 direcciones por subred</span>
+<span class="cmd-prompt">&gt;</span> Subred 1: <span class="cmd-keyword">192.168.1.0</span>    → hosts 1-62,  broadcast 63
+<span class="cmd-prompt">&gt;</span> Subred 2: <span class="cmd-keyword">192.168.1.64</span>   → hosts 65-126, broadcast 127
+<span class="cmd-prompt">&gt;</span> Subred 3: <span class="cmd-keyword">192.168.1.128</span>  → hosts 129-190, broadcast 191
+<span class="cmd-prompt">&gt;</span> Subred 4: <span class="cmd-keyword">192.168.1.192</span>  → hosts 193-254, broadcast 255</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="cmd-diagnostico">
+        <div class="accordion-header" onclick="toggleAccordion('cmd-diagnostico')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-terminal"></i></span><div><div class="accordion-title">Comandos de Diagnostico de Red</div><div class="accordion-subtitle">Las herramientas de consola para detectar y resolver fallas</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Estos comandos funcionan en Windows (cmd/PowerShell) y en Linux/macOS (terminal). Son el primer paso para diagnosticar "no tengo internet".</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Comando</th><th>Que hace</th><th>Ejemplo de uso</th></tr>
+            <tr><td><code>ping &lt;host&gt;</code></td><td>Comprueba conectividad y latencia</td><td>ping 8.8.8.8</td></tr>
+            <tr><td><code>ipconfig</code> (Win) / <code>ifconfig</code> (Linux)</td><td>Muestra tu IP, mascara, gateway y DNS</td><td>ipconfig /all</td></tr>
+            <tr><td><code>tracert &lt;host&gt;</code> (Win) / <code>traceroute</code> (Linux)</td><td>Traza la ruta por cada salto hasta el destino</td><td>tracert www.google.com</td></tr>
+            <tr><td><code>nslookup &lt;dominio&gt;</code></td><td>Consulta el DNS: te devuelve la IP del dominio</td><td>nslookup www.google.com</td></tr>
+            <tr><td><code>netstat -ano</code></td><td>Lista puertos y conexiones activas</td><td>netstat -ano | findstr :8080</td></tr>
+            <tr><td><code>arp -a</code></td><td>Muestra la tabla ARP (IP → MAC de tu red)</td><td>arp -a</td></tr>
+            <tr><td><code>route print</code></td><td>Muestra las tablas de ruteo</td><td>route print</td></tr>
+            <tr><td><code>ipconfig /flushdns</code></td><td>Limpia la cache DNS local</td><td>ipconfig /flushdns</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Metodo de diagnostico en 4 pasos:</strong> 1) <code>ipconfig</code> — ¿tengo IP valida? (169.254.x.x = sin DHCP). 2) <code>ping 127.0.0.1</code> — ¿funciona la NIC? 3) <code>ping &lt;tu-gateway&gt;</code> — ¿llego a mi router? 4) <code>ping 8.8.8.8</code> — ¿tengo salida a Internet? Si falla el paso 3, es problema local; si falla solo el 4, es problema del ISP/DNS.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

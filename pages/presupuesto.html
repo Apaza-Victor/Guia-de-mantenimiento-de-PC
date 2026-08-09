@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armado por Presupuesto | TechGuide</title>
+  <meta name="description" content="Guia para armar una PC segun tu presupuesto: basica, media, gamer y entusiasta. Componentes recomendados por rango de precio.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Armado por Presupuesto | TechGuide">
+  <meta property="og:description" content="Guia para armar una PC segun tu presupuesto: basica, media, gamer y entusiasta. Componentes recomendados por rango de precio.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--warn-rgb),.1);border:1px solid rgba(var(--warn-rgb),.25);color:var(--warn);"><i class="bi bi-cash-coin"></i></div>
+      <h1><span class="hl">Armado</span> por Presupuesto</h1>
+      <p>Guia de componentes segun tu rango de precio. Los precios son orientativos y varian segun pais y fecha.</p>
+    </div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../index.html">Inicio</a><span class="sep">/</span><span class="current">Armado por Presupuesto</span></nav>
+<div class="content-section" id="basica" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-mortarboard"></i></div>
+      <div class="section-title">
+        <h2>Oficina y Estudio (basica)</h2>
+        <p>// Presupuesto: ~$400 - $600</p>
+      </div>
+    </div>
+
+    <div class="budget-tier" data-aos="fade-up">
+      <div class="budget-tier-head"><i class="bi bi-mortarboard"></i><h3>Oficina / Estudio</h3><span class="budget-range">$400 - $600</span></div>
+      <div class="budget-tier-body">
+        <div class="budget-part"><i class="bi bi-cpu"></i><span class="b-label">Procesador</span><span class="b-val">AMD Ryzen 3 4100 / Intel i3-12100</span></div>
+        <div class="budget-part"><i class="bi bi-motherboard"></i><span class="b-label">Placa base</span><span class="b-val">A520 / B660 basicas</span></div>
+        <div class="budget-part"><i class="bi bi-memory"></i><span class="b-label">RAM</span><span class="b-val">8-16 GB DDR4 3200</span></div>
+        <div class="budget-part"><i class="bi bi-hdd"></i><span class="b-label">Almacenamiento</span><span class="b-val">SSD SATA/NVMe 256-512 GB</span></div>
+        <div class="budget-part"><i class="bi bi-gpu-card"></i><span class="b-label">Graficos</span><span class="b-val">Integrados</span></div>
+        <div class="budget-part"><i class="bi bi-power"></i><span class="b-label">Fuente</span><span class="b-val">450W 80+ Bronze</span></div>
+        <div class="budget-part"><i class="bi bi-pc-display"></i><span class="b-label">Gabinete</span><span class="b-val">ATX economico con ventilador</span></div>
+        <div class="budget-tip"><i class="bi bi-lightbulb"></i> Para navegar, ofimatica y estudio, los graficos integrados son mas que suficientes. La RAM es lo que mas notas al abrir muchas pestanas: prioriza 16 GB.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="media" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-tools"></i></div>
+      <div class="section-title">
+        <h2>Gaming 1080p / Edicion ligera (media)</h2>
+        <p>// Presupuesto: ~$800 - $1100</p>
+      </div>
+    </div>
+
+    <div class="budget-tier" data-aos="fade-up">
+      <div class="budget-tier-head"><i class="bi bi-joystick"></i><h3>Gaming 1080p</h3><span class="budget-range">$800 - $1100</span></div>
+      <div class="budget-tier-body">
+        <div class="budget-part"><i class="bi bi-cpu"></i><span class="b-label">Procesador</span><span class="b-val">AMD Ryzen 5 5600 / Intel i5-12400F</span></div>
+        <div class="budget-part"><i class="bi bi-motherboard"></i><span class="b-label">Placa base</span><span class="b-val">B550 / B660M</span></div>
+        <div class="budget-part"><i class="bi bi-memory"></i><span class="b-label">RAM</span><span class="b-val">16 GB DDR4 3600 (2x8)</span></div>
+        <div class="budget-part"><i class="bi bi-hdd"></i><span class="b-label">Almacenamiento</span><span class="b-val">SSD NVMe 1 TB</span></div>
+        <div class="budget-part"><i class="bi bi-gpu-card"></i><span class="b-label">Graficos</span><span class="b-val">RTX 3060 / RX 6600 XT</span></div>
+        <div class="budget-part"><i class="bi bi-power"></i><span class="b-label">Fuente</span><span class="b-val">600W 80+ Bronze</span></div>
+        <div class="budget-part"><i class="bi bi-pc-display"></i><span class="b-label">Gabinete</span><span class="b-val">ATX medio con 3-4 ventiladores</span></div>
+        <div class="budget-tip"><i class="bi bi-lightbulb"></i> Este es el punto dulce de relacion precio/rendimiento. Un Ryzen 5 + 16 GB + una GPU de 60-series corre 1080p alto a 60+ FPS en casi todo. Puedes reutilizar la fuente y el gabinete de una PC vieja para bajar el costo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="alta" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent3-rgb),.12);border-color:rgba(var(--accent3-rgb),.25);color:var(--accent3);"><i class="bi bi-fire"></i></div>
+      <div class="section-title">
+        <h2>Gaming 1440p / Produccion (alta)</h2>
+        <p>// Presupuesto: ~$1500 - $2200</p>
+      </div>
+    </div>
+
+    <div class="budget-tier" data-aos="fade-up">
+      <div class="budget-tier-head"><i class="bi bi-lightning-charge"></i><h3>Gaming 1440p / Streaming</h3><span class="budget-range">$1500 - $2200</span></div>
+      <div class="budget-tier-body">
+        <div class="budget-part"><i class="bi bi-cpu"></i><span class="b-label">Procesador</span><span class="b-val">AMD Ryzen 7 7700X / Intel i5-14600K</span></div>
+        <div class="budget-part"><i class="bi bi-motherboard"></i><span class="b-label">Placa base</span><span class="b-val">B650 / Z790 (DDR5)</span></div>
+        <div class="budget-part"><i class="bi bi-memory"></i><span class="b-label">RAM</span><span class="b-val">32 GB DDR5 6000</span></div>
+        <div class="budget-part"><i class="bi bi-hdd"></i><span class="b-label">Almacenamiento</span><span class="b-val">SSD NVMe PCIe 4.0 1-2 TB</span></div>
+        <div class="budget-part"><i class="bi bi-gpu-card"></i><span class="b-label">Graficos</span><span class="b-val">RTX 4070 / RX 7800 XT</span></div>
+        <div class="budget-part"><i class="bi bi-power"></i><span class="b-label">Fuente</span><span class="b-val">750W 80+ Gold</span></div>
+        <div class="budget-part"><i class="bi bi-pc-display"></i><span class="b-label">Gabinete</span><span class="b-val">ATX con buen flujo de aire</span></div>
+        <div class="budget-tip"><i class="bi bi-lightbulb"></i> En este rango pasa a DDR5 y una GPU de 70-series para 1440p fluido. Si ademas haces edicion de video, prioriza mas nucleos (Ryzen 7/9) y mas RAM antes que una GPU mas cara.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="entusiasta" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(247,129,102,.12);border-color:rgba(247,129,102,.25);color:var(--accent-orange);"><i class="bi bi-gem"></i></div>
+      <div class="section-title">
+        <h2>Entusiasta / 4K (top)</h2>
+        <p>// Presupuesto: $3000+</p>
+      </div>
+    </div>
+
+    <div class="budget-tier" data-aos="fade-up">
+      <div class="budget-tier-head"><i class="bi bi-gem"></i><h3>Top gama 4K / Workstation</h3><span class="budget-range">$3000+</span></div>
+      <div class="budget-tier-body">
+        <div class="budget-part"><i class="bi bi-cpu"></i><span class="b-label">Procesador</span><span class="b-val">AMD Ryzen 7 7800X3D / Ryzen 9 7950X</span></div>
+        <div class="budget-part"><i class="bi bi-motherboard"></i><span class="b-label">Placa base</span><span class="b-val">X670 / B650E (DDR5)</span></div>
+        <div class="budget-part"><i class="bi bi-memory"></i><span class="b-label">RAM</span><span class="b-val">32-64 GB DDR5 6000+</span></div>
+        <div class="budget-part"><i class="bi bi-hdd"></i><span class="b-label">Almacenamiento</span><span class="b-val">SSD NVMe PCIe 5.0 2 TB</span></div>
+        <div class="budget-part"><i class="bi bi-gpu-card"></i><span class="b-label">Graficos</span><span class="b-val">RTX 4080 Super / RX 7900 XTX</span></div>
+        <div class="budget-part"><i class="bi bi-power"></i><span class="b-label">Fuente</span><span class="b-val">850-1000W 80+ Gold/Platinum</span></div>
+        <div class="budget-part"><i class="bi bi-pc-display"></i><span class="b-label">Gabinete</span><span class="b-val">ATX/EATX de alto flujo</span></div>
+        <div class="budget-tip"><i class="bi bi-lightbulb"></i> Para gaming 4K el 7800X3D es el rey absoluto. Para rendimiento multinucleo (render, compilacion) el Ryzen 9 o Intel i9 dan mas. En esta gama, no escatimes en la fuente: usa al menos 80+ Gold de buena marca.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="consejos" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--warn-rgb),.12);border-color:rgba(var(--warn-rgb),.25);color:var(--warn);"><i class="bi bi-lightbulb"></i></div>
+      <div class="section-title">
+        <h2>Consejos Generales</h2>
+        <p>// Antes de comprar</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info" data-aos="fade-up">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>Regla de distribucion del presupuesto:</strong> GPU 30-40% · CPU 20-25% · Placa 10-15% · RAM 10% · Almacenamiento 10% · Fuente 8-10% · Gabinete 5-8%.</div>
+    </div>
+    <div class="alert-box alert-warn" data-aos="fade-up">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div><strong>No ahorres en la fuente:</strong> una fuente barata puede danar todos tus componentes en un pico de voltaje. Compra una de marca reconocida (EVGA, Corsair, Seasonic, Cooler Master) con certificacion 80+.</div>
+    </div>
+    <div class="alert-box alert-info" data-aos="fade-up">
+      <i class="bi bi-lightbulb"></i>
+      <div><strong>Revisa la compatibilidad:</strong> socket del procesador vs placa, tipo de RAM (DDR4/DDR5), potencia necesaria de la fuente y espacio del gabinete para la GPU. Usa PCPartPicker para verificar el ensamblaje.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Presupuesto</span>
+      <span class="footer-tag">Armado</span>
+      <span class="footer-tag">Gaming</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/subnet.js"></script>
+<script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="../assets/js/reading-progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabinete - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Gabinete. Tipos, flujo de aire y cable management.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gabinete - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Gabinete. Tipos, flujo de aire y cable management.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-pc-display"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Gabinete</h1>
+      <p>Tipos, flujo de aire y cable management.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip active' href='ens-gabinete.html'><i class='bi bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi bi-book'></i>Conceptos Clave</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Gabinete</span></nav>
+<div class="content-section" id="gabinete" data-aos="fade-up">
+      <h2 class="section-title"><i class="bi bi-pc-display"></i> Gabinete (Case)</h2>
+      <p class="section-subtitle">Tipos · Panel frontal · Flujo de aire · Cable management · Bahias</p>
+
+      <div class="info-box info-tip mb-2">
+        <span class="icon"><i class="bi bi-info-circle"></i></span>
+        <div class="content"><strong>Por que importa el gabinete?</strong> El gabinete define que placa base cabe, cuanto espacio hay para componentes y como circula el aire. Elegir bien el gabinete es tan importante como elegir la placa base.</div>
+      </div>
+
+      <div class="accordion open" id="tipos-gabinete">
+        <div class="accordion-header" onclick="toggleAccordion('tipos-gabinete')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box"></i></span><div><div class="accordion-title">Tipos de Gabinete y Factores de Forma</div><div class="accordion-subtitle">Full Tower · Mid Tower · Mini Tower · Mini-ITX · HTPC</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Placa base</th><th>Caracteristicas</th></tr>
+            <tr><td>Full Tower</td><td>E-ATX / ATX / mATX</td><td>Maxima expansion, radiadores de 360-420mm, varios discos. Ideal para workstations y servidores.</td></tr>
+            <tr><td>Mid Tower</td><td>ATX / mATX / ITX</td><td>El mas comun — buen balance entre espacio y tamano. Soporta la mayoria de builds.</td></tr>
+            <tr><td>Mini Tower</td><td>mATX / ITX</td><td>Compacto, menor ventilacion, ideal para ofimatica y usos basicos.</td></tr>
+            <tr><td>Mini-ITX</td><td>ITX</td><td>Muy compacto para placas ITX. Popular en HTPCs y builds portatiles. Menos slots de expansion.</td></tr>
+            <tr><td>HTPC</td><td>ITX / mATX</td><td>Diseado para sala de estar. Factor de forma bajo y ancho, similar a un equipo de audio.</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="panel-frontal">
+        <div class="accordion-header" onclick="toggleAccordion('panel-frontal')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-toggle2-on"></i></span><div><div class="accordion-title">Panel Frontal del Gabinete</div><div class="accordion-subtitle">Botones · Puertos USB · LEDs de estado</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La cara frontal del gabinete contiene los controles e indicadores fisicos del sistema que se conectan a los headers de la placa base.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Elemento</th><th>Funcion</th></tr>
+            <tr><td>Power Button</td><td>Boton momentaneo que senala al chipset que encienda la placa. Sin polaridad.</td></tr>
+            <tr><td>Reset Button</td><td>Conectado al pin RESET. Reinicia el sistema. Util cuando el equipo congela.</td></tr>
+            <tr><td>Power LED</td><td>Indica que el sistema esta encendido o en suspension (parpadea en S3). Tiene polaridad.</td></tr>
+            <tr><td>HDD LED</td><td>Parpadea cuando hay lectura/escritura en cualquier disco SATA o NVMe. Tiene polaridad.</td></tr>
+            <tr><td>USB frontal</td><td>Conectado internamente a un header USB 2.0 (9 pines) o USB 3.0 (19 pines) de la placa base.</td></tr>
+            <tr><td>Audio frontal</td><td>Conectado al header HD Audio de la placa base (estandar Intel HD Audio).</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Cuidado con la polaridad</strong> Los LEDs (Power LED y HDD LED) tienen polaridad — el cable de color es positivo. Power SW y Reset SW no tienen polaridad: pueden invertirse sin problema. Consultar el manual de la placa base para la ubicacion de cada pin.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="flujo-aire">
+        <div class="accordion-header" onclick="toggleAccordion('flujo-aire')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-wind"></i></span><div><div class="accordion-title">Flujo de Aire (Airflow)</div><div class="accordion-subtitle">Intake vs Exhaust · Presion positiva/negativa</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El flujo de aire dentro del gabinete sigue el principio de que el aire frio entra por la parte baja/frontal y el aire caliente sube y sale por arriba/atras.</p>
+          <div class="conn-grid">
+            <div class="conn-card"><h4>Intake (Entrada de aire)</h4><p>Ventiladores frontales e inferiores que succionan aire fresco hacia el interior. Generalmente montados en la parte frontal del gabinete apuntando hacia adentro.</p></div>
+            <div class="conn-card"><h4>Exhaust (Salida de aire)</h4><p>Ventiladores traseros y superiores que expulsan el aire caliente. El ventilador trasero es el mas comun (120mm estandar). Los superiores son ideales para refrigeracion liquida.</p></div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Configuracion</th><th>Descripcion</th><th>Ideal para</th></tr>
+            <tr><td>Presion positiva</td><td>Mas ventiladores de entrada que salida. El aire solo entra por filtros — menos polvo.</td><td>Mayor vida util, menos limpieza</td></tr>
+            <tr><td>Presion negativa</td><td>Mas ventiladores de salida que entrada. El aire entra por todas las ranuras — mas polvo.</td><td>Mejor refrigeracion de CPU/GPU</td></tr>
+            <tr><td>Equilibrada</td><td>Igual numero de intake y exhaust. Balance entre polvo y refrigeracion.</td><td>La mas comun</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="cable-management">
+        <div class="accordion-header" onclick="toggleAccordion('cable-management')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-through-end"></i></span><div><div class="accordion-title">Cable Management</div><div class="accordion-subtitle">Gestion de cables · bridas · espacio trasero</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La gestion de cables tiene impacto real mas alla de la estetica:</p>
+          <div class="conn-grid">
+            <div class="conn-card"><h4>Flujo de aire</h4><p>Cables sueltos en la camara principal bloquean el paso del aire entre el front intake y el rear exhaust — puede subir temperaturas 5-10 grados C.</p></div>
+            <div class="conn-card"><h4>Mantenimiento</h4><p>Cables bien organizados permiten acceder a los componentes y limpiarlos sin desmontar todo. Facilita el diagnostico de problemas.</p></div>
+          </div>
+          <p class="subhead">Herramientas de cable management</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Herramienta</th><th>Descripcion</th></tr>
+            <tr><td>Bridas de velcro</td><td>Preferibles a las de plastico — se abren y cierran sin cortar. Las hay de 10-30 cm.</td></tr>
+            <tr><td>Fundas de cable</td><td>Cubiertas textiles o plasticas que agrupan cables en un mazo ordenado.</td></tr>
+            <tr><td>Canales de cable</td><td>Ranuras y ojales en el chasis para pasar cables por detras del tray de la placa base.</td></tr>
+            <tr><td>PSU modular</td><td>Permite conectar solo los cables que necesitas, reduciendo desorden.</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="bay-storage">
+        <div class="accordion-header" onclick="toggleAccordion('bay-storage')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-stack"></i></span><div><div class="accordion-title">Bahias de Almacenamiento</div><div class="accordion-subtitle">Bahia 3.5" · Bahia 2.5" · Slot M.2</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="conn-grid">
+            <div class="conn-card"><h4>Bahia 3.5"</h4><p>Para HDDs de escritorio. Generalmente en el fondo del gabinete con rieles deslizantes. Los HDDs de 2.5" tambien caben con adaptadores.</p></div>
+            <div class="conn-card"><h4>Bahia 2.5"</h4><p>Para SSDs SATA. Suelen estar en la parte trasera del tray de la placa base para ocultar los cables SATA.</p></div>
+            <div class="conn-card"><h4>Slot M.2</h4><p>No es una bahia independiente — el SSD M.2 se instala directamente en la placa base (slot M.2), no en el gabinete. Velocidades de hasta 14 GB/s con NVMe PCIe Gen4.</p></div>
+            <div class="conn-card"><h4>Bandeja modular</h4><p>Muchos gabinetes modernos tienen bahias desmontables — si no usas HDDs, se pueden retirar para mejorar el flujo de aire frontal.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

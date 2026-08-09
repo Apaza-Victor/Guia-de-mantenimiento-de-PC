@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectura - Redes de Computadoras | TechGuide</title>
+  <meta name="description" content="Redes · Arquitectura. Cliente-servidor vs P2P, dominio broadcast.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arquitectura - Redes de Computadoras | TechGuide">
+  <meta property="og:description" content="Redes · Arquitectura. Cliente-servidor vs P2P, dominio broadcast.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-diagram-3"></i></div>
+      <h1><span class="hl">Redes</span> · Arquitectura</h1>
+      <p>Cliente-servidor vs P2P, dominio broadcast.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi bi-plug'></i>Cables y Conectores</a>
+    <a class='chip active' href='red-arquitectura-red.html'><i class='bi bi-diagram-3'></i>Arquitectura</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Arquitectura</span></nav>
+<div class="content-section" id="arquitectura-red" data-aos="fade-up">
+      <h2 class="section-title"><i class="bi bi-diagram-3"></i> Arquitectura de Red</h2>
+      <p class="section-subtitle">Cliente-Servidor vs P2P · Dominio de broadcast · OSI vs TCP/IP · Topologia</p>
+
+      <div class="info-box info-tip mb-2">
+        <span class="icon"><i class="bi bi-info-circle"></i></span>
+        <div class="content"><strong>Que es la arquitectura de red?</strong> Es el plan con el que se conectan los protocolos y otros programas de software. La arquitectura de una red viene definida por su topologia, el metodo de acceso a la red y los protocolos de comunicacion.</div>
+      </div>
+
+      <div class="accordion open" id="cliente-servidor-p2p">
+        <div class="accordion-header" onclick="toggleAccordion('cliente-servidor-p2p')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">Cliente-Servidor vs Peer-to-Peer</div><div class="accordion-subtitle">Modelos de red · ventajas y desventajas</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Caracteristica</th><th>Cliente-Servidor</th><th>Peer-to-Peer (P2P)</th></tr>
+            <tr><td>Control</td><td>Centralizado en el servidor</td><td>Distribuido entre todos los nodos</td></tr>
+            <tr><td>Costo</td><td>Alto (requiere servidor dedicado)</td><td>Bajo (sin servidor dedicado)</td></tr>
+            <tr><td>Seguridad</td><td>Alta (autenticacion centralizada)</td><td>Baja (cada usuario gestiona su seguridad)</td></tr>
+            <tr><td>Escalabilidad</td><td>Alta (agregar clientes es facil)</td><td>Baja (degrada con mas nodos)</td></tr>
+            <tr><td>Administracion</td><td>Centralizada, mas facil</td><td>Distribuida, mas compleja</td></tr>
+            <tr><td>Dependencia</td><td>Si el servidor falla, la red cae</td><td>No hay punto unico de fallo</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="dominio-broadcast">
+        <div class="accordion-header" onclick="toggleAccordion('dominio-broadcast')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-broadcast"></i></span><div><div class="accordion-title">Dominio de Broadcast</div><div class="accordion-subtitle">Area de difusion · colision de paquetes</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Un dominio de broadcast es el conjunto de todos los dispositivos que pueden recibir paquetes de difusion (broadcast) entre si. En una LAN con un switch, todos los puertos pertenecen al mismo dominio de broadcast. Los routers separan dominios de broadcast, limitando el trafico innecesario.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Descripcion</th></tr>
+            <tr><td>Dominio de colision</td><td>Grupo de dispositivos donde las transmisiones pueden colisionar (segmento CSMA/CD). Un switch divide los dominios de colision.</td></tr>
+            <tr><td>Dominio de broadcast</td><td>Grupo de dispositivos que reciben los paquetes broadcast. Un router separa dominios de broadcast.</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="osi-vs-tcpip">
+        <div class="accordion-header" onclick="toggleAccordion('osi-vs-tcpip')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-layers"></i></span><div><div class="accordion-title">Comparativa OSI vs TCP/IP</div><div class="accordion-subtitle">7 capas vs 4 capas · modelo teorico vs practico</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>OSI (7 capas)</th><th>TCP/IP (4 capas)</th><th>Protocolos</th></tr>
+            <tr><td>7. Aplicacion</td><td rowspan="3">Aplicacion</td><td>HTTP, FTP, DNS, SMTP</td></tr>
+            <tr><td>6. Presentacion</td><td>SSL/TLS, JPEG</td></tr>
+            <tr><td>5. Sesion</td><td>NetBIOS, RPC</td></tr>
+            <tr><td>4. Transporte</td><td>Transporte</td><td>TCP, UDP</td></tr>
+            <tr><td>3. Red</td><td>Internet</td><td>IP, ICMP, ARP</td></tr>
+            <tr><td>2. Enlace de datos</td><td rowspan="2">Acceso a Red</td><td>Ethernet, Wi-Fi</td></tr>
+            <tr><td>1. Fisica</td><td>Cable, senal electrica/optica</td></tr>
+          </table></div>
+          <div class="info-box info-note mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Modelo OSI vs TCP/IP</strong> OSI es un modelo teorico de referencia (ISO). TCP/IP es el modelo practico implementado en Internet. TCP/IP combina las capas 5, 6 y 7 de OSI en una sola capa de aplicacion.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="topologia-fisica-logica">
+        <div class="accordion-header" onclick="toggleAccordion('topologia-fisica-logica')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3-fill"></i></span><div><div class="accordion-title">Topologia Fisica vs Logica</div><div class="accordion-subtitle">Diseno del medio vs trayectoria de la senal</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Definicion</th><th>Ejemplo</th></tr>
+            <tr><td>Topologia Fisica</td><td>Se refiere al diseno actual del medio de transmision de la red — como estan conectados fisicamente los cables y dispositivos.</td><td>Cable UTP conectando PCs a un switch en forma de estrella</td></tr>
+            <tr><td>Topologia Logica</td><td>Se refiere a la trayectoria logica que sigue una senal a su paso por los nodos de la red — como viajan los datos.</td><td>Un anillo token ring puede ser fisicamente estrella pero logicamente anillo</td></tr>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

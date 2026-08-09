@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ensamblaje de PC - TechGuide</title>
+  <meta name="description" content="Ensamblaje de Computadoras. Herramientas, componentes, guia paso a paso, cableado y checklist interactivo para armar tu computadora de escritorio.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ensamblaje de PC - TechGuide">
+  <meta property="og:description" content="Ensamblaje de Computadoras. Herramientas, componentes, guia paso a paso, cableado y checklist interactivo para armar tu computadora de escritorio.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-tools"></i></div>
+      <h1><span class="hl">Ensamblaje</span> de Computadoras</h1>
+      <p>Herramientas, componentes, guia paso a paso, cableado y checklist interactivo para armar tu computadora de escritorio.</p>
+      <div class="page-hero-chips">
+        <span class='pchip pchip-a'>Herramientas</span>
+        <span class='pchip pchip-a'>Componentes</span>
+        <span class='pchip pchip-a'>Paso a Paso</span>
+        <span class='pchip pchip-a'>Cableado</span>
+        <span class='pchip pchip-a'>Checklist</span>
+        <span class='pchip pchip-a'>Instalacion Detallada</span>
+        <span class='pchip pchip-a'>Sistema Operativo</span>
+        <span class='pchip pchip-a'>Guia de Puertos</span>
+        <span class='pchip pchip-a'>Atajos BIOS</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi bi-book'></i>Conceptos Clave</a>
+  </nav>
+
+  <!-- INDEX -->
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><span class="current">Ensamblaje de Computadoras</span></nav>
+<div class="home-modulos-inner" style="padding:0 0 3rem;">
+    <div class="home-modulos-header" data-aos="fade-up" style="margin-bottom:2rem;">
+      <div class="section-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+      <div>
+        <h2>Secciones</h2>
+        <p class="text-secondary text-sm">Elige una subseccion para ir directamente al contenido</p>
+      </div>
+    </div>
+    <div class="home-modulos-grid" data-aos="fade-up" data-aos-delay="100">
+        <a href="ens-herramientas.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-tools"></i></div>
+          <h4>Herramientas</h4>
+          <p>Seguridad ESD, espacio de trabajo y herramientas de mano.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-componentes.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-motherboard"></i></div>
+          <h4>Componentes</h4>
+          <p>CPU, GPU, RAM, PSU, almacenamiento y refrigeracion.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-paso-a-paso.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-list-check"></i></div>
+          <h4>Paso a Paso</h4>
+          <p>Secuencia optimizada de 9 pasos para ensamblar.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-cableado.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-usb"></i></div>
+          <h4>Cableado</h4>
+          <p>Conectores de alimentacion, datos, video y legados.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-checklist.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-clipboard-check"></i></div>
+          <h4>Checklist</h4>
+          <p>Lista interactiva de verificacion de ensamblaje.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-instalacion-detallada.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(
+            --accent-rgb),.1);color:var(--accent);"><i class="bi bi-tools"></i></div>
+          <h4>Instalacion Detallada</h4>
+          <p>Procedimiento tecnico completo de cada componente.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-instalacion-so.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-hdd"></i></div>
+          <h4>Sistema Operativo</h4>
+          <p>Instalacion del sistema operativo y drivers.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-electronica-gabinete.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-layout-text-window"></i></div>
+          <h4>Electronica Gabinete</h4>
+          <p>Panel frontal, headers e indicadores.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-guia-puertos.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-usb-plug"></i></div>
+          <h4>Guia de Puertos</h4>
+          <p>20+ puertos y conectores explicados visualmente.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-gabinete.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-pc-display"></i></div>
+          <h4>Gabinete</h4>
+          <p>Tipos, flujo de aire y cable management.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-atajos-bios.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-keyboard"></i></div>
+          <h4>Atajos BIOS</h4>
+          <p>Acceso rapido a la BIOS por fabricante.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="ens-conceptos-clave.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-book"></i></div>
+          <h4>Conceptos Clave</h4>
+          <p>BIOS/UEFI, overclocking, XMP/EXPO, POST, CMOS.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

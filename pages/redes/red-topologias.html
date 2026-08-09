@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topologias - Redes de Computadoras | TechGuide</title>
+  <meta name="description" content="Redes · Topologias. Bus, estrella, anillo, malla y mas.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Topologias - Redes de Computadoras | TechGuide">
+  <meta property="og:description" content="Redes · Topologias. Bus, estrella, anillo, malla y mas.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/visuals.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-diagram-3"></i></div>
+      <h1><span class="hl">Redes</span> · Topologias</h1>
+      <p>Bus, estrella, anillo, malla y mas.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip active' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi bi-diagram-3'></i>Arquitectura</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Topologias</span></nav>
+<div class="content-section" id="topologias" data-aos="fade-up">
+      <h2 class="section-title"><i class="bi bi-diagram-3"></i> Topologias de Red</h2>
+      <p class="section-subtitle">Cableadas e inalambricas · Ventajas · Desventajas · Redes mixtas</p>
+
+      <div class="topo-grid">
+        <div class="topo-card">
+          <h4><i class="bi bi-arrow-left-right" style="color:#39d0d8;margin-right:.4rem;"></i>Bus / Lineal</h4>
+          <p>Terminales y dispositivos conectados a una sola linea (bus) con terminador en cada extremo. Cable coaxial o Ethernet 10Base2. Un paquete se envia y es presentado a todas las computadoras; cada una analiza la direccion para saber si le corresponde.</p>
+          <span class="topo-pro">+ Mas facil de armar y configurar</span>
+          <span class="topo-pro">+ Menos cableado, mas economica</span>
+          <span class="topo-con">− No regeneran senal: ruido y perdida de fidelidad</span>
+          <span class="topo-con">− Un usuario desconectado corta la red</span>
+        </div>
+        <div class="topo-card">
+          <h4><i class="bi bi-star" style="color:#e3b341;margin-right:.4rem;"></i>Estrella</h4>
+          <p>La mas comun en LAN hogarenas y corporativas. Los equipos se interconectan mediante un hub o switch central. El hub repite y potencia la senal recibida, detecta errores y los corrige. La perdida de un nodo no afecta al resto.</p>
+          <span class="topo-pro">+ Si un terminal falla, la red sigue</span>
+          <span class="topo-pro">+ No se pierde conexion al agregar o retirar nodos</span>
+          <span class="topo-con">− El punto critico es el hub/switch central</span>
+          <span class="topo-con">− Mas cableado; cada PC necesita cable independiente al hub</span>
+        </div>
+        <div class="topo-card">
+          <h4><i class="bi bi-record-circle" style="color:#3fb950;margin-right:.4rem;"></i>Anillo</h4>
+          <p>Los dos terminales extremos estan interconectados formando un circulo. La senal viaja en un solo sentido. Cada computadora actua como repetidor y regenerador de senal, reduciendo el trayecto recorrido.</p>
+          <span class="topo-pro">+ Problemas faciles de detectar y resolver</span>
+          <span class="topo-pro">+ La informacion sufre menos ruidos</span>
+          <span class="topo-con">− Incorporar una nueva PC rompe el anillo temporalmente</span>
+          <span class="topo-con">− El soporte tecnico requiere desactivar la red</span>
+        </div>
+        <div class="topo-card">
+          <h4><i class="bi bi-diagram-3" style="color:#bc8cff;margin-right:.4rem;"></i>Mesh (Malla)</h4>
+          <p>Todas las computadoras estan interconectadas entre si sin intermediarios. La red se satura rapidamente porque el envio de informacion a otra maquina provoca un efecto en cadena. Muy costosa de implementar.</p>
+          <span class="topo-pro">+ Todas las computadoras interconectadas sin intermediarios</span>
+          <span class="topo-con">− Conexiones costosas y demasiado cableado</span>
+          <span class="topo-con">− Cada dispositivo necesita tantas placas como computadoras haya</span>
+        </div>
+        <div class="topo-card">
+          <h4><i class="bi bi-wifi" style="color:#39d0d8;margin-right:.4rem;"></i>Ad-Hoc (inalambrica)</h4>
+          <p>Conexion inalambrica punto a punto sin medios fisicos, a traves de senales de radio. Los equipos deben estar dentro de un rango determinado; a medida que se alejan, se pierde la fidelidad de la senal.</p>
+          <span class="topo-pro">+ Sin medios fisicos para la interconexion</span>
+          <span class="topo-pro">+ Movilidad y versatilidad dentro del rango</span>
+          <span class="topo-con">− Rango muy limitado de trabajo</span>
+          <span class="topo-con">− Velocidad inferior a la de redes fisicas cableadas</span>
+        </div>
+        <div class="topo-card">
+          <h4><i class="bi bi-broadcast" style="color:#3fb950;margin-right:.4rem;"></i>Infraestructura (inalambrica)</h4>
+          <p>Requiere un elemento central que coordine y sirva como punto base de informacion: una estacion central inalambrica (access point). Combina conexiones Ethernet e inalambricas. Si todos los elementos trabajan bajo el mismo SSID, todos tendran acceso.</p>
+          <span class="topo-pro">+ Combina Ethernet e inalambrico eficientemente</span>
+          <span class="topo-pro">+ Gran cobertura y escalabilidad</span>
+          <span class="topo-con">− Requiere access point central coordinador</span>
+        </div>
+      </div>
+      <div class="vis" data-aos="fade-up">
+        <div class="vis-title"><i class="bi bi-diagram-3"></i> Las 4 topologias base — Diagrama</div>
+        <div class="vis-sub">PC (cuadrados) unidos por enlaces. El centro coloreado marca el punto critico de cada topologia.</div>
+        <div class="vis-grid vis-4">
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Bus">
+              <defs><marker id="visArrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="var(--accent2)"/></marker></defs>
+              <rect class="t-node" x="20" y="70" width="34" height="18"/><text x="37" y="83" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="73" y="70" width="34" height="18"/><text x="90" y="83" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="126" y="70" width="34" height="18"/><text x="143" y="83" text-anchor="middle" class="t-tag">PC</text>
+              <line class="t-edge-core" x1="12" y1="79" x2="168" y2="79"/>
+              <rect x="12" y="74" width="6" height="10" fill="var(--accent3)"/>
+              <rect x="162" y="74" width="6" height="10" fill="var(--accent3)"/>
+              <text x="90" y="28" text-anchor="middle" class="t-tag" style="fill:#39d0d8">BUS</text>
+              <text x="90" y="120" text-anchor="middle" style="font-size:9px">Terminadores en los extremos</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Estrella">
+              <rect class="t-node" x="73" y="14" width="34" height="18"/><text x="90" y="27" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="10" y="90" width="34" height="18"/><text x="27" y="103" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="136" y="90" width="34" height="18"/><text x="153" y="103" text-anchor="middle" class="t-tag">PC</text>
+              <circle cx="90" cy="72" r="14" fill="var(--accent2)" opacity=".9"/>
+              <text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">SW</text>
+              <line class="t-edge-core" x1="90" y1="58" x2="90" y2="32"/>
+              <line class="t-edge-core" x1="80" y1="82" x2="37" y2="98"/>
+              <line class="t-edge-core" x1="100" y1="82" x2="143" y2="98"/>
+              <text x="90" y="130" text-anchor="middle" class="t-tag" style="fill:#e3b341">ESTRELLA</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Anillo">
+              <rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text>
+              <circle class="t-edge-core" cx="90" cy="72" r="42" fill="none"/>
+              <path class="t-arrow" d="M 90 21 A 42 42 0 0 1 132 67"/>
+              <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#3fb950">ANILLO</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Malla">
+              <rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text>
+              <line class="t-edge-core" x1="90" y1="30" x2="90" y2="120"/>
+              <line class="t-edge-core" x1="90" y1="30" x2="23" y2="75"/>
+              <line class="t-edge-core" x1="90" y1="30" x2="157" y2="75"/>
+              <line class="t-edge-core" x1="23" y1="75" x2="90" y2="120"/>
+              <line class="t-edge-core" x1="157" y1="75" x2="90" y2="120"/>
+              <line class="t-edge-core" x1="23" y1="75" x2="157" y2="75"/>
+              <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#bc8cff">MALLA</text>
+            </svg>
+          </div>
+        </div>
+        <div class="vis-grid vis-3" style="margin-top:12px;">
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Arbol">
+              <rect class="t-node" x="70" y="10" width="40" height="18"/><text x="90" y="23" text-anchor="middle" class="t-tag">Nucleo</text>
+              <rect class="t-node" x="20" y="66" width="34" height="18"/><text x="37" y="79" text-anchor="middle" class="t-tag">Switch</text>
+              <rect class="t-node" x="126" y="66" width="34" height="18"/><text x="143" y="79" text-anchor="middle" class="t-tag">Switch</text>
+              <rect class="t-node" x="6" y="124" width="26" height="16"/><text x="19" y="136" text-anchor="middle" style="font-size:8px">PC</text>
+              <rect class="t-node" x="36" y="124" width="26" height="16"/><text x="49" y="136" text-anchor="middle" style="font-size:8px">PC</text>
+              <rect class="t-node" x="118" y="124" width="26" height="16"/><text x="131" y="136" text-anchor="middle" style="font-size:8px">PC</text>
+              <rect class="t-node" x="148" y="124" width="26" height="16"/><text x="161" y="136" text-anchor="middle" style="font-size:8px">PC</text>
+              <line class="t-edge-core" x1="90" y1="28" x2="37" y2="66"/>
+              <line class="t-edge-core" x1="90" y1="28" x2="143" y2="66"/>
+              <line class="t-edge-core" x1="37" y1="84" x2="19" y2="124"/>
+              <line class="t-edge-core" x1="37" y1="84" x2="49" y2="124"/>
+              <line class="t-edge-core" x1="143" y1="84" x2="131" y2="124"/>
+              <line class="t-edge-core" x1="143" y1="84" x2="161" y2="124"/>
+              <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#f78166">ARBOL</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Ad-Hoc">
+              <rect class="t-node" x="70" y="12" width="34" height="18"/><text x="87" y="25" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="8" y="100" width="34" height="18"/><text x="25" y="113" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="138" y="100" width="34" height="18"/><text x="155" y="113" text-anchor="middle" class="t-tag">PC</text>
+              <path class="t-edge-core" d="M 87 30 Q 40 60 25 100" fill="none" stroke-dasharray="4 3"/>
+              <path class="t-edge-core" d="M 87 30 Q 140 60 155 100" fill="none" stroke-dasharray="4 3"/>
+              <path class="t-edge-core" d="M 42 100 Q 90 130 138 100" fill="none" stroke-dasharray="4 3"/>
+              <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#39d0d8">AD-HOC</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Infraestructura">
+              <rect class="t-node" x="70" y="8" width="40" height="18"/><text x="90" y="21" text-anchor="middle" class="t-tag">Router</text>
+              <circle cx="90" cy="72" r="15" fill="var(--accent2)" opacity=".9"/>
+              <text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">AP</text>
+              <rect class="t-node" x="8" y="118" width="34" height="18"/><text x="25" y="131" text-anchor="middle" class="t-tag">PC</text>
+              <rect class="t-node" x="138" y="118" width="34" height="18"/><text x="155" y="131" text-anchor="middle" class="t-tag">PC</text>
+              <line class="t-edge-core" x1="90" y1="26" x2="90" y2="57"/>
+              <path class="t-edge-core" d="M 82 83 Q 45 100 30 116" fill="none" stroke-dasharray="4 3"/>
+              <path class="t-edge-core" d="M 98 83 Q 135 100 150 116" fill="none" stroke-dasharray="4 3"/>
+              <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#3fb950">INFRAESTRUCTURA</text>
+            </svg>
+          </div>
+        </div>
+        <div class="vis-note"><strong>Punto critico:</strong> en bus los terminadores, en estrella el switch central, en anillo el enlace unico y en malla cada enlace redundante (por eso es la mas tolerante a fallos pero la mas costosa).</div>
+      </div>
+      <p class="subhead" data-aos="fade-up">Comparativa de Topologias</p>
+      <div class="table-scroll" data-aos="fade-up"><table class="cmd-table">
+        <tr><th>Topologia</th><th>Cableado</th><th>Tolerancia a fallos</th><th>Costo</th><th>Velocidad</th><th>Uso tipico</th></tr>
+        <tr><td><i class="bi bi-arrow-left-right" style="color:#39d0d8;"></i> Bus</td><td>Minimo</td><td>Baja (1 nodo corta todo)</td><td>Muy bajo</td><td>Media (comparte medio)</td><td>Redes antiguas, laboratorios</td></tr>
+        <tr><td><i class="bi bi-star" style="color:#e3b341;"></i> Estrella</td><td>Alto (1 cable por nodo)</td><td>Alta (falla el switch = todo cae)</td><td>Medio</td><td>Alta (commutada)</td><td>La mas usada en hogares y oficinas</td></tr>
+        <tr><td><i class="bi bi-record-circle" style="color:#3fb950;"></i> Anillo</td><td>Medio</td><td>Media (doble anillo = tolerante)</td><td>Medio</td><td>Media-alta</td><td>Token Ring, campus antiguos</td></tr>
+        <tr><td><i class="bi bi-diagram-3" style="color:#bc8cff;"></i> Malla</td><td>Muy alto</td><td>Muy alta (rutas alternativas)</td><td>Muy alto</td><td>Alta</td><td>Backbones, WAN criticas, Wi-Fi Mesh</td></tr>
+        <tr><td><i class="bi bi-diagram-3-fill" style="color:#f78166;"></i> Arbol</td><td>Medio-alto</td><td>Media (jerarquica)</td><td>Medio</td><td>Alta</td><td>Empresas con sucursales, campus</td></tr>
+        <tr><td><i class="bi bi-wifi" style="color:#39d0d8;"></i> Ad-Hoc</td><td>Ninguno</td><td>Media (sin punto central)</td><td>Bajo</td><td>Baja</td><td>Wi-Fi Direct, conexiones temporales</td></tr>
+        <tr><td><i class="bi bi-broadcast" style="color:#3fb950;"></i> Infraestructura</td><td>Solo enlace al AP</td><td>Media (depende del AP)</td><td>Medio</td><td>Alta</td><td>Wi-Fi domestico y corporativo</td></tr>
+      </table></div>
+      <div class="info-box info-tip mt-2" data-aos="fade-up">
+        <span class="icon"><i class="bi bi-stack"></i></span>
+        <div class="content"><strong>Topologia en estrella + arbol = la practica moderna</strong> Casi todas las redes actuales combinan estrellas (cada piso/area con un switch) conectadas en arbol (switches hacia un nucleo central), con enlaces redundantes tipo malla en el nucleo. Esto da tolerancia a fallos con costo razonable.</div>
+      </div>
+      <div class="info-box info-note mt-2" data-aos="fade-up">
+        <span class="icon"><i class="bi bi-diagram-3-fill"></i></span>
+        <div class="content"><strong>Redes Mixtas</strong> Para seleccionar la topologia mas conveniente, considera: capacidad maxima de computadoras disponibles, tasa de transferencia de informacion requerida y distancia entre equipos. El presupuesto disponible es un factor determinante.</div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

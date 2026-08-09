@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento de PC - TechGuide</title>
+  <meta name="description" content="Mantenimiento de Computadoras. Mantenimiento preventivo, correctivo y herramientas de diagnostico por software para mantener tu computadora en optimas condic...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mantenimiento de PC - TechGuide">
+  <meta property="og:description" content="Mantenimiento de Computadoras. Mantenimiento preventivo, correctivo y herramientas de diagnostico por software para mantener tu computadora en optimas condic...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+      <h1><span class="hl">Mantenimiento</span> de Computadoras</h1>
+      <p>Mantenimiento preventivo, correctivo y herramientas de diagnostico por software para mantener tu computadora en optimas condiciones.</p>
+      <div class="page-hero-chips">
+        <span class='pchip pchip-g'>Preventivo</span>
+        <span class='pchip pchip-g'>Correctivo</span>
+        <span class='pchip pchip-g'>Software de Diag.</span>
+        <span class='pchip pchip-g'>Malware</span>
+        <span class='pchip pchip-g'>Diagnostico</span>
+        <span class='pchip pchip-g'>Conceptos Clave</span>
+        <span class='pchip pchip-g'>Cables de PSU</span>
+        <span class='pchip pchip-g'>Headers</span>
+        <span class='pchip pchip-g'>Backup</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi bi-usb-symbol'></i>Headers</a>
+  </nav>
+
+  <!-- INDEX -->
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><span class="current">Mantenimiento de Computadoras</span></nav>
+<div class="home-modulos-inner" style="padding:0 0 3rem;">
+    <div class="home-modulos-header" data-aos="fade-up" style="margin-bottom:2rem;">
+      <div class="section-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+      <div>
+        <h2>Secciones</h2>
+        <p class="text-secondary text-sm">Elige una subseccion para ir directamente al contenido</p>
+      </div>
+    </div>
+    <div class="home-modulos-grid" data-aos="fade-up" data-aos-delay="100">
+        <a href="man-preventivo.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-shield-check"></i></div>
+          <h4>Preventivo</h4>
+          <p>Limpieza, pasta termica y monitoreo termico.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-correctivo.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-heart-pulse"></i></div>
+          <h4>Correctivo</h4>
+          <p>BSOD, sobrecalentamiento y PC que no enciende.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-software-diag.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-terminal"></i></div>
+          <h4>Software de Diag.</h4>
+          <p>HWMonitor, CrystalDiskInfo, MemTest86 y mas.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-seguridad-malware.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-shield-lock"></i></div>
+          <h4>Malware</h4>
+          <p>Tipos de malware y herramientas de limpieza.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-kit-tecnico.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-tools"></i></div>
+          <h4>Kit del Tecnico</h4>
+          <p>11 herramientas esenciales con prioridad.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-diagnostico-sintomas.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-search"></i></div>
+          <h4>Diagnostico</h4>
+          <p>Sintoma, componente probable y accion.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-conceptos-clave.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-lightbulb"></i></div>
+          <h4>Conceptos Clave</h4>
+          <p>Terminos tecnicos esenciales.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-cables-alimentacion.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-plug"></i></div>
+          <h4>Cables de PSU</h4>
+          <p>Conectores de alimentacion con colores.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="man-headers-motherboard.html" class="mod-card" data-accent="var(--accent2)">
+          <div class="mod-card-icon" style="background:rgba(0,212,170,.1);color:var(--accent2);"><i class="bi bi-usb-symbol"></i></div>
+          <h4>Headers</h4>
+          <p>USB, USB-C, HD Audio, RGB y fans.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(0,212,170,.1);color:var(--accent2);border-color:rgba(0,212,170,.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+    </div>
+  </div>
+
+  <div class="home-modulos-header" data-aos="fade-up" style="margin-bottom:1rem;">
+    <div class="section-icon"><i class="bi bi-git-compare"></i></div>
+    <div>
+      <h2>Preventivo vs Correctivo</h2>
+      <p class="text-secondary text-sm">Comparativa rapida de ambos enfoques de mantenimiento</p>
+    </div>
+  </div>
+  <div class="table-scroll" data-aos="fade-up"><table class="cmd-table">
+    <tr><th>Caracteristica</th><th>Preventivo</th><th>Correctivo</th></tr>
+    <tr><td>Objetivo</td><td>Evitar fallas antes de que ocurran</td><td>Reparar una falla ya ocurrida</td></tr>
+    <tr><td>Momento</td><td>Programado (cada 3-6 meses)</td><td>Cuando el equipo falla o da sintomas</td></tr>
+    <tr><td>Costo</td><td>Bajo (insumos y tiempo)</td><td>Alto (repuestos, mano de obra)</td></tr>
+    <tr><td>Riesgo</td><td>Minimo</td><td>Puede incluir perdida de datos</td></tr>
+    <tr><td>Downtime</td><td>Corto y planificable</td><td>Largo e imprevisible</td></tr>
+    <tr><td>Ejemplos</td><td>Limpieza, pasta termica, actualizaciones</td><td>Cambio de PSU danada, reinstalar SO</td></tr>
+    <tr><td>Herramientas</td><td>Aire comprimido, monitoreo de temps</td><td>Multimetro, discos de rescate</td></tr>
+    <tr><td>Resultado</td><td>Vida util prolongada y rendimiento estable</td><td>Equipo vuelve a funcionar, a veces con dano residual</td></tr>
+  </table></div>
+  <div class="alert-box alert-info" data-aos="fade-up" style="margin-top:12px;">
+    <i class="bi bi-info-circle"></i>
+    <div>Regla del sector: <strong>prevenir cuesta una fraccion de reparar</strong>. Un mantenimiento preventivo cada 6 meses cuesta menos que un solo diagnostico correctivo, y evita la mayoria de las fallas hardware.</div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>
