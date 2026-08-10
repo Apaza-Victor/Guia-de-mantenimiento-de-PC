@@ -72,9 +72,12 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 - Ajustes de BIOS: Boot Order, XMP, Secure Boot, TPM, Virtualizacion
 
 ### Glosario
-- Terminos de hardware A-G: BIOS, BCLK, Cache, Chipset, CMOS, Die
-- Terminos de hardware I-Z: NVMe, POST, 80 Plus, RAID, SATA, TDP, UEFI, VRM
-- Terminos de redes y conectividad: DHCP, DNS, Gateway, IP, LAN/WAN, Latencia, NAT, VPN
+- Terminos de hardware A-G: APU, BIOS, BCLK, Cache, Chipset, CMOS, CPU, Core, Die, DIMM, DDR4/DDR5, GPU
+- Terminos de hardware I-Z: IHS, M.2, NAND, NVMe, Overclocking, PCIe, POST, PSU, RAID, SATA, SSD, TDP, UEFI, USB, VRM, XMP/EXPO
+- Terminos de memoria y almacenamiento: RAM, bit/byte, dual channel, HDD, latencias, memoria virtual, NTFS/exFAT, ext4, TRIM
+- Terminos de energia y refrigeracion: amperio, air cooler, AIO, custom loop, heatpipe, pasta termica, voltaje, watt
+- Terminos de redes y conectividad: DHCP, DNS, Ethernet, Firewall, Gateway, IP, IPv4/IPv6, LAN/WAN, Latencia, NAT, Router, Switch, TCP/UDP, VPN, Wi-Fi
+- Terminos de software y seguridad: antivirus, backup, kernel, malware, phishing, ransomware, SO, troyano, virus
 
 ## Caracteristicas
 
