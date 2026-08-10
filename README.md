@@ -1,151 +1,200 @@
-# TechGuide - Guia Integral de Hardware, Mantenimiento y Redes
+# 🖥️ TechGuide — Guia Integral de Hardware, Mantenimiento y Redes
 
-Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenimiento y redes de computadoras. Responsiva, modo oscuro/claro y navegacion por modulos.
+Plataforma educativa **100% en español** con guías completas de **ensamblaje, mantenimiento y redes** de computadoras. Contenido práctico, tablas de referencia, visores 3D interactivos y herramientas de estudio en una sola web estática, responsiva y con modo oscuro/claro.
 
-## Visita la guia
+## 🌐 Visita la guía
 
 **[https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/](https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/)**
 
-## Contenido
+---
 
-### Ensamblaje de PC
-- **Herramientas**: ESD, pulsera antiestatica, espacio de trabajo, herramientas de mano
-- **Componentes**: CPU, GPU, RAM, motherboard, PSU, almacenamiento, refrigeracion, compatibilidad
+## 📊 TechGuide en números
+
+| Métrica | Valor |
+|---|---|
+| Páginas HTML | 46 |
+| Secciones de contenido | 68 |
+| Acordeones expandibles | 103 |
+| Términos de glosario | 84 |
+| Recursos web curados | 140+ |
+| Modelos 3D interactivos | Sí (ensamblaje y kit del técnico) |
+| Temas visuales | Oscuro y claro |
+
+---
+
+## 📚 Contenido
+
+### ⚙️ Ensamblaje de PC
+- **Herramientas**: ESD, pulsera antiestática, espacio de trabajo, herramientas de mano
+- **Componentes**: CPU, GPU, RAM, motherboard, PSU, almacenamiento, refrigeración, compatibilidad
 - **Placa Base**: vista general, tipos, socket, VRM, DIMM, PCIe, chipset, almacenamiento, CMOS, conectores, headers, panel I/O
 - **Tipos de Componentes**: tipos de PSU, almacenamiento, GPU, RAM, formatos de placa, conectores ATX, USB y sockets
-- **Simbolos y Unidades**: voltaje, corriente, potencia, resistencia, simbolos de circuito, prefijos (kilo, mega, micro...), simbolos en la practica
+- **Símbolos y Unidades**: voltaje, corriente, potencia, resistencia, símbolos de circuito, prefijos (kilo, mega, micro...)
 - **Paso a Paso**: 9 pasos optimizados (CPU, cooler, RAM, M.2, PSU, GPU, cables, BIOS)
-- **Cableado**: alimentacion, datos, video, legados, T568A/T568B, formatos SSD, 80 Plus
-- **Checklist**: lista interactiva de verificacion
-- **Instalacion Detallada**: procedimiento tecnico de cada componente
-- **Sistema Operativo**: instalacion del SO y drivers
-- **Electronica Gabinete**: panel frontal, headers, F_PANEL
-- **Guia de Puertos**: 20+ puertos y conectores
+- **Cableado**: alimentación, datos, video, legados, T568A/T568B, formatos SSD, 80 Plus
+- **Checklist**: lista interactiva de verificación
+- **Instalación Detallada**: procedimiento técnico de cada componente
+- **Sistema Operativo**: instalación del SO y drivers
+- **Electrónica Gabinete**: panel frontal, headers, F_PANEL
+- **Guía de Puertos**: 20+ puertos y conectores
 - **Gabinete**: tipos, flujo de aire, cable management
 - **Atajos BIOS**: acceso por fabricante
 - **Conceptos Clave**: BIOS/UEFI, overclocking, XMP/EXPO, POST, CMOS
 
-### Mantenimiento de PC
-- **Preventivo**: limpieza, pasta termica, monitoreo termico
+### 🛠️ Mantenimiento de PC
+- **Preventivo**: limpieza, pasta térmica, monitoreo térmico
 - **Correctivo**: BSOD, sobrecalentamiento, PC no enciende, lentitud
-- **Software de Diagnostico**: HWMonitor, CrystalDiskInfo, MemTest86, CPU-Z, GPU-Z, FurMark, Prime95, AIDA64, HWiNFO, MSI Afterburner, Cinebench, 3DMark, BlueScreenView, WhoCrashed
+- **Software de Diagnóstico**: HWMonitor, CrystalDiskInfo, MemTest86, CPU-Z, GPU-Z, FurMark, Prime95, AIDA64, HWiNFO, MSI Afterburner, Cinebench, 3DMark, BlueScreenView, WhoCrashed
 - **Malware**: virus, troyano, ransomware, spyware, adware, rootkit, keylogger, cryptominer
-- **Kit del Tecnico**: 11 herramientas con prioridades
-- **Diagnostico**: por sintomas en 10 escenarios
+- **Kit del Técnico**: 11 herramientas con prioridades
+- **Diagnóstico**: por síntomas en 10 escenarios
 - **Conceptos Clave**: BIOS/UEFI, overclocking, undervolting, XMP/EXPO, POST, CMOS
 - **Cables de PSU**: especificaciones y colores de cable
 - **Headers**: USB 3.0, USB-C, HD Audio, RGB/ARGB, Fans
 
-### Redes de Computadoras
+### 🌐 Redes de Computadoras
 - **TCP/IP y OSI**: 7 capas, 4 capas, tabla comparativa, protocolos, puertos
-- **Topologias**: bus, estrella, anillo, malla, ad-hoc, infraestructura
+- **Topologías**: bus, estrella, anillo, malla, ad-hoc, infraestructura
 - **Dispositivos**: NIC, switch, router, hub, repetidor, gateway
 - **Direccionamiento IP**: IPv4 (RFC 1918, CIDR, calculadora interactiva), IPv6, Wi-Fi
 - **SO de Red**: Windows Server, Linux Server, NAS OS
-- **Componentes**: servidor, estacion de trabajo, nodo, NIC
-- **Medios**: coaxial, par trenzado, fibra optica, inalambrico
+- **Componentes**: servidor, estación de trabajo, nodo, NIC
+- **Medios**: coaxial, par trenzado, fibra óptica, inalámbrico
 - **Arquitectura**: cliente-servidor vs P2P, dominio broadcast
 
-### Comandos y Atajos
-- Comandos tecnicos: CMD/PowerShell, Linux/Bash
+### ⌨️ Comandos y Atajos
+- Comandos técnicos: CMD/PowerShell, Linux/Bash
 - Comandos de red: ping, ipconfig, tracert, nslookup, netstat, arp, nmap
 - Puertos de red: tabla de 17 puertos TCP/UDP
 - CMD vs PowerShell: tabla de equivalencias
 - Variables de entorno Windows
 - Atajos de teclado: Windows, Linux, navegadores, Office
 
-### Recursos
-- 140+ recursos web organizados en 8 categorias filtrables: hardware y benchmarks, redes, sistemas operativos, herramientas de diagnostico, simuladores y practica, seguridad y privacidad, formacion y certificaciones, comunidades y soporte
-- Videos de descarga de simuladores: enlaces a tutoriales de YouTube (Packet Tracer, GNS3, VirtualBox, VMware, PC Building Simulator)
+### 🔗 Recursos
+- 140+ recursos web organizados en 8 categorías filtrables: hardware y benchmarks, redes, sistemas operativos, herramientas de diagnóstico, simuladores y práctica, seguridad y privacidad, formación y certificaciones, comunidades y soporte
+- Videos de descarga de simuladores: tutoriales de YouTube (Packet Tracer, GNS3, VirtualBox, VMware, PC Building Simulator)
 
-### Referencia de Hardware
-- Referencia rapida de hardware: RAM, Cache, PCIe, SATA, Voltajes de PSU
+### 📖 Referencia de Hardware
+- Referencia rápida: RAM, Cache, PCIe, SATA, voltajes de PSU
 - Formatos de motherboard: E-ATX, ATX, Micro-ATX, Mini-ITX, Nano-ITX, Pico-ITX
-- Codigos POST beep
+- Códigos POST beep
 
-### Instalacion y Almacenamiento
+### 💽 Instalación y Almacenamiento
 - Sistemas de archivos: FAT32, exFAT, NTFS, ext4, Btrfs, APFS
 - Niveles RAID: 0, 1, 5, 6, 10
-- Guia USB booteable: Rufus y Ventoy
+- Guía USB booteable: Rufus y Ventoy
 - Particionado de disco: Windows 11 y Ubuntu
-- Checklist post-instalacion (10 items)
-- Ajustes de BIOS: Boot Order, XMP, Secure Boot, TPM, Virtualizacion
+- Checklist post-instalación (10 items)
+- Ajustes de BIOS: Boot Order, XMP, Secure Boot, TPM, Virtualización
 
-### Glosario
-- Terminos de hardware A-G: APU, BIOS, BCLK, Cache, Chipset, CMOS, CPU, Core, Die, DIMM, DDR4/DDR5, GPU
-- Terminos de hardware I-Z: IHS, M.2, NAND, NVMe, Overclocking, PCIe, POST, PSU, RAID, SATA, SSD, TDP, UEFI, USB, VRM, XMP/EXPO
-- Terminos de memoria y almacenamiento: RAM, bit/byte, dual channel, HDD, latencias, memoria virtual, NTFS/exFAT, ext4, TRIM
-- Terminos de energia y refrigeracion: amperio, air cooler, AIO, custom loop, heatpipe, pasta termica, voltaje, watt
-- Terminos de redes y conectividad: DHCP, DNS, Ethernet, Firewall, Gateway, IP, IPv4/IPv6, LAN/WAN, Latencia, NAT, Router, Switch, TCP/UDP, VPN, Wi-Fi
-- Terminos de software y seguridad: antivirus, backup, kernel, malware, phishing, ransomware, SO, troyano, virus
+### 📘 Glosario
+- Términos de hardware A-G: APU, BIOS, BCLK, Cache, Chipset, CMOS, CPU, Core, Die, DIMM, DDR4/DDR5, GPU
+- Términos de hardware I-Z: IHS, M.2, NAND, NVMe, Overclocking, PCIe, POST, PSU, RAID, SATA, SSD, TDP, UEFI, USB, VRM, XMP/EXPO
+- Memoria y almacenamiento: RAM, bit/byte, dual channel, HDD, latencias, memoria virtual, NTFS/exFAT, ext4, TRIM
+- Energía y refrigeración: amperio, air cooler, AIO, custom loop, heatpipe, pasta térmica, voltaje, watt
+- Redes y conectividad: DHCP, DNS, Ethernet, Firewall, Gateway, IP, IPv4/IPv6, LAN/WAN, latencia, NAT, Router, Switch, TCP/UDP, VPN, Wi-Fi
+- Software y seguridad: antivirus, backup, kernel, malware, phishing, ransomware, SO, troyano, virus
 
-## Caracteristicas
+---
 
+## ✨ Características
+
+- **Home 3D**: héroe con núcleo tecnológico procedural (Babylon.js, partículas GPU) y constelación + anillos orbitales (Three.js), con parallax y adaptación al tema claro/oscuro
 - **Responsiva**: se adapta desde 368px hasta pantallas grandes
 - **Modo oscuro/claro**: toggle con persistencia en localStorage
-- **Navbar horizontal**: enlaces directos a modulos y dropdown de Referencia en el header
-- **Logo enlazado**: click en TechGuide lleva al inicio
-- **Animaciones**: transiciones suaves con AOS (Animate On Scroll) y entradas animadas con anime.js
-- **Home 3D**: hero con nucleo tecnico procedural (Babylon.js, particulas GPU) y constelacion + anillos orbitales (Three.js), con parallax y adaptacion al tema claro/oscuro
-- **Visores 3D de componentes**: modelos interactivos de cables, conectores y refrigeracion en ensamblaje
+- **Buscador global**: indexa los títulos, encabezados y términos de todas las páginas
+- **Navbar horizontal**: enlaces directos a módulos, dropdown de Herramientas y hamburguesa móvil a la derecha
+- **Animaciones**: transiciones con AOS (Animate On Scroll) y entradas animadas con anime.js
+- **Visores 3D de componentes**: modelos interactivos de cables, conectores y refrigeración
 - **Calculadora de subred**: herramienta interactiva para calcular rangos IP
-- **Filtro de recursos**: pills de categoria para filtrar los 140+ recursos web
-- **Tips de simuladores**: lista de consejos para descargar y ejecutar los simuladores de practica
+- **Filtro de recursos**: pills de categoría para filtrar los 140+ recursos web
+- **Tips de simuladores**: consejos para descargar y ejecutar los simuladores de práctica
 - **Checklist interactivo**: marcar pasos completados del ensamblaje
-- **Bloques de codigo**: con boton de copiar al portapapeles
+- **Bloques de código**: con botón de copiar al portapapeles
 - **Acordeones**: contenido expandible/colapsable en todas las secciones
-- **Scroll spy**: resalta la seccion actual en la navegacion
+- **Scroll spy**: resalta la sección actual en la navegación
+- **Barra de progreso de lectura**: indica el avance en cada página
 
-## Tecnologias
+---
 
-- HTML5
-- CSS3 (custom properties, grid, flexbox, responsive)
-- JavaScript vanilla
-- Bootstrap Icons
-- AOS (Animate On Scroll)
-- anime.js (animaciones del hero y contadores)
-- Three.js (constelacion 3D del home)
-- Babylon.js (nucleo 3D procedural del hero con particulas)
+## 🛠️ Tecnologías
 
-## Estructura
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura y semántica de las 46 páginas |
+| CSS3 | Custom properties, grid, flexbox, diseño responsive |
+| JavaScript vanilla | Interactividad: acordeones, checklist, búsqueda, tema |
+| Bootstrap Icons | Iconografía |
+| AOS | Animaciones al hacer scroll |
+| anime.js | Animaciones del hero y contadores |
+| Three.js | Constelación y anillos orbitales 3D del home |
+| Babylon.js | Núcleo 3D procedural del hero con partículas |
+| CDN | Librerías servidas desde jsDelivr (sin build step) |
+
+---
+
+## 🚀 Ejecutar en local
+
+No requiere build ni instalación de dependencias:
+
+```bash
+# Opción 1: servidor estático con Python
+python -m http.server 8000
+
+# Opción 2: servidor estático con Node
+npx serve .
+
+# Opción 3: abrir directamente (sin servidor)
+# abre index.html en tu navegador
+```
+
+Luego visita `http://localhost:8000` en tu navegador.
+
+---
+
+## 📂 Estructura del proyecto
 
 ```
-index.html              → Pagina principal (hero + modulos)
+index.html              → Página principal (hero + módulos)
 assets/
-  img/                  → Imagenes y recursos graficos
+  img/                  → Imágenes y recursos gráficos
   css/
-    styles.css          → Entry point (tokens, reset y @import de modulos)
+    styles.css          → Entry point (tokens, reset y @import de módulos)
     layout.css          → Topbar, navbar, hero, main content, footer
     components.css      → Cards, acordeones, checklist, tablas, code blocks
     responsive.css      → Media queries (breakpoints)
   js/
     theme.js            → Modo oscuro/claro
-    nav.js              → Hamburguesa, dropdowns moviles
-    ui.js               → Acordeones, checklist, pasos, copiar codigo, busqueda
+    nav.js              → Hamburguesa, dropdowns móviles
+    ui.js               → Acordeones, checklist, pasos, copiar código, búsqueda
     subnet.js           → Calculadora de subred
     home.js             → Animaciones del home con anime.js (hero, contadores, tarjetas)
-    home3d.js           → Constelacion + anillos orbitales 3D del home (Three.js)
-    home-babylon.js     → Nucleo 3D procedural del hero con particulas (Babylon.js)
-    cables-3d.js        → Visores 3D de cables, conectores y refrigeracion
+    home3d.js           → Constelación + anillos orbitales 3D del home (Three.js)
+    home-babylon.js     → Núcleo 3D procedural del hero con partículas (Babylon.js)
+    cables-3d.js        → Visores 3D de cables, conectores y refrigeración
+    search.js           → Buscador global
+    search-index.js     → Índice de búsqueda (generado automáticamente)
 pages/
-  ensamblaje/           → Modulo de ensamblaje
-    ensamblaje.html     → Hub (indice de subsecciones)
+  ensamblaje/           → Módulo de ensamblaje
+    ensamblaje.html     → Hub (índice de subsecciones)
     ens-*.html          → Subsecciones (herramientas, componentes, placa base, tipos, paso a paso, ...)
-  mantenimiento/        → Modulo de mantenimiento
-    mantenimiento.html  → Hub (indice de subsecciones)
+  mantenimiento/        → Módulo de mantenimiento
+    mantenimiento.html  → Hub (índice de subsecciones)
     man-*.html          → Subsecciones (preventivo, correctivo, software diag, ...)
-  redes/                → Modulo de redes
-    redes.html          → Hub (indice de subsecciones)
-    red-*.html          → Subsecciones (tcp-osi, topologias, ip-address, ...)
-  comandos.html         → Comandos tecnicos y atajos de teclado (unidos)
-  recursos.html         → Recursos web (webs y enlaces curados)
-  referencia.html       → Referencia rapida de hardware (RAM, PCIe, SATA, PSU, MB, beep)
-  instalacion.html      → Instalacion y almacenamiento (FS, RAID, USB boot, particionado, post-install)
-  glosario.html         → Glosario de terminos tecnicos
+  redes/                → Módulo de redes
+    redes.html          → Hub (índice de subsecciones)
+    red-*.html          → Subsecciones (tcp-osi, topologías, ip-address, ...)
+  comandos.html         → Comandos técnicos y atajos de teclado
+  recursos.html         → Recursos web (enlaces curados)
+  referencia.html       → Referencia rápida de hardware (RAM, PCIe, SATA, PSU, MB, beep)
+  instalacion.html      → Instalación y almacenamiento (FS, RAID, USB boot, particionado, post-install)
+  glosario.html         → Glosario de términos técnicos
 ```
 
-## License
+---
+
+## 📄 Licencia
 
 © 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.
 
-Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.
+Ninguna parte de esta guía puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorización escrita previa del titular de los derechos de autor.
