@@ -22,7 +22,6 @@
 
 <header class="topbar">
   <div class="topbar-brand">
-    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
@@ -51,6 +50,7 @@
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
   </div>
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -63,13 +63,16 @@
     <div class="page-hero-content" data-aos="fade-up">
       <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-pc-display"></i></div>
       <h1><span class="hl">Ensamblaje</span> · Gabinete</h1>
-      <p>Tipos, flujo de aire y cable management.</p>
+      <p>Tipos, flujo de aire, ventilacion, compatibilidad y cable management.</p>
     </div>
   </div>
 
   <nav class='subnav' aria-label='Secciones'>
     <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi bi-cpu'></i>Placa Base</a>
     <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
     <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
     <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
@@ -85,7 +88,7 @@
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Gabinete</span></nav>
 <div class="content-section" id="gabinete" data-aos="fade-up">
       <h2 class="section-title"><i class="bi bi-pc-display"></i> Gabinete (Case)</h2>
-      <p class="section-subtitle">Tipos · Panel frontal · Flujo de aire · Cable management · Bahias</p>
+      <p class="section-subtitle">Tipos · Anatomia · Panel frontal · Flujo de aire · Ventiladores · Compatibilidad · Materiales · Cable management · Bahias · RGB</p>
 
       <div class="info-box info-tip mb-2">
         <span class="icon"><i class="bi bi-info-circle"></i></span>
@@ -106,6 +109,40 @@
             <tr><td>Mini-ITX</td><td>ITX</td><td>Muy compacto para placas ITX. Popular en HTPCs y builds portatiles. Menos slots de expansion.</td></tr>
             <tr><td>HTPC</td><td>ITX / mATX</td><td>Diseado para sala de estar. Factor de forma bajo y ancho, similar a un equipo de audio.</td></tr>
           </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="anatomia-gabinete">
+        <div class="accordion-header" onclick="toggleAccordion('anatomia-gabinete')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3"></i></span><div><div class="accordion-title">Anatomia del Gabinete</div><div class="accordion-subtitle">Chasis · vidrio · ventiladores · placa · GPU · PSU</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Este es un gabinete Mid-Tower con lateral de vidrio templado. Dentro se ve la placa base montada, la GPU horizontal, la PSU abajo, la tapa (shroud) que oculta los cables y los ventiladores de entrada frontales (azul), superiores (cian) y trasero (rojo).</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="gabinete" data-title="Gabinete Mid-Tower con panel de vidrio">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Gabinete Mid-Tower (interior visible)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Zona</th><th>Ubicacion</th><th>Funcion</th></tr>
+            <tr><td>Chasis (frame)</td><td>Todo el cuerpo</td><td>Estructura de acero/aluminio que sostiene todos los componentes</td></tr>
+            <tr><td>Panel de vidrio</td><td>Lateral izquierdo</td><td>Vidrio templado para exhibir el interior; se retira con tornillos mariposa</td></tr>
+            <tr><td>Panel frontal (mesh)</td><td>Frente</td><td>Malla que deja pasar aire a los ventiladores de entrada (intake)</td></tr>
+            <tr><td>Ventilador intake</td><td>Frontal</td><td>Succiona aire frio hacia el interior (en el modelo, anillo azul)</td></tr>
+            <tr><td>Ventilador exhaust</td><td>Trasero / superior</td><td>Expulsa el aire caliente (anillo rojo trasero, cian superior)</td></tr>
+            <tr><td>Placa base</td><td>Panel lateral derecho</td><td>Montada sobre separadores (standoffs); su panel I/O asoma por detras</td></tr>
+            <tr><td>GPU</td><td>Horizontal, debajo del CPU</td><td>Va en el PCIe x16 de la placa, con ventiladores hacia abajo</td></tr>
+            <tr><td>PSU shroud</td><td>Fondo de la zona baja</td><td>Tapa que oculta la PSU y los cables sobrantes, mejorando el flujo de aire</td></tr>
+            <tr><td>PSU</td><td>Abajo, atras</td><td>Toma el aire por debajo y expulsa por la rejilla trasera</td></tr>
+            <tr><td>Barra de cables</td><td>Detras del tray</td><td>Ojales y canales para pasar los cables ocultos</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Color = direccion del aire</strong> En el modelo, cada anillo de ventilador indica su funcion: azul = entrada de aire (intake), rojo = salida (exhaust), cian = salida superior. En un gabinete real revisa la flecha grabada en el costado del ventilador para saber hacia donde empuja.</div>
+          </div>
         </div>
       </div>
 
@@ -152,6 +189,75 @@
         </div>
       </div>
 
+      <div class="accordion" id="ventiladores">
+        <div class="accordion-header" onclick="toggleAccordion('ventiladores')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-fan"></i></span><div><div class="accordion-title">Ventiladores del Gabinete</div><div class="accordion-subtitle">120/140mm · CFM · presion estatica · PWM · curva</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El tamano del ventilador define cuanto aire puede mover y a que velocidad (y ruido). Mas grande = mas aire con menos RPM = menos ruido. Compara el mismo modelo en 120mm (azul) y 140mm (cian):</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="fan-sizes" data-title="Ventiladores 120mm vs 140mm">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">120mm (azul) vs 140mm (cian)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="casefan" data-title="Ventilador de gabinete completo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Case fan completo</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fan4" data-title="Conector de ventilador 4-pin PWM">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 4-pin PWM</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fan3" data-title="Conector de ventilador 3-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 3-pin (DC)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Tamano</th><th>Uso tipico</th><th>RPM tipicas</th><th>Ruido</th></tr>
+            <tr><td>80mm / 92mm</td><td>Gabinetes antiguos o SFF</td><td>2000-3500</td><td>Altas RPM = ruidoso</td></tr>
+            <tr><td>120mm</td><td>El estandar — casi todos los gabinetes</td><td>800-1800</td><td>Balance ideal</td></tr>
+            <tr><td>140mm</td><td>Frontales/superiores en gabinetes grandes</td><td>600-1400</td><td>Mas aire, menos ruido</td></tr>
+            <tr><td>200mm</td><td>Frontales de gabinetes full tower</td><td>400-900</td><td>Muy silencioso, mucho flujo</td></tr>
+          </table></div>
+          <p class="subhead mt-2">Especificaciones y conceptos</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Concepto</th><th>Que mide</th><th>Como leerlo</th></tr>
+            <tr><td>CFM (flujo de aire)</td><td>Volumen de aire por minuto</td><td>Alto = mueve mas aire en gabinetes abiertos</td></tr>
+            <tr><td>Presion estatica (mmH2O)</td><td>Capacidad de empujar aire por obstaculos</td><td>Alto = mejor para radiadores y rejillas densas</td></tr>
+            <tr><td>dBA (ruido)</td><td>Nivel sonoro</td><td>Menos de 30 dBA = silencioso; +40 dBA = audible</td></tr>
+            <tr><td>RPM</td><td>Vueltas por minuto</td><td>Controla el flujo; se regula por PWM o por voltaje</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>PWM vs DC</strong> Un ventilador 4-pin PWM controla la velocidad por ancho de pulso (señal del pin 4) y mantiene el voltaje fijo — es el control moderno. Un ventilador 3-pin (DC) se regula bajando el voltaje, y su rango minimo suele ser mas alto. En la BIOS ambos se pueden configurar; usa PWM siempre que la placa lo permita.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="materiales-gabinete">
+        <div class="accordion-header" onclick="toggleAccordion('materiales-gabinete')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box-seam"></i></span><div><div class="accordion-title">Materiales y Construccion</div><div class="accordion-subtitle">Acero · aluminio · vidrio templado · mesh</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Material</th><th>Ventajas</th><th>Desventajas</th></tr>
+            <tr><td>Acero SECC (galvanizado)</td><td>Barato, rigido, magnetico (filtros imantados)</td><td>Pesado, transmite vibraciones</td></tr>
+            <tr><td>Aluminio</td><td>Ligero, buena disipacion</td><td>Mas caro, se raya con facilidad</td></tr>
+            <tr><td>Vidrio templado</td><td>Estetico, no se raya</td><td>Pesado, fragil en los bordes, caro de reemplazar</td></tr>
+            <tr><td>Acrilico</td><td>Ligero y barato</td><td>Se raya con un paño, se pone amarillo con el sol</td></tr>
+            <tr><td>Mesh / tela</td><td>Maximo flujo de aire, filtros integrados</td><td>Acumula polvo, menos insonorizado</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Filtros de polvo</strong> El polvo es el enemigo numero uno de la refrigeracion. Los filtros van en las entradas de aire (frontal e inferior) y se limpian cada 1-3 meses con aspiradora o agua. Un gabinete con filtros de acceso rapido (magnéticos o deslizantes) vale la pena.</div>
+          </div>
+        </div>
+      </div>
+
       <div class="accordion" id="cable-management">
         <div class="accordion-header" onclick="toggleAccordion('cable-management')">
           <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-through-end"></i></span><div><div class="accordion-title">Cable Management</div><div class="accordion-subtitle">Gestion de cables · bridas · espacio trasero</div></div></div>
@@ -174,6 +280,56 @@
         </div>
       </div>
 
+      <div class="accordion" id="compatibilidad">
+        <div class="accordion-header" onclick="toggleAccordion('compatibilidad')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-rulers"></i></span><div><div class="accordion-title">Compatibilidad y Holguras (Clearance)</div><div class="accordion-subtitle">Largo de GPU · altura de cooler · profundidad de PSU</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Antes de comprar, revisa las medidas maximas que soporta el gabinete. Estas especificaciones aparecen en la ficha del fabricante y evitan la mayoria de problemas de compatibilidad:</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Medida (clearance)</th><th>Que mide</th><th>Valores tipicos Mid-Tower</th></tr>
+            <tr><td>GPU max length</td><td>Largo maximo de tarjeta de video</td><td>320-400mm (sin disipadores frontales)</td></tr>
+            <tr><td>CPU cooler height</td><td>Altura maxima del disipador de CPU</td><td>155-175mm</td></tr>
+            <tr><td>PSU depth</td><td>Profundidad maxima de la fuente</td><td>160-220mm</td></tr>
+            <tr><td>GPU thickness</td><td>Ancho de la GPU (slots)</td><td>Hasta 3 slots (hasta ~4 con soporte)</td></tr>
+            <tr><td>Radiator top/front</td><td>Radiadores que caben arriba y adelante</td><td>120/140/240/280/360mm</td></tr>
+            <tr><td>Cable depth</td><td>Espacio trasero para cable management</td><td>20-35mm</td></tr>
+            <tr><td>CPU cooler clearance</td><td>Espacio del cooler sobre la RAM</td><td>Alto para RAM con disipadores gruesos</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>El orden de revision</strong> 1) Formato de placa, 2) altura del cooler vs panel lateral, 3) largo de la GPU vs bahias frontales, 4) profundidad de la PSU, 5) grosor de la GPU vs slots PCIe disponibles. Si eliges GPU larga y cooler alto, verifica ambos juntos: pueden chocar entre si.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="refrigeracion-liquida">
+        <div class="accordion-header" onclick="toggleAccordion('refrigeracion-liquida')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-droplet-half"></i></span><div><div class="accordion-title">Refrigeracion Liquida (AIO)</div><div class="accordion-subtitle">Radiadores 120/140/240/280/360 · push/pull · ubicacion</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Un AIO (All-In-One) lleva el calor de la CPU a un radiador con ventiladores. El numero indica el tamano: 240 = dos ventiladores de 120mm, 360 = tres de 120mm. A mas radiador, mas disipacion (y mas huecos necesitas en el gabinete).</p>
+          <div class="conn-grid">
+            <div class="conn-card"><h4>Push</h4><p>Ventiladores a un solo lado del radiador empujando el aire a traves de el. La configuracion estandar y suficiente para la mayoria.</p></div>
+            <div class="conn-card"><h4>Push-Pull</h4><p>Ventiladores a ambos lados: uno empuja y otro tira. Mejora el flujo ~5-10%, pero ocupa el doble de espacio y sube el ruido.</p></div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Radiador</th><th>Ventiladores</th><th>CPU soportadas</th><th>Ubicacion tipica</th></tr>
+            <tr><td>120mm</td><td>1 x 120</td><td>Basicas y medias (65W)</td><td>Trasero</td></tr>
+            <tr><td>140mm</td><td>1 x 140</td><td>Medias (65-105W)</td><td>Trasero o superior</td></tr>
+            <tr><td>240mm</td><td>2 x 120</td><td>Medias y altas (105-170W)</td><td>Superior o frontal</td></tr>
+            <tr><td>280mm</td><td>2 x 140</td><td>Altas (170W+)</td><td>Frontal</td></tr>
+            <tr><td>360mm</td><td>3 x 120</td><td>Muy altas (intel HEDT / i9 / R9)</td><td>Frontal o superior</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Regla del radiador</strong> Si el radiador va en la parte frontal como intake, el aire que entra ya va calentado por el radiador — la CPU se enfria pero el resto del gabinete sube un poco de temperatura. En la parte superior como exhaust, la CPU se beneficia del aire fresco del frente. En CPUs normales, 240mm en top es el punto dulce.</div>
+          </div>
+        </div>
+      </div>
+
       <div class="accordion" id="bay-storage">
         <div class="accordion-header" onclick="toggleAccordion('bay-storage')">
           <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-stack"></i></span><div><div class="accordion-title">Bahias de Almacenamiento</div><div class="accordion-subtitle">Bahia 3.5" · Bahia 2.5" · Slot M.2</div></div></div>
@@ -185,6 +341,155 @@
             <div class="conn-card"><h4>Bahia 2.5"</h4><p>Para SSDs SATA. Suelen estar en la parte trasera del tray de la placa base para ocultar los cables SATA.</p></div>
             <div class="conn-card"><h4>Slot M.2</h4><p>No es una bahia independiente — el SSD M.2 se instala directamente en la placa base (slot M.2), no en el gabinete. Velocidades de hasta 14 GB/s con NVMe PCIe Gen4.</p></div>
             <div class="conn-card"><h4>Bandeja modular</h4><p>Muchos gabinetes modernos tienen bahias desmontables — si no usas HDDs, se pueden retirar para mejorar el flujo de aire frontal.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="cables-internos">
+        <div class="accordion-header" onclick="toggleAccordion('cables-internos')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-plug"></i></span><div><div class="accordion-title">Cables y Conectores Internos del Gabinete</div><div class="accordion-subtitle">Todos los cables dentro del case · como conectar cada uno</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Al hacer mantenimiento o armar un equipo, dentro del gabinete se distribuyen cables de alimentacion, datos, panel frontal, ventiladores e iluminacion. Este es el inventario completo de los cables que puedes encontrar conectados a la placa base y a la fuente de poder.</p>
+
+          <p class="subhead">Alimentacion (desde la PSU)</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="atx24" data-title="ATX 24-pin (20+4)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ATX 24-pin (20+4)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="atx20" data-title="ATX 20-pin (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ATX 20-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="eps8" data-title="EPS 8-pin (CPU)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">EPS 8-pin (CPU)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="eps4" data-title="EPS 4-pin (ATX12V)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">EPS 4-pin (CPU)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pcie62" data-title="PCIe 6+2 pin (GPU)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">PCIe 6+2 pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="12vhpwr" data-title="12VHPWR 16-pin (PCIe 5.0)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">12VHPWR 16-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="sata-power" data-title="SATA Power 15-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SATA Power 15-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="molex" data-title="Molex 4-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Molex 4-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+
+          <p class="subhead">Datos y almacenamiento</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="sata-data" data-title="Cable SATA de datos">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SATA Data</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="m2" data-title="SSD M.2 NVMe">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SSD M.2 NVMe</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ide" data-title="Cinta IDE 40-pin (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cinta IDE</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+
+          <p class="subhead">Panel frontal (front panel)</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="fpanel" data-title="Conectores F_Panel">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">F_Panel</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pwsw" data-title="Power Switch">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Power SW</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="resetsw" data-title="Reset Switch">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Reset SW</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="hddled" data-title="LED de actividad HDD">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HDD LED</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pwled" data-title="LED de encendido">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Power LED</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="speaker4" data-title="Buzzer 4-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Speaker</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+
+          <p class="subhead">Headers internos de la placa</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="usb20-int" data-title="Header USB 2.0 (9 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB 2.0 interno</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb30-int" data-title="Header USB 3.0 (19 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB 3.0 interno</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="hdaudio" data-title="Header HD Audio">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HD Audio</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+
+          <p class="subhead">Ventiladores e iluminacion</p>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="fan4" data-title="Fan 4-pin PWM">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 4-pin PWM</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fan3" data-title="Fan 3-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 3-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="casefan" data-title="Ventilador de gabinete">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Case Fan</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rgb4" data-title="RGB 4-pin (12V)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RGB 4-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="argb3" data-title="ARGB 3-pin (5V)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ARGB 3-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Pines</th><th>Voltaje</th><th>Capacidad</th><th>Diferencia</th></tr>
+            <tr><td>RGB</td><td>4 pines</td><td>12V</td><td>Un solo color a la vez</td><td>Todos los LEDs del cabezal cambian juntos</td></tr>
+            <tr><td>ARGB</td><td>3 pines</td><td>5V</td><td>Color por LED</td><td>Efectos como olas y colores independientes</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>No mezclar RGB y ARGB</strong> Conectar una tira ARGB 5V en un header RGB 12V quema los LEDs al instante. Antes de conectar, revisa el numero de pines y el voltaje del header en la placa; muchos hub RGB modernos aceptan ambos pero con conector diferenciado.</div>
+          </div>
+
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Consejo de mantenimiento</strong> Antes de abrir el gabinete, apaga el equipo y desconecta el cable de corriente. Para limpiar, agrupa los cables con bridas y usa aire comprimido; revisa que todos los conectores esten firmes (ATX, EPS, SATA, PCIe) porque las vibraciones y el polvo aflojan las conexiones con el tiempo.</div>
           </div>
         </div>
       </div>
@@ -214,6 +519,8 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
 <script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>

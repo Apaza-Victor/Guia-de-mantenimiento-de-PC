@@ -22,7 +22,6 @@
 
 <header class="topbar">
   <div class="topbar-brand">
-    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
@@ -51,6 +50,7 @@
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
   </div>
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -126,6 +126,13 @@
       <div class="info-box info-tip mt-2" data-aos="fade-up">
         <span class="icon"><i class="bi bi-lightbulb"></i></span>
         <div class="content"><strong>Recuerda:</strong> cuanto mas alta es la capa donde opera un dispositivo, mas "inteligente" es. Un Hub no distingue destinos; un Switch lee direcciones MAC; un Router decide rutas con direcciones IP; un Gateway traduce protocolos completos.</div>
+      </div>
+      <p class="subhead" data-aos="fade-up">Hub vs Switch — Dominios de Colision</p>
+      <div class="cable-3d-grid" data-aos="fade-up">
+        <div class="three-canvas" data-model="hub-vs-switch" data-title="Hub (colision compartida) vs Switch (por puerto)">
+          <div class="three-stage"></div>
+          <div class="three-bar"><span class="three-title">Hub vs Switch</span><span class="three-hint">girar / zoom</span></div>
+        </div>
       </div>
 
       <div class="accordion" id="seguridad-wifi">
@@ -224,6 +231,8 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
 <script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>

@@ -2,8 +2,7 @@
    TECHGUIDE - home3d.js (solo index.html)
    Fondo 3D tematizado + interactivo (Three.js):
    - constelacion interactiva de nodos (reacciona al cursor)
-   - placa base 3D (modelo OBJ con texturas) en rotacion 360
-   - Raycaster: el cursor resalta piezas y muestra etiquetas
+   - anillos orbitales + particulas de energia
    - parallax, adaptacion al tema y reduced-motion
    ============================================================ */
 
@@ -16,7 +15,6 @@
 
   const isDark = () => (document.documentElement.getAttribute('data-theme') || 'dark') !== 'light';
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const GSAP = window.gsap && !reduceMotion ? window.gsap : null;
 
   const C = {
     line: '#39d0d8', glow: '#00d4aa', accent: '#6c63ff',
@@ -34,7 +32,7 @@
   const group = new THREE.Group();
   scene.add(group);
 
-  /* === LUCES (para el modelo OBJ con materiales Phong) === */
+  /* === LUCES === */
   const ambient = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambient);
   const dirLight = new THREE.DirectionalLight(0xffffff, 1.1);
@@ -43,8 +41,6 @@
   const fillLight = new THREE.DirectionalLight(0x88ccff, 0.35);
   fillLight.position.set(-10, 4, -14);
   scene.add(fillLight);
-
-  function box(w, h, d, color, o) { return new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshBasicMaterial(Object.assign({ color }, o))); }
 
   /* === SPRITES DE GLOW === */
   function makeGlowTexture() {
@@ -106,96 +102,51 @@
     }
   })();
 
-  /* === HOVER (RAYCASTER) === */
-  const hoverMeshes = [];
-  function tagHover(obj, name, owner) {
-    obj.userData.hoverName = name;
-    obj.userData.hoverOwner = owner || obj;
-    hoverMeshes.push(obj);
-  }
-  const raycaster = new THREE.Raycaster();
-  const ndc = new THREE.Vector2(-2, -2);
-  const _c = new THREE.Vector3();
-  const _s = new THREE.Vector3();
-  const outline = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)), new THREE.LineBasicMaterial({ color: C.line }));
-  outline.visible = false;
-  scene.add(outline);
-  const label = document.createElement('div');
-  label.className = 'hero3d-label';
-  label.style.display = 'none';
-  document.body.appendChild(label);
-
-  /* === PLACA BASE 3D (lado derecho) === */
-  const board = new THREE.Group();
-  scene.add(board);
-  let boardReady = false;
-  let boardBaseY = -0.5;
-
-  function centerModel(obj) {
-    const b = new THREE.Box3().setFromObject(obj);
-    const c = b.getCenter(new THREE.Vector3());
-    obj.position.x -= c.x;
-    obj.position.y -= c.y;
-    obj.position.z -= c.z;
-  }
-
-  function applyTextures(obj, path) {
-    const texLoader = new THREE.TextureLoader();
-    texLoader.setPath(path);
-    const mainTex = texLoader.load('Textures/p4sba-mb.jpg');
-    mainTex.colorSpace = THREE.SRGBColorSpace;
-    const ps2Tex = texLoader.load('Textures/mb-ps-2.png');
-    ps2Tex.colorSpace = THREE.SRGBColorSpace;
-    const mats = [];
-    obj.traverse((child) => {
-      if (child.isMesh) {
-        (Array.isArray(child.material) ? child.material : [child.material]).forEach(m => { if (m) mats.push(m); });
-      }
+  /* === ANILLOS ORBITALES + NUCLEO === */
+  const ringGroup = new THREE.Group();
+  scene.add(ringGroup);
+  const ringObjs = [];
+  function buildRings() {
+    const orbitCount = 3;
+    const geom = new THREE.RingGeometry(2.6, 2.72, 90);
+    for (let i = 0; i < orbitCount; i++) {
+      const mat = new THREE.MeshBasicMaterial({
+        color: C.accent,
+        transparent: true,
+        opacity: 0.35,
+        side: THREE.DoubleSide,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+      const ring = new THREE.Mesh(geom, mat);
+      ring.scale.set(1 + i * 0.7, 1 + i * 0.7, 1);
+      ring.rotation.x = 1.35 + i * 0.35;
+      ring.rotation.z = i * 0.9;
+      ringGroup.add(ring);
+      ringObjs.push(ring);
+      trackGlow(mat, C.accent, '#5b52e0');
+    }
+    const coreMat = new THREE.MeshBasicMaterial({
+      color: C.glow,
+      transparent: true,
+      opacity: 0.5,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false
     });
-    mats.forEach((m) => {
-      if (m.name === 'Material__148') {
-        m.map = mainTex;
-        m.color.set(0xffffff);
-      } else if (m.name === 'Material__147') {
-        m.map = ps2Tex;
-        m.color.set(0xffffff);
-      }
-      if (m.needsUpdate !== undefined) m.needsUpdate = true;
-    });
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(0.9, 1), coreMat);
+    ringGroup.add(core);
+    ringObjs.push(core);
+    trackGlow(coreMat, C.glow, '#0e7490');
+    const orbitDots = [];
+    for (let i = 0; i < orbitCount; i++) {
+      const dot = sprite(C.glow, 0.7, 0.9);
+      ringGroup.add(dot);
+      orbitDots.push({ sp: dot, radius: 1 + i * 0.7, ph: i * 1.1 });
+    }
+    ringGroup.userData.orbitDots = orbitDots;
+    ringGroup.position.set(0, 0, 4);
   }
-
-  function onModelLoad(obj) {
-    obj.traverse((child) => {
-      if (child.isMesh) {
-        tagHover(child, 'Placa base (Motherboard)', board);
-      }
-    });
-    applyTextures(obj, 'assets/models/placa-base/');
-    centerModel(obj);
-    const size = new THREE.Box3().setFromObject(obj).getSize(new THREE.Vector3());
-    const scale = 12 / size.x;
-    obj.scale.setScalar(scale);
-    obj.rotation.x = -0.5;
-    obj.rotation.z = 0.2;
-    board.add(obj);
-    boardReady = true;
-  }
-
-  function onModelError(err) {
-    console.error('No se pudo cargar la placa base:', err);
-  }
-
-  if (typeof THREE.MTLLoader === 'function' && typeof THREE.OBJLoader === 'function') {
-    const path = 'assets/models/placa-base/';
-    const mtlLoader = new THREE.MTLLoader();
-    mtlLoader.setPath(path);
-    mtlLoader.load('Motherboard.mtl', (materials) => {
-      materials.preload();
-      const objLoader = new THREE.OBJLoader();
-      objLoader.setMaterials(materials);
-      objLoader.load(path + 'Motherboard.obj', onModelLoad, undefined, onModelError);
-    }, undefined, onModelError);
-  }
+  buildRings();
 
   /* === TEMA (claro / oscuro) === */
   function applyTheme() {
@@ -204,37 +155,29 @@
       t.mat.color.set(dark ? t.darkColor : t.lightColor);
       t.mat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending;
     });
-    outline.material.color.set(dark ? C.line : '#0e7490');
   }
   new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
   /* === RESIZE === */
-  let viewW = 0, viewH = 0;
   function resize() {
     const w = host.clientWidth || window.innerWidth;
     const h = host.clientHeight || window.innerHeight;
-    viewW = w; viewH = h;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    const aspect = w / h;
-    board.visible = aspect >= 1.15;
-    board.position.set(Math.min(16, aspect * 5.2 + 5), -0.5, 0);
+    ringGroup.visible = w >= 900;
   }
   window.addEventListener('resize', resize);
   resize();
 
-  /* === PARALLAX + PUNTERO (raycaster) === */
+  /* === PARALLAX === */
   const target = { x: 0, y: 0 };
   if (!reduceMotion) {
     host.addEventListener('mousemove', (e) => {
       const r = host.getBoundingClientRect();
       target.x = ((e.clientX - r.left) / r.width - 0.5) * 5;
       target.y = ((e.clientY - r.top) / r.height - 0.5) * 3;
-      ndc.x = ((e.clientX - r.left) / r.width) * 2 - 1;
-      ndc.y = -(((e.clientY - r.top) / r.height) * 2 - 1);
     });
-    host.addEventListener('pointerleave', () => { ndc.set(-2, -2); });
   }
 
   /* === LOOP DE ANIMACION === */
@@ -250,23 +193,10 @@
     /* Constelacion: nodos orbitan su base y se alejan del cursor */
     const posArr = cGeo.attributes.position.array;
     let lineCount = 0;
-    const rayActive = ndc.x > -2;
     for (let i = 0; i < MAX_NODES; i++) {
       const n = nodes[i];
       n.vx += (n.x0 + Math.sin(t * 0.18 + n.ph) * 1.6 - n.x) * 0.0012;
       n.vy += (n.y0 + Math.cos(t * 0.14 + n.ph) * 1.3 - n.y) * 0.0012;
-      if (rayActive) {
-        const tM = (n.z - raycaster.ray.origin.z) / raycaster.ray.direction.z;
-        const mx = raycaster.ray.origin.x + raycaster.ray.direction.x * tM;
-        const my = raycaster.ray.origin.y + raycaster.ray.direction.y * tM;
-        const dxm = n.x - mx, dym = n.y - my;
-        const d2m = dxm * dxm + dym * dym;
-        if (d2m < 64 && d2m > 0.01) {
-          const d = Math.sqrt(d2m);
-          const f = ((8 - d) / d) * 0.02;
-          n.vx += dxm * f; n.vy += dym * f;
-        }
-      }
       n.x += n.vx; n.y += n.vy;
       n.vx *= 0.95; n.vy *= 0.95;
       const pulse = 1 + Math.sin(t * 2.2 + n.ph) * 0.12;
@@ -291,42 +221,17 @@
     cGeo.computeBoundingSphere();
     cMat.opacity = 0.4 + Math.sin(t * 0.9) * 0.15;
 
-    if (boardReady) {
-      board.rotation.y += 0.006;
-      board.position.y = boardBaseY + Math.sin(t * 0.8) * 0.8;
-    }
-
-    /* Raycaster hover */
-    raycaster.setFromCamera(ndc, camera);
-    let hover = null;
-    const hits = raycaster.intersectObjects(hoverMeshes, true);
-    for (const h of hits) {
-      let o = h.object;
-      while (o) {
-        if (o.userData && o.userData.hoverOwner) { hover = o; break; }
-        o = o.parent;
-      }
-      if (hover) break;
-    }
-    if (hover) {
-      const owner = hover.userData.hoverOwner;
-      const bb = new THREE.Box3().setFromObject(owner);
-      bb.getSize(_s);
-      bb.getCenter(_c);
-      outline.position.copy(_c);
-      outline.scale.copy(_s);
-      outline.visible = true;
-      const p = _c.project(camera);
-      if (p.z < 1) {
-        label.style.display = 'block';
-        label.textContent = hover.userData.hoverName;
-        label.style.left = ((p.x * 0.5 + 0.5) * viewW) + 'px';
-        label.style.top = ((-p.y * 0.5 + 0.5) * viewH) + 'px';
-      }
-    } else {
-      outline.visible = false;
-      label.style.display = 'none';
-    }
+    /* Nucleo + anillos orbitales */
+    ringGroup.rotation.z += 0.0022;
+    ringGroup.rotation.x = Math.sin(t * 0.35) * 0.22;
+    const core = ringObjs[ringObjs.length - 1];
+    if (core) core.rotation.y += 0.01;
+    const dots = ringGroup.userData.orbitDots || [];
+    dots.forEach(d => {
+      const a = t * 0.9 + d.ph;
+      d.sp.position.set(Math.cos(a) * d.radius, Math.sin(a) * d.radius * 0.45, 0);
+      d.sp.material.opacity = 0.5 + Math.sin(t * 2.5 + d.ph) * 0.35;
+    });
 
     renderer.render(scene, camera);
     if (!reduceMotion) requestAnimationFrame(animate);

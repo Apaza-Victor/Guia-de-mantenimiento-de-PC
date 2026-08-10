@@ -22,7 +22,6 @@
 
 <header class="topbar">
   <div class="topbar-brand">
-    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
@@ -51,6 +50,7 @@
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
   </div>
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -63,13 +63,16 @@
     <div class="page-hero-content" data-aos="fade-up">
       <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-usb"></i></div>
       <h1><span class="hl">Ensamblaje</span> · Cableado</h1>
-      <p>Conectores de alimentacion, datos y video.</p>
+      <p>Conectores de alimentacion, datos, video y tipos de cable.</p>
     </div>
   </div>
 
   <nav class='subnav' aria-label='Secciones'>
     <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi bi-cpu'></i>Placa Base</a>
     <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
     <a class='chip active' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
     <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
@@ -272,6 +275,10 @@
               <div class="three-stage"></div>
               <div class="three-bar"><span class="three-title">IDE / PATA (cinta)</span><span class="three-hint">girar / zoom</span></div>
             </div>
+            <div class="three-canvas" data-model="port-esata" data-title="eSATA (SATA externo, 7 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">eSATA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
           </div>
         </div></div>
       </div>
@@ -283,6 +290,7 @@
           <i class="bi bi-chevron-down accordion-chevron"></i>
         </div>
         <div class="accordion-body"><div class="accordion-content">
+          <p>Los cables de video llevan la imagen (y en algunos casos el audio) desde la PC hasta el monitor o TV. El conector que uses depende del puerto de tu GPU, placa o portatil. A continuacion los estandares actuales, sus variantes compactas y los legados que aun encontraras en equipos viejos.</p>
           <div class="tools-grid">
             <div class="tool-card" data-aos="fade-up">
               <i class="bi bi-display"></i>
@@ -298,6 +306,18 @@
             </div>
             <div class="tool-card" data-aos="fade-up">
               <i class="bi bi-display"></i>
+              <h5>HDMI Mini (Tipo C) / Micro (Tipo D)</h5>
+              <p>Variantes compactas del HDMI con los mismos 19 pines. El Mini se usa en portatiles, camaras y Raspberry Pi; el Micro en tablets y telefonos. Necesitas un adaptador o cable Mini/Micro-a-HDMI.</p>
+              <span class="card-tag">Mismo estandar, menor tamano</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
+              <h5>Mini DisplayPort (mDP)</h5>
+              <p>Version reducida del DisplayPort (20 pines). Comun en portatiles, iMac y antiguos MacBook. Soporta las mismas resoluciones que el DP y daisy-chain. Suele conectarse con adaptador mDP-a-DP.</p>
+              <span class="card-tag">Portatiles y Apple</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
               <h5>Cable VGA (D-Sub 15)</h5>
               <p>Conector azul trapezoidal con 15 pines. Senal analogica: calidad degrada con cables largos. Presente en monitores hasta ~2015. Hoy reemplazado por HDMI y DP.</p>
               <span class="card-tag">Analogico, legado</span>
@@ -308,24 +328,115 @@
               <p>Digital Visual Interface. Tres variantes: DVI-D (digital), DVI-A (analogico) y DVI-I (ambos). Single Link: 1920x1200; Dual Link: 2560x1600.</p>
               <span class="card-tag">Digital, legado</span>
             </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
+              <h5>USB-C Alt Mode (video)</h5>
+              <p>El USB-C puede llevar video por "Alternate Mode": DP y HDMI viajan por los mismos pines. Con un cable USB-C a HDMI/DP conectas el monitor. Si es Thunderbolt, ademas soporta 8K y cadena de pantallas.</p>
+              <span class="card-tag">Todo en uno</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
+              <h5>S-Video</h5>
+              <p>Conector redondo mini-DIN de 4 pines. Separa la senal en luminancia (Y) y crominancia (C), mejorando al video compuesto. Uso analogico en tarjetas antiguas, consolas retro y camaras.</p>
+              <span class="card-tag">Analogico, SD</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
+              <h5>Video por Componentes (YPbPr)</h5>
+              <p>Tres conectores RCA: Y (verde), Pb (azul) y Pr (rojo). Analogo de alta calidad que llega a 1080p. Comun en consolas de la generacion PS2/Xbox y DVD players.</p>
+              <span class="card-tag">Analogico, hasta 1080p</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-display"></i>
+              <h5>Video Compuesto (RCA amarillo)</h5>
+              <p>Un solo cable RCA amarillo que mezcla toda la imagen (luminancia + crominancia) en una senal SD de baja calidad. Junto al blanco/rojo de audio formaba el cable "RCA" de toda la vida.</p>
+              <span class="card-tag">Analogico, SD</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-arrow-left-right"></i>
+              <h5>Adaptadores de Video</h5>
+              <p>Convierten un conector en otro: HDMI a VGA, DP a HDMI, USB-C a HDMI, Mini/Micro a HDMI, mDP a DP y DVI a VGA. Importante: muchos HDMI-a-VGA son unidireccionales (solo de PC a monitor).</p>
+              <span class="card-tag">Compatibilidad entre generaciones</span>
+            </div>
           </div>
+
+          <div class="table-wrap" style="margin-top:14px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cable</th>
+                  <th>Senal</th>
+                  <th>Resolucion maxima</th>
+                  <th>Audio</th>
+                  <th>Ancho de banda</th>
+                  <th>Pines</th>
+                  <th>Uso actual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>VGA (D-Sub 15)</td><td>Analogica</td><td>2048x1536</td><td>No</td><td>~400 MHz</td><td>15</td><td>Proyectores y equipos legacy</td></tr>
+                <tr><td>DVI-D (Dual Link)</td><td>Digital</td><td>2560x1600@60Hz</td><td>No</td><td>~9.9 Gbps</td><td>24+1</td><td>Monitores antiguos sin HDMI</td></tr>
+                <tr><td>HDMI 2.1</td><td>Digital</td><td>10K@60Hz / 8K@60Hz / 4K@120Hz</td><td>Si</td><td>48 Gbps</td><td>19</td><td>TVs, gaming y GPUs</td></tr>
+                <tr><td>DisplayPort 2.1</td><td>Digital</td><td>16K@60Hz / 8K@120Hz</td><td>Si</td><td>80 Gbps</td><td>20</td><td>Monitores pro y multi-monitor</td></tr>
+                <tr><td>Mini DisplayPort</td><td>Digital</td><td>Igual que DP (por vers.)</td><td>Si</td><td>Igual que DP</td><td>20</td><td>Portatiles y Apple</td></tr>
+                <tr><td>USB-C Alt Mode / TB4</td><td>Digital</td><td>8K@60Hz</td><td>Si</td><td>40 Gbps (USB4/TB4)</td><td>24</td><td>Portatiles modernos, monitores USB-C</td></tr>
+                <tr><td>S-Video</td><td>Analogica (Y/C)</td><td>480i / 576i</td><td>No</td><td>~10 MHz</td><td>4</td><td>Consolas retro y tarjetas antiguas</td></tr>
+                <tr><td>Componentes (YPbPr)</td><td>Analogica</td><td>1080p</td><td>No</td><td>~100 MHz</td><td>3x RCA</td><td>Consolas PS2/Xbox, DVD players</td></tr>
+                <tr><td>Compuesto (RCA)</td><td>Analogica</td><td>480i / 576i</td><td>No (separado)</td><td>~4 MHz</td><td>1x RCA</td><td>Tarjetas de captura y equipos SD</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Elegir cable de video:</strong> Para un monitor de PC usa <strong>DisplayPort</strong> (soporta las frecuencias mas altas y daisy-chain). Para una TV usa <strong>HDMI</strong> (audio + video en un cable). En un portatil revisa si tiene <strong>USB-C con Alt Mode</strong> o <strong>Mini HDMI</strong>. El <strong>VGA</strong> solo envia video analogico y degrada con cables largos; los estandares analogicos (VGA, S-Video, compuesto, componentes) ya quedaron relegados a equipos legacy y retro.</div>
+          </div>
+
           <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
           <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="hdmi" data-title="HDMI (19 pines)">
+            <div class="three-canvas" data-model="hdmi" data-title="HDMI (19 pines, audio + video)">
               <div class="three-stage"></div>
               <div class="three-bar"><span class="three-title">HDMI 19 pines</span><span class="three-hint">girar / zoom</span></div>
             </div>
-            <div class="three-canvas" data-model="dp" data-title="DisplayPort (20 pines)">
+            <div class="three-canvas" data-model="hdmi-mini" data-title="HDMI Mini (Tipo C, portatiles)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HDMI Mini (C)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="hdmi-micro" data-title="HDMI Micro (Tipo D, tablets)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HDMI Micro (D)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="dp" data-title="DisplayPort (20 pines, alta gama)">
               <div class="three-stage"></div>
               <div class="three-bar"><span class="three-title">DisplayPort</span><span class="three-hint">girar / zoom</span></div>
             </div>
-            <div class="three-canvas" data-model="vga" data-title="VGA (D-Sub 15)">
+            <div class="three-canvas" data-model="minidp" data-title="Mini DisplayPort (portatiles / Apple)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Mini DP</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="vga" data-title="VGA (D-Sub 15, analogico)">
               <div class="three-stage"></div>
               <div class="three-bar"><span class="three-title">VGA (D-Sub 15)</span><span class="three-hint">girar / zoom</span></div>
             </div>
-            <div class="three-canvas" data-model="dvi" data-title="DVI (24+1)">
+            <div class="three-canvas" data-model="dvi" data-title="DVI (24+5, digital + analogico)">
               <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">DVI (24+1)</span><span class="three-hint">girar / zoom</span></div>
+              <div class="three-bar"><span class="three-title">DVI (24+5)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="svideo" data-title="S-Video (mini-DIN 4, analogico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">S-Video</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ypbpr" data-title="Componentes YPbPr (verde / azul / rojo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Componentes YPbPr</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rca-video" data-title="Video compuesto (RCA amarillo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Compuesto (RCA)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="adapter-hdmi-vga" data-title="Adaptador HDMI a VGA">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Adaptador HDMI→VGA</span><span class="three-hint">girar / zoom</span></div>
             </div>
           </div>
         </div></div>
@@ -377,6 +488,18 @@
             <div class="three-canvas" data-model="usb-b" data-title="USB Tipo B">
               <div class="three-stage"></div>
               <div class="three-bar"><span class="three-title">USB Tipo B</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-mini" data-title="USB Mini-B (camaras)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB Mini-B</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-micro" data-title="USB Micro-B (Android antiguo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB Micro-B</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="thunderbolt" data-title="Thunderbolt 3/4 (USB-C con rayo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Thunderbolt</span><span class="three-hint">girar / zoom</span></div>
             </div>
           </div>
         </div></div>
@@ -598,6 +721,29 @@
               <h5>Conector de Ventilador 3/4-pin</h5>
               <p>Conecta ventiladores de CPU y caja a la placa madre. 3 pines (+12V, GND, tacometro). 4 pines anaden senal PWM para control digital preciso de velocidad.</p>
               <span class="card-tag">CPU_FAN / SYS_FAN</span>
+            </div>
+          </div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="jack35" data-title="Jack 3.5mm (TRS / TRRS)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Jack 3.5mm</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="toslink" data-title="S/PDIF optico (TOSLINK)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">TOSLINK</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rj45" data-title="Cable UTP con RJ-45 (T568A/B)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">UTP + RJ-45</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fan3" data-title="Conector 3-pin (sin PWM)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 3-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fan4" data-title="Conector 4-pin PWM">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 4-pin PWM</span><span class="three-hint">girar / zoom</span></div>
             </div>
           </div>
         </div></div>

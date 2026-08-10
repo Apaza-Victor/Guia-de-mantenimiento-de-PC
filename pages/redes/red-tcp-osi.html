@@ -24,7 +24,6 @@
 
 <header class="topbar">
   <div class="topbar-brand">
-    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
@@ -53,6 +52,7 @@
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
   </div>
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -431,6 +431,16 @@
             <span class="icon"><i class="bi bi-lightbulb"></i></span>
             <div class="content"><strong>Trunking (802.1Q)</strong> Cuando varias VLANs viajan por el mismo cable hacia otro switch o router, se usan puertos trunk con etiquetado 802.1Q. Asi un solo enlace transporta multiples VLANs.</div>
           </div>
+          <div class="cable-3d-grid two mt-2" data-aos="fade-up">
+            <div class="three-canvas" data-model="switch-vlan" data-title="Switch con 8 puertos en 2 VLANs (10 y 20)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Switch con VLANs</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="vlan-trunk" data-title="Dos switches unidos por enlace trunk (802.1Q)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Enlace trunk 802.1Q</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -508,6 +518,8 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
 <script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>

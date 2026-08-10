@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia de Puertos - Ensamblaje de PC | TechGuide</title>
-  <meta name="description" content="Ensamblaje · Guia de Puertos. 20+ puertos y conectores visuales.">
+  <meta name="description" content="Ensamblaje · Guia de Puertos. 30+ puertos y conectores con ejemplos 3D interactivos.">
   <meta name="theme-color" content="#0f1117">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Guia de Puertos - Ensamblaje de PC | TechGuide">
-  <meta property="og:description" content="Ensamblaje · Guia de Puertos. 20+ puertos y conectores visuales.">
+  <meta property="og:description" content="Ensamblaje · Guia de Puertos. 30+ puertos y conectores con ejemplos 3D interactivos.">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,6 @@
 
 <header class="topbar">
   <div class="topbar-brand">
-    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
     <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
@@ -51,6 +50,7 @@
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
       <i class="bi bi-sun-fill"></i><span>Claro</span>
     </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
   </div>
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -63,13 +63,16 @@
     <div class="page-hero-content" data-aos="fade-up">
       <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-usb-plug"></i></div>
       <h1><span class="hl">Ensamblaje</span> · Guia de Puertos</h1>
-      <p>20+ puertos y conectores visuales.</p>
+      <p>30+ puertos y conectores con ejemplos 3D interactivos.</p>
     </div>
   </div>
 
   <nav class='subnav' aria-label='Secciones'>
     <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi bi-cpu'></i>Placa Base</a>
     <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
     <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
     <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
@@ -113,6 +116,33 @@
             <span class="icon"><i class="bi bi-lightbulb"></i></span>
             <div class="content"><strong>Identificar el puerto:</strong> Los puertos USB 3.0+ suelen tener el inserto de color azul y el logo "SS" (SuperSpeed). Los USB-C de 20 Gbps o mas soportan carga rapida (Power Delivery) y video alterno.</div>
           </div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="usb-a" data-title="USB-A (rectangular, no reversible)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB-A</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-b" data-title="USB-B (cuadrado con biseles)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB-B</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-c" data-title="USB-C (24 pines, reversible)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB-C</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-mini" data-title="Mini-USB (5 pines, camaras)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Mini-USB</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-micro" data-title="Micro-USB (5 pines, Android antiguo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Micro-USB</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-colors" data-title="Identificar la version USB por color">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB por color</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -135,6 +165,29 @@
             <tr><td>HDMI 2.1</td><td>48 Gbps</td><td>Digital</td><td>Gaming, TVs, pantallas 8K</td></tr>
             <tr><td>DisplayPort 2.0</td><td>80 Gbps</td><td>Digital</td><td>Monitores profesionales, multi-monitor</td></tr>
           </table></div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="hdmi" data-title="HDMI (19 pines, audio + video)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HDMI</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="dp" data-title="DisplayPort (20 pines, alta gama)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">DisplayPort</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="vga" data-title="VGA (D-Sub 15, analogico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">VGA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="dvi" data-title="DVI (24+1, digital)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">DVI</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Elegir puerto de video:</strong> En una GPU o placa con varios puertos, usa <strong>DisplayPort</strong> para monitores de alta frecuencia (144Hz+) y <strong>HDMI</strong> para TVs y audio por un solo cable. HDMI tiene versiones Mini (C) y Micro (D) para portatiles y tablets. El <strong>VGA</strong> solo envia video analogico y degrada con cables largos.</div>
+          </div>
         </div>
       </div>
 
@@ -162,6 +215,37 @@
             <tr><td>Gris</td><td>Salida de parlantes laterales (sistemas 7.1)</td></tr>
             <tr><td>TRRS combinado</td><td>Headset con auriculares + microfono en un solo conector (4 polos)</td></tr>
           </table></div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="rj45" data-title="RJ-45 (Ethernet, 8 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RJ-45</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rj11" data-title="RJ-11 (telefono, 4 hilos)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RJ-11</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="jack35" data-title="Jack 3.5mm (audio analogico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Jack 3.5mm</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="toslink" data-title="S/PDIF optico (TOSLINK)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">TOSLINK</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="thunderbolt" data-title="Thunderbolt (USB-C, 40 Gbps)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Thunderbolt</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ps2" data-title="PS/2 (6 pines, teclado/raton)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">PS/2</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="com" data-title="RS-232 serial (DB-9)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">COM (DB-9)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -180,6 +264,41 @@
             <div class="conn-card"><h4>M.2</h4><p>Slot compacto en la placa base para SSDs NVMe (hasta 14 GB/s) y modulos WiFi. Clave M (NVMe) o clave B (SATA). Estandar actual de almacenamiento interno de alta velocidad.</p></div>
             <div class="conn-card"><h4>SATA</h4><p>Puerto de datos serial para discos duros y SSDs de 2.5". SATA III: hasta 6 Gbps (~550 MB/s real). Conector L-shaped para datos y cable de alimentacion de 15 pines.</p></div>
             <div class="conn-card"><h4>Slots PCIe</h4><p>Slots de expansion en la placa base: x1, x4, x8, x16. Usados para GPU (x16), tarjetas de red (x1), NVMe adaptadores (x4). PCIe 5.0: 64 GB/s en x16.</p></div>
+          </div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="sata-data" data-title="SATA (7 pines, datos)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SATA Data</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="port-esata" data-title="eSATA (SATA externo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">eSATA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="m2" data-title="M.2 (SSD NVMe/SATA)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">M.2</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pcie-slot" data-title="Slot PCIe (x1/x4/x16)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Slot PCIe</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="port-firewire" data-title="FireWire (IEEE 1394, 6 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">FireWire</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="port-db25" data-title="LPT paralelo (DB-25)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">LPT (DB-25)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="port-rca" data-title="RCA (video + audio estereo)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RCA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="port-bnc" data-title="BNC (bayoneta)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">BNC</span><span class="three-hint">girar / zoom</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -209,6 +328,8 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
 <script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>

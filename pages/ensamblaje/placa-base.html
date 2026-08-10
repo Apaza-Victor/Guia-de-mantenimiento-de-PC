@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placa Base - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Placa Base. Todos los componentes, puertos, conectores, slots y headers con visores 3D y tips.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Placa Base - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Placa Base. Todos los componentes, puertos y conectores con visores 3D.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <style>
+    .usb-chip { display: inline-block; padding: .1rem .55rem; border-radius: 4px; font-weight: 700; font-size: .78rem; color: #fff; }
+    .usb-2 { background: #2b2d33; }
+    .usb-3 { background: #3b82c4; }
+    .usb-31 { background: #3bc2c9; }
+    .usb-32 { background: #d8433d; }
+    .usb-c-chip { background: #6b7280; }
+    .port-pill { display: inline-block; padding: .12rem .6rem; border-radius: 999px; font-weight: 700; font-size: .78rem; margin: .1rem; }
+    .pill-atx { background: rgba(216,67,61,.16); color: #f08a86; border: 1px solid rgba(216,67,61,.4); }
+    .pill-matx { background: rgba(75,176,87,.14); color: #7fd08a; border: 1px solid rgba(75,176,87,.4); }
+    .pill-itx { background: rgba(59,130,196,.16); color: #6bb7e8; border: 1px solid rgba(59,130,196,.4); }
+    .pill-eatx { background: rgba(138,92,245,.16); color: #b39af7; border: 1px solid rgba(138,92,245,.4); }
+  </style>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-motherboard"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Placa Base</h1>
+      <p>Todos los componentes, puertos, conectores y slots de la motherboard con visores 3D.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip active' href='placa-base.html'><i class='bi bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi bi-book'></i>Conceptos Clave</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Placa Base</span></nav>
+<div class="content-section" id="placa-base" data-aos="fade-up">
+      <h2 class="section-title"><i class="bi bi-motherboard"></i> Placa Base (Motherboard)</h2>
+      <p class="section-subtitle">Vista general · Tipos · Zocalo CPU · VRM · RAM · PCIe · Chipset · Almacenamiento · Conectores</p>
+
+      <div class="info-box info-tip mb-2">
+        <span class="icon"><i class="bi bi-info-circle"></i></span>
+        <div class="content"><strong>Por que importa la placa base?</strong> Es la columna vertebral de la PC: conecta la CPU, la RAM, la GPU y el almacenamiento, y determina que componentes son compatibles. Todo se conecta a ella, por eso hay que conocerla antes de ensamblar.</div>
+      </div>
+
+      <div class="accordion open" id="vista-general">
+        <div class="accordion-header" onclick="toggleAccordion('vista-general')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-grid-3x3-gap"></i></span><div><div class="accordion-title">Vista General de la Placa Base</div><div class="accordion-subtitle">La placa completa con sus zonas principales</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Cada placa base organiza sus componentes en zonas fijas. Identificarlas te permite conectar todo sin consultar el manual a cada paso: zocalo CPU arriba-izquierda, memoria a la derecha, slots de expansion abajo y conectores de alimentacion en los bordes.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="motherboard" data-title="Placa base ATX (vista superior)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Placa base ATX completa</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Zona</th><th>Ubicacion tipica</th><th>Contenido</th></tr>
+            <tr><td>Socket CPU</td><td>Superior izquierda</td><td>Zocalo del procesador + VRM alrededor</td></tr>
+            <tr><td>Slots DIMM</td><td>Derecha del socket</td><td>4 slots de memoria RAM (2 o 4 canales)</td></tr>
+            <tr><td>Slots de expansion</td><td>Parte inferior</td><td>PCIe x16 (GPU) y PCIe x1 (tarjetas)</td></tr>
+            <tr><td>Chipset</td><td>Inferior derecha</td><td>Con disipador propio, gestiona puertos SATA y USB</td></tr>
+            <tr><td>Conectores PSU</td><td>Bordes derecho y superior</td><td>ATX 24-pin y EPS 8-pin (CPU)</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Factor de forma</strong> ATX (30.5 x 24.4 cm), Micro-ATX (24.4 x 24.4 cm) y Mini-ITX (17 x 17 cm) son los mas comunes. El gabinete y la placa deben coincidir en factor de forma; los agujeros de montaje estan estandarizados por formato.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="tipos-placa">
+        <div class="accordion-header" onclick="toggleAccordion('tipos-placa')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-layers"></i></span><div><div class="accordion-title">Tipos de Placa Base</div><div class="accordion-subtitle">ATX · Micro-ATX · Mini-ITX · E-ATX</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El tipo de placa (factor de forma) define su tamano, cuantos componentes acepta y en que gabinete entra. Elige primero el factor de forma y luego el resto: define el tamano del gabinete y cuantas tarjetas/discos podras instalar.</p>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Formato</th><th>Medidas</th><th>Slots RAM</th><th>Slots PCIe</th><th>Ideal para</th></tr>
+            <tr><td><span class="port-pill pill-eatx">E-ATX</span></td><td>30.5 x 33 cm</td><td>8</td><td>3-4</td><td>Workstations y rigs extremos</td></tr>
+            <tr><td><span class="port-pill pill-atx">ATX</span></td><td>30.5 x 24.4 cm</td><td>4</td><td>3-4</td><td>La mas estandar: buen balance</td></tr>
+            <tr><td><span class="port-pill pill-matx">Micro-ATX</span></td><td>24.4 x 24.4 cm</td><td>4</td><td>2-3</td><td>Gabinete compacto, presupuesto</td></tr>
+            <tr><td><span class="port-pill pill-itx">Mini-ITX</span></td><td>17 x 17 cm</td><td>2</td><td>1</td><td>PCs mini, HTPC, SFF</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Regla de montaje</strong> El formato de la placa debe ser menor o igual al que soporta el gabinete: una Micro-ATX entra en gabinetes ATX, pero una ATX no entra en gabinetes Mini-ITX. Revisa siempre las especificaciones del gabinete antes de comprar.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="socket-cpu">
+        <div class="accordion-header" onclick="toggleAccordion('socket-cpu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Zocalo de CPU (Socket)</div><div class="accordion-subtitle">LGA 1700 · AM5 · AM4 · donde va el procesador</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El socket es el zocalo donde se instala la CPU. El tipo de socket define que procesadores son compatibles: no puedes poner un Intel en un socket AMD ni viceversa.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="cpu-socket" data-title="Zocalo de CPU (LGA)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Socket CPU LGA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Socket</th><th>Marca</th><th>Generaciones</th><th>Pines</th></tr>
+            <tr><td>LGA 1700</td><td>Intel</td><td>12a - 14a gen (Alder, Raptor)</td><td>1700 (en la placa)</td></tr>
+            <tr><td>LGA 1851</td><td>Intel</td><td>Core Ultra 200</td><td>1851 (en la placa)</td></tr>
+            <tr><td>AM5</td><td>AMD</td><td>Ryzen 7000 / 9000</td><td>1718 (en la placa)</td></tr>
+            <tr><td>AM4</td><td>AMD</td><td>Ryzen 1000 - 5000</td><td>1331 (en el CPU)</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Manipulacion cuidadosa</strong> Los pines son fragiles. En sockets LGA los pines estan en la placa; en AM4/AM5 estan en el CPU. No toques la cara de los pines ni forces la palanca de retencion.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vrm-zona">
+        <div class="accordion-header" onclick="toggleAccordion('vrm-zona')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-lightning-charge"></i></span><div><div class="accordion-title">VRM — Fases de Alimentacion</div><div class="accordion-subtitle">Convierte el 12V de la PSU en los voltajes de la CPU</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El VRM (Voltage Regulator Module) esta formado por fases que regulan el voltaje que llega a la CPU y la RAM. Mas fases = mas estable el voltaje y menos calentamiento, importante para CPUs de alto consumo o overclocking.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="vrm" data-title="VRM — fases de alimentacion">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">VRM (fases de poder)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Tip</strong> Para CPUs de gama alta busca placas con al menos 10-12 fases y disipadores grandes sobre el VRM. Para CPUs de gama media, 6-8 fases son suficientes y no gastes de mas.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="memoria-ram">
+        <div class="accordion-header" onclick="toggleAccordion('memoria-ram')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-memory"></i></span><div><div class="accordion-title">Slots de Memoria (DIMM)</div><div class="accordion-subtitle">Ranuras DDR4 / DDR5 · doble canal · orden de insercion</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Los slots DIMM alojan la memoria RAM. La placa define el tipo (DDR4 o DDR5) y la velocidad maxima. En la mayoria de placas hay 4 slots y deben llenarse en orden especifico para activar el doble canal.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="ram-dimm" data-title="Modulo de memoria RAM (DIMM)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Modulo RAM DIMM</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Configuracion</th><th>Slots</th><th>Nota</th></tr>
+            <tr><td>2 modulos</td><td>Slots A2 y B2 (2o y 4o)</td><td>Doble canal activado — recomendado</td></tr>
+            <tr><td>4 modulos</td><td>Los 4 slots</td><td>Todos los bancos llenos</td></tr>
+            <tr><td>1 modulo</td><td>Slot A2</td><td>Funciona, pero pierdes rendimiento de doble canal</td></tr>
+          </table></div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Tipo de RAM</th><th>Generacion</th><th>Velocidades tipicas</th><th>Muesca / Dato</th></tr>
+            <tr><td><strong>DDR3</strong></td><td>2007-2014</td><td>1333 a 2133 MHz</td><td>Placas Intel de la era LGA 1150/1151 y AMD AM3</td></tr>
+            <tr><td><strong>DDR4</strong></td><td>2014-2022</td><td>2133 a 3200+ MHz</td><td>La mas comun hoy; muesca ligeramente desplazada del centro</td></tr>
+            <tr><td><strong>DDR5</strong></td><td>2022-actualidad</td><td>4800 a 7200+ MHz</td><td>Muesca en otra posicion; no cabe en slots DDR4</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>DDR4 vs DDR5</strong> No son intercambiables: la muesca de los pines esta en posiciones diferentes para evitar insertar una en el slot equivocado. No intentes forzarlo — se dañaria el modulo o el slot.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="slots-pcie">
+        <div class="accordion-header" onclick="toggleAccordion('slots-pcie')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-pci-card"></i></span><div><div class="accordion-title">Slots de Expansion (PCIe)</div><div class="accordion-subtitle">PCIe x16 (GPU) · x4 y x1 (tarjetas de expansion)</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Los slots PCI Express conectan la tarjeta grafica y otras tarjetas (Wi-Fi, capturadoras, NVMe adaptadores). El tamaño x16 se usa para la GPU; los x1 para tarjetas pequeñas.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="pcie-slot" data-title="Slot PCIe x16">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Slot PCIe x16</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Version</th><th>Ancho de banda (x16)</th><th>Nota</th></tr>
+            <tr><td>PCIe 3.0</td><td>16 GB/s</td><td>Placas 2011-2019</td></tr>
+            <tr><td>PCIe 4.0</td><td>32 GB/s</td><td>Generacion actual, compatible con GPUs modernas</td></tr>
+            <tr><td>PCIe 5.0</td><td>64 GB/s</td><td>RTX 5000 / RX 9000 / NVMe Gen5</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Compatibilidad</strong> PCIe es retrocompatible: una GPU PCIe 4.0 funciona en un slot PCIe 3.0 (perdida minima) y viceversa. El slot inferior suele ser x4 o compartido con los puertos SATA/M.2 — consulta el manual.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="chipset-zona">
+        <div class="accordion-header" onclick="toggleAccordion('chipset-zona')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3"></i></span><div><div class="accordion-title">Chipset / PCH</div><div class="accordion-subtitle">Gestiona puertos SATA, USB y expansion</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El chipset (PCH en Intel, FCH en AMD) es el circuito que distribuye las conexiones de la placa que no van directo a la CPU: puertos SATA, USB, LAN, audio y los slots de expansion secundarios. Suele llevar un disipador con el nombre del chipset (B650, Z790...).</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="chipset" data-title="Chipset con disipador">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Chipset / PCH</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <ul class="mt-2" style="list-style:none;padding:0;margin:0;">
+            <li style="padding:.35rem 0;border-bottom:1px solid var(--border);"><i class="bi bi-check2" style="color:var(--accent2);margin-right:.5rem;"></i><strong>Que hace:</strong> conecta el almacenamiento (SATA/M.2), USB, red (LAN) y el audio a la CPU por un enlace rapido. En placas modernas casi todo va por carriles PCIe.</li>
+            <li style="padding:.35rem 0;border-bottom:1px solid var(--border);"><i class="bi bi-check2" style="color:var(--accent2);margin-right:.5rem;"></i><strong>Northbridge / Southbridge:</strong> en placas viejas habia dos chips (puente norte: RAM y PCIe x16; puente sur: el resto). Desde 2011 la RAM y los carriles PCIe principales pasaron a la CPU y quedo un solo chip (el chipset actual).</li>
+            <li style="padding:.35rem 0;border-bottom:1px solid var(--border);"><i class="bi bi-check2" style="color:var(--accent2);margin-right:.5rem;"></i><strong>Gama y funciones:</strong> gama alta (Z790, X670E, TRX) habilita overclocking y mas carriles; gama media (B760, B650) cubre casi todo sin pagar de mas; gama de entrada (H610, A620) va a lo basico sin overclock.</li>
+            <li style="padding:.35rem 0;border-bottom:1px solid var(--border);"><i class="bi bi-check2" style="color:var(--accent2);margin-right:.5rem;"></i><strong>CPU vs Chipset:</strong> en plataformas modernas la CPU maneja directo la RAM, el slot PCIe x16 de la GPU y un slot M.2; el chipset agrega el resto (mas USB, mas SATA, LAN, audio).</li>
+          </ul>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Nota</strong> Los chipsets de gama alta (Z790, X670E) permiten overclocking y mas carriles PCIe/SATA. Los de gama media (B760, B650) cubren la mayoria de builds sin pagar de mas.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="almacenamiento-board">
+        <div class="accordion-header" onclick="toggleAccordion('almacenamiento-board')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd"></i></span><div><div class="accordion-title">Almacenamiento en la Placa</div><div class="accordion-subtitle">Puertos SATA · Slots M.2 NVMe</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La placa ofrece dos formas de conectar almacenamiento: los puertos SATA (para SSDs 2.5" y HDDs, hasta 6 Gb/s) y los slots M.2 (para SSDs NVMe, hasta 14 GB/s con PCIe Gen4/Gen5).</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="sata-ports" data-title="Puertos SATA de la placa">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Puertos SATA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="m2-slot" data-title="Slot M.2 con SSD NVMe">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Slot M.2 + SSD</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="sata-data" data-title="Cable de datos SATA">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cable SATA datos</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ide" data-title="Cable IDE (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cable IDE</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Velocidad</th><th>Uso</th></tr>
+            <tr><td>SATA III (puertos)</td><td>6 Gb/s</td><td>SSDs 2.5" y HDDs</td></tr>
+            <tr><td>M.2 NVMe (slot)</td><td>hasta 14 GB/s (Gen5)</td><td>SSDs M.2 modernos</td></tr>
+            <tr><td>IDE / PATA (legado)</td><td>133 MB/s</td><td>Discos y DVD viejos</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Compartido</strong> En muchas placas, usar el slot M.2 desactiva uno o dos puertos SATA, o el slot PCIe x4 inferior. Consulta el manual para saber que se desactiva al ocupar cada slot.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="cmos-batt">
+        <div class="accordion-header" onclick="toggleAccordion('cmos-batt')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-battery-full"></i></span><div><div class="accordion-title">Bateria CMOS</div><div class="accordion-subtitle">CR2032 · guarda la configuracion del BIOS</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La pila de boton CR2032 alimenta el chip de memoria CMOS que guarda la configuracion del BIOS (fecha, orden de arranque, perfiles). Si el equipo pierde la hora o la configuracion al apagar, la pila esta agotada.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="cmos-battery" data-title="Bateria CMOS CR2032">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Bateria CMOS</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Reset de BIOS</strong> Para restablecer la configuracion: retira la pila 5 minutos con el equipo desenchufado, o usa el jumper CLR_CMOS indicado en el manual. Duracion tipica de la pila: 3-5 años.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="alimentacion-board">
+        <div class="accordion-header" onclick="toggleAccordion('alimentacion-board')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-plug"></i></span><div><div class="accordion-title">Conectores de Alimentacion</div><div class="accordion-subtitle">ATX 24-pin · EPS 8/4 · Molex · SATA · 12VHPWR</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La placa recibe energia por dos conectores de la PSU: el ATX 24-pin (principal) y el EPS 12V (solo para la CPU, 8 o 4 pines). Ambos son obligatorios.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="atx24" data-title="Conector ATX 24-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ATX 24-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="atx4" data-title="Bloque ATX de 4 pines (desmontable)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ATX 4-pin (bloque del 20+4)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="eps8" data-title="Conector EPS 8-pin (CPU)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">EPS 8-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="eps4" data-title="Conector ATX 4-pin (CPU)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">EPS/ATX 4-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="molex" data-title="Conector Molex 4-pin">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Molex 4-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="molex-fan" data-title="Adaptador Molex -> ventilador">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Molex alimentando un ventilador</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="molex-led" data-title="Molex -> luces frontales / tira LED">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Molex alimentando luces LED</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ssd-sata" data-title="SSD 2.5\" con cable SATA tipo L">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SSD 2.5\" con cable SATA (conector tipo L)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="sata-power" data-title="Conector de alimentacion SATA">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">SATA Power 15-pin</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="12vhpwr" data-title="Conector 12VHPWR (GPU)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">12VHPWR</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Conector</th><th>Pines</th><th>Alimenta</th></tr>
+            <tr><td>ATX 24-pin (20+4)</td><td>24</td><td>Toda la placa base (los 4 pines extra son desmontables)</td></tr>
+            <tr><td>EPS 12V</td><td>8 (o 4)</td><td>Solo el procesador (CPU)</td></tr>
+            <tr><td>Molex 4-pin</td><td>4</td><td>Ventiladores, luces frontales, discos y accesorios viejos</td></tr>
+            <tr><td>SATA Power</td><td>15</td><td>SSDs 2.5" y HDDs SATA</td></tr>
+            <tr><td>SATA Data</td><td>7</td><td>Datos del disco (el conector tiene forma de "L")</td></tr>
+            <tr><td>12VHPWR</td><td>16</td><td>GPUs RTX 40-series y nuevas</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>No confundir</strong> El EPS (CPU, 8 pines) y el PCIe (GPU, 6+2) parecen iguales pero tienen los pines organizados distinto. No conectes un cable en el lugar equivocado — ambos encajan a presion y son fisicamente similares.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="headers-board">
+        <div class="accordion-header" onclick="toggleAccordion('headers-board')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-usb-plug"></i></span><div><div class="accordion-title">Headers Internos</div><div class="accordion-subtitle">USB frontal · HD Audio · F_Panel</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Los headers conectan los puertos y botones del panel frontal del gabinete. Suelen tener una solapa de plastico que evita conectarlos al reves.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="usb20-int" data-title="Header USB 2.0 (9 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB 2.0 interno</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb30-int" data-title="Header USB 3.0 (19 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB 3.0 interno</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="hdaudio" data-title="Header HD Audio">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HD Audio</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fpanel" data-title="Conectores del panel frontal">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">F_Panel</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Ubicacion</strong> Los headers USB y de audio suelen estar en el borde inferior de la placa; el F_Panel en la esquina inferior derecha. Cada placa imprime las etiquetas serigrafiadas al lado del conector.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="io-trasero">
+        <div class="accordion-header" onclick="toggleAccordion('io-trasero')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box"></i></span><div><div class="accordion-title">Panel I/O Trasero</div><div class="accordion-subtitle">USB · Video · LAN · Audio · PS/2</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">El panel de conectores trasero expone los puertos que quedan al exterior del gabinete. Su disposicion varia por placa, pero incluye siempre USB, video (si el CPU tiene graficos integrados) y audio.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="io-panel" data-title="Panel I/O trasero">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Panel I/O</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-colors" data-title="Colores y velocidad de los puertos USB">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB: el color indica la velocidad</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Puerto</th><th>Funcion</th></tr>
+            <tr><td>USB 2.0 / 3.0 / 3.1 / 3.2</td><td>Perifericos y datos. El color del puerto indica su velocidad (ver tabla USB)</td></tr>
+            <tr><td>HDMI / DP / VGA / DVI</td><td>Salida de video (graficos integrados o iGPU)</td></tr>
+            <tr><td>LAN RJ-45</td><td>Red cableada 1 Gb/s o 2.5 Gb/s con LEDs de estado</td></tr>
+            <tr><td>Audio 3.5mm</td><td>Salida (verde), entrada (rosa) y linea (azul)</td></tr>
+            <tr><td>PS/2</td><td>Teclado/mouse legacy (solo placas antiguas)</td></tr>
+          </table></div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Color del puerto USB</th><th>Version</th><th>Velocidad</th></tr>
+            <tr><td><span class="usb-chip usb-2">Negro / Blanco</span></td><td>USB 2.0</td><td>480 Mbps</td></tr>
+            <tr><td><span class="usb-chip usb-3">Azul</span></td><td>USB 3.0 / 3.2 Gen 1</td><td>5 Gbps (SuperSpeed)</td></tr>
+            <tr><td><span class="usb-chip usb-31">Azul claro / Cian</span></td><td>USB 3.1 / 3.2 Gen 2</td><td>10 Gbps (SuperSpeed+)</td></tr>
+            <tr><td><span class="usb-chip usb-32">Rojo / Naranja</span></td><td>USB 3.2 Gen 2x2</td><td>20 Gbps</td></tr>
+            <tr><td><span class="usb-chip usb-c-chip">USB-C</span></td><td>USB4 / Thunderbolt</td><td>40 Gbps (reversible)</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>El color importa</strong> No todos los puertos USB son iguales: el plastico del interior indica la velocidad maxima. Un periferico USB 2.0 funciona en cualquier puerto, pero para usar 5/10/20 Gbps necesitas puerto y cable compatibles. Los USB-C pueden llegar a 40 Gbps y son reversibles.</div>
+          </div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Para ensamblar</strong> Conecta el monitor al puerto de video de la GPU, no al de la placa, si tienes una tarjeta grafica instalada. En un armado nuevo, es normal revisar el manual para saber si el video sale por la placa o la GPU.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="fans-rgb-board">
+        <div class="accordion-header" onclick="toggleAccordion('fans-rgb-board')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-fan"></i></span><div><div class="accordion-title">Headers de Ventiladores y RGB</div><div class="accordion-subtitle">CPU_FAN · SYS_FAN · RGB 12V · ARGB 5V</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La placa tiene headers para ventiladores (CPU_FAN y SYS_FAN) y para iluminacion RGB. Conecta el cooler de CPU al header CPU_FAN siempre: sin el, la placa no arranca por seguridad.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="fan4" data-title="Header Fan 4-pin PWM">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fan 4-pin PWM</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rgb4" data-title="Header RGB 4-pin (12V)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RGB 4-pin (12V)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="argb3" data-title="Header ARGB 3-pin (5V)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ARGB 3-pin (5V)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>RGB vs ARGB</strong> No los mezcles: RGB de 4 pines usa 12V y ARGB de 3 pines usa 5V. Conectar una tira ARGB en un header RGB (o al reves) quema los LEDs.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="procesador-cpu">
+        <div class="accordion-header" onclick="toggleAccordion('procesador-cpu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Procesador (CPU)</div><div class="accordion-subtitle">El cerebro: cores · cache · TDP · socket</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La CPU ejecuta las instrucciones de los programas. Hoy todas se fabrican en silicio con miles de millones de transistores y se montan en el socket de la placa sobre el zocalo LGA o PGA. El modelo mostrado corresponde a un procesador LGA con su disipador integrado (IHS) arriba y los pads dorados abajo.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="cpu-chip" data-title="Procesador con IHS y pads LGA">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">CPU con IHS (arriba) y pads LGA (abajo)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="cpu-socket" data-title="Zocalo donde se monta la CPU">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Socket LGA</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Concepto</th><th>Que es</th></tr>
+            <tr><td>Cores (nucleos)</td><td>Procesadores independientes dentro del chip: mas cores = mas tareas a la vez</td></tr>
+            <tr><td>Threads (hilos)</td><td>Cada core puede ejecutar 1 o 2 hilos (Hyper-Threading / SMT)</td></tr>
+            <tr><td>Cache (L1/L2/L3)</td><td>Memoria super rapida dentro del CPU para datos de uso frecuente</td></tr>
+            <tr><td>TDP</td><td>Calor maximo que debe disipar el cooler, en vatios (65W-125W tipico)</td></tr>
+            <tr><td>Socket</td><td>El zocalo define la compatibilidad (LGA 1700, AM5, AM4)</td></tr>
+            <tr><td>iGPU</td><td>Graficos integrados: muchos CPUs Intel y los AMD "G" traen video sin GPU dedicada</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Compatibilidad</strong> Antes de comprar, verifica que el socket de la placa coincida con el CPU y que el BIOS de la placa soporte ese modelo (algunas requieren actualizar el BIOS previo).</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="tarjeta-grafica-gpu">
+        <div class="accordion-header" onclick="toggleAccordion('tarjeta-grafica-gpu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-gpu-card"></i></span><div><div class="accordion-title">Tarjeta Grafica (GPU)</div><div class="accordion-subtitle">Renderiza imagenes · VRAM · cooler · PCIe</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La GPU se dedica a renderizar graficos (juegos, video, IA). Va en el slot PCIe x16 de la placa, recibe energia por conectores PCIe/12VHPWR de la PSU y saca la imagen por sus propios puertos de video. Es la tarjeta de mayor consumo de toda la PC.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="gpu-card" data-title="Tarjeta grafica con cooler y puertos">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">GPU completa (cooler + PCIe + puertos)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="gpu-ports" data-title="Puertos de video de la GPU">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Puertos traseros de la GPU</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pcie-slot" data-title="Slot PCIe x16 donde se monta">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Slot PCIe x16</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Parte</th><th>Funcion</th></tr>
+            <tr><td>GPU (nucleo)</td><td>El chip grafico principal con miles de nucleos CUDA/Stream</td></tr>
+            <tr><td>VRAM</td><td>Memoria dedicada (GDDR6/GDDR6X) para texturas y framebuffer</td></tr>
+            <tr><td>Cooler</td><td>Ventiladores + disipador para disipar 150W-450W de calor</td></tr>
+            <tr><td>Conector PCIe</td><td>El borde dorado que se inserta en el slot x16 de la placa</td></tr>
+            <tr><td>Puertos</td><td>HDMI y DisplayPort para el monitor (vease el visor de puertos)</td></tr>
+            <tr><td>Alimentacion</td><td>Conectores PCIe 6+2 o 12VHPWR desde la PSU</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Enchufe el monitor a la GPU</strong> Si tienes tarjeta grafica, conecta el cable de video a sus puertos, NO a los de la placa, o usaras la iGPU lenta en lugar de la GPU.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="fuente-poder-psu">
+        <div class="accordion-header" onclick="toggleAccordion('fuente-poder-psu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-battery-charging"></i></span><div><div class="accordion-title">Fuente de Poder (PSU)</div><div class="accordion-subtitle">Convierte 220V AC en 3.3/5/12V DC · watts · 80 Plus</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">La PSU convierte la corriente alterna de la pared (110/220V) en corriente continua para la placa, la CPU y la GPU. Entrega varios rieles: 12V (CPU/GPU), 5V (USB/discos) y 3.3V (chipset/RAM). Es el componente que mas cuida el resto del hardware si falla.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="psu-atx" data-title="Fuente ATX con ventilador y rejilla">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">PSU ATX (ventilador, switch, toma AC)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="atx24" data-title="Cable ATX 24-pin a la placa">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">ATX 24-pin (a la placa)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Concepto</th><th>Que es</th></tr>
+            <tr><td>Watts</td><td>Potencia total: suma CPU + GPU + 30-40% de margen</td></tr>
+            <tr><td>80 Plus</td><td>Certificacion de eficiencia: 80+, Bronze, Silver, Gold, Platinum, Titanium</td></tr>
+            <tr><td>Modular</td><td>Los cables se conectan/desconectan; semi-modular es el equilibrio ideal</td></tr>
+            <tr><td>Riel 12V</td><td>Alimenta CPU y GPU: es el riel que mas wattaje entrega</td></tr>
+            <tr><td>OCP/OVP/OTP</td><td>Protecciones contra sobrecorriente, sobrevoltaje y sobrecalentamiento</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Dimensionado rapido</strong> RTX 4070 (200W) + Ryzen 7600 (65W) + 100W del resto ≈ 365W → PSU de 650W Gold de marca confiable es suficiente y deja margen.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="puertos-placa">
+        <div class="accordion-header" onclick="toggleAccordion('puertos-placa')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-usb-symbol"></i></span><div><div class="accordion-title">Puertos de la Placa Base</div><div class="accordion-subtitle">USB · video · red · audio · legados, con visores 3D</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Cada componente se conecta a la placa por un tipo de puerto: la RAM en los slots DIMM, el almacenamiento en SATA/M.2, la GPU en el PCIe x16, la fuente en el ATX 24-pin, y los perifericos en el panel I/O trasero. Abajo los visores de los puertos externos mas comunes.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="usb-a" data-title="Puerto USB-A">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB-A (datos/perifericos)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-c" data-title="Puerto USB-C">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB-C (reversible, hasta 40 Gb/s)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="hdmi" data-title="Puerto HDMI">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">HDMI (video+audio)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="dp" data-title="Puerto DisplayPort">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">DisplayPort (monitores de alta tasa)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="vga" data-title="Puerto VGA (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">VGA (analogico, legado)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="dvi" data-title="Puerto DVI (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">DVI (transicion digital)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rj45" data-title="Puerto LAN RJ-45">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RJ-45 (red Ethernet)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="jack35" data-title="Conector audio 3.5mm">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Jack 3.5mm (audio)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ps2" data-title="Puerto PS/2 (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">PS/2 (teclado/mouse viejos)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="com" data-title="Puerto COM serial (legado)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">COM (serial DB-9)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="toslink" data-title="Puerto optico Toslink">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Toslink (audio optico)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="usb-colors" data-title="USB por color y velocidad">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">USB 2.0/3.0/3.1/3.2 por color</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Componente</th><th>Puerto en la placa</th></tr>
+            <tr><td>Memoria RAM</td><td>Slots DIMM (DDR4/DDR5), 2 o 4 por placa</td></tr>
+            <tr><td>Disco duro / SSD</td><td>Puertos SATA o slots M.2</td></tr>
+            <tr><td>Tarjeta de video</td><td>Slot PCIe x16 (con refuerzo en placas de gama alta)</td></tr>
+            <tr><td>Fuente de poder</td><td>ATX 24-pin + EPS 8/4-pin (CPU)</td></tr>
+            <tr><td>Perifericos</td><td>USB-A, USB-C (panel I/O trasero o headers frontales)</td></tr>
+            <tr><td>Monitor</td><td>HDMI / DisplayPort (de la GPU o de la placa con iGPU)</td></tr>
+            <tr><td>Internet</td><td>RJ-45 LAN (o Wi-Fi integrado en placas con antenas)</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Codigo de colores</strong> En el panel I/O el color del puerto indica su funcion: azul = USB 3.0, rojo/naranja = USB 3.1/3.2, verde = audio salida, rosa = microfono, verde/gris = LAN.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="componentes-electronicos">
+        <div class="accordion-header" onclick="toggleAccordion('componentes-electronicos')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-activity"></i></span><div><div class="accordion-title">Componentes Electronicos</div><div class="accordion-subtitle">Transistor · resistencia · capacitor · diodo · LED · bobina · chip · cristal · fusible · termistor · relay · mas</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Sobre la placa base viven miles de componentes electronicos miniatura. Estos mismos componentes se usan en cualquier circuito. Entenderlos permite diagnosticar fallas visuales (capacitores hinchados, fusibles quemados) y leer sus valores.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="resistor" data-title="Resistencia con bandas de color">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Resistencia (limita corriente)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="capacitor" data-title="Capacitor electrolitico">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Capacitor (guarda carga)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="transistor" data-title="Transistor TO-92 con 3 patas">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Transistor (amplifica/commuta)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="diode" data-title="Diodo con banda de catodo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Diodo (deja pasar 1 direccion)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="led" data-title="LED 5mm con cupula">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">LED (diodo que emite luz)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="inductor" data-title="Bobina / inductor con nucleo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Bobina (filtra corrientes)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ic-chip" data-title="Circuito integrado DIP-14">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Circuito integrado (chip)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="crystal" data-title="Oscilador de cristal">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cristal (marca el reloj)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fuse" data-title="Fusible de vidrio">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fusible (se quema por proteccion)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="potentiometer" data-title="Potenciometro con eje">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Potenciometro (resistencia variable)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="thermistor" data-title="Termistor NTC (sensor de temperatura)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Termistor (cambia con la temperatura)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="varistor" data-title="Varistor MOV (protege contra picos)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Varistor (absorbe picos de voltaje)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="relay" data-title="Relay (interruptor electromagnetico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Relay (commuta con un electroiman)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="transformer" data-title="Transformador con bobinados">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Transformador (cambia voltajes AC)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pushbutton" data-title="Pulsador tactil de PCB">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Pulsador tactil (boton de placa)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="buzzer" data-title="Buzzer piezoelectrico">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Buzzer (emisor de beeps)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="photoresistor" data-title="Fotoresistor LDR (sensor de luz)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fotoresistor (cambia con la luz)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Componente</th><th>Que es / para que sirve</th><th>En la placa aparece en...</th></tr>
+            <tr><td><strong>Resistencia</strong></td><td>Oponerse al paso de la corriente; limita corriente y divide voltajes. Se identifica por sus bandas de color (ohms).</td><td>Por todas partes, en miniatura (SMD)</td></tr>
+            <tr><td><strong>Capacitor</strong></td><td>Almacena carga electrica; filtra ruido y estabiliza voltajes. Se mide en faradios (uF, pF).</td><td>Alrededor del VRM y de cada chip</td></tr>
+            <tr><td><strong>Transistor</strong></td><td>Amplifica senales y funciona como interruptor electronico (la base de todos los circuitos logicos).</td><td>En el VRM (los "MOSFET" de las fases)</td></tr>
+            <tr><td><strong>Diodo</strong></td><td>Deja pasar corriente en un solo sentido (protege contra polaridad inversa).</td><td>En entradas de alimentacion</td></tr>
+            <tr><td><strong>LED</strong></td><td>Diodo emisor de luz: indica encendido, actividad de disco, diagnosticos (Q-LED).</td><td>Panel frontal, LEDs de la placa</td></tr>
+            <tr><td><strong>Bobina / Inductor</strong></td><td>Almacena energia en un campo magnetico; filtra y suaviza la corriente de los VRM.</td><td>Las piezas cubicas negras junto a los MOSFET</td></tr>
+            <tr><td><strong>Circuito integrado</strong></td><td>Chip que contiene miles/millones de transistores: gestiona funciones especificas.</td><td>Chipset, controladores, chips de audio/LAN</td></tr>
+            <tr><td><strong>Cristal</strong></td><td>Genera una frecuencia exacta (el "reloj" que sincroniza el sistema).</td><td>Cerca de los chips, en su caja metalica</td></tr>
+            <tr><td><strong>Fusible</strong></td><td>Se quema internamente si pasa demasiada corriente, cortando el circuito y protegiendo la placa.</td><td>En las lineas de alimentacion (puertos USB)</td></tr>
+            <tr><td><strong>Potenciometro</strong></td><td>Resistencia variable: ajusta voltajes o volumen girando un eje.</td><td>Placas viejas o circuitos de ajuste (trimmers)</td></tr>
+            <tr><td><strong>Termistor</strong></td><td>Resistencia que cambia con la temperatura; monitorea la temperatura del VRM o la CPU.</td><td>Junto al socket y en el VRM (los "NTC")</td></tr>
+            <tr><td><strong>Varistor (MOV)</strong></td><td>Absorbe picos transitorios de voltaje; protege contra sobretensiones.</td><td>En la fuente de poder o protectores</td></tr>
+            <tr><td><strong>Relay</strong></td><td>Interruptor accionado por un electroiman; permite commutar circuitos de potencia con senales debiles.</td><td>Fuentes, cargadores y circuitos de control</td></tr>
+            <tr><td><strong>Transformador</strong></td><td>Cambia voltajes de corriente alterna (reduce 220V a los voltajes internos).</td><td>Dentro de la fuente de poder</td></tr>
+            <tr><td><strong>Pulsador tactil</strong></td><td>Boton momentaneo que cierra el circuito mientras se presiona.</td><td>Botones de power/reset/clear CMOS de la placa</td></tr>
+            <tr><td><strong>Buzzer</strong></td><td>Emisor piezoelectrico de sonido: los "beeps" de diagnostico del POST.</td><td>Speaker interno / buzzer de la placa</td></tr>
+            <tr><td><strong>Fotoresistor (LDR)</strong></td><td>Resistencia que cambia con la luz; se usa como sensor de luz.</td><td>Circuitos de sensores y automatizacion</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Inspeccion visual</strong> Al diagnosticar, revisa si hay capacitores electroliticos con la tapa abultada o el liquido seco (indica falla), fusibles ennegrecidos o areas quemadas. Esos son los primeros sospechosos de una placa muerta.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="chips-placa">
+        <div class="accordion-header" onclick="toggleAccordion('chips-placa')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Chips de la Placa (BIOS, Audio, LAN, Wi-Fi)</div><div class="accordion-subtitle">BIOS/UEFI · codec de audio · LAN · Wi-Fi M.2</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p class="text-sm text-secondary mb-2">Ademas del chipset y del VRM, la placa base monta chips auxiliares que gestionan funciones concretas: el chip de BIOS/UEFI guarda el firmware de arranque, el codec de audio procesa el sonido, el controlador LAN da la red por cable y el modulo Wi-Fi M.2 añade wifi/bluetooth.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="bios-chip" data-title="Chip BIOS/UEFI (flash SOIC)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Chip BIOS/UEFI (firmware de arranque)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="audio-chip" data-title="Codec de audio (tipo Realtek)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Codec de audio (sonido de la placa)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="lan-chip" data-title="Controlador LAN (Ethernet)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Chip LAN (red por cable RJ-45)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="wifi-m2" data-title="Modulo Wi-Fi M.2 (inalambrico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Tarjeta Wi-Fi/BT M.2</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Chip</th><th>Que es / para que sirve</th><th>En la placa aparece en...</th></tr>
+            <tr><td><strong>BIOS / UEFI</strong></td><td>Guarda el firmware de arranque y la configuracion (setup). Si se dana, la placa no arranca; se recupera con flashback o programador.</td><td>Un chip SOIC-8, junto a la pila CMOS</td></tr>
+            <tr><td><strong>Codec de audio</strong></td><td>Convierte audio digital <-> analogico y alimenta los jacks de 3.5mm y el optico.</td><td>Junto a los puertos de audio del panel trasero</td></tr>
+            <tr><td><strong>Controlador LAN</strong></td><td>Gestiona el puerto Ethernet RJ-45 (gigabit o 2.5G) y sus LEDs de actividad.</td><td>Al lado del conector RJ-45 del panel trasero</td></tr>
+            <tr><td><strong>Wi-Fi M.2</strong></td><td>Modulo que añade Wi-Fi 6/6E y Bluetooth en el slot M.2 Key E con sus antenas.</td><td>Slot M.2 Key E (a veces ya preinstalado)</td></tr>
+          </table></div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>El chip de BIOS/UEFI</strong> Es de memoria flash reprogramable: por eso puedes actualizarlo (flashear) para agregar soporte de CPUs o RAM nuevas. Las placas modernas tienen "BIOS Flashback" para recuperarlo si falla la actualizacion.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../assets/js/cables-3d.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>
