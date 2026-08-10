@@ -11,6 +11,9 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 ### Ensamblaje de PC
 - **Herramientas**: ESD, pulsera antiestatica, espacio de trabajo, herramientas de mano
 - **Componentes**: CPU, GPU, RAM, motherboard, PSU, almacenamiento, refrigeracion, compatibilidad
+- **Placa Base**: vista general, tipos, socket, VRM, DIMM, PCIe, chipset, almacenamiento, CMOS, conectores, headers, panel I/O
+- **Tipos de Componentes**: tipos de PSU, almacenamiento, GPU, RAM, formatos de placa, conectores ATX, USB y sockets
+- **Simbolos y Unidades**: voltaje, corriente, potencia, resistencia, simbolos de circuito, prefijos (kilo, mega, micro...), simbolos en la practica
 - **Paso a Paso**: 9 pasos optimizados (CPU, cooler, RAM, M.2, PSU, GPU, cables, BIOS)
 - **Cableado**: alimentacion, datos, video, legados, T568A/T568B, formatos SSD, 80 Plus
 - **Checklist**: lista interactiva de verificacion
@@ -79,7 +82,9 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 - **Modo oscuro/claro**: toggle con persistencia en localStorage
 - **Navbar horizontal**: enlaces directos a modulos y dropdown de Referencia en el header
 - **Logo enlazado**: click en TechGuide lleva al inicio
-- **Animaciones**: transiciones suaves con AOS (Animate On Scroll)
+- **Animaciones**: transiciones suaves con AOS (Animate On Scroll) y entradas animadas con anime.js
+- **Home 3D**: hero con nucleo tecnico procedural (Babylon.js, particulas GPU) y constelacion + anillos orbitales (Three.js), con parallax y adaptacion al tema claro/oscuro
+- **Visores 3D de componentes**: modelos interactivos de cables, conectores y refrigeracion en ensamblaje
 - **Calculadora de subred**: herramienta interactiva para calcular rangos IP
 - **Filtro de recursos**: pills de categoria para filtrar los 140+ recursos web
 - **Tips de simuladores**: lista de consejos para descargar y ejecutar los simuladores de practica
@@ -95,6 +100,9 @@ Plataforma educativa 100% en espanol con guias completas de ensamblaje, mantenim
 - JavaScript vanilla
 - Bootstrap Icons
 - AOS (Animate On Scroll)
+- anime.js (animaciones del hero y contadores)
+- Three.js (constelacion 3D del home)
+- Babylon.js (nucleo 3D procedural del hero con particulas)
 
 ## Estructura
 
@@ -112,10 +120,14 @@ assets/
     nav.js              → Hamburguesa, dropdowns moviles
     ui.js               → Acordeones, checklist, pasos, copiar codigo, busqueda
     subnet.js           → Calculadora de subred
+    home.js             → Animaciones del home con anime.js (hero, contadores, tarjetas)
+    home3d.js           → Constelacion + anillos orbitales 3D del home (Three.js)
+    home-babylon.js     → Nucleo 3D procedural del hero con particulas (Babylon.js)
+    cables-3d.js        → Visores 3D de cables, conectores y refrigeracion
 pages/
   ensamblaje/           → Modulo de ensamblaje
     ensamblaje.html     → Hub (indice de subsecciones)
-    ens-*.html          → Subsecciones (herramientas, componentes, paso a paso, ...)
+    ens-*.html          → Subsecciones (herramientas, componentes, placa base, tipos, paso a paso, ...)
   mantenimiento/        → Modulo de mantenimiento
     mantenimiento.html  → Hub (indice de subsecciones)
     man-*.html          → Subsecciones (preventivo, correctivo, software diag, ...)
