@@ -704,6 +704,49 @@
 
       <div class="accordion-item" data-aos="fade-up">
         <div class="accordion-header">
+          <i class="bi bi-diagram-3 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Tipos de Sistemas Operativos</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El <strong>sistema operativo (SO)</strong> es el software base que gestiona el hardware, los archivos, la red y la seguridad, y permite ejecutar programas. Antes de instalar conviene conocer las familias que existen y para que sirve cada una.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Familia</th><th>Ejemplos</th><th>Uso tipico</th></tr>
+              <tr><td>Escritorio (desktop)</td><td>Windows, macOS, Linux (Ubuntu/Mint/Arch)</td><td>PC y portatiles de uso general: oficina, gaming, navegacion</td></tr>
+              <tr><td>Servidor</td><td>Windows Server, Ubuntu Server, Debian, Rocky Linux</td><td>Servidores web, bases de datos, correo, Active Directory, virtualizacion</td></tr>
+              <tr><td>Movil</td><td>Android (base Linux), iOS</td><td>Smartphones y tablets</td></tr>
+              <tr><td>Embebido / Tiempo real</td><td>QNX, VxWorks, FreeRTOS, Raspberry Pi OS</td><td>Routers, autos, electrodomesticos, IoT, industria</td></tr>
+              <tr><td>De red (Network OS)</td><td>Cisco IOS, pfSense, MikroTik RouterOS</td><td>Routers, switches y firewalls</td></tr>
+              <tr><td>Rescate / Live</td><td>Windows PE, Hiren's BootCD, SystemRescue</td><td>Diagnostico y reparacion de equipos sin instalar nada</td></tr>
+            </table>
+          </div>
+          <p><strong>Los tres grandes del escritorio:</strong></p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Criterio</th><th>Windows</th><th>Linux</th><th>macOS</th></tr>
+              <tr><td>Costo</td><td>Licencia paga (Home/Pro)</td><td>Gratis (codigo abierto)</td><td>Incluido en hardware Apple</td></tr>
+              <tr><td>Hardware</td><td>Practicamente todo</td><td>Practicamente todo</td><td>Solo Macs</td></tr>
+              <tr><td>Software / gaming</td><td><span class="compare-winner">El mas amplio (Windows + DirectX)</span></td><td>Creciente (Proton/Steam)</td><td>Creativo y de Apple</td></tr>
+              <tr><td>Seguridad</td><td>Bueno, pero objetivo de malware</td><td><span class="compare-winner">Muy buena por diseño (permisos)</span></td><td>Muy buena (sandboxing)</td></tr>
+              <tr><td>Control de hardware</td><td>Cerrado</td><td><span class="compare-winner">Total (modificable)</span></td><td>Cerrado</td></tr>
+              <tr><td>Mejor para</td><td>Gaming, oficina, todo uso</td><td>Servidores, programacion, equipos viejos</td><td>Edicion multimedia, ecosistema Apple</td></tr>
+            </table>
+          </div>
+          <ul>
+            <li><strong>Windows:</strong> el mas usado en hogares y empresas. De 64 bits; requisitos estrictos en Windows 11 (TPM 2.0, Secure Boot). Ideal como primera opcion por compatibilidad.</li>
+            <li><strong>Linux:</strong> existen cientos de <em>distribuciones</em>. Para empezar: Ubuntu (facil), Linux Mint (ligera y amigable) o Debian (estable). Se instala gratis y revive equipos viejos.</li>
+            <li><strong>macOS:</strong> exclusivo de Apple, fluido y seguro, pero no se instala en PC convencionales (solo Macs).</li>
+            <li><strong>ChromeOS:</strong> sistema de los Chromebooks, basado en el navegador Chrome y el nucleo Linux; ligero y orientado a la nube.</li>
+            <li><strong>Servidor:</strong> igual que el escritorio pero optimizado para servicio continuo, sin interfaz grafica opcional y con roles como DNS, web o virtualizacion.</li>
+            <li><strong>Live / Rescate:</strong> no se instalan; arrancan desde un USB para reparar el sistema actual o recuperar datos. Muy utiles para mantenimiento.</li>
+          </ul>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Tip:</strong> un mismo equipo puede tener varios sistemas con <strong>dual boot</strong> (mas abajo) o maquinas virtuales. Para aprender Linux sin riesgo, instala Windows y una distro en VirtualBox o usa un Live USB primero.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
           <i class="bi bi-shield-check accordion-icon" style="color:var(--accent);"></i>
           <span class="accordion-title">Requisitos de Windows 11 y Verificacion TPM</span>
           <i class="bi bi-chevron-down accordion-chevron"></i>
