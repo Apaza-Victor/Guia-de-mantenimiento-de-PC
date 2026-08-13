@@ -271,6 +271,64 @@
           </div>
         </div></div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-key accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Activacion de Windows y Licencias</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Windows necesita una licencia valida para activarse. La clave se asocia a tu equipo y, en las versiones modernas, a tu cuenta de Microsoft.</p>
+          <ul>
+            <li><strong>Clave en la caja vs digital:</strong> La clave de caja (retail) es un codigo de 25 caracteres impreso en la etiqueta. La licencia digital se asocia a tu cuenta Microsoft: al reinstalar, Windows se reactiva automaticamente sin volver a ingresar la clave.</li>
+            <li><strong>Cambiar la clave:</strong> Ve a Configuracion &gt; Sistema &gt; Activacion y usa "Cambiar clave de producto". Desde la linea de comandos, abre el simbolo del sistema como administrador y ejecuta los comandos de abajo.</li>
+            <li><strong>Activar por telefono:</strong> Si la activacion online falla, usa la opcion "Activar por telefono" en la misma pantalla. Un asistente te dara un codigo de confirmacion al dictarle tu ID de instalacion.</li>
+            <li><strong>Reutilizar al cambiar hardware:</strong> La licencia digital sigue tu cuenta Microsoft: al cambiar la placa base, vincula la nueva placa en Cuentas &gt; tu perfil &gt; Dispositivos, o usa el asistente de solucion de problemas de activacion.</li>
+            <li><strong>OEM vs Retail:</strong> OEM viene preinstalada en equipos de fabricante (Dell, HP, Lenovo) y queda ligada a esa placa base: no se transfiere. Retail se compra aparte, se puede trasladar a otro PC y reactivarse con tu cuenta Microsoft.</li>
+          </ul>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">cmd &#183; activar Windows (ejecutar como Administrador)</span></div>
+            <pre><span class="cmd-comment"># Instalar la clave de producto</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">slmgr</span> <span class="cmd-flag">/ipk CLAVE-DE-25-CARACTERES</span>
+  <span class="cmd-comment"># Forzar la activacion</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">slmgr</span> <span class="cmd-flag">/ato</span></pre>
+          </div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Advertencia:</strong> Las claves piratas, los KMS no oficiales y los "activadores" son ilegales y suelen incluir malware o troyanos que roban credenciales. Ademas, no reciben actualizaciones ni soporte. Usa siempre licencias legitimas: Microsoft permite activacion sin costo al migrar de versiones anteriores y ofrece descuentos para estudiantes.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-palette accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Software de Control RGB</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La iluminacion RGB de cada fabricante se controla con su propia aplicacion. Conocer cual corresponde a tu hardware evita instalar programas de mas que generan conflictos.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Fabricante</th><th>Aplicacion de control</th></tr>
+            <tr><td>MSI</td><td>MSI Center (modulo Mystic Light)</td></tr>
+            <tr><td>ASUS</td><td>Armoury Crate (modulo Aura Sync)</td></tr>
+            <tr><td>Gigabyte</td><td>RGB Fusion</td></tr>
+            <tr><td>ASRock</td><td>Polychrome Sync</td></tr>
+            <tr><td>Corsair</td><td>iCUE</td></tr>
+            <tr><td>Razer</td><td>Synapse</td></tr>
+            <tr><td>Multiplataforma (gratuito)</td><td>OpenRGB</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Como sincronizar via headers:</strong> Los headers JRGB (4 pines, RGB estandar 12V, un solo color a la vez) y ARGB/JARGB (3 pines, 5V, cada LED direccionable) conectan las tiras o ventiladores a la placa para controlarlos desde el software del fabricante. Verifica el voltaje antes de conectar: un conector ARGB en un header RGB 12V quema los LEDs.</li>
+            <li><strong>Consejo:</strong> No instales varias suites a la vez (por ejemplo iCUE y Armoury Crate juntas). Suelen pelear por el control del mismo hardware, dejan efectos atascados, suben el uso de CPU y causan errores. Usa una sola, la del fabricante de tu placa o perifericos.</li>
+          </ul>
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>OpenRGB:</strong> Es la alternativa gratuita y de codigo abierto que controla la mayoria de marcas desde una sola interfaz, sin instalar las aplicaciones propias. Ideal si combinas componentes de varios fabricantes.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

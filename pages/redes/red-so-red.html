@@ -72,6 +72,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip active' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -229,6 +230,28 @@
             <div class="content"><strong>Escenario → SO recomendado</strong>Red corporativa con Active Directory y Exchange: Windows Server. Servidor web, API o base de datos en la nube: Ubuntu Server o Rocky Linux. NAS para respaldos y comparticion de archivos en PYME: TrueNAS o Synology. Firewall/router para laboratorio: pfSense o OPNsense. Servidor de medios (Plex/Jellyfin) casero: OpenMediaVault. Laboratorio de aprendizaje: Debian minimal o Ubuntu Server.</div>
           </div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-cloud accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Virtualizacion de Redes y Cloud (SDN/NFV)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La <strong>virtualizacion de redes</strong> separa las funciones de red del hardware fisico: switches, firewalls y enrutadores pasan a ser software que corre sobre servidores. Es la base de los datacenters modernos y de la nube.</p>
+          <ul>
+            <li><strong>SDN (Software Defined Networking):</strong> separa el plano de datos (por donde viajan los paquetes) del plano de control (quien decide las rutas). Un controlador central programa los switches, lo que permite configurar toda la red por software y de forma dinamica.</li>
+            <li><strong>NFV (Network Functions Virtualization):</strong> funciones de red (firewall, balanceador, router) ejecutadas como maquinas virtuales o contenedores en vez de aparatos dedicados.</li>
+            <li><strong>VXLAN:</strong> encapsula trafico de capa 2 dentro de UDP para crear millones de segmentos (VLANs virtuales) a traves de una red de capa 3, esencial en datacenters y multiusuario.</li>
+            <li><strong>Switches virtuales y bridges:</strong> el hipervisor (KVM/VMware) crea bridges virtuales por los que pasan las VMs. En Docker, la red <code>bridge</code> aislada por contenedor y la <code>host</code> comparten la pila del servidor; las <strong>overlay</strong> unen contenedores en varios nodos.</li>
+            <li><strong>Nube (VPC):</strong> en AWS/Azure/GCP el cliente crea una Virtual Private Cloud con sus propias subredes, tablas de rutas, firewalls y gateways, todo definido por software y pagado por uso.</li>
+          </ul>
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Tip:</strong> muchos servicios de la pagina de SO de red (Docker, Kubernetes) se apoyan en estas redes virtuales.</div>
+          </div>
+        </div></div>
       </div>
 
     </div>

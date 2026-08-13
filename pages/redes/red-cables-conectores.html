@@ -72,6 +72,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -494,6 +495,57 @@
         <div class="content"><strong>Sintomas de mal cableado:</strong> enlace que se cae, velocidad que se degrada de 1 Gbps a 100 Mbps, paquetes perdidos y parpadeo de LEDs. Revisa con el tester los 8 pines en orden: un par cruzado o sin contacto produce exactamente esos sintomas.</div>
       </div>
     </div>
+  </div>
+
+  <div class="accordion-item" data-aos="fade-up">
+    <div class="accordion-header">
+      <i class="bi bi-diagram-3 accordion-icon" style="color:var(--accent);"></i>
+      <span class="accordion-title">Cableado Estructurado y Normativa</span>
+      <i class="bi bi-chevron-down accordion-chevron"></i>
+    </div>
+    <div class="accordion-body"><div class="accordion-content">
+      <p>El <strong>cableado estructurado</strong> organiza todos los enlaces de un edificio bajo normas, para que cualquier servicio (voz, datos, video) use la misma infraestructura. Las normas de referencia son <strong>TIA/EIA-568</strong> (EE.UU.) e <strong>ISO/IEC 11801</strong> (internacional).</p>
+      <div class="table-scroll"><table class="cmd-table">
+        <tr><th>Subsistema</th><th>Que cubre</th><th>Ejemplo</th></tr>
+        <tr><td>Area de trabajo</td><td>Del toma de pared al equipo</td><td>Patch cord del keystone a la PC</td></tr>
+        <tr><td>Cableado horizontal</td><td>Del armario de telecomunicaciones al toma</td><td>UTP CAT6 (max 90 m)</td></tr>
+        <tr><td>Cableado vertical / backbone</td><td>Une pisos y armarios principales</td><td>Fibra optica entre pisos</td></tr>
+        <tr><td>Armario / rack</td><td>Concentra switches, patch panels y servidores</td><td>Rack de 42U con organizadores</td></tr>
+      </table></div>
+      <ul>
+        <li><strong>Rack y organizadores:</strong> los equipos van en bastidores; los organizadores horizontales mantienen los patch cords prolijos y sin dobleces.</li>
+        <li><strong>Canaletas y ductos:</strong> protegen y ordenan los cables en paredes y pisos; deben permitir el radio de curvatura minimo.</li>
+        <li><strong>Puesta a tierra (grounding):</strong> todo el rack y el cableado apantallado deben conectarse a tierra para disipar descargas e interferencias.</li>
+        <li><strong>Etiquetado TIA-606:</strong> cada cable, toma y puerto tiene un identificador unico en ambos extremos (ej. P01-02 = panel 01 puerto 02).</li>
+        <li><strong>Certificacion vs continuidad:</strong> el tester de continuidad solo confirma que los 8 hilos estan bien puestos; un certificador mide atenuacion, diafonia y cumplimiento de la categoria para emitir un certificado.</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="accordion-item" data-aos="fade-up">
+    <div class="accordion-header">
+      <i class="bi bi-globe2 accordion-icon" style="color:var(--accent);"></i>
+      <span class="accordion-title">Tecnologias de Acceso a Internet (Ultima Milla)</span>
+      <i class="bi bi-chevron-down accordion-chevron"></i>
+    </div>
+    <div class="accordion-body"><div class="accordion-content">
+      <p>La <strong>ultima milla</strong> es el tramo que une el hogar con la red del proveedor (ISP). Determina tu velocidad y latencia mas que cualquier configuracion interna.</p>
+      <ul>
+        <li><strong>ADSL / VDSL:</strong> sobre el par de cobre telefonico. ADSL hasta ~24 Mbps con subida baja; VDSL usa mas espectro y llega a ~100 Mbps en distancias cortas. La distancia a la central degrada la velocidad.</li>
+        <li><strong>Cable modem (DOCSIS):</strong> sobre la red de cable coaxial/TV. Comparte el medio con los vecinos; DOCSIS 3.1 ofrece hasta ~1 Gbps de bajada.</li>
+        <li><strong>Fibra FTTH (GPON / XGS-PON):</strong> la fibra llega hasta el hogar. GPON baja ~1-2.5 Gbps; XGS-PON (simetrico) hasta ~10 Gbps. <strong>FTTB/FTTC:</strong> la fibra llega al edificio/armario y el ultimo tramo es cobre.</li>
+        <li><strong>ONT vs ONU:</strong> el ONT (Optical Network Terminal) es el equipo del cliente que convierte la senal optica en Ethernet; ONU es el termino generico del extremo del abonado en la red PON.</li>
+        <li><strong>ISP y CPE:</strong> el CPE es el equipo en la casa del cliente (modem/router del proveedor); el ISP entrega la conexion y suele incluir el router y el soporte.</li>
+      </ul>
+      <div class="table-scroll"><table class="cmd-table">
+        <tr><th>Tecnologia</th><th>Medio</th><th>Velocidad tipica</th><th>Subida</th><th>Latencia</th></tr>
+        <tr><td>ADSL</td><td>Par de cobre</td><td>10-24 Mbps</td><td>1 Mbps</td><td>Alta</td></tr>
+        <tr><td>VDSL</td><td>Par de cobre</td><td>50-100 Mbps</td><td>10-30 Mbps</td><td>Media</td></tr>
+        <tr><td>Cable DOCSIS</td><td>Coaxial</td><td>100-1000 Mbps</td><td>10-50 Mbps</td><td>Media</td></tr>
+        <tr><td>GPON (FTTH)</td><td>Fibra</td><td>300-1000 Mbps</td><td>Simetrica</td><td>Baja</td></tr>
+        <tr><td>XGS-PON</td><td>Fibra</td><td>Hasta 10 Gbps</td><td>Simetrica</td><td>Baja</td></tr>
+      </table></div>
+    </div></div>
   </div>
 </div>
 

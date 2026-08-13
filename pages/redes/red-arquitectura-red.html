@@ -72,6 +72,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -157,6 +158,32 @@
             <tr><td>Topologia Logica</td><td>Se refiere a la trayectoria logica que sigue una senal a su paso por los nodos de la red — como viajan los datos.</td><td>Un anillo token ring puede ser fisicamente estrella pero logicamente anillo</td></tr>
           </table></div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-globe2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Tecnologias WAN y Backbones</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Una <strong>WAN</strong> (Wide Area Network) interconecta redes locales a traves de grandes distancias usando infraestructura de operadores. El <strong>backbone</strong> es la red troncal de alta capacidad que une ciudades y paises y sobre la que viaja la mayoria del trafico de Internet.</p>
+          <ul>
+            <li><strong>MPLS:</strong> enrutamiento por etiquetas. Cada paquete entra a la red del operador con una etiqueta que decide el camino; es rapido, ofrece circuitos virtuales (VPN MPLS) y no depende del destino final.</li>
+            <li><strong>Lineas dedicadas (leased lines):</strong> enlace exclusivo punto a punto con ancho de banda garantizado (E1, T3, Ethernet dedicado). Son confiables pero caras.</li>
+            <li><strong>Satelital / VSAT:</strong> enlaces satelitales para zonas sin fibra ni cobre; latencia alta (ida y vuelta ~500 ms) y afectados por clima, usados en areas rurales y maritimas.</li>
+            <li><strong>Microondas:</strong> enlaces de radio punto a punto entre torres (LOS, linea de vista), comunes para unir sucursales de una ciudad sin tendido fisico.</li>
+            <li><strong>Frame relay / ATM:</strong> tecnologias WAN legacy de los 90; hoy en desuso pero aun operan en redes corporativas migrandose a MPLS o Ethernet.</li>
+            <li><strong>ISP, IXP y peering:</strong> los ISPs se interconectan en puntos de intercambio (IXP) donde acuerdan intercambiar trafico sin costo (peering); el backbone se compone de estos enlaces y los de los grandes operadores.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tecnologia</th><th>Medio</th><th>Velocidad tipica</th><th>Latencia</th><th>Uso tipico</th></tr>
+            <tr><td>Linea dedicada</td><td>Fibra / cobre</td><td>10 Mbps - 100 Gbps</td><td>Baja</td><td>Corporativo con SLA</td></tr>
+            <tr><td>MPLS</td><td>Red del operador</td><td>Variable con QoS</td><td>Baja-media</td><td>VPNs corporativas</td></tr>
+            <tr><td>Microondas</td><td>Radio LOS</td><td>Hasta 1+ Gbps</td><td>Baja</td><td>Uniones urbanas sin cable</td></tr>
+            <tr><td>Satelital</td><td>Radio espacial</td><td>10 - 500 Mbps</td><td>Muy alta</td><td>Rural, maritimo, emergencia</td></tr>
+          </table></div>
+        </div></div>
       </div>
     </div>
 

@@ -376,6 +376,141 @@
           </div>
         </div></div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-fan accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Instalacion de Refrigeracion Liquida (AIO)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Un AIO (All-In-One) es un circuito cerrado de liquido refrigerante con bomba, radiador y mangueras. La instalacion correcta depende de la orientacion de la bomba y del montaje del radiador.</p>
+          <ul>
+            <li><strong>Orientacion de la bomba:</strong> La bomba nunca debe quedar en el punto mas alto del circuito. Eso atrapa aire dentro de ella, genera ruido y reduce su vida util. Monta el radiador en la parte superior o en el frontal con las mangueras hacia abajo o hacia los lados.</li>
+            <li><strong>Direccion de los tubos:</strong> Con el radiador arriba, los tubos pueden ir hacia la izquierda o la derecha; lo importante es que la bomba (sobre el CPU) quede por debajo del punto mas alto del radiador. En montaje frontal, coloca los tubos hacia abajo.</li>
+            <li><strong>Montaje del radiador:</strong> Arriba: mejor ventilacion para el resto del PC. Frontal: aire mas fresco para el radiador, pero el gabinete aspira el aire caliente de la GPU. Verifica que el radiador no toque memorias RAM altas ni los disipadores del VRM.</li>
+            <li><strong>Ventiladores push/pull:</strong> Push = los ventiladores empujan aire a traves del radiador (lo mas comun). Pull = tiran el aire desde el otro lado. La configuracion push/pull (ventiladores en ambos lados) mejora el rendimiento termico pero ocupa el doble de espacio.</li>
+            <li><strong>Purgar burbujas:</strong> Al primer encendido, deja el PC corriendo unos minutos para que el aire se acumule en el radiador (el punto mas alto). Inclina suavemente el gabinete a los lados mientras la bomba funciona para expulsar las burbujas atrapadas.</li>
+            <li><strong>Conector AIO_PUMP/W_PUMP:</strong> Conecta la bomba al header dedicado AIO_PUMP o W_PUMP de la placa (suele ir rotulado) para que trabaje a velocidad maxima constante. Conecta los ventiladores al CPU_FAN o a un hub/controlador.</li>
+          </ul>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Falla de bomba:</strong> Si la bomba se detiene, el CPU se sobrecalienta en segundos. Verifica en la BIOS o con HWMonitor que el header AIO_PUMP/W_PUMP marque RPM activas (no 0). Si tu placa no tiene header dedicado, conecta la bomba en CPU_FAN y fija la curva al 100%.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-thermometer-half accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Tipos de Pasta Termica</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La pasta termica rellena las micro-imperfecciones entre el IHS del CPU y la base del cooler. No todas son iguales: difieren en conductividad, seguridad electrica y duracion.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Conductividad termica</th><th>Conductividad electrica</th><th>Uso recomendado</th><th>Precio aprox.</th></tr>
+            <tr><td>Ceramica</td><td>3-8 W/mK</td><td>No</td><td>Uso general, principiantes y laptops</td><td>Bajo</td></tr>
+            <tr><td>Metal-plata</td><td>6-12 W/mK</td><td>Si (aplicar con cuidado)</td><td>PCs de escritorio y overclocking moderado</td><td>Medio</td></tr>
+            <tr><td>Metal liquido</td><td>60-80 W/mK</td><td>Si (muy conductiva)</td><td>Enthusiasts y montajes avanzados</td><td>Alto</td></tr>
+          </table></div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Peligro:</strong> El metal liquido NO se usa en laptops ni sobre disipadores o IHS de aluminio: el gallio corroe el aluminio y lo degrada en dias. Ademas, al ser electricamente conductivo, una gota sobre la placa base provoca cortocircuitos. Su uso se limita a IHS de cobre o niquel con aplicacion muy precisa.</div>
+          </div>
+          <p>Cuando cambiar cada tipo:</p>
+          <ul>
+            <li><strong>Ceramica:</strong> Cada 3-5 anos. No conduce electricidad, ideal para quien no quiere mantenimiento.</li>
+            <li><strong>Metal-plata:</strong> Cada 2-3 anos. Pierde eficiencia mas rapido con los ciclos termicos.</li>
+            <li><strong>Metal liquido:</strong> Cada 1-2 anos o al primer mantenimiento del cooler. Reaprovecharla al rearmar requiere retirarla con alcohol isopropilico y reaplicarla de cero.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-gpu-card accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Instalacion de GPU Vertical (Riser Cable)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La instalacion vertical muestra la GPU con su disipador hacia el panel de vidrio, visible a traves del gabinete. Para lograrlo se usa un riser cable: un extensor PCIe x16 flexible.</p>
+          <ul>
+            <li><strong>Que es un riser:</strong> Un cable plano que traslada las pistas del slot PCIe x16 de la placa a una posicion vertical de montaje. Se vende aparte o viene incluido con gabinetes que traen soporte vertical.</li>
+            <li><strong>Slots verticales del gabinete:</strong> Verifica que tu gabinete tenga los slots de expansion verticales (brackets rotados 90 grados). No todos los gabinetes los incluyen: revisa el manual antes de comprar el riser.</li>
+            <li><strong>Conectar el riser:</strong> Inserta el extremo macho del riser en el slot PCIe x16 de la placa base y conecta la GPU al conector del riser. Muchos risers necesitan un soporte extra para que la tarjeta no cuelgue de su propio peso.</li>
+            <li><strong>Fijar la GPU al bracket:</strong> Atornilla el bracket de la tarjeta a los slots verticales del gabinete. Usa el soporte anti-sag incluido para evitar la flexion de la GPU y del propio riser.</li>
+          </ul>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Advertencias:</strong> Un riser PCIe 3.0 sobre un slot PCIe 4.0 puede obligarte a forzar el modo en la BIOS. La perdida de rendimiento por el riser es minima en la practica (1-2% en juegos). El riesgo real es la interferencia con el panel de vidrio: si la tarjeta queda pegada al cristal, bloquea el flujo de aire y puede recalentarse. Mide el espacio antes de atornillar.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-graph-up accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Pruebas y Validacion Post-Ensamblaje</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Antes de cerrar el gabinete y de instalar el sistema operativo, valida que el hardware funcione correctamente. Esto ahorra horas de diagnostico cuando el PC ya esta montado.</p>
+          <ul>
+            <li><strong>Bench test previo:</strong> Sobre la caja antiestatica de la placa (fuera del gabinete) arma el minimo: PSU, placa, CPU con cooler y una sola RAM. Esto confirma el POST antes de perder tiempo montando todo.</li>
+            <li><strong>Primer POST:</strong> Si escuchas un pitido y aparece el logo del fabricante, el hardware basico funciona. Sin pitido y con pantalla negra, revisa la RAM, los conectores ATX/EPS y el cable de video.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Prueba</th><th>Herramienta</th><th>Duracion</th><th>Que verificar</th></tr>
+            <tr><td>Memoria RAM</td><td>MemTest86 (USB booteable)</td><td>2-4 pasadas</td><td>Sin errores en ninguna pasada</td></tr>
+            <tr><td>CPU bajo carga</td><td>Prime95 (modo Small FFT)</td><td>15-30 min</td><td>Temperatura estable por debajo de 90 grados y sin throttling</td></tr>
+            <tr><td>GPU bajo carga</td><td>FurMark o 3DMark</td><td>15-30 min</td><td>Temperatura de la GPU por debajo de 85 grados, sin artefactos ni cierres</td></tr>
+            <tr><td>Almacenamiento</td><td>CrystalDiskInfo / CrystalDiskMark</td><td>5 min</td><td>Estado "Bueno", SMART sin errores y velocidades acordes al modelo</td></tr>
+          </table></div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Temperaturas seguras:</strong> El CPU en reposo debe estar por debajo de 50 grados y bajo carga por debajo de 90 grados (los Ryzen 7000 y Core de 13/14 generacion toleran hasta 95 grados pero con throttling). La GPU no debe superar los 85 grados bajo carga. Valores mas altos de forma sostenida indican un problema de montaje, flujo de aire o pasta termica.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Actualizacion de BIOS (Flashing)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Actualizar el firmware de la placa base puede habilitar CPUs mas nuevos, corregir bugs o cerrar vulnerabilidades de seguridad. Es un proceso seguro si se sigue al pie de la letra.</p>
+          <ul>
+            <li><strong>Cuando actualizar:</strong> Solo si hay un beneficio concreto: soporte para un CPU nuevo, correccion de estabilidad, compatibilidad de memoria o un fix de seguridad critico. "No se toca lo que funciona": si tu sistema es estable, no actualices sin razon.</li>
+            <li><strong>Descargar el archivo:</strong> Entra al sitio oficial del fabricante de tu placa base (nunca a paginas de terceros), busca tu modelo exacto y descarga la version mas reciente de BIOS. Lee las notas de la version.</li>
+            <li><strong>Preparar el USB:</strong> Descomprime el archivo y copia el binario dentro de una memoria USB formateada en FAT32, preferiblemente vacia y sin particiones. Algunas placas exigen que el archivo este en la raiz de la memoria.</li>
+            <li><strong>Verificar la version:</strong> Antes de flashear, entra al BIOS y anota la version actual (pantalla principal, suele mostrar la revision del firmware). Comprueba que la version nueva sea superior a la instalada.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Fabricante</th><th>Herramienta de flasheo</th><th>Metodo recomendado</th></tr>
+            <tr><td>ASUS</td><td>EZ Flash / USB BIOS FlashBack</td><td>EZ Flash desde el BIOS, o FlashBack con la placa apagada y el boton trasero</td></tr>
+            <tr><td>ASRock</td><td>Instant Flash / BIOS Flashback</td><td>Instant Flash desde el BIOS, o el boton BIOS Flashback en placas compatibles</td></tr>
+            <tr><td>MSI</td><td>M-Flash / MSI Center</td><td>M-Flash desde el BIOS es lo mas seguro; evita actualizar desde Windows</td></tr>
+            <tr><td>Gigabyte</td><td>Q-Flash / Q-Flash Plus</td><td>Q-Flash desde el BIOS; Q-Flash Plus flashea sin CPU ni RAM conectados</td></tr>
+          </table></div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Riesgo critico:</strong> NUNCA cortes la energia durante el flasheo: no apagues, no reinicies ni desconectes el equipo. Un corte de energia en pleno proceso puede dejar la placa base inutilizable. Usa un UPS si tu zona sufre cortes frecuentes y nunca flashees con una memoria USB defectuosa.</div>
+          </div>
+          <p>Recuperacion si algo sale mal:</p>
+          <ul>
+            <li><strong>Dual BIOS:</strong> Muchas placas Gigabyte tienen un chip de respaldo; un jumper o boton permite alternar entre las dos BIOS.</li>
+            <li><strong>Q-Flash Plus / BIOS Flashback:</strong> Permiten recuperar el firmware con la placa apagada: inserta el USB en el puerto marcado y presiona el boton.</li>
+            <li><strong>Reset por pila:</strong> Para fallos menores (pantalla negra tras una mala configuracion), retira la pila CR2032 durante 1-2 minutos o usa el jumper CLR_CMOS para restaurar valores de fabrica.</li>
+          </ul>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Seguridad:</strong> Descarga el firmware SOLO del sitio oficial del fabricante. Un BIOS modificado o de fuente no oficial puede contener malware con privilegios absolutos sobre el hardware, imposible de limpiar con un antivirus.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

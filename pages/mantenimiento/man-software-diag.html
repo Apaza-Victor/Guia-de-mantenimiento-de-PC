@@ -288,6 +288,127 @@
           </div>
         </div></div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-memory accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Como Usar MemTest86</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>MemTest86 es el test de RAM mas confiable: arranca desde un USB sin cargar Windows y prueba cada celda de memoria. Es lento a proposito — una pasada completa puede tardar 1-2 horas.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Paso</th><th>Accion</th></tr>
+            <tr><td>1</td><td>Descarga la imagen ISO gratuita de MemTest86 del sitio oficial (memtest86.com) — la version Free es suficiente.</td></tr>
+            <tr><td>2</td><td>Crea el USB booteable con Rufus: conecta un USB (minimo 2GB), selecciona la ISO y elige modo "MBR" o "UEFI" segun el firmware de tu PC.</td></tr>
+            <tr><td>3</td><td>Reinicia, entra al menu de arranque (F12, F11 o Esc segun la placa) y arranca desde el USB.</td></tr>
+            <tr><td>4</td><td>Configuracion recomendada: deja el test en "Auto" y deja pasar al menos 4 pasadas (varias horas). Cuantas mas pasadas, mas confiable el resultado.</td></tr>
+            <tr><td>5</td><td>Lee el resultado en pantalla: si aparece "Errors: 0", la RAM esta sana. Cualquier error aparece en rojo con la direccion de memoria donde fallo.</td></tr>
+            <tr><td>6</td><td>Si hay errores, prueba cada modulo individualmente en distintos slots para aislar la memoria o el slot defectuoso.</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Alternativa rapida en Windows:</strong> ejecuta mdsched.exe (Diagnostico de memoria de Windows) y elige reiniciar ahora. Es menos exhaustivo que MemTest86 pero detecta fallas graves rapidamente y no requiere USB.</div>
+          </div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Importante:</strong> la RAM con errores causa BSOD aleatorios, corrupcion de archivos y cuelgues sin motivo aparente. Si MemTest86 marca errores, reemplaza el modulo — no hay software que "repare" memoria fisicamente defectuosa.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-stopwatch accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Metodologia de Pruebas de Estabilidad (Stress Tests)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El stress test verifica que el sistema sea estable bajo carga maxima. Cada componente tiene su prueba especifica; el objetivo es detectar errores de calculo, calor y artefactos.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Componente</th><th>Prueba</th><th>Duracion sugerida</th><th>Que vigilar</th></tr>
+            <tr><td>CPU</td><td>Prime95 (Small FFTs) u OCCT CPU</td><td>30-60 min</td><td>Errores de calculo, throttling, temperatura &gt;90°C</td></tr>
+            <tr><td>GPU</td><td>FurMark u OCCT GPU</td><td>15-30 min</td><td>Artefactos visuales, temperatura &gt;90°C, cuelgues</td></tr>
+            <tr><td>RAM</td><td>MemTest86 (USB) u OCCT Memory</td><td>4+ pasadas / 1-2 horas</td><td>Errores de memoria en rojo</td></tr>
+            <tr><td>Disco</td><td>CrystalDiskMark o HD Tune</td><td>Varias pasadas</td><td>Velocidad fuera de spec, errores de lectura</td></tr>
+            <tr><td>PSU</td><td>OCCT PSU Test (GPU + CPU juntos)</td><td>15-30 min</td><td>Apagados, voltajes fuera de tolerancia</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Errores WHEA:</strong> en el Visor de eventos (Registros de Windows → Sistema) el codigo 19 o 18 en el origen "WHEA-Logger" indica error de hardware — el 19 apunta a CPU/RAM, el 18 a PCIe (a menudo GPU o NVMe). Tras un BSOD, revisa este log antes de culpar a un driver.</li>
+            <li><strong>Artefactos en GPU:</strong> triangulos, rayas o puntos de colores durante FurMark indican VRAM o nucleo grafico inestable (sobrecalentamiento, overclock extremo o falla fisica).</li>
+            <li><strong>Orden tras overclock:</strong> primero MemTest86 (RAM estable), luego Prime95 30 min (CPU), despues FurMark (GPU) y por ultimo OCCT PSU test. Nunca saltees pasos: una inestabilidad de RAM invalida los demas tests.</li>
+          </ul>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Monitorea temperaturas SIEMPRE durante el stress:</strong> deja HWiNFO abierto en segundo plano con el registro activo y revisa que las temperaturas no superen los limites del fabricante. Un test de estres sobre un equipo con falla termica previa puede danar componentes.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-journal-text accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Visor de Eventos en Profundidad</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El Visor de Eventos registra todo lo que ocurre en Windows y es la primera fuente de verdad ante BSOD, reinicios o servicios que fallan. Abrelo con <code>eventvwr.msc</code> (Win+R o desde el menu inicio).</p>
+          <ul>
+            <li><strong>Logs a revisar:</strong> "Registros de Windows → Sistema" (errores de hardware, controladores y servicios) y "Registros de Windows → Aplicaciones" (errores de programas).</li>
+            <li><strong>Event ID 41 (Kernel-Power):</strong> el equipo se apago sin un apagado limpio (corte de energia, PSU o crash de hardware). Muy comun tras un BSOD o un apagon.</li>
+            <li><strong>Event ID 1001 (BugCheck):</strong> se produjo un BSOD. Filtra este ID para ver la frecuencia exacta de las pantallas azules.</li>
+            <li><strong>Event ID 6008:</strong> apagado inesperado detectado en el ultimo arranque (suele acompanar al 41).</li>
+            <li><strong>Event ID 7000/7001:</strong> un servicio no pudo iniciarse o depende de otro que fallo. Tipico de drivers rotos tras una actualizacion.</li>
+            <li><strong>Filtros y vistas personalizadas:</strong> crea una "Vista personalizada" por nivel de error critico y por intervalo para no leer el log completo cada vez.</li>
+            <li><strong>Que ignorar:</strong> errores de discos externos desconectados bruscamente (Event ID 157 Kernel-Disk), cortes de WLAN intermitentes y errores de servicios de telemetria que no afectan el sistema.</li>
+          </ul>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">powershell &#183; consultar eventos por ID</span>
+            </div>
+            <pre><span class="cmd-comment"># Ultimos 50 errores del Sistema en las ultimas 24 horas</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; Level=1,2; StartTime=(Get-Date).AddDays(-1)} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">50</span>
+
+  <span class="cmd-comment"># Buscar BSOD (Event ID 1001) en el registro Sistema</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; Id=1001} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">10</span>
+
+  <span class="cmd-comment"># Errores WHEA de hardware (Provider WHEA-Logger)</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; ProviderName='Microsoft-Windows-WHEA-Logger'} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">10</span></pre>
+          </div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Practica:</strong> cuando diagnostiques un reinicio misterioso, filtra por Event ID 41 y 1001 en las ultimas 2 semanas y compara las horas con tu historial de BSOD. La correlacion de horas resuelve la mayoria de los casos.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Limpieza Completa de Drivers de GPU (DDU)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p><strong>Display Driver Uninstaller (DDU)</strong> elimina por completo los drivers de la tarjeta grafica, incluidos registros, archivos sobrantes y servicios ocultos que el desinstalador normal deja atras.</p>
+          <ul>
+            <li><strong>Cuando usar DDU:</strong> cambiar de NVIDIA a AMD o viceversa, drivers corruptos o instalaciones fallidas, BSOD relacionados con display, o artefactos tras actualizar el driver.</li>
+            <li><strong>Descarga previa:</strong> baja la ultima version de DDU (wagnardsoft.com) y los drivers nuevos de tu GPU (NVIDIA o AMD) ANTES de limpiar — despues de DDU el sistema queda sin driver de video.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Paso</th><th>Accion</th></tr>
+            <tr><td>1</td><td>Descarga DDU y los drivers nuevos. Extrae DDU a una carpeta (no hace falta instalar).</td></tr>
+            <tr><td>2</td><td>Arranca en modo seguro: Shift + Reiniciar → Solucionar problemas → Opciones avanzadas → Modo seguro.</td></tr>
+            <tr><td>3</td><td>Ejecuta Display Driver Uninstaller.exe y selecciona "Limpiar y reiniciar" (elige el fabricante correcto: NVIDIA, AMD o Intel).</td></tr>
+            <tr><td>4</td><td>Windows se reinicia solo y arranca con el driver generico de Microsoft.</td></tr>
+            <tr><td>5</td><td>Instala el driver nuevo descargado (ejecuta el instalador como administrador) y reinicia una vez mas.</td></tr>
+            <tr><td>6</td><td>Verifica con GPU-Z que el driver, la frecuencia y la resolucion correctas esten activas.</td></tr>
+          </table></div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Advertencia:</strong> DDU borra TODOS los drivers de GPU del fabricante seleccionado, incluidos los de otros adaptadores. No lo uses "por curiosidad" sobre un sistema estable — si tu PC funciona bien, no necesitas DDU.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

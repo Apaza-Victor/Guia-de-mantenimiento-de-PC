@@ -74,6 +74,7 @@
     <a class='chip active' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -262,6 +263,28 @@
           <div class="three-stage"></div>
           <div class="three-bar"><span class="three-title">Topologia enrutada</span><span class="three-hint">girar / zoom</span></div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-kanban accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Diseno Jerarquico de Redes</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El <strong>diseno jerarquico</strong> organiza la red en capas, cada una con funciones y equipos especificos. Hace la red mas predecible, escalable y facil de diagnosticar que una malla plana de switches.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Capa</th><th>Funcion</th><th>Equipos tipicos</th></tr>
+            <tr><td>Core (nucleo)</td><td>Transporte rapido entre areas; no procesa ni filtra en profundidad</td><td>Switches de alta velocidad y redundancia, routers backbone</td></tr>
+            <tr><td>Distribucion</td><td>Politicas, enrutamiento entre VLANs, filtrado y QoS</td><td>Switches L3, firewalls por area</td></tr>
+            <tr><td>Acceso</td><td>Conecta usuarios finales y dispositivos</td><td>Switches L2, APs, puntos finales</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Ventajas:</strong> crece de forma modular (agregar capas de acceso no toca el core), el trafico se distribuye predeciblemente y un fallo queda contenido en su capa.</li>
+            <li><strong>Ejemplo de campus:</strong> cada edificio tiene switches de acceso en los pisos, switches de distribucion por edificio y un core que los une y sale a Internet.</li>
+            <li><strong>Simplificacion a 2 capas (collapsed core):</strong> en redes pequenas core y distribucion se fusionan en un unico switch central, manteniendo acceso y funciones de distribucion en el mismo equipo.</li>
+          </ul>
+        </div></div>
       </div>
     </div>
 

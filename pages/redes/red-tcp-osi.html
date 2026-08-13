@@ -74,6 +74,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -490,6 +491,85 @@
             <div class="content"><strong>CSMA/CD vs CSMA/CA</strong> Ethernet usa CSMA/CD (Carrier Sense Multiple Access with Collision Detection): escucha, transmite y si detecta colision retrocede y reintenta. Wi-Fi usa CSMA/CA (Collision Avoidance): escucha y espera un tiempo aleatorio ANTES de transmitir para evitar la colision, porque en radio no puede "sentir" la colision mientras transmite.</div>
           </div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-window-sidebar accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Protocolos de Aplicacion en Profundidad</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Los protocolos de aplicacion definen como los programas hablan entre si sobre TCP/UDP. Conocer sus metodos, codigos y puertos ayuda a diagnosticar servicios.</p>
+          <ul>
+            <li><strong>HTTP:</strong> metodos GET (leer), POST (enviar datos), PUT (reemplazar) y DELETE (borrar). Codigos de estado: 2xx exito, 3xx redireccion, 4xx error del cliente (404 no encontrado), 5xx error del servidor (500, 503).</li>
+            <li><strong>HTTPS/TLS:</strong> HTTP cifrado. Durante el handshake TLS el servidor presenta su certificado, ambas partes negocian claves y a partir de ahi el trafico viaja cifrado. Sin certificado valido el navegador advierte al usuario.</li>
+            <li><strong>Correo:</strong> SMTP (puerto 25, envio entre servidores MTA y del cliente MUA al MTA), IMAP (143, el correo queda en el servidor y sincroniza), POP3 (110, descarga y borra del servidor). Variantes cifradas: 587 submission, 993 IMAPS, 995 POP3S.</li>
+            <li><strong>FTP:</strong> transferencia de archivos por los puertos 20 (datos) y 21 (control). Modo activo: el servidor inicia la conexion de datos. Modo pasivo: el cliente la inicia (necesario detras de firewalls/NAT).</li>
+            <li><strong>SSH:</strong> acceso remoto seguro por el puerto 22. Con autenticacion por clave publica el servidor guarda la clave publica y el cliente demuestra poseer la privada, sin enviar contrasenas por la red.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Protocolo</th><th>Puerto</th><th>Transporte</th><th>Uso</th></tr>
+            <tr><td>HTTP</td><td>80</td><td>TCP</td><td>Web sin cifrar</td></tr>
+            <tr><td>HTTPS</td><td>443</td><td>TCP</td><td>Web cifrada (TLS)</td></tr>
+            <tr><td>SMTP</td><td>25 / 587</td><td>TCP</td><td>Envio de correo (MTA / submission)</td></tr>
+            <tr><td>IMAP</td><td>143 / 993</td><td>TCP</td><td>Lectura de correo con sincronizacion</td></tr>
+            <tr><td>POP3</td><td>110 / 995</td><td>TCP</td><td>Descarga de correo</td></tr>
+            <tr><td>FTP</td><td>20 / 21</td><td>TCP</td><td>Transferencia de archivos (datos/control)</td></tr>
+            <tr><td>SSH</td><td>22</td><td>TCP</td><td>Terminal remota segura</td></tr>
+          </table></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-globe2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">IPv6 en Detalle</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>IPv6 usa 128 bits y elimina los problemas de IPv4 (escasez de direcciones, broadcast, NAT obligatorio). Se escribe en grupos hexadecimales: <code>2001:0db8:85a3::1</code> (los grupos de ceros se abrevian con ::).</p>
+          <ul>
+            <li><strong>Link-local (fe80::/10):</strong> direccion automatica para hablar en la LAN; no sale de la subred y no se enruta.</li>
+            <li><strong>Unique local (fc00::/7):</strong> equivalente a las privadas de IPv4, uso interno de organizaciones.</li>
+            <li><strong>Global unicast:</strong> direcciones publicas enrutables en Internet (los prefijos los asigna el ISP).</li>
+            <li><strong>Multicast (ff00::/8):</strong> reemplaza al broadcast; un paquete va a un grupo. <strong>Anycast:</strong> varias maquinas comparten una direccion y responde la mas cercana.</li>
+            <li><strong>EUI-64:</strong> mecanismo para derivar la parte de host desde la MAC insertando fffe en el centro (hoy se usan privacy extensions para no exponer la MAC).</li>
+            <li><strong>Jerarquia /64:</strong> cada subred usa /64; un host puede tener varias direcciones (link-local, global, temporales).</li>
+            <li><strong>Configuracion:</strong> SLAAC (el host se autoconfigura con el prefijo del router, sin servidor) o DHCPv6 (asignacion con mas parametros y control).</li>
+            <li><strong>Coexistencia:</strong> dual-stack (IPv4 e IPv6 a la vez), tuneles 6to4/6in4 y NAT64 (traduccion IPv6 a IPv4).</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Criterio</th><th>IPv4</th><th>IPv6</th></tr>
+            <tr><td>Bits</td><td>32</td><td>128</td></tr>
+            <tr><td>Notacion</td><td>Decimal punteado: 192.168.1.1</td><td>Hexadecimal: 2001:db8::1</td></tr>
+            <tr><td>NAT</td><td>Necesario por escasez</td><td>No necesario (cada host puede tener IP publica)</td></tr>
+            <tr><td>Broadcast</td><td>Si (255.255.255.255)</td><td>No (usa multicast)</td></tr>
+            <tr><td>Header</td><td>20 bytes + opciones</td><td>40 bytes fijos, sin checksum, con extensiones</td></tr>
+            <tr><td>ARP</td><td>ARP para resolver MAC</td><td>NDP (Neighbor Discovery)</td></tr>
+          </table></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-people-fill accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Multicast, IGMP y Protocolos de Control</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <ul>
+            <li><strong>Unicast:</strong> un emisor a un receptor (la mayoria del trafico). <strong>Multicast:</strong> un emisor a un grupo (streaming, videoconferencia). <strong>Broadcast:</strong> un emisor a todos (solo IPv4 y dentro de la LAN).</li>
+            <li><strong>IGMP:</strong> protocolo con el que los hosts avisan a su router que quieren recibir un grupo multicast (224.0.0.0/4). <strong>IGMP snooping:</strong> el switch observa IGMP y reenvia el trafico multicast solo a los puertos interesados, evitando inundar la red.</li>
+            <li><strong>NDP (Neighbor Discovery Protocol):</strong> en IPv6 reemplaza a ARP: descubre vecinos, resuelve direcciones, detecta routers y autoconfigura con SLAAC.</li>
+            <li><strong>LLDP/CDP:</strong> protocolos de descubrimiento de dispositivos vecinos (LLDP es estandar abierto, CDP es propietario de Cisco). Permiten a switches y routers anunciarse y mapear la topologia.</li>
+            <li><strong>ICMP:</strong> mensajes de control y error. <code>ping</code> usa echo request/reply; <code>traceroute</code> explota los mensajes de tiempo excedido para descubrir cada salto.</li>
+          </ul>
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Dato:</strong> los servicios de IPTV y las videoconferencias masivas usan multicast para no enviar el mismo paquete una vez por cada receptor.</div>
+          </div>
+        </div></div>
       </div>
 
     </div>

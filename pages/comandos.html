@@ -630,6 +630,213 @@
       <span class="icon">🔍</span>
       <div class="content"><strong>Flujo de solucion de problemas de conectividad</strong> ① Deshabilitar y rehabilitar la placa de red en Centro de Redes. ② ipconfig /release + /renew + /flushdns. ③ Apagar y reiniciar el router/modem. ④ Probar el cable de red con un tester de red. ⑤ Conectar el modem directamente a la PC para descartar router. ⑥ Cambiar entre Ethernet y WiFi para descartar placa de red. ⑦ Si persiste, contactar al ISP ya que la falla puede estar en el DSLAM de la central telefonica.</div>
     </div>
+
+    <h3 class="sub-heading" style="border-bottom-color:var(--accent2);">Administracion Avanzada y Reparacion</h3>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-tools accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Reparacion de Arranque de Windows</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Cuando Windows no arranca, el Entorno de Recuperacion (WinRE) ofrece herramientas de linea de comandos para reparar el registro de arranque y el sector de inicio. Accede desde un USB de instalacion: Reparar el equipo &gt; Solucion de problemas &gt; Simbolo del sistema.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">cmd &#183; reparacion de arranque desde WinRE</span></div>
+          <pre><span class="cmd-comment"># bootrec: reparar MBR, sector de arranque y BCD</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bootrec</span> <span class="cmd-flag">/fixmbr</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bootrec</span> <span class="cmd-flag">/fixboot</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bootrec</span> <span class="cmd-flag">/rebuildbcd</span>
+<span class="cmd-comment"># Si rebuildbcd no detecta instalaciones, respaldar y recrear el BCD</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/export</span> <span class="cmd-value">C:\BCD_Backup</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">attrib</span> <span class="cmd-value">c:\boot\bcd</span> <span class="cmd-flag">-h -r -s</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">ren</span> <span class="cmd-value">c:\boot\bcd bcd.old</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bootrec</span> <span class="cmd-flag">/rebuildbcd</span>
+<span class="cmd-comment"># Alternativa directa: reconstruir el cargador de Windows</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdboot</span> <span class="cmd-value">C:\Windows</span></pre>
+        </div>
+        <p>Con <strong>bcdedit</strong> se consulta y modifica la configuracion de arranque del sistema. Los identificadores entre llaves, como <code>{default}</code>, referencian entradas concretas del BCD.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">cmd &#183; bcdedit - ver y editar la configuracion de arranque</span></div>
+          <pre><span class="cmd-comment"># Ver toda la configuracion de arranque</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/enum</span>
+<span class="cmd-comment"># Ver solo la entrada del sistema operativo actual</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/enum</span> <span class="cmd-value">{current}</span>
+<span class="cmd-comment"># Cambiar la descripcion de la entrada por defecto</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/set</span> <span class="cmd-value">{default}</span> description <span class="cmd-value">"Windows 11 Pro"</span>
+<span class="cmd-comment"># Arrancar en modo seguro en el proximo reinicio</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/set</span> <span class="cmd-value">{default}</span> safeboot minimal
+<span class="cmd-comment"># Quitar el modo seguro</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/deletevalue</span> <span class="cmd-value">{default}</span> safeboot
+<span class="cmd-comment"># Fijar la particion de arranque</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">bcdedit</span> <span class="cmd-flag">/set</span> <span class="cmd-value">{default}</span> device partition=<span class="cmd-value">C:</span></pre>
+        </div>
+        <ul>
+          <li><strong>msinfo32:</strong> Muestra la informacion completa del sistema: hardware, componentes, entorno de software, estado de Secure Boot y TPM. Util para diagnosticar conflictos entre drivers.</li>
+          <li><strong>regedit:</strong> Editor del registro de Windows. Permite revisar y modificar claves de inicio de aplicaciones, servicios y politicas.</li>
+          <li><strong>reg export:</strong> Respalda el registro antes de tocarlo. Ejemplo: <code>reg export HKLM\SOFTWARE respaldo.reg</code>.</li>
+          <li><strong>sigverif:</strong> Verificador de firmas de drivers. Lista archivos del sistema sin firma valida, util para detectar drivers corruptos o no firmados.</li>
+        </ul>
+        <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Precaucion:</strong> antes de modificar el BCD o el registro, exporta un respaldo. Un error de sintaxis en bcdedit o una clave borrada puede impedir que el equipo arranque.</div></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-window-sidebar accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Scripting Batch y PowerShell</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>El scripting automatiza tareas repetitivas de mantenimiento. Batch (.bat) es el clasico de CMD; PowerShell (.ps1) es mas potente y trabaja con objetos, lo que lo hace ideal para administracion.</p>
+        <ul>
+          <li><strong>Variables:</strong> Se declaran con <code>set NOMBRE=valor</code> y se leen con <code>%NOMBRE%</code>.</li>
+          <li><strong>if:</strong> Condicionales: <code>if %var%==valor (comando) else (comando)</code>.</li>
+          <li><strong>for:</strong> Bucles sobre listas o archivos: <code>for %%f in (*.txt) do echo %%f</code> (en un .bat usa doble %).</li>
+          <li><strong>%errorlevel%:</strong> Codigo de salida del ultimo comando; 0 significa exito, otro valor indica error.</li>
+          <li><strong>start:</strong> Lanza un programa en una ventana separada: <code>start notepad.exe</code>.</li>
+          <li><strong>Redireccion:</strong> <code>&gt;</code> sobrescribe un archivo y <code>&gt;&gt;</code> agrega al final: <code>ipconfig /all &gt; red.txt</code>.</li>
+        </ul>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">batch &#183; script de respaldo de documentos</span></div>
+          <pre><span class="cmd-comment">@echo off</span>
+<span class="cmd-keyword">set</span> <span class="cmd-value">BACKUP=C:\Respaldo</span>
+<span class="cmd-keyword">if</span> not exist <span class="cmd-value">"%BACKUP%"</span> <span class="cmd-keyword">mkdir</span> <span class="cmd-value">"%BACKUP%"</span>
+<span class="cmd-keyword">echo</span> Respaldando documentos del usuario...
+<span class="cmd-keyword">xcopy</span> <span class="cmd-value">"%USERPROFILE%\Documents\*"</span> <span class="cmd-value">"%BACKUP%\Documentos"</span> <span class="cmd-flag">/E /I /Y</span>
+<span class="cmd-keyword">if</span> %errorlevel%==0 (
+  <span class="cmd-keyword">echo</span> Respaldo completado sin errores.
+) <span class="cmd-keyword">else</span> (
+  <span class="cmd-keyword">echo</span> Hubo errores en el respaldo.
+)
+<span class="cmd-keyword">pause</span></pre>
+        </div>
+        <ul>
+          <li><strong>Pipelines:</strong> Pasan objetos entre cmdlets: <code>Get-Process | Sort-Object CPU -Descending | Select-Object -First 5</code>.</li>
+          <li><strong>Where-Object:</strong> Filtra objetos: <code>Get-Service | Where-Object {$_.Status -eq 'Running'}</code>.</li>
+          <li><strong>Select-Object:</strong> Elige propiedades: <code>Get-Process | Select-Object Name,CPU</code>.</li>
+          <li><strong>ForEach-Object:</strong> Procesa cada elemento de la tuberia: <code>1..10 | ForEach-Object {$_ * 2}</code>.</li>
+          <li><strong>Funciones:</strong> <code>function Resumen-CPU {Get-Process | Sort-Object CPU -Descending}</code>.</li>
+          <li><strong>profile.ps1:</strong> Se ejecuta al abrir PowerShell; ahi se definen alias, funciones y variables personales.</li>
+          <li><strong>Execution Policy:</strong> <code>Restricted</code> bloquea scripts y <code>RemoteSigned</code> permite scripts locales (recomendado): <code>Set-ExecutionPolicy RemoteSigned</code>.</li>
+          <li><strong>Modulos:</strong> <code>Import-Module Nombre</code> carga funcionalidad extra; los de la comunidad se instalan desde PSGallery con <code>Install-Module</code>.</li>
+        </ul>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">powershell &#183; limpieza de archivos temporales</span></div>
+          <pre><span class="cmd-keyword">$tempPaths</span> = @(
+  <span class="cmd-value">"$env:TEMP"</span>,
+  <span class="cmd-value">"$env:WINDIR\Temp"</span>
+)
+<span class="cmd-keyword">foreach</span> (<span class="cmd-value">$path</span> in <span class="cmd-value">$tempPaths</span>) {
+  <span class="cmd-keyword">Get-ChildItem</span> -Path <span class="cmd-value">$path</span> -Recurse -Force -ErrorAction SilentlyContinue |
+    <span class="cmd-keyword">Remove-Item</span> -Recurse -Force -ErrorAction SilentlyContinue
+}
+<span class="cmd-keyword">Write-Host</span> <span class="cmd-value">"Temporales limpiados."</span> -ForegroundColor Green</pre>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-diagram-2 accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Administracion Remota</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>La administracion remota permite gestionar equipos de la red sin estar fisicamente frente a ellos. Son herramientas imprescindibles para soporte tecnico y servidores.</p>
+        <ul>
+          <li><strong>psexec \\equipo comando:</strong> Ejecuta comandos en un equipo remoto (Sysinternals). Ejemplo: <code>psexec \\PC-OFICINA ipconfig</code>.</li>
+          <li><strong>winrm quickconfig:</strong> Configura WinRM en el equipo para habilitar la administracion remota de PowerShell.</li>
+          <li><strong>Enter-PSSession / Invoke-Command:</strong> Abren una sesion interactiva o ejecutan un comando puntual: <code>Invoke-Command -ComputerName PC-OFICINA {Get-Service}</code>.</li>
+          <li><strong>mstsc:</strong> Cliente de escritorio remoto (RDP) de Windows.</li>
+          <li><strong>net use \\equipo\share:</strong> Mapea un recurso compartido a una letra de unidad: <code>net use Z: \\servidor\documentos</code>.</li>
+          <li><strong>net view:</strong> Lista los equipos y recursos compartidos visibles en la red.</li>
+          <li><strong>net share:</strong> Administra los recursos compartidos locales del equipo.</li>
+          <li><strong>sc \\equipo config servicio:</strong> Cambia la configuracion de un servicio remoto: <code>sc \\PC-OFICINA config spooler start= auto</code>.</li>
+        </ul>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Herramienta</th><th>Puerto</th><th>Uso</th></tr>
+          <tr><td>RDP (mstsc)</td><td>3389</td><td>Sesion grafica completa de Windows</td></tr>
+          <tr><td>WinRM (PowerShell Remoting)</td><td>5985 / 5986</td><td>Shell remoto por HTTP / HTTPS</td></tr>
+          <tr><td>SMB (archivos compartidos)</td><td>445</td><td>Compartir archivos e impresoras</td></tr>
+          <tr><td>SSH</td><td>22</td><td>Shell cifrado (Linux y Windows moderno)</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn"><i class="bi bi-exclamation-triangle"></i><div><strong>RDP expuesto a Internet = riesgo:</strong> abrir el puerto 3389 hacia Internet es una de las vias mas comunes de ransomware. Usa VPN, activa NLA (Network Level Authentication), cambia el puerto por defecto y emplea contrasenas fuertes o llaves.</div></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-terminal accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Linux Avanzado</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Para administracion avanzada, Linux ofrece herramientas de diagnostico profundo, control fino de procesos y seguridad a nivel de kernel.</p>
+        <ul>
+          <li><strong>lsof:</strong> Lista archivos abiertos por procesos. <code>lsof -i :80</code> muestra que proceso usa el puerto 80.</li>
+          <li><strong>strace:</strong> Rastrea las llamadas al sistema de un proceso; ideal para depurar fallos de inicio de aplicaciones.</li>
+          <li><strong>iptables / ufw:</strong> Firewall del kernel. <code>ufw enable</code> y <code>ufw allow ssh</code> bastan para asegurar un servidor simple.</li>
+          <li><strong>cron y systemd timers:</strong> Programan tareas: <code>crontab -e</code> para cron y <code>systemctl list-timers</code> para timers de systemd.</li>
+          <li><strong>nice / renice:</strong> Ajustan la prioridad de los procesos: <code>renice -n -5 -p 1234</code>.</li>
+          <li><strong>timeout:</strong> Limita el tiempo de ejecucion: <code>timeout 60 comando</code>.</li>
+          <li><strong>tmux / screen:</strong> Multiplexores de terminal que mantienen sesiones vivas al cerrar la conexion SSH.</li>
+          <li><strong>nproc:</strong> Muestra el numero de nucleos disponibles del CPU.</li>
+          <li><strong>setfacl:</strong> Permisos ACL granulares por usuario: <code>setfacl -m u:user:rw archivo</code>.</li>
+          <li><strong>SELinux / AppArmor:</strong> Control de acceso obligatorio. <code>getenforce</code> y <code>sestatus</code> muestran el estado en distribuciones basadas en RHEL/Fedora.</li>
+          <li><strong>ss -tulpn:</strong> Puertos en escucha con el proceso asociado; version moderna de netstat.</li>
+        </ul>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Funcion</th></tr>
+          <tr><td>lsof</td><td>Archivos abiertos por procesos y conexiones activas</td></tr>
+          <tr><td>strace</td><td>Rastrea llamadas al sistema (depuracion)</td></tr>
+          <tr><td>iptables / ufw</td><td>Firewall de red</td></tr>
+          <tr><td>cron / systemd timers</td><td>Tareas programadas</td></tr>
+          <tr><td>nice / renice</td><td>Prioridad de procesos</td></tr>
+          <tr><td>timeout</td><td>Limita el tiempo de ejecucion de un comando</td></tr>
+          <tr><td>tmux / screen</td><td>Sesiones de terminal persistentes</td></tr>
+          <tr><td>nproc</td><td>Numero de nucleos del CPU</td></tr>
+          <tr><td>setfacl</td><td>Permisos ACL por usuario y grupo</td></tr>
+          <tr><td>getenforce / sestatus</td><td>Estado de SELinux</td></tr>
+          <tr><td>ss -tulpn</td><td>Puertos en escucha y procesos asociados</td></tr>
+        </table></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-window-fullscreen accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Windows Terminal y Productividad de Consola</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Windows Terminal es la aplicacion de consola moderna de Microsoft. Unifica CMD, PowerShell, WSL y Azure Cloud Shell en pestanas con color, fuentes, paneles divididos y perfiles personalizables.</p>
+        <ul>
+          <li><strong>Ctrl+Shift+T:</strong> Abrir una nueva pestana.</li>
+          <li><strong>Ctrl+Shift+W:</strong> Cerrar la pestana actual.</li>
+          <li><strong>Ctrl+Shift+D:</strong> Duplicar el panel actual en una pestana nueva.</li>
+          <li><strong>Alt+Shift+- / Alt+Shift+=:</strong> Dividir el panel en horizontal o vertical.</li>
+          <li><strong>Ctrl+Shift+1..9:</strong> Cambiar rapidamente entre pestanas.</li>
+          <li><strong>Ctrl+Scroll:</strong> Ajustar el tamano de la fuente sobre la marcha.</li>
+        </ul>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">wt &#183; linea de comandos de windows terminal</span></div>
+          <pre><span class="cmd-comment"># Abrir en un directorio con una pestana de Ubuntu</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wt</span> -d C:\Users --tab -p <span class="cmd-value">"Ubuntu"</span>
+<span class="cmd-comment"># Dividir el panel con PowerShell y CMD</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wt</span> -p <span class="cmd-value">"PowerShell"</span> -p <span class="cmd-value">"Command Prompt"</span> --tab
+<span class="cmd-comment"># Maximizar con varias pestanas al iniciar</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wt</span> --maximized nt -p <span class="cmd-value">"Ubuntu"</span> nt -p <span class="cmd-value">"PowerShell"</span></pre>
+        </div>
+        <ul>
+          <li><strong>Perfiles:</strong> Cada shell instalado aparece como perfil en el menu de pestanas; se configura fuente, esquema de color, transparencia y directorio de inicio.</li>
+          <li><strong>Configuracion JSON:</strong> Los ajustes viven en settings.json, editable desde el menu (Ctrl+,) o con la linea de comandos <code>wt -s</code>.</li>
+          <li><strong>Importar / Exportar:</strong> Copiando el settings.json se porta toda la configuracion a otro equipo sin reinstalar nada.</li>
+          <li><strong>Modo quake:</strong> La combinacion Win+` despliega Windows Terminal como una terminal desplegable sobre cualquier ventana, el truco favorito de los tecnicos.</li>
+        </ul>
+        <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Tip:</strong> el modo quake (Win+`) da acceso instantaneo a la consola sin romper el flujo de trabajo; ideal para llamadas rapidas de diagnostico.</div></div>
+      </div></div>
+    </div>
   </div>
 
 </div>

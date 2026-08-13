@@ -387,6 +387,171 @@
       </div>
     </div>
 
+  <div class="content-section" id="instalacion-so" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(138,180,248,.12);border-color:rgba(138,180,248,.25);color:#8ab4f8;"><i class="bi bi-hdd"></i></div>
+        <div class="section-title">
+          <h2>Instalacion de Sistemas Operativos</h2>
+          <p>// Windows 11 · Linux · dual boot · clonado de discos · WSL</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-shield-check accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Requisitos de Windows 11 y Verificacion TPM</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Windows 11 impone requisitos de hardware mas estrictos que Windows 10, centrados en seguridad (TPM 2.0 y Secure Boot). Revisalos antes de planificar una instalacion.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Requisito</th><th>Valor minimo</th></tr>
+              <tr><td>Procesador</td><td>CPU compatible de 64 bits, 1 GHz o mas, 2 nucleos como minimo</td></tr>
+              <tr><td>RAM</td><td>4 GB</td></tr>
+              <tr><td>Almacenamiento</td><td>64 GB</td></tr>
+              <tr><td>Firmware</td><td>UEFI con Secure Boot</td></tr>
+              <tr><td>Seguridad</td><td>TPM 2.0</td></tr>
+              <tr><td>Graficos</td><td>GPU compatible con DirectX 12 y driver WDDM 2.0</td></tr>
+              <tr><td>Pantalla</td><td>9 pulgadas, resolucion HD (720p)</td></tr>
+            </table>
+          </div>
+          <ul>
+            <li><strong>Verificar TPM:</strong> Pulsa Win+R y ejecuta <code>tpm.msc</code>. Debe indicar "El TPM esta listo para su uso" y version 2.0.</li>
+            <li><strong>PC Health Check:</strong> Aplicacion oficial de Microsoft que evalua si el equipo cumple todos los requisitos de Windows 11.</li>
+            <li><strong>Que es TPM:</strong> Chip de seguridad que resguarda claves de cifrado (BitLocker, Windows Hello). Es requisito obligatorio de Windows 11.</li>
+            <li><strong>fTPM / Intel PTT:</strong> Son TPM integrados en el firmware de la CPU (AMD fTPM y Intel Platform Trust Technology). Las placas modernas los activan desde BIOS sin chip fisico.</li>
+            <li><strong>Como activarlo en BIOS:</strong> Busca opciones como "Intel Platform Trust Technology", "AMD fTPM switch" o "Firmware TPM" y cambialas a Enabled.</li>
+            <li><strong>Excepcion con Rufus:</strong> La opcion "Extended Windows 11 Installation" de Rufus genera un instalador que omite las comprobaciones de TPM, Secure Boot y RAM. Solo debe usarse en equipos parcialmente compatibles y asumiendo menor seguridad.</li>
+          </ul>
+          <div class="alert-box alert-warn"><i class="bi bi-exclamation-triangle"></i><div><strong>Verifica antes de instalar:</strong> si la placa no expone fTPM o TPM 2.0, Windows 11 no podra instalarse ni actualizarse por OTA. Comprobar con tpm.msc evita el error clasico "Este equipo no puede ejecutar Windows 11".</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-hdd accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Instalacion de Linux (Ubuntu / Debian)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Ubuntu y Debian son las distribuciones mas sencillas para empezar. Con un pendrive booteable, el proceso completo lleva entre 20 y 30 minutos.</p>
+          <ul>
+            <li><strong>Descargar ISO:</strong> Desde ubuntu.com o debian.org. Elige la version LTS de Ubuntu para mayor estabilidad y soporte prolongado.</li>
+            <li><strong>Crear el USB:</strong> Con Rufus o Ventoy desde Windows (usa el metodo de esta pagina). GPT + UEFI es lo recomendado en equipos modernos.</li>
+            <li><strong>Arrancar desde USB:</strong> Entra al menu de arranque (F8/F11/F12) y selecciona el pendrive, o cambia el orden en BIOS.</li>
+            <li><strong>Asistente:</strong> Elige idioma, distribucion de teclado y tipo de instalacion. En modo "Instalar Ubuntu" no toca el resto del disco.</li>
+            <li><strong>Particionado automatico:</strong> Selecciona "Borrar disco e instalar Ubuntu" (o "Guided - use entire disk" en Debian). El asistente crea las particiones, incluida la de swap.</li>
+            <li><strong>Usuario y contrasena:</strong> Crea tu cuenta; esa contrasena se usa con sudo para tareas administrativas.</li>
+            <li><strong>GRUB:</strong> Al final se instala el gestor de arranque GRUB, que detecta otros sistemas y permite elegir en cada inicio.</li>
+          </ul>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">bash &#183; primeros comandos post-instalacion</span></div>
+            <pre><span class="cmd-comment"># Actualizar lista de paquetes y sistema completo</span>
+  <span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt update && sudo apt upgrade</span> <span class="cmd-flag">-y</span>
+  <span class="cmd-comment"># Instalar herramientas basicas</span>
+  <span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt install</span> <span class="cmd-value">curl git htop neofetch</span> <span class="cmd-flag">-y</span>
+  <span class="cmd-comment"># Limpiar paquetes que ya no se usan</span>
+  <span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo apt autoremove</span>
+  <span class="cmd-comment"># Ver un resumen del hardware y sistema</span>
+  <span class="cmd-prompt">$</span> <span class="cmd-keyword">neofetch</span></pre>
+          </div>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Nota:</strong> el particionado manual detallado esta en la seccion anterior de esta pagina (Particionado recomendado - Ubuntu/Debian).</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-columns accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Dual Boot Windows + Linux</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El dual boot permite tener Windows y Linux en el mismo equipo, eligiendo en cada arranque cual sistema cargar. Es la opcion de muchos tecnicos que necesitan ambos mundos.</p>
+          <p><strong>Requisitos previos:</strong></p>
+          <ul>
+            <li><strong>Instalar Windows primero:</strong> Windows debe instalarse antes que Linux; su instalador sobrescribe el gestor de arranque existente.</li>
+            <li><strong>Particionar antes:</strong> Deja espacio libre (por ejemplo 100 GB) para Linux o reduce una particion desde Administrador de discos de Windows.</li>
+            <li><strong>Desactivar Fast Startup:</strong> Windows hiberna y deja el disco montado, lo que impide que Linux lo monte de forma segura.</li>
+          </ul>
+          <p><strong>Pasos:</strong></p>
+          <ul>
+            <li><strong>Paso 1:</strong> Instala Windows y reduce una particion para dejar espacio libre.</li>
+            <li><strong>Paso 2:</strong> Instala Linux con la opcion "Instalar junto a Windows" o el particionado manual en el espacio libre.</li>
+            <li><strong>Paso 3:</strong> GRUB se instala y muestra un menu con ambos sistemas.</li>
+            <li><strong>Paso 4:</strong> Desde el menu de arranque de la BIOS puedes fijar cual sistema se carga por defecto.</li>
+          </ul>
+          <p><strong>Riesgos a tener en cuenta:</strong></p>
+          <ul>
+            <li><strong>BitLocker:</strong> Si Windows usa BitLocker, Linux no podra leer esas particiones por estar cifradas. Desactivalo antes de instalar.</li>
+            <li><strong>Reloj RTC:</strong> Linux suele usar UTC y Windows hora local, causando desfases. En Linux: <code>timedatectl set-local-rtc 1</code>.</li>
+            <li><strong>Actualizaciones de Windows:</strong> Una actualizacion importante puede sobrescribir GRUB. Reparalo arrancando desde el USB de Linux con <code>grub-install</code>.</li>
+          </ul>
+          <p><strong>Desinstalar el dual boot:</strong> Borra las particiones de Linux desde Administrador de discos y recupera el arranque de Windows con <code>bootrec /fixmbr</code> o <code>bcdboot C:\Windows</code> desde WinRE.</p>
+          <div class="alert-box alert-warn"><i class="bi bi-exclamation-triangle"></i><div><strong>Precaucion:</strong> respalda tus datos antes de particionar o instalar, y desactiva BitLocker y el inicio rapido de Windows. Un error de particionado puede dejar inaccesible todo el disco.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Clonado y Migracion de Discos</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Migrar de HDD a SSD es la mejora mas notable que se puede hacer en un equipo viejo. Macrium Reflect Free es la herramienta gratuita mas usada por tecnicos para clonar.</p>
+          <ul>
+            <li><strong>1. Conectar el SSD:</strong> Instalalo en un slot SATA o M.2 libre y verifica que Windows lo reconozca en Administrador de discos.</li>
+            <li><strong>2. Abrir Macrium Reflect Free:</strong> En "Local Disks" elige el disco fuente y pulsa "Clone this disk".</li>
+            <li><strong>3. Elegir destino:</strong> Marca el SSD destino. "Copy partitions" replica el disco tal cual; "Shrink" ajusta las particiones al tamano del destino.</li>
+            <li><strong>4. Ajustar particiones:</strong> Arrastra o modifica el tamano de la particion del sistema para aprovechar toda la capacidad del SSD.</li>
+            <li><strong>5. Ejecutar la clonacion:</strong> Confirma y espera; puede tardar desde minutos hasta un par de horas segun la cantidad de datos.</li>
+            <li><strong>6. Arrancar desde el SSD:</strong> Cambia el orden de arranque en BIOS y verifica que Windows inicie con normalidad.</li>
+          </ul>
+          <ul>
+            <li><strong>Clonar disco entero vs particion:</strong> Clonar el disco completo copia tambien las particiones de arranque y recuperacion. Clonar solo la particion del sistema suele dejar el equipo sin arrancar.</li>
+            <li><strong>Migrar solo el SO:</strong> Si el sistema viejo esta muy sucio, reinstala Windows en el SSD y copia los datos manualmente. Es la ruta mas limpia y segura.</li>
+            <li><strong>Que hacer con el disco viejo:</strong> Formatealo y usalo como disco de datos o respaldo, o conservalo intacto unos dias hasta confirmar que el SSD funciona bien.</li>
+          </ul>
+          <div class="alert-box alert-danger"><i class="bi bi-exclamation-octagon"></i><div><strong>Desconecta los discos de datos:</strong> durante la clonacion, deja solo el disco fuente y el destino conectados. Es facil seleccionar el disco equivocado como destino y perder datos de forma irreparable.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-box accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">WSL - Subsistema Linux para Windows</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>WSL ejecuta un kernel Linux real dentro de Windows sin maquina virtual pesada ni arranque dual. Es ideal para desarrollo, practicas de redes y scripting.</p>
+          <ul>
+            <li><strong>Que es WSL2:</strong> Segunda generacion que usa un kernel virtualizado con compatibilidad completa de llamadas al sistema. Es el estandar desde Windows 10 version 2004.</li>
+            <li><strong>Instalar:</strong> <code>wsl --install</code> instala WSL2, el kernel y Ubuntu por defecto en un solo comando, y pide reiniciar.</li>
+            <li><strong>Instalar distros:</strong> <code>wsl --list --online</code> lista las disponibles; <code>wsl --install -d Debian</code> o <code>-d kali-linux</code> instalan otras.</li>
+            <li><strong>Versiones:</strong> <code>wsl --set-version Ubuntu 2</code> convierte una distro a WSL2; <code>wsl --set-default-version 2</code> fija el valor por defecto.</li>
+            <li><strong>Integracion de archivos:</strong> Desde Windows accedes a los archivos de Linux via <code>\\wsl$\Ubuntu</code> en el Explorador de archivos.</li>
+            <li><strong>Comandos desde CMD:</strong> <code>wsl ls -la</code> o <code>wsl bash -c "apt update"</code> ejecutan Linux sin abrir la terminal de la distro.</li>
+            <li><strong>Usos:</strong> Entorno de desarrollo, pruebas de redes, scripting con Bash y herramientas de diagnostico que no existen en Windows (nmap, netcat, curl de consola).</li>
+          </ul>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">cmd &#183; wsl desde powershell o cmd</span></div>
+            <pre><span class="cmd-comment"># Instalar WSL2 con la distro por defecto</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-flag">--install</span>
+  <span class="cmd-comment"># Ver las distros disponibles</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-flag">--list --online</span>
+  <span class="cmd-comment"># Instalar Debian y fijar WSL2</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-flag">--install -d</span> <span class="cmd-value">Debian</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-flag">--set-version</span> <span class="cmd-value">Debian</span> <span class="cmd-value">2</span>
+  <span class="cmd-comment"># Ejecutar un comando Linux desde CMD</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-keyword">uname -a</span>
+  <span class="cmd-comment"># Abrir la terminal de la distro</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wsl</span> <span class="cmd-flag">-d</span> <span class="cmd-value">Debian</span></pre>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
 </div>
 
 <footer class="footer">

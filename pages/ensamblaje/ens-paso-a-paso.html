@@ -229,6 +229,28 @@
         </div>
 
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-box accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Prueba fuera del Gabinete (Bench Test)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Antes de montar todo dentro del gabinete, conviene verificar que el sistema encienda y haga POST. Diagnosticar sobre la mesa es mucho mas facil que con el cableado dentro de la torre.</p>
+          <ul>
+            <li><strong>Por que probar antes:</strong> Si algo falla, el montaje completo habra sido en vano. Un bench test aislado ahorra tiempo, evita desarmar y reduce el riesgo de danos por descargas al manipular las piezas varias veces.</li>
+            <li><strong>Paso 1:</strong> Coloca la placa base sobre la caja antiestatica (o sobre el foam que incluye). Nunca directamente sobre la mesa ni sobre bolsas plasticas, que acumulan electricidad estatica.</li>
+            <li><strong>Paso 2:</strong> Instala el CPU, el cooler (con su pasta termica) y un solo modulo de RAM en el slot A2. Conecta los cables ATX 24-pin y EPS 8-pin desde la PSU.</li>
+            <li><strong>Paso 3:</strong> Puentea el encendido: con un destornillador plano, toca a la vez los dos pines POWER SW del header F_PANEL durante un segundo. Es equivalente a presionar el boton de power.</li>
+            <li><strong>Paso 4:</strong> Verifica el POST: pitido de confirmacion y logo del fabricante en pantalla. Revisa en la BIOS que CPU, RAM y almacenamiento sean detectados. Si enciende, apaga, desmonta y procede al montaje dentro del gabinete con confianza.</li>
+          </ul>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Antiestatica:</strong> Trabaja siempre con pulsera antiestatica conectada a tierra, o tocando periodicamente la carcasa metalica de la fuente (enchufada pero apagada). La electricidad estatica puede destruir componentes sin que lo notes: unos microsegundos bastan para danar la placa o el CPU.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

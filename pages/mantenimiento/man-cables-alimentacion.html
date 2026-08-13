@@ -301,6 +301,55 @@
           <div class="three-bar"><span class="three-title">DC jack (laptop)</span><span class="three-hint">girar / zoom</span></div>
         </div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-activity accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Medicion de Voltajes con Multimetro</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El multimetro confirma que la PSU entrega voltajes dentro de tolerancia. Mide en modo de corriente continua (V DC) sobre el conector ATX 24-pin, con la fuente conectada a corriente y el puente PS_ON puesto.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Riel</th><th>Voltaje nominal</th><th>Rango aceptable (&plusmn;5%)</th><th>Cables a medir</th></tr>
+            <tr><td>+12V</td><td>12.0V</td><td>11.4V - 12.6V</td><td>Amarillo (+) vs Negro (-)</td></tr>
+            <tr><td>+5V</td><td>5.0V</td><td>4.75V - 5.25V</td><td>Rojo (+) vs Negro (-)</td></tr>
+            <tr><td>+3.3V</td><td>3.3V</td><td>3.14V - 3.47V</td><td>Naranja (+) vs Negro (-)</td></tr>
+            <tr><td>+5VSB</td><td>5.0V</td><td>4.75V - 5.25V</td><td>Morado (+) vs Negro (-)</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Como pinchar:</strong> enciende la PSU con un puente entre el cable VERDE (PS_ON) y un NEGRO (GND). Inserta la punta roja del multimetro en el pin del cable a medir y la negra en cualquier pin de tierra.</li>
+            <li><strong>Medicion bajo carga:</strong> los voltajes en vacio casi siempre se ven bien. La medicion real es bajo carga: conecta la PSU al PC y mide en los conectores Molex o SATA mientras el sistema trabaja (o con el test de PSU de OCCT).</li>
+            <li><strong>Valores fuera de rango:</strong> si el +12V baja de 11.4V bajo carga, la PSU esta degradada o sobrecargada: cambiala. Una fuente que cae de voltaje provoca reinicios y danos progresivos.</li>
+          </ul>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>NUNCA abras la PSU:</strong> aunque este desenchufada, los capacitores primarios de alta tension retienen carga mortal durante dias. Todas las mediciones se hacen sobre los conectores y cables exteriores, jamas dentro de la fuente.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-tools accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Inspeccion de la PSU: Capacitores y Ventilador</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La PSU envejece: sus capacitores electroliticos se secan y el ventilador acumula polvo. Una inspeccion visual periodica (sin abrirla) detecta problemas antes de que falle y se lleve otros componentes.</p>
+          <ul>
+            <li><strong>Capacitores inflados o con fuga (capacitor bulging):</strong> mira a traves de las rejillas la parte superior de los capacitores. Si la cruz marcada esta abombada, o ves residuos marrones o gelatinosos en la base, la fuente esta muriendo. No la uses.</li>
+            <li><strong>Ventilador que no gira o vibra:</strong> el ventilador de la PSU debe girar al encender (o cuando el modo semi-pasivo lo active). Si no gira, vibra o hace ruido, la refrigeracion interna falla y la fuente se sobrecalienta.</li>
+            <li><strong>Olor a quemado:</strong> cualquier olor fuerte a electronica quemada es senal de componentes internos danados. Apaga de inmediato y reemplaza la PSU.</li>
+            <li><strong>Limpiar las rejillas:</strong> con la PSU desenchufada y descargada, sopla aire comprimido a traves de las rejillas del ventilador y de la toma de corriente. No metas herramientas por dentro.</li>
+            <li><strong>Cuando cambiar la PSU:</strong> mas de 5-7 anios de uso, ventilador muerto, capacitores abombados, olor a quemado, o si deja de sostener el voltaje bajo carga.</li>
+          </ul>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>ADVERTENCIA FUERTE:</strong> los capacitores de alto voltaje de la PSU retienen carga mortal aunque este desenchufada de la pared. NO abras la fuente, NO toques su interior y NO intentes reemplazarle capacitores. Toda la inspeccion se hace por fuera; ante cualquier duda, reemplaza la PSU.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

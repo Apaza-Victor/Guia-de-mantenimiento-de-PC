@@ -72,6 +72,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip active' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -213,6 +214,34 @@
             <div class="content"><strong>Metodo de diagnostico en 4 pasos:</strong> 1) <code>ipconfig</code> — ¿tengo IP valida? (169.254.x.x = sin DHCP). 2) <code>ping 127.0.0.1</code> — ¿funciona la NIC? 3) <code>ping &lt;tu-gateway&gt;</code> — ¿llego a mi router? 4) <code>ping 8.8.8.8</code> — ¿tengo salida a Internet? Si falla el paso 3, es problema local; si falla solo el 4, es problema del ISP/DNS.</div>
           </div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-bezier2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Subnetting Avanzado: VLSM y Supernetting (CIDR)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p><strong>VLSM (Variable Length Subnet Mask)</strong> permite usar mascaras de longitud variable en la misma red: cada subred recibe el tamano que necesita en vez de bloques iguales. Asi se evita desperdiciar direcciones.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Paso</th><th>Necesidad</th><th>Hosts</th><th>Prefijo</th><th>Subred asignada</th></tr>
+            <tr><td>1</td><td>Ventas</td><td>60</td><td>/26 (62 utiles)</td><td>192.168.1.0/26</td></tr>
+            <tr><td>2</td><td>TI</td><td>30</td><td>/27 (30 utiles)</td><td>192.168.1.64/27</td></tr>
+            <tr><td>3</td><td>Admin</td><td>25</td><td>/27 (30 utiles)</td><td>192.168.1.96/27</td></tr>
+            <tr><td>4</td><td>Enlace router-router</td><td>2</td><td>/30 (2 utiles)</td><td>192.168.1.128/30</td></tr>
+          </table></div>
+          <p>Asi el bloque /24 se divide en subredes de distinto tamano sin desperdicio: 62 + 30 + 30 + 2 hosts utilizables, dejando el resto del rango libre para crecer.</p>
+          <p><strong>Supernetting / agregacion CIDR:</strong> es lo contrario: unir varias redes contiguas en una ruta mas corta para resumir anuncios. Ejemplo: cuatro redes /24 (de 192.168.0.0/24 a 192.168.3.0/24) se anuncian como un solo bloque <code>192.168.0.0/22</code>.</p>
+          <ul>
+            <li><strong>Mascaras wildcard:</strong> el complemento inverso de la mascara (255 - mascara). En ACLs y OSPF indican que bits comparar: ej. 0.0.0.255 para una /24.</li>
+            <li><strong>Practica de diseno:</strong> 1) ordena las subredes de mayor a menor cantidad de hosts. 2) elige el prefijo que cubra cada una (hosts utiles = 2^n - 2). 3) asigna bloques contiguos desde la red base.</li>
+          </ul>
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Tip:</strong> la calculadora de subred de esta pagina te ayuda a verificar los calculos.</div>
+          </div>
+        </div></div>
       </div>
     </div>
 

@@ -182,6 +182,41 @@
           </div>
         </div></div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-clipboard-check accordion-icon" style="color:#FFC107;"></i>
+          <span class="accordion-title">Plantilla de Bitacora y Checklist de Diagnostico</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Cuando un equipo llega al taller, el orden importa. Este checklist evita saltarte el paso obvio (un cable flojo) y la bitacora te deja evidencia de cada prueba.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Checklist de diagnostico</th><th>Hecho</th></tr>
+            <tr><td>1. Verificar la fuente: cable de corriente, interruptor, paperclip test y voltajes</td><td>[ ]</td></tr>
+            <tr><td>2. Verificar cables internos: ATX 24, EPS 8, SATA y PCIe bien insertados</td><td>[ ]</td></tr>
+            <tr><td>3. Reseat de RAM: sacar, soplar el slot y colocar en los slots recomendados (A2/B2)</td><td>[ ]</td></tr>
+            <tr><td>4. Minimal boot: arrancar solo con CPU, 1 modulo RAM y GPU integrada o de repuesto</td><td>[ ]</td></tr>
+            <tr><td>5. Probar componentes uno a uno anadiendo cada pieza hasta reproducir la falla</td><td>[ ]</td></tr>
+            <tr><td>6. Comprobar pila CMOS y descartar configuracion de BIOS perdida</td><td>[ ]</td></tr>
+            <tr><td>7. Registrar cada prueba, resultado y piezas probadas en la bitacora</td><td>[ ]</td></tr>
+          </table></div>
+          <div class="table-scroll" style="margin-top:12px;"><table class="cmd-table">
+            <tr><th>Campo de la bitacora</th><th>Que anotar</th></tr>
+            <tr><td>Fecha y hora</td><td>Cuanto estuvo el equipo en el taller</td></tr>
+            <tr><td>Equipo</td><td>Marca, modelo y numero de serie</td></tr>
+            <tr><td>Sintoma reportado</td><td>El problema tal como lo describe el usuario</td></tr>
+            <tr><td>Pruebas realizadas</td><td>MemTest, voltajes, reseats, swap de piezas y resultados</td></tr>
+            <tr><td>Componentes descartados</td><td>Lo que ya probaste que funciona, para no repetirlo</td></tr>
+            <tr><td>Solucion aplicada</td><td>Reparacion, pieza nueva o configuracion</td></tr>
+            <tr><td>Costo y piezas</td><td>Detalle de facturacion y numero de serie de lo nuevo</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Para tecnicos:</strong> fotografia el interior del equipo al recibirlo y antes de desarmar (ayuda al rearmado y protege ante reclamos). Guarda la bitacora en una hoja de calculo o app de notas; con 20 entradas ya tendras un historial util de fallas recurrentes.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

@@ -187,6 +187,107 @@
     </div>
   </div>
 
+  <div class="content-section" id="actualizar" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--warn-rgb),.12);border-color:rgba(var(--warn-rgb),.25);color:var(--warn);"><i class="bi bi-arrow-repeat"></i></div>
+      <div class="section-title">
+        <h2>Actualizaciones y Decisiones de Compra</h2>
+        <p>// Actualizar vs comprar · escalones de GPU · iGPU vs dedicada</p>
+      </div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Actualizaciones y Upgrades</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Actualizar componentes puntuales suele dar mas rendimiento por cada dolar gastado que comprar un equipo nuevo. La clave esta en detectar el componente que limita al resto.</p>
+        <p><strong>Que actualizar primero:</strong></p>
+        <ul>
+          <li><strong>SSD:</strong> Si el equipo es lento al iniciar o abrir programas, pasar de HDD a SSD es el cambio mas notable que existe.</li>
+          <li><strong>RAM:</strong> Con 8 GB o menos y el sistema saturado, duplicar la memoria resuelve el cuello de botella de inmediato.</li>
+          <li><strong>GPU:</strong> Si el resto del equipo responde bien pero juegos o edicion van lentos, la grafica es la actualizacion indicada.</li>
+        </ul>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Si eres lento en...</th><th>Actualiza</th></tr>
+          <tr><td>Iniciar Windows y abrir aplicaciones</td><td>HDD a SSD</td></tr>
+          <tr><td>Abrir muchas pestanas o programas a la vez</td><td>RAM (8 a 16 GB)</td></tr>
+          <tr><td>Juegos con bajos FPS</td><td>GPU</td></tr>
+          <tr><td>Compilaciones, render y edicion de video</td><td>CPU + RAM</td></tr>
+          <tr><td>Copias y transferencias de archivos lentas</td><td>SSD NVMe</td></tr>
+        </table></div>
+        <p><strong>Actualizar vs comprar nueva:</strong></p>
+        <ul>
+          <li><strong>Actualiza</strong> si el socket de tu placa todavia tiene CPUs mas rapidos disponibles y la plataforma (DDR4/DDR5) sigue siendo la actual.</li>
+          <li><strong>Compra nueva</strong> si el socket esta en su ultima generacion, la plataforma cambia de RAM o reparar el equipo viejo cuesta mas de la mitad de uno nuevo.</li>
+          <li><strong>Fuente al escalar GPU:</strong> Al subir de tarjeta verifica vatios suficientes con margen, el amperaje del rail +12V y los conectores (8 pines PCIe o 12VHPWR) que pide el modelo.</li>
+          <li><strong>Vender piezas viejas:</strong> CPU y GPU usadas se venden rapido en el mercado de segunda mano; el resto puede convertirse en un equipo de respaldo o media center.</li>
+        </ul>
+        <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Regla practica:</strong> una actualizacion enfocada cuesta una fraccion de un equipo nuevo. Un SSD y 16 GB de RAM pueden rejuvenecer una PC de hace 8 anios por poco dinero.</div></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-gpu-card accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Escalones de GPU por Rango de Precio</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>Elegir GPU por escalon evita pagar de mas por un rendimiento que tu monitor no puede mostrar. Los precios son orientativos y varian por pais y fecha.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Escalon</th><th>Modelos</th><th>VRAM</th><th>Uso recomendado</th><th>Precio aprox.</th></tr>
+          <tr><td>Entrada</td><td>RX 6600 / RTX 3050</td><td>8 GB</td><td>1080p medio/alto, esports</td><td>$200 - $280</td></tr>
+          <tr><td>Media</td><td>RX 7600 / RTX 4060</td><td>8 GB</td><td>1080p ultra, 1440p medio</td><td>$300 - $380</td></tr>
+          <tr><td>Media-alta</td><td>RX 7800 XT / RTX 4070</td><td>12 - 16 GB</td><td>1440p alto/ultra</td><td>$500 - $650</td></tr>
+          <tr><td>Alta</td><td>RTX 4080 / RX 7900 XTX</td><td>16 - 24 GB</td><td>1440p ultra, 4K</td><td>$900 - $1300</td></tr>
+          <tr><td>Top</td><td>RTX 4090</td><td>24 GB</td><td>4K maximo, IA, render</td><td>$1600+</td></tr>
+        </table></div>
+        <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Prioriza segun tu monitor:</strong> para 1080p basta un escalon de entrada o media; para 1440p 144 Hz apunta a media-alta; el 4K solo justifica un escalon alto o top. Una RTX 4090 con un monitor 1080p 60 Hz es dinero mal gastado.</div></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-cpu accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">iGPU vs GPU Dedicada</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p>La grafica integrada (iGPU) viene dentro del procesador. Para muchas tareas alcanza y de paso ahorra dinero, energia y espacio.</p>
+        <p><strong>Cuando alcanza la grafica integrada:</strong></p>
+        <ul>
+          <li><strong>Oficina:</strong> Navegacion, ofimatica, correo y video en streaming sin problemas.</li>
+          <li><strong>Media center:</strong> Reproduccion de video 4K en un HTPC conectado al televisor.</li>
+          <li><strong>Streaming basico:</strong> Plataformas de video y multimedia sin exigencias de juegos.</li>
+          <li><strong>Equipos embebidos:</strong> Mini PCs, servidores caseros y estaciones de trabajo ligeras.</li>
+        </ul>
+        <p><strong>CPUs con grafica integrada:</strong></p>
+        <ul>
+          <li><strong>Intel:</strong> UHD Graphics en las series 12/13/14 y graficas Arc integradas en los Core Ultra.</li>
+          <li><strong>AMD:</strong> Ryzen con sufijo G (Ryzen 5 5600G, 8600G) incluyen Radeon Graphics y son los integrados mas potentes del mercado.</li>
+        </ul>
+        <p><strong>Cuando si o si necesitas GPU dedicada:</strong></p>
+        <ul>
+          <li><strong>Gaming:</strong> La integrada no sostiene 60 FPS estables en juegos modernos.</li>
+          <li><strong>Edicion de video:</strong> Codificacion, efectos y timeline 4K requieren VRAM dedicada.</li>
+          <li><strong>Modelado 3D / CAD:</strong> Aplicaciones que piden drivers profesionales y memoria grafica.</li>
+        </ul>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comparativa</th><th>iGPU</th><th>GPU dedicada</th></tr>
+          <tr><td>Rendimiento</td><td>Basico a ligero</td><td>Alto, segun el modelo</td></tr>
+          <tr><td>Consumo</td><td>Muy bajo (comparte RAM)</td><td>75 - 450 W segun modelo</td></tr>
+          <tr><td>Precio</td><td>Incluida en el procesador</td><td>$200 - $1600+</td></tr>
+          <tr><td>Uso tipico</td><td>Oficina, multimedia, HTPC</td><td>Gaming, edicion, 3D, IA</td></tr>
+          <tr><td>Upgrade futuro</td><td>Se puede combinar con dedicada despues</td><td>Limite: fuente, gabinete y CPU</td></tr>
+        </table></div>
+        <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Estrategia inteligente:</strong> si hoy no hay presupuesto para GPU, compra una CPU con iGPU (sufijo G o Intel UHD/Arc) y agrega la tarjeta dedicada despues como upgrade, sin cambiar nada mas.</div></div>
+      </div></div>
+    </div>
+  </div>
+
 </div>
 
 <footer class="footer">

@@ -279,6 +279,148 @@
       </div>
     </div>
 
+  <div class="content-section" id="ref-estandares" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-sliders"></i></div>
+        <div class="section-title">
+          <h2>Estandares y Codigos de Error</h2>
+          <p>// BSOD · Q-Code · USB · HDMI/DP · Wi-Fi</p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-bug accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Codigos de Error BSOD Comunes</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>La pantalla azul de la muerte (BSOD) deja de ser un misterio si sabes leer el codigo de error. Esta tabla reune los mas frecuentes en soporte tecnico.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Codigo</th><th>Significado</th><th>Causa probable</th><th>Solucion</th></tr>
+              <tr><td>IRQL_NOT_LESS_OR_EQUAL</td><td>Acceso a memoria con IRQL incorrecto</td><td>Driver defectuoso</td><td>Actualizar o reinstalar drivers; verifier</td></tr>
+              <tr><td>MEMORY_MANAGEMENT</td><td>Gestion de memoria corrupta</td><td>RAM con fallos</td><td>MemTest86, reasentar modulos</td></tr>
+              <tr><td>SYSTEM_SERVICE_EXCEPTION</td><td>Fallo en un servicio del kernel</td><td>Driver o antivirus</td><td>Revisar drivers recientes, reinstalar</td></tr>
+              <tr><td>WHEA_UNCORRECTABLE_ERROR</td><td>Error fatal de hardware</td><td>CPU, PCIe u overclock</td><td>Revisar temperaturas, resetear BIOS</td></tr>
+              <tr><td>CRITICAL_PROCESS_DIED</td><td>Proceso esencial se detuvo</td><td>Sistema corrupto</td><td>sfc /scannow, DISM, reparar instalacion</td></tr>
+              <tr><td>KERNEL_DATA_INPAGE_ERROR</td><td>No se pudo leer una pagina del disco</td><td>Disco danado</td><td>chkdsk, revisar cable SATA, cambiar disco</td></tr>
+              <tr><td>PAGE_FAULT_IN_NONPAGED_AREA</td><td>Pagina no encontrada en RAM/driver</td><td>RAM o driver</td><td>MemTest86 + revisar drivers</td></tr>
+              <tr><td>DPC_WATCHDOG_VIOLATION</td><td>DPC atascado por tiempo limite</td><td>Disco o driver lento</td><td>Drivers SATA/NVMe, chkdsk</td></tr>
+              <tr><td>VIDEO_TDR_FAILURE</td><td>La GPU no respondio</td><td>Driver o hardware GPU</td><td>DDU + drivers nuevos, ver temperaturas</td></tr>
+            </table>
+          </div>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Como leer los minidumps:</strong> los archivos .dmp de C:\Windows\Minidump se analizan con BlueScreenView (NirSoft) o WhoCrashed, que traducen el fallo al driver culpable en lenguaje simple. El visor de eventos (eventvwr) tambien registra el motivo exacto del cierre.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-exclamation-octagon accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Codigos Q-Code y LED de Diagnostico</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Las placas base de gama media y alta integran un display de dos digitos (Q-Code) y LEDs de depuracion que indican en que fase del POST se detiene el arranque.</p>
+          <p><strong>Que es el Q-Code:</strong> Un display hexadecimal de dos digitos presente en placas ASUS, MSI y Gigabyte que muestra un codigo numerico de diagnostico durante el POST. Con el manual de la placa se decodifica el componente que falla.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Codigo</th><th>Significado</th></tr>
+              <tr><td>00 / FF</td><td>CPU no detectado o fallo del procesador</td></tr>
+              <tr><td>d0</td><td>Inicializacion de CPU fallida</td></tr>
+              <tr><td>55</td><td>Memoria RAM no detectada o con fallos</td></tr>
+              <tr><td>b2 / b4</td><td>Falla en la deteccion de la tarjeta grafica</td></tr>
+              <tr><td>A0</td><td>POST completado, control entregado al sistema operativo</td></tr>
+            </table>
+          </div>
+          <p><strong>LEDs de diagnostico:</strong> Las placas modernas llevan cuatro LEDs: CPU, DRAM, VGA y BOOT.</p>
+          <ul>
+            <li><strong>CPU LED:</strong> Problema con el procesador. Revisa alimentacion EPS, el socket y pins doblados.</li>
+            <li><strong>DRAM LED:</strong> Problema de memoria. Prueba un modulo a la vez y cambia de slot.</li>
+            <li><strong>VGA LED:</strong> No detecta la tarjeta grafica. Reasenta la GPU y verifica sus conectores de alimentacion.</li>
+            <li><strong>BOOT LED:</strong> Falta dispositivo de arranque. Revisa que el disco este conectado y tenga sistema operativo.</li>
+          </ul>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Nota:</strong> el Q-Code y los LEDs se apagan al terminar el POST. Si quedan fijos, busca el codigo exacto en el manual de tu placa; cada fabricante usa la misma base con pequenas variaciones.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-usb accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Especificaciones USB</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Los nombres comerciales del USB son confusos porque la velocidad depende de la version y no del conector. Esta tabla ordena las generaciones.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Version</th><th>Velocidad</th><th>Conector tipico</th><th>Nombre comercial</th></tr>
+              <tr><td>USB 1.1</td><td>12 Mbps</td><td>USB-A / USB-B</td><td>Full Speed</td></tr>
+              <tr><td>USB 2.0</td><td>480 Mbps</td><td>USB-A, micro-USB</td><td>Hi-Speed</td></tr>
+              <tr><td>USB 3.0 / 3.1 Gen1</td><td>5 Gbps</td><td>USB-A azul, USB-C</td><td>SuperSpeed</td></tr>
+              <tr><td>USB 3.1 Gen2 / 3.2 Gen2</td><td>10 Gbps</td><td>USB-C</td><td>SuperSpeed+</td></tr>
+              <tr><td>USB 3.2 Gen2x2</td><td>20 Gbps</td><td>USB-C</td><td>SuperSpeed 20Gbps</td></tr>
+              <tr><td>USB4</td><td>40 Gbps</td><td>USB-C</td><td>USB4</td></tr>
+            </table>
+          </div>
+          <ul>
+            <li><strong>USB-A vs USB-C:</strong> USB-A es el rectangulo clasico; USB-C es reversible, mas pequeno y obligatorio en USB4. El conector no define la velocidad: un USB-C puede ser 2.0 o 3.2.</li>
+            <li><strong>Thunderbolt 3 / 4:</strong> Usan conector USB-C y alcanzan 40 Gbps; permiten cadena de dispositivos y GPUs externas (eGPU).</li>
+            <li><strong>Thunderbolt 5:</strong> Duplica el ancho de banda a 80 Gbps bidireccional (hasta 120 Gbps en un sentido), pensado para monitores 8K y almacenamiento ultrarapido.</li>
+          </ul>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Ojo con los cables:</strong> un SSD USB 3.0 conectado a un puerto USB 2.0 baja a ~40 MB/s. Para altas velocidades usa cables certificados de 10 Gbps o mas y puertos compatibles.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-display accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Especificaciones HDMI y DisplayPort</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>HDMI es el estandar de los televisores y monitores de consumo; DisplayPort domina en gaming y productividad. La version del cable y del puerto debe coincidir para alcanzar la maxima resolucion.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Version</th><th>Resolucion tipica</th><th>Ancho de banda</th><th>Notas</th></tr>
+              <tr><td>HDMI 1.4</td><td>1080p60 / 4K30</td><td>10.2 Gbps</td><td>Sin HDR avanzado</td></tr>
+              <tr><td>HDMI 2.0</td><td>4K60</td><td>18 Gbps</td><td>HDR basico, 1440p144</td></tr>
+              <tr><td>HDMI 2.1</td><td>8K60 / 4K120</td><td>48 Gbps</td><td>VRR, ALLM, eARC</td></tr>
+              <tr><td>DisplayPort 1.4</td><td>4K120 / 8K30</td><td>32.4 Gbps</td><td>DSC, HDR</td></tr>
+              <tr><td>DisplayPort 2.0 / 2.1</td><td>8K60 / 4K240</td><td>hasta 80 Gbps</td><td>DSC mejorado</td></tr>
+            </table>
+          </div>
+          <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Que usar para gaming 4K:</strong> HDMI 2.1 o DisplayPort 1.4+. Verifica que GPU, monitor y cable soporten la misma version: un cable HDMI 2.0 limita la conexion aunque la GPU sea 2.1.</div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-wifi accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Estandares Wi-Fi</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El nombre Wi-Fi X se corresponde con el estandar IEEE 802.11. Las velocidades son teoricas maximas; en la practica se consigue la mitad o menos.</p>
+          <div class="table-scroll">
+            <table class="cmd-table">
+              <tr><th>Estandar</th><th>IEEE</th><th>Bandas</th><th>Velocidad max.</th><th>Uso recomendado</th></tr>
+              <tr><td>Wi-Fi 4</td><td>802.11n</td><td>2.4 / 5 GHz</td><td>600 Mbps</td><td>Dispositivos antiguos</td></tr>
+              <tr><td>Wi-Fi 5</td><td>802.11ac</td><td>5 GHz</td><td>3.5 Gbps</td><td>Routers y equipos de hace unos anos</td></tr>
+              <tr><td>Wi-Fi 6</td><td>802.11ax</td><td>2.4 / 5 GHz</td><td>9.6 Gbps</td><td>Actual recomendado, maneja muchos dispositivos</td></tr>
+              <tr><td>Wi-Fi 6E</td><td>802.11ax</td><td>+ 6 GHz</td><td>9.6 Gbps</td><td>Canal 6 GHz libre de interferencias</td></tr>
+              <tr><td>Wi-Fi 7</td><td>802.11be</td><td>2.4 / 5 / 6 GHz</td><td>hasta 46 Gbps</td><td>Gama alta, gaming y VR</td></tr>
+            </table>
+          </div>
+          <ul>
+            <li><strong>Bandas:</strong> 2.4 GHz llega mas lejos pero se satura; 5 GHz es mas rapido con menos alcance; 6 GHz (Wi-Fi 6E/7) es lo mas rapido y limpio.</li>
+            <li><strong>Compatibilidad:</strong> Los estandares son retrocompatibles: un celular Wi-Fi 5 funciona en un router Wi-Fi 6 pero a velocidad Wi-Fi 5.</li>
+            <li><strong>Para gaming:</strong> Usa cable Ethernet siempre que puedas; si no, prioriza Wi-Fi 6 o superior en banda de 5 GHz.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+
 </div>
 
 <footer class="footer">

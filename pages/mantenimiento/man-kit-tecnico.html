@@ -190,6 +190,77 @@
           <div class="viewer-gltf-hint">Arrastra para girar &middot; Rueda / gesto para zoom &middot; Clic en una pieza para su info</div>
         </div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-ethernet accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Como Crimpar y Probar un Cable RJ45</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Crimpar un cable de red es una de las habilidades basicas del tecnico. Usa cable de categoria 5e o superior y conectores RJ45 compatibles. Usa el estandar T568B en ambos extremos para un cable recto.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Pin</th><th>T568B</th><th>Color del cable</th></tr>
+            <tr><td>1</td><td>Blanco/Naranja</td><td>Par 2 (naranja)</td></tr>
+            <tr><td>2</td><td>Naranja</td><td>Par 2 (naranja)</td></tr>
+            <tr><td>3</td><td>Blanco/Verde</td><td>Par 3 (verde)</td></tr>
+            <tr><td>4</td><td>Azul</td><td>Par 1 (azul)</td></tr>
+            <tr><td>5</td><td>Blanco/Azul</td><td>Par 1 (azul)</td></tr>
+            <tr><td>6</td><td>Verde</td><td>Par 3 (verde)</td></tr>
+            <tr><td>7</td><td>Blanco/Cafe</td><td>Par 4 (cafe)</td></tr>
+            <tr><td>8</td><td>Cafe</td><td>Par 4 (cafe)</td></tr>
+          </table></div>
+          <div class="table-scroll" style="margin-top:12px;"><table class="cmd-table">
+            <tr><th>Paso</th><th>Accion</th></tr>
+            <tr><td>1</td><td>Corta el cable parejo con la crimpadora y pela la funda unos 2 cm (o usa el pelador integrado).</td></tr>
+            <tr><td>2</td><td>Ordena los 8 hilos segun T568B y enderezalos en una linea plana.</td></tr>
+            <tr><td>3</td><td>Inserta los hilos en el conector RJ45 con el clip hacia abajo, hasta que cada punta se vea al frente del conector.</td></tr>
+            <tr><td>4</td><td>Introduce el conector en la crimpadora y presiona firmemente hasta el tope (deberia hacer clic).</td></tr>
+            <tr><td>5</td><td>Repite en el otro extremo y prueba el cable con el tester de red.</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Uso del tester:</strong> conecta ambos extremos al tester y observa los LEDs: deben encenderse en orden correlativo (1 a 8) en ambas unidades. Si un numero no enciende, el pin esta abierto; si encienden fuera de orden, hay pares cruzados.</li>
+            <li><strong>Fallas tipicas:</strong> destrenzado de mas de 13 mm (interferencia y caida de velocidad), conector mal insertado (los hilos no llegan al frente) y crimpado sin presion completa que suelta el conector con el uso.</li>
+            <li><strong>Cable cruzado:</strong> se usa T568A en un extremo y T568B en el otro. Hoy casi no se necesita (los equipos modernos auto-negocian), pero conviene saber hacerlo.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-file-earmark-text accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Documentacion de Servicio y Garantias</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Un tecnico profesional documenta cada intervencion. La bitacora de servicio evita repetir diagnosticos y es prueba fehaciente ante reclamaciones de garantia.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Campo</th><th>Que anotar</th></tr>
+            <tr><td>Fecha</td><td>Dia de la intervencion y hora de entrada del equipo.</td></tr>
+            <tr><td>Equipo</td><td>Marca, modelo, numero de serie y estado fisico de llegada.</td></tr>
+            <tr><td>Sintoma</td><td>Problema reportado por el usuario, con sus palabras exactas.</td></tr>
+            <tr><td>Pruebas</td><td>Diagnosticos realizados (MemTest, CrystalDiskInfo, voltajes) y resultados.</td></tr>
+            <tr><td>Solucion</td><td>Que se hizo: piezas reemplazadas, software instalado, configuraciones.</td></tr>
+            <tr><td>Piezas</td><td>Componentes nuevos con marca, modelo, numero de serie y precio.</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Registra numeros de serie y facturas:</strong> sin comprobante no hay garantia. Guarda las facturas en digital (nube) y anota el numero de serie de cada pieza en la bitacora para poder reclamar.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Componente</th><th>Garantia tipica</th><th>Cubre / no cubre</th></tr>
+            <tr><td>PSU</td><td>5-10 anios</td><td>Componentes y mano de obra; no cubre danos por sobrevoltaje no registrado</td></tr>
+            <tr><td>Motherboard</td><td>3-5 anios</td><td>Fallos de fabrica; no cubre pines doblados ni liquidos</td></tr>
+            <tr><td>RAM</td><td>De por vida (muchas marcas)</td><td>Fallos de memoria; no cubre sobrevoltaje de XMP extremo</td></tr>
+            <tr><td>GPU</td><td>2-3 anios</td><td>Fallos de fabrica; no cubre repasteo mal hecho ni liquid cooling</td></tr>
+            <tr><td>SSD</td><td>3-5 anios o TBW</td><td>Segun el desgaste; no cubre datos perdidos (por eso el backup)</td></tr>
+            <tr><td>Monitor</td><td>1-3 anios</td><td>Pixeles muertos solo sobre un minimo definido por el fabricante</td></tr>
+          </table></div>
+          <div class="info-box info-tip" style="margin-top:12px;">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Por que documentar:</strong> la bitacora convierte una intervencion individual en experiencia acumulada: si el equipo vuelve con el mismo sintoma, ya sabes que descartaste y ahorras horas de diagnostico. Ademas, protege tu trabajo ante clientes y ante la garantia del fabricante.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>

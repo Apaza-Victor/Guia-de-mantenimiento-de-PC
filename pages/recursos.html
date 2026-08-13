@@ -104,6 +104,9 @@
       <span class="net-pill" data-group="anonimato">Anonimato y Privacidad</span>
       <span class="net-pill" data-group="formacion">Formacion</span>
       <span class="net-pill" data-group="comunidades">Comunidades</span>
+      <span class="net-pill" data-group="mon">Monitoreo y Redes</span>
+      <span class="net-pill" data-group="rec">Recuperacion de Datos</span>
+      <span class="net-pill" data-group="neg">Para Tecnicos y Talleres</span>
     </div>
 
     <!-- ============ HARDWARE ============ -->
@@ -1910,11 +1913,200 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="rec-empty" id="recEmpty">
-    <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:.5rem;"></i>
-    No se encontraron recursos para ese termino. Prueba con otra palabra o revisa el indice de categorias.
+    <!-- ============ MONITOREO Y REDES ============ -->
+    <div class="net-group" data-group="mon">
+      <h3 class="sub-heading" id="cat-mon" style="border-bottom-color:var(--accent2);">Monitoreo y Redes</h3>
+      <div class="rec-grid">
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Zabbix</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Monitoreo</span>
+          </div>
+          <p>Plataforma de monitoreo de codigo abierto para servidores, redes y aplicaciones. Alertas, mapas de red, SLA y graficos en tiempo real. El estandar en infraestructura.</p>
+          <a href="https://www.zabbix.com" target="_blank" class="rec-link">zabbix.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Grafana</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Dashboards</span>
+          </div>
+          <p>Panel de control de codigo abierto que conecta decenas de fuentes de datos (Prometheus, InfluxDB, SQL, Zabbix) y las convierte en dashboards visuales compartibles.</p>
+          <a href="https://grafana.com" target="_blank" class="rec-link">grafana.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PRTG</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Monitoreo</span>
+          </div>
+          <p>Monitoreo integral de red de Paessler con sensores preconfigurados para servidores, routers, switches y servicios. Version gratuita para hasta 100 sensores.</p>
+          <a href="https://www.paessler.com/prtg" target="_blank" class="rec-link">paessler.com/prtg</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Nagios Core</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Monitoreo</span>
+          </div>
+          <p>El clasico de codigo abierto para monitoreo de hosts, servicios y redes. Miles de plugins de la comunidad para ampliar cualquier chequeo que necesites.</p>
+          <a href="https://www.nagios.org" target="_blank" class="rec-link">nagios.org</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>LibreNMS</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Monitoreo</span>
+          </div>
+          <p>Monitoreo de red de codigo abierto con descubrimiento automatico de dispositivos via SNMP. Mapas, alertas, graficos y soporte para cientos de fabricantes.</p>
+          <a href="https://www.librenms.org" target="_blank" class="rec-link">librenms.org</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Datadog</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">SaaS</span>
+          </div>
+          <p>Monitoreo en la nube de infraestructura, aplicaciones, logs y red con alertas inteligentes. Incluye plan gratuito para equipos pequenos y educacion.</p>
+          <a href="https://www.datadoghq.com" target="_blank" class="rec-link">datadoghq.com</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Uptime Kuma</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Disponibilidad</span>
+          </div>
+          <p>Monitor de disponibilidad self-hosted: vigila paginas web, pings, puertos y certificados TLS con notificaciones en Telegram, Discord, email y mas.</p>
+          <a href="https://github.com/louislam/uptime-kuma" target="_blank" class="rec-link">github.com/uptime-kuma</a>
+        </div>
+        <div class="rec-card net" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Netdata</h4>
+            <span class="pchip pchip-g" style="font-size:.55rem;">Tiempo Real</span>
+          </div>
+          <p>Monitoreo en tiempo real de CPU, RAM, disco, red y procesos con graficos instantaneos y alarmas. Instalacion en un minuto y cero configuracion inicial.</p>
+          <a href="https://www.netdata.cloud" target="_blank" class="rec-link">netdata.cloud</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ RECUPERACION DE DATOS ============ -->
+    <div class="net-group" data-group="rec">
+      <h3 class="sub-heading" id="cat-rec" style="border-bottom-color:#f78166;">Recuperacion de Datos</h3>
+      <div class="rec-grid">
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>TestDisk</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Particiones</span>
+          </div>
+          <p>Recupera particiones perdidas, tablas de particiones danadas y discos que no arrancan. De codigo abierto, corre desde USB y es la primera herramienta a probar.</p>
+          <a href="https://www.cgsecurity.org/wiki/TestDisk" target="_blank" class="rec-link">cgsecurity.org</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>PhotoRec</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Archivos</span>
+          </div>
+          <p>Recupera fotos, videos y documentos borrados escaneando el disco sin depender del sistema de archivos. Compana ideal de TestDisk, misma descarga.</p>
+          <a href="https://www.cgsecurity.org/wiki/PhotoRec" target="_blank" class="rec-link">cgsecurity.org</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>R-Studio</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Profesional</span>
+          </div>
+          <p>Suite profesional de recuperacion de datos con soporte para RAID, discos danados y sistemas de archivos de Windows, Linux y macOS. La eleccion de los talleres.</p>
+          <a href="https://www.r-studio.com" target="_blank" class="rec-link">r-studio.com</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Veeam Agent</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Backup</span>
+          </div>
+          <p>Backup gratuito de archivos y de la particion completa del sistema en Windows y Linux. Restauracion ante fallas de disco o ataques de ransomware.</p>
+          <a href="https://www.veeam.com/windows-server-backup-free" target="_blank" class="rec-link">veeam.com</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Backblaze</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Nube</span>
+          </div>
+          <p>Backup continuo en la nube con restauracion via descarga o envio fisico de un disco. Plan gratuito de 30 dias y almacenamiento ilimitado economico.</p>
+          <a href="https://www.backblaze.com" target="_blank" class="rec-link">backblaze.com</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>EaseUS Data Recovery</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Recuperacion</span>
+          </div>
+          <p>Recuperacion asistida por asistentes de discos, memorias USB, tarjetas SD y discos formateados. Version gratuita con limite de datos recuperados.</p>
+          <a href="https://www.easeus.com/datarecoverywizard/" target="_blank" class="rec-link">easeus.com</a>
+        </div>
+        <div class="rec-card ref" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>DMDE</h4>
+            <span class="pchip pchip-o" style="font-size:.55rem;">Editor</span>
+          </div>
+          <p>Editor de discos y particiones con recuperacion de archivos de hasta 400 GB en la version gratuita. Potente para trabajar con discos danados y RAID.</p>
+          <a href="https://dmde.com" target="_blank" class="rec-link">dmde.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PARA TECNICOS Y TALLERES ============ -->
+    <div class="net-group" data-group="neg">
+      <h3 class="sub-heading" id="cat-neg" style="border-bottom-color:var(--accent3);">Para Tecnicos y Talleres</h3>
+      <div class="rec-grid">
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Plantillas de Orden de Servicio</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Plantillas</span>
+          </div>
+          <p>Modelos gratuitos de orden de servicio tecnico y hoja de reparacion para registrar cliente, equipo, diagnostico y garantia. Busqueda generica de plantillas editables.</p>
+          <a href="https://www.canva.com/templates/?query=orden+de+servicio+tecnico" target="_blank" class="rec-link">canva.com/templates</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Freshdesk</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Ticketing</span>
+          </div>
+          <p>Mesa de ayuda para gestionar tickets, clientes y seguimiento de reparaciones en tu taller. Plan gratuito para equipos pequenos y soporte en español.</p>
+          <a href="https://www.freshdesk.com" target="_blank" class="rec-link">freshdesk.com</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Invoice Ninja (Facturacion)</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Facturacion</span>
+          </div>
+          <p>Gestion de facturacion, cotizaciones y cobros para tu servicio tecnico (alternativa moderna a invoicely). Plan gratuito con clientes y facturas limitados.</p>
+          <a href="https://www.invoiceninja.com" target="_blank" class="rec-link">invoiceninja.com</a>
+        </div>
+        <div class="rec-card sec" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>TeamViewer / AnyDesk</h4>
+            <span class="pchip pchip-r" style="font-size:.55rem;">Remoto</span>
+          </div>
+          <p>Soporte remoto para atender equipos de clientes a distancia: control de escritorio, transferencia de archivos y sesiones sin costo para uso personal.</p>
+          <a href="https://www.anydesk.com" target="_blank" class="rec-link">anydesk.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Glary Utilities</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Utilidades</span>
+          </div>
+          <p>Suite gratuita de mantenimiento: limpieza, optimizacion, reparacion del registro y gestion de inicio. Util para puestas a punto rapidas en el taller.</p>
+          <a href="https://www.glarysoft.com/glary-utilities/" target="_blank" class="rec-link">glarysoft.com</a>
+        </div>
+        <div class="rec-card hw" data-aos="fade-up">
+          <div class="rec-card-header">
+            <h4>Windows Repair Toolbox</h4>
+            <span class="pchip pchip-a" style="font-size:.55rem;">Reparacion</span>
+          </div>
+          <p>Caja de herramientas que agrupa los programas de reparacion de Windows mas usados (Malwarebytes, CCleaner, herramientas de red) en una sola interfaz para tecnicos.</p>
+          <a href="https://windows-repair-toolbox.com" target="_blank" class="rec-link">windows-repair-toolbox.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec-empty" id="recEmpty">
+      <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:.5rem;"></i>
+      No se encontraron recursos para ese termino. Prueba con otra palabra o revisa el indice de categorias.
+    </div>
   </div>
 
 </div>

@@ -72,6 +72,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi bi-diagram-3'></i>Topologias</a>
     <a class='chip active' href='red-dispositivos-red.html'><i class='bi bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi bi-signpost-split'></i>Enrutamiento</a>
     <a class='chip' href='red-so-red.html'><i class='bi bi-hdd-network'></i>SO de Red</a>
     <a class='chip' href='red-componentes-red.html'><i class='bi bi-hdd-network'></i>Componentes</a>
     <a class='chip' href='red-medios-transmision.html'><i class='bi bi-usb-cable'></i>Medios</a>
@@ -203,6 +204,99 @@
             <div class="content"><strong>Usos de la VPN en el trabajo:</strong> trabajar desde casa accediendo a la red de la empresa, compartir archivos de forma segura, proteger datos sensibles en redes publicas. En el lado negativo, puede ralentizar la conexion por el cifrado extra y el salto de servidor.</div>
           </div>
         </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-wifi accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Access Points y Redes Inalambricas Avanzadas</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>El <strong>Access Point (AP)</strong> solo provee conectividad inalambrica: conecta clientes Wi-Fi a la red cableada. No es un router: no hace NAT, DHCP ni firewalling (eso lo hace el router al que se conecta).</p>
+          <ul>
+            <li><strong>SSID:</strong> nombre visible de la red. <strong>BSSID:</strong> direccion MAC del AP (o de cada radio).</li>
+            <li><strong>Canales:</strong> en 2.4 GHz los canales 1, 6 y 11 no se superponen; en 5 GHz hay mas canales y menos congestion; en 6 GHz (Wi-Fi 6E/7) aun mas. Canales superpuestos causan interferencia y caida de velocidad.</li>
+            <li><strong>Cobertura y roaming:</strong> varios APs con el mismo SSID permiten que el cliente cambie de AP al moverse. El roaming seamless minimiza la perdida en la transicion.</li>
+            <li><strong>AP empresarial vs domestico:</strong> el domestico integra router+switch+AP; el empresarial es un AP dedicado gestionado centralmente (controller-based) que permite un mismo SSID, VLANs y ajuste de potencia en toda la instalacion.</li>
+            <li><strong>Wi-Fi Mesh:</strong> sistema de nodos que forman una sola red con <strong>backhaul</strong> dedicado (enlace entre nodos, cableado o inalambrico). Los nodos conmutan el trafico y el roaming es transparente. A diferencia del repetidor/extensor (que re-transmite partiendo el ancho de banda), el mesh mantiene el rendimiento.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Criterio</th><th>Repetidor / Extensor</th><th>Wi-Fi Mesh</th></tr>
+            <tr><td>Red</td><td>Una SSID re-transmitida (o SSID aparte)</td><td>Una sola red con nodos coordinados</td></tr>
+            <tr><td>Rendimiento</td><td>Se divide a la mitad por cada salto</td><td>Se mantiene con backhaul dedicado</td></tr>
+            <tr><td>Roaming</td><td>Manual / con cortes</td><td>Seamless entre nodos</td></tr>
+            <tr><td>Gestion</td><td>Independiente por aparato</td><td>Centralizada desde la app</td></tr>
+            <tr><td>Mejor para</td><td>Ampliar un hueco puntual de cobertura</td><td>Casas grandes / varias plantas</td></tr>
+          </table></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-lightning-charge accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Power over Ethernet (PoE)</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p><strong>PoE</strong> (Power over Ethernet) entrega alimentacion electrica y datos por el mismo cable UTP. Permite instalar camaras IP, APs y telefonos VoIP sin llevar cables de corriente hasta el dispositivo.</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Estandar</th><th>Nombre</th><th>Potencia por puerto</th><th>Uso tipico</th></tr>
+            <tr><td>802.3af</td><td>PoE</td><td>15.4 W</td><td>Camaras basicas, telefonos VoIP, APs ligeros</td></tr>
+            <tr><td>802.3at</td><td>PoE+</td><td>30 W</td><td>Camaras PTZ, APs de doble banda, mini-PCs</td></tr>
+            <tr><td>802.3bt</td><td>PoE++ (Tipo 3/4)</td><td>60 / 100 W</td><td>APs multibanda, iluminacion, pantallas</td></tr>
+          </table></div>
+          <ul>
+            <li><strong>Presupuesto de potencia:</strong> cada switch tiene un total de vatios; la suma de lo que consumen todos los puertos PoE no debe superarlo.</li>
+            <li><strong>Inyector vs switch PoE:</strong> el inyector agrega PoE a un cable entre el switch normal y el dispositivo (1 puerto); el switch PoE alimenta con PoE nativo todos sus puertos.</li>
+            <li><strong>Cableado:</strong> usa al menos CAT5e; distancias de hasta 100 m como en cualquier enlace Ethernet.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-sliders accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">QoS - Calidad de Servicio</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p><strong>QoS</strong> (Quality of Service) prioriza el trafico importante cuando el ancho de banda no alcanza. No crea mas velocidad: ordena la fila para que las aplicaciones sensibles no sufran.</p>
+          <ul>
+            <li><strong>Priorizacion:</strong> las aplicaciones en tiempo real (VoIP, videollamada, gaming) van primero; las descargas y actualizaciones esperan.</li>
+            <li><strong>Clasificacion y etiquetado:</strong> el trafico se marca con prioridad para que cada dispositivo la respete. <strong>DSCP</strong> (capa 3, IP) y <strong>CoS</strong> (capa 2, 802.1p) son las etiquetas usadas.</li>
+            <li><strong>Escenarios:</strong> con QoS una descarga masiva no rompe una llamada VoIP ni dispara el ping en gaming; en redes congestionadas el efecto se nota mucho.</li>
+            <li><strong>En routers domesticos:</strong> se activa con WMM (Wi-Fi Multimedia) en el firmware o en la seccion QoS del admin. Muchos traen perfiles: streaming, gaming, VoIP.</li>
+            <li><strong>Beneficios y limites:</strong> mejora la experiencia con trafico mixto, pero no soluciona un ancho de banda fisicamente insuficiente ni una mala cobertura Wi-Fi.</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-shield-lock accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Seguridad de Red Avanzada</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <ul>
+            <li><strong>IDS vs IPS:</strong> el IDS (sistema de deteccion de intrusiones) observa el trafico y alerta; el IPS (prevencion) ademas lo bloquea activamente.</li>
+            <li><strong>DMZ:</strong> zona expuesta entre la red interna y el exterior donde van los servidores publicos (web, correo). Arquitectura de 3 patas: Internet, DMZ y LAN separadas por firewalls.</li>
+            <li><strong>802.1X / RADIUS:</strong> autenticacion por puerto: el switch/AP exige credenciales antes de dar acceso; RADIUS centraliza usuarios (muy usado en Wi-Fi empresarial WPA2-Enterprise).</li>
+            <li><strong>NAC:</strong> Network Access Control valida que el dispositivo cumpla politicas (antivirus, parches) antes de ingresar.</li>
+            <li><strong>SIEM:</strong> plataforma que centraliza y correlaciona los logs de toda la red para detectar incidentes en tiempo real.</li>
+            <li><strong>Segmentacion y Zero Trust:</strong> dividir la red en segmentos/VLANs y no confiar en nadie por defecto: cada acceso se valida, incluso dentro de la red.</li>
+            <li><strong>Hardening:</strong> cambiar credenciales por defecto, deshabilitar servicios y puertos que no se usan, actualizar firmware y restringir el acceso administrativo a redes dedicadas.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Criterio</th><th>IDS</th><th>IPS</th></tr>
+            <tr><td>Funcion</td><td>Detecta y alerta</td><td>Detecta, alerta y bloquea</td></tr>
+            <tr><td>Ubicacion</td><td>Espejo (SPAN) del trafico</td><td>En linea en el camino de los datos</td></tr>
+            <tr><td>Impacto en rendimiento</td><td>Minimo</td><td>Puede anadir latencia</td></tr>
+            <tr><td>Riesgo</td><td>Ninguno (solo observa)</td><td>Falso positivo puede cortar trafico legitimo</td></tr>
+            <tr><td>Uso tipico</td><td>Monitoreo forense</td><td>Proteccion proactiva</td></tr>
+          </table></div>
+        </div></div>
       </div>
 
     </div>

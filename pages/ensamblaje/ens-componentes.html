@@ -704,6 +704,58 @@
           </div>
         </div></div>
       </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-bezier2 accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Balance de Componentes y Cuellos de Botella</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Un cuello de botella ocurre cuando un componente limita el rendimiento del conjunto. El objetivo de un armado balanceado es que ninguna pieza quede sobrada ni ahogada respecto a las demas.</p>
+          <ul>
+            <li><strong>Que es un cuello de botella:</strong> Cuando el CPU calcula los fotogramas mas lento de lo que la GPU puede renderizarlos (o viceversa), el componente mas lento frena a todo el sistema. En juegos, lo mas comun es un CPU debil frente a una GPU muy potente.</li>
+            <li><strong>Segun la resolucion:</strong> A 1080p el CPU es mas protagonista (hay mas fotogramas que calcular por segundo), por lo que un buen CPU equilibra una GPU media-alta. A 1440p y 4K la carga pasa a la GPU: la tarjeta grafica importa mas y el CPU trabaja relativamente menos.</li>
+            <li><strong>Regla practica de presupuesto:</strong> Dedica entre el 30% y el 40% del presupuesto total a la tarjeta grafica en un equipo gamer. Por debajo del 30% el equipo queda desbalanceado hacia el CPU; muy por encima del 40% el resto del equipo sufre.</li>
+            <li><strong>Mito del bottleneck:</strong> No existe un limite exacto universal. Un desbalance de 5-10% es inapreciable en uso real; perseguir una pareja "perfecta" hace gastar dinero sin ganancia visible.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Gama</th><th>CPU</th><th>GPU</th><th>Uso tipico</th></tr>
+            <tr><td>Entrada</td><td>Intel Core i3 / AMD Ryzen 3</td><td>RTX 3050 / RX 6600</td><td>eSports y 1080p medio</td></tr>
+            <tr><td>Media</td><td>Intel Core i5 / AMD Ryzen 5</td><td>RTX 4060 / RX 7600 / RTX 5060</td><td>1080p alto y 1440p medio</td></tr>
+            <tr><td>Alta</td><td>Intel Core i7 / AMD Ryzen 7</td><td>RTX 5070 / RX 9070</td><td>1440p alto y 4K</td></tr>
+            <tr><td>Top</td><td>Intel Core i9 / AMD Ryzen 9 / X3D</td><td>RTX 5080 / RTX 5090 / RX 9070 XT</td><td>4K ultra y productividad pesada</td></tr>
+          </table></div>
+        </div></div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header">
+          <i class="bi bi-lightning-charge accordion-icon" style="color:var(--accent);"></i>
+          <span class="accordion-title">Calculo de Vataje de la PSU</span>
+          <i class="bi bi-chevron-down accordion-chevron"></i>
+        </div>
+        <div class="accordion-body"><div class="accordion-content">
+          <p>Elegir la fuente de poder correcta evita reinicios aleatorios y protege el resto del hardware. El calculo es simple: suma el consumo de los componentes y agrega un margen de seguridad.</p>
+          <ul>
+            <li><strong>Consumo estimado:</strong> Suma el TDP del CPU mas el TDP/TGP de la GPU mas entre 100 y 150 W para el resto (placa, RAM, ventiladores, discos y RGB). Ese total es el consumo maximo realista en carga.</li>
+            <li><strong>Regla del margen:</strong> Multiplica el consumo calculado por 1.5. Asi la fuente trabaja en su zona de mayor eficiencia (40-70% de su capacidad) y queda cabeza para picos de energia y futuras actualizaciones.</li>
+            <li><strong>Certificacion 80 Plus:</strong> Garantiza que la fuente entrega al menos el 80% de la energia que toma de la red (en 115V). Los niveles suben desde 80 Plus hasta Titanium (94%+). No mide la calidad total, pero un sello bronce o superior es un buen punto de partida.</li>
+            <li><strong>Calculadoras online:</strong> La de OuterVision y la de be quiet! piden tu hardware y devuelven un vataje recomendado. Usalas como referencia y aplica despues el margen del 1.5x.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo de equipo</th><th>Consumo aproximado</th><th>Vataje recomendado</th></tr>
+            <tr><td>Oficina / HTPC (sin GPU dedicada)</td><td>150-250 W</td><td>300-400 W</td></tr>
+            <tr><td>Gamer media (i5/Ryzen 5 + RTX 4060)</td><td>300-400 W</td><td>550-650 W</td></tr>
+            <tr><td>Gamer alta (i7/Ryzen 7 + RTX 5070/5080)</td><td>450-600 W</td><td>750-850 W</td></tr>
+            <tr><td>Top / workstation (i9/Ryzen 9 + RTX 5090)</td><td>700-900 W</td><td>1000 W o mas</td></tr>
+          </table></div>
+          <div class="alert-box alert-warn" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Calidad antes que vataje:</strong> Una fuente generica de 900 W puede ser peor que una de marca de 650 W. Las PSU de fabricantes reconocidos (Corsair, Seasonic, EVGA, be quiet!, MSI) usan mejores componentes, protecciones reales (OCP, OVP, OTP) y garantias de 7-10 anos. Revisa el modelo especifico en reviews, no solo la marca.</div>
+          </div>
+        </div></div>
+      </div>
     </div>
 
 </div>
