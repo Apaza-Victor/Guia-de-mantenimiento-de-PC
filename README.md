@@ -12,9 +12,9 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 
 | Métrica | Valor |
 |---|---|
-| Páginas HTML | 46 |
-| Secciones de contenido | 68 |
-| Acordeones expandibles | 107 |
+| Páginas HTML | 62 |
+| Secciones de contenido | 100 |
+| Acordeones expandibles | 418 |
 | Términos de glosario | 84 |
 | Recursos web curados | 140+ |
 | Modelos 3D interactivos | Sí (ensamblaje y kit del técnico) |
@@ -40,6 +40,11 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - **Gabinete**: tipos, flujo de aire, cable management
 - **Atajos BIOS**: acceso por fabricante
 - **Conceptos Clave**: BIOS/UEFI, overclocking, XMP/EXPO, POST, CMOS
+- **Overclocking**: CPU, GPU y RAM, undervolting y pruebas de estabilidad
+- **Refrigeración Líquida**: AIO y custom loop, montaje y mantenimiento
+- **Upgrade de Componentes**: compatibilidad, cuello de botella y reemplazos
+- **Guía de Compra**: plataforma, socket y presupuesto balanceado
+- **Cable Management**: organización, rutas y flujo de aire
 
 ### 🛠️ Mantenimiento de PC
 - **Preventivo**: limpieza, pasta térmica, monitoreo térmico
@@ -51,6 +56,11 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - **Conceptos Clave**: BIOS/UEFI, overclocking, undervolting, XMP/EXPO, POST, CMOS
 - **Cables de PSU**: especificaciones y colores de cable
 - **Headers**: USB 3.0, USB-C, HD Audio, RGB/ARGB, Fans
+- **Optimización**: Windows limpio, inicio, servicios y rendimiento
+- **Borrado Seguro**: sanitización de HDD/SSD por estándares
+- **Recuperación de Datos**: fallos lógicos/físicos y herramientas
+- **Pruebas de PSU**: clip, multímetro, tester ATX y bajo carga
+- **Plan de Respaldo**: estrategia 3-2-1, nube y restauración
 
 ### 🌐 Redes de Computadoras
 - **TCP/IP y OSI**: 7 capas, 4 capas, tabla comparativa, protocolos, puertos
@@ -61,6 +71,12 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - **Componentes**: servidor, estación de trabajo, nodo, NIC
 - **Medios**: coaxial, par trenzado, fibra óptica, inalámbrico
 - **Arquitectura**: cliente-servidor vs P2P, dominio broadcast
+- **Router Práctico**: configuración WAN, Wi-Fi, DHCP y QoS
+- **Troubleshooting**: diagnóstico por capas con comandos
+- **Monitoreo**: SNMP, Zabbix/PRTG y tráfico NetFlow
+- **VLAN**: segmentación 802.1Q, trunking e inter-VLAN routing
+- **Seguridad de Red**: AAA, RADIUS/TACACS+, 802.1X, port security
+- **Laboratorio**: prácticas guiadas en Packet Tracer
 
 ### ⌨️ Comandos y Atajos
 - Comandos técnicos: CMD/PowerShell, Linux/Bash
@@ -121,7 +137,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 
 | Tecnología | Uso |
 |---|---|
-| HTML5 | Estructura y semántica de las 46 páginas |
+| HTML5 | Estructura y semántica de las 62 páginas |
 | CSS3 | Custom properties, grid, flexbox, diseño responsive |
 | JavaScript vanilla | Interactividad: acordeones, checklist, búsqueda, tema |
 | Bootstrap Icons | Iconografía |

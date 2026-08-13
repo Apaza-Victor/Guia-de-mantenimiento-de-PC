@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pruebas de PSU - Mantenimiento | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Banco de pruebas de PSU. Test con clip, medicion de voltajes con multimetro (tabla ATX), testers de fuente, prueba bajo carga y signos de una fuente danada.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pruebas de PSU - Mantenimiento | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Banco de pruebas de PSU. Diagnostica la fuente de alimentacion paso a paso.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-lightning-charge"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Pruebas de PSU</h1>
+      <p>Diagnostica la fuente de alimentacion: test con clip, multimetro, testers y prueba bajo carga.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip active' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Pruebas de PSU</span></nav>
+<div class="content-section" id="pruebas-psu" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-lightning-charge"></i></div>
+        <div class="section-title">
+          <h2>Pruebas de PSU</h2>
+          <p>// La fuente falla sin dar sintomas obvios</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-warn">
+        <i class="bi bi-exclamation-triangle"></i>
+        <div><strong>Seguridad primero:</strong> la PSU trabaja con 220/110V. Nunca la abras para "ver que hay dentro" (los capacitores guardan carga letal incluso desenchufada). Todas las pruebas de este articulo se hacen con cables externos, nunca abriendo la fuente.</div>
+      </div>
+
+      <div class="accordion open" id="psu-herramientas">
+        <div class="accordion-header" onclick="toggleAccordion('psu-herramientas')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-tools"></i></span><div><div class="accordion-title">Herramientas del banco de pruebas</div><div class="accordion-subtitle">Lo minimo que necesita el tecnico</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Herramienta</th><th>Para que</th><th>Costo aprox</th></tr>
+            <tr><td>Clip / puente 24-pin</td><td>Encender la PSU sin placa (test de arranque)</td><td>Gratis</td></tr>
+            <tr><td>Multimetro digital</td><td>Medir voltajes de salida con precision</td><td>Bajo-medio</td></tr>
+            <tr><td>Tester de PSU ATX</td><td>Comprobar todos los voltajes y pines de golpe</td><td>Muy bajo</td></tr>
+            <tr><td>Carga electronica / resistencias</td><td>Probar bajo carga real (la PSU necesita carga para regular voltajes)</td><td>Medio-alto</td></tr>
+            <tr><td>Fuente de repuesto conocida</td><td>Aislar el problema (si el equipo enciende con otra fuente, la culpable es la anterior)</td><td>Obligatorio en el taller</td></tr>
+          </table></div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Razon por la que la PSU necesita carga:</strong> los voltajes de una fuente se regulan comparando contra una referencia. Sin carga, los valores pueden verse bien pero en realidad no poder sostener amperaje. Por eso el test con clip solo dice "la fuente se enciende", no "funciona bien".</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-clip">
+        <div class="accordion-header" onclick="toggleAccordion('psu-clip')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-clipboard"></i></span><div><div class="accordion-title">Prueba con clip (paperclip test)</div><div class="accordion-subtitle">Primer test: se enciende o no</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Desconecta la PSU de todo (placa, discos, GPU) y de la pared.</li>
+            <li>Busca en el conector 24-pin el pin <strong>verde (PS_ON, pin 16)</strong> y uno de los <strong>negros (COM)</strong>.</li>
+            <li>Dobla un clip y conecta esos dos pines (el conector debe estar en mano; la fuente enchufada pero apagada con su switch).</li>
+            <li>Enciende el interruptor de la PSU: si el ventilador de la fuente gira, la fuente se enciende.</li>
+            <li>Apaga, retira el clip y reconecta todo. Este test NO garantiza que funcione bajo carga.</li>
+          </ol>
+          <div class="alert-box alert-info">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Alternativa:</strong> muchos testers de PSU y adaptadores de arranque hacen exactamente lo mismo de forma mas segura y muestran los voltajes en pantalla.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-multimetro">
+        <div class="accordion-header" onclick="toggleAccordion('psu-multimetro')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Medicion de voltajes con multimetro</div><div class="accordion-subtitle">Tabla ATX de tolerancia</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Riel</th><th>Nominal</th><th>Rango aceptable (±5%)</th><th>Dondе medir</th></tr>
+            <tr><td>+3.3V</td><td>3.3V</td><td>3.14 – 3.46V</td><td>Pines naranjas del 24-pin</td></tr>
+            <tr><td>+5V</td><td>5.0V</td><td>4.75 – 5.25V</td><td>Pines rojos del 24-pin</td></tr>
+            <tr><td>+12V</td><td>12.0V</td><td>11.4 – 12.6V</td><td>Pines amarillos del 24-pin o EPS</td></tr>
+            <tr><td>-12V</td><td>-12.0V</td><td>-10.8 – -13.2V</td><td>Pin azul</td></tr>
+            <tr><td>PS_ON (verde)</td><td>5V en reposo / 0V encendido</td><td>—</td><td>Pin 16</td></tr>
+            <tr><td>+5VSB (standby)</td><td>5.0V</td><td>4.75 – 5.25V</td><td>Pin morado</td></tr>
+          </table></div>
+          <ul>
+            <li>Pon el multimetro en <strong>VDC</strong> y conecta la punta negra a un pin COM (negro) y la roja al pin a medir.</li>
+            <li>Medi con la fuente ENCENDIDA (clip puesto) y idealmente con carga conectada.</li>
+            <li>Anota los valores: si alguno sale del rango, la fuente esta danada o degradada.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-tester">
+        <div class="accordion-header" onclick="toggleAccordion('psu-tester')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-calculator"></i></span><div><div class="accordion-title">Tester de PSU ATX</div><div class="accordion-subtitle">El atajo del tecnico: todos los voltajes de golpe</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Conecta el 24-pin y el EPS (4/8 pin) al tester (los modelos modernos incluyen ambos).</li>
+            <li>Enciende la fuente; el tester muestra +3.3/+5/+12/-12/+5VSB y el estado de cada pin (OK/bad).</li>
+            <li>Comprueba tambien el cable de video PCIe si el tester lo permite.</li>
+            <li>Resultado: si muestra voltajes OK pero el PC sigue sin arrancar, el problema puede ser la regulacion bajo carga (necesita prueba con carga).</li>
+          </ol>
+          <div class="info-box info-note">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Limitacion:</strong> los testers baratos solo miden voltaje en reposo. Un 12V de 12.5V sin carga puede caer a 11V bajo demanda. Para verificar de verdad se necesita medir bajo carga o un equipo de medicion profesional.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-carga">
+        <div class="accordion-header" onclick="toggleAccordion('psu-carga')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-activity"></i></span><div><div class="accordion-title">Prueba bajo carga y aislamiento</div><div class="accordion-subtitle">El test que realmente importa</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Metodo del taller:</strong> conecta la PSU sospechosa a un equipo de prueba (placa+CPU+RAM sin GPU o con GPU de referencia) y ejecuta una carga (ej. OCCT PSU test o Prime95).</li>
+            <li><strong>Observa:</strong> si el equipo se apaga, reinicia o aparece "video se perdio" bajo carga → fuente insuficiente o danada.</li>
+            <li><strong>Aislamiento definitivo:</strong> conecta una fuente de repuesto de potencia suficiente. Si el problema desaparece, la fuente es la culpable.</li>
+            <li><strong>Rizado (ripple):</strong> los multimetros comunes no lo miden; un rizado alto (con picos >120mV) causa inestabilidad invisible. Se detecta con osciloscopio o equipo especializado.</li>
+          </ul>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>No intentes simular carga con cosas caseras</strong> (resistencias soldadas sin disipacion): riesgo de incendio. Usa cargas disenadas para eso o el metodo de equipo real.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-sintomas">
+        <div class="accordion-header" onclick="toggleAccordion('psu-sintomas')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-heart-pulse"></i></span><div><div class="accordion-title">Signos de una PSU danada</div><div class="accordion-subtitle">Antes de medir, el ojo ya avisa</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Signo</th><th>Que significa</th><th>Accion</th></tr>
+            <tr><td>Olor a quemado / plasticos</td><td>Componente interno fallado</td><td>Reemplazar PSU, no abrir</td></tr>
+            <tr><td>Reinicios aleatorios bajo carga</td><td>Voltaje que se cae o proteccion OCP actuando</td><td>Probar bajo carga / reemplazo</td></tr>
+            <tr><td>Ruido de "zumbido" o chasquidos</td><td>Bobina / capacitor danado</td><td>Reemplazar</td></tr>
+            <tr><td>No enciende pero el clip test funciona</td><td>Falla de regulacion o conector</td><td>Probar en equipo real</td></tr>
+            <tr><td>El PC se apaga al conectar un USB potente</td><td>5V debil / PSU degradada</td><td>Medir +5V; reemplazo</td></tr>
+            <tr><td>Quemado en conectores 24-pin o PCIe</td><td>Sobrecalentamiento por mala conexion</td><td>Reemplazar PSU y cables</td></tr>
+          </table></div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Regla del tecnico:</strong> ante cualquier sintoma raro de energia (apagones, reinicios, no arranca), primero se prueba con otra PSU. Es el test mas rapido y deja claro si la fuente o la placa son las culpables.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="psu-reemplazo">
+        <div class="accordion-header" onclick="toggleAccordion('psu-reemplazo')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-repeat"></i></span><div><div class="accordion-title">Reemplazo seguro</div><div class="accordion-subtitle">Cuando la respuesta es una fuente nueva</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li>Elige la nueva PSU con <strong>margen del 20-30%</strong> sobre el consumo del equipo (calcula CPU+GPU+perifericos).</li>
+            <li>Verifica el <strong>factor</strong> (ATX/SFX segun gabinete) y que sea <strong>modular/semi-modular</strong> si el cable management lo pide.</li>
+            <li>Certificacion 80 PLUS Bronze o superior; los modelos de marca reconocida protegen mejor el equipo.</li>
+            <li><strong>Importante:</strong> usa SOLO los cables incluidos con la nueva fuente (los pines no son universales entre marcas).</li>
+            <li>Desconecta la energia y espera unos minutos antes de tocar conectores (descarga de capacitores).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

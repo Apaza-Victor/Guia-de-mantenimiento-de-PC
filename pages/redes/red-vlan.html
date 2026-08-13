@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VLAN Practica - Redes | TechGuide</title>
+  <meta name="description" content="Redes · VLAN practica. Que es una VLAN, beneficios, tipos (port-based, tagged, voice), configuracion en switch, trunking 802.1Q, inter-VLAN routing y segmentacion real.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VLAN Practica - Redes | TechGuide">
+  <meta property="og:description" content="Redes · VLAN practica. Segmenta tu red con VLANs y trunking 802.1Q.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-layers"></i></div>
+      <h1><span class="hl">Redes</span> · VLAN Practica</h1>
+      <p>Divide la red en segmentos logicos con VLANs, trunking 802.1Q y enrutamiento entre VLANs.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip active' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · VLAN Practica</span></nav>
+<div class="content-section" id="vlan" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-layers"></i></div>
+        <div class="section-title">
+          <h2>VLAN Practica</h2>
+          <p>// Una sola red fisica, varios mundos logicos</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <i class="bi bi-info-circle"></i>
+        <div><strong>Definicion:</strong> una VLAN (Virtual LAN) agrupa equipos en una misma red logica aunque esten en switches distintos. Los equipos de VLANs diferentes NO se ven entre si salvo que un router lo permita.</div>
+      </div>
+
+      <div class="accordion open" id="vl-que-es">
+        <div class="accordion-header" onclick="toggleAccordion('vl-que-es')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-question-circle"></i></span><div><div class="accordion-title">Que es y para que sirve una VLAN</div><div class="accordion-subtitle">Beneficios concretos</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Beneficio</th><th>Ejemplo practico</th></tr>
+            <tr><td>Seguridad (aislamiento)</td><td>VLAN para invitados que no accede a tu red de trabajo</td></tr>
+            <tr><td>Reduccion de trafico broadcast</td><td>ARP y DHCP de una VLAN no inundan las otras</td></tr>
+            <tr><td>Organizacion por departamento</td><td>VLAN 10 Ventas, VLAN 20 RRHH, VLAN 30 Tecnico</td></tr>
+            <tr><td>Flexibilidad fisica</td><td>Pisos distintos comparten la misma VLAN via trunk</td></tr>
+            <tr><td>Politicas de acceso</td><td>Firewall/inter-VLAN rules mas claras por segmento</td></tr>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vl-tipos">
+        <div class="accordion-header" onclick="toggleAccordion('vl-tipos')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-collection"></i></span><div><div class="accordion-title">Tipos de VLAN y modos de puerto</div><div class="accordion-subtitle">Access vs Trunk · tagged vs untagged</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Modo de puerto</th><th>Uso</th><th>Frame 802.1Q</th></tr>
+            <tr><td><strong>Access</strong></td><td>Conecta un solo dispositivo final (PC, impresora) a UNA VLAN</td><td>Sin tag (untagged)</td></tr>
+            <tr><td><strong>Trunk</strong></td><td>Conecta dos switches (o switch-router) y transporta VARIAS VLANs</td><td>Con tag (tagged)</td></tr>
+            <tr><td><strong>VLAN nativa</strong></td><td>Trafico sin tag en un trunk (por defecto VLAN 1)</td><td>Untagged en el trunk</td></tr>
+          </table></div>
+          <div class="info-box info-note">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>El tag 802.1Q:</strong> inserta 4 bytes en la trama Ethernet indicando la VLAN. Los dispositivos finales (PCs) no entienden tags: por eso los puertos hacia ellos son access (sin tag) y los trunks (entre switches) llevan los tags.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vl-config">
+        <div class="accordion-header" onclick="toggleAccordion('vl-config')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-sliders"></i></span><div><div class="accordion-title">Configuracion de VLAN en un switch</div><div class="accordion-subtitle">Comandos genericos (Cisco/OpenWrt/HP)</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li><strong>Crear las VLANs:</strong> <code>vlan 10</code> <code>name Ventas</code>; <code>vlan 20</code> <code>name RRHH</code>.</li>
+            <li><strong>Puertos access:</strong> <code>interface Fa0/1</code> <code>switchport mode access</code> <code>switchport access vlan 10</code>.</li>
+            <li><strong>Puerto trunk (hacia otro switch o router):</strong> <code>interface Gi0/24</code> <code>switchport mode trunk</code> <code>switchport trunk allowed vlan 10,20</code>.</li>
+            <li><strong>VLAN nativa (opcional, por seguridad):</strong> <code>switchport trunk native vlan 99</code>.</li>
+            <li>Verifica: <code>show vlan brief</code> y <code>show interfaces trunk</code>.</li>
+          </ol>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Al configurar un puerto trunk</strong> sobre el que estas conectado por SSH puedes perder acceso: configura primero un puerto de consola o asegura la VLAN de gestion. No cambies el trunk del enlace a tu PC de administracion sin plan previo.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vl-intervlan">
+        <div class="accordion-header" onclick="toggleAccordion('vl-intervlan')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-signpost-split"></i></span><div><div class="accordion-title">Inter-VLAN routing</div><div class="accordion-subtitle">Router on a stick · Router-on-a-stick y SVI</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li>Para que VLANs distintas se hablen necesitas un <strong>router</strong> (o un switch L3 con SVIs).</li>
+            <li><strong>Router-on-a-stick:</strong> un solo cable entre router y switch en trunk, con subinterfaces por VLAN: <code>int Gi0/0.10</code> <code>encapsulation dot1Q 10</code> <code>ip address 192.168.10.1 255.255.255.0</code>.</li>
+            <li><strong>Switch L3 (SVI):</strong> <code>interface vlan 10</code> <code>ip address 192.168.10.1 255.255.255.0</code> — enruta internamente a alta velocidad.</li>
+            <li>Cada VLAN es su propia subred IP (VLAN 10 → 192.168.10.0/24, VLAN 20 → 192.168.20.0/24).</li>
+            <li>El gateway de los hosts de cada VLAN es la IP de la interfaz del router de esa VLAN.</li>
+          </ul>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Regla de segmentacion:</strong> si no quieres que las VLANs se hablen entre si (ej. invitados ↔ red interna), simplemente NO crees el enrutamiento inter-VLAN, o anade ACLs que lo bloqueen. El aislamiento por defecto es la mayor ventaja de las VLANs.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vl-practica">
+        <div class="accordion-header" onclick="toggleAccordion('vl-practica')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-building"></i></span><div><div class="accordion-title">VLAN en la practica — segmentacion real</div><div class="accordion-subtitle">Diseno tipo para una oficina o casa avanzada</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>VLAN</th><th>Nombre</th><th>Subred</th><th>Que va</th></tr>
+            <tr><td>1</td><td>Gestion</td><td>192.168.1.0/24</td><td>Switches, router, equipos de administracion</td></tr>
+            <tr><td>10</td><td>Ventas</td><td>192.168.10.0/24</td><td>PCs y laptops de ventas</td></tr>
+            <tr><td>20</td><td>RRHH</td><td>192.168.20.0/24</td><td>PCs de RRHH</td></tr>
+            <tr><td>30</td><td>Impresoras</td><td>192.168.30.0/24</td><td>Impresoras de red compartidas</td></tr>
+            <tr><td>40</td><td>Invitados</td><td>192.168.40.0/24</td><td>Wi-Fi de visitas (solo internet)</td></tr>
+            <tr><td>50</td><td>IoT</td><td>192.168.50.0/24</td><td>Camaras, smart devices (sin acceso a otros segmentos)</td></tr>
+          </table></div>
+          <div class="info-box info-note">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Practica recomendada:</strong> mantennos siempre una VLAN "gestion" separada para los equipos de red, y pon impresoras/IoT en su propio segmento. Asi un dispositivo comprometido (ej. una camara IoT) no puede navegar por tu red de trabajo.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="vl-seguridad">
+        <div class="accordion-header" onclick="toggleAccordion('vl-seguridad')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-shield-lock"></i></span><div><div class="accordion-title">Seguridad en VLANs</div><div class="accordion-subtitle">Buenas practicas y trampas</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Cambia la VLAN nativa</strong> de 1 a otra sin uso (99) y limitala: evita el "VLAN hopping".</li>
+            <li><strong>Desactiva DTP</strong> (Dynamic Trunking Protocol) en puertos access: <code>switchport mode access</code> + <code>switchport nonegotiate</code>.</li>
+            <li><strong>Define bien el trunk allowed vlan</strong> y no dejes "vlan all".</li>
+            <li><strong>Pruning:</strong> no propagues VLANs donde no hay miembros.</li>
+            <li>Combina con <strong>Port Security</strong> y DHCP snooping (ver pagina Seguridad de Red) para una segmentacion solida.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

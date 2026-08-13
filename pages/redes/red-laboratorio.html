@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio de Practicas - Redes | TechGuide</title>
+  <meta name="description" content="Redes · Laboratorio con Packet Tracer. Instalacion, interfaz y practicas guiadas: 2 PCs, switch, router con subredes, VLAN/trunk, routing estatico y DHCP.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Laboratorio de Practicas - Redes | TechGuide">
+  <meta property="og:description" content="Redes · Laboratorio. Practica redes con Packet Tracer paso a paso.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-laptop"></i></div>
+      <h1><span class="hl">Redes</span> · Laboratorio de Practicas</h1>
+      <p>Aprende redes simulando redes reales con Cisco Packet Tracer, practica a practica.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip active' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Laboratorio de Practicas</span></nav>
+<div class="content-section" id="laboratorio" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-laptop"></i></div>
+        <div class="section-title">
+          <h2>Laboratorio de Practicas</h2>
+          <p>// La teoria se aprende simulando</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <i class="bi bi-info-circle"></i>
+        <div><strong>Herramienta:</strong> Cisco Packet Tracer es un simulador gratuito de redes con PCs, switches y routers que funcionan de verdad. Permite configurar con la CLI real de Cisco sin gastar un centavo en hardware.</div>
+      </div>
+
+      <div class="accordion open" id="lab-instalar">
+        <div class="accordion-header" onclick="toggleAccordion('lab-instalar')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-download"></i></span><div><div class="accordion-title">Instalacion y primeros pasos</div><div class="accordion-subtitle">Obtener e instalar Packet Tracer</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Descarga Packet Tracer desde <strong>NetAcad</strong> (netacad.com) — requiere cuenta gratuita, o usa la version para descarga directa segun tu curso.</li>
+            <li>Instala y abre; en la pestana <strong>Logical</strong> vas a construir la red arrastrando dispositivos.</li>
+            <li>Dispositivos clave en la barra inferior: <strong>End Devices</strong> (PC, laptop, servidor) y <strong>Network Devices</strong> (switch 2960, router 2911).</li>
+            <li>Para conectar: elige el <strong>cable de cobre directo</strong> (Copper Straight-Through) para PC↔switch y switch↔router (aunque PT permite auto-mdix).</li>
+            <li>Haz click en un PC → <strong>Desktop → IP Configuration</strong> para poner IP manual, o <strong>Command Prompt</strong> para usar ping/ipconfig.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p1">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p1')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-1-circle"></i></span><div><div class="accordion-title">Practica 1 — Dos PCs conectados directos</div><div class="accordion-subtitle">Lo mas basico: cable, IP y ping</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Arrastra 2 PCs al area de trabajo.</li>
+            <li>Conectalos con cable <strong>Copper Cross-Over</strong> (o Straight-Through, PT lo acepta) entre las tarjetas FastEthernet.</li>
+            <li>Configura IPs: PC0 → <code>192.168.1.1</code>/24; PC1 → <code>192.168.1.2</code>/24.</li>
+            <li>Abre Command Prompt en PC0 y ejecuta <code>ping 192.168.1.2</code>.</li>
+            <li>Debe responder. Cambia a modo <strong>Simulation</strong> y envia de nuevo el ping: veras los paquetes ICMP viajar como sobres entre capas.</li>
+          </ol>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Objetivo didactico:</strong> entender que sin IP en la misma subred no hay comunicacion, y ver el recorrido fisico de los paquetes en el modo simulacion (event list + animacion).</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p2">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p2')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-2-circle"></i></span><div><div class="accordion-title">Practica 2 — Conectados con un switch</div><div class="accordion-subtitle">El switch no necesita configuracion para esto</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Agrega un <strong>Switch 2960</strong> y 3 PCs.</li>
+            <li>Conecta cada PC al switch con cable directo.</li>
+            <li>Asigna IPs de la misma subred (192.168.1.x) a los 3 PCs.</li>
+            <li>Haz ping de un PC a otro y comprueba que responden (el switch aprende MACs solo).</li>
+            <li>Revisa la <strong>MAC address table</strong> del switch: CLI → <code>show mac address-table</code> y observa como cada puerto asocio una MAC.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p3">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p3')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-3-circle"></i></span><div><div class="accordion-title">Practica 3 — Router con dos subredes</div><div class="accordion-subtitle">Inter-VLAN / inter-subred routing</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Arma: PC A → Switch 1 → <strong>Router 2911</strong> → Switch 2 → PC B.</li>
+            <li>Configura en el router: <code>int Gig0/0</code> <code>ip address 192.168.10.1 255.255.255.0</code> <code>no shutdown</code>; <code>int Gig0/1</code> <code>ip address 192.168.20.1 255.255.255.0</code> <code>no shutdown</code>.</li>
+            <li>PC A: IP 192.168.10.10/24, gateway 192.168.10.1. PC B: IP 192.168.20.10/24, gateway 192.168.20.1.</li>
+            <li>Ping de PC A a PC B (192.168.20.10): debe funcionar GRACIAS al gateway.</li>
+            <li>Prueba sin gateway: quita la puerta de enlace y repite el ping → no responde. Ese es el concepto de routing.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p4">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p4')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-4-circle"></i></span><div><div class="accordion-title">Practica 4 — VLAN y trunk</div><div class="accordion-subtitle">Segmenta y conecta switches</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Dos switches, 4 PCs (2 por switch).</li>
+            <li>Crea VLANs: <code>vlan 10</code> <code>name Ventas</code>; <code>vlan 20</code> <code>name RRHH</code> (en ambos switches).</li>
+            <li>Puertos hacia PCs: <code>switchport mode access</code> + <code>switchport access vlan 10</code> (o 20).</li>
+            <li>Enlace entre switches: <code>switchport mode trunk</code> + <code>switchport trunk allowed vlan 10,20</code>.</li>
+            <li>Verifica: PCs de la misma VLAN se ven entre si (ping); PCs de VLAN distinta NO (sigue la practica 5 para comunicarlos).</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p5">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p5')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-5-circle"></i></span><div><div class="accordion-title">Practica 5 — Router-on-a-stick y DHCP</div><div class="accordion-subtitle">Comunica VLANs y reparte IPs</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Sobre la practica 4, conecta el router al switch con un solo cable (trunk en el puerto del switch).</li>
+            <li>Subinterfaces en el router: <code>int Gig0/0.10</code> <code>encapsulation dot1Q 10</code> <code>ip address 192.168.10.1 255.255.255.0</code>; repite con .20.</li>
+            <li>Configura DHCP por subinterfaz: <code>ip dhcp pool Ventas</code> <code>network 192.168.10.0 255.255.255.0</code> <code>default-router 192.168.10.1</code>; igual para RRHH.</li>
+            <li>En los PCs pon "IP Configuration → DHCP". Veras que reciben IP automatica del pool correspondiente.</li>
+            <li>Haz ping entre VLANs: PC Ventas → PC RRHH. Ahora si, porque el router enruta (permitido).</li>
+          </ol>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Regla:</strong> al final, reflexiona: "sin inter-VLAN routing las VLANs estan aisladas; al agregar el router, se comunican". Si quieres bloquear ese trafico, ver el tema de ACLs en la practica extra.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="lab-p6">
+        <div class="accordion-header" onclick="toggleAccordion('lab-p6')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-6-circle"></i></span><div><div class="accordion-title">Practica 6 — Routing estatico entre routers</div><div class="accordion-subtitle">Dos routers, rutas manuales</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Dos routers unidos por un enlace serial (o Gigabit). R1 a la subred A (192.168.1.0/24), R2 a la subred B (192.168.2.0/24).</li>
+            <li>Configura IPs en los enlaces entre routers (ej. 10.0.0.0/30: R1 .1, R2 .2).</li>
+            <li>Ruta estatica en R1 hacia B: <code>ip route 192.168.2.0 255.255.255.0 10.0.0.2</code>. En R2 hacia A: <code>ip route 192.168.1.0 255.255.255.0 10.0.0.1</code>.</li>
+            <li>Ping de un PC de la subred A a uno de la B: funciona solo con ambas rutas.</li>
+            <li>Borra una ruta y repite: veras "Destination host unreachable" — asi entiendes por que las rutas deben estar en ambos sentidos.</li>
+          </ol>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Extensiones del laboratorio:</strong> repeti las practicas con GNS3/EVE-NG (maquinas reales), agrega ACLs para bloquear trafico, configura OSPF en vez de rutas estaticas, y monta NAT para que una LAN salga a internet.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

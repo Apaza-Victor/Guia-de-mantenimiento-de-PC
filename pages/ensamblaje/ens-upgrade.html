@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrade de Componentes - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Upgrade de componentes. Como evaluar que actualizar primero, compatibilidad (socket, chipset, RAM, PSU), y como migrar RAM, almacenamiento, GPU, CPU y fuente sin romper nada.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Upgrade de Componentes - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Upgrade de componentes. Evalua, planifica y ejecuta la actualizacion de tu PC.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-arrow-up-circle"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Upgrade de Componentes</h1>
+      <p>Evalua que actualizar primero, verifica compatibilidad y reemplaza RAM, almacenamiento, GPU, CPU o fuente.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip active' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Upgrade</span></nav>
+<div class="content-section" id="upgrade" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-arrow-up-circle"></i></div>
+        <div class="section-title">
+          <h2>Upgrade de Componentes</h2>
+          <p>// Aprovecha tu PC actual antes de comprar uno nuevo</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <i class="bi bi-info-circle"></i>
+        <div><strong>Antes de gastar:</strong> en un PC con 8GB de RAM o un HDD como disco principal, el upgrade mas rentable suele ser RAM + SSD, no un CPU nuevo. Identifica el cuello de botella real monitorizando el uso con el Administrador de tareas o HWiNFO.</div>
+      </div>
+
+      <div class="accordion open" id="upg-evaluar">
+        <div class="accordion-header" onclick="toggleAccordion('upg-evaluar')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-clipboard-data"></i></span><div><div class="accordion-title">Evaluar que actualizar — diagnostica el cuello de botella</div><div class="accordion-subtitle">Observa antes de comprar</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Sintoma</th><th>Componente limitante</th><th>Upgrade recomendado</th></tr>
+            <tr><td>El PC es lento para abrir programas/archivos</td><td>Almacenamiento (HDD o SATA antiguo)</td><td>SSD NVMe o SATA como disco del sistema</td></tr>
+            <tr><td>Se queda corto con muchas pestanas y apps</td><td>RAM (poco) / sin XMP activado</td><td>Mas RAM (16→32GB) y activar XMP/EXPO</td></tr>
+            <tr><td>FPS bajos en juegos aun en 1080p</td><td>GPU</td><td>Tarjeta grafica de gama superior</td></tr>
+            <tr><td>FPS no suben aunque bajes resolucion</td><td>CPU (limitado por procesador)</td><td>CPU mas moderno o plataforma completa</td></tr>
+            <tr><td>Ruidos, apagones o reinicios aleatorios</td><td>PSU</td><td>Fuente de calidad con potencia de sobra</td></tr>
+            <tr><td>Se calienta y baja el rendimiento (throttling)</td><td>Refrigeracion / pasta termica</td><td>Limpiar, re-aplicar pasta, mejor cooler</td></tr>
+          </table></div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Como medirlo:</strong> en el Administrador de tareas → Rendimiento, mientras juegas o compilas. Si un recurso esta al 95-100% y el resto al 40%, ESE es el cuello de botella. En juegos, la GPU debe estar alta; si la CPU esta alta y la GPU baja, tienes limitacion de procesador.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-compatibilidad">
+        <div class="accordion-header" onclick="toggleAccordion('upg-compatibilidad')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-puzzle"></i></span><div><div class="accordion-title">Compatibilidad — la checklist antes de comprar</div><div class="accordion-subtitle">Socket · chipset · RAM · PSU · gabinete</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Nuevo componente</th><th>Que verificar</th></tr>
+            <tr><td>CPU</td><td>Mismo socket (AM4/AM5/LGA1700/1851) y soporte en la BIOS actual de tu placa</td></tr>
+            <tr><td>RAM</td><td>DDR4 o DDR5 (no son intercambiables), slots disponibles, velocidad soportada por placa</td></tr>
+            <tr><td>GPU</td><td>Largo del gabinete, alimentacion PCIe (8+8/12VHPWR), potencia de la PSU</td></tr>
+            <tr><td>NVMe</td><td>Slots M.2 disponibles y version (PCIe 3.0/4.0/5.0); o SATA si no hay M.2</td></tr>
+            <tr><td>PSU</td><td>Conectores necesarios (EPS, PCIe, 24-pin), factor ATX/SFX segun gabinete</td></tr>
+          </table></div>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Ojo con los generacionales:</strong> cada plataforma (Intel 12-14ª en LGA1700; AMD AM5) usa su propio socket y RAM. Un "upgrade de CPU" dentro del mismo socket es barato; saltar de plataforma implica placa + RAM nuevas tambien.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-ram">
+        <div class="accordion-header" onclick="toggleAccordion('upg-ram')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-memory"></i></span><div><div class="accordion-title">Upgrade de RAM</div><div class="accordion-subtitle">El cambio mas sencillo y barato</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Apaga el PC, desconecta la fuente y descarga la electricidad residual (manten 5-10s el boton de encendido).</li>
+            <li>Abre el clip lateral del slot y retira el modulo antiguo con suavidad en diagonal.</li>
+            <li>Instala el nuevo modulo alineando la muesca; presiona hasta que los clips hagan "click".</li>
+            <li>Mantener 2 modulos en <strong>canal dual</strong>: usa los slots 2 y 4 (A2/B2) en placas de 4 slots.</li>
+            <li>Enciende y activa el perfil XMP/EXPO en BIOS para que la RAM corra a su velocidad nominal.</li>
+          </ol>
+          <div class="info-box info-note">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Mezclar modulos:</strong> funciona pero siempre corren a la velocidad del mas lento y con timings conservadores. Lo ideal es comprar un kit de 2 (o 4) modulos identicos en el mismo pack.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-almacenamiento">
+        <div class="accordion-header" onclick="toggleAccordion('upg-almacenamiento')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd"></i></span><div><div class="accordion-title">Upgrade de almacenamiento (SSD/NVMe)</div><div class="accordion-subtitle">El cambio que mas se nota en el dia a dia</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Nuevo disco de sistema:</strong> instala un NVMe M.2, clona tu instalacion con Macrium Reflect o Clonezilla, y cambia el arranque a BIOS (o instala Windows limpio si prefieres).</li>
+            <li><strong>Verifica el slot M.2:</strong> PCIe 4.0 NVMe en un slot 3.0 funciona pero a menor velocidad. Revisa manual de la placa para saber si comparte lineas con SATA o PCIe.</li>
+            <li><strong>Deja el HDD como almacenamiento secundario</strong> para datos frios (fotos, backups).</li>
+            <li><strong>Presupuesto:</strong> 512GB minimo para sistema + apps; 1TB+ si juegas o editas video.</li>
+          </ul>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Clona solo hacia disco IGUAL o MAYOR</strong> en capacidad. Antes de clonar, respalda lo importante y verifica 2 veces que seleccionaste la unidad de origen correcta.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-gpu">
+        <div class="accordion-header" onclick="toggleAccordion('upg-gpu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-gpu-card"></i></span><div><div class="accordion-title">Upgrade de GPU</div><div class="accordion-subtitle">El cambio estrella para juegos</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Desinstala los drivers de la GPU vieja con DDU (Display Driver Uninstaller) en modo seguro.</li>
+            <li>Desconecta los cables PCIe de la tarjeta y libera el seguro del slot x16; retira la tarjeta.</li>
+            <li>Inserta la nueva en el slot x16 hasta el click y conecta su alimentacion (8 pin/8+8/12VHPWR segun modelo).</li>
+            <li>Instala el driver actualizado de NVIDIA/AMD/Intel.</li>
+            <li>Verifica: la PSU tiene la potencia suficiente y los conectores correctos.</li>
+          </ol>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Consumo:</strong> consulta el consumo TDP de la GPU nueva + el del resto del equipo y elige fuente con +150W de margen. Una GPU gama alta puede exigir 750-850W.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-cpu">
+        <div class="accordion-header" onclick="toggleAccordion('upg-cpu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Upgrade de CPU</div><div class="accordion-subtitle">Dentro del mismo socket, primero actualiza BIOS</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ol class="steps">
+            <li>Actualiza la BIOS de la placa ANTES de cambiar el CPU (muchas placas no reconocen procesadores nuevos sin el update).</li>
+            <li>Desmonta el cooler, libera el brazo del socket y retira el CPU sujetandolo por los bordes (nunca los pines).</li>
+            <li>Coloca el nuevo alineando las marcas (triangulo dorado / muesca) y baja el brazo sin forzar.</li>
+            <li>Re-aplica pasta termica fresca y reinstala el cooler.</li>
+            <li>Al arrancar, entra a BIOS y verifica que detecte el modelo correcto y la configuracion de RAM.</li>
+          </ol>
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Cuidado extremo con los pines:</strong> en sockets LGA los pines estan en la placa; en PGA (AM4) en el CPU. Un solo pin doblado puede dejar el equipo sin video. Ve despacio y sin fuerza.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-psu">
+        <div class="accordion-header" onclick="toggleAccordion('upg-psu')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-plug"></i></span><div><div class="accordion-title">Upgrade de PSU</div><div class="accordion-subtitle">Cambia la fuente cuando la exigencia sube</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Momentos de cambiar:</strong> GPU mas potente, ruidos/olores, reinicios aleatorios, o fuente de marca dudosa de mas de 5-7 años.</li>
+            <li><strong>Potencia estimada:</strong> suma TDP CPU + GPU + 100-150W (resto), redondea al modelo comercial superior.</li>
+            <li><strong>Modularidad:</strong> una fuente modular facilita mucho el cable management (solo conectas los cables que usas).</li>
+            <li><strong>Certificacion:</strong> 80 PLUS Bronze o superior en equipos de juego; Gold+ si el equipo esta mucho en carga.</li>
+            <li><strong>Conectores nuevos:</strong> las GPU modernas usan 12VHPWR/12V-2x6 (con adaptadores incluidos); verifica que la fuente los tenga o uses el adaptador correcto.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion" id="upg-no-vale">
+        <div class="accordion-header" onclick="toggleAccordion('upg-no-vale')">
+          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-x-circle"></i></span><div><div class="accordion-title">Que NO vale la pena actualizar</div><div class="accordion-subtitle">Cuando conviene armar de cero</div></div></div>
+          <span class="accordion-chevron">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Situacion</th><th>Por que</th><th>Alternativa</th></tr>
+            <tr><td>Plataforma muy antigua (DDR3, socket descontinuado)</td><td>Los componentes compatibles son caros y sin futuro</td><td>Armar PC nuevo con AM5/LGA1700/1851</td></tr>
+            <tr><td>Comprar "mas RAM" de una generacion muerta</td><td>Pagas sobreprecio por tecnologia vieja</td><td>Salto de plataforma con DDR5</td></tr>
+            <tr><td>GPU gama baja "para aliviar" el CPU</td><td>Sigue habiendo cuello de botella</td><td>Balancear GPU + CPU acorde al presupuesto</td></tr>
+            <tr><td>Fuente generica en equipo gamer</td><td>Riesgo de danar todo el equipo</td><td>Cambiar PSU primero, siempre</td></tr>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>
