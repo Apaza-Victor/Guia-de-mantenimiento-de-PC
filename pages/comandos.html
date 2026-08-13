@@ -300,7 +300,143 @@
           <tr><td>powercfg /h on</td><td>Habilitar hibernación</td><td>powercfg /h on</td></tr>
           <tr><td>net localgroup Administradores</td><td>Ver miembros del grupo Administradores</td><td>net localgroup Administradores</td></tr>
           <tr><td>netsh wlan show profiles</td><td>Listar redes WiFi guardadas</td><td>netsh wlan show profile "Red" key=clear</td></tr>
+          <tr><td>dir</td><td>Listar archivos y carpetas del directorio</td><td>dir /a (incluye ocultos)</td></tr>
+          <tr><td>cd</td><td>Cambiar de directorio</td><td>cd .. · cd %USERPROFILE%</td></tr>
+          <tr><td>cls</td><td>Limpiar la pantalla de la consola</td><td>cls</td></tr>
+          <tr><td>mkdir / md</td><td>Crear una carpeta nueva</td><td>mkdir "C:\Respaldo"</td></tr>
+          <tr><td>copy / xcopy</td><td>Copiar archivos y carpetas</td><td>xcopy src dst /E /I</td></tr>
+          <tr><td>move</td><td>Mover o renombrar archivos</td><td>move file.txt "C:\Respaldo"</td></tr>
+          <tr><td>del / rmdir</td><td>Borrar archivos o carpetas</td><td>rmdir /s /q "C:\Temp\old"</td></tr>
+          <tr><td>ren / rename</td><td>Renombrar un archivo o carpeta</td><td>ren "texto v1.txt" texto.txt</td></tr>
+          <tr><td>type</td><td>Ver el contenido de un archivo de texto</td><td>type archivo.txt</td></tr>
+          <tr><td>more</td><td>Ver texto página a página</td><td>type archivo.txt | more</td></tr>
+          <tr><td>findstr</td><td>Buscar texto dentro de archivos o de la salida</td><td>findstr /i "error" *.log</td></tr>
+          <tr><td>fc</td><td>Comparar dos archivos</td><td>fc /b a.bin b.bin</td></tr>
+          <tr><td>tree</td><td>Mostrar el árbol de carpetas</td><td>tree C:\Users /f</td></tr>
+          <tr><td>where</td><td>Localizar la ruta completa de un ejecutable</td><td>where notepad</td></tr>
+          <tr><td>attrib</td><td>Ver o cambiar atributos (oculto, sistema)</td><td>attrib -h -s archivo</td></tr>
+          <tr><td>clip</td><td>Copiar la salida de un comando al portapapeles</td><td>ipconfig | clip</td></tr>
+          <tr><td>ver</td><td>Versión de Windows instalada</td><td>ver</td></tr>
+          <tr><td>whoami</td><td>Usuario y dominio de la sesión actual</td><td>whoami /all</td></tr>
+          <tr><td>hostname</td><td>Nombre del equipo</td><td>hostname</td></tr>
+          <tr><td>schtasks</td><td>Ver y programar tareas</td><td>schtasks /query /fo LIST</td></tr>
+          <tr><td>gpresult</td><td>Directivas de grupo aplicadas al equipo/usuario</td><td>gpresult /r</td></tr>
+          <tr><td>query user</td><td>Usuarios con sesión iniciada en el equipo</td><td>query user</td></tr>
+          <tr><td>msinfo32</td><td>Información completa del sistema (GUI)</td><td>msinfo32</td></tr>
+          <tr><td>perfmon / resmon</td><td>Monitor de rendimiento / recursos</td><td>resmon</td></tr>
+          <tr><td>certutil</td><td>Certificados y hash de archivos (integridad)</td><td>certutil -hashfile iso SHA256</td></tr>
+          <tr><td>timeout</td><td>Pausar la ejecución de un script</td><td>timeout /t 10</td></tr>
         </table></div>
+      </div>
+    </div>
+
+    <div class="accordion" id="abrir-programas">
+      <div class="accordion-header" onclick="toggleAccordion('abrir-programas')">
+        <div class="accordion-title-row"><span class="accordion-icon">🚀</span><div><div class="accordion-title">Abrir Programas desde CMD y Run (start)</div><div class="accordion-subtitle">Word · Excel · navegadores · herramientas del sistema</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p>El comando <strong>start</strong> lanza un programa en una ventana separada sin bloquear la consola. Estos mismos nombres se pueden escribir directamente en el cuadro <strong>Win+R (Ejecutar)</strong> sin necesidad de usar <code>start</code>.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Programa / herramienta que abre</th></tr>
+          <tr><td>start winword</td><td>Microsoft Word</td></tr>
+          <tr><td>start excel</td><td>Microsoft Excel</td></tr>
+          <tr><td>start powerpnt</td><td>Microsoft PowerPoint</td></tr>
+          <tr><td>start outlook</td><td>Microsoft Outlook</td></tr>
+          <tr><td>start onenote</td><td>Microsoft OneNote</td></tr>
+          <tr><td>start msedge</td><td>Microsoft Edge</td></tr>
+          <tr><td>start chrome</td><td>Google Chrome</td></tr>
+          <tr><td>start firefox</td><td>Mozilla Firefox</td></tr>
+          <tr><td>start notepad</td><td>Bloc de notas</td></tr>
+          <tr><td>start mspaint</td><td>Paint</td></tr>
+          <tr><td>start calc</td><td>Calculadora</td></tr>
+          <tr><td>start cmd</td><td>Nueva ventana de CMD</td></tr>
+          <tr><td>start powershell</td><td>PowerShell</td></tr>
+          <tr><td>start wt</td><td>Windows Terminal</td></tr>
+          <tr><td>start taskmgr</td><td>Administrador de tareas</td></tr>
+          <tr><td>start explorer</td><td>Explorador de archivos</td></tr>
+          <tr><td>start winver</td><td>Versión de Windows instalada</td></tr>
+          <tr><td>start devmgmt.msc</td><td>Administrador de dispositivos</td></tr>
+          <tr><td>start diskmgmt.msc</td><td>Administración de discos</td></tr>
+          <tr><td>start appwiz.cpl</td><td>Programas y características (desinstalar)</td></tr>
+          <tr><td>start control</td><td>Panel de control</td></tr>
+          <tr><td>start control /name Microsoft.Update</td><td>Windows Update</td></tr>
+        </table></div>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">cmd &#183; ejemplos de uso de start</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Abrir Word, Excel o PowerPoint</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">winword</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">excel</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">powerpnt</span>
+
+<span class="cmd-comment"># Si el programa no está en el PATH, usar la ruta completa</span>
+<span class="cmd-comment"># (las comillas vacías "" son el título de la ventana, evita errores)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">""</span> <span class="cmd-value">"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE"</span>
+
+<span class="cmd-comment"># Abrir una carpeta en el Explorador de archivos</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">"C:\Users\Public\Documentos"</span>
+
+<span class="cmd-comment"># Abrir una URL en el navegador por defecto</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">https://www.example.com</span>
+
+<span class="cmd-comment"># Abrir una aplicación de Microsoft Store</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">start</span> <span class="cmd-value">ms-windows-store://home</span></pre>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>Atajo de oro:</strong> pulsa <b>Win+R</b> y escribe el nombre del programa (ej. <code>winword</code>, <code>calc</code>, <code>devmgmt.msc</code>) sin el <code>start</code>; se abre al instante. Es el metodo más rápido para lanzar herramientas del sistema como <code>msconfig</code>, <code>control</code> o <code>compmgmt.msc</code>.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="programas-instalados">
+      <div class="accordion-header" onclick="toggleAccordion('programas-instalados')">
+        <div class="accordion-title-row"><span class="accordion-icon">🗂️</span><div><div class="accordion-title">Ver todos los Programas Instalados</div><div class="accordion-subtitle">Inventario de software · búsqueda · exportación</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p>Para conocer qué software tiene una PC (ideal antes de un formateo o en un diagnóstico), consulta el registro de desinstalación o usa <strong>wmic</strong> en CMD y <strong>Get-ItemProperty</strong> en PowerShell.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">cmd &#183; listar programas instalados</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Listar todos los programas con nombre y versión (puede tardar)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic</span> <span class="cmd-value">product get name,version</span>
+
+<span class="cmd-comment"># Buscar un programa por nombre</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic</span> <span class="cmd-value">product where</span> <span class="cmd-value">"name like '%chrome%'"</span> <span class="cmd-keyword">get</span> <span class="cmd-value">name,version</span>
+
+<span class="cmd-comment"># Exportar el inventario a un archivo de texto</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic</span> <span class="cmd-value">product get name,version,installdate</span> <span class="cmd-keyword">&gt;</span> <span class="cmd-value">programas.txt</span>
+
+<span class="cmd-comment"># Alternativa rápida: leer las claves del registro de desinstalación</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">reg query</span> <span class="cmd-value">"HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall"</span> <span class="cmd-keyword">/s</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">findstr</span> <span class="cmd-flag">/i</span> <span class="cmd-value">"DisplayName"</span></pre>
+        </div>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">powershell &#183; listar programas con el registro</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Listar programas instalados (64 bits) ordenados por nombre</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ItemProperty</span> <span class="cmd-value">"HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*"</span> <span class="cmd-keyword">|</span>
+    <span class="cmd-keyword">Where-Object</span> <span class="cmd-value">$_</span>.<span class="cmd-keyword">DisplayName</span> <span class="cmd-keyword">|</span>
+    <span class="cmd-keyword">Select-Object</span> <span class="cmd-value">DisplayName, DisplayVersion, Publisher</span> <span class="cmd-keyword">|</span>
+    <span class="cmd-keyword">Sort-Object</span> <span class="cmd-value">DisplayName</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Format-Table</span> <span class="cmd-flag">-AutoSize</span>
+
+<span class="cmd-comment"># Incluir programas de 32 bits (Wow6432Node) y del usuario actual (HKCU)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ItemProperty</span> <span class="cmd-value">"HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"</span>,
+    <span class="cmd-value">"HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*"</span> <span class="cmd-keyword">|</span>
+    <span class="cmd-keyword">Where-Object</span> <span class="cmd-value">$_</span>.<span class="cmd-keyword">DisplayName</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select-Object</span> <span class="cmd-value">DisplayName, DisplayVersion</span>
+
+<span class="cmd-comment"># Buscar un programa específico</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ItemProperty</span> <span class="cmd-value">"HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*"</span> <span class="cmd-keyword">|</span>
+    <span class="cmd-keyword">Where-Object</span> <span class="cmd-value">$_</span>.<span class="cmd-keyword">DisplayName</span> <span class="cmd-keyword">-like</span> <span class="cmd-value">"*chrome*"</span>
+
+<span class="cmd-comment"># Aplicaciones de Microsoft Store</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-AppxPackage</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select-Object</span> <span class="cmd-value">Name, Version</span>
+
+<span class="cmd-comment"># Alternativa con PackageManagement (Get-Package)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-Package</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Where-Object</span> <span class="cmd-value">ProviderName</span> <span class="cmd-keyword">-eq</span> <span class="cmd-value">"Programs"</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select-Object</span> <span class="cmd-value">Name, Version</span></pre>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">⚠️</span>
+          <div class="content"><strong>wmic está obsoleto:</strong> Microsoft lo retiró de Windows 11 24H2. Si <code>wmic</code> no existe en el equipo, usa las alternativas de <b>PowerShell</b>. Las claves <code>HKCU\...</code> solo listan programas instalados por el usuario actual; algunas apps (ej. UWP/Store) no aparecen en estas claves.</div>
+        </div>
       </div>
     </div>
 

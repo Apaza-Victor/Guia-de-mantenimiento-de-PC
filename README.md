@@ -14,7 +14,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 |---|---|
 | Páginas HTML | 46 |
 | Secciones de contenido | 68 |
-| Acordeones expandibles | 103 |
+| Acordeones expandibles | 105 |
 | Términos de glosario | 84 |
 | Recursos web curados | 140+ |
 | Modelos 3D interactivos | Sí (ensamblaje y kit del técnico) |
