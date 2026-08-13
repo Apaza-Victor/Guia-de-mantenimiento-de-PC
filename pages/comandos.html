@@ -238,6 +238,54 @@
       </div>
     </div>
 
+    <div class="accordion" id="atajos-youtube">
+      <div class="accordion-header" onclick="toggleAccordion('atajos-youtube')">
+        <div class="accordion-title-row"><span class="accordion-icon">▶️</span><div><div class="accordion-title">Atajos de YouTube — reproductor web</div><div class="accordion-subtitle">Reproducción · volumen · pantalla · subtítulos</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p class="subhead">// REPRODUCCIÓN</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Reproducir / pausar</span><div class="shortcut-keys"><kbd>Espacio</kbd><span class="key-sep">o</span><kbd>K</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Adelantar 10 segundos</span><div class="shortcut-keys"><kbd>L</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Retroceder 10 segundos</span><div class="shortcut-keys"><kbd>J</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Adelantar 5 segundos</span><div class="shortcut-keys"><kbd>→</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Retroceder 5 segundos</span><div class="shortcut-keys"><kbd>←</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Ir al inicio / final del video</span><div class="shortcut-keys"><kbd>Home</kbd><span class="key-sep">/</span><kbd>Fin</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Saltar a un porcentaje (0=inicio, 9=90%)</span><div class="shortcut-keys"><kbd>0</kbd><span class="key-sep">-</span><kbd>9</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Buscar en el video</span><div class="shortcut-keys"><kbd>/</kbd></div></div>
+        </div>
+        <p class="subhead">// FOTOGRAMAS (avanzado)</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Pausar y retroceder un fotograma</span><div class="shortcut-keys"><kbd>,</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Pausar y avanzar un fotograma</span><div class="shortcut-keys"><kbd>.</kbd></div></div>
+        </div>
+        <p class="subhead">// VOLUMEN</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Subir volumen</span><div class="shortcut-keys"><kbd>↑</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Bajar volumen</span><div class="shortcut-keys"><kbd>↓</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Silenciar</span><div class="shortcut-keys"><kbd>M</kbd></div></div>
+        </div>
+        <p class="subhead">// PANTALLA Y VISUALIZACIÓN</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Pantalla completa</span><div class="shortcut-keys"><kbd>F</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Modo teatro</span><div class="shortcut-keys"><kbd>T</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Mini reproductor</span><div class="shortcut-keys"><kbd>I</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Salir de pantalla completa</span><div class="shortcut-keys"><kbd>Esc</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Activar / desactivar subtítulos</span><div class="shortcut-keys"><kbd>C</kbd></div></div>
+        </div>
+        <p class="subhead">// NAVEGACIÓN ENTRE VIDEOS</p>
+        <div class="shortcut-grid">
+          <div class="shortcut-item"><span class="shortcut-desc">Siguiente video</span><div class="shortcut-keys"><kbd>N</kbd></div></div>
+          <div class="shortcut-item"><span class="shortcut-desc">Video anterior</span><div class="shortcut-keys"><kbd>P</kbd></div></div>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>El truco del técnico:</strong> usa <b>K</b> para pausar sin mover el mouse, <b>J/L</b> para saltar explicaciones o anuncios de 10 segundos y <b>F</b> para pantalla completa. Con el video pausado, <b>,</b> y <b>.</b> te dejan verlo fotograma a fotograma. Estos atajos funcionan cuando el reproductor tiene el foco (no mientras escribes en un buscador o comentario).</div>
+        </div>
+      </div>
+    </div>
+
     <div class="accordion" id="atajos-office">
       <div class="accordion-header" onclick="toggleAccordion('atajos-office')">
         <div class="accordion-title-row"><span class="accordion-icon">📄</span><div><div class="accordion-title">Atajos de Productividad — Office / LibreOffice</div><div class="accordion-subtitle">Atajos universales · Word · Excel · PowerPoint</div></div></div>
@@ -436,6 +484,61 @@
         <div class="info-box info-tip mt-2">
           <span class="icon">⚠️</span>
           <div class="content"><strong>wmic está obsoleto:</strong> Microsoft lo retiró de Windows 11 24H2. Si <code>wmic</code> no existe en el equipo, usa las alternativas de <b>PowerShell</b>. Las claves <code>HKCU\...</code> solo listan programas instalados por el usuario actual; algunas apps (ej. UWP/Store) no aparecen en estas claves.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="caracteristicas-equipo">
+      <div class="accordion-header" onclick="toggleAccordion('caracteristicas-equipo')">
+        <div class="accordion-title-row"><span class="accordion-icon">🔍</span><div><div class="accordion-title">Revisar las Características de un Equipo (PC / Laptop)</div><div class="accordion-subtitle">CPU · RAM · GPU · placa · discos · batería · marca y modelo</div></div></div>
+        <span class="accordion-chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p>Antes de instalar un programa, vender una PC o pedir soporte técnico conviene conocer el hardware exacto. Estos comandos funcionan en cualquier equipo con Windows; los de PowerShell también en laptops.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Comando</th><th>Qué muestra</th><th>Ejemplo útil</th></tr>
+          <tr><td>systeminfo</td><td>Resumen completo: OS, fabricante, RAM, CPU, red</td><td>systeminfo | findstr /C:"RAM"</td></tr>
+          <tr><td>msinfo32</td><td>Información del sistema en GUI (exportable .nfo)</td><td>msinfo32 → Archivo / Exportar</td></tr>
+          <tr><td>dxdiag</td><td>GPU, VRAM, drivers, audio y versión de DirectX</td><td>dxdiag /t dx.txt</td></tr>
+          <tr><td>winver</td><td>Edición y versión exacta de Windows</td><td>winver</td></tr>
+          <tr><td>wmic cpu get Name,NumberOfCores,MaxClockSpeed</td><td>CPU (obsoleto — prefiere PowerShell)</td><td>wmic cpu get Name</td></tr>
+          <tr><td>Get-CimInstance Win32_ComputerSystem</td><td>Marca y modelo de la PC o laptop + RAM total</td><td>| Select Manufacturer,Model,TotalPhysicalMemory</td></tr>
+          <tr><td>Get-CimInstance Win32_Processor</td><td>CPU moderna: nombre, núcleos, hilos, velocidad</td><td>| Select Name,NumberOfCores,NumberOfLogicalProcessors,MaxClockSpeed</td></tr>
+          <tr><td>Get-CimInstance Win32_VideoController</td><td>GPU, VRAM aproximada y versión de driver</td><td>| Select Name,AdapterRAM,DriverVersion</td></tr>
+          <tr><td>Get-CimInstance Win32_PhysicalMemory</td><td>Cada módulo de RAM: capacidad y velocidad</td><td>| Select DeviceLocator,Capacity,Speed</td></tr>
+          <tr><td>Get-CimInstance Win32_BaseBoard</td><td>Fabricante y modelo de la placa base</td><td>| Select Manufacturer,Product,SerialNumber</td></tr>
+          <tr><td>Get-CimInstance Win32_BIOS</td><td>Versión de BIOS/UEFI y número de serie</td><td>| Select Manufacturer,SMBIOSBIOSVersion,SerialNumber</td></tr>
+          <tr><td>Get-PhysicalDisk</td><td>Discos: tipo (HDD/SSD/NVMe), tamaño y salud</td><td>| Select FriendlyName,MediaType,Size,HealthStatus</td></tr>
+          <tr><td>Get-NetAdapter</td><td>Tarjetas de red (Wi-Fi / Ethernet)</td><td>| Select Name,InterfaceDescription,LinkSpeed</td></tr>
+          <tr><td>powercfg /batteryreport</td><td>Salud y ciclos de la batería (solo laptops)</td><td>powercfg /batteryreport → abre HTML</td></tr>
+          <tr><td>powercfg /systempowerreport</td><td>Informe completo de energía y consumo</td><td>powercfg /systempowerreport</td></tr>
+        </table></div>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">powershell · ficha técnica completa del equipo</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># Ficha técnica en un solo bloque (Windows 10/11)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-ComputerInfo</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select-Object</span> <span class="cmd-value">OsName, OsVersion, CsManufacturer, CsModel, CsProcessors, CsTotalPhysicalMemory</span>
+
+<span class="cmd-comment"># Hardware componente por componente</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_ComputerSystem</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Manufacturer, Model, TotalPhysicalMemory</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_Processor</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_VideoController</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Name, AdapterRAM, DriverVersion</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_PhysicalMemory</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">DeviceLocator, Capacity, Speed</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_BaseBoard</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Manufacturer, Product, SerialNumber</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-value">Win32_BIOS</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Manufacturer, SMBIOSBIOSVersion, SerialNumber</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-PhysicalDisk</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">FriendlyName, MediaType, Size, HealthStatus</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-NetAdapter</span> <span class="cmd-keyword">|</span> <span class="cmd-keyword">Select</span> <span class="cmd-value">Name, InterfaceDescription, LinkSpeed</span>
+
+<span class="cmd-comment"># Laptop: informe de la batería (abre un HTML en el navegador)</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">powercfg</span> <span class="cmd-flag">/batteryreport</span>
+<span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">powercfg</span> <span class="cmd-flag">/systempowerreport</span></pre>
+        </div>
+        <div class="info-box info-tip mt-2">
+          <span class="icon">💡</span>
+          <div class="content"><strong>Atajo de oro:</strong> pulsa <b>Win+R</b> y escribe <code>msinfo32</code>, <code>dxdiag</code> o <code>winver</code> para la ficha técnica al instante. Para el modelo exacto de una laptop (útil para buscar drivers), mira <b>Configuración &gt; Sistema &gt; Acerca de</b>.</div>
+        </div>
+        <div class="info-box info-warn mt-2">
+          <span class="icon">⚠️</span>
+          <div class="content"><strong>wmic está obsoleto:</strong> en Windows 11 24H2 y versiones nuevas ya no existe. Usa los cmdlets <b>Get-CimInstance</b> o <b>Get-ComputerInfo</b> de PowerShell, que son su reemplazo oficial.</div>
         </div>
       </div>
     </div>

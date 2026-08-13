@@ -224,6 +224,312 @@
           </div>
         </div>
       </div>
+
+      <!-- BALENA ETCHER -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-sd-card"></i></span>
+          <span class="accordion-title">Metodo 3: Balena Etcher (Windows / macOS / Linux)</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">Balena Etcher es la herramienta multiplataforma mas sencilla para grabar ISOs. Ideal para Linux, Raspberry Pi (Raspberry Pi OS) y sistemas tipo "live". No es multiboot: un USB = una imagen.</p>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Descargar desde etcher.balena.io</div>
+                <div class="step-desc">Elegir el instalador segun tu sistema (Windows, macOS o Linux). Tiene version portable que no requiere instalacion.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Seleccionar la imagen</div>
+                <div class="step-desc">Click "Flash from file" y elegir la ISO descargada. Etcher tambien graba imagenes .img y .gz.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Seleccionar el USB destino</div>
+                <div class="step-desc">Elegir "Select target" y marcar el pendrive correcto. Etcher evita por defecto elegir el disco del sistema.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 4</div>
+                <div class="step-title">Flash y verificacion</div>
+                <div class="step-desc">Click "Flash!". Etcher escribe la imagen y luego la verifica automaticamente para detectar errores de grabado.</div>
+              </div>
+            </div>
+            <div class="info-box info-tip" style="margin-top:1rem;">
+              <i class="bi bi-lightbulb"></i>
+              <div><strong>Cuando usar Etcher:</strong>es la opcion mas facil para grabar distribuciones Linux o sistemas embebidos. Para Windows y USBs multiboot, prefiere Rufus o Ventoy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDIA CREATION TOOL -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-windows"></i></span>
+          <span class="accordion-title">Metodo 4: Media Creation Tool (Windows 10/11 oficial)</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">Herramienta oficial de Microsoft para crear el USB de instalacion de Windows o descargar la ISO original. Garantiza un instalador 100% limpio y actualizado, sin recurrir a terceros.</p>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Descargar desde microsoft.com</div>
+                <div class="step-desc">En la pagina oficial de descarga de Windows 11 (o Windows 10), seccion "Crear medios de instalacion de Windows". Ejecutar como administrador.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Aceptar licencia y elegir idioma</div>
+                <div class="step-desc">Aceptar los terminos. Desmarcar "Usar las opciones recomendadas" si quieres elegir otro idioma, edicion o arquitectura (x64).</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Elegir "Unidad flash USB"</div>
+                <div class="step-desc">Seleccionar "Crear medios de instalacion" y despues "Unidad flash USB". Elegir el pendrive (minimo 8 GB).</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 4</div>
+                <div class="step-title">Esperar la descarga</div>
+                <div class="step-desc">La herramienta descarga Windows e instala todo en el USB. Puede tardar 30-60 minutos segun la conexion.</div>
+              </div>
+            </div>
+            <div class="info-box info-tip" style="margin-top:1rem;">
+              <i class="bi bi-lightbulb"></i>
+              <div><strong>Alternativa:</strong>en la misma pagina, la opcion "Descargar la imagen de disco ISO de Windows" te da la ISO oficial para usarla luego con Rufus o Ventoy (util si quieres varios instaladores en un USB multiboot).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNETBOOTIN -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-usb-drive"></i></span>
+          <span class="accordion-title">Metodo 5: UNetbootin (Linux / Windows / macOS)</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">UNetbootin crea USBs booteables desde una ISO o descargando la distribucion Linux directamente desde la aplicacion. Multiplataforma y util cuando trabajas desde Linux y no tienes Rufus.</p>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Descargar desde unetbootin.github.io</div>
+                <div class="step-desc">Elegir la version para tu sistema. En Linux tambien se instala con <code style="font-family:var(--font-mono);color:var(--accent);">sudo apt install unetbootin</code>.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Elegir "Imagen de disco" y el USB</div>
+                <div class="step-desc">Marcar "Imagen de disco" y seleccionar la ISO. Abajo, elegir el USB como "Tipo" y "Unidad" correctas.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Instalar / extraer</div>
+                <div class="step-desc">Click OK. UNetbootin copia los archivos de arranque y la ISO. Cuando termine, retira el USB de forma segura.</div>
+              </div>
+            </div>
+            <div class="info-box info-note" style="margin-top:1rem;">
+              <i class="bi bi-info-circle"></i>
+              <div><strong>Nota:</strong>en algunas distros nuevas UNetbootin puede fallar con UEFI. Si el USB no arranca, prueba con Rufus (en Windows), Etcher o Ventoy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DD LINUX / MACOS -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-terminal"></i></span>
+          <span class="accordion-title">Metodo 6: dd — crear USB desde Linux / macOS</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">dd escribe la ISO byte a byte directo al USB usando solo la terminal. No requiere instalar nada, pero es PELIGROSO: si eliges el disco equivocado lo borras sin confirmacion.</p>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Identificar el USB</div>
+                <div class="step-desc">Ejecuta <code style="font-family:var(--font-mono);color:var(--accent);">lsblk</code> en Linux o <code style="font-family:var(--font-mono);color:var(--accent);">diskutil list</code> en macOS. Anota el dispositivo (ej. /dev/sdb) y su tamano para no confundirlo.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Desmontar el USB</div>
+                <div class="step-desc">Linux: <code style="font-family:var(--font-mono);color:var(--accent);">sudo umount /dev/sdb1</code>. macOS: <code style="font-family:var(--font-mono);color:var(--accent);">diskutil unmountDisk /dev/disk2</code>.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Escribir la imagen</div>
+                <div class="step-desc">Linux: <code style="font-family:var(--font-mono);color:var(--accent);">sudo dd if=imagen.iso of=/dev/sdb bs=4M status=progress oflag=sync</code>. macOS: usa <code style="font-family:var(--font-mono);color:var(--accent);">bs=1m</code> y <code style="font-family:var(--font-mono);color:var(--accent);">/dev/rdisk2</code> (mas rapido).</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 4</div>
+                <div class="step-title">Sincronizar y retirar</div>
+                <div class="step-desc">Ejecuta <code style="font-family:var(--font-mono);color:var(--accent);">sync</code> y espera a que termine de escribir antes de sacar el USB.</div>
+              </div>
+            </div>
+            <div class="alert-box alert-danger" style="margin-top:1rem;">
+              <i class="bi bi-exclamation-octagon"></i>
+              <div><strong>Cuidado extremo:</strong>dd no pide confirmacion y sobrescribe el destino completo. Verifica dos veces que /dev/sdX sea realmente el USB. Un solo error borra el disco del sistema.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YUMI -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-collection"></i></span>
+          <span class="accordion-title">Metodo 7: YUMI — multiboot con menu (Windows / Linux)</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">YUMI (Your Universal Multiboot Installer) crea un USB con menu propio al que vas agregando ISOs una por una. Es el clasico multiboot de Pendrive Linux y sigue activo con versiones para Windows y Linux (YUMI Py).</p>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Descargar YUMI desde pendrivelinux.com</div>
+                <div class="step-desc">La version recomendada es YUMI Py (multiplataforma, formato exFAT). Ejecutar como administrador.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Crear el USB multiboot</div>
+                <div class="step-desc">Seleccionar el USB, marcar la opcion de formateo y click "Create". YUMI prepara el pendrive con su propio bootloader.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Agregar ISOs una por una</div>
+                <div class="step-desc">Elegir la distribucion o "Other ISOs" y seleccionar el archivo .iso. Se agrega al menu sin borrar lo ya cargado.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 4</div>
+                <div class="step-title">Arrancar y elegir en el menu</div>
+                <div class="step-desc">Al bootear, YUMI muestra su menu con todas las ISOs. Soporta persistencia para distros compatibles (Ubuntu, Debian, Fedora).</div>
+              </div>
+            </div>
+            <div class="info-box info-tip" style="margin-top:1rem;">
+              <i class="bi bi-lightbulb"></i>
+              <div><strong>YUMI vs Ventoy:</strong>Ventoy es mas simple (solo copias ISOs como archivos). YUMI necesita registrar cada ISO con la app pero ofrece persistencia y opciones por distribucion.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDICAT -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-first-aid"></i></span>
+          <span class="accordion-title">Medicat USB — kit todo-en-uno de rescate (basado en Ventoy)</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <div class="info-box info-note" style="margin-bottom:1rem;">
+              <i class="bi bi-info-circle"></i>
+              <div><strong>Que es Medicat?</strong>Es un USB multiboot completo (usa Ventoy como base) que empaqueta decenas de herramientas de diagnostico y recuperacion en un solo pendrive: WinPE, antivirus, recuperacion de contrasenas, clonado de discos, testeo de RAM/GPU, gestores de particiones y mas. Es la "navaja suiza" del tecnico.</div>
+            </div>
+            <div class="steps-timeline">
+              <div class="step-item">
+                <div class="step-num">PASO 1</div>
+                <div class="step-title">Descargar desde medicatusb.com</div>
+                <div class="step-desc">Requisito: un USB de al menos 32 GB (recomendado USB 3.0 o superior). Descarga la version Full y verifica los checksums publicados.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 2</div>
+                <div class="step-title">Instalar Ventoy en el USB</div>
+                <div class="step-desc">Medicat funciona sobre Ventoy. Ejecuta Ventoy2Disk.exe, selecciona el USB y click Install.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 3</div>
+                <div class="step-title">Formatear en NTFS</div>
+                <div class="step-desc">Despues de instalar Ventoy, formatea el USB en NTFS para soportar los archivos grandes de Medicat.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 4</div>
+                <div class="step-title">Extraer Medicat al USB</div>
+                <div class="step-desc">Descomprime el archivo .7z (con 7-Zip) directamente en la raiz del USB. Alternativa: usa el instalador .bat (Windows) o .sh (Linux) incluido.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">PASO 5</div>
+                <div class="step-title">Arrancar y elegir herramienta</div>
+                <div class="step-desc">Bootea desde el USB y veras el menu de Medicat con todas las herramientas organizadas por categoria.</div>
+              </div>
+            </div>
+            <div class="info-box info-tip" style="margin-top:1rem;">
+              <i class="bi bi-lightbulb"></i>
+              <div><strong>Consejo:</strong>desactiva temporalmente el antivirus durante la instalacion: algunos paquetes de Medicat incluyen herramientas de recuperacion de contrasenas que los antivirus marcan como riesgo (falsos positivos conocidos).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESCATE MULTIBOOT -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-life-preserver"></i></span>
+          <span class="accordion-title">USBs de rescate: las ISOs que todo tecnico deberia cargar</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p style="font-size:.83rem;color:var(--text-sec);margin-bottom:1rem;">Un USB de rescate resuelve la mayoria de emergencias: PC que no arranca, discos danados, RAM defectuosa, virus persistentes o recuperacion de datos. Carga estas ISOs en un Ventoy de 32-64 GB y tendras el kit completo.</p>
+            <div class="table-scroll">
+              <table class="cmd-table">
+                <tr><th>ISO</th><th>Tipo</th><th>Para que sirve</th><th>Sitio oficial</th></tr>
+                <tr><td>Hiren's BootCD PE</td><td>WinPE completo</td><td>Mini Windows con todo: antivirus, recuperacion de datos, clonado, reseteo de contrasenas</td><td>hirensbootcd.org</td></tr>
+                <tr><td>Medicat</td><td>Multiboot todo-en-uno</td><td>Decenas de herramientas en un solo menu (requiere USB de 32 GB+)</td><td>medicatusb.com</td></tr>
+                <tr><td>Sergei Strelec WinPE</td><td>WinPE completo</td><td>Alternativa a Hiren's, muy completa y actualizada cada mes</td><td>sergeistrelec.name</td></tr>
+                <tr><td>Ultimate Boot CD</td><td>Coleccion de utilidades</td><td>Test de RAM, discos y CPU + reparacion de arranque (modo legacy)</td><td>ultimatebootcd.com</td></tr>
+                <tr><td>FalconFour's UBCD</td><td>WinPE / multiboot</td><td>Sucesor moderno del UBCD, con herramientas actualizadas</td><td>falconfour.com</td></tr>
+                <tr><td>SystemRescue</td><td>Linux live</td><td>Linux de rescate con GParted, redes y recuperacion de datos</td><td>system-rescue.org</td></tr>
+                <tr><td>Kaspersky Rescue Disk</td><td>Antivirus booteable</td><td>Limpia equipos infectados sin arrancar el sistema</td><td>support.kaspersky.com</td></tr>
+                <tr><td>GParted Live</td><td>Particionado</td><td>Crear, redimensionar y formatear particiones sin instalar nada</td><td>gparted.org</td></tr>
+                <tr><td>MemTest86</td><td>Test de RAM</td><td>Verifica errores de memoria con multiples pasadas</td><td>memtest86.com</td></tr>
+                <tr><td>Clonezilla</td><td>Clonado</td><td>Clona discos enteros o particiones</td><td>clonezilla.org</td></tr>
+              </table>
+            </div>
+            <div class="info-box info-tip" style="margin-top:1rem;">
+              <i class="bi bi-lightbulb"></i>
+              <div><strong>Regla de seguridad:</strong>descarga siempre cada ISO desde el sitio oficial y verifica el checksum SHA-256 publicado. Evita ISOs "modificadas" o de torrents: suelen llevar malware o drivers alterados.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPARATIVA HERRAMIENTAS -->
+      <div class="accordion-item" data-aos="fade-up">
+        <div class="accordion-header" onclick="toggleItem(this)">
+          <span class="accordion-icon"><i class="bi bi-diagram-3"></i></span>
+          <span class="accordion-title">Tabla comparativa: cual herramienta usar</span>
+          <span class="accordion-chevron"><i class="bi bi-chevron-down"></i></span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <div class="table-scroll">
+              <table class="cmd-table">
+                <tr><th>Herramienta</th><th>Plataforma</th><th>Multiboot</th><th>Mejor para</th></tr>
+                <tr><td>Rufus</td><td>Windows</td><td>No</td><td>El USB mas rapido y confiable para una sola ISO (Windows o Linux)</td></tr>
+                <tr><td>Ventoy</td><td>Windows / Linux</td><td>Si (copiar ISOs)</td><td>Kit del tecnico: cargar muchas ISOs sin reformatear</td></tr>
+                <tr><td>YUMI</td><td>Windows / Linux</td><td>Si (menu propio)</td><td>Multiboot con persistencia y opciones por distribucion</td></tr>
+                <tr><td>Balena Etcher</td><td>Windows / macOS / Linux</td><td>No</td><td>La opcion mas facil para Linux, Raspberry Pi y sistemas embebidos</td></tr>
+                <tr><td>Media Creation Tool</td><td>Windows</td><td>No</td><td>Instalador 100% oficial de Windows 10/11</td></tr>
+                <tr><td>UNetbootin</td><td>Windows / macOS / Linux</td><td>No</td><td>Crear USB Linux desde la misma app o descargar distros</td></tr>
+                <tr><td>dd</td><td>Linux / macOS</td><td>No</td><td>Grabar ISOs desde la terminal sin instalar nada</td></tr>
+                <tr><td>Medicat</td><td>Windows / Linux (instalador)</td><td>Si</td><td>Kit todo-en-uno de rescate con decenas de herramientas</td></tr>
+              </table>
+            </div>
+            <div class="info-box info-note" style="margin-top:1rem;">
+              <i class="bi bi-info-circle"></i>
+              <div><strong>Resumen:</strong>para el 90% de los casos usa Rufus (una ISO) o Ventoy (muchas ISOs). Etcher si vienes de Linux/macOS o grabas Raspberry Pi. Media Creation Tool si solo necesitas el instalador oficial de Windows.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   <div class="content-section" id="particionado" data-aos="fade-up">
