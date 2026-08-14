@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasta Termica - Mantenimiento de PC | TechGuide</title>
+  <meta name="description" content="Mantenimiento · Pasta Termica. Tipos de pasta termica, como aplicarla (metodos), cada cuanto cambiarla, paso a paso para CPU y GPU y errores comunes.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pasta Termica - Mantenimiento de PC | TechGuide">
+  <meta property="og:description" content="Mantenimiento · Pasta Termica. Tipos, aplicacion, intervalos y errores comunes.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-droplet-half"></i></div>
+      <h1><span class="hl">Mantenimiento</span> · Pasta Termica</h1>
+      <p>Tipos · como aplicarla · cada cuanto · CPU, GPU y laptops.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip active' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Pasta Termica</span></nav>
+
+  <div class="content-section" id="pasta-termica" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-droplet-half"></i></div>
+      <div class="section-title">
+        <h2>Pasta Termica (TIM)</h2>
+        <p>// El puente invisible entre el chip y el disipador</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>Que es:</strong> un compuesto que rellena las micro-imperfecciones entre el chip (IHS) y el disipador. Sin el, hay aire entre ambas superficies y el calor no se transfiere bien. Es un <strong>material de interfaz termica</strong> (TIM).</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-diagram-3 accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Tipos de pasta termica</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Conductividad</th><th>Ventajas</th><th>Desventajas</th></tr>
+          <tr><td>Ceramica</td><td>Media</td><td>Barata, no conductora (segura), facil de limpiar</td><td>Rendimiento menor</td></tr>
+          <tr><td>Silicona / carbono</td><td>Baja-media</td><td>Economica, no conductora</td><td>Vida util corta</td></tr>
+          <tr><td>Metalica (pasta)</td><td>Alta</td><td>Excelente rendimiento</td><td>Conductora: cortocircuito si se desborda</td></tr>
+          <tr><td>Metal liquida</td><td>Muy alta</td><td>Mejor transferencia del mercado</td><td>Corroe aluminio, riesgosa, cara</td></tr>
+          <tr><td>Thermal pads</td><td>Variable</td><td>Se usan en VRM, VRAM y GPUs; sin aplicacion</td><td>No sustituye pasta en el IHS</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div><strong>Metal liquida:</strong> solo para usuarios avanzados y aplicaciones de cobre o niquel. <strong>Nunca</strong> en disipadores de aluminio: corroe el metal. Cubre los componentes cercanos con cinta aislante.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-eyedropper accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Como aplicarla: metodos</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Grano de arroz / punto central:</strong> una bolita en el centro (aprox. del tamano de un grano de arroz o garbanzo segun el chip). El mas recomendado para CPU.</li>
+          <li><strong>Linea (X):</strong> para IHS grandes tipo Ryzen con superficie alargada o chips con muchos nucleos.</li>
+          <li><strong>Cruz (X):</strong> dos lineas que se cruzan; cubre bien el centro.</li>
+          <li><strong>Esparcir (spread):</strong> con tarjeta o espuma incluida; util para metal liquida.</li>
+        </ul>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>La presion del disipador esparce la pasta por si sola. <strong>No hace falta cubrir todo el IHS manualmente</strong>: una gota central bien montada cubre la superficie entera.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-calendar accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Cada cuanto cambiarla</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>General:</strong> cada 2 a 5 anos en equipos de uso normal.</li>
+          <li><strong>Gaming / altas temperaturas:</strong> cada 1-2 anos.</li>
+          <li><strong>Laptops:</strong> cada 2-3 anos o cuando el disipador se separe (las laptops sufren mas calor).</li>
+          <li><strong>Siempre al desmontar el disipador:</strong> al rearmar, reemplaza la pasta vieja (no reutilices la ya usada).</li>
+          <li><strong>Senales de que toca cambiarla:</strong> temperaturas mas altas con el mismo uso, ventiladores mas ruidosos, o <strong>throttling</strong> (baja el rendimiento por calor).</li>
+        </ul>
+        <div class="alert-box alert-note" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div>Monitorea tus temperaturas antes y despues del cambio para confirmar la mejora. Ve <a href="man-gestion-termica.html">Gestion Termica</a> para saber las temperaturas normales.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-tools accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Paso a paso en una CPU de escritorio</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ol>
+          <li>Apaga el PC y desconecta la corriente. Desmonta el disipador (retira los retenedores o los 4 tornillos en diagonal).</li>
+          <li>Si la pasta esta endurecida, calienta suavemente con el PC encendido unos minutos o usa un secador de pelo; luego gira suavemente el disipador para despegarlo.</li>
+          <li><strong>Limpia</strong> el IHS y la base del disipador con <strong>alcohol isopropilico al 90%+</strong> y un trapo de microfibra o toallas de papel (sin pelusa).</li>
+          <li>Deja que el alcohol se evapore (segundos) y que queden ambas superficies limpias y secas.</li>
+          <li>Aplica la pasta con el metodo elegido (grano de arroz en el centro del IHS).</li>
+          <li>Monta el disipador con presion pareja: en tornillos, aprieta en <strong>cruz</strong> (1-3, 2-4) y en pasos. Conecta el fan.</li>
+          <li>Enciende y verifica temperaturas en reposo y bajo carga.</li>
+        </ol>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>No uses alcohol comun ni limpiacontactos con residuos. La pasta debe cubrir toda la superficie util, pero <strong>sin desbordar</strong> los bordes del chip.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-exclamation-triangle accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Errores comunes</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Demasiada pasta:</strong> aislar o desbordar hacia el socket/pines.</li>
+          <li><strong>Muy poca pasta:</strong> deja zonas sin cubrir (temperaturas altas).</li>
+          <li><strong>No limpiar la pasta vieja</strong> antes de aplicar la nueva.</li>
+          <li><strong>Pasta en los pines/contactos:</strong> limpiar de inmediato con alcohol; si es conductora, riesgo de cortocircuito.</li>
+          <li><strong>Mezclar pastas</strong> de distinto tipo.</li>
+          <li><strong>Usar metal liquida en disipador de aluminio</strong> (corrosion).</li>
+          <li><strong>Apretar los tornillos de mas:</strong> puede doblar la placa o el IHS.</li>
+          <li><strong>No cambiar los thermal pads</strong> al rearmar una GPU: los pads rotos o secos empeoran el contacto.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-cpu accordion-icon" style="color:var(--accent2);"></i>
+        <span class="accordion-title">Pasta en GPU y laptops</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>GPU:</strong> la pasta va sobre el chip grafico (die) en el centro; los modulos de VRAM y VRM usan <strong>thermal pads</strong> (no pasta). Anota el grosor de cada pad (1/1.5/2/3 mm) antes de retirarlos.</li>
+          <li><strong>Laptops:</strong> la pasta se aplica sobre CPU y GPU en el mismo proceso. Los metodos son iguales pero el espacio es mas reducido y los tornillos del disipador tienen un orden y torque especificos.</li>
+          <li>El desarme completo de portatiles se cubre en <a href="man-laptop.html">Mantenimiento de Laptop</a>.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

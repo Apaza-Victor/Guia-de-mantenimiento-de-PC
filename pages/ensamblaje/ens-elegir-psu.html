@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegir la Fuente de Poder (PSU) - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Elegir la Fuente de Poder. Cuantos watts necesitas, certificacion 80 Plus, fuentes modulares, conectores ATX 24 pines, EPS, PCIe y 12VHPWR, protecciones y errores comunes al comprar una PSU.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elegir la Fuente de Poder (PSU) - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Elegir la Fuente de Poder. Cuantos watts necesitas, certificacion 80 Plus, conectores y errores comunes al comprar una PSU.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-lightning-charge"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Elegir la Fuente de Poder</h1>
+      <p>Cuantos watts necesitas · 80 Plus · Modular · Conectores y protecciones.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip active' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Elegir la Fuente de Poder</span></nav>
+
+  <div class="content-section" id="elegir-psu" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-lightning-charge"></i></div>
+      <div class="section-title">
+        <h2>Elegir la Fuente de Poder (PSU)</h2>
+        <p>// El componente que alimenta todo tu equipo</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>Regla de oro:</strong> nunca ahorres en la fuente de poder. Una PSU barata o insuficiente puede causar reinicios aleatorios, pantallazos azules e incluso danar la placa madre, la GPU o el almacenamiento.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Que es la PSU y por que importa</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="text-sm text-secondary">La fuente (PSU, Power Supply Unit) convierte la corriente alterna de la pared (110/220 V CA) en corriente continua de bajo voltaje (CC) para todos los componentes. Entrega tres voltajes principales sobre su riel de 12 V, 5 V y 3.3 V.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Riel</th><th>Voltaje</th><th>Alimenta a</th></tr>
+          <tr><td>+12 V</td><td>12 V</td><td>CPU, GPU, ventiladores, discos y la mayoria de la carga. Es el riel mas importante.</td></tr>
+          <tr><td>+5 V</td><td>5 V</td><td>USB, algunos chips de la placa y discos (logica).</td></tr>
+          <tr><td>+3.3 V</td><td>3.3 V</td><td>RAM, chipset y componentes digitales de la placa.</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>La etiqueta de la PSU muestra amperios por riel. La potencia real (W) se calcula como voltaje × amperaje. Verifica que el riel de 12 V entregue al menos el 95% de la potencia total anunciada.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-calculator accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Cuantos watts necesito</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="text-sm text-secondary">La forma mas simple: <strong>suma el TDP de la CPU + el TDP de la GPU + 100-150 W</strong> para el resto (placa, RAM, discos, ventiladores) y anade un <strong>30-50% de margen</strong> de seguridad y vida util.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo de equipo</th><th>Consumo estimado</th><th>PSU recomendada</th></tr>
+          <tr><td>Oficina / basico (CPU integrada)</td><td>80-150 W</td><td>300-400 W</td></tr>
+          <tr><td>Gaming medio (RTX 4060 / RX 7600)</td><td>250-350 W</td><td>550-650 W</td></tr>
+          <tr><td>Gaming alto (RTX 4070 / RX 7800 XT)</td><td>350-450 W</td><td>650-750 W</td></tr>
+          <tr><td>Gaming tope / Creator (RTX 4080/4090, RX 7900 XTX)</td><td>450-600 W</td><td>750-850 W</td></tr>
+          <tr><td>Multi-GPU / Workstation</td><td>600-1000 W</td><td>1000-1200 W+</td></tr>
+        </table></div>
+        <p class="subhead">Regla practica con CPU y GPU modernas</p>
+        <ul>
+          <li>RTX 4060 / RX 7600: 550 W con CPU gama media.</li>
+          <li>RTX 4070 Super: 650 W.</li>
+          <li>RTX 4080 / 4090 y RX 7900 XTX: 750-850 W (los picos transitorios de la GPU pueden superar el TDP).</li>
+          <li>Si haces overclock o tenes muchos discos, subi 100 W mas.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-award accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Certificacion 80 Plus</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="text-sm text-secondary">Indica la <strong>eficiencia energetica</strong> de la fuente: cuanta energia de la pared se convierte en energia util y cuanta se pierde en calor. Una PSU mas eficiente consume menos, genera menos calor y suele tener mejores componentes internos.</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Certificacion</th><th>Eficiencia al 50% de carga</th><th>Uso recomendado</th></tr>
+          <tr><td>80 Plus White</td><td>80%</td><td>Equipos de oficina basicos</td></tr>
+          <tr><td>80 Plus Bronze</td><td>85%</td><td>La opcion mas equilibrada precio/calidad</td></tr>
+          <tr><td>80 Plus Silver</td><td>88%</td><td>Gaming de gama media</td></tr>
+          <tr><td>80 Plus Gold</td><td>90%</td><td>Gaming alto, mayor eficiencia</td></tr>
+          <tr><td>80 Plus Platinum</td><td>92%</td><td>Equipos de alto consumo / 24/7</td></tr>
+          <tr><td>80 Plus Titanium</td><td>94%</td><td>Workstations, eficiencia maxima</td></tr>
+        </table></div>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Las PSU alcanzan su maxima eficiencia cerca del 50-70% de carga. Por eso se recomienda que el consumo real del equipo sea del 50-70% de la capacidad nominal.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-hdd-stack accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Modularidad: full, semi y non-modular</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Tipo</th><th>Descripcion</th><th>Ventajas</th></tr>
+          <tr><td>Non-modular</td><td>Todos los cables vienen soldados y fijos</td><td>Mas barata; requiere guardar los cables que sobran</td></tr>
+          <tr><td>Semi-modular</td><td>Los cables esenciales (24 pines, CPU) fijos; el resto removible</td><td>Buen equilibrio de precio y limpieza</td></tr>
+          <tr><td>Full-modular</td><td>Todos los cables son removibles</td><td>Maxima limpieza, ideal para cable management</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div><strong>Ojo:</strong> los cables modulares <strong>no son compatibles entre marcas</strong>. Usar cables de otra PSU puede quemar la placa o los discos porque el pinout varia.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-plug accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Conectores y cables</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Conector</th><th>Pines</th><th>Para que sirve</th></tr>
+          <tr><td>ATX 24 pines</td><td>24</td><td>Alimentacion principal de la placa madre (obligatorio)</td></tr>
+          <tr><td>EPS 12 V (CPU)</td><td>4+4 o 8</td><td>Alimentacion del socket CPU. Placas tope piden 8+4 o 8+8</td></tr>
+          <tr><td>PCIe (GPU)</td><td>6+2 (8) o 6</td><td>Alimentacion de la tarjeta grafica</td></tr>
+          <tr><td>12VHPWR / 12V-2x6</td><td>16 (12+4)</td><td>Conector nuevo de GPUs NVIDIA serie 40/50 y algunas AMD. Requiere PSU ATX 3.0/3.1</td></tr>
+          <tr><td>SATA</td><td>15</td><td>Discos SSD/HDD SATA y otros dispositivos</td></tr>
+          <tr><td>Molex</td><td>4</td><td>Discos viejos, hubs, algunos fan controllers</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div><strong>Peligro:</strong> no uses adaptadores Molex a PCIe de 8 pines para GPUs potentes. El Molex solo aguanta poca corriente y el adaptador puede derretirse. Si tu GPU pide 12VHPWR y tu PSU no lo tiene, usa el adaptador incluido con la GPU o cambia la fuente.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-box-seam accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Factores de forma</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Factor</th><th>Tamano (ancho x alto x largo aprox.)</th><th>Donde se usa</th></tr>
+          <tr><td>ATX</td><td>150 × 86 × 140-200 mm</td><td>Gabinete de escritorio estandar</td></tr>
+          <tr><td>SFX / SFX-L</td><td>125 × 63.5 × 100-130 mm</td><td>Gabinete ITX compactos</td></tr>
+          <tr><td>TFX</td><td>85 × 65 × 175 mm</td><td>OEM / gabinetes slim</td></tr>
+          <tr><td>Flex ATX</td><td>81.5 × 40.5 × 150 mm</td><td>Mini PCs y servidores 1U</td></tr>
+        </table></div>
+        <p class="text-sm text-secondary">Verifica la <strong>profundidad</strong>: en gabinetes con bahia de disco frontal o fuentes instaladas en frente de la CPU, una PSU muy larga (160-200 mm) puede no entrar.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-shield-check accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Protecciones y errores comunes</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="subhead">Protecciones que debe tener una PSU decente</p>
+        <ul>
+          <li><strong>OVP</strong> (sobretension) · <strong>UVP</strong> (baja tension) · <strong>OCP</strong> (sobrecorriente) · <strong>SCP</strong> (cortocircuito) · <strong>OTP</strong> (sobre-temperatura) · <strong>OPP</strong> (sobre-potencia).</li>
+          <li>Capacitores de calidad: marcas reconocidas (Nippon Chemi-Con, Rubycon, Nichicon) vs genericos de bajo costo.</li>
+          <li>Garantia larga: las buenas fuentes ofrecen 5 a 10 anos.</li>
+        </ul>
+        <p class="subhead">Errores comunes al elegir</p>
+        <ul>
+          <li>Comprar solo por watts: un "600 W generico" puede entregar menos que un "500 W de marca".</li>
+          <li>Watts inflados en la etiqueta de fuentes baratas.</li>
+          <li>No verificar los conectores necesarios (p. ej. 12VHPWR en GPUs modernas).</li>
+          <li>Usar cables de otra PSU en una modular de otra marca.</li>
+          <li>Instalar la PSU con el ventilador hacia abajo sin rejilla inferior en el gabinete.</li>
+        </ul>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Para presupuestos reales de armado, usa la seccion <a href="ens-guia-compra.html">Guia de Compra</a> y el <a href="../presupuesto.html">Armado por Presupuesto</a>.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-check2-square accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Checklist final de compra</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>[ ] Potencia con 30-50% de margen sobre el consumo calculado.</li>
+          <li>[ ] Certificacion 80 Plus Bronze como minimo (Gold para equipos de alto consumo).</li>
+          <li>[ ] Conectores correctos: 24 pines, EPS para la CPU, PCIe o 12VHPWR para la GPU.</li>
+          <li>[ ] Factor de forma compatible con el gabinete.</li>
+          <li>[ ] Modularidad segun tu necesidad de cable management.</li>
+          <li>[ ] Protecciones OVP/UVP/OCP/SCP/OTP listadas en la especificacion.</li>
+          <li>[ ] Marca reconocida con garantia de 5+ anos.</li>
+          <li>[ ] Riel de 12 V con suficiente amperaje (mayoria de la potencia).</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

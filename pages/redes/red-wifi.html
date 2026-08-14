@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redes Inalambricas (Wi-Fi) - Redes | TechGuide</title>
+  <meta name="description" content="Redes · Wi-Fi. Estandares 802.11 y Wi-Fi 6/7, bandas y canales, seguridad WPA2/WPA3, mesh vs repetidores, configuracion del router y troubleshooting inalambrico.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Redes Inalambricas (Wi-Fi) - Redes | TechGuide">
+  <meta property="og:description" content="Redes · Wi-Fi. Estandares 802.11, canales, seguridad WPA3, mesh y troubleshooting.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-wifi"></i></div>
+      <h1><span class="hl">Redes</span> · Redes Inalambricas (Wi-Fi)</h1>
+      <p>Estandares 802.11 · bandas y canales · WPA3 · mesh · troubleshooting.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip active' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Redes Inalambricas (Wi-Fi)</span></nav>
+
+  <div class="content-section" id="red-wifi" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-wifi"></i></div>
+      <div class="section-title">
+        <h2>Redes Inalambricas (Wi-Fi)</h2>
+        <p>// Libertad de movimiento con protocolo 802.11</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>Wi-Fi</strong> es el nombre comercial del estandar <strong>IEEE 802.11</strong>. Todos los equipos de una red inalambrica comparten el medio (el aire), por eso la interferencia y la seguridad son los temas centrales.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-signal accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Estandares 802.11 y nombres Wi-Fi</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Estandar</th><th>Nombre</th><th>Banda</th><th>Velocidad maxima teorica</th></tr>
+          <tr><td>802.11b</td><td>Wi-Fi 1</td><td>2.4 GHz</td><td>11 Mbps</td></tr>
+          <tr><td>802.11g</td><td>Wi-Fi 3</td><td>2.4 GHz</td><td>54 Mbps</td></tr>
+          <tr><td>802.11n</td><td>Wi-Fi 4</td><td>2.4 + 5 GHz</td><td>600 Mbps (MIMO)</td></tr>
+          <tr><td>802.11ac</td><td>Wi-Fi 5</td><td>5 GHz</td><td>6.9 Gbps</td></tr>
+          <tr><td>802.11ax</td><td>Wi-Fi 6 / 6E</td><td>2.4 + 5 (+6 GHz en 6E)</td><td>9.6 Gbps</td></tr>
+          <tr><td>802.11be</td><td>Wi-Fi 7</td><td>2.4 + 5 + 6 GHz</td><td>46 Gbps</td></tr>
+        </table></div>
+        <ul>
+          <li><strong>Wi-Fi 6/6E y 7</strong> traen mejores velocidades, menor latencia y mejor rendimiento con muchos dispositivos (OFDMA, MU-MIMO).</li>
+          <li>El cliente y el router negocian siempre el estandar mas bajo en comun.</li>
+          <li>El estandar 802.11a (Wi-Fi 2) ya no se usa.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-broadcast accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Bandas y canales</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Banda</th><th>Canales</th><th>Alcance</th><th>Velocidad</th><th>Uso</th></tr>
+          <tr><td>2.4 GHz</td><td>1-13 (no solapados: 1, 6, 11)</td><td>Largo (atraviesa paredes)</td><td>Menor</td><td>Compatibilidad, cobertura</td></tr>
+          <tr><td>5 GHz</td><td>36-165</td><td>Medio</td><td>Alta</td><td>Velocidad, menos saturado</td></tr>
+          <tr><td>6 GHz</td><td>Canales de 160 MHz</td><td>Corto</td><td>Muy alta</td><td>Wi-Fi 6E/7, poca interferencia</td></tr>
+        </table></div>
+        <ul>
+          <li>En 2.4 GHz solo hay <strong>3 canales que no se solapan</strong> (1, 6 y 11): elegir uno de ellos evita interferencias con vecinos.</li>
+          <li>Los canales DFS (5 GHz) requieren que el router se aparte si detecta radar; pueden causar desconexiones.</li>
+          <li>Un router moderno ofrece <strong>band steering</strong>: conecta al cliente a la banda mas conveniente.</li>
+        </ul>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Si tu red va lenta en un edificio lleno de Wi-Fi, mueve a un canal menos saturado. Apps como Wi-Fi Analyzer muestran la ocupacion de cada canal.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-shield-lock accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Seguridad inalambrica</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Protocolo</th><th>Cifrado</th><th>Estado</th></tr>
+          <tr><td>WEP</td><td>RC4 (debilitado)</td><td>Inseguro, se rompe en minutos. No usar.</td></tr>
+          <tr><td>WPA</td><td>TKIP</td><td>Obsoleto, vulnerable. No usar.</td></tr>
+          <tr><td>WPA2</td><td>CCMP/AES</td><td>Seguro; el estandar minimo actual.</td></tr>
+          <tr><td>WPA3</td><td>AES-GCMP, SAE</td><td>Recomendado; protege la red contra ataques de diccionario.</td></tr>
+        </table></div>
+        <ul>
+          <li>Usa <strong>WPA2/WPA3</strong> o WPA3 si todos tus dispositivos lo soportan.</li>
+          <li><strong>PMF</strong> (Protected Management Frames) evita ataques de desautenticacion.</li>
+          <li><strong>Desactiva WPS</strong> si no lo usas: es un vector de ataque conocido.</li>
+          <li>No dejes la red abierta (sin contrasena) salvo una <strong>red de invitados</strong> aislada.</li>
+          <li>El <strong>SSID oculto</strong> NO es seguridad real: esconde la red pero cualquier sniffer la ve.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-diagram-3 accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Dispositivos: AP, repetidor, mesh</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Dispositivo</th><th>Como funciona</th><th>Ventaja / limitacion</th></tr>
+          <tr><td>Router WiFi</td><td>Router + switch + AP en un solo equipo</td><td>Todo en uno; es la base de la mayoria de hogares</td></tr>
+          <tr><td>Punto de acceso (AP)</td><td>Extiende la red por cable hacia otra zona</td><td>Mejor rendimiento; requiere cable</td></tr>
+          <tr><td>Repetidor / extensor</td><td>Repite la senal del router</td><td>Facil pero puede perder hasta la mitad de velocidad</td></tr>
+          <tr><td>Malla (mesh)</td><td>Varias unidades que cooperan con un solo SSID</td><td>Roaming sin cortes y cobertura uniforme; mas caro</td></tr>
+        </table></div>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Para cobertura amplia con cable disponible, los <strong>AP cableados</strong> superan a los repetidores. El <strong>mesh</strong> es la mejor opcion sin cable y con roaming fluido.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-signpost-2 accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Cobertura y posicionamiento</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>Centra el router y <strong>elevalo</strong> (altura de mueble, no en el piso).</li>
+          <li>Las <strong>paredes</strong> (sobre todo las de hormigon y metal) absorben la senal; los vidrios no tanto.</li>
+          <li>Alejalo de <strong>microondas</strong>, monitores de bebe, telefonos inalambricos y equipos de audio (interfieren con 2.4 GHz).</li>
+          <li>Orientar las <strong>antenas</strong>: una vertical y otra inclinada suele dar mejor cobertura horizontal y vertical.</li>
+          <li>Para grandes areas, prioriza cable + AP o mesh por sobre un router gigante.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-sliders accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Configuracion del router WiFi</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>Accede a la interfaz web del router (usualmente 192.168.1.1 o 192.168.0.1).</li>
+          <li>Cambia el <strong>SSID</strong> (nombre de red) y usa <strong>WPA2/WPA3</strong> con una contrasena larga.</li>
+          <li>Activa <strong>band steering</strong> y <strong>QoS</strong> si tu router lo permite.</li>
+          <li>Configura una <strong>red de invitados</strong> separada y con limite de velocidad.</li>
+          <li>Actualiza el <strong>firmware</strong> del router periodicamente.</li>
+        </ul>
+        <div class="alert-box alert-note" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div>El acceso al router y la configuracion completa estan en <a href="red-router-practico.html">Router Practico</a>.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-tools accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Troubleshooting inalambrico</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Problema</th><th>Solucion</th></tr>
+          <tr><td>Velocidad baja</td><td>Acercate al router, cambia de banda a 5 GHz, usa un canal libre, revisa dispositivos que saturan (downloads, streaming).</td></tr>
+          <tr><td>Se desconecta a intervalos</td><td>Cambia de canal, revisa DFS, actualiza firmware y drivers; en 2.4 GHz evita canales con muchos vecinos.</td></tr>
+          <tr><td>Conecta pero sin internet</td><td>Verifica WAN/dhcp del router, reinicia router y modem (ve <a href="red-troubleshooting.html">Troubleshooting</a>).</td></tr>
+          <tr><td>No conecta un dispositivo viejo</td><td>Comprueba que soporte WPA2 (WPA3-only no funciona con el); habilita compatibilidad en el router.</td></tr>
+          <tr><td>Red invisible en la lista</td><td>Revisa que el SSID no este oculto y que el router este en una banda soportada por el cliente.</td></tr>
+          <tr><td>Interferencia de microondas</td><td>Mueve la red a 5 GHz o aleja el router del electrodomestico.</td></tr>
+        </table></div>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

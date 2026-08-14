@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Encendido y POST - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Primer Encendido. Checklist antes de encender, que es el POST, pitidos o beep codes, leds de diagnostico y que hacer si el PC no enciende.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Primer Encendido y POST - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Primer Encendido. Checklist, POST, beep codes y diagnostico si no enciende.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-power"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Primer Encendido y POST</h1>
+      <p>Checklist previo · que pasa al encender · pitidos · si no arranca.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip active' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Primer Encendido</span></nav>
+
+  <div class="content-section" id="primer-encendido" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-power"></i></div>
+      <div class="section-title">
+        <h2>Primer Encendido y POST</h2>
+        <p>// El momento de la verdad despues de armar tu PC</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>Antes de encender:</strong> revisa el <a href="ens-checklist.html">Checklist de Armado</a> y esta lista rapida. La mayoria de los "no enciende" son un conector mal puesto.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-clipboard-check accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Checklist antes de encender</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>[ ] Conector <strong>ATX 24 pines</strong> bien asentado en la placa.</li>
+          <li>[ ] Conector <strong>EPS/CPU (4+4 u 8 pines)</strong> conectado arriba a la izquierda (no confundir con PCIe).</li>
+          <li>[ ] <strong>RAM</strong> en los slots correctos (A2/B2 en placas de 4 slots), con el seguro cerrado.</li>
+          <li>[ ] <strong>GPU</strong> asentada en el slot PCIe x16 y con sus cables de alimentacion (PCIe 8 o 12VHPWR).</li>
+          <li>[ ] <strong>CPU fan</strong> conectado al header CPU_FAN (muchas placas no arrancan sin el).</li>
+          <li>[ ] Cables del <strong>front panel</strong> (PWR_SW, LED, HDD) en el orden correcto.</li>
+          <li>[ ] Monitor conectado a la <strong>GPU</strong> (no al video integrado si hay GPU dedicada).</li>
+          <li>[ ] Interruptor de la PSU en la posicion <strong>I</strong> y cable de corriente enchufado.</li>
+        </ul>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Un truco para el primer encendido: arma la placa fuera del gabinete sobre una caja (papel/carton antiestatico), con solo CPU + RAM + GPU, y prueba el POST antes de meter todo adentro.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Que es el POST</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="text-sm text-secondary"><strong>POST</strong> (Power-On Self Test) es la rutina que el BIOS/UEFI ejecuta al encender: verifica CPU, memoria, tarjeta de video, discos y dispositivos. Si algo grave falla, emite <strong>pitidos</strong> o muestra un codigo y se detiene.</p>
+        <ul>
+          <li>Un pitido corto al arrancar = todo bien (en muchas placas).</li>
+          <li>Pitidos repetidos o patrones = error (revisa la tabla de abajo).</li>
+          <li>Ningun pitido pero pantalla negra = el speaker del gabinete no esta conectado o el fallo es de video/energia.</li>
+          <li>Si el POST pasa, la placa muestra el logo y luego busca el dispositivo de arranque.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-broadcast accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Pitidos (Beep Codes)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="subhead">AMI BIOS (la mas comun)</p>
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Pitidos</th><th>Significado</th></tr>
+          <tr><td>1 corto</td><td>Error de refresco de RAM (memoria no detectada o falla)</td></tr>
+          <tr><td>2 cortos</td><td>Falla de paridad de memoria</td></tr>
+          <tr><td>3 cortos</td><td>Error en los primeros 64 KB de RAM</td></tr>
+          <tr><td>4 cortos</td><td>Falla del timer del sistema</td></tr>
+          <tr><td>5 cortos</td><td>Falla de CPU</td></tr>
+          <tr><td>6 cortos</td><td>Falla del controlador de teclado</td></tr>
+          <tr><td>8 cortos</td><td>Falla de memoria de video (GPU no detectada)</td></tr>
+          <tr><td>9 cortos</td><td>Falla del chip ROM/BIOS</td></tr>
+          <tr><td>10 cortos</td><td>Error de lectura/escritura CMOS</td></tr>
+          <tr><td>11 cortos</td><td>Cache de la CPU danada</td></tr>
+          <tr><td>Largos repetidos</td><td>Falla de memoria</td></tr>
+          <tr><td>1 largo + 3 cortos</td><td>Falla de video (GPU/ cable)</td></tr>
+        </table></div>
+        <p class="subhead">Award / Phoenix</p>
+        <ul>
+          <li><strong>1 largo + 2 cortos</strong>: falla de video.</li>
+          <li><strong>1 largo + 3 cortos</strong>: tarjeta de video o memoria de video.</li>
+          <li><strong>Pitidos continuos largos</strong>: problema de RAM.</li>
+          <li><strong>Pitidos cortos continuos</strong>: problema de alimentacion (PSU) o cortocircuito.</li>
+        </ul>
+        <div class="alert-box alert-note" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div>Los codigos exactos dependen del fabricante y la version del BIOS. Consulta el manual de tu placa para la tabla completa y verifica que el buzzer del gabinete este conectado al header SPEAKER.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-activity accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Leds y codigos de diagnostico en la placa</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>EZ Debug LED / Q-LED / EZ Led</strong>: cuatro leds (CPU, DRAM, VGA, BOOT). El que quede encendido indica donde esta el problema.</li>
+          <li><strong>Q-Code / codigo numerico 2 digitos</strong>: muestra el ultimo punto del POST. Busca el codigo en el manual.</li>
+          <li><strong>Codigo 00 / FF</strong>: suele indicar problema de CPU o de energia.</li>
+          <li>La mayoria de los leds se apagan al pasar el POST y vuelven a encenderse brevemente al entrar en el sistema.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-search accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Si el PC no enciende</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Sintoma</th><th>Que revisar</th></tr>
+          <tr><td>Nada se enciende, no hay leds</td><td>Interruptor de la PSU en I, cable de corriente, toma con corriente. Prueba el "paperclip test" o un tester de PSU.</td></tr>
+          <tr><td>Los ventiladores giran 1 segundo y se apagan</td><td>Posible cortocircuito o EPS/24 pines mal conectados. Desarma y reconecta, prueba la placa fuera del gabinete (cortocircuito por un separador mal puesto).</td></tr>
+          <tr><td>Enciende pero sin imagen</td><td>Revisa el cable al monitor, el slot PCIe y los cables de alimentacion de la GPU. Prueba con video integrado y un solo modulo de RAM.</td></tr>
+          <tr><td>Enciende y se queda en el logo del fabricante</td><td>Revisa disco de arranque, modo UEFI/Legacy y prioridad de boot.</td></tr>
+          <tr><td>Reinicia en bucle sin pasar el POST</td><td>Probar con una sola RAM, rescatando CMOS, revisar la CPU (pines/ socket) y el conector EPS.</td></tr>
+          <tr><td>Pitidos de RAM</td><td>Retira y vuelve a colocar la memoria, prueba otro slot, limpiar contactos con alcohol isopropilico.</td></tr>
+        </table></div>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>Si nada funciona, aplica el metodo de <strong>respaldo por descarte</strong>: retira todo lo no esencial (discos, GPU, RAM extra, fans) y ve agregando de a uno. Esto casi siempre aisla la pieza defectuosa.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-keyboard accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Primer arranque: entrar a BIOS y configurar</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ol>
+          <li>Presiona repetidamente la tecla de BIOS (DEL/F2 segun placa) apenas encienda.</li>
+          <li>Activa el perfil de RAM <strong>XMP/EXPO</strong> para la velocidad correcta.</li>
+          <li>Configura la <strong>fecha y hora</strong>.</li>
+          <li>Revisa que se detecten el CPU, la RAM, los discos y la GPU (monitor de la placa).</li>
+          <li>Pon el USB de instalacion primero en la <strong>prioridad de arranque</strong>.</li>
+          <li>Deja <strong>Secure Boot</strong> y <strong>TPM</strong> segun tu sistema operativo (Windows 11 los pide).</li>
+          <li>Guarda con <strong>Save &amp; Exit</strong> (F10).</li>
+        </ol>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Detalles de teclas por fabricante en <a href="ens-atajos-bios.html">Atajos BIOS</a> y configuraciones utiles. Cuando el POST pasa, sigue con <a href="ens-instalacion-so.html">instalar el sistema operativo</a>.</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

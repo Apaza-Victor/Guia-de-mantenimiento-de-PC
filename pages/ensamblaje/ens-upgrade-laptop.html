@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrade y Reparacion de Laptop - Ensamblaje de PC | TechGuide</title>
+  <meta name="description" content="Ensamblaje · Upgrade de Laptop. Que se puede actualizar en una laptop: RAM SODIMM, SSD 2.5 y M.2, bateria, teclado, pantalla y WiFi. Compatibilidad, desarme y migracion de disco.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Upgrade y Reparacion de Laptop - Ensamblaje de PC | TechGuide">
+  <meta property="og:description" content="Ensamblaje · Upgrade de Laptop. RAM, SSD, bateria, teclado, pantalla y WiFi.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item">
+      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
+      <div class="nav-dropdown">
+        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
+        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
+        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
+        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
+
+        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
+        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
+        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-laptop"></i></div>
+      <h1><span class="hl">Ensamblaje</span> · Upgrade de Laptop</h1>
+      <p>RAM SODIMM · SSD 2.5" y M.2 · bateria · teclado · pantalla · WiFi.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip active' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Upgrade de Laptop</span></nav>
+
+  <div class="content-section" id="upgrade-laptop" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-laptop"></i></div>
+      <div class="section-title">
+        <h2>Upgrade y Reparacion de Laptop</h2>
+        <p>// Dale una segunda vida a tu portatil</p>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <i class="bi bi-info-circle"></i>
+      <div><strong>El manual de servicio</strong> (service manual) de tu modelo te dice exactamente que se puede quitar y como. Buscalo en la pagina de soporte del fabricante antes de abrir nada.</div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Que se puede actualizar en una laptop</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Componente</th><th>¿Se puede?</th><th>Nota</th></tr>
+          <tr><td>RAM</td><td>Si (SODIMM) o NO (soldada)</td><td>Muchas laptops la traen soldada; revisa el manual</td></tr>
+          <tr><td>SSD / disco</td><td>Si</td><td>2.5" SATA, M.2 SATA o M.2 NVMe segun el modelo</td></tr>
+          <tr><td>Bateria</td><td>Si (la mayoria)</td><td>Puede estar integrada o extraible</td></tr>
+          <tr><td>Teclado / touchpad</td><td>Si</td><td>Hay que desarmar parcialmente</td></tr>
+          <tr><td>Pantalla</td><td>Si (complejo)</td><td>Debe coincidir conector y resolucion</td></tr>
+          <tr><td>WiFi / Bluetooth</td><td>Si</td><td>Tarjeta M.2 2230 Key E, con lista de compatibilidad</td></tr>
+          <tr><td>CPU</td><td>Raro</td><td>Solo modelos con socket (BGA no); casi nunca vale la pena</td></tr>
+          <tr><td>GPU</td><td>No</td><td>Soldada a la placa en casi todos los modelos</td></tr>
+        </table></div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-search accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Verificar compatibilidad</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Modelo exacto</strong> de la laptop (suele estar en la etiqueta inferior: p. ej. Lenovo ThinkPad T14 Gen 4).</li>
+          <li><strong>Service manual</strong> del fabricante: lista de partes, torque de tornillos y procedimiento.</li>
+          <li><strong>RAM:</strong> tipo (DDR4/DDR5), formato (SODIMM), velocidad maxima soportada y slots libres.</li>
+          <li><strong>SSD:</strong> interfaz del slot (SATA o NVMe), largo permitido (2242/2260/2280) y si hay compatibilidad con discos doble cara.</li>
+          <li><strong>Whitelist:</strong> algunos fabricantes (especialmente ThinkPad viejas) bloquean tarjetas WiFi que no esten en su lista.</li>
+        </ul>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>Verificar compatibilidad antes de comprar evita devoluciones. Usa las herramientas en linea de Crucial/Kingston o consulta el manual oficial.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-memory accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Upgrade de RAM (SODIMM)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ol>
+          <li>Apaga la laptop, desconecta el cargador y quita la bateria (si es extraible).</li>
+          <li>Retira la tapa del compartimiento de RAM (1 o 2 tornillos).</li>
+          <li>Separa los seguros laterales: el modulo sale en diagonal (~30 grados).</li>
+          <li>Inserta el nuevo modulo en diagonal hasta que encaje la muesca y presiona hacia abajo hasta que los seguros hagan clic.</li>
+          <li>Vuelve a colocar la tapa, enciende y verifica en BIOS o Windows que se detecte la RAM.</li>
+        </ol>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Para <strong>doble canal</strong> usa dos modulos identicos (misma marca, capacidad y velocidad). Si la placa es limitada, revisa <a href="../memoria-ram.html">Memoria RAM</a>.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-device-ssd accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Upgrade de almacenamiento y clonado</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>2.5" SATA:</strong> quita el marco/bahia, desconecta el cable y coloca el nuevo.</li>
+          <li><strong>M.2:</strong> retira el tornillo de retencion, desliza la tarjeta en diagonal, presiona y fija con el tornillo.</li>
+          <li><strong>Clonar el disco viejo:</strong> conecta el nuevo disco por USB (caja/adaptador), usa Macrium Reflect o similar para clonar, luego cambia el disco interno.</li>
+          <li>Despues del clonado, comprueba que el BIOS arranque desde el nuevo disco y amplia la particion con Administrador de discos.</li>
+        </ul>
+        <div class="alert-box alert-note" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div>Si el disco viejo es HDD y migras a SSD, activa <strong>AHCI</strong> en la BIOS y verifica el TRIM. Mas detalles de particiones y archivos en <a href="ens-instalacion-so.html">Sistema Operativo</a>.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-battery-charging accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Bateria: diagnostico y reemplazo</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <p class="subhead">Generar informe de bateria en Windows</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-lang">cmd — informe de bateria</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">powercfg</span> <span class="cmd-flag">/batteryreport</span></pre>
+        </div>
+        <p class="text-sm text-secondary">El informe genera un HTML con <strong>capacidad de diseno vs capacidad de carga total</strong>. Si la carga total bajo por debajo del 70-80% de la de diseno, la bateria esta desgastada.</p>
+        <ul>
+          <li><strong>Reemplazo:</strong> pide la bateria con el numero de parte exacto del fabricante (p. ej. L19M4PD5 en Lenovo).</li>
+          <li><strong>Calibracion:</strong> carga al 100%, usa hasta que se apague, recarga sin interrupciones, una vez al mes.</li>
+          <li><strong>Cuida la bateria:</strong> evita dejarla al 100% conectada siempre; los modos de carga limitada (60-80%) prolongan su vida.</li>
+        </ul>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>Si la bateria esta <strong>hinchada</strong>, deja de usarla y reemplazala: el riesgo de incendio es real. Manifiestala como residuo especial.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-keyboard accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Teclado, pantalla y otros repuestos</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Teclado:</strong> compra con el layout correcto (ES-espanol, US). En muchos modelos hay que desmontar la tapa superior; sigue el service manual.</li>
+          <li><strong>Pantalla:</strong> el repuesto debe coincidir en tamano, conector (eDP 30 o 40 pines), resolucion y tipo de panel. Verifica el modelo real del LCD (etiqueta trasera del panel).</li>
+          <li><strong>Bisagras:</strong> fallo comun. Al reemplazar, aprieta con el torque correcto y evita cerrar la tapa de golpe.</li>
+          <li><strong>Tarjeta WiFi:</strong> reemplazo M.2 2230 Key E; revisa la whitelist del fabricante y las antenas (marcalas antes de desconectar).</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-tools accordion-icon" style="color:var(--accent);"></i>
+        <span class="accordion-title">Herramientas y precauciones</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>Destornillador de precision (Phillips #00 y #0), spudger/plaquita plastica y pinzas.</li>
+          <li><strong>Pulsera antiestatica</strong> o toca una superficie metalica antes de tocar componentes.</li>
+          <li>Organiza los tornillos por zona (usa cinta o una caja con separadores): no todos los tornillos son iguales.</li>
+          <li>Siempre <strong>desconecta la bateria</strong> (o el cable de la bateria interna) antes de manipular la placa.</li>
+          <li>Al separar disipadores, reemplaza la <strong>pasta termica</strong> (ver <a href="../mantenimiento/man-pasta-termica.html">Pasta Termica</a>).</li>
+          <li>No fuerces conectores: los flex (pantalla, touchpad) tienen pestillo que se levanta.</li>
+        </ul>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>El mantenimiento general de portatiles (limpieza interna, ventiladores y pasta) se cubre en <a href="../mantenimiento/man-laptop.html">Mantenimiento de Laptop</a>.</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+</body>
+</html>

@@ -12,11 +12,11 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 
 | Métrica | Valor |
 |---|---|
-| Páginas HTML | 62 |
-| Secciones de contenido | 100 |
-| Acordeones expandibles | 418 |
-| Términos de glosario | 84 |
-| Recursos web curados | 140+ |
+| Páginas HTML | 82 |
+| Secciones de contenido | 128 |
+| Acordeones expandibles | 525 |
+| Términos de glosario | 147 |
+| Recursos web curados | 223 |
 | Modelos 3D interactivos | Sí (ensamblaje y kit del técnico) |
 | Temas visuales | Oscuro y claro |
 
@@ -61,6 +61,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - **Recuperación de Datos**: fallos lógicos/físicos y herramientas
 - **Pruebas de PSU**: clip, multímetro, tester ATX y bajo carga
 - **Plan de Respaldo**: estrategia 3-2-1, nube y restauración
+- **Formatear PC/Laptop**: guía paso a paso (respaldo, USB booteable, instalación de Windows/Ubuntu, drivers y laptop)
 
 ### 🌐 Redes de Computadoras
 - **TCP/IP y OSI**: 7 capas, 4 capas, tabla comparativa, protocolos, puertos
@@ -87,13 +88,14 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - Atajos de teclado: Windows, Linux, navegadores, Office
 
 ### 🔗 Recursos
-- 140+ recursos web organizados en 8 categorías filtrables: hardware y benchmarks, redes, sistemas operativos, herramientas de diagnóstico, simuladores y práctica, seguridad y privacidad, formación y certificaciones, comunidades y soporte
+- 220+ recursos web organizados en 14 categorías filtrables: hardware y benchmarks, redes, sistemas operativos, USBs booteables, herramientas de diagnóstico, simuladores, seguridad y privacidad, anonimato, formación y certificaciones, comunidades, monitoreo, recuperación de datos y recursos para técnicos
 - Videos de descarga de simuladores: tutoriales de YouTube (Packet Tracer, GNS3, VirtualBox, VMware, PC Building Simulator)
 
 ### 📖 Referencia de Hardware
 - Referencia rápida: RAM, Cache, PCIe, SATA, voltajes de PSU
 - Formatos de motherboard: E-ATX, ATX, Micro-ATX, Mini-ITX, Nano-ITX, Pico-ITX
 - Códigos POST beep
+- **Memoria RAM**: página dedicada con comparativa completa DDR a DDR5, velocidades JEDEC por módulo, tipos DIMM/SO-DIMM, latencias, dual channel y guía de compra
 
 ### 💽 Instalación y Almacenamiento
 - Sistemas de archivos: FAT32, exFAT, NTFS, ext4, Btrfs, APFS
@@ -123,7 +125,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 - **Animaciones**: transiciones con AOS (Animate On Scroll) y entradas animadas con anime.js
 - **Visores 3D de componentes**: modelos interactivos de cables, conectores y refrigeración
 - **Calculadora de subred**: herramienta interactiva para calcular rangos IP
-- **Filtro de recursos**: pills de categoría para filtrar los 140+ recursos web
+- **Filtro de recursos**: pills de categoría para filtrar los 220+ recursos web
 - **Tips de simuladores**: consejos para descargar y ejecutar los simuladores de práctica
 - **Checklist interactivo**: marcar pasos completados del ensamblaje
 - **Bloques de código**: con botón de copiar al portapapeles
@@ -137,7 +139,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 
 | Tecnología | Uso |
 |---|---|
-| HTML5 | Estructura y semántica de las 62 páginas |
+| HTML5 | Estructura y semántica de las 82 páginas |
 | CSS3 | Custom properties, grid, flexbox, diseño responsive |
 | JavaScript vanilla | Interactividad: acordeones, checklist, búsqueda, tema |
 | Bootstrap Icons | Iconografía |
@@ -196,13 +198,14 @@ pages/
     ens-*.html          → Subsecciones (herramientas, componentes, placa base, tipos, paso a paso, ...)
   mantenimiento/        → Módulo de mantenimiento
     mantenimiento.html  → Hub (índice de subsecciones)
-    man-*.html          → Subsecciones (preventivo, correctivo, software diag, ...)
+    man-*.html          → Subsecciones (preventivo, correctivo, software diag, formatear, ...)
   redes/                → Módulo de redes
     redes.html          → Hub (índice de subsecciones)
     red-*.html          → Subsecciones (tcp-osi, topologías, ip-address, ...)
   comandos.html         → Comandos técnicos y atajos de teclado
   recursos.html         → Recursos web (enlaces curados)
   referencia.html       → Referencia rápida de hardware (RAM, PCIe, SATA, PSU, MB, beep)
+  memoria-ram.html      → Memoria RAM (generaciones DDR, velocidades, tipos y latencias)
   instalacion.html      → Instalación y almacenamiento (FS, RAID, USB boot, particionado, post-install)
   glosario.html         → Glosario de términos técnicos
 ```
