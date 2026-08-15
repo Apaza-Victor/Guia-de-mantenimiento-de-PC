@@ -263,6 +263,12 @@
         </div>
       </div></div>
     </div>
+
+    <div class="chart-box" data-aos="fade-up">
+      <h4><i class="bi bi-graph-up-arrow"></i> Ancho de banda maximo por modulo</h4>
+      <p>GB/s por canal a la velocidad mas alta tipica de cada generacion: el salto de DDR4 a DDR5 es el mayor en la historia de la RAM.</p>
+      <div class="chart-canvas"><canvas id="chart-bw-gen" aria-label="Grafico de ancho de banda por generacion DDR" role="img"></canvas></div>
+    </div>
   </div>
 
   <div class="content-section" id="tipos-dimm" data-aos="fade-up">
@@ -353,6 +359,12 @@
       <tr><td>DDR5-6000</td><td>CL30</td><td>10.0 ns</td><td>1.35V (EXPO)</td></tr>
       <tr><td>DDR5-7200</td><td>CL34</td><td>9.4 ns</td><td>1.4V (XMP)</td></tr>
     </table></div>
+
+    <div class="chart-box" data-aos="fade-up">
+      <h4><i class="bi bi-stopwatch"></i> Latencia real por modulo</h4>
+      <p>Formula: (CL / MT/s) x 2000. Aunque DDR5 tiene CL mas alto, su velocidad compensa y la latencia real queda igual o mejor que DDR4.</p>
+      <div class="chart-canvas"><canvas id="chart-lat-real" aria-label="Grafico de latencia real de memoria RAM" role="img"></canvas></div>
+    </div>
 
     <div class="alert-box alert-warn" style="margin-top:12px;">
       <i class="bi bi-exclamation-triangle"></i>
@@ -564,6 +576,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="../assets/js/charts.js"></script>
 <script src="../assets/js/theme.js"></script>
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/ui.js"></script>

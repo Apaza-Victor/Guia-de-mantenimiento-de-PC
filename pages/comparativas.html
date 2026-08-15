@@ -136,6 +136,11 @@
             </tbody>
           </table>
         </div>
+        <div class="chart-box" data-aos="fade-up">
+          <h4><i class="bi bi-activity"></i> Velocidad de lectura</h4>
+          <p>Velocidad real aproximada de cada tipo de almacenamiento (escala logaritmica).</p>
+          <div class="chart-canvas"><canvas id="chart-read-speed" aria-label="Grafico de velocidad de lectura por tipo de almacenamiento" role="img"></canvas></div>
+        </div>
         <div class="alert-box alert-info" style="margin-top:12px;">
           <i class="bi bi-lightbulb"></i>
           <div><strong>Consejo:</strong> la combinacion ideal es un SSD NVMe para Windows/programas + un HDD para archivos y backups. La mayor mejora de rendimiento que puedes hacerle a una PC vieja es cambiar el disco de sistema por un SSD.</div>
@@ -211,6 +216,11 @@
             </tbody>
           </table>
         </div>
+        <div class="chart-box" data-aos="fade-up">
+          <h4><i class="bi bi-graph-up-arrow"></i> Velocidad maxima tipica por generacion</h4>
+          <p>Evolucion en MT/s de DDR hasta DDR5 (valores representativos de cada generacion).</p>
+          <div class="chart-canvas"><canvas id="chart-ddr-mts" aria-label="Grafico de velocidad maxima por generacion DDR" role="img"></canvas></div>
+        </div>
         <div class="alert-box alert-warn" style="margin-top:12px;">
           <i class="bi bi-exclamation-triangle"></i>
           <div><strong>Nunca son compatibles entre generaciones:</strong> cada una cambia voltaje, posicion de la muesca y numero de pines. Un modulo DDR5 no cabe en slot DDR4, ni DDR3 en DDR4, etc. Siempre revisa el tipo que soporta tu placa base (DIMM para escritorio, SO-DIMM para portatil).</div>
@@ -278,6 +288,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="../assets/js/charts.js"></script>
 <script src="../assets/js/theme.js"></script>
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/ui.js"></script>

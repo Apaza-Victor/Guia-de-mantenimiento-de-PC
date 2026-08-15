@@ -181,15 +181,39 @@
           </table></div>
           <div class="vis" style="margin-top:12px;">
             <div class="vis-title"><i class="bi bi-thermometer-half"></i> Rango de temperatura — Referencia rapida</div>
-            <div class="vis-sub">Zona verde = normal · amarilla = vigilancia · roja = accion inmediata</div>
-            <div class="vis-grid vis-3">
-              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-cpu"></i></div><div><div class="nm">CPU</div><div class="fd">Idle 30-50°C · Carga 60-80°C</div><div class="prt">critico &gt;85°C</div></div></div>
-              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-gpu-card"></i></div><div><div class="nm">GPU</div><div class="fd">Idle 30-45°C · Carga 65-85°C</div><div class="prt">critico &gt;90°C</div></div></div>
-              <div class="proto-card"><div class="ico" style="background:rgba(227,179,65,.12);color:#e3b341;"><i class="bi bi-hdd"></i></div><div><div class="nm">SSD NVMe</div><div class="fd">30-45°C · Carga 45-65°C</div><div class="prt">critico &gt;70°C</div></div></div>
-              <div class="proto-card"><div class="ico" style="background:rgba(227,179,65,.12);color:#e3b341;"><i class="bi bi-hard-drive"></i></div><div><div class="nm">HDD</div><div class="fd">25-40°C · Carga 35-50°C</div><div class="prt">critico &gt;55°C</div></div></div>
-              <div class="proto-card"><div class="ico" style="background:rgba(255,107,107,.12);color:#ff6b6b;"><i class="bi bi-memory"></i></div><div><div class="nm">RAM</div><div class="fd">30-40°C · Carga 40-55°C</div><div class="prt">critico &gt;60°C</div></div></div>
-              <div class="proto-card"><div class="ico" style="background:rgba(255,107,107,.12);color:#ff6b6b;"><i class="bi bi-power"></i></div><div><div class="nm">PSU</div><div class="fd">30-45°C · Carga 45-65°C</div><div class="prt">critico &gt;80°C</div></div></div>
+            <div class="vis-sub">Escala de 0 a 100°C · verde = normal · amarilla = vigilancia · roja = accion inmediata</div>
+            <div class="thermo">
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-cpu"></i>CPU</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:80%"></div><div class="thermo-zone vig" style="left:80%;width:5%"></div><div class="thermo-zone crit" style="left:85%;width:15%"></div><div class="thermo-mark" style="left:85%"></div></div><div class="thermo-lbl">Idle 30-50 · Carga 60-80 · critico &gt;85°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-gpu-card"></i>GPU</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:85%"></div><div class="thermo-zone vig" style="left:85%;width:5%"></div><div class="thermo-zone crit" style="left:90%;width:10%"></div><div class="thermo-mark" style="left:90%"></div></div><div class="thermo-lbl">Idle 30-45 · Carga 65-85 · critico &gt;90°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-hdd"></i>SSD NVMe</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:65%"></div><div class="thermo-zone vig" style="left:65%;width:5%"></div><div class="thermo-zone crit" style="left:70%;width:30%"></div><div class="thermo-mark" style="left:70%"></div></div><div class="thermo-lbl">Idle 30-45 · Carga 45-65 · critico &gt;70°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-hard-drive"></i>HDD</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:50%"></div><div class="thermo-zone vig" style="left:50%;width:5%"></div><div class="thermo-zone crit" style="left:55%;width:45%"></div><div class="thermo-mark" style="left:55%"></div></div><div class="thermo-lbl">Idle 25-40 · Carga 35-50 · critico &gt;55°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-memory"></i>RAM</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:55%"></div><div class="thermo-zone vig" style="left:55%;width:5%"></div><div class="thermo-zone crit" style="left:60%;width:40%"></div><div class="thermo-mark" style="left:60%"></div></div><div class="thermo-lbl">Idle 30-40 · Carga 40-55 · critico &gt;60°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-cpu"></i>VRM</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:85%"></div><div class="thermo-zone vig" style="left:85%;width:5%"></div><div class="thermo-zone crit" style="left:90%;width:10%"></div><div class="thermo-mark" style="left:90%"></div></div><div class="thermo-lbl">Idle 35-45 · Carga 60-85 · critico &gt;90°C</div></div>
+              </div>
+              <div class="thermo-row">
+                <div class="thermo-name"><i class="bi bi-power"></i>PSU</div>
+                <div><div class="thermo-track"><div class="thermo-zone ok" style="width:65%"></div><div class="thermo-zone vig" style="left:65%;width:15%"></div><div class="thermo-zone crit" style="left:80%;width:20%"></div><div class="thermo-mark" style="left:80%"></div></div><div class="thermo-lbl">Idle 30-45 · Carga 45-65 · critico &gt;80°C</div></div>
+              </div>
+              <div class="thermo-scale"><span>0°C</span><span>25°C</span><span>50°C</span><span>75°C</span><span>100°C</span></div>
             </div>
+            <div class="thermo-note">La marca vertical indica el umbral critico de cada componente. Si la temperatura supera esa marca bajo carga normal, aplica la accion recomendada de la tabla superior.</div>
           </div>
           <p>Si las temperaturas son altas, revisa: pasta termica, flujo de aire, ventiladores funcionando, filtros limpios.</p>
         </div></div>
@@ -230,33 +254,101 @@
         <div class="accordion-body"><div class="accordion-content">
           <p>La cantidad y el patron importan: demasiada pasta actua como aislante, muy poca deja puntos sin cubrir. Para CPUs de escritorio (die grande), el patron en punto central o en linea es el mas eficaz.</p>
           <div class="paste-flow" style="margin:14px 0;">
+            <svg width="0" height="0" style="position:absolute;" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="ihsMetal" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+                  <stop offset=".5" stop-color="#ffffff" stop-opacity=".02"/>
+                  <stop offset="1" stop-color="#000000" stop-opacity=".16"/>
+                </linearGradient>
+              </defs>
+            </svg>
             <div class="paste-box ok">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="5" fill="#c9a45c"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Punto central sobre el IHS">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect class="die" x="46" y="44" width="28" height="16" rx="3"/>
+                <circle cx="60" cy="33" r="6.5" fill="#c9a45c" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="74" cy="40" r="2.5" fill="#c9a45c" opacity=".45"/>
+                <circle cx="46" cy="31" r="2" fill="#c9a45c" opacity=".35"/>
+              </svg>
               <div class="nm">Punto central</div>
               <div class="ds">Grano de arroz · AM4 / LGA1700</div>
             </div>
             <div class="paste-box ok">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><rect x="22" y="21" width="36" height="8" rx="4" fill="#c9a45c"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Linea horizontal sobre el die alargado">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect class="die" x="38" y="46" width="44" height="14" rx="3"/>
+                <rect x="42" y="30" width="36" height="7" rx="3.5" fill="#c9a45c" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="82" cy="36" r="2" fill="#c9a45c" opacity=".45"/>
+                <circle cx="40" cy="34" r="2" fill="#c9a45c" opacity=".35"/>
+              </svg>
               <div class="nm">Linea horizontal</div>
               <div class="ds">Dies alargados · AM5</div>
             </div>
             <div class="paste-box ok">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><path d="M40 15 L40 35 M30 20 L50 20 M30 30 L50 30 M35 15 L35 35 M45 15 L45 35" stroke="#c9a45c" stroke-width="3"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Cruz en X sobre un die grande">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect class="die" x="42" y="42" width="36" height="20" rx="3"/>
+                <path d="M48 22 L72 34 M48 34 L72 22" stroke="#c9a45c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M48 22 L72 34 M48 34 L72 22" stroke="#a8874a" stroke-width="1" opacity=".5"/>
+              </svg>
               <div class="nm">Cruz (X)</div>
               <div class="ds">GPUs / dies grandes</div>
             </div>
             <div class="paste-box no">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><rect x="14" y="12" width="52" height="26" rx="4" fill="#c9a45c" opacity=".5"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Capa extendida con burbujas de aire">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect x="31" y="18" width="58" height="46" rx="4" fill="#c9a45c" opacity=".45"/>
+                <circle cx="46" cy="32" r="5" fill="var(--bg-card)" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="72" cy="48" r="6" fill="var(--bg-card)" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="60" cy="26" r="3.5" fill="var(--bg-card)" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="82" cy="34" r="3" fill="var(--bg-card)" stroke="#a8874a" stroke-width="1"/>
+              </svg>
               <div class="nm">Capa extendida</div>
               <div class="ds">Riesgo de burbujas</div>
             </div>
             <div class="paste-box no">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="11" fill="#c9a45c" opacity=".7"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Exceso de pasta que desborda el die">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect class="die" x="46" y="40" width="28" height="14" rx="3"/>
+                <circle cx="60" cy="33" r="15" fill="#c9a45c" opacity=".75" stroke="#a8874a" stroke-width="1"/>
+                <circle cx="70" cy="45" r="5" fill="#c9a45c" opacity=".65"/>
+                <circle cx="50" cy="45" r="4.5" fill="#c9a45c" opacity=".65"/>
+              </svg>
               <div class="nm">Exceso</div>
               <div class="ds">Actua como aislante</div>
             </div>
             <div class="paste-box no">
-              <svg class="svg-mini" viewBox="0 0 80 50"><rect x="8" y="6" width="64" height="38" rx="6" fill="none" stroke="var(--border-hover)" stroke-width="2"/><circle cx="40" cy="25" r="2" fill="#c9a45c"/></svg>
+              <svg class="svg-mini" viewBox="0 0 120 84" role="img" aria-label="Pasta insuficiente que deja el die sin cubrir">
+                <rect class="sub" x="14" y="8" width="92" height="70" rx="6"/>
+                <rect class="pin" x="44" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="56" y="77" width="8" height="5" rx="1"/>
+                <rect class="pin" x="68" y="77" width="8" height="5" rx="1"/>
+                <rect class="ihs" x="26" y="14" width="68" height="58" rx="5"/>
+                <rect class="die" x="46" y="40" width="28" height="14" rx="3"/>
+                <circle cx="52" cy="33" r="3" fill="#c9a45c" stroke="#a8874a" stroke-width="1"/>
+                <path d="M82 26 l3 3 M85 26 l3 3" stroke="rgba(255,107,107,.8)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
               <div class="nm">Deficiente</div>
               <div class="ds">Deja puntos sin cubrir</div>
             </div>

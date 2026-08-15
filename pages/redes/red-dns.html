@@ -166,6 +166,15 @@
           <li>El servidor autoritativo devuelve el <strong>registro A/AAAA</strong> pedido.</li>
           <li>El resolver guarda la respuesta en cache (segun TTL) y tu equipo se conecta a la IP.</li>
         </ol>
+        <div class="mermaid">
+flowchart TD
+    A["PC: consulta www.ejemplo.com"] --> B["Resolver recursivo<br/>(router / ISP)"]
+    B -->|"1. no esta en cache"| C["Servidor raiz (.)"]
+    C -->|"2. autoridad del TLD"| D["Servidor TLD (.com)"]
+    D -->|"3. autoridad del dominio"| E["Servidor autoritativo<br/>ns1.ejemplo.com"]
+    E -->|"4. registro A/AAAA"| B
+    B -->|"5. responde y guarda en cache (TTL)"| A
+        </div>
         <div class="alert-box alert-note" style="margin-top:12px;">
           <i class="bi bi-info-circle"></i>
           <div>En la practica el proceso tarda milisegundos porque la cache evita repetir toda la cadena. El <strong>recursive resolver</strong> hace el trabajo pesado por tu equipo.</div>
@@ -268,6 +277,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/mermaid-init.js"></script>
 <script src="../../assets/js/theme.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>

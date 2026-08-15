@@ -123,6 +123,9 @@
             <tr><td>USB4</td><td>40 Gbps</td><td>USB4 Gen 3x2</td><td>Estandar moderno en USB-C (unificado con Thunderbolt)</td></tr>
             <tr><td>Thunderbolt 4</td><td>40 Gbps</td><td>TB4</td><td>GPUs externas, monitores 8K, cadena de dispositivos</td></tr>
           </table></div>
+          <div class="chart-box">
+            <canvas id="chart-usb-speeds" aria-label="Velocidades de cada version de USB en escala logaritmica" role="img"></canvas>
+          </div>
           <div class="info-box info-tip mt-2">
             <span class="icon"><i class="bi bi-lightbulb"></i></span>
             <div class="content"><strong>Identificar el puerto:</strong> Los puertos USB 3.0+ suelen tener el inserto de color azul y el logo "SS" (SuperSpeed). Los USB-C de 20 Gbps o mas soportan carga rapida (Power Delivery) y video alterno.</div>
@@ -335,7 +338,9 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 <script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/charts.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>

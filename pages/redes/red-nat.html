@@ -139,6 +139,20 @@
           <tr><td>NAT dinamico</td><td>Un pool de publicas se reparte entre privadas</td><td>Menos comun en hogar</td></tr>
           <tr><td>PAT / Overload</td><td>Todas las privadas salen por una sola publica con distintos puertos</td><td>El NAT tipico del router hogareno</td></tr>
         </table></div>
+        <div class="mermaid">
+flowchart LR
+    subgraph LAN["Red local (privada)"]
+        A["PC 192.168.1.10<br/>salida: 192.168.1.10:5000"]
+    end
+    subgraph WAN["Internet (publica)"]
+        C["Servidor destino 93.184.216.34"]
+    end
+    B["Router NAT/PAT<br/>IP publica 203.0.113.5"]
+    A -->|"sin traduccion"| B
+    B -->|"traduce a 203.0.113.5:65000"| C
+    C -.->|"respuesta a 203.0.113.5:65000"| B
+    B -.->|"tabla NAT: devuelve a la privada"| A
+        </div>
         <div class="alert-box alert-note" style="margin-top:12px;">
           <i class="bi bi-info-circle"></i>
           <div>El PAT (Port Address Translation) es el motivo de que "el puerto este cerrado": el router distingue conexiones por puerto, y sin reglas no sabe a que equipo interno reenviar las conexiones entrantes.</div>
@@ -249,6 +263,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/mermaid-init.js"></script>
 <script src="../../assets/js/theme.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>

@@ -184,6 +184,9 @@
             <tr><td>Molex</td><td>4</td><td>Ventiladores, LEDs, IDE</td><td>~54W</td></tr>
             <tr><td>Berg (disquetera)</td><td>4 (mini)</td><td>Disquetera 3.5"</td><td>~10W</td></tr>
           </table></div>
+          <div class="chart-box">
+            <canvas id="chart-psu-watts" aria-label="Potencia tipica de cada conector de alimentacion" role="img"></canvas>
+          </div>
           <div class="info-box info-warn" style="margin-top:12px;">
             <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
             <div class="content"><strong>No mezcles cables modulares entre marcas:</strong> los cables modulares de PSU NO son estandar. Un cable PCIe de marca A conectado a una PSU marca B puede entregar voltaje por el pin equivocado y quemar la GPU. Usa siempre los cables de tu propia fuente.</div>
@@ -384,7 +387,9 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 <script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/charts.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>

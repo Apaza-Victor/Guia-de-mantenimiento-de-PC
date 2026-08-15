@@ -123,6 +123,17 @@
           <li><strong>R</strong>equest: el cliente solicita formalmente esa oferta.</li>
           <li><strong>A</strong>ck: el servidor confirma y entrega la concesion (lease).</li>
         </ol>
+        <div class="mermaid">
+sequenceDiagram
+    participant C as "Cliente (PC)"
+    participant S as "Servidor DHCP"
+    C->>S: DHCPDISCOVER (broadcast, UDP 67/68)
+    Note over C,S: El cliente busca servidores disponibles
+    S-->>C: DHCPOFFER (propuesta de IP y parametros)
+    C->>S: DHCPREQUEST (acepta esa oferta)
+    S-->>C: DHCPACK (concesion confirmada)
+    Note over C,S: Lease activa: IP + mascara + gateway + DNS
+        </div>
         <div class="alert-box alert-tip" style="margin-top:12px;">
           <i class="bi bi-lightbulb"></i>
           <div>Si hay varios servidores DHCP (por ejemplo un router de mas conectado), el cliente acepta solo una oferta; de ahi los problemas de IP erronea o "sin internet" en redes mal configuradas.</div>
@@ -236,6 +247,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/mermaid-init.js"></script>
 <script src="../../assets/js/theme.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>

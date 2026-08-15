@@ -246,6 +246,9 @@
           <tr><td>Alta</td><td>RTX 4080 / RX 7900 XTX</td><td>16 - 24 GB</td><td>1440p ultra, 4K</td><td>$900 - $1300</td></tr>
           <tr><td>Top</td><td>RTX 4090</td><td>24 GB</td><td>4K maximo, IA, render</td><td>$1600+</td></tr>
         </table></div>
+        <div class="chart-box">
+          <canvas id="chart-gpu-price" aria-label="Rango de precios de GPU por escalon en dolares" role="img"></canvas>
+        </div>
         <div class="alert-box alert-info"><i class="bi bi-info-circle"></i><div><strong>Prioriza segun tu monitor:</strong> para 1080p basta un escalon de entrada o media; para 1440p 144 Hz apunta a media-alta; el 4K solo justifica un escalon alto o top. Una RTX 4090 con un monitor 1080p 60 Hz es dinero mal gastado.</div></div>
       </div></div>
     </div>
@@ -309,7 +312,9 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 <script src="../assets/js/theme.js"></script>
+<script src="../assets/js/charts.js"></script>
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/ui.js"></script>
 <script src="../assets/js/subnet.js"></script>

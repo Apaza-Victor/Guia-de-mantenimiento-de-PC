@@ -31,6 +31,9 @@
     Redes avanzadas: routing-topo, switch-vlan, vlan-trunk, hub-vs-switch.
     Mantenimiento: ups, backup-321, plan-calendar.
     Refrigeracion: aio-cooler, air-cooler, liquid-loop.
+   Emparejado macho + hembra: los conectores con entrada en PORTS se
+   muestran lado a lado con su puerto receptor (ver seccion PUERTOS
+   HEMBRA). Ejemplo: atx24, sata-power, usb-a, hdmi, dp, rj45, ...
    ============================================================ */
 
 (function () {
@@ -4062,6 +4065,563 @@
     return g;
   };
 
+  /* ============================================================
+     PUERTOS HEMBRA: contraparte receptora de cada conector macho.
+     Cuando un modelo tiene entrada en PORTS, el visor muestra el
+     conector macho (clavija) y su puerto hembra (receptaculo).
+     ============================================================ */
+  function femaleGrid(rows, cols, gapX, gapY, o) {
+    o = o || {};
+    const edgeX = o.edgeX !== undefined ? o.edgeX : 3.6;
+    const edgeY = o.edgeY !== undefined ? o.edgeY : 3;
+    const w = (cols - 1) * gapX + edgeX * 2;
+    const h = (rows - 1) * gapY + edgeY * 2;
+    const d = o.depth !== undefined ? o.depth : 9;
+    const g = new THREE.Group();
+    const frame = box(w, h, d, o.color || C.black, { roughness: o.roughness || 0.4 });
+    g.add(frame);
+    const wall = o.wall !== undefined ? o.wall : 3.2;
+    const cavity = box(w - wall, h - wall, d - 2.4, 0x0d0f14);
+    cavity.position.z = 0.4;
+    g.add(cavity);
+    const holeR = o.holeR !== undefined ? o.holeR : 0.55;
+    const offX = ((cols - 1) * gapX) / 2;
+    const offY = ((rows - 1) * gapY) / 2;
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const hole = cyl(holeR, 1.3, 0x000000, { seg: 14 });
+        hole.rotation.x = Math.PI / 2;
+        hole.position.set(-offX + c * gapX, offY - r * gapY, d / 2 - 0.3);
+        g.add(hole);
+      }
+    }
+    if (o.clip) {
+      const clip = box(w * 0.3, 2.6, 2.4, C.plasticLt);
+      clip.position.set(0, -h / 2 + 1, 0.5);
+      g.add(clip);
+    }
+    return g;
+  }
+
+  function femaleHdmi(scale) {
+    scale = scale || 1;
+    const g = new THREE.Group();
+    const frame = box(14 * scale, 4.6 * scale, 6 * scale, C.metal, { metalness: 0.85, roughness: 0.3 });
+    g.add(frame);
+    const cavity = box(11.6 * scale, 3.4 * scale, 4.4 * scale, 0x0d0f14);
+    cavity.position.z = 0.4;
+    g.add(cavity);
+    const rows = [10, 9];
+    rows.forEach((n, r) => {
+      const w = (n - 1) * 1.1 * scale;
+      const y = (r === 0 ? 1.15 : -1.15) * scale;
+      for (let c = 0; c < n; c++) {
+        const hole = cyl(0.16 * scale, 1.2 * scale, 0x000000, { seg: 10 });
+        hole.rotation.x = Math.PI / 2;
+        hole.position.set(-w / 2 + c * 1.1 * scale, y, 3.4 * scale);
+        g.add(hole);
+      }
+    });
+    return g;
+  }
+
+  function femaleDp(scale) {
+    scale = scale || 1;
+    const g = new THREE.Group();
+    const frame = box(12.4 * scale, 4.6 * scale, 6.2 * scale, C.metal, { metalness: 0.85, roughness: 0.3 });
+    g.add(frame);
+    const cavity = box(10.8 * scale, 3.4 * scale, 4.6 * scale, 0x0d0f14);
+    cavity.position.z = 0.5;
+    g.add(cavity);
+    const w = 19 * 0.5 * scale;
+    for (let c = 0; c < 20; c++) {
+      const hole = cyl(0.15 * scale, 1.2 * scale, 0x000000, { seg: 10 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(-w / 2 + c * 0.5 * scale, 0, 3.6 * scale);
+      g.add(hole);
+    }
+    const latch = box(6 * scale, 1.5 * scale, 1.6 * scale, 0x8a5cf5);
+    latch.position.set(0, 3.1 * scale, 3 * scale);
+    g.add(latch);
+    return g;
+  }
+
+  function femaleVga() {
+    const g = new THREE.Group();
+    const b1 = box(16, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
+    b1.position.y = -2.9;
+    g.add(b1);
+    const b2 = box(15.2, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
+    b2.position.y = -0.2;
+    g.add(b2);
+    const b3 = box(14.4, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
+    b3.position.y = 2.5;
+    g.add(b3);
+    const rows = [5, 5, 5];
+    rows.forEach((n, r) => {
+      const w = (n - 1) * 2.4;
+      const y = 3.2 - r * 2.2;
+      for (let c = 0; c < n; c++) {
+        const hole = cyl(0.42, 1.2, 0x000000, { seg: 12 });
+        hole.rotation.x = Math.PI / 2;
+        hole.position.set(-w / 2 + c * 2.4, y, 2.6);
+        g.add(hole);
+      }
+    });
+    [-1, 1].forEach(s => {
+      const thumb = cyl(1.7, 4, C.metal, { seg: 16 });
+      thumb.rotation.x = Math.PI / 2;
+      thumb.position.set(s * 9, -4.6, 0);
+      g.add(thumb);
+      const hole = cyl(0.7, 0.8, 0x000000, { seg: 12 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(s * 9, -4.6, 1.8);
+      g.add(hole);
+    });
+    return g;
+  }
+
+  function femaleDvi() {
+    const g = new THREE.Group();
+    const shell = box(17, 5.8, 6.4, 0xe9ebee, { roughness: 0.45 });
+    g.add(shell);
+    const cavity = box(15.4, 4.6, 5.4, 0x0d0f14);
+    cavity.position.z = 0.4;
+    g.add(cavity);
+    const rows = [8, 8, 8];
+    rows.forEach((n, r) => {
+      const w = (n - 1) * 1.55;
+      const y = 1.7 - r * 1.55;
+      for (let c = 0; c < n; c++) {
+        const hole = cyl(0.28, 1.2, 0x000000, { seg: 12 });
+        hole.rotation.x = Math.PI / 2;
+        hole.position.set(-w / 2 + c * 1.55, y, 2.8);
+        g.add(hole);
+      }
+    });
+    const slot = box(3.4, 0.9, 1.4, 0x000000);
+    slot.position.set(7.4, 0, 2.8);
+    g.add(slot);
+    [-1, 1].forEach(s => {
+      const screw = cyl(0.8, 2.6, C.metal, { seg: 14 });
+      screw.rotation.x = Math.PI / 2;
+      screw.position.set(s * 9.4, -2.7, 0);
+      g.add(screw);
+    });
+    return g;
+  }
+
+  function femaleSvideo() {
+    const g = new THREE.Group();
+    const ring = cyl(3.6, 5, C.metal, { seg: 24, metalness: 0.7, roughness: 0.3 });
+    ring.rotation.x = Math.PI / 2;
+    g.add(ring);
+    const face = cyl(3.0, 0.8, 0x0d0f14, { seg: 24 });
+    face.rotation.x = Math.PI / 2;
+    face.position.z = 2.6;
+    g.add(face);
+    [[-0.9, 1.1], [0.9, -1.1], [-0.9, -1.1], [0.9, 1.1]].forEach(([x, y]) => {
+      const hole = cyl(0.35, 1.0, 0x000000, { seg: 12 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(x, y, 2.9);
+      g.add(hole);
+    });
+    const key = box(1.1, 0.9, 0.9, 0x17181c);
+    key.position.set(3.3, 0, 2);
+    g.add(key);
+    return g;
+  }
+
+  function femaleRca(color) {
+    const g = new THREE.Group();
+    const ring = cyl(2.2, 4, color, { seg: 20, roughness: 0.35 });
+    ring.rotation.x = Math.PI / 2;
+    g.add(ring);
+    const face = cyl(1.8, 0.8, 0x0d0f14, { seg: 20 });
+    face.rotation.x = Math.PI / 2;
+    face.position.z = 2.1;
+    g.add(face);
+    const hole = cyl(0.8, 1.2, 0x000000, { seg: 14 });
+    hole.rotation.x = Math.PI / 2;
+    hole.position.z = 2.3;
+    g.add(hole);
+    return g;
+  }
+
+  function femaleUsbA() {
+    const g = new THREE.Group();
+    const frame = box(12.2, 4.8, 5.8, C.metal, { metalness: 0.85, roughness: 0.28 });
+    g.add(frame);
+    const cavity = box(10.6, 3.4, 4.8, 0x0d0f14);
+    cavity.position.z = 0.3;
+    g.add(cavity);
+    const tongue = box(10.6, 0.8, 0.8, 0x0d0f14);
+    tongue.position.set(0, -0.8, 3);
+    g.add(tongue);
+    [0.9, -0.3].forEach(x => {
+      const pad = box(0.4, 0.15, 0.6, C.gold, { metalness: 0.7 });
+      pad.position.set(x, -0.3, 3.2);
+      g.add(pad);
+    });
+    return g;
+  }
+
+  function femaleUsbB() {
+    const g = new THREE.Group();
+    const frame = box(8.4, 7.8, 5.6, C.metal, { metalness: 0.85, roughness: 0.28 });
+    g.add(frame);
+    const cavity = box(7, 6, 4.8, 0x0d0f14);
+    cavity.position.z = 0.5;
+    g.add(cavity);
+    const tongue = box(7, 1, 0.8, 0x0d0f14);
+    tongue.position.set(0, 0, 3.2);
+    g.add(tongue);
+    [-1.6, 1.6].forEach(x => {
+      const pad = box(0.4, 0.15, 0.6, C.gold, { metalness: 0.7 });
+      pad.position.set(x, 0.5, 3.3);
+      g.add(pad);
+    });
+    return g;
+  }
+
+  function femaleUsbC() {
+    const g = new THREE.Group();
+    const frame = box(8.6, 3.6, 5.5, C.metal, { metalness: 0.85, roughness: 0.28 });
+    g.add(frame);
+    const cavity = cyl(3.2, 5, 0x0d0f14, { seg: 24 });
+    cavity.rotation.x = Math.PI / 2;
+    cavity.scale.set(1, 0.5, 1);
+    cavity.position.z = 0.3;
+    g.add(cavity);
+    const tongue = box(6.4, 1.2, 0.8, 0x0d0f14);
+    tongue.position.set(0, 0, 3);
+    g.add(tongue);
+    [-1.5, 1.5].forEach(y => {
+      const w = 11 * 0.42;
+      for (let c = 0; c < 12; c++) {
+        const pad = box(0.16, 0.14, 0.5, C.gold, { metalness: 0.7 });
+        pad.position.set(-w / 2 + c * 0.42, y, 3.3);
+        g.add(pad);
+      }
+    });
+    return g;
+  }
+
+  function femaleUsbMini() {
+    const g = new THREE.Group();
+    const frame = box(7, 3.4, 4.8, C.metal, { metalness: 0.85, roughness: 0.28 });
+    g.add(frame);
+    const cavity = box(5.6, 2.4, 4.2, 0x0d0f14);
+    cavity.position.z = 0.4;
+    g.add(cavity);
+    [-0.6, 0, 0.6].forEach(x => {
+      const hole = cyl(0.14, 1.0, 0x000000, { seg: 10 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(x, 0, 2.9);
+      g.add(hole);
+    });
+    return g;
+  }
+
+  function femaleUsbMicro() {
+    const g = new THREE.Group();
+    const frame = box(7.4, 1.9, 5.6, C.metal, { metalness: 0.85, roughness: 0.28 });
+    g.add(frame);
+    const cavity = box(6.2, 1.3, 5.4, 0x0d0f14);
+    cavity.position.z = 0.3;
+    g.add(cavity);
+    [-0.4, 0, 0.4].forEach(x => {
+      const hole = cyl(0.12, 1.0, 0x000000, { seg: 10 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(x, 0, 3.3);
+      g.add(hole);
+    });
+    return g;
+  }
+
+  function femaleJack35() {
+    const g = new THREE.Group();
+    const panel = box(8, 8, 3, 0x2a2d36, { roughness: 0.4 });
+    g.add(panel);
+    const ring = cyl(1.9, 2, C.metal, { seg: 22, metalness: 0.85, roughness: 0.25 });
+    ring.rotation.x = Math.PI / 2;
+    ring.position.z = 1.8;
+    g.add(ring);
+    const hole = cyl(0.9, 1.4, 0x000000, { seg: 18 });
+    hole.rotation.x = Math.PI / 2;
+    hole.position.z = 2.2;
+    g.add(hole);
+    return g;
+  }
+
+  function femaleToslink() {
+    const g = new THREE.Group();
+    const body = box(6.5, 6.5, 6, 0x17181c);
+    g.add(body);
+    const door = box(4, 4, 1.2, 0x0d0f14);
+    door.position.set(0, 0, 3.2);
+    g.add(door);
+    const lens = sphere(1.3, 0xd8433d, { transparent: true, opacity: 0.85 });
+    lens.position.set(0, 0, 3.8);
+    g.add(lens);
+    return g;
+  }
+
+  function femaleRj45() {
+    const g = new THREE.Group();
+    const body = box(12, 9, 14, 0x3a3e49, { roughness: 0.4 });
+    g.add(body);
+    const cavity = box(10, 7, 12, 0x0d0f14);
+    cavity.position.set(0, 0.2, -0.4);
+    g.add(cavity);
+    for (let c = 0; c < 8; c++) {
+      const p = box(0.85, 0.35, 2.6, C.gold, { metalness: 0.7, roughness: 0.3 });
+      p.position.set(-7 * 0.5 + c * 1.05, 1.9, 4.4);
+      p.rotation.x = -0.5;
+      g.add(p);
+    }
+    return g;
+  }
+
+  function femaleRj11() {
+    const g = new THREE.Group();
+    const body = box(10, 6.5, 13, 0x3a3e49, { roughness: 0.4 });
+    g.add(body);
+    const cavity = box(8, 5, 11, 0x0d0f14);
+    cavity.position.set(0, 0.3, -0.4);
+    g.add(cavity);
+    for (let c = 0; c < 4; c++) {
+      const p = box(0.7, 0.3, 2.2, C.gold, { metalness: 0.7, roughness: 0.3 });
+      p.position.set(-3 * 0.5 + c * 0.9, 1.6, 4.8);
+      p.rotation.x = -0.45;
+      g.add(p);
+    }
+    return g;
+  }
+
+  function femalePs2() {
+    const g = new THREE.Group();
+    const ring = cyl(2.4, 3, 0x8a5cf5, { seg: 24, roughness: 0.4 });
+    ring.rotation.x = Math.PI / 2;
+    g.add(ring);
+    const face = cyl(1.8, 0.6, 0x6d3fb8, { seg: 20 });
+    face.rotation.x = Math.PI / 2;
+    face.position.z = 1.6;
+    g.add(face);
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2;
+      const hole = cyl(0.16, 0.8, 0x000000, { seg: 10 });
+      hole.rotation.x = Math.PI / 2;
+      hole.position.set(Math.cos(a) * 0.9, Math.sin(a) * 0.9, 2);
+      g.add(hole);
+    }
+    return g;
+  }
+
+  function femaleCom() {
+    const g = new THREE.Group();
+    const shell = box(13, 8, 5, 0xb9bec7, { roughness: 0.4 });
+    g.add(shell);
+    const rows = [5, 4];
+    rows.forEach((n, r) => {
+      const w = (n - 1) * 2.2;
+      const y = 1.5 - r * 2.2;
+      for (let c = 0; c < n; c++) {
+        const hole = cyl(0.3, 1.0, 0x000000, { seg: 12 });
+        hole.rotation.x = Math.PI / 2;
+        hole.position.set(-w / 2 + c * 2.2, y, 2.4);
+        g.add(hole);
+      }
+    });
+    const screw = cyl(0.6, 1.6, C.metal, { seg: 12 });
+    screw.rotation.x = Math.PI / 2;
+    screw.position.set(6.5, 0, 0);
+    g.add(screw);
+    return g;
+  }
+
+  function femaleAcCable() {
+    const g = new THREE.Group();
+    const panel = box(10, 7, 1.2, 0x2a2d36, { roughness: 0.4 });
+    g.add(panel);
+    const inlet = box(5.5, 3.5, 3, 0x0d0f14);
+    inlet.position.z = 1.5;
+    g.add(inlet);
+    const slot = box(3.4, 3, 1.4, 0x000000);
+    slot.position.set(0, 0, 2.8);
+    g.add(slot);
+    const tab = box(1, 1, 0.8, C.metal);
+    tab.position.set(0, 0, 3.2);
+    g.add(tab);
+    return g;
+  }
+
+  function femaleDcJack() {
+    const g = new THREE.Group();
+    const panel = box(7, 7, 3, 0x2a2d36, { roughness: 0.4 });
+    g.add(panel);
+    const ring = cyl(2, 2.2, C.metal, { seg: 20, metalness: 0.8, roughness: 0.3 });
+    ring.rotation.x = Math.PI / 2;
+    ring.position.z = 1.8;
+    g.add(ring);
+    const hole = cyl(1.0, 1.4, 0x000000, { seg: 16 });
+    hole.rotation.x = Math.PI / 2;
+    hole.position.z = 2.2;
+    g.add(hole);
+    return g;
+  }
+
+  function femaleCoaxF() {
+    const g = new THREE.Group();
+    const body = cyl(1.5, 4, C.metal, { seg: 20, metalness: 0.85, roughness: 0.3 });
+    body.rotation.x = Math.PI / 2;
+    g.add(body);
+    const nut = cyl(1.9, 2.2, 0x8a8f98, { metalness: 0.85, roughness: 0.4, seg: 6 });
+    nut.rotation.x = Math.PI / 2;
+    nut.position.z = 2.5;
+    g.add(nut);
+    const hole = cyl(0.5, 1.4, 0x000000, { seg: 12 });
+    hole.rotation.x = Math.PI / 2;
+    hole.position.z = 1.6;
+    g.add(hole);
+    return g;
+  }
+
+  function femaleFiberSc() {
+    const g = new THREE.Group();
+    const body = box(2.4, 2.4, 3, 0x2a2d36, { roughness: 0.4 });
+    g.add(body);
+    const tip = box(1.8, 1.8, 1.2, 0x4cb057, { roughness: 0.35 });
+    tip.position.z = 1.8;
+    g.add(tip);
+    const hole = box(1.0, 1.0, 1.2, 0x000000);
+    hole.position.z = 2.3;
+    g.add(hole);
+    return g;
+  }
+
+  function femaleFiberLc() {
+    const g = new THREE.Group();
+    [-2.2, 2.2].forEach(x => {
+      const body = box(1.8, 2, 4, 0x2a2d36);
+      body.position.x = x;
+      g.add(body);
+      const tip = box(1.1, 1.1, 1.2, 0x2b5bb0, { roughness: 0.3 });
+      tip.position.set(x, 0, 2.5);
+      g.add(tip);
+      const hole = box(0.7, 0.7, 1.2, 0x000000);
+      hole.position.set(x, 0, 3.0);
+      g.add(hole);
+    });
+    return g;
+  }
+
+  function femaleFiberSt() {
+    const g = new THREE.Group();
+    const body = cyl(1.8, 3, 0x2a2d36, { seg: 18 });
+    body.rotation.x = Math.PI / 2;
+    g.add(body);
+    const collar = cyl(2.2, 1.2, C.metal, { metalness: 0.85, roughness: 0.3, seg: 12 });
+    collar.rotation.x = Math.PI / 2;
+    collar.position.z = 1.8;
+    g.add(collar);
+    const hole = cyl(0.5, 1.2, 0x000000, { seg: 12 });
+    hole.rotation.x = Math.PI / 2;
+    hole.position.z = 2.2;
+    g.add(hole);
+    return g;
+  }
+
+  /* Registro: modelo macho -> puerto hembra */
+  const PORTS = {
+    'atx24': () => femaleGrid(2, 12, 3.1, 4.6, { edgeX: 1.9, edgeY: 3.2, holeR: 0.62, clip: true }),
+    'atx20': () => femaleGrid(2, 10, 3.2, 4.6, { edgeX: 1.9, edgeY: 3.2, holeR: 0.62, clip: true }),
+    'eps8': () => femaleGrid(2, 4, 3.4, 4.4, { edgeX: 2.6, edgeY: 2.5, holeR: 0.55, clip: true }),
+    'eps4': () => femaleGrid(2, 2, 3.4, 4.4, { edgeX: 2.2, edgeY: 2.5, holeR: 0.5 }),
+    'pcie62': () => {
+      const g = new THREE.Group();
+      const main = femaleGrid(2, 3, 3.6, 4.4, { edgeX: 2.2, edgeY: 2.5, holeR: 0.55 });
+      g.add(main);
+      const plus = femaleGrid(2, 1, 3.6, 4.4, { edgeX: 1.8, edgeY: 2.5, holeR: 0.55 });
+      plus.position.x = 10.6;
+      g.add(plus);
+      const clip = box(6, 2.4, 2.4, C.plasticLt);
+      clip.position.set(-7.8, 0, 3.5);
+      g.add(clip);
+      return g;
+    },
+    '12vhpwr': () => {
+      const g = new THREE.Group();
+      const main = femaleGrid(2, 6, 2.6, 5.2, { edgeX: 2.2, edgeY: 3, holeR: 0.5 });
+      g.add(main);
+      const sense = femaleGrid(2, 2, 2, 2, { edgeX: 1.5, edgeY: 1.5, holeR: 0.3, depth: 7 });
+      sense.position.set(10.8, 3.5, 0);
+      g.add(sense);
+      return g;
+    },
+    'sata-power': () => {
+      const g = femaleGrid(1, 15, 1.42, 0, { edgeX: 2, edgeY: 2.5, depth: 7, holeR: 0.34 });
+      const lip = box(23, 3, 1.6, C.plasticLt);
+      lip.position.set(0, 3.6, 0);
+      g.add(lip);
+      return g;
+    },
+    'sata-data': () => {
+      const g = new THREE.Group();
+      const stem = femaleGrid(1, 7, 1.4, 0, { edgeX: 2, edgeY: 2, depth: 6, holeR: 0.28 });
+      stem.position.set(0, 1, 0);
+      g.add(stem);
+      const foot = box(12, 2, 5.6, 0x2a2d36);
+      foot.position.set(0, -2.1, 0);
+      g.add(foot);
+      return g;
+    },
+    'molex': () => {
+      const g = femaleGrid(1, 4, 4.4, 0, { edgeX: 2.2, edgeY: 2.2, depth: 7, holeR: 0.68, color: 0xe4e6e9, roughness: 0.35 });
+      const key = box(2.4, 2.2, 1.8, 0xb9bdc4);
+      key.position.set(-4.4, 0, 4);
+      g.add(key);
+      return g;
+    },
+    'berg': () => femaleGrid(1, 4, 1.4, 0, { edgeX: 1.8, edgeY: 2.6, depth: 6, holeR: 0.32 }),
+    'hdmi': () => femaleHdmi(1),
+    'hdmi-mini': () => femaleHdmi(0.72),
+    'hdmi-micro': () => femaleHdmi(0.5),
+    'dp': () => femaleDp(1),
+    'minidp': () => femaleDp(0.62),
+    'vga': femaleVga,
+    'dvi': femaleDvi,
+    'svideo': femaleSvideo,
+    'rca-video': () => femaleRca(C.yellow),
+    'ypbpr': () => {
+      const g = new THREE.Group();
+      [C.green, 0x3b82c4, C.red].forEach((col, i) => {
+        const p = femaleRca(col);
+        p.position.x = (i - 1) * 3.4;
+        g.add(p);
+      });
+      return g;
+    },
+    'usb-a': femaleUsbA,
+    'usb-b': femaleUsbB,
+    'usb-c': femaleUsbC,
+    'thunderbolt': femaleUsbC,
+    'usb-mini': femaleUsbMini,
+    'usb-micro': femaleUsbMicro,
+    'jack35': femaleJack35,
+    'toslink': femaleToslink,
+    'rj45': femaleRj45,
+    'rj11': femaleRj11,
+    'ps2': femalePs2,
+    'com': femaleCom,
+    'ac-cable': femaleAcCable,
+    'dc-jack': femaleDcJack,
+    'coax-fconn': femaleCoaxF,
+    'fiber-sc': femaleFiberSc,
+    'fiber-lc': femaleFiberLc,
+    'fiber-st': femaleFiberSt
+  };
+
   /* === CONSTRUCCION DE CADA VISOR === */
   function buildModel(name, group) {
     const fn = MODELS[name];
@@ -4071,7 +4631,23 @@
     }
     const obj = fn();
     obj.traverse(o => { if (o.isMesh) o.castShadow = true; });
-    group.add(obj);
+    const female = PORTS[name];
+    if (female) {
+      const fg = female();
+      fg.traverse(o => { if (o.isMesh) o.castShadow = true; });
+      const bbM = new THREE.Box3().setFromObject(obj);
+      const bbF = new THREE.Box3().setFromObject(fg);
+      const gap = 6;
+      const wM = bbM.getSize(new THREE.Vector3()).x;
+      const wF = bbF.getSize(new THREE.Vector3()).x;
+      obj.position.x = -(wM / 2 + gap);
+      fg.position.x = wF / 2 + gap;
+      group.add(obj);
+      group.add(fg);
+      group.userData.paired = true;
+    } else {
+      group.add(obj);
+    }
     return true;
   }
 
@@ -4195,6 +4771,10 @@
       if (modelName === 'rj45' && root.children[0] && root.children[0].userData.setOrder) {
         const mode = el.dataset.mode === 'a' ? 'T568A' : 'T568B';
         root.children[0].userData.setOrder(mode);
+      }
+      if (root.userData.paired) {
+        const t = el.querySelector('.three-title');
+        if (t) t.textContent += ' · macho + hembra';
       }
       const bb = new THREE.Box3().setFromObject(root);
       const center = bb.getCenter(new THREE.Vector3());

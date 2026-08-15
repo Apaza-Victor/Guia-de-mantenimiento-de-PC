@@ -151,101 +151,99 @@
       </div>
       <div class="vis" data-aos="fade-up">
         <div class="vis-title"><i class="bi bi-diagram-3"></i> Las 4 topologias base — Diagrama</div>
-        <div class="vis-sub">PC (cuadrados) unidos por enlaces. El centro coloreado marca el punto critico de cada topologia.</div>
+        <div class="vis-sub">PC (cuadrados) unidos por enlaces. Pasa el mouse sobre un nodo para resaltar sus enlaces; click para fijar.</div>
         <div class="vis-grid vis-4">
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Bus">
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Bus" data-interactive>
               <defs><marker id="visArrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="var(--accent2)"/></marker></defs>
-              <rect class="t-node" x="20" y="70" width="34" height="18"/><text x="37" y="83" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="73" y="70" width="34" height="18"/><text x="90" y="83" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="126" y="70" width="34" height="18"/><text x="143" y="83" text-anchor="middle" class="t-tag">PC</text>
-              <line class="t-edge-core" x1="12" y1="79" x2="168" y2="79"/>
+              <line class="t-edge-core" x1="12" y1="79" x2="168" y2="79" data-edge="bus-pc1 bus-pc2 bus-pc3"/>
               <rect x="12" y="74" width="6" height="10" fill="var(--accent3)"/>
               <rect x="162" y="74" width="6" height="10" fill="var(--accent3)"/>
+              <g data-node="bus-pc1"><rect class="t-node" x="20" y="70" width="34" height="18"/><text x="37" y="83" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="bus-pc2"><rect class="t-node" x="73" y="70" width="34" height="18"/><text x="90" y="83" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="bus-pc3"><rect class="t-node" x="126" y="70" width="34" height="18"/><text x="143" y="83" text-anchor="middle" class="t-tag">PC</text></g>
               <text x="90" y="28" text-anchor="middle" class="t-tag" style="fill:#39d0d8">BUS</text>
               <text x="90" y="120" text-anchor="middle" style="font-size:9px">Terminadores en los extremos</text>
             </svg>
           </div>
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Estrella">
-              <rect class="t-node" x="73" y="14" width="34" height="18"/><text x="90" y="27" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="10" y="90" width="34" height="18"/><text x="27" y="103" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="136" y="90" width="34" height="18"/><text x="153" y="103" text-anchor="middle" class="t-tag">PC</text>
-              <circle cx="90" cy="72" r="14" fill="var(--accent2)" opacity=".9"/>
-              <text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">SW</text>
-              <line class="t-edge-core" x1="90" y1="58" x2="90" y2="32"/>
-              <line class="t-edge-core" x1="80" y1="82" x2="37" y2="98"/>
-              <line class="t-edge-core" x1="100" y1="82" x2="143" y2="98"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Estrella" data-interactive>
+              <g data-node="star-pc1"><rect class="t-node" x="73" y="14" width="34" height="18"/><text x="90" y="27" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="star-pc2"><rect class="t-node" x="10" y="90" width="34" height="18"/><text x="27" y="103" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="star-pc3"><rect class="t-node" x="136" y="90" width="34" height="18"/><text x="153" y="103" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="star-sw"><circle class="t-core" cx="90" cy="72" r="14" fill="var(--accent2)"/><text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">SW</text></g>
+              <line class="t-edge-core" x1="90" y1="58" x2="90" y2="32" data-edge="star-sw star-pc1"/>
+              <line class="t-edge-core" x1="80" y1="82" x2="37" y2="98" data-edge="star-sw star-pc2"/>
+              <line class="t-edge-core" x1="100" y1="82" x2="143" y2="98" data-edge="star-sw star-pc3"/>
               <text x="90" y="130" text-anchor="middle" class="t-tag" style="fill:#e3b341">ESTRELLA</text>
             </svg>
           </div>
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Anillo">
-              <rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text>
-              <circle class="t-edge-core" cx="90" cy="72" r="42" fill="none"/>
-              <path class="t-arrow" d="M 90 21 A 42 42 0 0 1 132 67"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Anillo" data-interactive>
+              <circle class="t-edge-core" cx="90" cy="72" r="42" fill="none" data-edge="ring-pc1 ring-pc2 ring-pc3 ring-pc4"/>
+              <path class="t-arrow" d="M 90 21 A 42 42 0 0 1 132 67" data-edge="ring-pc1 ring-pc2 ring-pc3 ring-pc4"/>
+              <g data-node="ring-pc1"><rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="ring-pc2"><rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="ring-pc3"><rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="ring-pc4"><rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text></g>
               <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#3fb950">ANILLO</text>
             </svg>
           </div>
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Malla">
-              <rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text>
-              <line class="t-edge-core" x1="90" y1="30" x2="90" y2="120"/>
-              <line class="t-edge-core" x1="90" y1="30" x2="23" y2="75"/>
-              <line class="t-edge-core" x1="90" y1="30" x2="157" y2="75"/>
-              <line class="t-edge-core" x1="23" y1="75" x2="90" y2="120"/>
-              <line class="t-edge-core" x1="157" y1="75" x2="90" y2="120"/>
-              <line class="t-edge-core" x1="23" y1="75" x2="157" y2="75"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Malla" data-interactive>
+              <line class="t-edge-core" x1="90" y1="30" x2="90" y2="120" data-edge="mesh-pc1 mesh-pc2"/>
+              <line class="t-edge-core" x1="90" y1="30" x2="23" y2="75" data-edge="mesh-pc1 mesh-pc3"/>
+              <line class="t-edge-core" x1="90" y1="30" x2="157" y2="75" data-edge="mesh-pc1 mesh-pc4"/>
+              <line class="t-edge-core" x1="23" y1="75" x2="90" y2="120" data-edge="mesh-pc3 mesh-pc2"/>
+              <line class="t-edge-core" x1="157" y1="75" x2="90" y2="120" data-edge="mesh-pc4 mesh-pc2"/>
+              <line class="t-edge-core" x1="23" y1="75" x2="157" y2="75" data-edge="mesh-pc3 mesh-pc4"/>
+              <g data-node="mesh-pc1"><rect class="t-node" x="73" y="12" width="34" height="18"/><text x="90" y="25" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="mesh-pc2"><rect class="t-node" x="73" y="120" width="34" height="18"/><text x="90" y="133" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="mesh-pc3"><rect class="t-node" x="6" y="66" width="34" height="18"/><text x="23" y="79" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="mesh-pc4"><rect class="t-node" x="140" y="66" width="34" height="18"/><text x="157" y="79" text-anchor="middle" class="t-tag">PC</text></g>
               <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#bc8cff">MALLA</text>
             </svg>
           </div>
         </div>
         <div class="vis-grid vis-3" style="margin-top:12px;">
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Arbol">
-              <rect class="t-node" x="70" y="10" width="40" height="18"/><text x="90" y="23" text-anchor="middle" class="t-tag">Nucleo</text>
-              <rect class="t-node" x="20" y="66" width="34" height="18"/><text x="37" y="79" text-anchor="middle" class="t-tag">Switch</text>
-              <rect class="t-node" x="126" y="66" width="34" height="18"/><text x="143" y="79" text-anchor="middle" class="t-tag">Switch</text>
-              <rect class="t-node" x="6" y="124" width="26" height="16"/><text x="19" y="136" text-anchor="middle" style="font-size:8px">PC</text>
-              <rect class="t-node" x="36" y="124" width="26" height="16"/><text x="49" y="136" text-anchor="middle" style="font-size:8px">PC</text>
-              <rect class="t-node" x="118" y="124" width="26" height="16"/><text x="131" y="136" text-anchor="middle" style="font-size:8px">PC</text>
-              <rect class="t-node" x="148" y="124" width="26" height="16"/><text x="161" y="136" text-anchor="middle" style="font-size:8px">PC</text>
-              <line class="t-edge-core" x1="90" y1="28" x2="37" y2="66"/>
-              <line class="t-edge-core" x1="90" y1="28" x2="143" y2="66"/>
-              <line class="t-edge-core" x1="37" y1="84" x2="19" y2="124"/>
-              <line class="t-edge-core" x1="37" y1="84" x2="49" y2="124"/>
-              <line class="t-edge-core" x1="143" y1="84" x2="131" y2="124"/>
-              <line class="t-edge-core" x1="143" y1="84" x2="161" y2="124"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Arbol" data-interactive>
+              <g data-node="tree-core"><rect class="t-node" x="70" y="10" width="40" height="18"/><text x="90" y="23" text-anchor="middle" class="t-tag">Nucleo</text></g>
+              <g data-node="tree-sw1"><rect class="t-node" x="20" y="66" width="34" height="18"/><text x="37" y="79" text-anchor="middle" class="t-tag">Switch</text></g>
+              <g data-node="tree-sw2"><rect class="t-node" x="126" y="66" width="34" height="18"/><text x="143" y="79" text-anchor="middle" class="t-tag">Switch</text></g>
+              <g data-node="tree-pc1"><rect class="t-node" x="6" y="124" width="26" height="16"/><text x="19" y="136" text-anchor="middle" style="font-size:8px">PC</text></g>
+              <g data-node="tree-pc2"><rect class="t-node" x="36" y="124" width="26" height="16"/><text x="49" y="136" text-anchor="middle" style="font-size:8px">PC</text></g>
+              <g data-node="tree-pc3"><rect class="t-node" x="118" y="124" width="26" height="16"/><text x="131" y="136" text-anchor="middle" style="font-size:8px">PC</text></g>
+              <g data-node="tree-pc4"><rect class="t-node" x="148" y="124" width="26" height="16"/><text x="161" y="136" text-anchor="middle" style="font-size:8px">PC</text></g>
+              <line class="t-edge-core" x1="90" y1="28" x2="37" y2="66" data-edge="tree-core tree-sw1"/>
+              <line class="t-edge-core" x1="90" y1="28" x2="143" y2="66" data-edge="tree-core tree-sw2"/>
+              <line class="t-edge-core" x1="37" y1="84" x2="19" y2="124" data-edge="tree-sw1 tree-pc1"/>
+              <line class="t-edge-core" x1="37" y1="84" x2="49" y2="124" data-edge="tree-sw1 tree-pc2"/>
+              <line class="t-edge-core" x1="143" y1="84" x2="131" y2="124" data-edge="tree-sw2 tree-pc3"/>
+              <line class="t-edge-core" x1="143" y1="84" x2="161" y2="124" data-edge="tree-sw2 tree-pc4"/>
               <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#f78166">ARBOL</text>
             </svg>
           </div>
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Ad-Hoc">
-              <rect class="t-node" x="70" y="12" width="34" height="18"/><text x="87" y="25" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="8" y="100" width="34" height="18"/><text x="25" y="113" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="138" y="100" width="34" height="18"/><text x="155" y="113" text-anchor="middle" class="t-tag">PC</text>
-              <path class="t-edge-core" d="M 87 30 Q 40 60 25 100" fill="none" stroke-dasharray="4 3"/>
-              <path class="t-edge-core" d="M 87 30 Q 140 60 155 100" fill="none" stroke-dasharray="4 3"/>
-              <path class="t-edge-core" d="M 42 100 Q 90 130 138 100" fill="none" stroke-dasharray="4 3"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Ad-Hoc" data-interactive>
+              <g data-node="ad-pc1"><rect class="t-node" x="70" y="12" width="34" height="18"/><text x="87" y="25" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="ad-pc2"><rect class="t-node" x="8" y="100" width="34" height="18"/><text x="25" y="113" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="ad-pc3"><rect class="t-node" x="138" y="100" width="34" height="18"/><text x="155" y="113" text-anchor="middle" class="t-tag">PC</text></g>
+              <path class="t-edge-core" d="M 87 30 Q 40 60 25 100" fill="none" stroke-dasharray="4 3" data-edge="ad-pc1 ad-pc2"/>
+              <path class="t-edge-core" d="M 87 30 Q 140 60 155 100" fill="none" stroke-dasharray="4 3" data-edge="ad-pc1 ad-pc3"/>
+              <path class="t-edge-core" d="M 42 100 Q 90 130 138 100" fill="none" stroke-dasharray="4 3" data-edge="ad-pc2 ad-pc3"/>
               <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#39d0d8">AD-HOC</text>
             </svg>
           </div>
           <div>
-            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Infraestructura">
-              <rect class="t-node" x="70" y="8" width="40" height="18"/><text x="90" y="21" text-anchor="middle" class="t-tag">Router</text>
-              <circle cx="90" cy="72" r="15" fill="var(--accent2)" opacity=".9"/>
-              <text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">AP</text>
-              <rect class="t-node" x="8" y="118" width="34" height="18"/><text x="25" y="131" text-anchor="middle" class="t-tag">PC</text>
-              <rect class="t-node" x="138" y="118" width="34" height="18"/><text x="155" y="131" text-anchor="middle" class="t-tag">PC</text>
-              <line class="t-edge-core" x1="90" y1="26" x2="90" y2="57"/>
-              <path class="t-edge-core" d="M 82 83 Q 45 100 30 116" fill="none" stroke-dasharray="4 3"/>
-              <path class="t-edge-core" d="M 98 83 Q 135 100 150 116" fill="none" stroke-dasharray="4 3"/>
+            <svg class="vis-svg" viewBox="0 0 180 150" role="img" aria-label="Topologia Infraestructura" data-interactive>
+              <g data-node="inf-router"><rect class="t-node" x="70" y="8" width="40" height="18"/><text x="90" y="21" text-anchor="middle" class="t-tag">Router</text></g>
+              <g data-node="inf-ap"><circle class="t-core" cx="90" cy="72" r="15" fill="var(--accent2)"/><text x="90" y="77" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#06121a">AP</text></g>
+              <g data-node="inf-pc1"><rect class="t-node" x="8" y="118" width="34" height="18"/><text x="25" y="131" text-anchor="middle" class="t-tag">PC</text></g>
+              <g data-node="inf-pc2"><rect class="t-node" x="138" y="118" width="34" height="18"/><text x="155" y="131" text-anchor="middle" class="t-tag">PC</text></g>
+              <line class="t-edge-core" x1="90" y1="26" x2="90" y2="57" data-edge="inf-router inf-ap"/>
+              <path class="t-edge-core" d="M 82 83 Q 45 100 30 116" fill="none" stroke-dasharray="4 3" data-edge="inf-ap inf-pc1"/>
+              <path class="t-edge-core" d="M 98 83 Q 135 100 150 116" fill="none" stroke-dasharray="4 3" data-edge="inf-ap inf-pc2"/>
               <text x="90" y="146" text-anchor="middle" class="t-tag" style="fill:#3fb950">INFRAESTRUCTURA</text>
             </svg>
           </div>
@@ -325,6 +323,7 @@
 <script src="../../assets/js/theme.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/visuals.js"></script>
 <script src="../../assets/js/subnet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="../../assets/js/cables-3d.js"></script>

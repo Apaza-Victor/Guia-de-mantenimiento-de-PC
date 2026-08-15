@@ -117,7 +117,7 @@
             <rect x="30" y="20" width="660" height="320" rx="16" fill="var(--bg-body)" stroke="var(--border-hover)" stroke-width="2"/>
             <rect x="46" y="36" width="120" height="90" rx="8" fill="rgba(57,208,216,.08)" stroke="var(--accent-cyan)" stroke-width="1.4"/>
             <text x="56" y="52" class="t-tag" style="fill:#39d0d8">CPU + Socket</text>
-            <text x="56" y="66" style="font-size:8px">LGA / AM5</text>
+            <text x="56" y="66" style="font-size:10px">LGA / AM5</text>
             <rect x="600" y="120" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent-cyan)"/>
             <text x="637" y="135" text-anchor="middle" style="font-size:9px;font-weight:700">CPU_FAN</text>
             <line x1="600" y1="131" x2="620" y2="131" class="t-edge-core"/>
@@ -125,10 +125,10 @@
             <text x="478" y="61" text-anchor="middle" style="font-size:9px;font-weight:700">DIMM A1 A2</text>
             <rect x="430" y="72" width="96" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
             <text x="478" y="87" text-anchor="middle" style="font-size:9px;font-weight:700">DIMM B1 B2</text>
-            <text x="478" y="110" text-anchor="middle" style="font-size:8px">RAM — usa A2+B2</text>
+            <text x="478" y="110" text-anchor="middle" style="font-size:10px">RAM — usa A2+B2</text>
             <rect x="46" y="180" width="120" height="40" rx="6" fill="var(--bg-card)" stroke="var(--border-hover)"/>
             <text x="56" y="198" class="t-tag" style="fill:#3fb950">M.2 NVMe</text>
-            <text x="56" y="212" style="font-size:8px">SSD (angulo 30°)</text>
+            <text x="56" y="212" style="font-size:10px">SSD (angulo 30°)</text>
             <rect x="600" y="200" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
             <text x="637" y="215" text-anchor="middle" style="font-size:9px;font-weight:700">SYS_FAN</text>
             <rect x="600" y="230" width="74" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
@@ -139,21 +139,25 @@
             <text x="83" y="270" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#ff6b6b">EPS 8-pin</text>
             <rect x="300" y="180" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
             <text x="360" y="195" text-anchor="middle" style="font-size:9px;font-weight:700">JFP1 Front Panel</text>
-            <text x="360" y="214" text-anchor="middle" style="font-size:8px">Power / Reset / LEDs</text>
+            <text x="360" y="214" text-anchor="middle" style="font-size:10px">Power / Reset / LEDs</text>
             <rect x="300" y="235" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
             <text x="360" y="250" text-anchor="middle" style="font-size:9px;font-weight:700">JAUD1 HD Audio</text>
             <rect x="300" y="130" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent)"/>
             <text x="360" y="145" text-anchor="middle" style="font-size:9px;font-weight:700">USB 2.0 (negro)</text>
-            <rect x="500" y="300" width="120" height="22" fill="var(--bg-card)" stroke="#4a90e2"/>
-            <text x="560" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#4a90e2">USB 3.0 (azul)</text>
+            <rect x="500" y="300" width="120" height="22" fill="var(--bg-card)" stroke="var(--usb-blue)"/>
+            <text x="560" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:var(--usb-blue)">USB 3.0 (azul)</text>
             <rect x="300" y="300" width="120" height="22" fill="var(--bg-card)" stroke="var(--accent-cyan)"/>
             <text x="360" y="315" text-anchor="middle" style="font-size:9px;font-weight:700">USB-C Key-E</text>
-            <rect x="150" y="300" width="120" height="22" fill="var(--bg-card)" stroke="#E91E63"/>
-            <text x="210" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#E91E63">RGB 4-pin 12V</text>
-            <text x="150" y="334" text-anchor="middle" style="font-size:8px;fill:#E91E63">ARGB 3-pin 5V</text>
+            <rect x="150" y="300" width="120" height="22" fill="var(--bg-card)" stroke="var(--rgb-pink)"/>
+            <text x="210" y="315" text-anchor="middle" style="font-size:9px;font-weight:700;fill:var(--rgb-pink)">RGB 4-pin 12V</text>
+            <text x="150" y="334" text-anchor="middle" style="font-size:10px;fill:var(--rgb-pink)">ARGB 3-pin 5V</text>
             <rect x="540" y="60" width="80" height="22" fill="var(--bg-card)" stroke="var(--border-hover)"/>
             <text x="580" y="75" text-anchor="middle" style="font-size:9px;font-weight:700">PCIe x16 GPU</text>
-            <text x="580" y="95" text-anchor="middle" style="font-size:8px">bracket anti-sag</text>
+            <text x="580" y="95" text-anchor="middle" style="font-size:10px">bracket anti-sag</text>
+            <line class="t-arrow" x1="166" y1="161" x2="205" y2="161"/>
+            <line class="t-arrow" x1="270" y1="311" x2="300" y2="311"/>
+            <line class="t-arrow" x1="420" y1="311" x2="450" y2="311"/>
+            <line class="t-arrow" x1="500" y1="311" x2="472" y2="311"/>
           </svg>
           <div class="vis-note"><strong>Regla de color:</strong> azul = USB 3.0, negro = USB 2.0, rosa/rojo = RGB, verde = fans, borde placa = pines del panel frontal.</div>
         </div>
@@ -209,7 +213,7 @@
 
       <div class="accordion-item" data-aos="fade-up">
         <div class="accordion-header">
-          <i class="bi bi-palette accordion-icon" style="color:#E91E63;"></i>
+          <i class="bi bi-palette accordion-icon" style="color:var(--rgb-pink);"></i>
           <span class="accordion-title">RGB Headers (4-pin / 3-pin)</span>
           <i class="bi bi-chevron-down accordion-chevron"></i>
         </div>

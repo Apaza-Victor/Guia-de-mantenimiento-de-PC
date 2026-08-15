@@ -127,6 +127,9 @@
           <tr><td>SSD M.2 NVMe</td><td>1.400-7.000 MB/s</td><td>Medio</td><td>Sistema operativo y programas (recomendado)</td></tr>
           <tr><td>SSD PCIe 5.0</td><td>10.000-14.000 MB/s</td><td>Alto</td><td>Workstations y tope de gama</td></tr>
         </table></div>
+        <div class="chart-box">
+          <canvas id="chart-storage-speeds" aria-label="Velocidades de lectura de HDD, SSD y NVMe en escala logaritmica" role="img"></canvas>
+        </div>
         <div class="alert-box alert-warn" style="margin-top:12px;">
           <i class="bi bi-exclamation-triangle"></i>
           <div><strong>Ojo:</strong> la velocidad anunciada suele ser de lectura secuencial. En el uso diario (archivos chicos y aleatorios) la diferencia entre NVMe y SATA se nota pero es menor que entre SSD y HDD.</div>
@@ -289,7 +292,9 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 <script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/charts.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>

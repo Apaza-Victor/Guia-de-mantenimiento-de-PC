@@ -150,6 +150,19 @@
 .vis-svg .t-tag { font-size: 9px; font-weight: 700; fill: var(--text); }
 .vis-svg .t-arrow { fill: none; stroke: var(--accent2); stroke-width: 1.6; marker-end: url(#visArrow); }
 
+/* === Interactividad de diagramas SVG === */
+.vis-svg[data-interactive] [data-node] { cursor: pointer; }
+.vis-svg[data-interactive] [data-node] .t-node { transition: fill .18s ease, stroke .18s ease, stroke-width .18s ease, opacity .18s ease; }
+.vis-svg[data-interactive] [data-node] .t-core { transition: stroke .18s ease, stroke-width .18s ease, opacity .18s ease, filter .18s ease; }
+.vis-svg[data-interactive] [data-edge] { transition: stroke .18s ease, stroke-width .18s ease, opacity .18s ease; }
+.vis-svg[data-interactive] [data-node].node-hl .t-node { fill: rgba(57,208,216,.16); stroke: var(--accent-cyan); stroke-width: 2.6; }
+.vis-svg[data-interactive] [data-node].node-hl .t-tag { fill: var(--accent-cyan); }
+.vis-svg[data-interactive] [data-node].node-hl .t-core { stroke: var(--accent-cyan); stroke-width: 3; filter: drop-shadow(0 0 5px rgba(57,208,216,.75)); }
+.vis-svg[data-interactive] [data-node].node-dim { opacity: .3; }
+.vis-svg[data-interactive] [data-edge].edge-hl { stroke: var(--accent-cyan); stroke-width: 2.8; }
+.vis-svg[data-interactive] [data-edge].edge-hl.t-arrow { stroke: var(--accent2); }
+.vis-svg[data-interactive] [data-edge].edge-dim { opacity: .18; }
+
 /* === Secuencia de mantenimiento / armado (pasos) === */
 .seq {
   display: grid;
@@ -254,8 +267,123 @@
   border-radius: var(--radius-sm);
   background: var(--bg-card);
 }
-.paste-box .svg-mini { height: 54px; margin: 0 auto 8px; }
+.paste-box .svg-mini { width: 100%; max-width: 98px; height: auto; margin: 0 auto 10px; display: block; }
 .paste-box .nm { font-weight: 700; font-size: .74rem; color: var(--text); }
 .paste-box .ds { font-size: .66rem; color: var(--text-sec); }
-.paste-box.ok { border-color: rgba(63,185,80,.4); }
-.paste-box.no { border-color: rgba(255,107,107,.4); opacity: .75; }
+.paste-box.ok { border-color: rgba(63,185,80,.45); }
+.paste-box.ok .nm { color: #3fb950; }
+.paste-box.no { border-color: rgba(255,107,107,.45); }
+.paste-box.no .nm { color: #ff6b6b; }
+.paste-box .die {
+  fill: rgba(57,208,216,.10);
+  stroke: rgba(57,208,216,.4);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+.paste-box .sub { fill: var(--bg-body); stroke: var(--border-hover); stroke-width: 1.4; }
+.paste-box .ihs { fill: url(#ihsMetal); stroke: var(--border-hover); stroke-width: 1.6; }
+.paste-box .pin { fill: var(--border-hover); }
+
+/* === Termometro de rangos (temperaturas por componente) === */
+.thermo { display: grid; gap: 8px; }
+.thermo-row {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+.thermo-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: .76rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+.thermo-name i { color: var(--accent-cyan); font-size: .8rem; }
+.thermo-track {
+  position: relative;
+  height: 12px;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: repeating-linear-gradient(90deg, rgba(128,128,128,.08) 0 1px, transparent 1px 25%);
+}
+.thermo-zone { position: absolute; top: 0; bottom: 0; }
+.thermo-zone.ok { background: rgba(63,185,80,.5); }
+.thermo-zone.vig { background: rgba(227,179,65,.5); }
+.thermo-zone.crit { background: rgba(255,107,107,.62); }
+.thermo-mark {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  box-shadow: 0 0 6px rgba(255,255,255,.35);
+}
+.thermo-lbl { font-size: .62rem; font-family: var(--font-mono); color: var(--text-sec); margin-top: 4px; }
+.thermo-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: .58rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  padding: 0 2px;
+  margin: 2px 0 0 116px;
+}
+.thermo-note { margin-top: 10px; font-size: .72rem; color: var(--text-sec); }
+.thermo-note b.ok { color: #3fb950; }
+.thermo-note b.vig { color: #e3b341; }
+.thermo-note b.crit { color: #ff6b6b; }
+
+/* === Diagramas Mermaid (DNS, DHCP, routing, NAT) === */
+.mermaid {
+  margin: 14px 0;
+  padding: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  text-align: center;
+  line-height: 1.35;
+}
+.mermaid svg { max-width: 100%; height: auto; }
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node polygon,
+.mermaid .node path {
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.18));
+}
+
+/* === Graficas Chart.js === */
+.chart-box {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.chart-box h4 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.chart-box h4 i { color: var(--accent-cyan); }
+.chart-box > p {
+  margin: 0 0 12px;
+  font-size: .82rem;
+  color: var(--text-sec);
+}
+.chart-canvas {
+  position: relative;
+  height: 300px;
+}
+@media (max-width: 640px) {
+  .chart-canvas { height: 260px; }
+}

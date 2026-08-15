@@ -121,6 +121,14 @@
         <li><strong>Next-hop:</strong> direccion IP del router vecino al que se entrega el paquete para avanzar en el camino.</li>
         <li><strong>Rutas conectadas:</strong> redes directamente unidas a sus interfaces. <strong>Estaticas:</strong> cargadas a mano por el administrador. <strong>Dinamicas:</strong> aprendidas con protocolos como RIP, OSPF o EIGRP.</li>
       </ul>
+      <div class="mermaid">
+flowchart TD
+    A["Paquete llega al router"] --> B{"Existe una ruta<br/>para el destino?"}
+    B -->|"Si - ruta especifica"| C["Reenviar por el next-hop<br/>e interfaz indicados"]
+    B -->|"No"| D["Ruta por defecto 0.0.0.0/0<br/>(gateway del ISP)"]
+    C --> E["Se entrega al siguiente salto<br/>y se repite hasta el destino"]
+    D --> E
+      </div>
       <div class="table-scroll"><table class="cmd-table">
         <tr><th>Campo</th><th>Que indica</th><th>Ejemplo</th></tr>
         <tr><td>Destino</td><td>Red o host de destino</td><td>192.168.10.0</td></tr>
@@ -291,6 +299,8 @@
 <button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/mermaid-init.js"></script>
 <script src="../../assets/js/theme.js"></script>
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
