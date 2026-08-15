@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPv6 - Redes | TechGuide</title>
-  <meta name="description" content="Redes · IPv6. Direcciones de 128 bits, notacion y abreviaciones, tipos (global, link-local, ULA), prefijos, SLAAC, dual stack y coexistencia con IPv4.">
+  <title>IPv4/IPv6 - Redes | TechGuide</title>
+  <meta name="description" content="Redes · IPv4/IPv6. Comparativa completa IPv4 vs IPv6, direcciones de 128 bits, notacion, tipos (global, link-local, ULA), prefijos, cabecera IPv6, EUI-64, ICMPv6/NDP, multicast, SLAAC, dual stack y coexistencia.">
   <meta name="theme-color" content="#0f1117">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="IPv6 - Redes | TechGuide">
-  <meta property="og:description" content="Redes · IPv6. Notacion, tipos de direcciones, SLAAC, dual stack y configuracion.">
+  <meta property="og:title" content="IPv4/IPv6 - Redes | TechGuide">
+  <meta property="og:description" content="Redes · IPv4/IPv6. Comparativa IPv4 vs IPv6, cabecera, tipos de direcciones, SLAAC, dual stack y configuracion.">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,8 +63,8 @@
     <div class="page-hero-glow"></div>
     <div class="page-hero-content" data-aos="fade-up">
       <div class="page-hero-icon" style="background:rgba(57,208,216,.1);border:1px solid rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-globe"></i></div>
-      <h1><span class="hl">Redes</span> · IPv6</h1>
-      <p>El protocolo del futuro (y del presente) de internet.</p>
+      <h1><span class="hl">Redes</span> · IPv4/IPv6</h1>
+      <p>Comparativa IPv4 vs IPv6, estructura de paquetes y mecanismos de transicion.</p>
     </div>
   </div>
 
@@ -73,7 +73,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
-    <a class='chip active' href='red-ipv6.html'><i class='bi-globe'></i>IPv6</a>
+    <a class='chip active' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
     <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
     <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
     <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
@@ -94,14 +94,14 @@
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
   </nav>
 
-  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · IPv6</span></nav>
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · IPv4/IPv6</span></nav>
 
   <div class="content-section" id="red-ipv6" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-globe"></i></div>
       <div class="section-title">
-        <h2>IPv6</h2>
-        <p>// Direcciones de 128 bits para cada dispositivo del mundo</p>
+        <h2>IPv4/IPv6</h2>
+        <p>// Del agotamiento de IPv4 a las 128 bits de IPv6, con todo lo que cambia</p>
       </div>
     </div>
 
@@ -223,13 +223,151 @@
       <div class="accordion-body"><div class="accordion-content">
         <ul>
           <li><strong>Dual stack:</strong> el equipo tiene IPv4 e IPv6 a la vez; cada conexion elige el protocolo disponible. Es la forma estandar de transicion.</li>
-          <li><strong>Tuuneles</strong> (6to4, Teredo, ISATAP): encapsulan IPv6 dentro de IPv4 cuando no hay IPv6 nativo. Hoy en desuso por problemas de rendimiento y seguridad.</li>
+          <li><strong>Tuneles</strong> (6to4, Teredo, ISATAP): encapsulan IPv6 dentro de IPv4 cuando no hay IPv6 nativo. Hoy en desuso por problemas de rendimiento y seguridad.</li>
           <li><strong>NAT64/DNS64:</strong> permiten que equipos solo-IPv6 accedan a recursos solo-IPv4 (comun en moviles).</li>
           <li><strong>DNS:</strong> un registro <strong>AAAA</strong> apunta a una IPv6 (ver <a href="red-dns.html">DNS</a>).</li>
         </ul>
         <div class="alert-box alert-tip" style="margin-top:12px;">
           <i class="bi bi-lightbulb"></i>
           <div>Si tu proveedor te da IPv6, dejala activa en el router y en el equipo: muchas veces mejora la velocidad y la latencia de los sitios compatibles.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-columns-gap accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">IPv4 vs IPv6 — Comparativa completa</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Caracteristica</th><th>IPv4</th><th>IPv6</th></tr>
+          <tr><td>Tamano de direccion</td><td>32 bits</td><td>128 bits</td></tr>
+          <tr><td>Notacion</td><td>Decimal punteado: <code>192.168.1.1</code></td><td>Hexadecimal con dos puntos: <code>2001:db8::1</code></td></tr>
+          <tr><td>Direcciones disponibles</td><td>~4.3 mil millones</td><td>340 undecillones (2^128)</td></tr>
+          <tr><td>Mascara / prefijo</td><td>Mascara <code>255.255.255.0</code> o CIDR /24</td><td>Solo CIDR: /64, /48, /56...</td></tr>
+          <tr><td>Configuracion de direcciones</td><td>Manual o DHCP</td><td>SLAAC (automatica) o DHCPv6</td></tr>
+          <tr><td>Broadcast</td><td>Si (<code>255.255.255.255</code>)</td><td>No existe; se usa multicast</td></tr>
+          <tr><td>Resolucion de MAC (ARP)</td><td>ARP por broadcast</td><td>NDP de ICMPv6 (sin broadcast)</td></tr>
+          <tr><td>NAT</td><td>Obligatorio para paliar la escasez</td><td>Innecesario; cada equipo puede tener IP publica</td></tr>
+          <tr><td>Fragmentacion</td><td>Los routers pueden fragmentar</td><td>Solo el emisor fragmenta (PMTUD)</td></tr>
+          <tr><td>Seguridad IPsec</td><td>Opcional</td><td>Disenado como parte del protocolo</td></tr>
+          <tr><td>Cabecera</td><td>20 bytes minimo (variable)</td><td>40 bytes fija + extensiones</td></tr>
+          <tr><td>Checksum de cabecera</td><td>Si</td><td>No (se delega a capas superiores)</td></tr>
+          <tr><td>Loopback</td><td><code>127.0.0.1</code></td><td><code>::1</code></td></tr>
+          <tr><td>Direcciones especiales</td><td>Privadas RFC 1918, APIPA 169.254</td><td>ULA <code>fc00::/7</code>, link-local <code>fe80::</code></td></tr>
+        </table></div>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div><strong>En la practica:</strong> hoy conviven ambos (dual stack). Tu equipo casi seguro tiene IPv4 e IPv6 a la vez; el sistema elige el mejor camino disponible para cada conexion.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-bezier2 accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Cabecera IPv6 — estructura del paquete</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>Version (4 bits):</strong> siempre 6.</li>
+          <li><strong>Traffic Class (8 bits):</strong> prioridad / calidad de servicio (DSCP y ECN).</li>
+          <li><strong>Flow Label (20 bits):</strong> etiqueta para que los routers traten los paquetes de un mismo flujo de forma uniforme.</li>
+          <li><strong>Payload Length (16 bits):</strong> tamano en bytes de la carga util (sin contar los 40 de la cabecera).</li>
+          <li><strong>Next Header (8 bits):</strong> que sigue: TCP (6), UDP (17), ICMPv6 (58), OSPF (89) o una cabecera de extension.</li>
+          <li><strong>Hop Limit (8 bits):</strong> igual que el TTL de IPv4; se decrementa en cada salto.</li>
+          <li><strong>Direccion de origen (128 bits)</strong> y <strong>direccion de destino (128 bits)</strong>.</li>
+        </ul>
+        <div class="table-scroll" style="margin-top:12px;"><table class="cmd-table">
+          <tr><th>Campo</th><th>IPv4</th><th>IPv6</th></tr>
+          <tr><td>Tamano de cabecera</td><td>20 bytes (con opciones, variable)</td><td>40 bytes fijos</td></tr>
+          <tr><td>IHL / longitud</td><td>Campo IHL variable</td><td>Fija; solo se agregan cabeceras de extension</td></tr>
+          <tr><td>Identificacion / fragmentos</td><td>Campos de fragmentacion</td><td>Eliminados (fragmenta solo el emisor)</td></tr>
+          <tr><td>Checksum</td><td>Presente</td><td>Eliminado (acelera el ruteo)</td></tr>
+          <tr><td>Opciones</td><td>Dentro de la cabecera</td><td>Cabeceras de extension encadenadas</td></tr>
+        </table></div>
+        <div class="alert-box alert-info" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div><strong>Resultado:</strong> una cabecera mas simple que los routers procesan mas rapido, sin checksum que recalcular ni fragmentacion que gestionar.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-fingerprint accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Interface ID y EUI-64</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li>El <strong>Interface ID</strong> son los 64 bits bajos de la direccion: identifican al dispositivo dentro de su /64.</li>
+          <li>Metodo clasico <strong>EUI-64</strong>: se toma la MAC (48 bits), se inserta <code>ff:fe</code> en el medio y se invierte el bit 7 (bit U/L). Ejemplo: <code>00:1a:2b:3c:4d:5e</code> → <code>021a:2bff:fe3c:4d5e</code>.</li>
+          <li>Por privacidad (<strong>RFC 4941</strong>), la mayoria de sistemas operativos generan <strong>direcciones temporales aleatorias</strong> que rotan periodicamente y usan para salir a Internet.</li>
+          <li>EUI-64 de MAC publica permite rastrear al dispositivo; por eso se usa direccion aleatoria, no la derivada de la MAC.</li>
+        </ul>
+        <div class="code-block" style="margin-top:12px;">
+          <div class="code-block-header"><span class="code-lang">ejemplo — derivar EUI-64 de una MAC</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-comment"># MAC 00:1a:2b:3c:4d:5e</span>
+<span class="cmd-prompt">&gt;</span> paso 1: insertar ff:fe → <span class="cmd-value">00:1a:2b:ff:fe:3c:4d:5e</span>
+<span class="cmd-prompt">&gt;</span> paso 2: invertir bit 7 → <span class="cmd-value">02:1a:2b:ff:fe:3c:4d:5e</span>
+<span class="cmd-prompt">&gt;</span> resultado: <span class="cmd-keyword">2001:db8::021a:2bff:fe3c:4d5e/64</span></pre>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-diagram-3-fill accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">ICMPv6 y Neighbor Discovery (NDP)</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <ul>
+          <li><strong>ICMPv6</strong> es el protocolo de control de IPv6: ademas de las funciones de ping (echo request/reply) y errores, hace las tareas que en IPv4 hacian ARP, IGMP y el descubrimiento de routers.</li>
+          <li><strong>Router Solicitation (RS) / Router Advertisement (RA):</strong> el equipo pide el prefijo y el router lo anuncia (base de SLAAC).</li>
+          <li><strong>Neighbor Solicitation (NS) / Neighbor Advertisement (NA):</strong> resuelve la direccion MAC de un vecino — reemplaza a ARP.</li>
+          <li><strong>DAD (Duplicate Address Detection):</strong> antes de usar una direccion, verifica que nadie mas la este usando.</li>
+          <li><strong>Redirect:</strong> el router avisa al host de una ruta mejor (por ejemplo, otro router en la misma LAN).</li>
+        </ul>
+        <div class="code-block" style="margin-top:12px;">
+          <div class="code-block-header"><span class="code-lang">bash — ver la tabla de vecinos (equivalente a ARP)</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
+          <pre><span class="cmd-prompt">$</span> <span class="cmd-keyword">ip</span> <span class="cmd-flag">-6</span> <span class="cmd-value">neigh</span>
+<span class="cmd-prompt">$</span> <span class="cmd-keyword">ping6</span> <span class="cmd-value">fe80::1</span>   <span class="cmd-comment"># antes resuelve el vecino via NS/NA</span></pre>
+        </div>
+        <div class="alert-box alert-info" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div><strong>Dato:</strong> los mensajes NDP usan la direccion multicast <strong>solicited-node</strong> en vez de broadcast, lo que no molesta a todos los equipos de la red.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item" data-aos="fade-up">
+      <div class="accordion-header">
+        <i class="bi bi-broadcast accordion-icon" style="color:#39d0d8;"></i>
+        <span class="accordion-title">Direcciones multicast bien conocidas</span>
+        <i class="bi bi-chevron-down accordion-chevron"></i>
+      </div>
+      <div class="accordion-body"><div class="accordion-content">
+        <div class="table-scroll"><table class="cmd-table">
+          <tr><th>Direccion</th><th>Nombre</th><th>Uso</th></tr>
+          <tr><td>ff02::1</td><td>All nodes</td><td>Todos los nodos del enlace (antes broadcast)</td></tr>
+          <tr><td>ff02::2</td><td>All routers</td><td>Todos los routers del enlace</td></tr>
+          <tr><td>ff02::5</td><td>OSPFv3</td><td>Ruteo OSPF (todos los routers OSPF)</td></tr>
+          <tr><td>ff02::6</td><td>OSPFv3 DR</td><td>Designated Routers de OSPF</td></tr>
+          <tr><td>ff02::9</td><td>RIPng</td><td>Ruteo RIP para IPv6</td></tr>
+          <tr><td>ff02::a</td><td>EIGRP</td><td>Ruteo EIGRP</td></tr>
+          <tr><td>ff02::d</td><td>PIM</td><td>Protocolo de multicast en routers</td></tr>
+          <tr><td>ff02::16</td><td>MLDv2</td><td>Gestion de grupos multicast en el enlace</td></tr>
+          <tr><td>ff02::fb</td><td>mDNS</td><td>Descubrimiento de servicios (Avahi, Bonjour)</td></tr>
+          <tr><td>ff02::1:ff00:0/104</td><td>Solicited-node</td><td>Derivada de cada direccion unicast; la usa NDP para no molestar a toda la red</td></tr>
+        </table></div>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div><strong>Memoriza estas dos:</strong> <code>ff02::1</code> = todos los nodos, <code>ff02::2</code> = todos los routers. Aparecen en exámenes y en configuraciones de firewalls.</div>
         </div>
       </div></div>
     </div>

@@ -576,6 +576,39 @@ kbd{
 .conn-card h4{font-size:.88rem;margin-bottom:.35rem;}
 .conn-card p{font-size:.76rem;color:var(--text-sec);line-height:1.55;}
 
+/* === PINOUT T568A/T568B (orden de hilos del RJ-45) === */
+.pinout{display:grid;gap:.5rem;margin:1rem 0;}
+.pinout-row{display:grid;grid-template-columns:78px repeat(8,1fr);gap:.3rem;align-items:stretch;}
+.pinout-label{
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-weight:700;font-size:.68rem;
+  color:var(--text);background:var(--bg-nav);
+  border:1px solid var(--border);border-radius:6px;
+}
+.pinout-cell{
+  border:1px solid var(--border);border-radius:6px;
+  text-align:center;padding:.3rem .1rem;
+  min-height:60px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.25rem;
+  background:var(--bg-card);
+}
+.pinout-num{font-family:var(--font-mono);font-size:.6rem;color:var(--text-muted);line-height:1;}
+.pinout-swatch{width:100%;height:22px;border-radius:4px;border:1px solid rgba(0,0,0,.3);}
+.pinout-name{font-size:.56rem;line-height:1.15;color:var(--text-sec);}
+.pw-wn{background:linear-gradient(135deg,#f4a259 50%,#f7d7b0 50%);}
+.pw-n{background:#f4a259;}
+.pw-wv{background:linear-gradient(135deg,#7fd48b 50%,#e9f7e3 50%);}
+.pw-v{background:#4cb057;}
+.pw-az{background:#3b82c4;}
+.pw-waz{background:linear-gradient(135deg,#6bb7e8 50%,#e0effc 50%);}
+.pw-wm{background:linear-gradient(135deg,#b08968 50%,#e7d5c3 50%);}
+.pw-m{background:#7a4e26;}
+@media(max-width:767px){
+  .pinout-row{grid-template-columns:repeat(8,1fr);}
+  .pinout-label{grid-column:1/-1;padding:.25rem;}
+  .pinout-name{display:none;}
+}
+
 /* === TEXT UTILS === */
 .text-sm{font-size:.82rem;}
 .text-secondary{color:var(--text-sec);}
@@ -901,6 +934,23 @@ body.reading-mode *{transition:none !important;}
   .three-stage{height:200px;}
   .three-hint{display:none;}
 }
+
+/* === VISTAS 2D (visuals-2d.js, sin Three.js) === */
+.stage-2d{display:flex;align-items:center;justify-content:center;cursor:default;}
+.stage-2d:active{cursor:default;}
+.stage-2d svg{width:100%;height:100%;}
+.stage-2d svg text{font-family:var(--font-mono),monospace;}
+.port-2d{
+  border-top:1px dashed var(--border);
+  padding:.6rem .75rem;
+  background:rgba(var(--accent-rgb),.04);
+}
+.port-2d-title{
+  font-family:var(--font-mono);font-weight:600;
+  font-size:.66rem;color:var(--text-sec);
+  margin-bottom:.35rem;display:flex;align-items:center;gap:.4rem;
+}
+.port-2d svg{display:block;width:auto;height:104px;margin:0 auto;}
 
 /* === EXPLORADOR 3D (GLTF + OrbitControls + Raycaster) === */
 .viewer-gltf-wrap{margin-top:1rem;}

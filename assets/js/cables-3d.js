@@ -31,12 +31,13 @@
     Redes avanzadas: routing-topo, switch-vlan, vlan-trunk, hub-vs-switch.
     Mantenimiento: ups, backup-321, plan-calendar.
     Refrigeracion: aio-cooler, air-cooler, liquid-loop.
-   Emparejado macho + hembra: los conectores con entrada en PORTS se
-   muestran lado a lado con su puerto receptor (ver seccion PUERTOS
-   HEMBRA). Ejemplo: atx24, sata-power, usb-a, hdmi, dp, rj45, ...
+   El visor dibuja SOLO el conector macho / cable. El puerto hembra
+   lo dibuja visuals-2d.js (2D, SVG) cuando este flag esta presente:
+   window.__CABLES3D__ = true (se define abajo al cargar).
    ============================================================ */
 
 (function () {
+  window.__CABLES3D__ = true;
   if (typeof THREE === 'undefined') {
     document.querySelectorAll('.three-canvas').forEach(el => {
       const stage = el.querySelector('.three-stage');
@@ -85,6 +86,13 @@
   }
   function sphere(r, color, o) { return new THREE.Mesh(new THREE.SphereGeometry(r, 18, 14), M(color, o)); }
   function torus(radius, tube, color, o) { return new THREE.Mesh(new THREE.TorusGeometry(radius, tube, 14, 32), M(color, o)); }
+  /* Esfera emisiva (luz que viaja por la fibra) */
+  function glow(r, color) {
+    const m = M(color);
+    m.emissive = new THREE.Color(color);
+    m.emissiveIntensity = 1;
+    return new THREE.Mesh(new THREE.SphereGeometry(r, 12, 10), m);
+  }
 
   /* === PINES (rejilla en cara +Z de un bloque centrado) === */
   function pins(rows, cols, gapX, gapY, o) {
@@ -797,7 +805,7 @@
 
   /* === HERRAMIENTAS DE CABLEADO === */
 
-  /* Crimpadora RJ-45 (ponchadora manual) */
+  /* Crimpadora RJ-45 (ponchadora manual) con un conector siendo ponchado */
   MODELS.crimper = function () {
     const g = new THREE.Group();
     const head = box(15, 11, 7, C.metal, { metalness: 0.65, roughness: 0.35 });
@@ -817,10 +825,50 @@
       tooth.position.set(18.4 + c * 1.15, 0.1, 0);
       g.add(tooth);
     }
+    /* RJ-45 siendo ponchado: carcasa transparente con contactos dorados visibles */
+    const plugShell = box(6, 4.4, 8, 0x0d0e12, { transparent: true, opacity: 0.32, roughness: 0.2 });
+    plugShell.position.set(21.5, 0, 0);
+    g.add(plugShell);
+    const plugCore = box(4.8, 3.2, 6.4, 0x0d0e12);
+    plugCore.position.set(21.5, 0, 0);
+    g.add(plugCore);
+    for (let c = 0; c < 8; c++) {
+      const p = box(0.48, 0.2, 1.7, C.gold, { metalness: 0.8, roughness: 0.3 });
+      p.position.set(-3.5 * 0.48 + c * 0.48, 1.4, 0);
+      p.rotation.x = -0.12;
+      g.add(p);
+    }
+    const wireCols = [0xe27d2b, 0xd8433d, 0x4cb057, 0x2f7d3a, 0x3b82c4, 0x6bb7e8, 0x7a4e26, 0x4a2f16];
+    wireCols.forEach((col, i) => {
+      const x = -3.5 * 0.48 + i * 0.48;
+      const wire = seg(0.22, 5, col);
+      wire.position.set(21.5 + x, 0, -5.5);
+      g.add(wire);
+    });
+    const jacket = cyl(1.2, 6, 0x3a3e49, { seg: 16 });
+    jacket.rotation.y = Math.PI / 2;
+    jacket.position.set(21.5, 0, -8);
+    g.add(jacket);
     const pivot = cyl(3.4, 6, 0x3a3e49);
     pivot.rotation.z = Math.PI / 2;
     pivot.position.set(3, 0, 0);
     g.add(pivot);
+    /* trinquete (ratchet) dentado sobre el pivote */
+    const ratchetArc = new THREE.Mesh(new THREE.TorusGeometry(2.6, 0.3, 10, 20, Math.PI), M(0x9aa0ab, { metalness: 0.6, roughness: 0.4 }));
+    ratchetArc.position.set(3, 0, 0);
+    g.add(ratchetArc);
+    for (let t = 0; t < 5; t++) {
+      const ang = Math.PI - (t + 0.5) * (Math.PI / 5);
+      const tooth = box(0.7, 0.45, 2.6, 0x8a8f98, { metalness: 0.6, roughness: 0.4 });
+      tooth.position.set(3 + Math.cos(ang) * 2.6, Math.sin(ang) * 2.6, 0);
+      tooth.rotation.z = ang - Math.PI / 2;
+      g.add(tooth);
+    }
+    /* lengueta de liberacion del ratchet */
+    const release = box(1.4, 2, 2.4, 0x2a2d36);
+    release.position.set(9.5, 9.5, 0);
+    release.rotation.z = 0.1;
+    g.add(release);
     const h1 = box(3.6, 5, 30, 0xd8433d, { roughness: 0.45 });
     h1.position.set(-13, -6.5, 0);
     h1.rotation.z = 0.13;
@@ -920,7 +968,7 @@
     return g;
   };
 
-  /* Pelacables ajustable con un cable pelado en las mordazas */
+  /* Pelacables ajustable con un cable siendo pelado */
   MODELS.stripper = function () {
     const g = new THREE.Group();
     const plateTop = box(13, 7.5, 3, C.metal, { metalness: 0.6, roughness: 0.4 });
@@ -929,18 +977,35 @@
     const plateBot = box(13, 7.5, 3, C.metal, { metalness: 0.6, roughness: 0.4 });
     plateBot.position.set(0, -5.8, 0);
     g.add(plateBot);
-    const notchT = cyl(2, 0.9, 0x0d0e12);
-    notchT.rotation.x = Math.PI / 2;
-    notchT.position.set(0, 5.8, 0);
-    g.add(notchT);
-    const notchB = cyl(2, 0.9, 0x0d0e12);
-    notchB.rotation.x = Math.PI / 2;
-    notchB.position.set(0, -5.8, 0);
-    g.add(notchB);
+    /* orificio por donde pasa el cable */
+    const holeT = cyl(1.35, 0.9, 0x0d0e12);
+    holeT.rotation.x = Math.PI / 2;
+    holeT.position.set(0, 5.8, 0);
+    g.add(holeT);
+    const holeB = cyl(1.35, 0.9, 0x0d0e12);
+    holeB.rotation.x = Math.PI / 2;
+    holeB.position.set(0, -5.8, 0);
+    g.add(holeB);
+    /* cuchillas curvas de corte (arco dorado) en cada quijada */
+    const bladeT = new THREE.Mesh(new THREE.TorusGeometry(1.55, 0.22, 10, 20, Math.PI), M(C.gold, { metalness: 0.8, roughness: 0.3 }));
+    bladeT.position.set(0, 5.8, 0);
+    g.add(bladeT);
+    const bladeB = new THREE.Mesh(new THREE.TorusGeometry(1.55, 0.22, 10, 20, Math.PI), M(C.gold, { metalness: 0.8, roughness: 0.3 }));
+    bladeB.rotation.z = Math.PI;
+    bladeB.position.set(0, -5.8, 0);
+    g.add(bladeB);
+    /* tornillo de ajuste moleteado */
     const screw = cyl(1.2, 2.2, 0x9aa0ab, { metalness: 0.5, roughness: 0.4 });
     screw.rotation.z = Math.PI / 2;
     screw.position.set(6.5, 0, 0);
     g.add(screw);
+    for (let i = 0; i < 6; i++) {
+      const ridge = box(0.25, 2.5, 0.9, 0x6b7078);
+      ridge.position.set(6.5, 0, 0);
+      ridge.rotation.x = (i / 6) * Math.PI * 2;
+      g.add(ridge);
+    }
+    /* mangos ergonomicos azules con agarre negro */
     const h1 = box(3.2, 4.4, 24, 0x6bb7e8, { roughness: 0.5 });
     h1.position.set(0, -10.5, -9);
     h1.rotation.x = 0.22;
@@ -957,19 +1022,31 @@
     grip2.position.set(0, 13.5, -18);
     grip2.rotation.x = -0.22;
     g.add(grip2);
+    /* cable: funda atras, corte en la cuchilla y cobre expuesto adelante */
     const jacketA = cyl(1.15, 9, 0x1f2229);
     jacketA.rotation.x = Math.PI / 2;
     jacketA.position.set(0, 0, -4);
     g.add(jacketA);
-    const jacketB = cyl(1.15, 6, 0x1f2229);
-    jacketB.rotation.x = Math.PI / 2;
-    jacketB.position.set(0, 0, 6.5);
-    g.add(jacketB);
+    /* anillo de funda ya cortado en el punto de la cuchilla */
+    const cutRing = cyl(1.15, 0.7, 0x1f2229);
+    cutRing.rotation.x = Math.PI / 2;
+    cutRing.position.set(0, 0, 0.3);
+    g.add(cutRing);
+    const cutLine = torus(1.15, 0.08, 0x0d0e12);
+    cutLine.position.set(0, 0, 0.65);
+    g.add(cutLine);
+    /* hilos de cobre expuestos hacia adelante */
     for (let i = 0; i < 4; i++) {
-      const wire = seg(0.26, 8, 0xd8a13a, { metalness: 0.6, roughness: 0.35 });
-      wire.position.set(-1.6 + i * 1.05, 0, 2.2);
+      const wire = seg(0.26, 8.5, 0xd8a13a, { metalness: 0.6, roughness: 0.35 });
+      wire.position.set(-1.6 + i * 1.05, 0, 4.6);
       g.add(wire);
     }
+    /* pedazo de funda retirado, recostado adelante de la herramienta */
+    const peel = cyl(1.15, 4, 0x1f2229);
+    peel.rotation.x = Math.PI / 2;
+    peel.rotation.z = 0.35;
+    peel.position.set(3.6, -3, 9);
+    g.add(peel);
     return g;
   };
 
@@ -1908,29 +1985,38 @@
   /* Conector F (coaxial) */
   MODELS['coax-fconn'] = function () {
     const g = new THREE.Group();
-    const core = cyl(0.35, 14, 0xc98a3d, { metalness: 0.6, seg: 16 });
-    core.rotation.x = Math.PI / 2;
-    g.add(core);
-    const dielectric = cyl(1.0, 14, 0xe8e2d0, { transparent: true, opacity: 0.5, seg: 18 });
-    dielectric.rotation.x = Math.PI / 2;
-    g.add(dielectric);
-    const shield = cyl(1.25, 14, 0x9aa0ab, { metalness: 0.8, roughness: 0.4, seg: 18 });
-    shield.rotation.x = Math.PI / 2;
-    g.add(shield);
-    const jacket = cyl(1.7, 14, 0x17181c, { seg: 20 });
+    /* cable coaxial entrando con capas visibles */
+    const jacket = cyl(1.7, 9, 0x17181c, { seg: 20 });
     jacket.rotation.x = Math.PI / 2;
     g.add(jacket);
-    const body = cyl(1.5, 5, C.metal, { metalness: 0.85, roughness: 0.3, seg: 20 });
+    const shield = cyl(1.25, 8, 0x9aa0ab, { metalness: 0.8, roughness: 0.4, seg: 18 });
+    shield.rotation.x = Math.PI / 2;
+    g.add(shield);
+    const core = cyl(0.35, 17, 0xc98a3d, { metalness: 0.6, seg: 16 });
+    core.rotation.x = Math.PI / 2;
+    g.add(core);
+    /* cuerpo principal hexagonal (llave 8mm) */
+    const body = cyl(1.6, 4.5, C.metal, { metalness: 0.85, roughness: 0.3, seg: 6 });
     body.rotation.x = Math.PI / 2;
-    body.position.set(0, 0, 9);
+    body.position.set(0, 0, 9.5);
     g.add(body);
-    const nut = cyl(1.9, 2.5, 0x8a8f98, { metalness: 0.85, roughness: 0.4, seg: 6 });
+    const collar = cyl(1.75, 1, C.metal, { metalness: 0.8, roughness: 0.35, seg: 12 });
+    collar.rotation.x = Math.PI / 2;
+    collar.position.set(0, 0, 11.5);
+    g.add(collar);
+    /* tuerca roscada hexagonal + anillo moleteado */
+    const nut = cyl(2.1, 2.6, 0x8a8f98, { metalness: 0.85, roughness: 0.4, seg: 6 });
     nut.rotation.x = Math.PI / 2;
-    nut.position.set(0, 0, 11.5);
+    nut.position.set(0, 0, 12.8);
     g.add(nut);
-    const pin = cyl(0.28, 2, 0xc98a3d, { metalness: 0.7, seg: 14 });
+    const knurl = cyl(2.25, 0.7, 0x9aa0ab, { metalness: 0.8, roughness: 0.5, seg: 24 });
+    knurl.rotation.x = Math.PI / 2;
+    knurl.position.set(0, 0, 14.2);
+    g.add(knurl);
+    /* pin central que sobresale */
+    const pin = cyl(0.28, 2.6, 0xc98a3d, { metalness: 0.7, seg: 14 });
     pin.rotation.x = Math.PI / 2;
-    pin.position.set(0, 0, 12.5);
+    pin.position.set(0, 0, 15);
     g.add(pin);
     return g;
   };
@@ -1938,23 +2024,36 @@
   /* Fibra optica con conector SC (multimodo = verde) */
   MODELS['fiber-sc'] = function () {
     const g = new THREE.Group();
-    const cable = cyl(1.1, 22, 0xe27d2b, { roughness: 0.4, seg: 20 });
+    const cable = cyl(1.1, 26, 0xe27d2b, { roughness: 0.4, seg: 20 });
     cable.rotation.x = Math.PI / 2;
     g.add(cable);
-    const boot = cyl(1.0, 2.5, 0x17181c, { seg: 16 });
+    /* protector con resorte (strain relief) */
+    const boot = cyl(1.35, 2.2, 0x17181c, { seg: 16 });
     boot.rotation.x = Math.PI / 2;
-    boot.position.set(0, 0, 11);
+    boot.position.set(0, 0, 12.6);
     g.add(boot);
-    const body = box(2.2, 2.2, 5, 0x2a2d36);
-    body.position.set(0, 0, 14);
+    const bootRing = cyl(1.5, 0.5, 0x9aa0ab, { metalness: 0.6, roughness: 0.4, seg: 16 });
+    bootRing.rotation.x = Math.PI / 2;
+    bootRing.position.set(0, 0, 13.7);
+    g.add(bootRing);
+    /* cuerpo cuadrado SC con clip superior de retencion */
+    const body = box(2.4, 2.6, 5.5, 0x2a2d36);
+    body.position.set(0, 0, 15.5);
     g.add(body);
-    const tip = box(1.5, 1.5, 1.6, 0x4cb057, { roughness: 0.35 });
-    tip.position.set(0, 0, 17);
+    const clip = box(2.6, 0.6, 2.4, 0x1a1c22);
+    clip.position.set(0, 1.6, 15.5);
+    g.add(clip);
+    const tip = box(1.6, 1.6, 1.6, 0x4cb057, { roughness: 0.35 });
+    tip.position.set(0, 0, 19.4);
     g.add(tip);
-    const ferrule = cyl(0.3, 1.4, 0xe9ebee, { metalness: 0.4, seg: 12 });
+    const ferrule = cyl(0.32, 1.6, 0xe9ebee, { metalness: 0.4, seg: 12 });
     ferrule.rotation.x = Math.PI / 2;
-    ferrule.position.set(0, 0, 18);
+    ferrule.position.set(0, 0, 20.8);
     g.add(ferrule);
+    /* nucleo luminoso (la luz que viaja por la fibra) */
+    const glowTip = glow(0.22, 0x4cb057);
+    glowTip.position.set(0, 0, 21.6);
+    g.add(glowTip);
     return g;
   };
 
@@ -1962,70 +2061,118 @@
   MODELS['fiber-lc'] = function () {
     const g = new THREE.Group();
     [-2.2, 2.2].forEach(x => {
-      const body = box(1.8, 2, 4.5, 0x17181c);
+      const body = box(1.8, 2.2, 4.8, 0x17181c);
       body.position.set(x, 0, 0);
       g.add(body);
-      const tip = box(1.1, 1.1, 1.4, 0x2b5bb0, { roughness: 0.3 });
-      tip.position.set(x, 0, 2.8);
+      const tip = box(1.1, 1.1, 1.5, 0x2b5bb0, { roughness: 0.3 });
+      tip.position.set(x, 0, 3.1);
       g.add(tip);
-      const ferrule = cyl(0.28, 1.2, 0xe9ebee, { metalness: 0.4, seg: 12 });
+      const ferrule = cyl(0.28, 1.3, 0xe9ebee, { metalness: 0.4, seg: 12 });
       ferrule.rotation.x = Math.PI / 2;
-      ferrule.position.set(x, 0, 3.8);
+      ferrule.position.set(x, 0, 4.1);
       g.add(ferrule);
-      const clip = box(1.9, 0.7, 1.2, 0x9aa0ab);
-      clip.position.set(x, 1.2, -0.5);
+      const glowTip = glow(0.18, 0x6bb7e8);
+      glowTip.position.set(x, 0, 4.8);
+      g.add(glowTip);
+      /* clip tipo latchet de cada conector */
+      const clip = box(1.9, 0.8, 1.2, 0x9aa0ab);
+      clip.position.set(x, 1.35, -0.6);
       g.add(clip);
+      /* boot individual */
+      const boot = cyl(0.5, 1.8, 0x1a1c22, { seg: 12 });
+      boot.rotation.x = Math.PI / 2;
+      boot.position.set(x, 0, -2.6);
+      g.add(boot);
     });
+    /* clip que une el par duplex */
     const holder = box(2.2, 1, 3, 0x2a2d36);
     holder.position.set(0, 0, -1.5);
     g.add(holder);
-    g.add(wireBundle([new THREE.Vector3(0, 0, -3)], [0xe27d2b], { down: 6, back: 2, radius: 0.5, spread: 0 }));
+    const latch = box(3.4, 0.5, 1.4, 0x9aa0ab);
+    latch.position.set(0, 1.45, -0.6);
+    g.add(latch);
+    g.add(wireBundle([new THREE.Vector3(0, 0, -3)], [0xe27d2b, 0x4cb057], { down: 6, back: 2, radius: 0.45, spread: 0 }));
     return g;
   };
 
   /* Fibra ST (bayoneta, legacy) */
   MODELS['fiber-st'] = function () {
     const g = new THREE.Group();
-    const cable = cyl(1, 14, 0x17181c, { seg: 18 });
+    const cable = cyl(1.1, 16, 0x17181c, { seg: 18 });
     cable.rotation.x = Math.PI / 2;
     g.add(cable);
-    const body = cyl(1.6, 4, 0x2a2d36, { seg: 18 });
+    const boot = cyl(1.3, 1.8, 0x1a1c22, { seg: 16 });
+    boot.rotation.x = Math.PI / 2;
+    boot.position.set(0, 0, 8.6);
+    g.add(boot);
+    const body = cyl(1.7, 4.5, 0x2a2d36, { seg: 18 });
     body.rotation.x = Math.PI / 2;
-    body.position.set(0, 0, 8);
+    body.position.set(0, 0, 9.5);
     g.add(body);
-    const collar = cyl(2.2, 1.6, C.metal, { metalness: 0.85, roughness: 0.3, seg: 12 });
+    /* collar de bayoneta con muescas de llave (key) */
+    const collar = cyl(2.3, 2, C.metal, { metalness: 0.85, roughness: 0.3, seg: 14 });
     collar.rotation.x = Math.PI / 2;
-    collar.position.set(0, 0, 10);
+    collar.position.set(0, 0, 12);
     g.add(collar);
-    const ferrule = cyl(0.3, 2, 0xe9ebee, { metalness: 0.4, seg: 12 });
+    [-1, 1].forEach(s => {
+      const key = box(0.9, 0.9, 1.6, C.metal, { metalness: 0.85, roughness: 0.3 });
+      key.position.set(s * 1.7, 0, 12);
+      g.add(key);
+    });
+    const ferrule = cyl(0.3, 2.2, 0xe9ebee, { metalness: 0.4, seg: 12 });
     ferrule.rotation.x = Math.PI / 2;
-    ferrule.position.set(0, 0, 11.5);
+    ferrule.position.set(0, 0, 13.8);
     g.add(ferrule);
+    const glowTip = glow(0.2, 0x4cb057);
+    glowTip.position.set(0, 0, 14.8);
+    g.add(glowTip);
     return g;
   };
 
-  /* RJ-11 (telefono, 6P4C) */
+  /* RJ-11 (telefono, 6P4C) — carcasa transparente con contactos visibles */
   MODELS.rj11 = function () {
     const g = new THREE.Group();
-    const shell = box(10, 6.5, 13, 0x17181c, { transparent: true, opacity: 0.55 });
+    /* carcasa exterior semitransparente */
+    const shell = box(11, 6.8, 13, 0x17181c, { transparent: true, opacity: 0.3, roughness: 0.2 });
     g.add(shell);
-    const core = box(8, 5, 11, 0x0d0e12);
+    const core = box(9, 5.2, 11, 0x0d0e12);
     core.position.set(0, 0.3, 0);
     g.add(core);
-    for (let c = 0; c < 4; c++) {
-      const p = box(0.7, 0.3, 2.2, C.gold, { metalness: 0.7, roughness: 0.3 });
-      p.position.set(-3 * 0.5 + c * 0.9, 1.6, 6);
-      p.rotation.z = -0.05;
-      g.add(p);
+    /* 6 posiciones (ranuras) — solo 4 con contacto (6P4C) */
+    for (let c = 0; c < 6; c++) {
+      const slot = box(0.3, 0.8, 2.6, 0x20242b);
+      slot.position.set(-2.5 * 0.95 + c * 0.95, 1.5, 6);
+      g.add(slot);
     }
-    const latch = box(10, 2, 2.4, 0x3a3e49);
-    latch.position.set(0, -3.4, 4);
+    /* contactos dorados en las posiciones centrales (2-5) */
+    [1, 2, 3, 4].forEach(pos => {
+      const x = -2.5 * 0.95 + pos * 0.95;
+      const p = box(0.5, 0.3, 2.4, C.gold, { metalness: 0.8, roughness: 0.25 });
+      p.position.set(x, 1.9, 6);
+      p.rotation.z = -0.06;
+      g.add(p);
+    });
+    /* lengueta de retencion inferior */
+    const latch = box(11, 2.2, 2.6, 0x3a3e49);
+    latch.position.set(0, -3.4, 4.5);
     g.add(latch);
+    /* tab superior de guia */
+    const tab = box(4, 2.6, 1.6, 0x17181c, { transparent: true, opacity: 0.6 });
+    tab.position.set(0, 4.4, 7);
+    g.add(tab);
+    /* boot de alivio de tension */
+    const boot = box(9, 5, 2.2, 0x24272e);
+    boot.position.set(0, 0.3, -6.8);
+    g.add(boot);
     const cols = [0xd8433d, 0x4cb057, 0x17181c, 0xf6c344];
-    const w = 3 * 0.9;
+    const w = 3 * 0.95;
     for (let c = 0; c < 4; c++) {
-      const wire = seg(0.3, 6, cols[c]);
-      wire.position.set(-w / 2 + c * 0.9, -1.2, -8.5);
+      const x = -w / 2 + c * 0.95;
+      const wire = tube([
+        new THREE.Vector3(x, -0.8, -8),
+        new THREE.Vector3(x, -2.5, -11),
+        new THREE.Vector3(x + (c - 1.5) * 1.2, -3.5, -13.5)
+      ], 0.3, cols[c], 14);
       g.add(wire);
     }
     return g;
@@ -4065,562 +4212,6 @@
     return g;
   };
 
-  /* ============================================================
-     PUERTOS HEMBRA: contraparte receptora de cada conector macho.
-     Cuando un modelo tiene entrada en PORTS, el visor muestra el
-     conector macho (clavija) y su puerto hembra (receptaculo).
-     ============================================================ */
-  function femaleGrid(rows, cols, gapX, gapY, o) {
-    o = o || {};
-    const edgeX = o.edgeX !== undefined ? o.edgeX : 3.6;
-    const edgeY = o.edgeY !== undefined ? o.edgeY : 3;
-    const w = (cols - 1) * gapX + edgeX * 2;
-    const h = (rows - 1) * gapY + edgeY * 2;
-    const d = o.depth !== undefined ? o.depth : 9;
-    const g = new THREE.Group();
-    const frame = box(w, h, d, o.color || C.black, { roughness: o.roughness || 0.4 });
-    g.add(frame);
-    const wall = o.wall !== undefined ? o.wall : 3.2;
-    const cavity = box(w - wall, h - wall, d - 2.4, 0x0d0f14);
-    cavity.position.z = 0.4;
-    g.add(cavity);
-    const holeR = o.holeR !== undefined ? o.holeR : 0.55;
-    const offX = ((cols - 1) * gapX) / 2;
-    const offY = ((rows - 1) * gapY) / 2;
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const hole = cyl(holeR, 1.3, 0x000000, { seg: 14 });
-        hole.rotation.x = Math.PI / 2;
-        hole.position.set(-offX + c * gapX, offY - r * gapY, d / 2 - 0.3);
-        g.add(hole);
-      }
-    }
-    if (o.clip) {
-      const clip = box(w * 0.3, 2.6, 2.4, C.plasticLt);
-      clip.position.set(0, -h / 2 + 1, 0.5);
-      g.add(clip);
-    }
-    return g;
-  }
-
-  function femaleHdmi(scale) {
-    scale = scale || 1;
-    const g = new THREE.Group();
-    const frame = box(14 * scale, 4.6 * scale, 6 * scale, C.metal, { metalness: 0.85, roughness: 0.3 });
-    g.add(frame);
-    const cavity = box(11.6 * scale, 3.4 * scale, 4.4 * scale, 0x0d0f14);
-    cavity.position.z = 0.4;
-    g.add(cavity);
-    const rows = [10, 9];
-    rows.forEach((n, r) => {
-      const w = (n - 1) * 1.1 * scale;
-      const y = (r === 0 ? 1.15 : -1.15) * scale;
-      for (let c = 0; c < n; c++) {
-        const hole = cyl(0.16 * scale, 1.2 * scale, 0x000000, { seg: 10 });
-        hole.rotation.x = Math.PI / 2;
-        hole.position.set(-w / 2 + c * 1.1 * scale, y, 3.4 * scale);
-        g.add(hole);
-      }
-    });
-    return g;
-  }
-
-  function femaleDp(scale) {
-    scale = scale || 1;
-    const g = new THREE.Group();
-    const frame = box(12.4 * scale, 4.6 * scale, 6.2 * scale, C.metal, { metalness: 0.85, roughness: 0.3 });
-    g.add(frame);
-    const cavity = box(10.8 * scale, 3.4 * scale, 4.6 * scale, 0x0d0f14);
-    cavity.position.z = 0.5;
-    g.add(cavity);
-    const w = 19 * 0.5 * scale;
-    for (let c = 0; c < 20; c++) {
-      const hole = cyl(0.15 * scale, 1.2 * scale, 0x000000, { seg: 10 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(-w / 2 + c * 0.5 * scale, 0, 3.6 * scale);
-      g.add(hole);
-    }
-    const latch = box(6 * scale, 1.5 * scale, 1.6 * scale, 0x8a5cf5);
-    latch.position.set(0, 3.1 * scale, 3 * scale);
-    g.add(latch);
-    return g;
-  }
-
-  function femaleVga() {
-    const g = new THREE.Group();
-    const b1 = box(16, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
-    b1.position.y = -2.9;
-    g.add(b1);
-    const b2 = box(15.2, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
-    b2.position.y = -0.2;
-    g.add(b2);
-    const b3 = box(14.4, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
-    b3.position.y = 2.5;
-    g.add(b3);
-    const rows = [5, 5, 5];
-    rows.forEach((n, r) => {
-      const w = (n - 1) * 2.4;
-      const y = 3.2 - r * 2.2;
-      for (let c = 0; c < n; c++) {
-        const hole = cyl(0.42, 1.2, 0x000000, { seg: 12 });
-        hole.rotation.x = Math.PI / 2;
-        hole.position.set(-w / 2 + c * 2.4, y, 2.6);
-        g.add(hole);
-      }
-    });
-    [-1, 1].forEach(s => {
-      const thumb = cyl(1.7, 4, C.metal, { seg: 16 });
-      thumb.rotation.x = Math.PI / 2;
-      thumb.position.set(s * 9, -4.6, 0);
-      g.add(thumb);
-      const hole = cyl(0.7, 0.8, 0x000000, { seg: 12 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(s * 9, -4.6, 1.8);
-      g.add(hole);
-    });
-    return g;
-  }
-
-  function femaleDvi() {
-    const g = new THREE.Group();
-    const shell = box(17, 5.8, 6.4, 0xe9ebee, { roughness: 0.45 });
-    g.add(shell);
-    const cavity = box(15.4, 4.6, 5.4, 0x0d0f14);
-    cavity.position.z = 0.4;
-    g.add(cavity);
-    const rows = [8, 8, 8];
-    rows.forEach((n, r) => {
-      const w = (n - 1) * 1.55;
-      const y = 1.7 - r * 1.55;
-      for (let c = 0; c < n; c++) {
-        const hole = cyl(0.28, 1.2, 0x000000, { seg: 12 });
-        hole.rotation.x = Math.PI / 2;
-        hole.position.set(-w / 2 + c * 1.55, y, 2.8);
-        g.add(hole);
-      }
-    });
-    const slot = box(3.4, 0.9, 1.4, 0x000000);
-    slot.position.set(7.4, 0, 2.8);
-    g.add(slot);
-    [-1, 1].forEach(s => {
-      const screw = cyl(0.8, 2.6, C.metal, { seg: 14 });
-      screw.rotation.x = Math.PI / 2;
-      screw.position.set(s * 9.4, -2.7, 0);
-      g.add(screw);
-    });
-    return g;
-  }
-
-  function femaleSvideo() {
-    const g = new THREE.Group();
-    const ring = cyl(3.6, 5, C.metal, { seg: 24, metalness: 0.7, roughness: 0.3 });
-    ring.rotation.x = Math.PI / 2;
-    g.add(ring);
-    const face = cyl(3.0, 0.8, 0x0d0f14, { seg: 24 });
-    face.rotation.x = Math.PI / 2;
-    face.position.z = 2.6;
-    g.add(face);
-    [[-0.9, 1.1], [0.9, -1.1], [-0.9, -1.1], [0.9, 1.1]].forEach(([x, y]) => {
-      const hole = cyl(0.35, 1.0, 0x000000, { seg: 12 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(x, y, 2.9);
-      g.add(hole);
-    });
-    const key = box(1.1, 0.9, 0.9, 0x17181c);
-    key.position.set(3.3, 0, 2);
-    g.add(key);
-    return g;
-  }
-
-  function femaleRca(color) {
-    const g = new THREE.Group();
-    const ring = cyl(2.2, 4, color, { seg: 20, roughness: 0.35 });
-    ring.rotation.x = Math.PI / 2;
-    g.add(ring);
-    const face = cyl(1.8, 0.8, 0x0d0f14, { seg: 20 });
-    face.rotation.x = Math.PI / 2;
-    face.position.z = 2.1;
-    g.add(face);
-    const hole = cyl(0.8, 1.2, 0x000000, { seg: 14 });
-    hole.rotation.x = Math.PI / 2;
-    hole.position.z = 2.3;
-    g.add(hole);
-    return g;
-  }
-
-  function femaleUsbA() {
-    const g = new THREE.Group();
-    const frame = box(12.2, 4.8, 5.8, C.metal, { metalness: 0.85, roughness: 0.28 });
-    g.add(frame);
-    const cavity = box(10.6, 3.4, 4.8, 0x0d0f14);
-    cavity.position.z = 0.3;
-    g.add(cavity);
-    const tongue = box(10.6, 0.8, 0.8, 0x0d0f14);
-    tongue.position.set(0, -0.8, 3);
-    g.add(tongue);
-    [0.9, -0.3].forEach(x => {
-      const pad = box(0.4, 0.15, 0.6, C.gold, { metalness: 0.7 });
-      pad.position.set(x, -0.3, 3.2);
-      g.add(pad);
-    });
-    return g;
-  }
-
-  function femaleUsbB() {
-    const g = new THREE.Group();
-    const frame = box(8.4, 7.8, 5.6, C.metal, { metalness: 0.85, roughness: 0.28 });
-    g.add(frame);
-    const cavity = box(7, 6, 4.8, 0x0d0f14);
-    cavity.position.z = 0.5;
-    g.add(cavity);
-    const tongue = box(7, 1, 0.8, 0x0d0f14);
-    tongue.position.set(0, 0, 3.2);
-    g.add(tongue);
-    [-1.6, 1.6].forEach(x => {
-      const pad = box(0.4, 0.15, 0.6, C.gold, { metalness: 0.7 });
-      pad.position.set(x, 0.5, 3.3);
-      g.add(pad);
-    });
-    return g;
-  }
-
-  function femaleUsbC() {
-    const g = new THREE.Group();
-    const frame = box(8.6, 3.6, 5.5, C.metal, { metalness: 0.85, roughness: 0.28 });
-    g.add(frame);
-    const cavity = cyl(3.2, 5, 0x0d0f14, { seg: 24 });
-    cavity.rotation.x = Math.PI / 2;
-    cavity.scale.set(1, 0.5, 1);
-    cavity.position.z = 0.3;
-    g.add(cavity);
-    const tongue = box(6.4, 1.2, 0.8, 0x0d0f14);
-    tongue.position.set(0, 0, 3);
-    g.add(tongue);
-    [-1.5, 1.5].forEach(y => {
-      const w = 11 * 0.42;
-      for (let c = 0; c < 12; c++) {
-        const pad = box(0.16, 0.14, 0.5, C.gold, { metalness: 0.7 });
-        pad.position.set(-w / 2 + c * 0.42, y, 3.3);
-        g.add(pad);
-      }
-    });
-    return g;
-  }
-
-  function femaleUsbMini() {
-    const g = new THREE.Group();
-    const frame = box(7, 3.4, 4.8, C.metal, { metalness: 0.85, roughness: 0.28 });
-    g.add(frame);
-    const cavity = box(5.6, 2.4, 4.2, 0x0d0f14);
-    cavity.position.z = 0.4;
-    g.add(cavity);
-    [-0.6, 0, 0.6].forEach(x => {
-      const hole = cyl(0.14, 1.0, 0x000000, { seg: 10 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(x, 0, 2.9);
-      g.add(hole);
-    });
-    return g;
-  }
-
-  function femaleUsbMicro() {
-    const g = new THREE.Group();
-    const frame = box(7.4, 1.9, 5.6, C.metal, { metalness: 0.85, roughness: 0.28 });
-    g.add(frame);
-    const cavity = box(6.2, 1.3, 5.4, 0x0d0f14);
-    cavity.position.z = 0.3;
-    g.add(cavity);
-    [-0.4, 0, 0.4].forEach(x => {
-      const hole = cyl(0.12, 1.0, 0x000000, { seg: 10 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(x, 0, 3.3);
-      g.add(hole);
-    });
-    return g;
-  }
-
-  function femaleJack35() {
-    const g = new THREE.Group();
-    const panel = box(8, 8, 3, 0x2a2d36, { roughness: 0.4 });
-    g.add(panel);
-    const ring = cyl(1.9, 2, C.metal, { seg: 22, metalness: 0.85, roughness: 0.25 });
-    ring.rotation.x = Math.PI / 2;
-    ring.position.z = 1.8;
-    g.add(ring);
-    const hole = cyl(0.9, 1.4, 0x000000, { seg: 18 });
-    hole.rotation.x = Math.PI / 2;
-    hole.position.z = 2.2;
-    g.add(hole);
-    return g;
-  }
-
-  function femaleToslink() {
-    const g = new THREE.Group();
-    const body = box(6.5, 6.5, 6, 0x17181c);
-    g.add(body);
-    const door = box(4, 4, 1.2, 0x0d0f14);
-    door.position.set(0, 0, 3.2);
-    g.add(door);
-    const lens = sphere(1.3, 0xd8433d, { transparent: true, opacity: 0.85 });
-    lens.position.set(0, 0, 3.8);
-    g.add(lens);
-    return g;
-  }
-
-  function femaleRj45() {
-    const g = new THREE.Group();
-    const body = box(12, 9, 14, 0x3a3e49, { roughness: 0.4 });
-    g.add(body);
-    const cavity = box(10, 7, 12, 0x0d0f14);
-    cavity.position.set(0, 0.2, -0.4);
-    g.add(cavity);
-    for (let c = 0; c < 8; c++) {
-      const p = box(0.85, 0.35, 2.6, C.gold, { metalness: 0.7, roughness: 0.3 });
-      p.position.set(-7 * 0.5 + c * 1.05, 1.9, 4.4);
-      p.rotation.x = -0.5;
-      g.add(p);
-    }
-    return g;
-  }
-
-  function femaleRj11() {
-    const g = new THREE.Group();
-    const body = box(10, 6.5, 13, 0x3a3e49, { roughness: 0.4 });
-    g.add(body);
-    const cavity = box(8, 5, 11, 0x0d0f14);
-    cavity.position.set(0, 0.3, -0.4);
-    g.add(cavity);
-    for (let c = 0; c < 4; c++) {
-      const p = box(0.7, 0.3, 2.2, C.gold, { metalness: 0.7, roughness: 0.3 });
-      p.position.set(-3 * 0.5 + c * 0.9, 1.6, 4.8);
-      p.rotation.x = -0.45;
-      g.add(p);
-    }
-    return g;
-  }
-
-  function femalePs2() {
-    const g = new THREE.Group();
-    const ring = cyl(2.4, 3, 0x8a5cf5, { seg: 24, roughness: 0.4 });
-    ring.rotation.x = Math.PI / 2;
-    g.add(ring);
-    const face = cyl(1.8, 0.6, 0x6d3fb8, { seg: 20 });
-    face.rotation.x = Math.PI / 2;
-    face.position.z = 1.6;
-    g.add(face);
-    for (let i = 0; i < 6; i++) {
-      const a = (i / 6) * Math.PI * 2;
-      const hole = cyl(0.16, 0.8, 0x000000, { seg: 10 });
-      hole.rotation.x = Math.PI / 2;
-      hole.position.set(Math.cos(a) * 0.9, Math.sin(a) * 0.9, 2);
-      g.add(hole);
-    }
-    return g;
-  }
-
-  function femaleCom() {
-    const g = new THREE.Group();
-    const shell = box(13, 8, 5, 0xb9bec7, { roughness: 0.4 });
-    g.add(shell);
-    const rows = [5, 4];
-    rows.forEach((n, r) => {
-      const w = (n - 1) * 2.2;
-      const y = 1.5 - r * 2.2;
-      for (let c = 0; c < n; c++) {
-        const hole = cyl(0.3, 1.0, 0x000000, { seg: 12 });
-        hole.rotation.x = Math.PI / 2;
-        hole.position.set(-w / 2 + c * 2.2, y, 2.4);
-        g.add(hole);
-      }
-    });
-    const screw = cyl(0.6, 1.6, C.metal, { seg: 12 });
-    screw.rotation.x = Math.PI / 2;
-    screw.position.set(6.5, 0, 0);
-    g.add(screw);
-    return g;
-  }
-
-  function femaleAcCable() {
-    const g = new THREE.Group();
-    const panel = box(10, 7, 1.2, 0x2a2d36, { roughness: 0.4 });
-    g.add(panel);
-    const inlet = box(5.5, 3.5, 3, 0x0d0f14);
-    inlet.position.z = 1.5;
-    g.add(inlet);
-    const slot = box(3.4, 3, 1.4, 0x000000);
-    slot.position.set(0, 0, 2.8);
-    g.add(slot);
-    const tab = box(1, 1, 0.8, C.metal);
-    tab.position.set(0, 0, 3.2);
-    g.add(tab);
-    return g;
-  }
-
-  function femaleDcJack() {
-    const g = new THREE.Group();
-    const panel = box(7, 7, 3, 0x2a2d36, { roughness: 0.4 });
-    g.add(panel);
-    const ring = cyl(2, 2.2, C.metal, { seg: 20, metalness: 0.8, roughness: 0.3 });
-    ring.rotation.x = Math.PI / 2;
-    ring.position.z = 1.8;
-    g.add(ring);
-    const hole = cyl(1.0, 1.4, 0x000000, { seg: 16 });
-    hole.rotation.x = Math.PI / 2;
-    hole.position.z = 2.2;
-    g.add(hole);
-    return g;
-  }
-
-  function femaleCoaxF() {
-    const g = new THREE.Group();
-    const body = cyl(1.5, 4, C.metal, { seg: 20, metalness: 0.85, roughness: 0.3 });
-    body.rotation.x = Math.PI / 2;
-    g.add(body);
-    const nut = cyl(1.9, 2.2, 0x8a8f98, { metalness: 0.85, roughness: 0.4, seg: 6 });
-    nut.rotation.x = Math.PI / 2;
-    nut.position.z = 2.5;
-    g.add(nut);
-    const hole = cyl(0.5, 1.4, 0x000000, { seg: 12 });
-    hole.rotation.x = Math.PI / 2;
-    hole.position.z = 1.6;
-    g.add(hole);
-    return g;
-  }
-
-  function femaleFiberSc() {
-    const g = new THREE.Group();
-    const body = box(2.4, 2.4, 3, 0x2a2d36, { roughness: 0.4 });
-    g.add(body);
-    const tip = box(1.8, 1.8, 1.2, 0x4cb057, { roughness: 0.35 });
-    tip.position.z = 1.8;
-    g.add(tip);
-    const hole = box(1.0, 1.0, 1.2, 0x000000);
-    hole.position.z = 2.3;
-    g.add(hole);
-    return g;
-  }
-
-  function femaleFiberLc() {
-    const g = new THREE.Group();
-    [-2.2, 2.2].forEach(x => {
-      const body = box(1.8, 2, 4, 0x2a2d36);
-      body.position.x = x;
-      g.add(body);
-      const tip = box(1.1, 1.1, 1.2, 0x2b5bb0, { roughness: 0.3 });
-      tip.position.set(x, 0, 2.5);
-      g.add(tip);
-      const hole = box(0.7, 0.7, 1.2, 0x000000);
-      hole.position.set(x, 0, 3.0);
-      g.add(hole);
-    });
-    return g;
-  }
-
-  function femaleFiberSt() {
-    const g = new THREE.Group();
-    const body = cyl(1.8, 3, 0x2a2d36, { seg: 18 });
-    body.rotation.x = Math.PI / 2;
-    g.add(body);
-    const collar = cyl(2.2, 1.2, C.metal, { metalness: 0.85, roughness: 0.3, seg: 12 });
-    collar.rotation.x = Math.PI / 2;
-    collar.position.z = 1.8;
-    g.add(collar);
-    const hole = cyl(0.5, 1.2, 0x000000, { seg: 12 });
-    hole.rotation.x = Math.PI / 2;
-    hole.position.z = 2.2;
-    g.add(hole);
-    return g;
-  }
-
-  /* Registro: modelo macho -> puerto hembra */
-  const PORTS = {
-    'atx24': () => femaleGrid(2, 12, 3.1, 4.6, { edgeX: 1.9, edgeY: 3.2, holeR: 0.62, clip: true }),
-    'atx20': () => femaleGrid(2, 10, 3.2, 4.6, { edgeX: 1.9, edgeY: 3.2, holeR: 0.62, clip: true }),
-    'eps8': () => femaleGrid(2, 4, 3.4, 4.4, { edgeX: 2.6, edgeY: 2.5, holeR: 0.55, clip: true }),
-    'eps4': () => femaleGrid(2, 2, 3.4, 4.4, { edgeX: 2.2, edgeY: 2.5, holeR: 0.5 }),
-    'pcie62': () => {
-      const g = new THREE.Group();
-      const main = femaleGrid(2, 3, 3.6, 4.4, { edgeX: 2.2, edgeY: 2.5, holeR: 0.55 });
-      g.add(main);
-      const plus = femaleGrid(2, 1, 3.6, 4.4, { edgeX: 1.8, edgeY: 2.5, holeR: 0.55 });
-      plus.position.x = 10.6;
-      g.add(plus);
-      const clip = box(6, 2.4, 2.4, C.plasticLt);
-      clip.position.set(-7.8, 0, 3.5);
-      g.add(clip);
-      return g;
-    },
-    '12vhpwr': () => {
-      const g = new THREE.Group();
-      const main = femaleGrid(2, 6, 2.6, 5.2, { edgeX: 2.2, edgeY: 3, holeR: 0.5 });
-      g.add(main);
-      const sense = femaleGrid(2, 2, 2, 2, { edgeX: 1.5, edgeY: 1.5, holeR: 0.3, depth: 7 });
-      sense.position.set(10.8, 3.5, 0);
-      g.add(sense);
-      return g;
-    },
-    'sata-power': () => {
-      const g = femaleGrid(1, 15, 1.42, 0, { edgeX: 2, edgeY: 2.5, depth: 7, holeR: 0.34 });
-      const lip = box(23, 3, 1.6, C.plasticLt);
-      lip.position.set(0, 3.6, 0);
-      g.add(lip);
-      return g;
-    },
-    'sata-data': () => {
-      const g = new THREE.Group();
-      const stem = femaleGrid(1, 7, 1.4, 0, { edgeX: 2, edgeY: 2, depth: 6, holeR: 0.28 });
-      stem.position.set(0, 1, 0);
-      g.add(stem);
-      const foot = box(12, 2, 5.6, 0x2a2d36);
-      foot.position.set(0, -2.1, 0);
-      g.add(foot);
-      return g;
-    },
-    'molex': () => {
-      const g = femaleGrid(1, 4, 4.4, 0, { edgeX: 2.2, edgeY: 2.2, depth: 7, holeR: 0.68, color: 0xe4e6e9, roughness: 0.35 });
-      const key = box(2.4, 2.2, 1.8, 0xb9bdc4);
-      key.position.set(-4.4, 0, 4);
-      g.add(key);
-      return g;
-    },
-    'berg': () => femaleGrid(1, 4, 1.4, 0, { edgeX: 1.8, edgeY: 2.6, depth: 6, holeR: 0.32 }),
-    'hdmi': () => femaleHdmi(1),
-    'hdmi-mini': () => femaleHdmi(0.72),
-    'hdmi-micro': () => femaleHdmi(0.5),
-    'dp': () => femaleDp(1),
-    'minidp': () => femaleDp(0.62),
-    'vga': femaleVga,
-    'dvi': femaleDvi,
-    'svideo': femaleSvideo,
-    'rca-video': () => femaleRca(C.yellow),
-    'ypbpr': () => {
-      const g = new THREE.Group();
-      [C.green, 0x3b82c4, C.red].forEach((col, i) => {
-        const p = femaleRca(col);
-        p.position.x = (i - 1) * 3.4;
-        g.add(p);
-      });
-      return g;
-    },
-    'usb-a': femaleUsbA,
-    'usb-b': femaleUsbB,
-    'usb-c': femaleUsbC,
-    'thunderbolt': femaleUsbC,
-    'usb-mini': femaleUsbMini,
-    'usb-micro': femaleUsbMicro,
-    'jack35': femaleJack35,
-    'toslink': femaleToslink,
-    'rj45': femaleRj45,
-    'rj11': femaleRj11,
-    'ps2': femalePs2,
-    'com': femaleCom,
-    'ac-cable': femaleAcCable,
-    'dc-jack': femaleDcJack,
-    'coax-fconn': femaleCoaxF,
-    'fiber-sc': femaleFiberSc,
-    'fiber-lc': femaleFiberLc,
-    'fiber-st': femaleFiberSt
-  };
 
   /* === CONSTRUCCION DE CADA VISOR === */
   function buildModel(name, group) {
@@ -4631,23 +4222,7 @@
     }
     const obj = fn();
     obj.traverse(o => { if (o.isMesh) o.castShadow = true; });
-    const female = PORTS[name];
-    if (female) {
-      const fg = female();
-      fg.traverse(o => { if (o.isMesh) o.castShadow = true; });
-      const bbM = new THREE.Box3().setFromObject(obj);
-      const bbF = new THREE.Box3().setFromObject(fg);
-      const gap = 6;
-      const wM = bbM.getSize(new THREE.Vector3()).x;
-      const wF = bbF.getSize(new THREE.Vector3()).x;
-      obj.position.x = -(wM / 2 + gap);
-      fg.position.x = wF / 2 + gap;
-      group.add(obj);
-      group.add(fg);
-      group.userData.paired = true;
-    } else {
-      group.add(obj);
-    }
+    group.add(obj);
     return true;
   }
 
@@ -4771,10 +4346,6 @@
       if (modelName === 'rj45' && root.children[0] && root.children[0].userData.setOrder) {
         const mode = el.dataset.mode === 'a' ? 'T568A' : 'T568B';
         root.children[0].userData.setOrder(mode);
-      }
-      if (root.userData.paired) {
-        const t = el.querySelector('.three-title');
-        if (t) t.textContent += ' · macho + hembra';
       }
       const bb = new THREE.Box3().setFromObject(root);
       const center = bb.getCenter(new THREE.Vector3());

@@ -73,7 +73,7 @@
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
-    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv6</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
     <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
     <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
     <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
@@ -123,10 +123,6 @@
           <div class="three-stage"></div>
           <div class="three-bar"><span class="three-title">Cable UTP</span><span class="three-hint">girar / zoom</span></div>
         </div>
-        <div class="three-canvas" data-model="rj45" data-title="Cable UTP con conector RJ-45">
-          <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">UTP + RJ-45</span><span class="three-hint">girar / zoom</span></div>
-        </div>
       </div>
 
       <p class="subhead">Categorias UTP</p>
@@ -163,10 +159,6 @@
           <div class="three-stage"></div>
           <div class="three-bar"><span class="three-title">Cable Coaxial</span><span class="three-hint">girar / zoom</span></div>
         </div>
-        <div class="three-canvas" data-model="coax-fconn" data-title="Cable coaxial con conector F">
-          <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Coaxial + F</span><span class="three-hint">girar / zoom</span></div>
-        </div>
       </div>
     </div>
   </div>
@@ -192,20 +184,6 @@
         <tr><td>Uso tipico</td><td>Backbones, WAN, telecomunicaciones</td><td>Centros de datos, LAN, campus</td></tr>
         <tr><td>Color de jacket tipico</td><td>Amarillo</td><td>Naranja / Aqua (OM3/OM4)</td></tr>
       </table></div>
-      <div class="cable-3d-grid tight" data-aos="fade-up">
-        <div class="three-canvas" data-model="fiber-sc" data-title="Fibra optica + conector SC">
-          <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Fibra SC</span><span class="three-hint">girar / zoom</span></div>
-        </div>
-        <div class="three-canvas" data-model="fiber-lc" data-title="Fibra duplex LC">
-          <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Fibra LC</span><span class="three-hint">girar / zoom</span></div>
-        </div>
-        <div class="three-canvas" data-model="fiber-st" data-title="Fibra ST (bayoneta, legado)">
-          <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Fibra ST</span><span class="three-hint">girar / zoom</span></div>
-        </div>
-      </div>
       <div class="info-box info-tip mt-2">
         <span class="icon"><i class="bi bi-lightbulb"></i></span>
         <div class="content"><strong>Como elegir:</strong> para distancias cortas dentro de un edificio o centro de datos usa multimodo (mas economica). Para enlaces largos entre ciudades o proveedores de Internet, usa monomodo.</div>
@@ -257,6 +235,31 @@
         <tr><td>7</td><td>Blanco/Marron rayado</td><td>Blanco/Marron rayado</td><td>Par 4</td></tr>
         <tr><td>8</td><td>Marron entero</td><td>Marron entero</td><td>Par 4</td></tr>
       </table></div>
+      <p class="three-note">Orden visual de los hilos mirando los contactos del conector (lengueta hacia abajo, pin 1 a la izquierda):</p>
+      <div class="pinout" data-aos="fade-up">
+        <div class="pinout-row">
+          <span class="pinout-label">T568A</span>
+          <div class="pinout-cell"><span class="pinout-num">1</span><span class="pinout-swatch pw-wv"></span><span class="pinout-name">Bco/<br>Verde</span></div>
+          <div class="pinout-cell"><span class="pinout-num">2</span><span class="pinout-swatch pw-v"></span><span class="pinout-name">Verde</span></div>
+          <div class="pinout-cell"><span class="pinout-num">3</span><span class="pinout-swatch pw-wn"></span><span class="pinout-name">Bco/<br>Naranja</span></div>
+          <div class="pinout-cell"><span class="pinout-num">4</span><span class="pinout-swatch pw-az"></span><span class="pinout-name">Azul</span></div>
+          <div class="pinout-cell"><span class="pinout-num">5</span><span class="pinout-swatch pw-waz"></span><span class="pinout-name">Bco/<br>Azul</span></div>
+          <div class="pinout-cell"><span class="pinout-num">6</span><span class="pinout-swatch pw-n"></span><span class="pinout-name">Naranja</span></div>
+          <div class="pinout-cell"><span class="pinout-num">7</span><span class="pinout-swatch pw-wm"></span><span class="pinout-name">Bco/<br>Marron</span></div>
+          <div class="pinout-cell"><span class="pinout-num">8</span><span class="pinout-swatch pw-m"></span><span class="pinout-name">Marron</span></div>
+        </div>
+        <div class="pinout-row">
+          <span class="pinout-label">T568B</span>
+          <div class="pinout-cell"><span class="pinout-num">1</span><span class="pinout-swatch pw-wn"></span><span class="pinout-name">Bco/<br>Naranja</span></div>
+          <div class="pinout-cell"><span class="pinout-num">2</span><span class="pinout-swatch pw-n"></span><span class="pinout-name">Naranja</span></div>
+          <div class="pinout-cell"><span class="pinout-num">3</span><span class="pinout-swatch pw-wv"></span><span class="pinout-name">Bco/<br>Verde</span></div>
+          <div class="pinout-cell"><span class="pinout-num">4</span><span class="pinout-swatch pw-az"></span><span class="pinout-name">Azul</span></div>
+          <div class="pinout-cell"><span class="pinout-num">5</span><span class="pinout-swatch pw-waz"></span><span class="pinout-name">Bco/<br>Azul</span></div>
+          <div class="pinout-cell"><span class="pinout-num">6</span><span class="pinout-swatch pw-v"></span><span class="pinout-name">Verde</span></div>
+          <div class="pinout-cell"><span class="pinout-num">7</span><span class="pinout-swatch pw-wm"></span><span class="pinout-name">Bco/<br>Marron</span></div>
+          <div class="pinout-cell"><span class="pinout-num">8</span><span class="pinout-swatch pw-m"></span><span class="pinout-name">Marron</span></div>
+        </div>
+      </div>
       <p class="three-note">Visualizacion 3D del orden de los pares — presiona T568A / T568B para cambiar la norma:</p>
       <div class="cable-3d-grid two" data-aos="fade-up">
         <div class="three-canvas" data-model="rj45" data-mode="b" data-title="RJ-45 T568A / T568B">
@@ -356,16 +359,16 @@
     </div>
     <div class="accordion-body">
       <div class="conn-grid">
-        <div class="conn-card"><h4>Crimpadora (ponchadora RJ-45)</h4><p>Herramienta que presiona el conector RJ-45 sobre los 8 hilos para fijar los contactos. Incluye cuchilla para pelar el cable y para cortar el sobrante.</p></div>
+        <div class="conn-card"><h4>Crimpadora (ponchadora RJ-45)</h4><p>Herramienta que presiona el conector RJ-45 sobre los 8 hilos para fijar los contactos. Su trinquete mantiene la presion hasta completar el golpe y la lengueta lateral la libera. Incluye cuchilla para pelar y cortar el sobrante.</p></div>
         <div class="conn-card"><h4>Ponchadora tipo Impacto (punch down)</h4><p>Inserta los hilos en los contactos de un keystone o patch panel y corta el sobrante. El cable se coloca por codigo de colores (A o B) grabado en el jack.</p></div>
         <div class="conn-card"><h4>Tester de red</h4><p>Verifica la continuidad de los 8 pines. Un LED por pin se enciende en orden: si alguno no enciende o va fuera de orden, el cable esta mal ponchado. Detecta pares abiertos, cortos o cruzados.</p></div>
-        <div class="conn-card"><h4>Pelacables y tijeras</h4><p>Pelacables ajustables para retirar el revestimiento sin danar los hilos y tijeras de precision para cortar los conductores a 90 grados antes de insertarlos.</p></div>
+        <div class="conn-card"><h4>Pelacables y tijeras</h4><p>Pelacables ajustables que cortan solo el revestimiento en circulo sin danar los hilos: en el visor se ve la funda cortada y el cobre expuesto. Las tijeras cortan los conductores a 90 grados antes de insertarlos.</p></div>
       </div>
       <p class="three-note">Modelos 3D de las herramientas — arrastra para girar, usa la rueda para acercar:</p>
       <div class="cable-3d-grid two" data-aos="fade-up">
         <div class="three-canvas" data-model="crimper" data-title="Crimpadora RJ-45 (pone los contactos y corta)">
           <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Crimpadora</span><span class="three-hint">girar / zoom</span></div>
+          <div class="three-bar"><span class="three-title">Crimpadora + RJ-45 ponchado</span><span class="three-hint">girar / zoom</span></div>
         </div>
         <div class="three-canvas" data-model="punchdown" data-title="Ponchadora de impacto (punch down)">
           <div class="three-stage"></div>
@@ -377,7 +380,7 @@
         </div>
         <div class="three-canvas" data-model="stripper" data-title="Pelacables con cable pelado en las mordazas">
           <div class="three-stage"></div>
-          <div class="three-bar"><span class="three-title">Pelacables</span><span class="three-hint">girar / zoom</span></div>
+          <div class="three-bar"><span class="three-title">Pelacables · funda cortada</span><span class="three-hint">girar / zoom</span></div>
         </div>
       </div>
       <p class="subhead">Secuencia para ponchar un RJ-45 (norma T568B)</p>
@@ -589,6 +592,7 @@
 <script src="../../assets/js/subnet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="../../assets/js/cables-3d.js"></script>
+<script src="../../assets/js/visuals-2d.js"></script>
 <script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
