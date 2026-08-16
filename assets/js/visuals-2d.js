@@ -26,6 +26,16 @@
     for (var i = 0; i < rows; i++) for (var j = 0; j < cols; j++) s += circle(x0 + j * gap, y0 + i * gap, r, color || '#000');
     return s;
   }
+  /* Agujero de socket hembra: borde dorado + fondo oscuro */
+  function goldHole(cx, cy, r) {
+    return circle(cx, cy, r, '#d7a94a', ' stroke="#8a6a1f" stroke-width="1"') +
+      circle(cx, cy, Math.max(1, r * 0.55), '#000');
+  }
+  /* Pin dorado con brillo (contacto dorado visto de frente) */
+  function goldPin(cx, cy, r) {
+    return circle(cx, cy, r, '#d7a94a', ' stroke="#8a6a1f" stroke-width="1"') +
+      circle(cx - r * 0.3, cy - r * 0.3, Math.max(0.6, r * 0.32), '#f3dc9a');
+  }
   function frameLabel(name) {
     return '<g opacity=".55">' + text(80, 24, name, 9, '#9aa0ab') + '</g>';
   }
@@ -35,156 +45,193 @@
 
   FEMALE.atx24 = function () {
     var inner = frameLabel('ATX 24');
-    inner += rect(14, 26, 132, 48, '#17181c');
-    inner += rect(18, 30, 124, 40, '#0d0f14');
-    inner += holesGrid(2, 12, 28, 42, 10, 3.4, '#000');
-    inner += rect(40, 26, 22, 6, '#5a5f6e');
+    inner += rect(14, 26, 132, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(18, 30, 124, 40, '#0d0f14', ' rx="1"');
+    inner += rect(62, 22, 28, 4, '#5a5f6e', ' rx="1"');
+    for (var c = 0; c < 12; c++) {
+      inner += goldHole(28 + c * 10, 42, 3.6);
+      inner += goldHole(28 + c * 10, 52, 3.6);
+    }
     return svg(160, 92, inner);
   };
   FEMALE.atx20 = function () {
     var inner = frameLabel('ATX 20');
-    inner += rect(14, 26, 112, 48, '#17181c');
-    inner += rect(18, 30, 104, 40, '#0d0f14');
-    inner += holesGrid(2, 10, 28, 42, 10, 3.4, '#000');
-    inner += rect(40, 26, 22, 6, '#5a5f6e');
+    inner += rect(14, 26, 112, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(18, 30, 104, 40, '#0d0f14', ' rx="1"');
+    inner += rect(62, 22, 28, 4, '#5a5f6e', ' rx="1"');
+    for (var c = 0; c < 10; c++) {
+      inner += goldHole(28 + c * 10, 42, 3.6);
+      inner += goldHole(28 + c * 10, 52, 3.6);
+    }
     return svg(160, 92, inner);
   };
   FEMALE.eps8 = function () {
     var inner = frameLabel('EPS 8 (CPU)');
-    inner += rect(30, 26, 72, 48, '#17181c');
-    inner += rect(34, 30, 64, 40, '#0d0f14');
-    inner += holesGrid(2, 4, 42, 42, 12, 3.6, '#000');
-    inner += rect(46, 26, 22, 6, '#5a5f6e');
+    inner += rect(30, 26, 72, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(34, 30, 64, 40, '#0d0f14', ' rx="1"');
+    inner += rect(50, 22, 22, 4, '#5a5f6e', ' rx="1"');
+    for (var c = 0; c < 4; c++) {
+      inner += goldHole(42 + c * 12, 42, 3.6);
+      inner += goldHole(42 + c * 12, 54, 3.6);
+    }
     return svg(140, 92, inner);
   };
   FEMALE.eps4 = function () {
     var inner = frameLabel('EPS 4');
-    inner += rect(36, 26, 50, 48, '#17181c');
-    inner += rect(40, 30, 42, 40, '#0d0f14');
-    inner += holesGrid(2, 2, 48, 42, 12, 3.6, '#000');
+    inner += rect(36, 26, 50, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(40, 30, 42, 40, '#0d0f14', ' rx="1"');
+    inner += rect(52, 22, 18, 4, '#5a5f6e', ' rx="1"');
+    inner += goldHole(48, 42, 3.6); inner += goldHole(60, 42, 3.6);
+    inner += goldHole(48, 54, 3.6); inner += goldHole(60, 54, 3.6);
     return svg(140, 92, inner);
   };
   FEMALE.pcie62 = function () {
     var inner = frameLabel('PCIe 6+2');
-    inner += rect(18, 26, 62, 48, '#17181c');
-    inner += rect(22, 30, 54, 40, '#0d0f14');
-    inner += holesGrid(2, 3, 32, 42, 11, 3.5, '#000');
-    inner += rect(92, 26, 28, 48, '#17181c');
-    inner += rect(96, 30, 20, 40, '#0d0f14');
-    inner += holesGrid(2, 1, 106, 42, 11, 3.5, '#000');
-    inner += rect(30, 26, 10, 6, '#5a5f6e');
+    inner += rect(18, 26, 62, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(22, 30, 54, 40, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 3; c++) {
+      inner += goldHole(32 + c * 11, 42, 3.5);
+      inner += goldHole(32 + c * 11, 53, 3.5);
+    }
+    inner += rect(92, 26, 28, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(96, 30, 20, 40, '#0d0f14', ' rx="1"');
+    inner += goldHole(106, 42, 3.5);
+    inner += goldHole(106, 53, 3.5);
+    inner += rect(30, 22, 14, 4, '#5a5f6e', ' rx="1"');
     return svg(140, 92, inner);
   };
   FEMALE['12vhpwr'] = function () {
     var inner = frameLabel('12VHPWR 12+4');
-    inner += rect(16, 26, 88, 48, '#17181c');
-    inner += rect(20, 30, 80, 40, '#0d0f14');
-    inner += holesGrid(2, 6, 29, 42, 10.5, 3, '#000');
-    inner += rect(112, 20, 18, 22, '#17181c');
-    inner += holesGrid(2, 2, 117, 27, 8, 2.2, '#000');
+    inner += rect(16, 26, 88, 48, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(20, 30, 80, 40, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 6; c++) {
+      inner += goldHole(29 + c * 10.5, 42, 3);
+      inner += goldHole(29 + c * 10.5, 52, 3);
+    }
+    inner += rect(112, 20, 18, 22, '#17181c', ' stroke="#3a3e49" stroke-width="1.2" rx="1"');
+    inner += goldHole(117, 27, 2.2); inner += goldHole(125, 27, 2.2);
+    inner += goldHole(117, 35, 2.2); inner += goldHole(125, 35, 2.2);
     return svg(150, 92, inner);
   };
   FEMALE['sata-power'] = function () {
     var inner = frameLabel('SATA Power 15');
-    inner += rect(10, 30, 132, 40, '#17181c');
-    inner += rect(14, 34, 124, 32, '#0d0f14');
-    inner += holesGrid(1, 15, 18, 50, 8, 2.8, '#000');
-    inner += rect(20, 20, 112, 10, '#5a5f6e');
+    inner += path('M10 40 L142 40 L142 70 L10 70 Z', '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += path('M14 44 L138 44 L138 66 L14 66 Z', '#0d0f14', ' rx="1"');
+    inner += rect(20, 32, 112, 6, '#5a5f6e', ' rx="1"');
+    for (var c = 0; c < 15; c++) inner += goldPin(18 + c * 8, 55, 2.8);
     return svg(160, 90, inner);
   };
   FEMALE['sata-data'] = function () {
     var inner = frameLabel('SATA Data 7');
-    inner += rect(10, 30, 104, 36, '#17181c');
-    inner += rect(14, 34, 96, 28, '#0d0f14');
-    inner += holesGrid(1, 7, 19, 48, 12, 2.6, '#000');
-    inner += rect(30, 24, 54, 8, '#5a5f6e');
+    inner += path('M10 30 L114 30 L114 66 L10 66 Z', '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += path('M14 34 L110 34 L110 62 L14 62 Z', '#0d0f14', ' rx="1"');
+    inner += rect(22, 22, 60, 8, '#5a5f6e', ' rx="1"');
+    for (var c = 0; c < 7; c++) inner += goldPin(19 + c * 12, 48, 2.6);
     return svg(140, 88, inner);
   };
   FEMALE.molex = function () {
     var inner = frameLabel('Molex 4');
-    inner += rect(24, 30, 92, 40, '#e4e6e9');
-    inner += rect(28, 34, 84, 32, '#fff');
-    inner += holesGrid(1, 4, 40, 50, 18, 5, '#000');
-    inner += rect(40, 24, 10, 8, '#b9bdc4');
+    inner += rect(24, 30, 92, 40, '#e4e6e9', ' stroke="#b9bdc4" stroke-width="1.5" rx="2"');
+    inner += rect(28, 34, 84, 32, '#f4f6f8', ' rx="1"');
+    inner += rect(40, 24, 12, 6, '#b9bdc4', ' rx="1"');
+    for (var c = 0; c < 4; c++) inner += goldHole(40 + c * 18, 50, 5);
+    inner += rect(44, 66, 8, 3, '#b9bdc4', ' rx="1"');
     return svg(150, 90, inner);
   };
   FEMALE.berg = function () {
     var inner = frameLabel('Berg 4');
-    inner += rect(30, 30, 70, 40, '#e4e6e9');
-    inner += holesGrid(1, 4, 40, 50, 12, 3, '#000');
+    inner += rect(30, 30, 70, 40, '#e4e6e9', ' stroke="#b9bdc4" stroke-width="1.2" rx="2"');
+    inner += rect(34, 34, 62, 32, '#f4f6f8', ' rx="1"');
+    for (var c = 0; c < 4; c++) inner += goldHole(40 + c * 12, 50, 3);
     return svg(140, 90, inner);
   };
 
   FEMALE.hdmi = function () {
     var inner = frameLabel('HDMI 19');
-    inner += rect(30, 26, 100, 48, '#bfc6cf');
-    inner += rect(34, 30, 92, 40, '#0d0f14');
-    inner += holesGrid(1, 10, 42, 38, 7.2, 2, '#000');
-    inner += holesGrid(1, 9, 46, 56, 7.2, 2, '#000');
+    inner += path('M30 28 H128 L132 50 Q132 72 124 72 H36 Q28 72 28 50 Z', '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M34 32 H124 L127 50 Q127 68 121 68 H39 Q33 68 33 50 Z', '#0d0f14');
+    for (var c = 0; c < 10; c++) inner += goldPin(42 + c * 7.2, 40, 2.2);
+    for (var c = 0; c < 9; c++) inner += goldPin(46 + c * 7.2, 60, 2.2);
     return svg(160, 92, inner);
   };
   FEMALE['hdmi-mini'] = function () {
     var inner = frameLabel('HDMI Mini');
-    inner += rect(42, 32, 76, 36, '#bfc6cf');
-    inner += rect(45, 35, 70, 30, '#0d0f14');
-    inner += holesGrid(1, 10, 52, 43, 5.4, 1.5, '#000');
-    inner += holesGrid(1, 9, 55, 57, 5.4, 1.5, '#000');
+    inner += path('M42 32 H116 L120 50 Q120 66 112 66 H48 Q42 66 42 50 Z', '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.2"');
+    inner += path('M45 35 H113 L116 50 Q116 63 109 63 H51 Q46 63 46 50 Z', '#0d0f14');
+    for (var c = 0; c < 10; c++) inner += goldPin(52 + c * 5.4, 43, 1.8);
+    for (var c = 0; c < 9; c++) inner += goldPin(55 + c * 5.4, 57, 1.8);
     return svg(160, 92, inner);
   };
   FEMALE['hdmi-micro'] = function () {
     var inner = frameLabel('HDMI Micro');
-    inner += rect(50, 36, 60, 28, '#bfc6cf');
-    inner += rect(52, 38, 56, 24, '#0d0f14');
-    inner += holesGrid(1, 10, 58, 45, 4.2, 1.2, '#000');
-    inner += holesGrid(1, 9, 60, 56, 4.2, 1.2, '#000');
+    inner += path('M50 36 H108 L112 50 Q112 62 105 62 H55 Q49 62 49 50 Z', '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.2"');
+    inner += path('M52 38 H106 L109 50 Q109 60 103 60 H57 Q51 60 51 50 Z', '#0d0f14');
+    for (var c = 0; c < 10; c++) inner += goldPin(58 + c * 4.2, 45, 1.5);
+    for (var c = 0; c < 9; c++) inner += goldPin(60 + c * 4.2, 56, 1.5);
     return svg(160, 92, inner);
   };
   FEMALE.dp = function () {
     var inner = frameLabel('DisplayPort 20');
-    inner += rect(36, 28, 88, 44, '#bfc6cf');
-    inner += rect(40, 32, 80, 36, '#0d0f14');
-    inner += holesGrid(1, 20, 43, 50, 3.8, 1.7, '#000');
-    inner += rect(52, 20, 40, 8, '#8a5cf5');
+    inner += rect(36, 28, 88, 44, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5" rx="2"');
+    inner += rect(40, 32, 80, 36, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 20; c++) inner += goldPin(43 + c * 3.8, 50, 1.7);
+    inner += rect(52, 20, 40, 8, '#8a5cf5', ' stroke="#6d3fb8" stroke-width="1" rx="1"');
+    inner += rect(48, 72, 44, 6, '#9aa0ab', ' rx="1"');
     return svg(160, 92, inner);
   };
   FEMALE.minidp = function () {
     var inner = frameLabel('Mini DP');
-    inner += rect(50, 32, 60, 36, '#bfc6cf');
-    inner += rect(53, 35, 54, 30, '#0d0f14');
-    inner += holesGrid(1, 20, 55, 50, 2.5, 1.2, '#000');
-    inner += rect(60, 24, 30, 8, '#8a5cf5');
+    inner += rect(50, 32, 60, 36, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.2" rx="2"');
+    inner += rect(53, 35, 54, 30, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 20; c++) inner += goldPin(55 + c * 2.5, 50, 1.2);
+    inner += rect(60, 24, 30, 8, '#8a5cf5', ' stroke="#6d3fb8" stroke-width="1" rx="1"');
     return svg(160, 92, inner);
   };
   FEMALE.vga = function () {
     var inner = frameLabel('VGA DB-15');
-    inner += rect(18, 20, 124, 64, '#2b5bb0');
-    inner += rect(28, 28, 40, 18, '#12327a');
-    inner += rect(28, 48, 40, 18, '#12327a');
-    inner += rect(28, 68, 40, 18, '#12327a');
-    inner += holesGrid(3, 5, 36, 35, 8, 2.2, '#000');
+    inner += path('M34 32 H126 L133 61 Q135 77 121 78 H39 Q25 77 27 61 Z', '#2b5bb0', ' stroke="#12327a" stroke-width="2"');
+    inner += path('M41 39 H119 L124 62 Q125 72 115 72.5 H45 Q35 72 36 62 Z', '#0d0f14');
+    var rows = [48, 58, 68];
+    for (var r = 0; r < 3; r++) {
+      for (var c = 0; c < 5; c++) {
+        inner += circle(58 + c * 11, rows[r], 2.6, '#d7a94a', ' stroke="#8a6a1f" stroke-width="1"');
+      }
+    }
+    inner += circle(31, 55, 5, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
+    inner += circle(31, 55, 2, '#5a5f6e');
+    inner += circle(129, 55, 5, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
+    inner += circle(129, 55, 2, '#5a5f6e');
     return svg(160, 104, inner);
   };
   FEMALE.dvi = function () {
     var inner = frameLabel('DVI 24+1');
-    inner += rect(16, 26, 128, 52, '#e9ebee');
-    inner += rect(22, 32, 116, 40, '#0d0f14');
-    inner += holesGrid(3, 8, 30, 38, 12, 2.2, '#000');
-    inner += rect(112, 38, 6, 12, '#000');
+    inner += path('M16 26 H144 L148 50 L144 78 H16 L12 50 Z', '#e9ebee', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M22 32 H138 L142 50 L138 74 H22 L18 50 Z', '#0d0f14');
+    for (var r = 0; r < 3; r++) {
+      for (var c = 0; c < 8; c++) inner += goldPin(30 + c * 12, 38 + r * 12, 2.2);
+    }
+    inner += rect(92, 38, 5, 12, '#d7a94a', ' stroke="#8a6a1f" stroke-width="1"');
+    inner += goldPin(112, 46, 2);
+    inner += goldPin(112, 58, 2);
+    inner += circle(17, 50, 4, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
+    inner += circle(143, 50, 4, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
     return svg(160, 92, inner);
   };
   FEMALE.svideo = function () {
     var inner = frameLabel('S-Video');
-    inner += circle(80, 50, 30, '#bfc6cf');
-    inner += circle(80, 50, 22, '#0d0f14');
-    inner += holesGrid(2, 2, 73, 43, 9, 2.5, '#000');
-    inner += rect(110, 50, 8, 8, '#17181c');
+    inner += circle(80, 50, 30, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += circle(80, 50, 23, '#0d0f14');
+    inner += goldPin(73, 43, 2.5); inner += goldPin(82, 43, 2.5);
+    inner += goldPin(73, 52, 2.5); inner += goldPin(82, 52, 2.5);
+    inner += rect(104, 46, 12, 6, '#17181c', ' rx="1"');
     return svg(160, 92, inner);
   };
   FEMALE['rca-video'] = function () {
     var inner = frameLabel('RCA Video');
-    inner += circle(80, 50, 26, '#f6c344');
-    inner += circle(80, 50, 18, '#0d0f14');
-    inner += circle(80, 50, 7, '#000');
+    inner += circle(80, 50, 26, '#f6c344', ' stroke="#d8a13a" stroke-width="1.5"');
+    inner += circle(80, 50, 19, '#d8a13a');
+    inner += circle(80, 50, 14, '#0d0f14');
+    inner += goldPin(80, 50, 7);
     return svg(160, 92, inner);
   };
   FEMALE.ypbpr = function () {
@@ -192,18 +239,21 @@
     var cols = ['#4cb057', '#3b82c4', '#d8433d'];
     for (var i = 0; i < 3; i++) {
       var cx = 52 + i * 28;
-      inner += circle(cx, 50, 12, cols[i]);
-      inner += circle(cx, 50, 7, '#0d0f14');
+      inner += circle(cx, 50, 13, cols[i], ' stroke="#1f1f24" stroke-width="1.2"');
+      inner += circle(cx, 50, 8, '#0d0f14');
+      inner += goldPin(cx, 50, 3.5);
     }
     return svg(160, 92, inner);
   };
 
   function usbAFrame() {
-    var inner = rect(34, 34, 92, 32, '#bfc6cf');
-    inner += rect(38, 38, 84, 24, '#0d0f14');
-    inner += rect(38, 46, 84, 6, '#000');
-    inner += rect(48, 44, 4, 3, '#d7a94a');
-    inner += rect(60, 44, 4, 3, '#d7a94a');
+    var inner = rect(34, 34, 92, 32, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5" rx="2"');
+    inner += rect(38, 38, 84, 24, '#0d0f14', ' rx="1"');
+    inner += rect(52, 44, 46, 12, '#8b9099', ' rx="1"');
+    inner += rect(56, 45.5, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(64, 45.5, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(72, 53, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(80, 53, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
     return inner;
   }
   FEMALE['usb-a'] = function () {
@@ -211,136 +261,151 @@
   };
   FEMALE['usb-b'] = function () {
     var inner = frameLabel('USB-B');
-    inner += rect(40, 28, 80, 64, '#bfc6cf');
-    inner += rect(46, 34, 68, 52, '#0d0f14');
-    inner += rect(46, 52, 68, 6, '#000');
-    inner += rect(56, 50, 4, 3, '#d7a94a');
-    inner += rect(68, 50, 4, 3, '#d7a94a');
+    inner += rect(40, 28, 80, 64, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5" rx="2"');
+    inner += rect(46, 34, 68, 52, '#0d0f14', ' rx="1"');
+    inner += rect(58, 50, 44, 12, '#8b9099', ' rx="1"');
+    inner += rect(62, 51.5, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(70, 51.5, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(78, 58, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(86, 58, 6, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
     return svg(160, 104, inner);
   };
   FEMALE['usb-c'] = function () {
     var inner = frameLabel('USB-C 24');
-    inner += el(80, 50, 42, 16, '#bfc6cf');
-    inner += el(80, 50, 36, 12, '#0d0f14');
-    inner += rect(74, 46, 12, 8, '#000');
+    inner += el(80, 50, 42, 17, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += el(80, 50, 37, 13, '#0d0f14');
+    inner += path('M46 46 H114 Q117 46 117 48.5 V53 Q117 55.5 114 55.5 H46 Q43 55.5 43 53 V48.5 Q43 46 46 46 Z', '#e4e6e9');
+    inner += rect(43, 46, 74, 1, '#b9bdc4');
+    inner += rect(43, 54.5, 74, 1, '#b9bdc4');
     for (var i = 0; i < 12; i++) {
-      inner += rect(56 + i * 4, 44, 1.5, 2, '#d7a94a');
-      inner += rect(56 + i * 4, 55, 1.5, 2, '#d7a94a');
+      inner += rect(63.5 + i * 3, 39.5, 1.8, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.5"');
+      inner += rect(63.5 + i * 3, 59.5, 1.8, 3, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.5"');
     }
     return svg(160, 92, inner);
   };
   FEMALE.thunderbolt = function () {
     var inner = frameLabel('Thunderbolt 3/4');
-    inner += el(80, 50, 42, 16, '#8a5cf5');
-    inner += el(80, 50, 36, 12, '#0d0f14');
-    inner += path('M78 38 l8 10 h-4 l4 8 h-8 l-8 -10 h4 l-4 -8 z', '#e9ebee');
+    inner += el(80, 50, 42, 17, '#8a5cf5', ' stroke="#6d3fb8" stroke-width="1.5"');
+    inner += el(80, 50, 37, 13, '#0d0f14');
+    inner += path('M78 36 l10 12 h-5 l5 10 h-10 l-10 -12 h5 l-5 -10 z', '#e9ebee');
     return svg(160, 92, inner);
   };
   FEMALE['usb-mini'] = function () {
     var inner = frameLabel('USB Mini-B');
-    inner += rect(44, 36, 72, 28, '#bfc6cf');
-    inner += rect(48, 40, 64, 20, '#0d0f14');
-    inner += holesGrid(1, 5, 54, 50, 10, 1.8, '#000');
+    inner += path('M44 36 L116 36 L112 64 L48 64 Z', '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M48 40 L112 40 L108 60 L52 60 Z', '#0d0f14');
+    for (var c = 0; c < 5; c++) inner += goldPin(54 + c * 10, 50, 1.9);
     return svg(160, 92, inner);
   };
   FEMALE['usb-micro'] = function () {
     var inner = frameLabel('USB Micro-B');
-    inner += path('M46 44 L114 44 L108 58 L52 58 Z', '#bfc6cf');
-    inner += path('M50 46 L110 46 L105 56 L55 56 Z', '#0d0f14');
-    inner += holesGrid(1, 5, 60, 51, 9, 1.6, '#000');
+    inner += path('M46 42 L114 42 L110 60 L50 60 Z', '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M50 45 L110 45 L107 57 L53 57 Z', '#0d0f14');
+    for (var c = 0; c < 5; c++) inner += goldPin(60 + c * 9, 51, 1.6);
     return svg(160, 92, inner);
   };
   FEMALE.jack35 = function () {
     var inner = frameLabel('Jack 3.5mm');
-    inner += rect(28, 30, 104, 40, '#2a2d36');
-    inner += circle(80, 50, 18, '#bfc6cf');
-    inner += circle(80, 50, 8, '#000');
+    inner += rect(28, 30, 104, 40, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.2" rx="3"');
+    inner += circle(80, 50, 19, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += circle(80, 50, 12, '#0d0f14');
+    inner += goldPin(80, 50, 6);
     return svg(160, 92, inner);
   };
   FEMALE.toslink = function () {
     var inner = frameLabel('S/PDIF optico');
-    inner += rect(40, 30, 80, 40, '#17181c');
-    inner += rect(48, 38, 64, 24, '#0d0f14');
-    inner += circle(80, 50, 12, '#d8433d');
+    inner += rect(40, 30, 80, 40, '#17181c', ' stroke="#3a3e49" stroke-width="1.5" rx="3"');
+    inner += rect(48, 38, 64, 24, '#0d0f14', ' rx="2"');
+    inner += circle(80, 50, 12, '#d8433d', ' stroke="#a03030" stroke-width="1.5"');
+    inner += circle(80, 50, 6, '#ff6b6b', ' opacity=".85"');
     return svg(160, 92, inner);
   };
   FEMALE.rj45 = function () {
     var inner = frameLabel('RJ-45 hembra');
-    inner += rect(34, 28, 92, 44, '#3a3e49');
-    inner += rect(40, 34, 80, 32, '#0d0f14');
-    for (var c = 0; c < 8; c++) inner += rect(48 + c * 8.6, 36, 6, 4, '#d7a94a');
-    inner += rect(40, 34, 80, 6, '#0d0f14');
+    inner += rect(34, 28, 92, 44, '#3a3e49', ' stroke="#4a4f5a" stroke-width="1.5" rx="2"');
+    inner += rect(40, 34, 80, 32, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 8; c++) inner += rect(48 + c * 8.6, 37, 6, 4, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(40, 34, 80, 5, '#0d0f14');
     return svg(160, 92, inner);
   };
   FEMALE.rj11 = function () {
     var inner = frameLabel('RJ-11');
-    inner += rect(44, 32, 72, 36, '#3a3e49');
-    inner += rect(49, 37, 62, 26, '#0d0f14');
-    for (var c = 0; c < 6; c++) inner += rect(56 + c * 8, 39, 5, 3.4, '#d7a94a');
+    inner += rect(44, 32, 72, 36, '#3a3e49', ' stroke="#4a4f5a" stroke-width="1.5" rx="2"');
+    inner += rect(49, 37, 62, 26, '#0d0f14', ' rx="1"');
+    for (var c = 0; c < 6; c++) {
+      var gold = c > 0 && c < 5;
+      inner += rect(56 + c * 8, 39, 5, 3.4, gold ? '#d7a94a' : '#3a3e49', gold ? ' stroke="#8a6a1f" stroke-width="0.6"' : '');
+    }
     return svg(160, 92, inner);
   };
   FEMALE.ps2 = function () {
     var inner = frameLabel('PS/2');
-    inner += circle(80, 50, 28, '#8a5cf5');
-    inner += circle(80, 50, 20, '#6d3fb8');
+    inner += circle(80, 50, 29, '#8a5cf5', ' stroke="#6d3fb8" stroke-width="1.5"');
+    inner += circle(80, 50, 21, '#6d3fb8');
     for (var i = 0; i < 6; i++) {
       var a = (i / 6) * Math.PI * 2;
-      inner += circle(80 + Math.cos(a) * 12, 50 + Math.sin(a) * 12, 2.4, '#000');
+      inner += goldPin(80 + Math.cos(a) * 12, 50 + Math.sin(a) * 12, 2.4);
     }
     return svg(160, 92, inner);
   };
   FEMALE.com = function () {
     var inner = frameLabel('COM DB-9');
-    inner += path('M52 26 L108 26 L116 38 L116 62 L108 74 L52 74 L44 62 L44 38 Z', '#b9bec7');
-    inner += holesGrid(1, 5, 55, 36, 10, 2.2, '#000');
-    inner += holesGrid(1, 4, 60, 58, 10, 2.2, '#000');
+    inner += path('M52 26 L108 26 L116 38 L116 62 L108 74 L52 74 L44 62 L44 38 Z', '#b9bec7', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M54 30 L106 30 L112 39 L112 61 L106 70 L54 70 L48 61 L48 39 Z', '#0d0f14');
+    for (var c = 0; c < 5; c++) inner += goldPin(55 + c * 10, 36, 2.2);
+    for (var c = 0; c < 4; c++) inner += goldPin(60 + c * 10, 58, 2.2);
+    inner += circle(41, 50, 3, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
+    inner += circle(119, 50, 3, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1"');
     return svg(160, 92, inner);
   };
   FEMALE['ac-cable'] = function () {
     var inner = frameLabel('IEC C14');
-    inner += rect(40, 30, 80, 40, '#2a2d36');
+    inner += rect(40, 30, 80, 40, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
     inner += path('M58 34 L102 34 L96 66 L64 66 Z', '#0d0f14');
-    inner += rect(72, 38, 16, 24, '#000');
+    inner += rect(72, 38, 16, 24, '#17181c');
+    inner += rect(64, 46, 4, 8, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
+    inner += rect(92, 46, 4, 8, '#d7a94a', ' stroke="#8a6a1f" stroke-width="0.6"');
     return svg(160, 92, inner);
   };
   FEMALE['dc-jack'] = function () {
     var inner = frameLabel('DC barrel');
-    inner += rect(28, 30, 104, 40, '#2a2d36');
-    inner += circle(80, 50, 18, '#bfc6cf');
-    inner += circle(80, 50, 9, '#000');
-    inner += circle(80, 50, 3, '#d7a94a');
+    inner += rect(28, 30, 104, 40, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.5" rx="3"');
+    inner += circle(80, 50, 19, '#bfc6cf', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += circle(80, 50, 11, '#0d0f14');
+    inner += circle(80, 50, 4, '#d7a94a');
     return svg(160, 92, inner);
   };
   FEMALE['coax-fconn'] = function () {
     var inner = frameLabel('F (coaxial)');
-    inner += path('M60 24 h40 l10 10 v32 l-10 10 h-40 l-10 -10 v-32 z', '#8a8f98');
-    inner += circle(80, 50, 12, '#0d0f14');
-    inner += circle(80, 50, 4, '#000');
+    inner += path('M60 24 h40 l10 10 v32 l-10 10 h-40 l-10 -10 v-32 z', '#8a8f98', ' stroke="#6b7078" stroke-width="1.5"');
+    inner += circle(80, 50, 13, '#0d0f14');
+    inner += goldPin(80, 50, 5);
     return svg(160, 92, inner);
   };
   FEMALE['fiber-sc'] = function () {
     var inner = frameLabel('SC');
-    inner += rect(52, 28, 56, 44, '#2a2d36');
-    inner += rect(58, 36, 44, 28, '#4cb057');
-    inner += rect(64, 42, 32, 16, '#000');
+    inner += rect(52, 28, 56, 44, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.5" rx="2"');
+    inner += rect(58, 36, 44, 28, '#4cb057', ' rx="2"');
+    inner += rect(66, 42, 28, 16, '#0d0f14', ' rx="1"');
+    inner += goldPin(80, 50, 4);
     return svg(160, 92, inner);
   };
   FEMALE['fiber-lc'] = function () {
     var inner = frameLabel('LC duplex');
-    inner += rect(44, 26, 28, 48, '#2a2d36');
-    inner += rect(88, 26, 28, 48, '#2a2d36');
-    inner += rect(50, 34, 16, 32, '#2b5bb0');
-    inner += rect(94, 34, 16, 32, '#2b5bb0');
-    inner += rect(54, 42, 8, 16, '#000');
-    inner += rect(98, 42, 8, 16, '#000');
+    inner += rect(44, 26, 28, 48, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.2" rx="2"');
+    inner += rect(88, 26, 28, 48, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.2" rx="2"');
+    inner += rect(50, 34, 16, 32, '#2b5bb0', ' rx="1"');
+    inner += rect(94, 34, 16, 32, '#2b5bb0', ' rx="1"');
+    inner += goldPin(58, 50, 3);
+    inner += goldPin(102, 50, 3);
     return svg(160, 92, inner);
   };
   FEMALE['fiber-st'] = function () {
     var inner = frameLabel('ST');
-    inner += circle(80, 50, 22, '#2a2d36');
-    inner += rect(72, 28, 16, 8, '#bfc6cf');
-    inner += circle(80, 50, 12, '#0d0f14');
-    inner += circle(80, 50, 5, '#000');
+    inner += circle(80, 50, 22, '#2a2d36', ' stroke="#3a3e49" stroke-width="1.5"');
+    inner += rect(72, 28, 16, 8, '#bfc6cf', ' rx="1"');
+    inner += circle(80, 50, 13, '#0d0f14');
+    inner += goldPin(80, 50, 5);
     return svg(160, 92, inner);
   };
 

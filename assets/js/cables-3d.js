@@ -515,7 +515,7 @@
   /* VGA (D-Sub 15, azul) */
   MODELS.vga = function () {
     const g = new THREE.Group();
-    /* concha trapezoidal azul en 3 tramos */
+    /* concha trapezoidal azul en 3 tramos (ancha abajo, angosta arriba) */
     const b1 = box(16, 3.2, 6, 0x2b5bb0, { roughness: 0.45 });
     b1.position.y = -2.9;
     g.add(b1);
@@ -528,26 +528,39 @@
     const trap = box(14, 1.6, 1.2, 0x1d3f7a);
     trap.position.set(0, 4.9, 3.2);
     g.add(trap);
+    /* placa aislante oscura detras de los pines */
+    const insulator = box(12.6, 6.6, 0.9, 0x12327a, { roughness: 0.6 });
+    insulator.position.set(0, 0, 2.35);
+    g.add(insulator);
+    /* 15 pines dorados en rejilla D */
     const rows = [5, 5, 5];
     rows.forEach((n, r) => {
       const w = (n - 1) * 2.4;
       const y = 3.2 - r * 2.2;
       for (let c = 0; c < n; c++) {
-        const p = seg(0.42, 1.8, C.gold);
+        const p = seg(0.42, 1.9, C.gold, { metalness: 0.75, roughness: 0.3 });
         p.position.set(-w / 2 + c * 2.4, y, 3.5);
         g.add(p);
       }
     });
-    /* tornillos moleteados a ambos lados */
+    /* tornillos moleteados a ambos lados con barril roscado */
     [-1, 1].forEach(s => {
-      const thumb = cyl(1.7, 4, C.metal, { seg: 16 });
+      const barrel = cyl(1.25, 6.6, 0x9aa0ab, { seg: 16, metalness: 0.6, roughness: 0.35 });
+      barrel.rotation.x = Math.PI / 2;
+      barrel.position.set(s * 9, -4.6, 0);
+      g.add(barrel);
+      const thumb = cyl(1.7, 3.6, C.metal, { seg: 16, metalness: 0.7, roughness: 0.3 });
       thumb.rotation.x = Math.PI / 2;
-      thumb.position.set(s * 9, -4.6, 0);
+      thumb.position.set(s * 9, -4.6, 2.6);
       g.add(thumb);
       const knurl = cyl(1.95, 1.3, 0x9aa0ab, { seg: 16 });
       knurl.rotation.x = Math.PI / 2;
-      knurl.position.set(s * 9, -4.6, 1.9);
+      knurl.position.set(s * 9, -4.6, 4.5);
       g.add(knurl);
+      const thread = cyl(1.05, 5.6, 0x8a8f96, { seg: 14, metalness: 0.5, roughness: 0.4 });
+      thread.rotation.x = Math.PI / 2;
+      thread.position.set(s * 9, -4.6, -1.3);
+      g.add(thread);
     });
     /* molde del cable */
     const mold = box(10, 7, 3, 0x1d3f7a, { roughness: 0.5 });
@@ -598,20 +611,27 @@
   /* USB-C */
   MODELS['usb-c'] = function () {
     const g = new THREE.Group();
-    const plug = cyl(3.4, 9, C.metal, { seg: 26 });
+    /* carcasa metalica pill (seccion redondeada) */
+    const plug = cyl(3.6, 9, C.metal, { seg: 26, metalness: 0.85, roughness: 0.25 });
     plug.rotation.x = Math.PI / 2;
-    plug.scale.y = 0.42;
+    plug.scale.y = 0.38;
     g.add(plug);
-    const tab = box(6, 1.3, 4.6, 0x17181c);
-    tab.position.set(0, 0, 2);
+    /* lengueta central que sobresale al frente */
+    const tab = box(8.6, 1.7, 6.4, 0x17181c, { roughness: 0.55 });
+    tab.position.set(0, 0, 3);
     g.add(tab);
-    [-1.5, 1.5].forEach(y => {
-      const w = 11 * 0.42;
-      for (let c = 0; c < 12; c++) {
-        const p = seg(0.12, 1.1, C.gold);
-        p.position.set(-w / 2 + c * 0.42, y, 4.3);
-        g.add(p);
-      }
+    /* 12 contactos dorados sobre la lengueta (fila superior) */
+    const w = 11 * 0.45;
+    for (let c = 0; c < 12; c++) {
+      const p = seg(0.14, 1.15, C.gold, { metalness: 0.75, roughness: 0.28 });
+      p.position.set(-w / 2 + c * 0.45, 0.98, 4.9);
+      g.add(p);
+    }
+    /* clips laterales de retencion */
+    [-1, 1].forEach(s => {
+      const clip = box(0.5, 0.9, 3.2, C.gray, { metalness: 0.6, roughness: 0.35 });
+      clip.position.set(s * 3.1, 0.5, 2.2);
+      g.add(clip);
     });
     g.add(wireBundle([new THREE.Vector3(0, 0, -4.5)], [0x2a2d36], { down: 9, back: 4, radius: 0.55, spread: 0 }));
     return g;
@@ -1619,36 +1639,54 @@
   /* DVI (24+1) */
   MODELS.dvi = function () {
     const g = new THREE.Group();
-    const shell = box(17, 5.8, 6.4, 0xe9ebee, { roughness: 0.45 });
-    g.add(shell);
-    const inner = box(15.4, 4.6, 5.4, 0xb9bec7);
-    inner.position.z = 0.4;
-    g.add(inner);
+    /* concha trapezoidal blanca en 3 tramos (ancha abajo, angosta arriba) */
+    const b1 = box(19, 2.4, 6.4, 0xe9ebee, { roughness: 0.4 });
+    b1.position.y = -1.9;
+    g.add(b1);
+    const b2 = box(18.2, 2.4, 6.4, 0xe9ebee, { roughness: 0.4 });
+    b2.position.y = 0.4;
+    g.add(b2);
+    const b3 = box(17.4, 2.4, 6.4, 0xe9ebee, { roughness: 0.4 });
+    b3.position.y = 2.7;
+    g.add(b3);
+    /* placa aislante oscura detras de los pines */
+    const insulator = box(15.4, 6.2, 0.8, 0x2a2d36, { roughness: 0.6 });
+    insulator.position.set(0, 0.2, 2.3);
+    g.add(insulator);
+    /* 24 pines dorados en rejilla D */
     const rows = [8, 8, 8];
     rows.forEach((n, r) => {
       const w = (n - 1) * 1.55;
       const y = 1.7 - r * 1.55;
       for (let c = 0; c < n; c++) {
-        const p = seg(0.28, 1.6, C.gold);
-        p.position.set(-w / 2 + c * 1.55, y, 3.5);
+        const p = seg(0.28, 1.6, C.gold, { metalness: 0.75, roughness: 0.3 });
+        p.position.set(-w / 2 + c * 1.55, y, 3.4);
         g.add(p);
       }
     });
-    /* barra cruzada (blade) con 4 pines analogicos (DVI-I 24+5) */
+    /* barra cruzada (blade) con pines analogicos (DVI-I 24+5) */
     const blade = box(3.4, 0.9, 1.6, C.gold, { metalness: 0.75 });
-    blade.position.set(7.4, 0, 3.5);
+    blade.position.set(7.4, 0, 3.4);
     g.add(blade);
     [[7.4, 1.9], [7.4, -1.9]].forEach(([x, y]) => {
-      const p = seg(0.22, 1.3, C.gold);
-      p.position.set(x, y, 3.5);
+      const p = seg(0.22, 1.3, C.gold, { metalness: 0.75, roughness: 0.3 });
+      p.position.set(x, y, 3.4);
       g.add(p);
     });
-    /* tornillos laterales */
+    /* tornillos laterales con barril */
     [-1, 1].forEach(s => {
-      const screw = cyl(0.8, 2.6, C.metal, { seg: 14 });
-      screw.rotation.x = Math.PI / 2;
-      screw.position.set(s * 9.4, -2.7, 0);
-      g.add(screw);
+      const barrel = cyl(1.1, 5, 0x9aa0ab, { seg: 16, metalness: 0.6, roughness: 0.35 });
+      barrel.rotation.x = Math.PI / 2;
+      barrel.position.set(s * 9.9, -3.1, 0);
+      g.add(barrel);
+      const thumb = cyl(1.4, 2.4, C.metal, { seg: 16, metalness: 0.7, roughness: 0.3 });
+      thumb.rotation.x = Math.PI / 2;
+      thumb.position.set(s * 9.9, -3.1, 1.8);
+      g.add(thumb);
+      const knurl = cyl(1.6, 1, 0x9aa0ab, { seg: 16 });
+      knurl.rotation.x = Math.PI / 2;
+      knurl.position.set(s * 9.9, -3.1, 3.2);
+      g.add(knurl);
     });
     /* molde del cable */
     const mold = box(10, 5.2, 3, 0x17181c, { roughness: 0.6 });
@@ -1850,22 +1888,46 @@
   /* Puerto COM serial (DB-9) */
   MODELS.com = function () {
     const g = new THREE.Group();
-    const shell = box(13, 8, 5, 0xb9bec7, { roughness: 0.4 });
-    g.add(shell);
+    /* concha trapezoidal metal en 3 tramos */
+    const b1 = box(15.6, 2.8, 5, 0xb9bec7, { roughness: 0.35, metalness: 0.5 });
+    b1.position.y = -2.6;
+    g.add(b1);
+    const b2 = box(14.8, 2.8, 5, 0xb9bec7, { roughness: 0.35, metalness: 0.5 });
+    b2.position.y = -0.1;
+    g.add(b2);
+    const b3 = box(14, 2.8, 5, 0xb9bec7, { roughness: 0.35, metalness: 0.5 });
+    b3.position.y = 2.4;
+    g.add(b3);
+    /* placa aislante oscura detras de los pines */
+    const insulator = box(12, 6.4, 0.7, 0x2a2d36, { roughness: 0.6 });
+    insulator.position.set(0, 0, 2.3);
+    g.add(insulator);
+    /* 9 pines dorados en rejilla D (5+4) */
     const rows = [5, 4];
     rows.forEach((n, r) => {
       const w = (n - 1) * 2.2;
       const y = 1.5 - r * 2.2;
       for (let c = 0; c < n; c++) {
-        const p = seg(0.3, 1.3, C.gold);
-        p.position.set(-w / 2 + c * 2.2, y, 2.6);
+        const p = seg(0.3, 1.4, C.gold, { metalness: 0.75, roughness: 0.3 });
+        p.position.set(-w / 2 + c * 2.2, y, 3.1);
         g.add(p);
       }
     });
-    const screw = cyl(0.6, 1.6, C.metal, { seg: 12 });
-    screw.rotation.x = Math.PI / 2;
-    screw.position.set(6.5, 0, 0);
-    g.add(screw);
+    /* tornillos con barril a ambos lados */
+    [-1, 1].forEach(s => {
+      const barrel = cyl(1.05, 5, 0x9aa0ab, { seg: 16, metalness: 0.6, roughness: 0.35 });
+      barrel.rotation.x = Math.PI / 2;
+      barrel.position.set(s * 8.2, -3.8, 0);
+      g.add(barrel);
+      const thumb = cyl(1.4, 2.6, C.metal, { seg: 16, metalness: 0.7, roughness: 0.3 });
+      thumb.rotation.x = Math.PI / 2;
+      thumb.position.set(s * 8.2, -3.8, 2);
+      g.add(thumb);
+      const knurl = cyl(1.6, 1.1, 0x9aa0ab, { seg: 16 });
+      knurl.rotation.x = Math.PI / 2;
+      knurl.position.set(s * 8.2, -3.8, 3.5);
+      g.add(knurl);
+    });
     g.add(wireBundle([new THREE.Vector3(0, 0, -2.5)], [0x9aa0ab], { down: 7, back: 3, radius: 0.5, spread: 0 }));
     return g;
   };
