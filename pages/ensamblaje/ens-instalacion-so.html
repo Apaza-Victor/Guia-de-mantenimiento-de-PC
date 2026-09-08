@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-so.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sistema Operativo - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-so.html",
+  "description": "Ensamblaje · Sistema Operativo. Instalacion del SO y drivers.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,23 +101,43 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip active' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Sistema Operativo</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=A-0y0LQLwcM" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">TUTORIAL Instalar Windows 11 desde una memoria USB (Espanol)</span>
-        <span class="v-chan">Guillem S.</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="instalacion-so" data-aos="fade-up">
       <div class="section-header">
-        <div class="section-icon" style="background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.25);color:#8b5cf6;"><i class="bi bi-window"></i></div>
+        <div class="section-icon" style="background:rgba(61,123,255,.12);border-color:rgba(61,123,255,.25);color:#3d7bff;"><i class="bi bi-window"></i></div>
         <div class="section-title">
           <h2>Instalacion del Sistema Operativo</h2>
           <p>// Desde la configuracion del BIOS hasta la instalacion de drivers</p>
@@ -123,237 +150,78 @@
       </div>
 
       <!-- Paso 1: BIOS -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-gear accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Paso 1 — Configurar el BIOS / UEFI</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-instalacion-so/paso-1-configurar-el-bios-uefi.html">
+        <div class="lesson-index-icon"><i class="bi bi-gear"></i></div>
+        <div>
+          <div class="lesson-index-title">Paso 1 — Configurar el BIOS / UEFI</div>
+          <div class="lesson-index-desc">Al encender el PC por primera vez, entra al BIOS para verificar componentes y configurar el orden de...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Al encender el PC por primera vez, entra al BIOS para verificar componentes y configurar el orden de arranque.</p>
-          <ul>
-            <li><strong>Entrar al BIOS:</strong> Presiona la tecla indicada al ver el logo del fabricante. Comunes: DEL, F2, F12. En laptops suele ser F2 o Fn+F2.</li>
-            <li><strong>Verificar componentes:</strong> En la pantalla principal del BIOS, verifica que el CPU, la RAM (cantidad y velocidad) y el almacenamiento sean detectados correctamente.</li>
-            <li><strong>Activar XMP/EXPO:</strong> Ve a la seccion de memoria o overclocking y activa el perfil XMP (Intel) o EXPO (AMD) para que la RAM corra a su velocidad anunciada.</li>
-            <li><strong>Boot Order:</strong> Configura el orden de arranque: USB o DVD como primera unidad si vas a instalar desde medio externo.</li>
-            <li><strong>Guardar y salir:</strong> Presiona F10 para guardar cambios y reiniciar.</li>
-          </ul>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Secure Boot:</strong> Para instalar Linux o Windows sin TPM 2.0, es necesario desactivar Secure Boot en la BIOS. En Windows 10/11 moderno, no es necesario desactivarlo.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- Paso 2: Boot Order -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-boot accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Paso 2 — Arrancar desde USB / DVD</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/paso-2-arrancar-desde-usb-dvd.html">
+        <div class="lesson-index-icon"><i class="bi bi-boot"></i></div>
+        <div>
+          <div class="lesson-index-title">Paso 2 — Arrancar desde USB / DVD</div>
+          <div class="lesson-index-desc">Con el USB booteable insertado (creado con Rufus, Media Creation Tool o similar), el PC debe arrancar desde...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Con el USB booteable insertado (creado con Rufus, Media Creation Tool o similar), el PC debe arrancar desde el.</p>
-          <ul>
-            <li><strong>Boot Menu:</strong> Muchas placas tienen un menu de arranque temporal (F8, F11, F12) para elegir el dispositivo sin cambiar el BIOS permanentemente.</li>
-            <li><strong>Desde BIOS:</strong> En Boot Priority, coloca el USB como primera unidad. Guarda y reinicia.</li>
-            <li><strong>Si no aparece el USB:</strong> Verifica que este bien insertado, que este formateado correctamente (GPT para UEFI, MBR para BIOS legacy), y que Fast Boot este desactivado.</li>
-          </ul>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Sistema de archivos</th><th>Uso ideal</th><th>Tamano max.</th><th>Limite de archivo</th><th>Compatibilidad</th></tr>
-            <tr><td>FAT32</td><td>Medios de instalacion USB y memorias</td><td>2 TB</td><td>4 GB</td><td>Universal (Windows, Linux, Mac, consolas)</td></tr>
-            <tr><td>NTFS</td><td>Disco del sistema Windows</td><td>16 EB</td><td>16 EB</td><td>Windows nativo; Linux lectura/escritura; Mac solo lectura</td></tr>
-            <tr><td>exFAT</td><td>Discos externos y unidades portatiles grandes</td><td>128 PB</td><td>128 PB</td><td>Windows, Linux y Mac; ideal para multiplataforma</td></tr>
-          </table></div>
-          <p class="subhead mt-2">Regla practica: usa FAT32 o exFAT para el USB de instalacion y NTFS para la particion del sistema Windows.</p>
-        </div></div>
-      </div>
-
-      <!-- Paso 3: Particiones -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-hdd-stack accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Paso 3 — Particionar y formatear el disco</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/paso-3-particionar-y-formatear-el-disco.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd-stack"></i></div>
+        <div>
+          <div class="lesson-index-title">Paso 3 — Particionar y formatear el disco</div>
+          <div class="lesson-index-desc">En la pantalla de instalacion de Windows, selecciona el disco destino y configura las particiones. La tabla...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>En la pantalla de instalacion de Windows, selecciona el disco destino y configura las particiones. La tabla de particiones del disco (MBR o GPT) debe coincidir con el modo del firmware: UEFI usa GPT, BIOS legacy usa MBR.</p>
-          <div class="cable-3d-grid" data-aos="fade-up">
-            <div class="three-canvas" data-model="disk-mbr" data-title="Disco MBR (BIOS legacy)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Disco con tabla MBR: sector de arranque + max 4 primarias</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="disk-gpt" data-title="Disco GPT (UEFI)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Disco con tabla GPT: MBR protector + header + ESP + mas particiones + respaldo</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-          <ul>
-            <li><strong>Elimina particiones existentes:</strong> Selecciona cada particion y presiona Eliminar hasta dejar solo "Espacio no asignado".</li>
-            <li><strong>Crea nueva particion:</strong> Windows creara automaticamente las particiones necesarias (EFI, MSR, Principal). Solo selecciona el espacio no asignado y haz clic en Siguiente.</li>
-            <li><strong>Formato:</strong> Elige NTFS como sistema de archivos (recomendado para Windows). El formato rapido es suficiente para discos nuevos.</li>
-            <li><strong>Regla practica:</strong> Particion C: con 100-150 GB para SO y programas. Resto del disco como particion D: para datos. Esto facilita reinstalar el SO sin perder datos personales.</li>
-          </ul>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Caracteristica</th><th>GPT</th><th>MBR</th></tr>
-            <tr><td>Firmware requerido</td><td>UEFI (recomendado)</td><td>BIOS legacy</td></tr>
-            <tr><td>Particiones maximas</td><td>128 (Windows)</td><td>4 primarias</td></tr>
-            <tr><td>Tamano maximo de disco</td><td>9.4 ZB</td><td>2 TB</td></tr>
-            <tr><td>Secure Boot</td><td>Compatible</td><td>No compatible</td></tr>
-            <tr><td>Respaldo de tabla de particiones</td><td>Duplicada al final del disco</td><td>Solo al inicio</td></tr>
-            <tr><td>Verificacion de integridad</td><td>CRC32</td><td>No (corrupcion = disco ilegible)</td></tr>
-            <tr><td>Disco de arranque</td><td>Discos modernos + SSD</td><td>Discos antiguos y sistemas 32-bit</td></tr>
-          </table></div>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>UEFI + GPT:</strong> Es el estandar actual. Requiere discos mayores a 2 TB y activa funciones como Secure Boot y tiempos de arranque mas rapidos. Instala Windows 10/11 siempre en GPT.</div>
-          </div>
-          <div class="alert-box alert-warn" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Precaucion:</strong> Siempre verifica el numero/letra correcta del disco antes de ejecutar comandos destructivos. Confundir el disco del sistema con un disco externo puede borrar todos tus datos.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- Paso 4: Configuracion -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-person accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Paso 4 — Configuracion regional y usuario</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/paso-4-configuracion-regional-y-usuario.html">
+        <div class="lesson-index-icon"><i class="bi bi-person"></i></div>
+        <div>
+          <div class="lesson-index-title">Paso 4 — Configuracion regional y usuario</div>
+          <div class="lesson-index-desc">Durante la instalacion, Windows te pedira configuracion basica del sistema y del usuario. Region e idioma:...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Durante la instalacion, Windows te pedira configuracion basica del sistema y del usuario.</p>
-          <ul>
-            <li><strong>Region e idioma:</strong> Selecciona tu pais, idioma de interfaz y disposicion del teclado.</li>
-            <li><strong>Nombre de usuario:</strong> Ingresa un nombre para la cuenta local. Puedes crear una cuenta sin cuenta Microsoft desconectando el cable de red.</li>
-            <li><strong>Codigo de producto:</strong> Tiene 25 caracteres en 5 grupos de 5. Algunas versiones OEM no requieren codigo durante la instalacion.</li>
-            <li><strong>Configuracion de privacidad:</strong> Revisa las opciones de localizacion, diagnostico y anuncios personalizados segun tu preferencia.</li>
-          </ul>
-        </div></div>
-      </div>
-
-      <!-- Paso 5: Drivers -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-download accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Paso 5 — Instalacion de drivers y programas</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/paso-5-instalacion-de-drivers-y-programas.html">
+        <div class="lesson-index-icon"><i class="bi bi-download"></i></div>
+        <div>
+          <div class="lesson-index-title">Paso 5 — Instalacion de drivers y programas</div>
+          <div class="lesson-index-desc">Los drivers son los traductores entre el hardware y el sistema operativo. Instalalos en este orden para mayor...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Los drivers son los traductores entre el hardware y el sistema operativo. Instalalos en este orden para mayor estabilidad:</p>
-          <div class="step-item" data-aos="fade-up">
-            <div class="step-card">
-              <div class="step-header">
-                <span class="step-num">1</span>
-                <span class="step-title">Drivers de Chipset</span>
-              </div>
-              <div class="step-desc">Descarga desde el sitio oficial del fabricante de la placa base (ASUS, MSI, Gigabyte, ASRock). Son los mas importantes: habilitan la comunicacion entre todos los componentes.</div>
-            </div>
-          </div>
-          <div class="step-item" data-aos="fade-up">
-            <div class="step-card">
-              <div class="step-header">
-                <span class="step-num">2</span>
-                <span class="step-title">Drivers de GPU</span>
-              </div>
-              <div class="step-desc">NVIDIA GeForce Experience o AMD Adrenalin para mantener la tarjeta grafica actualizada. Muy importante para gaming y aplicaciones de renderizado.</div>
-            </div>
-          </div>
-          <div class="step-item" data-aos="fade-up">
-            <div class="step-card">
-              <div class="step-header">
-                <span class="step-num">3</span>
-                <span class="step-title">Drivers de Audio y Red</span>
-              </div>
-              <div class="step-desc">Audio (Realtek, etc.) y red (Ethernet, WiFi) desde el sitio de la placa base. Windows Update puede instalar genericos, pero los oficiales ofrecen mejor rendimiento.</div>
-            </div>
-          </div>
-          <div class="step-item" data-aos="fade-up">
-            <div class="step-card">
-              <div class="step-header">
-                <span class="step-num">4</span>
-                <span class="step-title">Actualizaciones del SO</span>
-              </div>
-              <div class="step-desc">Ejecuta Windows Update completo. Incluye parches de seguridad y compatibilidad. Reinicia las veces que sea necesario hasta que no queden actualizaciones pendientes.</div>
-            </div>
-          </div>
-          <div class="step-item" data-aos="fade-up">
-            <div class="step-card">
-              <div class="step-header">
-                <span class="step-num">5</span>
-                <span class="step-title">Programas esenciales</span>
-              </div>
-              <div class="step-desc">Navegador (Chrome, Firefox), paquete ofimatico (Office, LibreOffice), antivirus (Windows Defender es suficiente), y herramientas como 7-Zip, VLC, etc.</div>
-            </div>
-          </div>
-          <div class="alert-box alert-warn" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Evita actualizadores genericos:</strong> Sitios como Driver Booster o Driver Easy pueden instalar drivers incorrectos o desactualizados. Descarga drivers SIEMPRE desde los sitios oficiales del fabricante.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-key accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Activacion de Windows y Licencias</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/activacion-de-windows-y-licencias.html">
+        <div class="lesson-index-icon"><i class="bi bi-key"></i></div>
+        <div>
+          <div class="lesson-index-title">Activacion de Windows y Licencias</div>
+          <div class="lesson-index-desc">Windows necesita una licencia valida para activarse. La clave se asocia a tu equipo y, en las versiones...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Windows necesita una licencia valida para activarse. La clave se asocia a tu equipo y, en las versiones modernas, a tu cuenta de Microsoft.</p>
-          <ul>
-            <li><strong>Clave en la caja vs digital:</strong> La clave de caja (retail) es un codigo de 25 caracteres impreso en la etiqueta. La licencia digital se asocia a tu cuenta Microsoft: al reinstalar, Windows se reactiva automaticamente sin volver a ingresar la clave.</li>
-            <li><strong>Cambiar la clave:</strong> Ve a Configuracion &gt; Sistema &gt; Activacion y usa "Cambiar clave de producto". Desde la linea de comandos, abre el simbolo del sistema como administrador y ejecuta los comandos de abajo.</li>
-            <li><strong>Activar por telefono:</strong> Si la activacion online falla, usa la opcion "Activar por telefono" en la misma pantalla. Un asistente te dara un codigo de confirmacion al dictarle tu ID de instalacion.</li>
-            <li><strong>Reutilizar al cambiar hardware:</strong> La licencia digital sigue tu cuenta Microsoft: al cambiar la placa base, vincula la nueva placa en Cuentas &gt; tu perfil &gt; Dispositivos, o usa el asistente de solucion de problemas de activacion.</li>
-            <li><strong>OEM vs Retail:</strong> OEM viene preinstalada en equipos de fabricante (Dell, HP, Lenovo) y queda ligada a esa placa base: no se transfiere. Retail se compra aparte, se puede trasladar a otro PC y reactivarse con tu cuenta Microsoft.</li>
-          </ul>
-          <div class="code-block">
-            <div class="code-block-header"><span class="code-lang">cmd &#183; activar Windows (ejecutar como Administrador)</span></div>
-            <pre><span class="cmd-comment"># Instalar la clave de producto</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">slmgr</span> <span class="cmd-flag">/ipk CLAVE-DE-25-CARACTERES</span>
-  <span class="cmd-comment"># Forzar la activacion</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">slmgr</span> <span class="cmd-flag">/ato</span></pre>
-          </div>
-          <div class="alert-box alert-danger" style="margin-top:12px;">
-            <i class="bi bi-exclamation-octagon"></i>
-            <div><strong>Advertencia:</strong> Las claves piratas, los KMS no oficiales y los "activadores" son ilegales y suelen incluir malware o troyanos que roban credenciales. Ademas, no reciben actualizaciones ni soporte. Usa siempre licencias legitimas: Microsoft permite activacion sin costo al migrar de versiones anteriores y ofrece descuentos para estudiantes.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-palette accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Software de Control RGB</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-instalacion-so/software-de-control-rgb.html">
+        <div class="lesson-index-icon"><i class="bi bi-palette"></i></div>
+        <div>
+          <div class="lesson-index-title">Software de Control RGB</div>
+          <div class="lesson-index-desc">La iluminacion RGB de cada fabricante se controla con su propia aplicacion. Conocer cual corresponde a tu...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>La iluminacion RGB de cada fabricante se controla con su propia aplicacion. Conocer cual corresponde a tu hardware evita instalar programas de mas que generan conflictos.</p>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Fabricante</th><th>Aplicacion de control</th></tr>
-            <tr><td>MSI</td><td>MSI Center (modulo Mystic Light)</td></tr>
-            <tr><td>ASUS</td><td>Armoury Crate (modulo Aura Sync)</td></tr>
-            <tr><td>Gigabyte</td><td>RGB Fusion</td></tr>
-            <tr><td>ASRock</td><td>Polychrome Sync</td></tr>
-            <tr><td>Corsair</td><td>iCUE</td></tr>
-            <tr><td>Razer</td><td>Synapse</td></tr>
-            <tr><td>Multiplataforma (gratuito)</td><td>OpenRGB</td></tr>
-          </table></div>
-          <ul>
-            <li><strong>Como sincronizar via headers:</strong> Los headers JRGB (4 pines, RGB estandar 12V, un solo color a la vez) y ARGB/JARGB (3 pines, 5V, cada LED direccionable) conectan las tiras o ventiladores a la placa para controlarlos desde el software del fabricante. Verifica el voltaje antes de conectar: un conector ARGB en un header RGB 12V quema los LEDs.</li>
-            <li><strong>Consejo:</strong> No instales varias suites a la vez (por ejemplo iCUE y Armoury Crate juntas). Suelen pelear por el control del mismo hardware, dejan efectos atascados, suben el uso de CPU y causan errores. Usa una sola, la del fabricante de tu placa o perifericos.</li>
-          </ul>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>OpenRGB:</strong> Es la alternativa gratuita y de codigo abierto que controla la mayoria de marcas desde una sola interfaz, sin instalar las aplicaciones propias. Ideal si combinas componentes de varios fabricantes.</div>
-          </div>
-        </div></div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=A-0y0LQLwcM" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">TUTORIAL Instalar Windows 11 desde una memoria USB (Espanol)</span>
+        <span class="v-chan">Guillem S.</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -378,8 +246,10 @@
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
 <script src="../../assets/js/visuals-2d.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

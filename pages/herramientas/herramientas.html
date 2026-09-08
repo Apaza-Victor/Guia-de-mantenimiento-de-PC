@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas - TechGuide</title>
+  <meta name="description" content="Herramientas de consulta: FAQ, comparativas, cuestionarios, presupuestos, referencia de hardware, instalacion y memoria RAM.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Herramientas - TechGuide">
+  <meta property="og:description" content="Herramientas de consulta: FAQ, comparativas, cuestionarios, presupuestos, referencia de hardware, instalacion y memoria RAM.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/herramientas/herramientas.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Herramientas - TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/herramientas/herramientas.html",
+  "description": "Herramientas de consulta: FAQ, comparativas, cuestionarios, presupuestos, referencia de hardware, instalacion y memoria RAM.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-wrench"></i></div>
+      <h1><span class="hl">Herramientas</span> de Consulta</h1>
+      <p>FAQ, comparativas, cuestionarios, presupuestos, referencia de hardware, instalacion y memoria RAM.</p>
+      <div class="page-hero-chips">
+        <span class='pchip pchip-a'>FAQ</span>
+        <span class='pchip pchip-a'>Comparativas</span>
+        <span class='pchip pchip-a'>Cuestionarios</span>
+        <span class='pchip pchip-a'>Presupuesto</span>
+        <span class='pchip pchip-a'>Referencia</span>
+        <span class='pchip pchip-a'>Instalacion</span>
+        <span class='pchip pchip-a'>Memoria RAM</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip' href='faq.html'><i class='bi-question-circle'></i>FAQ</a>
+    <a class='chip' href='comparativas.html'><i class='bi-git-compare'></i>Comparativas</a>
+    <a class='chip' href='cuestionarios.html'><i class='bi-journal-check'></i>Cuestionarios</a>
+    <a class='chip' href='presupuesto.html'><i class='bi-cash-coin'></i>Presupuesto</a>
+    <a class='chip' href='referencia.html'><i class='bi-cpu'></i>Referencia</a>
+    <a class='chip' href='instalacion.html'><i class='bi-hdd'></i>Instalacion</a>
+    <a class='chip' href='memoria-ram.html'><i class='bi-memory'></i>Memoria RAM</a>
+  </nav>
+
+  <!-- INDEX -->
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><span class="current">Herramientas</span></nav>
+<div class="home-modulos-inner" style="padding:0 0 3rem;">
+    <div class="home-modulos-header" data-aos="fade-up" style="margin-bottom:2rem;">
+      <div class="section-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+      <div>
+        <h2>Secciones</h2>
+        <p class="text-secondary text-sm">Elige una subseccion para ir directamente al contenido</p>
+      </div>
+    </div>
+    <div class="home-modulos-grid modulos-grid-3" data-aos="fade-up" data-aos-delay="100">
+        <a href="faq.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-question-circle"></i></div>
+          <h4>FAQ / Troubleshooting</h4>
+          <p>Errores comunes de hardware y software con sus soluciones.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="comparativas.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-git-compare"></i></div>
+          <h4>Comparativas</h4>
+          <p>AMD vs Intel, HDD vs SSD, DDR4 vs DDR5 y mas.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="cuestionarios.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-journal-check"></i></div>
+          <h4>Cuestionarios</h4>
+          <p>Pon a prueba tus conocimientos con preguntas interactivas.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="presupuesto.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-cash-coin"></i></div>
+          <h4>Armado por Presupuesto</h4>
+          <p>Componentes recomendados por rango de precio.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="referencia.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-cpu"></i></div>
+          <h4>Referencia Hardware</h4>
+          <p>Tablas de especificaciones: RAM, PCIe, SATA, PSU, BIOS y codigos POST.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="instalacion.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-hdd"></i></div>
+          <h4>Instalacion y Almacenamiento</h4>
+          <p>Sistemas de archivos, RAID, USB booteable y particionado.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="memoria-ram.html" class="mod-card" data-accent="var(--accent)">
+          <div class="mod-card-icon" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);"><i class="bi bi-memory"></i></div>
+          <h4>Memoria RAM</h4>
+          <p>DDR a DDR5, velocidades JEDEC, tipos DIMM/SO-DIMM y latencias.</p>
+          <div class="mod-card-meta">
+            <span class="mod-tag" style="background:rgba(var(--accent-rgb),.1);color:var(--accent);border-color:rgba(var(--accent-rgb),.25);">Seccion</span>
+            <span class="mod-arrow"><i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

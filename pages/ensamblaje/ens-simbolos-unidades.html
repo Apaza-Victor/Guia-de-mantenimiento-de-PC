@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
   <style>
     .sym { display: block; width: 68px; height: 34px; margin: 0 auto; }
     .sym path, .sym circle { stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
@@ -25,6 +25,23 @@
     .unit-symbol { font-family: var(--font-mono); color: var(--accent); font-weight: 700; }
     .magnitude-symbol { font-family: var(--font-mono); color: var(--accent2); font-weight: 700; }
   </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Simbolos y Unidades - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html",
+  "description": "Ensamblaje · Simbolos y Unidades. Voltaje, corriente, resistencia y potencia: iniciales y unidades (V, A, Ohm, W), simbolos de circuito y prefijos kilo/mega/micro.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -38,19 +55,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -77,8 +82,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -103,20 +110,40 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip active' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Simbolos y Unidades</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=M7X2vpoJgZI" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Electronica desde cero. 14. Simbolos y unidades electricas mas basicas</span>
-        <span class="v-chan">Javier Fernandez</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="simbolos-unidades" data-aos="fade-up">
       <h2 class="section-title"><i class="bi bi-rulers"></i> Simbolos y Unidades Electricas</h2>
       <p class="section-subtitle">Voltaje · Corriente · Resistencia · Potencia · Capacitancia · Inductancia · Frecuencia · Ley de Ohm · Serie y paralelo · AC/DC · Unidades de datos</p>
@@ -126,619 +153,108 @@
         <div class="content"><strong>Una misma letra, dos significados:</strong> en electronica hay que distinguir el <strong>simbolo de la magnitud</strong> (la letra con la que se nombra en formulas, como <em>I</em> para corriente) del <strong>simbolo de la unidad</strong> (la letra de como se mide, como <em>A</em> para amperios). Por ejemplo: si ves <span class="unit-symbol">W</span> en una etiqueta, es <strong>Watt</strong>, la unidad de <strong>potencia</strong> (una fuente de 650W, un CPU de 65W TDP).</div>
       </div>
 
-      <div class="accordion open" id="unidades-electricas">
-        <div class="accordion-header" onclick="toggleAccordion('unidades-electricas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-123"></i></span><div><div class="accordion-title">Unidades Electricas (iniciales)</div><div class="accordion-subtitle">V · A · Ohm · W · F · H · Hz — que significa cada letra</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Tabla rapida con la magnitud, su simbolo en formulas, la unidad con su simbolo, que mide y su formula base. Es la tabla que resuelve dudas como "si veo una W, que es?".</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Magnitud</th>
-                  <th>Simbolo (magnitud)</th>
-                  <th>Unidad</th>
-                  <th>Simbolo (unidad)</th>
-                  <th>Que mide</th>
-                  <th>Formula base</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Voltaje (tension)</td><td class="magnitude-symbol">V o U</td><td>Voltio</td><td class="unit-symbol">V</td><td>Diferencia de potencial, "presion" electrica</td><td>V = I · R</td></tr>
-                <tr><td>Corriente</td><td class="magnitude-symbol">I</td><td>Amperio</td><td class="unit-symbol">A</td><td>Flujo de electrones que circula</td><td>I = V / R</td></tr>
-                <tr><td>Resistencia</td><td class="magnitude-symbol">R</td><td>Ohmio</td><td class="unit-symbol">&Omega;</td><td>Oposicion al paso de la corriente</td><td>R = V / I</td></tr>
-                <tr><td>Potencia</td><td class="magnitude-symbol">P</td><td>Vatio (watt)</td><td class="unit-symbol">W</td><td>Energia consumida o entregada por segundo</td><td>P = V · I</td></tr>
-                <tr><td>Capacitancia</td><td class="magnitude-symbol">C</td><td>Faradio</td><td class="unit-symbol">F</td><td>Capacidad de almacenar carga electrica</td><td>C = Q / V</td></tr>
-                <tr><td>Inductancia</td><td class="magnitude-symbol">L</td><td>Henrio</td><td class="unit-symbol">H</td><td>Oposicion a los cambios bruscos de corriente</td><td>V = L · dI/dt</td></tr>
-                <tr><td>Frecuencia</td><td class="magnitude-symbol">f</td><td>Hertz</td><td class="unit-symbol">Hz</td><td>Ciclos por segundo (reloj del CPU, RAM, senales)</td><td>f = 1 / T</td></tr>
-                <tr><td>Energia</td><td class="magnitude-symbol">E o W</td><td>Joule</td><td class="unit-symbol">J</td><td>Trabajo realizado (en casa se cobra en kWh)</td><td>E = P · t</td></tr>
-                <tr><td>Carga</td><td class="magnitude-symbol">Q</td><td>Coulomb</td><td class="unit-symbol">C</td><td>Cantidad de electrones (6.24e18 electrones)</td><td>Q = I · t</td></tr>
-                <tr><td>Conductancia</td><td class="magnitude-symbol">G</td><td>Siemens</td><td class="unit-symbol">S</td><td>Facilidad al paso de corriente (inversa de R)</td><td>G = 1 / R</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Confusiones comunes:</strong> la corriente se escribe con <strong>I</strong> (del frances "intensite"), no con C; la <strong>C</strong> mayuscula es Coulomb (carga) o la magnitud capacitancia; el <strong>Ohm</strong> se escribe con la letra griega <strong>&Omega;</strong>; la <strong>W</strong> es Vatio (potencia), no trabajo (E o W, en Joule). El voltaje tambien se escribe <strong>U</strong> en Europa y en algunos manuales.</div>
-          </div>
-          <div class="table-scroll mt-2"><table class="cmd-table">
-            <tr><th>Ley de Ohm</th><th>Formula</th><th>Uso practico</th></tr>
-            <tr><td>Voltaje = corriente × resistencia</td><td>V = I · R</td><td>Saber que voltaje cae en un componente</td></tr>
-            <tr><td>Corriente = voltaje ÷ resistencia</td><td>I = V / R</td><td>Calcular cuantos amperios consume un circuito</td></tr>
-            <tr><td>Resistencia = voltaje ÷ corriente</td><td>R = V / I</td><td>Elegir la resistencia correcta para un LED</td></tr>
-            <tr><td>Potencia = voltaje × corriente</td><td>P = V · I</td><td>Verificar el wattaje de la PSU (650W, 750W...)</td></tr>
-          </table></div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="que-es-cada-magnitud">
-        <div class="accordion-header" onclick="toggleAccordion('que-es-cada-magnitud')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-lightning-charge"></i></span><div><div class="accordion-title">Que es el voltaje, la corriente y la potencia</div><div class="accordion-subtitle">Las 4 magnitudes base con su analogia del agua</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-simbolos-unidades/unidades-electricas-iniciales.html">
+        <div class="lesson-index-icon"><i class="bi bi-123"></i></div>
+        <div>
+          <div class="lesson-index-title">Unidades Electricas (iniciales)</div>
+          <div class="lesson-index-desc">V · A · Ohm · W · F · H · Hz — que significa cada letra</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">La mejor forma de entender la electricidad es compararla con el agua circulando por una manguera: el voltaje es la presion, la corriente es el caudal y la resistencia es la estrechez de la manguera.</p>
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-bezier2"></i>
-              <h5>Voltaje (V o U)</h5>
-              <p>Es la <strong>presion</strong> que empuja a los electrones. Como la presion del agua en la manguera: sin presion, no hay flujo. En la PC: 12V, 5V y 3.3V son los rieles de la fuente.</p>
-              <span class="card-tag">Unidad: V (voltio)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-arrow-down-up"></i>
-              <h5>Corriente (I)</h5>
-              <p>Es la <strong>cantidad de electrones</strong> que pasa por segundo. Como el caudal de agua. Se mide en amperios; la mayoria de componentes de PC consumen pocos amperios (mA).</p>
-              <span class="card-tag">Unidad: A (amperio)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-speedometer2"></i>
-              <h5>Potencia (P)</h5>
-              <p>Es el <strong>trabajo por segundo</strong>: cuanto energia consume. Se calcula V × I. La W en la fuente de tu PC (650W) y en el TDP del CPU/GPU indica cuanta potencia consumen.</p>
-              <span class="card-tag">Unidad: W (vatio)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-slash-circle"></i>
-              <h5>Resistencia (R)</h5>
-              <p>Es la <strong>oposicion</strong> al paso de la corriente, como una manguera mas angosta. Convierte la energia en calor. Se mide en ohmios (&Omega;); los k&Omega; y M&Omega; son muy comunes en placas.</p>
-              <span class="card-tag">Unidad: &Omega; (ohmio)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-battery-full"></i>
-              <h5>Capacitancia (C)</h5>
-              <p>Capacidad de <strong>guardar carga</strong> como un tanque de agua. Los capacitores de la placa filtran y estabilizan el voltaje. Se mide en faradios, casi siempre en micro (µF) y nano (nF).</p>
-              <span class="card-tag">Unidad: F (faradio)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-activity"></i>
-              <h5>Frecuencia (f)</h5>
-              <p>Cuantas veces se repite una senal por segundo. El cristal de la placa marca el "reloj" y su frecuencia en <strong>MHz o GHz</strong> define la velocidad del CPU, RAM y buses.</p>
-              <span class="card-tag">Unidad: Hz (hertz)</span>
-            </div>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Analogia completa del agua:</strong> Voltaje = presion (bar). Corriente = caudal (litros/seg). Resistencia = estrechez de la manguera. Potencia = el trabajo que hace la bomba. Si duplicas el voltaje con la misma resistencia, se duplica la corriente; y como potencia = V × I, la potencia se multiplica por 4.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/que-es-el-voltaje-la-corriente-y-la-potencia.html">
+        <div class="lesson-index-icon"><i class="bi bi-lightning-charge"></i></div>
+        <div>
+          <div class="lesson-index-title">Que es el voltaje, la corriente y la potencia</div>
+          <div class="lesson-index-desc">Las 4 magnitudes base con su analogia del agua</div>
         </div>
-      </div>
-
-      <div class="accordion" id="que-es-resistencia">
-        <div class="accordion-header" onclick="toggleAccordion('que-es-resistencia')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-slash-circle"></i></span><div><div class="accordion-title">Que es la Resistencia</div><div class="accordion-subtitle">Definicion · unidad ohm · simbolo · codigo de colores</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/que-es-la-resistencia.html">
+        <div class="lesson-index-icon"><i class="bi bi-slash-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Que es la Resistencia</div>
+          <div class="lesson-index-desc">Definicion · unidad ohm · simbolo · codigo de colores</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">La <strong>resistencia</strong> es la propiedad de un material (o componente) de <strong>oponerse al paso de la corriente electrica</strong>. Al hacerlo convierte la energia electrica en <strong>calor</strong>. Su simbolo en formulas es <span class="magnitude-symbol">R</span> y su unidad es el <strong>ohmio</strong> (<span class="unit-symbol">&Omega;</span>). El componente fisico se llama <strong>resistor</strong> y se identifica por unas bandas de color pintadas en su cuerpo.</p>
-          <div class="table-scroll mt-2"><table class="cmd-table">
-            <tr><th>Dato</th><th>Valor</th></tr>
-            <tr><td>Que es</td><td>Oposicion al paso de la corriente (disipa calor)</td></tr>
-            <tr><td>Simbolo de la magnitud</td><td>R</td></tr>
-            <tr><td>Unidad</td><td>Ohmio (&Omega;)</td></tr>
-            <tr><td>Ley que la define</td><td>R = V / I (Ley de Ohm)</td></tr>
-            <tr><td>Componente fisico</td><td>Resistor (cilindrico con bandas de color)</td></tr>
-            <tr><td>Valores tipicos en una placa</td><td>100&Omega; · 1k&Omega; · 4.7k&Omega; · 10k&Omega; · 100k&Omega; · 1M&Omega;</td></tr>
-            <tr><td>Resistencia equivalente en serie</td><td>Rt = R1 + R2 + ...</td></tr>
-            <tr><td>Resistencia equivalente en paralelo</td><td>1/Rt = 1/R1 + 1/R2 + ...</td></tr>
-          </table></div>
-          <div class="table-wrap mt-2">
-            <table>
-              <thead>
-                <tr>
-                  <th>Banda</th>
-                  <th>Color</th>
-                  <th>Digito</th>
-                  <th>Multiplicador</th>
-                  <th>Tolerancia</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1ª banda</td><td><span class="band-chip" style="background:#17181c;"></span>Negro</td><td>0</td><td>×1</td><td></td></tr>
-                <tr><td>2ª banda</td><td><span class="band-chip" style="background:#7a4e26;"></span>Marron</td><td>1</td><td>×10</td><td>±1%</td></tr>
-                <tr><td>3ª banda</td><td><span class="band-chip" style="background:#d8433d;"></span>Rojo</td><td>2</td><td>×100</td><td>±2%</td></tr>
-                <tr><td>4ª banda</td><td><span class="band-chip" style="background:#e27d2b;"></span>Naranja</td><td>3</td><td>×1 000</td><td></td></tr>
-                <tr><td>5ª banda</td><td><span class="band-chip" style="background:#f6c344;"></span>Amarillo</td><td>4</td><td>×10 000</td><td></td></tr>
-                <tr><td>6ª banda</td><td><span class="band-chip" style="background:#4cb057;"></span>Verde</td><td>5</td><td>×100 000</td><td>±0.5%</td></tr>
-                <tr><td>7ª banda</td><td><span class="band-chip" style="background:#3b82c4;"></span>Azul</td><td>6</td><td>×1 000 000</td><td>±0.25%</td></tr>
-                <tr><td>8ª banda</td><td><span class="band-chip" style="background:#8a5cf5;"></span>Violeta</td><td>7</td><td>×10 000 000</td><td>±0.1%</td></tr>
-                <tr><td>9ª banda</td><td><span class="band-chip" style="background:#9aa0ab;"></span>Gris</td><td>8</td><td>×100 000 000</td><td></td></tr>
-                <tr><td>10ª banda</td><td><span class="band-chip" style="background:#e9ebee;"></span>Blanco</td><td>9</td><td>×1 000 000 000</td><td></td></tr>
-                <tr><td>Tolerancia</td><td><span class="band-chip" style="background:#e3b341;"></span>Oro</td><td></td><td></td><td>±5%</td></tr>
-                <tr><td>Tolerancia</td><td><span class="band-chip" style="background:#b9bec7;"></span>Plata</td><td></td><td></td><td>±10%</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="three-note" style="margin-top:14px;">Diagrama 2D de referencia:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="potentiometer" data-title="Potenciometro: resistencia variable">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Potenciometro</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="thermistor" data-title="Termistor: cambia su R con la temperatura">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Termistor NTC</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="varistor" data-title="Varistor: protege contra picos de voltaje">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Varistor MOV</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Leer bandas (4 bandas):</strong> las dos primeras son los digitos, la tercera el multiplicador y la cuarta la tolerancia. Ejemplo: rojo-rojo-marron-oro = 22 × 10 = <strong>220&Omega; ±5%</strong>. Verde-azul-naranja-oro = 56 × 1000 = <strong>56k&Omega;</strong>.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/ley-de-ohm-como-se-calcula.html">
+        <div class="lesson-index-icon"><i class="bi bi-calculator"></i></div>
+        <div>
+          <div class="lesson-index-title">Ley de Ohm: como se calcula</div>
+          <div class="lesson-index-desc">Triangulo de Ohm · formulas despejadas · ejemplos resueltos</div>
         </div>
-      </div>
-
-      <div class="accordion" id="ley-de-ohm">
-        <div class="accordion-header" onclick="toggleAccordion('ley-de-ohm')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-calculator"></i></span><div><div class="accordion-title">Ley de Ohm: como se calcula</div><div class="accordion-subtitle">Triangulo de Ohm · formulas despejadas · ejemplos resueltos</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/serie-y-paralelo.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div>
+          <div class="lesson-index-title">Serie y paralelo</div>
+          <div class="lesson-index-desc">Como se combinan resistencias, capacitores, LEDs y fuentes</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">La <strong>Ley de Ohm</strong> relaciona voltaje, corriente y resistencia con tres formulas que son la misma: <span class="unit-symbol">V = I · R</span>. Con dos valores conocidos siempre puedes calcular el tercero. Es la herramienta mas usada para verificar fuentes, elegir resistencias para LEDs y saber cuantos amperios consume cada componente.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Formula</th>
-                  <th>Busca</th>
-                  <th>Ejemplo real</th>
-                  <th>Calculo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="magnitude-symbol">V = I · R</td><td>Voltaje</td><td>Resistor de 10&Omega; con 2 A</td><td>V = 2 × 10 = <strong>20 V</strong></td></tr>
-                <tr><td class="magnitude-symbol">I = V / R</td><td>Corriente</td><td>CPU de 65 W alimentado a 12 V</td><td>I = 65 / 12 = <strong>5.4 A</strong></td></tr>
-                <tr><td class="magnitude-symbol">R = V / I</td><td>Resistencia</td><td>LED de 2 V a 20 mA desde 5 V</td><td>R = (5 - 2) / 0.02 = <strong>150 &Omega;</strong></td></tr>
-                <tr><td class="magnitude-symbol">P = V · I</td><td>Potencia</td><td>Riel +12V que entrega 54 A</td><td>P = 12 × 54 = <strong>648 W</strong></td></tr>
-                <tr><td class="magnitude-symbol">P = V² / R</td><td>Potencia</td><td>Resistor 1k&Omega; a 12 V</td><td>P = 144 / 1000 = <strong>0.14 W</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>El triangulo de Ohm:</strong> tapa con el dedo la incognita. Con <strong>V</strong> arriba y <strong>I · R</strong> abajo: si tapas la V queda <em>I × R</em>; si tapas la I queda <em>V ÷ R</em>; si tapas la R queda <em>V ÷ I</em>. El mismo truco funciona con el triangulo <strong>P · V · I</strong> para potencia.</div>
-          </div>
-          <div class="tools-grid mt-2">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightbulb"></i>
-              <h5>Resistencia para un LED</h5>
-              <p>LED de 2 V que consume 20 mA a 5 V: caida en la resistencia = 5 - 2 = 3 V. R = 3 / 0.02 = <strong>150 &Omega;</strong>. Con 330 &Omega; enciende con menos brillo y dura mas.</p>
-              <span class="card-tag">R = (Vfuente - Vled) / I</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-fan"></i>
-              <h5>Consumo de un ventilador</h5>
-              <p>Un fan de 0.3 A a 12 V consume <strong>3.6 W</strong>. Tres fans mas el LED RGB (5 W) totalizan unos 16 W: cualquier fan hub de la placa los alimenta sin problema.</p>
-              <span class="card-tag">P = V · I</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-motherboard"></i>
-              <h5>Amperaje por riel de la PSU</h5>
-              <p>La etiqueta dice <strong>+12V / 54A</strong>. La potencia disponible es 12 × 54 = 648 W. Si tu GPU pide 300 W y el resto 150 W, el riel sobra con margen.</p>
-              <span class="card-tag">P = V · I</span>
-            </div>
-          </div>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Regla de oro:</strong> si duplicas el voltaje y mantienes la resistencia, la corriente se duplica y la <strong>potencia se cuadruplica</strong> (P = V² / R). Por eso un resistor "funde" cuando le metes demasiado voltaje: la potencia que debe disipar crece al cuadrado.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/simbolos-de-circuito.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Simbolos de Circuito</div>
+          <div class="lesson-index-desc">Como se dibujan resistencia, capacitor, diodo, transistor...</div>
         </div>
-      </div>
-
-      <div class="accordion" id="serie-paralelo">
-        <div class="accordion-header" onclick="toggleAccordion('serie-paralelo')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">Serie y paralelo</div><div class="accordion-subtitle">Como se combinan resistencias, capacitores, LEDs y fuentes</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/prefijos-de-unidades-kilo-mega-micro.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-up-down"></i></div>
+        <div>
+          <div class="lesson-index-title">Prefijos de Unidades (kilo, mega, micro...)</div>
+          <div class="lesson-index-desc">La escala que aparece en k&Omega;, MHz, µF, mA y GB</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Dos reglas resumen todo: en <strong>serie</strong> los componentes se conectan uno tras otro (un solo camino para la corriente) y en <strong>paralelo</strong> van lado a lado (la corriente se reparte entre caminos). Segun el componente, la formula de combinacion cambia.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Componente</th>
-                  <th>En serie</th>
-                  <th>En paralelo</th>
-                  <th>Regla que manda</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>Resistencias</strong></td><td class="magnitude-symbol">Rt = R1 + R2 + ...</td><td class="magnitude-symbol">1/Rt = 1/R1 + 1/R2 + ...</td><td>En serie suma y crece; en paralelo da menos que la menor</td></tr>
-                <tr><td><strong>Capacitores</strong></td><td class="magnitude-symbol">1/Ct = 1/C1 + 1/C2 + ...</td><td class="magnitude-symbol">Ct = C1 + C2 + ...</td><td>Al reves que la resistencia</td></tr>
-                <tr><td><strong>Baterias / fuentes</strong></td><td>Suma el voltaje (12V + 12V = 24V)</td><td>Suma la capacidad (mAh), mismo voltaje</td><td>Serie da mas voltaje; paralelo da mas duracion</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="tools-grid mt-2">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-bezier"></i>
-              <h5>Dos resistencias de 100 &Omega;</h5>
-              <p>En serie: 100 + 100 = <strong>200 &Omega;</strong>. En paralelo: (100 × 100) / (100 + 100) = <strong>50 &Omega;</strong>. El caso de solo dos resistencias en paralelo se calcula con "producto sobre suma".</p>
-              <span class="card-tag">Rt = (R1 · R2) / (R1 + R2)</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightbulb"></i>
-              <h5>LEDs en una tira</h5>
-              <p>Los LED de una tira van en paralelo: todos reciben los mismos 12 V. Si un LED se funde, los demas siguen encendidos. En serie con ~3 V por LED solo caben 4 LED con 12 V.</p>
-              <span class="card-tag">Paralelo = mismo voltaje</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-hdd-stack"></i>
-              <h5>Fans y SSD en la misma fuente</h5>
-              <p>Los conectores SATA y Molex van en paralelo sobre el riel +12V: cada dispositivo recibe los mismos 12 V y la corriente se reparte. Por eso se suman los amperios que pide cada uno.</p>
-              <span class="card-tag">La corriente se reparte</span>
-            </div>
-          </div>
-          <div class="alert-box alert-warning" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Nunca conectes fuentes en serie</strong> para "sumar voltajes" en una PC: los rieles de la PSU tienen protecciones propias y una misma referencia de tierra. En la casa, cada toma de la red electrica esta conectada en paralelo: por eso todos los enchufes dan los mismos 230 V.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/ac-vs-dc-alterna-y-continua.html">
+        <div class="lesson-index-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+        <div>
+          <div class="lesson-index-title">AC vs DC: alterna y continua</div>
+          <div class="lesson-index-desc">Por que el PC trabaja en DC y la pared en AC</div>
         </div>
-      </div>
-
-      <div class="accordion" id="simbolos-circuito">
-        <div class="accordion-header" onclick="toggleAccordion('simbolos-circuito')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Simbolos de Circuito</div><div class="accordion-subtitle">Como se dibujan resistencia, capacitor, diodo, transistor...</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/unidades-de-informatica-y-datos.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd-stack"></i></div>
+        <div>
+          <div class="lesson-index-title">Unidades de informatica y datos</div>
+          <div class="lesson-index-desc">bit vs byte · bps vs B/s · MT/s vs MHz · KB vs KiB</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">En los diagramas (schematic) cada componente se representa con un simbolo estandar. El simbolo de la <strong>resistencia</strong> es un zigzag (estilo ANSI americano) o un rectangulo (estilo IEC europeo); su funcion es la misma. Estos son los simbolos mas comunes:</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Simbolo</th>
-                  <th>Componente</th>
-                  <th>Unidad / Valor</th>
-                  <th>Funcion</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H8 L11 7 L17 25 L23 7 L29 25 L35 7 L41 25 L47 7 L52 16 H58"/></svg></td>
-                  <td><strong>Resistencia</strong></td>
-                  <td>Ohm (&Omega;)</td>
-                  <td>Limita la corriente; disipa calor</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 6 V26 M40 6 V26"/></svg></td>
-                  <td><strong>Capacitor (no polarizado)</strong></td>
-                  <td>Faradio (F, µF, nF, pF)</td>
-                  <td>Guarda carga y filtra voltaje</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 6 V26 M40 9 Q37 16 40 23 M26 12 V20 M23 16 H29"/></svg></td>
-                  <td><strong>Capacitor electrolitico</strong></td>
-                  <td>µF (polaridad: la placa curva es negativo)</td>
-                  <td>Guarda carga; respeta la polaridad</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H10 A5 5 0 0 1 20 16 A5 5 0 0 1 30 16 A5 5 0 0 1 40 16 A5 5 0 0 1 50 16 H58"/></svg></td>
-                  <td><strong>Inductor / bobina</strong></td>
-                  <td>Henrio (H, µH, mH)</td>
-                  <td>Filtra cambios bruscos de corriente</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H12 L40 8 V24 Z M42 6 V26 M42 16 H58"/></svg></td>
-                  <td><strong>Diodo</strong></td>
-                  <td>Voltaje de caida (~0.7V en silicio)</td>
-                  <td>Deja pasar corriente en una sola direccion</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H12 L36 8 V24 Z M38 6 V26 M38 16 H46 M48 6 L56 10 M56 10 L52 12 M56 10 L54 7 M48 26 L56 22 M56 22 L52 20 M56 22 L54 25"/></svg></td>
-                  <td><strong>LED</strong></td>
-                  <td>mA y voltaje (~2V)</td>
-                  <td>Diodo que emite luz (necesita resistencia)</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H18 M42 16 H58 M18 9 H42 V23 H18 Z"/></svg></td>
-                  <td><strong>Fusible</strong></td>
-                  <td>Amperios (A)</td>
-                  <td>Se quema si pasa demasiada corriente</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 16 L30 23"/></svg></td>
-                  <td><strong>Interruptor (switch)</strong></td>
-                  <td>A / V (contacto)</td>
-                  <td>Abre o cierra el circuito</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M32 16 H58 M20 10 V22 M32 13 V19 M26 12 V20 M23 16 H29"/></svg></td>
-                  <td><strong>Bateria</strong></td>
-                  <td>Voltios (V) y mAh</td>
-                  <td>Fuente de voltaje (linea larga = positivo)</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M30 2 V16 M10 16 H50 M18 22 H42 M26 28 H34"/></svg></td>
-                  <td><strong>Tierra (GND)</strong></td>
-                  <td>0 V (referencia)</td>
-                  <td>Referencia de 0 voltios del circuito</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H16 M44 16 H58 M16 8 H44 V24 H16 Z M30 8 V24"/></svg></td>
-                  <td><strong>Cristal / cuarzo</strong></td>
-                  <td>MHz (reloj)</td>
-                  <td>Marca la frecuencia del reloj (32.768 kHz, 25 MHz...)</td>
-                </tr>
-                <tr>
-                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><circle cx="30" cy="16" r="15"/><path d="M15 16 H26 M30 1 V12 M30 20 L38 27 M36 24 L38 27 L34 29"/></svg></td>
-                  <td><strong>Transistor NPN</strong></td>
-                  <td>Ganancia (hFE), V, A</td>
-                  <td>Amplifica o commuta (base controla el paso)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Polaridad:</strong> los componentes que llevan flecha o signo en su simbolo tienen polaridad: el diodo deja pasar la corriente hacia la barra (catodo), el capacitor electrolitico exige conectar el + en la placa recta, y el LED enciende solo con la pata larga (anodo) hacia el positivo.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/simbolos-en-la-practica.html">
+        <div class="lesson-index-icon"><i class="bi bi-activity"></i></div>
+        <div>
+          <div class="lesson-index-title">Simbolos en la practica</div>
+          <div class="lesson-index-desc">Etiquetas de la PSU, multimetro y mediciones</div>
         </div>
-      </div>
-
-      <div class="accordion" id="prefijos">
-        <div class="accordion-header" onclick="toggleAccordion('prefijos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-up-down"></i></span><div><div class="accordion-title">Prefijos de Unidades (kilo, mega, micro...)</div><div class="accordion-subtitle">La escala que aparece en k&Omega;, MHz, µF, mA y GB</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-simbolos-unidades/visores-3d-de-componentes.html">
+        <div class="lesson-index-icon"><i class="bi bi-box"></i></div>
+        <div>
+          <div class="lesson-index-title">Visores 3D de Componentes</div>
+          <div class="lesson-index-desc">Resistencia · capacitor · bobina · diodo · LED · transistor · chip · cristal · fusible</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Los prefijos multiplican (o dividen) la unidad base. En electronica veras casi siempre <strong>k, M, G</strong> para arriba y <strong>m, µ, n, p</strong> para abajo. Ejemplos reales: 10k&Omega;, 220µF, 3.5GHz, 12V y 5A en la PSU.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Prefijo</th>
-                  <th>Simbolo</th>
-                  <th>Factor</th>
-                  <th>Ejemplos en PC</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Tera</td><td class="unit-symbol">T</td><td>10<sup>12</sup></td><td>TB (terabytes)</td></tr>
-                <tr><td>Giga</td><td class="unit-symbol">G</td><td>10<sup>9</sup></td><td>GHz, GB, Gbps</td></tr>
-                <tr><td>Mega</td><td class="unit-symbol">M</td><td>10<sup>6</sup></td><td>MHz, M&Omega;, MB</td></tr>
-                <tr><td>Kilo</td><td class="unit-symbol">k</td><td>10<sup>3</sup></td><td>kHz, k&Omega;, kW, kB</td></tr>
-                <tr><td>Hecto</td><td class="unit-symbol">h</td><td>10<sup>2</sup></td><td>hPa (raramente en electronica)</td></tr>
-                <tr><td>Deca</td><td class="unit-symbol">da</td><td>10<sup>1</sup></td><td>dal (raro)</td></tr>
-                <tr><td>(base)</td><td></td><td>10<sup>0</sup></td><td>V, A, &Omega;, W, F, H, Hz</td></tr>
-                <tr><td>Deci</td><td class="unit-symbol">d</td><td>10<sup>-1</sup></td><td>dB (decibel, escala logaritmica)</td></tr>
-                <tr><td>Centi</td><td class="unit-symbol">c</td><td>10<sup>-2</sup></td><td>cm</td></tr>
-                <tr><td>Mili</td><td class="unit-symbol">m</td><td>10<sup>-3</sup></td><td>mA, mV, ms, mm</td></tr>
-                <tr><td>Micro</td><td class="unit-symbol">µ</td><td>10<sup>-6</sup></td><td>µF (capacitores), µs, µm</td></tr>
-                <tr><td>Nano</td><td class="unit-symbol">n</td><td>10<sup>-9</sup></td><td>nF, ns (nanosegundos de RAM)</td></tr>
-                <tr><td>Pico</td><td class="unit-symbol">p</td><td>10<sup>-12</sup></td><td>pF (capacitores SMD diminutos)</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Ojo con la k minuscula:</strong> el kilo se escribe con <strong>k minuscula</strong> (10k&Omega;, kW) y el mega con <strong>M mayuscula</strong> (MHz, M&Omega;). En informatica, K/M/G a veces son binarios (1 KB = 1024 bytes), pero en electronica de potencia son decimales (1 kW = 1000 W).</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="ac-dc">
-        <div class="accordion-header" onclick="toggleAccordion('ac-dc')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-lightning-charge-fill"></i></span><div><div class="accordion-title">AC vs DC: alterna y continua</div><div class="accordion-subtitle">Por que el PC trabaja en DC y la pared en AC</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">La toma de corriente entrega <strong>corriente alterna (AC, alternating current)</strong>: el voltaje cambia de polaridad unas 50 veces por segundo (50 Hz) y los electrones van y vienen. El interior del PC funciona con <strong>corriente continua (DC)</strong>: voltaje fijo que fluye siempre en el mismo sentido. La PSU convierte una en la otra.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Caracteristica</th>
-                  <th>AC (alterna)</th>
-                  <th>DC (continua)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Simbolo</td><td class="unit-symbol">~</td><td class="unit-symbol">= o ⎓</td></tr>
-                <tr><td>Flujo de electrones</td><td>Cambia de sentido (50/60 Hz)</td><td>Un solo sentido constante</td></tr>
-                <tr><td>Voltaje tipico</td><td>230 V (Europa) / 120 V (America)</td><td>12 V, 5 V y 3.3 V en la PC</td></tr>
-                <tr><td>Donde la encuentras</td><td>Toma de corriente, primario de la PSU</td><td>Todo el interior del PC y USB</td></tr>
-                <tr><td>En el multimetro</td><td>Posicion V~ (onda)</td><td>Posicion V= (linea)</td></tr>
-                <tr><td>Ventaja</td><td>Se transporta a larga distancia con pocas perdidas</td><td>Estable y facil de controlar</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="tools-grid mt-2">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>La PSU convierte AC a DC</h5>
-              <p>La fuente toma 230 V AC, los <strong>rectifica, filtra y regula</strong> en rieles de 12 V, 5 V y 3.3 V. Por eso la etiqueta marca "100-240 V ~ 50/60 Hz" (entrada) y "+12V / +5V / +3.3V" (salida).</p>
-              <span class="card-tag">Rectificacion + regulacion</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightning-charge-fill"></i>
-              <h5>230 V es un valor RMS</h5>
-              <p>El voltaje de la pared es alterno y su pico real es 230 × 1.41 ≈ <strong>325 V</strong>. El valor 230 V (RMS) equivale a la DC que produciria el mismo calentamiento. Nunca midas ni toques el primario de la PSU.</p>
-              <span class="card-tag">Pico = RMS × √2</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB y SATA son DC</h5>
-              <p>El USB entrega 5 V DC (y 9/20 V en Power Delivery). Los SSD NVMe toman 3.3 V DC. Por eso invertir la polaridad en estos conectores destruye el dispositivo: la DC no "se adapta" sola.</p>
-              <span class="card-tag">5 V y 3.3 V DC</span>
-            </div>
-          </div>
-          <div class="alert-box alert-warning" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Peligro real:</strong> el primario de una PSU trabaja con ~325 V DC internos despues del rectificador. Aunque el equipo este apagado, los capacitores grandes mantienen carga durante varios minutos. <strong>No abras la fuente</strong> salvo que tengas la experiencia y las herramientas adecuadas.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="unidades-datos">
-        <div class="accordion-header" onclick="toggleAccordion('unidades-datos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-stack"></i></span><div><div class="accordion-title">Unidades de informatica y datos</div><div class="accordion-subtitle">bit vs byte · bps vs B/s · MT/s vs MHz · KB vs KiB</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Ademas de las unidades electricas, en una PC conviven las <strong>unidades de datos</strong>. La confusion mas comun es la <strong>b minuscula (bit)</strong> contra la <strong>B mayuscula (byte)</strong>: la velocidad de internet se vende en bits (1000 Mbps) y los archivos se miden en bytes (500 MB).</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Unidad</th>
-                  <th>Simbolo</th>
-                  <th>Equivale a</th>
-                  <th>Ejemplo real</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Bit</td><td class="unit-symbol">b</td><td>Un digito binario (0 o 1)</td><td>Plan de internet: 300 Mbps</td></tr>
-                <tr><td>Byte</td><td class="unit-symbol">B</td><td>8 bits</td><td>Tamano de un archivo: 500 MB</td></tr>
-                <tr><td>Kilobit / Megabit</td><td class="unit-symbol">kb / Mb</td><td>1000 bits (escala decimal)</td><td>Velocidad de descarga</td></tr>
-                <tr><td>Kilobyte / Megabyte</td><td class="unit-symbol">kB / MB</td><td>1000 bytes (escala decimal)</td><td>Capacidad de disco y archivos</td></tr>
-                <tr><td>Kibibyte / Mebibyte</td><td class="unit-symbol">KiB / MiB</td><td>1024 bytes (escala binaria)</td><td>Windows cuenta en binario</td></tr>
-                <tr><td>Transferencias por segundo</td><td class="unit-symbol">MT/s</td><td>Millones de transferencias por segundo</td><td>DDR5-5600 corre a 5600 MT/s</td></tr>
-                <tr><td>Megahertz efectivo</td><td class="unit-symbol">MHz</td><td>Millones de ciclos por segundo</td><td>CPU 4.2 GHz, reloj de la RAM</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="tools-grid mt-2">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-graph-up"></i>
-              <h5>1 Gbps de internet = 125 MB/s</h5>
-              <p>Gigabit (1000 Mbps) son bits: 1000 ÷ 8 = <strong>125 MB/s</strong> maximos de descarga real. Los proveedores anuncian en bits porque el numero queda 8 veces mas grande.</p>
-              <span class="card-tag">bytes = bits ÷ 8</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-hdd-stack"></i>
-              <h5>SSD 550 MB/s = 4.4 Gbps</h5>
-              <p>Un SATA SSD mueve ~550 MB/s, que en bits son 550 × 8 ≈ <strong>4.4 Gbps</strong>. Por eso el cable SATA de 6 Gbps deja margen y nunca se satura del todo.</p>
-              <span class="card-tag">MB/s × 8 = Mbps</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-memory"></i>
-              <h5>RAM: MT/s vs MHz</h5>
-              <p>La memoria DDR transfiere dos veces por ciclo, asi que DDR5-5600 anuncia <strong>5600 MT/s</strong> aunque su reloj interno sea 2800 MHz. Las velocidades modernas se citan en MT/s para ser honestas con la tasa real.</p>
-              <span class="card-tag">MT/s = MHz × 2 (DDR)</span>
-            </div>
-          </div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>KB vs KiB:</strong> los fabricantes de discos usan la escala decimal (1 TB = 1 000 000 000 000 bytes). Windows y la RAM usan binaria (1024). Por eso un disco "de 1 TB" muestra 931 GB: no pierdes espacio, es la misma cantidad medida en dos escalas. Un SSD de 256 GB aparece como 238 GiB.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="practica">
-        <div class="accordion-header" onclick="toggleAccordion('practica')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-activity"></i></span><div><div class="accordion-title">Simbolos en la practica</div><div class="accordion-subtitle">Etiquetas de la PSU, multimetro y mediciones</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightning-charge-fill"></i>
-              <h5>Etiqueta de la PSU</h5>
-              <p>Dice el wattaje total (ej. 650W) y por riel: <strong>+12V (hasta 54A)</strong>, <strong>+5V</strong> y <strong>+3.3V</strong>. La corriente en amperios (A) multiplicada por el voltaje da la potencia de cada riel.</p>
-              <span class="card-tag">12V · 5V · 3.3V · W</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cpu"></i>
-              <h5>Etiquetas del CPU / RAM</h5>
-              <p>El CPU marca su TDP en watts (ej. 65W o 125W). La RAM DDR5-5600 corre a <strong>5600 MT/s</strong> (2.8 GHz efectivos). El voltaje de memoria aparece como 1.1V (DDR5) o 1.2V (DDR4).</p>
-              <span class="card-tag">W · MHz/MT/s · V</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-speedometer"></i>
-              <h5>Multimetro: simbolos</h5>
-              <p><strong>V</strong> = voltaje, <strong>A</strong> = corriente (en serie), <strong>&Omega;</strong> = resistencia, <strong>V~</strong> = AC y <strong>V=</strong> = DC. Para medir resistencia usa la posicion &Omega; sin energia en el circuito.</p>
-              <span class="card-tag">V · A · &Omega; · ~ · =</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-battery-charging"></i>
-              <h5>Componentes SMD</h5>
-              <p>Los componentes miniatura de la placa se marcan con codigos cortos: un resistor SMD <strong>104</strong> = 10 × 10<sup>4</sup> = 100k&Omega;; <strong>R47</strong> = 0.47&Omega;; los capacitores ceramicos suelen ir sin marca.</p>
-              <span class="card-tag">Codigo 3-4 digitos</span>
-            </div>
-          </div>
-          <div class="alert-box alert-warning" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Seguridad:</strong> al medir con multimetro verifica siempre la escala correcta. Nunca midas resistencia con el circuito con energia (puedes danar el tester) y nunca midas amperaje en paralelo. Los voltajes dentro de una PSU (primario) pueden ser letales: no la abras.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="visores-3d">
-        <div class="accordion-header" onclick="toggleAccordion('visores-3d')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box"></i></span><div><div class="accordion-title">Visores 3D de Componentes</div><div class="accordion-subtitle">Resistencia · capacitor · bobina · diodo · LED · transistor · chip · cristal · fusible</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Estos son los componentes que corresponden a los simbolos de arriba. Reconocerlos a simple vista (forma, marcas, bandas) es el primer paso para leer una placa base.</p>
-          <p class="three-note">Diagrama 2D de referencia:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="resistor" data-title="Resistencia con bandas de color">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Resistencia</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="capacitor" data-title="Capacitor electrolitico">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Capacitor</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="inductor" data-title="Bobina / inductor con nucleo">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Bobina</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="diode" data-title="Diodo con banda de catodo">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Diodo</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="led" data-title="LED 5mm con cupula">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">LED</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="transistor" data-title="Transistor TO-92 con 3 patas">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Transistor</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="ic-chip" data-title="Circuito integrado DIP-14">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Circuito integrado</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="crystal" data-title="Oscilador de cristal">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Cristal</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="fuse" data-title="Fusible de vidrio">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Fusible</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=M7X2vpoJgZI" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Electronica desde cero. 14. Simbolos y unidades electricas mas basicas</span>
+        <span class="v-chan">Javier Fernandez</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -763,8 +279,10 @@
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
 <script src="../../assets/js/visuals-2d.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

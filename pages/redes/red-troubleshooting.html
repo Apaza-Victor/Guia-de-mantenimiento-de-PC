@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-troubleshooting.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Troubleshooting de Red - Redes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-troubleshooting.html",
+  "description": "Redes · Solucion de problemas de red. Metodologia por capas, sintomas comunes, comandos (ipconfig, ping, tracert, nslookup, netstat) y causas de fallos en cable, Wi-Fi, DNS e IP.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,20 +99,38 @@
     <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip active' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Troubleshooting</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=EQWNL1pXdDI" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Diagnostico de red: ping, tracert, ipconfig</span>
-        <span class="v-chan">Xarlos</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="troubleshooting" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-wrench"></i></div>
@@ -120,118 +145,80 @@
         <div><strong>Metodo por capas:</strong> diagnostica de abajo hacia arriba (fisico → enlace → red → transporte → aplicacion). Si el cable o el Wi-Fi no estan, nada de lo de arriba funciona.</div>
       </div>
 
-      <div class="accordion open" id="ts-metodo">
-        <div class="accordion-header" onclick="toggleAccordion('ts-metodo')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Metodologia de diagnostico</div><div class="accordion-subtitle">El orden logico para no perder tiempo</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li><strong>Es solo este equipo o todos?</strong> Preguntar esto divide el problema en dos mundos: del equipo o de la red.</li>
-            <li><strong>Capa fisica:</strong> revisa el cable (enchufado, intacto), la luz del puerto, el Wi-Fi activado.</li>
-            <li><strong>Enlace/capa red:</strong> el equipo tiene IP correcta? (ipconfig). Puede ver la puerta de enlace? (ping gateway).</li>
-            <li><strong>Internet:</strong> ping a 8.8.8.8 (IP) y luego a un dominio (google.com) para separar DNS de conectividad.</li>
-            <li><strong>Aplicacion:</strong> si todo lo anterior responde pero una app falla, es DNS, puerto o la app misma.</li>
-          </ol>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Regla del diagnostico:</strong> "Si hago ping a 8.8.8.8 y funciona pero no a google.com, es un problema de DNS. Si no funciona a 8.8.8.8, es de conectividad." Este simple test separa el 90% de los casos.</div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="ts-comandos">
-        <div class="accordion-header" onclick="toggleAccordion('ts-comandos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-terminal"></i></span><div><div class="accordion-title">Comandos esenciales de diagnostico</div><div class="accordion-subtitle">Windows, Linux y macOS</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-troubleshooting/metodologia-de-diagnostico.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Metodologia de diagnostico</div>
+          <div class="lesson-index-desc">El orden logico para no perder tiempo</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Comando</th><th>Para que</th><th>Que mirar</th></tr>
-            <tr><td><code>ipconfig /all</code></td><td>Ver IP, mascara, gateway, DNS, MAC</td><td>IP valida, gateway presente, DNS configurado</td></tr>
-            <tr><td><code>ping 8.8.8.8</code></td><td>Probar conectividad por IP</td><td>Perdida de paquetes, latencia</td></tr>
-            <tr><td><code>ping google.com</code></td><td>Probar DNS + conectividad</td><td>Si responde por IP pero no aqui → DNS</td></tr>
-            <tr><td><code>tracert 8.8.8.8</code></td><td>Ver la ruta hasta el destino</td><td>Donde se cortan los saltos (asteriscos)</td></tr>
-            <tr><td><code>nslookup google.com</code></td><td>Consultar resolucion DNS</td><td>IP devuelta y servidor que respondio</td></tr>
-            <tr><td><code>netstat -ano</code></td><td>Ver conexiones y puertos en escucha</td><td>Procesos con PID que usan puertos</td></tr>
-            <tr><td><code>arp -a</code></td><td>Tabla de vecinos por MAC</td><td>Equipos detectados en la LAN</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Linux/macOS:</strong> equivalentes: <code>ip a</code> o <code>ifconfig</code>, <code>traceroute</code> (en lugar de tracert), <code>dig</code> (en lugar de nslookup).</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/comandos-esenciales-de-diagnostico.html">
+        <div class="lesson-index-icon"><i class="bi bi-terminal"></i></div>
+        <div>
+          <div class="lesson-index-title">Comandos esenciales de diagnostico</div>
+          <div class="lesson-index-desc">Windows, Linux y macOS</div>
         </div>
-      </div>
-
-      <div class="accordion" id="ts-sintomas">
-        <div class="accordion-header" onclick="toggleAccordion('ts-sintomas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-heart-pulse"></i></span><div><div class="accordion-title">Sintomas comunes y causa probable</div><div class="accordion-subtitle">De sintoma a sospechoso</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/sintomas-comunes-y-causa-probable.html">
+        <div class="lesson-index-icon"><i class="bi bi-heart-pulse"></i></div>
+        <div>
+          <div class="lesson-index-title">Sintomas comunes y causa probable</div>
+          <div class="lesson-index-desc">De sintoma a sospechoso</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Sintoma</th><th>Probable</th><th>Verificacion</th></tr>
-            <tr><td>Sin conexion, icono de red con cruz</td><td>Cable/adaptador apagado, Wi-Fi off</td><td>Revisar fisico; ipconfig</td></tr>
-            <tr><td>IP 169.254.x.x</td><td>DHCP no respondio (falla de red/switch)</td><td>Reconectar cable, reiniciar router</td></tr>
-            <tr><td>Internet lento en una banda</td><td>Saturacion de canal Wi-Fi</td><td>Cambiar canal/banda, separar 2.4/5GHz</td></tr>
-            <tr><td>Se cae al azar</td><td>Cable dañado, señal Wi-Fi debil, calor en router</td><td>Probar con otro cable/posicion, ver LED</td></tr>
-            <tr><td>No abre paginas pero WhatsApp si</td><td>DNS (resolucion falla)</td><td>nslookup; cambiar DNS a 1.1.1.1</td></tr>
-            <tr><td>Un equipo no conecta pero otros si</td><td>MAC bloqueada, exceso de dispositivos, IP conflictiva</td><td>Checar filtros MAC y DHCP del router</td></tr>
-            <tr><td>LAN rapida, internet lenta</td><td>ISP, modem, o saturacion de subida</td><td>Reiniciar modem, medir con test de velocidad</td></tr>
-          </table></div>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/problemas-de-dns.html">
+        <div class="lesson-index-icon"><i class="bi bi-boxes"></i></div>
+        <div>
+          <div class="lesson-index-title">Problemas de DNS</div>
+          <div class="lesson-index-desc">La causa mas frecuente de &quot;internet roto&quot;</div>
         </div>
-      </div>
-
-      <div class="accordion" id="ts-dns">
-        <div class="accordion-header" onclick="toggleAccordion('ts-dns')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-boxes"></i></span><div><div class="accordion-title">Problemas de DNS</div><div class="accordion-subtitle">La causa mas frecuente de "internet roto"</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/problemas-de-wi-fi.html">
+        <div class="lesson-index-icon"><i class="bi bi-wifi"></i></div>
+        <div>
+          <div class="lesson-index-title">Problemas de Wi-Fi</div>
+          <div class="lesson-index-desc">Señal, interferencia y configuracion</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Confirma con <code>ping 8.8.8.8</code> (funciona) vs <code>ping google.com</code> (no responde).</li>
-            <li>Limpia la cache local: <code>ipconfig /flushdns</code>.</li>
-            <li>Cambia los DNS del equipo o del router a publicos: <code>1.1.1.1</code>, <code>8.8.8.8</code>, <code>8.8.4.4</code>.</li>
-            <li>Si aun falla, prueba <code>nslookup</code> con otro servidor: <code>nslookup google.com 1.1.1.1</code>.</li>
-            <li>En routers con firmware viejo o proveedores problematicos, el DNS del ISP puede ser el problema: cambiarlo suele arreglar "internet lento" sin tocar nada mas.</li>
-          </ol>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/latencia-alta-y-perdida-de-paquetes.html">
+        <div class="lesson-index-icon"><i class="bi bi-activity"></i></div>
+        <div>
+          <div class="lesson-index-title">Latencia alta y perdida de paquetes</div>
+          <div class="lesson-index-desc">El lag en juegos y llamadas</div>
         </div>
-      </div>
-
-      <div class="accordion" id="ts-wifi">
-        <div class="accordion-header" onclick="toggleAccordion('ts-wifi')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-wifi"></i></span><div><div class="accordion-title">Problemas de Wi-Fi</div><div class="accordion-subtitle">Señal, interferencia y configuracion</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-troubleshooting/problemas-de-la-capa-fisica.html">
+        <div class="lesson-index-icon"><i class="bi bi-plug"></i></div>
+        <div>
+          <div class="lesson-index-title">Problemas de la capa fisica</div>
+          <div class="lesson-index-desc">Antes de revisar software, verifica la capa fisica: cable, conector, puerto y estado del enlace</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Señal debil:</strong> acercate al router o usa 2.4GHz a traves de paredes; considera mesh o un segundo punto.</li>
-            <li><strong>Interferencia:</strong> hornos microondas y routers vecinos en el mismo canal. Usa una app de analisis Wi-Fi para elegir el canal mas limpio.</li>
-            <li><strong>Conecta pero sin internet:</strong> verifica que el dispositivo tomo IP correcta (olvida la red y reconecta).</li>
-            <li><strong>Devices conectados pero sin navegar:</strong> revisa la puerta de enlace: <code>ping</code> a la IP del router.</li>
-            <li><strong>Actualiza el driver del adaptador</strong> de la laptop y el firmware del router.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion" id="ts-latencia">
-        <div class="accordion-header" onclick="toggleAccordion('ts-latencia')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-activity"></i></span><div><div class="accordion-title">Latencia alta y perdida de paquetes</div><div class="accordion-subtitle">El lag en juegos y llamadas</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Mide con ping continuo:</strong> <code>ping -t 8.8.8.8</code> (Windows) y observa si hay picos o perdida.</li>
-            <li><strong>Wi-Fi vs cable:</strong> el cable elimina fluctuaciones de latencia; si el lag desaparece por cable, el problema es la señal Wi-Fi.</li>
-            <li><strong>Ancho de banda de subida saturado:</strong> descargas y backups de subida saturan el canal y disparan la latencia (juegos, streaming).</li>
-            <li><strong>Bufferbloat:</strong> latencia alta cuando la conexion esta en uso. Mitigalo con QoS y limites de ancho de banda en el router.</li>
-            <li><strong>ISP:</strong> si el ping a tu gateway es bajo (1-2ms) pero a 8.8.8.8 es alto, el problema esta del lado del proveedor o en los saltos intermedios (tracert lo muestra).</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=EQWNL1pXdDI" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Diagnostico de red: ping, tracert, ipconfig</span>
+        <span class="v-chan">Xarlos</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -255,8 +242,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

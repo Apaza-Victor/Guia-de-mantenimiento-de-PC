@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puertos de Red, Audio y Serial - Guia de Puertos | TechGuide</title>
+  <meta name="description" content="RJ-45 (Ethernet) Conector de red con 8 pines. Interfaz fisica comunmente usada para conectar redes de cableado estructurado. Categorias...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Puertos de Red, Audio y Serial - Guia de Puertos | TechGuide">
+  <meta property="og:description" content="RJ-45 (Ethernet) Conector de red con 8 pines. Interfaz fisica comunmente usada para conectar redes de cableado estructurado. Categorias...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-puertos/puertos-de-red-audio-y-serial.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Puertos de Red, Audio y Serial - Guia de Puertos | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-puertos/puertos-de-red-audio-y-serial.html",
+  "description": "RJ-45 (Ethernet) Conector de red con 8 pines. Interfaz fisica comunmente usada para conectar redes de cableado estructurado. Categorias...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Guia de Puertos - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-puertos.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-ethernet"></i></div>
+      <h1>Puertos de Red, Audio y Serial</h1>
+      <p>RJ-45 · RJ-11 · Jack 3.5mm · Thunderbolt · PS/2 · RS-232</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-guia-puertos.html">Guia de Puertos</a><span class="sep">/</span><span class="current">Puertos de Red, Audio y Serial</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <div class="conn-grid">
+            <div class="conn-card"><h4>RJ-45 (Ethernet)</h4><p>Conector de red con 8 pines. Interfaz fisica comunmente usada para conectar redes de cableado estructurado. Categorias 5/5e/6/6a/7/8. Proporciona conexion estable de alta velocidad (10/100/1000/10000 Mbps).</p></div>
+            <div class="conn-card"><h4>RJ-11 (Telefono)</h4><p>Conector mas pequeno que el RJ-45. 6 posiciones pero solo 2 o 4 pines activos. Usado para lineas telefonicas analogicas, modems ADSL y faxes. El cable modem DSL usa este conector.</p></div>
+            <div class="conn-card"><h4>Jack 3.5mm (Audio)</h4><p>Conector de audio analogico. Verde: auriculares/salida. Rosa/celeste: entrada de microfono. Azul: linea-in. Estandar universal para auriculares y parlantes. Existe version combinada (headset) con 4 polos (TRRS).</p></div>
+            <div class="conn-card"><h4>Thunderbolt</h4><p>Tecnologia de Intel que usa conector Mini DisplayPort o USB-C. Hasta 40 Gbps (TB4). Permite conexion en cadena de multiples dispositivos, GPUs externas y monitores. Confundido con USB-C pero con mayor rendimiento.</p></div>
+            <div class="conn-card"><h4>PS/2</h4><p>Conector circular de 6 pines. Morado = teclado, Verde = raton. No son intercambiables. Soporta N-Key Rollover completo. Aun usado en teclados gaming y servidores por su fiabilidad.</p></div>
+            <div class="conn-card"><h4>RS-232 (Serial)</h4><p>Puerto serial de 9 pines para configurar routers, switches, UPS y equipos industriales via consola serial. Aun presente en servidores. Adaptadores USB-to-Serial muy usados por tecnicos.</p></div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Color del jack 3.5mm</th><th>Funcion</th></tr>
+            <tr><td>Verde</td><td>Salida de audio estereo (auriculares / parlantes frontales)</td></tr>
+            <tr><td>Rosa</td><td>Entrada de microfono (mono)</td></tr>
+            <tr><td>Azul</td><td>Entrada de linea (line-in): instrumentos, reproductores externos</td></tr>
+            <tr><td>Naranja</td><td>Salida de subwoofer / canal central (sistemas 5.1/7.1)</td></tr>
+            <tr><td>Negro</td><td>Salida de parlantes traseros (sistemas 5.1/7.1)</td></tr>
+            <tr><td>Gris</td><td>Salida de parlantes laterales (sistemas 7.1)</td></tr>
+            <tr><td>TRRS combinado</td><td>Headset con auriculares + microfono en un solo conector (4 polos)</td></tr>
+          </table></div>
+          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="rj45" data-title="RJ-45 (Ethernet, 8 pines)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RJ-45</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="rj11" data-title="RJ-11 (telefono, 4 hilos)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">RJ-11</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="jack35" data-title="Jack 3.5mm (audio analogico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Jack 3.5mm</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="toslink" data-title="S/PDIF optico (TOSLINK)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">TOSLINK</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="thunderbolt" data-title="Thunderbolt (USB-C, 40 Gbps)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Thunderbolt</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ps2" data-title="PS/2 (6 pines, teclado/raton)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">PS/2</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="com" data-title="RS-232 serial (DB-9)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">COM (DB-9)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-guia-puertos.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="puertos-de-video.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Puertos de Video</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="otros-puertos-y-slots.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Otros Puertos y Slots</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../../assets/js/cables-3d.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

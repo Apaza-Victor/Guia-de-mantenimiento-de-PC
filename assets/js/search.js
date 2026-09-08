@@ -3,6 +3,21 @@
    ============================================================ */
 
 (function () {
+  /* busca la ruta base segun donde se aloja este propio script */
+  var base = 'assets/js/';
+  var cs = document.currentScript;
+  if (cs && cs.src) base = cs.src.replace(/search\.js[?#].*$/, '');
+
+  var indexLoading = false;
+  function ensureIndex() {
+    if (indexLoading || window.SEARCH_INDEX) return;
+    indexLoading = true;
+    var s = document.createElement('script');
+    s.src = base + 'search-index.js';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+
   function normalize(s) {
     return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
@@ -86,7 +101,10 @@
       render(matches.slice(0, 8));
     }
 
+    input.addEventListener('focus', ensureIndex);
+
     input.addEventListener('input', () => {
+      ensureIndex();
       run(input.value);
       clear.style.display = input.value ? 'flex' : 'none';
     });

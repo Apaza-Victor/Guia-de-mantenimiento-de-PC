@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrades de RAM en laptop - Mantenimiento de Laptop | TechGuide</title>
+  <meta name="description" content="Como verificar compatibilidad, elegir el modulo correcto y reemplazar la RAM en una laptop paso a paso.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Upgrades de RAM en laptop - Mantenimiento de Laptop | TechGuide">
+  <meta property="og:description" content="Como verificar compatibilidad, elegir el modulo correcto y reemplazar la RAM en una laptop paso a paso.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/upgrades-de-ram-en-laptop.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Upgrades de RAM en laptop - Mantenimiento de Laptop | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/upgrades-de-ram-en-laptop.html",
+  "description": "Como verificar compatibilidad, elegir el modulo correcto y reemplazar la RAM en una laptop paso a paso.",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Mantenimiento de Laptop - Mantenimiento | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="reading-progress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-memory"></i></div>
+      <h1>Upgrades de RAM en laptop</h1>
+      <p>Mantenimiento · Mantenimiento de Laptop</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../mantenimiento.html">Mantenimiento</a><span class="sep">/</span><a href="../man-laptop.html">Mantenimiento de Laptop</a><span class="sep">/</span><span class="current">Upgrades de RAM en laptop</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Mas RAM significa mejor multitarea. Muchas laptops permiten reemplazar o ampliar la memoria RAM con un procedimiento sencillo.</p>
+
+          <div class="alert-box alert-warn">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Algunas laptops soldan la RAM</strong> directamente a la placa y NO permiten upgrade. Consulta el service manual o busca en la web "tu modelo + RAM upgrade" antes de comprar modulos.</div>
+          </div>
+
+          <h3>Como verificar la RAM actual</h3>
+          <div class="code-block">
+            <div class="code-block-header"><span class="code-lang">cmd</span></div>
+            <pre><span class="cmd-comment"># Ver RAM instalada y slots</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic</span> <span class="cmd-flag">memorychip get capacity,speed,formfactor,devicelocator</span>
+
+  <span class="cmd-comment"># Ver mas detalles en PowerShell</span>
+  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-CimInstance</span> <span class="cmd-flag">Win32_PhysicalMemory | Format-Table BankLabel,Capacity,Speed -AutoSize</span></pre>
+          </div>
+
+          <h3>Que buscar antes de comprar</h3>
+          <div class="table-wrap">
+            <table class="cmd-table">
+              <thead>
+                <tr><th><i class="bi bi-memory"></i> Caracteristica</th><th>Por que importa</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Tipo: DDR3, DDR4 o DDR5</td><td>No son compatibles entre si. Las laptops modernas usan DDR4 o DDR5.</td></tr>
+                <tr><td>Formato: SODIMM (no DIMM)</td><td>La RAM de laptop es mas corta (67.6 mm). La RAM de escritorio (DIMM) no entra.</td></tr>
+                <tr><td>Frecuencia: MHz</td><td>Compra la frecuencia igual o superior a la que ya tienes. Si mezclas, ambas corren a la menor.</td></tr>
+                <tr><td>Capacidad maxima</td><td>Algunas placas soportan 16 GB maximo, otras hasta 64 GB. Verifica en el manual.</td></tr>
+                <tr><td>Cantidad de slots</td><td>Si tienes 1 slot con 4 GB, cambialo por 8 GB. Si tienes 2 slots con 2x4 GB, compra 2x8 GB.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Pasos para el reemplazo</h3>
+          <ol>
+            <li><strong>Apaga la laptop</strong>, desconecta el cargador y quita la bateria extraible. Power drain: mantene 30 segundos el boton de encendido.</li>
+            <li><strong>Abre la tapa inferior</strong> (solo los tornillos que cubren el compartimento de RAM; no tienes que quitar toda la tapa en muchas laptops).</li>
+            <li><strong>Retira el modulo viejo</strong>: abre las chapas metalicas a los lados del modulo y este saltara en diagonal. Sacalo con cuidado.</li>
+            <li><strong>Inserta el modulo nuevo</strong>: introduce el conector dorado en el slot con un angulo de 30 grados, luego presiona hacia abajo hasta que las chapas lo sujeten con un "click".</li>
+            <li><strong>Cierra, reconecta y verifica</strong>: en la BIOS o en Windows (Propiedades del Sistema) deberia aparecer la nueva cantidad de RAM.</li>
+          </ol>
+
+          <div class="alert-box alert-tip" style="margin-top:12px;">
+            <i class="bi bi-lightbulb"></i>
+            <div><strong>Consejo:</strong> si mezclas modulos de distintas marcas, funciona, pero puede haber pequenas incompatibilidades. Lo ideal es comprar dos modulos iguales del mismo kit para aprovechar el canal dual.</div>
+          </div>
+
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../man-laptop.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="reemplazo-de-disco-ssd-en-portatil.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Reemplazo de disco/SSD en portatil</span></a>
+    <span class="lesson-nav-empty"></span>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

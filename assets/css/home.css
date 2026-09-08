@@ -35,6 +35,14 @@
   border-top-color:rgba(var(--accent-rgb),.5);
 }
 .hero-glow{z-index:0;}
+/* === FONDO DE GRADIENTE ANIMADO (colores aleatorios) === */
+.hero-bg-anim{
+  position:absolute;inset:0;z-index:0;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 1.6s ease;
+  will-change:opacity,background;
+}
 /* boton de despiece del gabinete (GSAP) */
 .hero3d-explode{
   position:absolute;right:1.5rem;bottom:1.5rem;z-index:5;
@@ -86,86 +94,58 @@
   max-width:1200px;width:100%;
 }
 
-/* === CANVAS BABYLON (nucleo 3D a la derecha) === */
-.hero-babylon{
-  position:absolute;
-  top:50%;right:0;
-  width:min(38vw,440px);
-  height:min(38vw,440px);
-  transform:translateY(-50%);
+/* === ICONOS DE HARDWARE (chips flotando por todo el hero) === */
+.cb-icons{
+  position:absolute;inset:0;
   z-index:1;
   pointer-events:none;
-  opacity:0;
-  will-change:opacity;
+  overflow:hidden;
 }
-@media(max-width:1199px){
-  .hero-babylon{width:36vw;height:36vw;right:-2vw;}
-}
-@media(max-width:899px){
-  .hero-babylon{display:none;}
-}
-
-/* === CIRCUIT BOARD HERO (recreado de 21st.dev) === */
-.circuit-board{
-  position:absolute;inset:0;z-index:0;
-  pointer-events:none;
-  opacity:.55;
-  mask-image:radial-gradient(115% 115% at 80% 50%,#000 25%,rgba(0,0,0,.6) 55%,transparent 85%);
-  -webkit-mask-image:radial-gradient(115% 115% at 80% 50%,#000 25%,rgba(0,0,0,.6) 55%,transparent 85%);
-}
-.circuit-svg{width:100%;height:100%;display:block;}
-.cb-grid-dot{fill:var(--border);opacity:.35;}
-.cb-trace{
-  fill:none;
-  stroke:var(--border-hover);
-  stroke-width:1.5;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-.cb-junction{fill:var(--text-muted);opacity:.7;}
-.cb-pulse{
-  fill:var(--accent2);
-  filter:drop-shadow(0 0 5px var(--accent2));
-}
-.cb-node{
+.cb-icons .cb-node{
   position:absolute;
   transform:translate(-50%,-50%);
-  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  display:flex;flex-direction:column;align-items:center;gap:.35rem;
   pointer-events:auto;
-  animation:cbFloat 5s ease-in-out infinite;
+  animation:cbFloat var(--cb-dur,6s) ease-in-out infinite;
+  animation-delay:var(--cb-delay,0s);
 }
 .cb-chip{
-  width:46px;height:46px;border-radius:12px;
+  width:calc(46px*var(--cb-scale,1));height:calc(46px*var(--cb-scale,1));
+  border-radius:12px;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;color:var(--accent);
-  background:var(--bg-card);
-  border:1px solid var(--border-hover);
-  box-shadow:0 6px 22px rgba(0,0,0,.28),0 0 0 3px rgba(var(--accent-rgb),.07);
-  transition:border-color var(--transition),color var(--transition),transform var(--transition);
+  font-size:calc(1.15rem*var(--cb-scale,1));color:var(--accent);
+  background:rgba(var(--accent-rgb),.06);
+  border:1px solid rgba(var(--accent-rgb),.25);
+  box-shadow:0 6px 22px rgba(0,0,0,.22),0 0 0 2px rgba(var(--accent-rgb),.06);
+  backdrop-filter:blur(4px);
+  transition:border-color var(--transition),color var(--transition),transform var(--transition),box-shadow var(--transition);
 }
 .cb-node:hover .cb-chip{
   border-color:var(--accent);
   color:#fff;
-  transform:scale(1.08);
-  box-shadow:0 6px 26px rgba(var(--accent-rgb),.35),0 0 0 3px rgba(var(--accent-rgb),.18);
+  transform:scale(1.1);
+  box-shadow:0 6px 26px rgba(var(--accent-rgb),.4),0 0 0 3px rgba(var(--accent-rgb),.18);
 }
 .cb-label{
-  font-family:var(--font-mono);font-size:.6rem;font-weight:600;
+  font-family:var(--font-mono);font-size:.56rem;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;
   color:var(--text-sec);
   background:var(--bg-topbar);
   border:1px solid var(--border);
   padding:.15rem .45rem;border-radius:5px;
-  opacity:.9;
-  transition:opacity var(--transition),color var(--transition);
+  opacity:0;transform:translateY(2px);
+  transition:opacity var(--transition),color var(--transition),transform var(--transition);
 }
-.cb-node:hover .cb-label{opacity:1;color:var(--accent);}
+.cb-node:hover .cb-label,
+.cb-node:focus-within .cb-label{
+  opacity:1;color:var(--accent);transform:translateY(0);
+}
 @keyframes cbFloat{
   0%,100%{translate:0 0;}
-  50%{translate:0 -6px;}
+  50%{translate:0 var(--cb-amp,-12px);}
 }
 @media(max-width:899px){
-  .circuit-board{display:none;}
+  .cb-icons{display:none;}
 }
 @media(prefers-reduced-motion:reduce){
   .cb-node{animation:none;}
@@ -191,7 +171,6 @@
   .hero-init .hero-anime,
   .js-anime .mod-card,
   .js-anime .feat-card{opacity:1;}
-  .hero-babylon{animation:none;opacity:.8;}
 }
 .hero h1{
   font-size:clamp(2.6rem,6vw,4.5rem);
@@ -203,14 +182,14 @@
 .hero-badge{margin-left:0;text-align:left;}
 .hero-cta{justify-content:flex-start;}
 .hero::before{
-  content:'';position:absolute;inset:0;
+  content:'';position:absolute;inset:0;z-index:1;
   background-image:
-    linear-gradient(rgba(var(--accent-rgb),.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(var(--accent-rgb),.05) 1px,transparent 1px);
-  background-size:50px 50px;
+    linear-gradient(rgba(var(--accent-rgb),.1) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(var(--accent-rgb),.1) 1px,transparent 1px);
+  background-size:64px 64px;
   pointer-events:none;
-  mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
-  -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+  mask-image:radial-gradient(ellipse at center,#000 55%,transparent 105%);
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 55%,transparent 105%);
 }
 .hero-glow{
   width:720px;height:720px;

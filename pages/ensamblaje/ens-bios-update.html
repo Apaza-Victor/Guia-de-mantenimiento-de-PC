@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-bios-update.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Actualizar el BIOS - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-bios-update.html",
+  "description": "Ensamblaje · Actualizar el BIOS. Por que y cuando actualizar el BIOS/UEFI, como saber tu version, metodos de actualizacion por USB y por software, BIOS Flashback sin CPU, riesgos y que hacer si falla.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,21 +101,41 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip active' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Actualizar el BIOS</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=JHon0EgiQt8" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">COMO ACTUALIZAR BIOS PLACA BASE - TUTORIAL PASO A PASO</span>
-        <span class="v-chan">Gabyx HD</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="bios-update" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-arrow-up-circle"></i></div>
@@ -123,161 +150,78 @@
       <div><strong>Regla de oro:</strong> un BIOS que funciona NO se actualiza por gusto. Un corte de luz o un error durante el flasheo puede dejar la placa "brickeada" (sin arrancar). Solo actualiza si la version nueva te aporta algo.</div>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Por que y cuando actualizar</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="subhead">Motivos validos</p>
-        <ul>
-          <li><strong>Soporte de CPU nueva:</strong> placas de socket actualizado para procesadores mas nuevos (AGESA en AMD, microcode en Intel).</li>
-          <li><strong>Compatibilidad de RAM:</strong> mejoras de estabilidad y soporte de modulos DDR4/DDR5 nuevos.</li>
-          <li><strong>Correcciones de seguridad</strong> (vulnerabilidades del firmware, arranque, TPM).</li>
-          <li><strong>Bugs corregidos:</strong> el fabricante lista los cambios en las notas de la version.</li>
-        </ul>
-        <p class="subhead">Cuando NO conviene</p>
-        <ul>
-          <li>Si el equipo es estable y no hay una razon concreta.</li>
-          <li>Si la placa es de OEM / muy vieja y el fabricante ya no publica actualizaciones.</li>
-          <li>Si hay riesgo de corte de luz y no tenes un UPS o una placa con doble BIOS.</li>
-        </ul>
-      </div></div>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-bios-update/por-que-y-cuando-actualizar.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Por que y cuando actualizar</div>
+          <div class="lesson-index-desc">Motivos validos Soporte de CPU nueva: placas de socket actualizado para procesadores mas nuevos (AGESA en...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/saber-tu-version-actual.html">
+        <div class="lesson-index-icon"><i class="bi bi-info-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Saber tu version actual</div>
+          <div class="lesson-index-desc">Desde Windows (msinfo32) cmd — version del BIOS COPIAR > wmic bios get SMBIOSBIOSVersion > msinfo32 Desde el...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/descargar-el-firmware-correcto.html">
+        <div class="lesson-index-icon"><i class="bi bi-download"></i></div>
+        <div>
+          <div class="lesson-index-title">Descargar el firmware correcto</div>
+          <div class="lesson-index-desc">Identifica el modelo exacto de la placa (lo veras en la BIOS o en la caja/pcb). Entra a la pagina oficial del...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/metodo-con-usb-via-bios.html">
+        <div class="lesson-index-icon"><i class="bi bi-usb-drive"></i></div>
+        <div>
+          <div class="lesson-index-title">Metodo con USB (via BIOS)</div>
+          <div class="lesson-index-desc">Formatea un USB en FAT32 (minimo 1 GB). Copia el archivo de firmware a la raiz del USB (sin carpetas, salvo...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/bios-flashback-flash-sin-cpu.html">
+        <div class="lesson-index-icon"><i class="bi bi-motherboard"></i></div>
+        <div>
+          <div class="lesson-index-title">BIOS Flashback / Flash sin CPU</div>
+          <div class="lesson-index-desc">Muchas placas gaming modernas traen BIOS Flashback (ASUS) / Q-Flash Plus (Gigabyte) / Flash BIOS Button...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/metodo-desde-windows-utilidad-del-fabricante.html">
+        <div class="lesson-index-icon"><i class="bi bi-window"></i></div>
+        <div>
+          <div class="lesson-index-title">Metodo desde Windows (utilidad del fabricante)</div>
+          <div class="lesson-index-desc">ASUS: MyASUS / Armoury Crate · MSI: MSI Center (Live Update) · Gigabyte: Gigabyte Control Center · ASRock:...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-bios-update/si-falla-recuperacion-del-bios.html">
+        <div class="lesson-index-icon"><i class="bi bi-exclamation-octagon"></i></div>
+        <div>
+          <div class="lesson-index-title">Si falla: recuperacion del BIOS</div>
+          <div class="lesson-index-desc">Situacion Solucion La placa se apago a mitad del flasheo Vuelve a encender y reintenta flashear; muchas...</div>
+        </div>
+      </a>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-info-circle accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Saber tu version actual</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="subhead">Desde Windows (msinfo32)</p>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">cmd — version del BIOS</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
-          <pre><span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic</span> <span class="cmd-flag">bios</span> <span class="cmd-value">get SMBIOSBIOSVersion</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">msinfo32</span></pre>
-        </div>
-        <p class="subhead">Desde el propio BIOS/UEFI</p>
-        <ul>
-          <li>Al entrar a la BIOS, la version aparece en la pantalla principal (Main/Information) con la fecha (p. ej. "BIOS Version/Date: P4.40, 06/10/2024").</li>
-          <li>Tambien suele mostrarse brevemente durante el POST (desactiva el logo del fabricante si no la ves).</li>
-        </ul>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>Compara el numero con la ultima version publicada en la pagina de soporte de tu placa/equipo. En placas gaming los nombres van asi: ASUS <code>P4.40</code>, MSI <code>7C56v2A</code>, Gigabyte <code>F21c</code>.</div>
-        </div>
-      </div></div>
     </div>
+</div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-download accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Descargar el firmware correcto</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ol>
-          <li>Identifica el <strong>modelo exacto</strong> de la placa (lo veras en la BIOS o en la caja/pcb).</li>
-          <li>Entra a la <strong>pagina oficial</strong> del fabricante: ASUS, MSI, Gigabyte, ASRock, Lenovo, HP, Dell.</li>
-          <li>Busca la seccion <strong>Soporte → Descargas → BIOS/UEFI</strong> de tu modelo.</li>
-          <li>Lee las <strong>notas de la version</strong> y la <strong>secuencia de actualizaciones</strong> (algunas placas exigen pasar por una version intermedia).</li>
-          <li>Descarga el archivo y descomprimelo: dentro hay el <strong>archivo .CAP/.ROM/.bin</strong> y las instrucciones.</li>
-        </ol>
-        <div class="alert-box alert-danger" style="margin-top:12px;">
-          <i class="bi bi-exclamation-octagon"></i>
-          <div><strong>Nunca</strong> descargues BIOS de sitios de terceros ni uses archivos de otra placa aunque parezca "compatible". El firmware es especifico de cada modelo y revision.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-usb-drive accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Metodo con USB (via BIOS)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ol>
-          <li>Formatea un USB en <strong>FAT32</strong> (minimo 1 GB).</li>
-          <li>Copia el archivo de firmware a la raiz del USB (sin carpetas, salvo que el fabricante indique lo contrario).</li>
-          <li>Conecta el USB y entra a la BIOS.</li>
-          <li>Busca la utilidad: ASUS <strong>EZ Flash</strong>, MSI <strong>M-Flash</strong>, Gigabyte <strong>Q-Flash</strong>, ASRock <strong>Instant Flash</strong>.</li>
-          <li>Selecciona el archivo, confirma y <strong>no apagues ni toques nada</strong> hasta que termine (2-5 min) y reinicie solo.</li>
-        </ol>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div>Manten el equipo conectado a corriente estable (idealmente con UPS). No uses raton/teclado bluetooth durante el proceso y no presiones teclas aunque parezca trabado.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-motherboard accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">BIOS Flashback / Flash sin CPU</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="text-sm text-secondary">Muchas placas gaming modernas traen <strong>BIOS Flashback</strong> (ASUS) / <strong>Q-Flash Plus</strong> (Gigabyte) / <strong>Flash BIOS Button</strong> (MSI): permiten actualizar el BIOS <strong>sin CPU, RAM ni GPU</strong>, solo con la fuente y el USB.</p>
-        <ol>
-          <li>Con la placa <strong>apagada</strong>, conecta la PSU (solo el 24 pines, no hace falta el resto).</li>
-          <li>Formatea el USB en <strong>FAT32</strong> y renombra el archivo segun indique el fabricante (p. ej. ASUS: <code>CAP</code> en la raiz con nombre especifico).</li>
-          <li>Inserta el USB en el puerto marcado (generalmente USB <strong>BIOS</strong> en el panel I/O).</li>
-          <li>Presiona el <strong>boton Flashback/Q-Flash Plus</strong> 3 segundos: el led parpadea durante el flasheo (3-6 min) y se apaga al terminar.</li>
-          <li>Arma el resto del equipo y enciende normalmente.</li>
-        </ol>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Este metodo es imprescindible cuando compras una placa de socket nuevo que no soporta tu CPU sin una version previa de BIOS.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-window accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Metodo desde Windows (utilidad del fabricante)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li>ASUS: <strong>MyASUS / Armoury Crate</strong> · MSI: <strong>MSI Center (Live Update)</strong> · Gigabyte: <strong>Gigabyte Control Center</strong> · ASRock: <strong>ASRock App Shop</strong>.</li>
-          <li>Las utilidades detectan la version y descargan la nueva directamente.</li>
-          <li>Si la actualizacion lo pide, el equipo <strong>reinicia en modo especial</strong> para flashear sin Windows.</li>
-        </ul>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div>Actualizar desde Windows es comodo pero mas riesgoso (los procesos del sistema pueden interferir). Para cambios importantes, prefiere el metodo USB desde la BIOS.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-exclamation-octagon accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Si falla: recuperacion del BIOS</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Situacion</th><th>Solucion</th></tr>
-          <tr><td>La placa se apago a mitad del flasheo</td><td>Vuelve a encender y reintenta flashear; muchas placas con doble BIOS recuperan la copia de respaldo automaticamente.</td></tr>
-          <tr><td>Doble BIOS (backup): no arranca</td><td>Usa el mecanismo del fabricante para arrancar desde el BIOS de respaldo (interruptor o salto).</td></tr>
-          <tr><td>Flashback disponible</td><td>Repite el metodo Flashback/Q-Flash Plus con el archivo correcto.</td></tr>
-          <tr><td>BIOS USB Recovery</td><td>En algunas placas: USB FAT32 con el firmware en la raiz + combina de teclas o jumper en el arranque.</td></tr>
-          <tr><td>Nada funciona</td><td>Lleva la placa a un programador de chip (reprogramacion del BIOS) o contacto al soporte/garantia.</td></tr>
-        </table></div>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>El <strong>reset CMOS</strong> (quitar pila/jumper) NO restaura un BIOS fallido, pero sirve si el problema es solo configuracion corrupta. Ve <a href="ens-atajos-bios.html#bios-reset-cmos">Reset CMOS</a>.</div>
-        </div>
-      </div></div>
-    </div>
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=JHon0EgiQt8" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">COMO ACTUALIZAR BIOS PLACA BASE - TUTORIAL PASO A PASO</span>
+        <span class="v-chan">Gabyx HD</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -301,8 +245,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

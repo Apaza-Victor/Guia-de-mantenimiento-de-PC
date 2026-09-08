@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-nat.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NAT y Port Forwarding - Redes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-nat.html",
+  "description": "Redes · NAT y Port Forwarding. Que es el NAT, tipos (estatico, dinamico, PAT), port forwarding para servidores y juegos, DMZ, UPnP y doble NAT.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,21 +99,39 @@
     <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip active' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · NAT y Port Forwarding</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=91wmFEe6gQE" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Todo sobre NAT en 3 minutos</span>
-        <span class="v-chan">Kurosaki</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="red-nat" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-arrow-left-right"></i></div>
@@ -121,140 +146,71 @@
       <div><strong>NAT</strong> (Network Address Translation) traduce las IPs privadas de tu red a la IP publica del router y viceversa. Es el motivo por el que todos tus dispositivos salen a internet "como uno solo".</div>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">Que es y por que existe</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Por que existe:</strong> las IPs IPv4 son limitadas; el NAT permite que miles de equipos compartan una sola IP publica.</li>
-          <li><strong>Seguridad adicional:</strong> los equipos internos no son directamente alcanzables desde internet; el router solo permite las conexiones que el establecio (o las reenvia a peticion).</li>
-          <li>Las IPs privadas (10.x, 172.16-31.x, 192.168.x) NO viajan por internet: el router las traduce.</li>
-          <li>El NAT mantiene una <strong>tabla de traduccion</strong> (puerto/IP interna ↔ IP publica/puerto) para saber a quien devolver cada paquete.</li>
-        </ul>
-      </div></div>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-nat/que-es-y-por-que-existe.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Que es y por que existe</div>
+          <div class="lesson-index-desc">Por que existe: las IPs IPv4 son limitadas; el NAT permite que miles de equipos compartan una sola IP...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="red-nat/tipos-de-nat.html">
+        <div class="lesson-index-icon"><i class="bi bi-layers"></i></div>
+        <div>
+          <div class="lesson-index-title">Tipos de NAT</div>
+          <div class="lesson-index-desc">Tipo Como funciona Uso NAT estatico (1:1) Una IP privada se traduce a una IP publica fija Servidores...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="red-nat/port-forwarding-reenvio-de-puertos.html">
+        <div class="lesson-index-icon"><i class="bi bi-signpost-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Port Forwarding (reenvio de puertos)</div>
+          <div class="lesson-index-desc">El port forwarding le dice al router: "las conexiones que lleguen al puerto X de mi IP publica, reenviarlas...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="red-nat/dmz-upnp-y-port-triggering.html">
+        <div class="lesson-index-icon"><i class="bi bi-shield"></i></div>
+        <div>
+          <div class="lesson-index-title">DMZ, UPnP y port triggering</div>
+          <div class="lesson-index-desc">DMZ: expone UN equipo interno completamente (todos sus puertos) hacia internet. Comoda pero peligrosa: usala...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="red-nat/doble-nat.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Doble NAT</div>
+          <div class="lesson-index-desc">Que es: cuando hay dos routers haciendo NAT en serie (ej. un router del ISP + tu router propio). Problemas:...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="red-nat/verificar-y-troubleshooting.html">
+        <div class="lesson-index-icon"><i class="bi bi-tools"></i></div>
+        <div>
+          <div class="lesson-index-title">Verificar y troubleshooting</div>
+          <div class="lesson-index-desc">Consulta tu IP publica (en el router o en sitios de "cual es mi IP") para probar desde afuera. Prueba el...</div>
+        </div>
+      </a>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-layers accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">Tipos de NAT</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Tipo</th><th>Como funciona</th><th>Uso</th></tr>
-          <tr><td>NAT estatico (1:1)</td><td>Una IP privada se traduce a una IP publica fija</td><td>Servidores expuestos (cada uno con su publica)</td></tr>
-          <tr><td>NAT dinamico</td><td>Un pool de publicas se reparte entre privadas</td><td>Menos comun en hogar</td></tr>
-          <tr><td>PAT / Overload</td><td>Todas las privadas salen por una sola publica con distintos puertos</td><td>El NAT tipico del router hogareno</td></tr>
-        </table></div>
-        <div class="mermaid">
-flowchart LR
-    subgraph LAN["Red local (privada)"]
-        A["PC 192.168.1.10<br/>salida: 192.168.1.10:5000"]
-    end
-    subgraph WAN["Internet (publica)"]
-        C["Servidor destino 93.184.216.34"]
-    end
-    B["Router NAT/PAT<br/>IP publica 203.0.113.5"]
-    A -->|"sin traduccion"| B
-    B -->|"traduce a 203.0.113.5:65000"| C
-    C -.->|"respuesta a 203.0.113.5:65000"| B
-    B -.->|"tabla NAT: devuelve a la privada"| A
-        </div>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>El PAT (Port Address Translation) es el motivo de que "el puerto este cerrado": el router distingue conexiones por puerto, y sin reglas no sabe a que equipo interno reenviar las conexiones entrantes.</div>
-        </div>
-      </div></div>
     </div>
+</div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-signpost-2 accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">Port Forwarding (reenvio de puertos)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="text-sm text-secondary">El port forwarding le dice al router: "las conexiones que lleguen al puerto X de mi IP publica, reenviarlas al equipo interno 192.168.x.y puerto Z". Sirve para <strong>servidores web, camaras IP, juegos, SSH</strong>, etc.</p>
-        <p class="subhead">Pasos para configurarlo</p>
-        <ol>
-          <li>Asigna una <strong>IP fija</strong> al equipo destino (reserva DHCP o estatica).</li>
-          <li>Entra al router (ej. 192.168.1.1) → seccion "Port Forwarding" / "Virtual Server" / "Reenvio de puertos".</li>
-          <li>Crea la regla: puerto externo (ej. 8080), IP interna (ej. 192.168.1.50) y puerto interno.</li>
-          <li>Define el <strong>protocolo</strong> (TCP, UDP o ambos) segun la aplicacion.</li>
-          <li>Guarda y verifica desde afuera de tu red.</li>
-        </ol>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>Seguridad:</strong> exponer un puerto es abrir una puerta de tu red. Solo reenvia los puertos necesarios, apunta a la IP correcta y usa autenticacion fuerte en el servicio expuesto.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-shield accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">DMZ, UPnP y port triggering</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>DMZ:</strong> expone UN equipo interno completamente (todos sus puertos) hacia internet. Comoda pero peligrosa: usala solo temporalmente o en zonas aisladas.</li>
-          <li><strong>UPnP / NAT-PMP:</strong> las aplicaciones abren puertos solas en el router. Comodo (juegos, consolas) pero un riesgo si el router es de dudosa calidad. Desactivalo si no lo necesitas.</li>
-          <li><strong>Port triggering:</strong> abre un puerto automaticamente cuando detecta trafico saliente en otro. Util para aplicaciones con puertos dinamicos.</li>
-        </ul>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Preferencia segura: <strong>port forwarding</strong> puntual y con IP fija, sobre la DMZ y sobre UPnP.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-diagram-2 accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">Doble NAT</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Que es:</strong> cuando hay dos routers haciendo NAT en serie (ej. un router del ISP + tu router propio).</li>
-          <li><strong>Problemas:</strong> el port forwarding falla (hay que configurarlo en los dos), los juegos peer-to-peer tienen problemas y aparecen "IP privada" al consultar tu IP.</li>
-          <li><strong>Como detectarlo:</strong> entra a la pagina del router 2 y compara su IP WAN: si es privada (192.168.x / 10.x), hay doble NAT.</li>
-          <li><strong>Soluciones:</strong> pon tu router en <strong>modo bridge</strong> (o modo AP) para que solo el router del ISP haga NAT; o configura port forwarding en ambos routers.</li>
-        </ul>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>En modo bridge el router propio pierde sus funciones de router (WiFi sigue activo como AP). La alternativa mas limpia para una red hogarena es un solo equipo con NAT.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-tools accordion-icon" style="color:#39d0d8;"></i>
-        <span class="accordion-title">Verificar y troubleshooting</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li>Consulta tu <strong>IP publica</strong> (en el router o en sitios de "cual es mi IP") para probar desde afuera.</li>
-          <li>Prueba el puerto abierto con herramientas web de "port checker" o con <code>Test-NetConnection</code> en PowerShell.</li>
-          <li>Si el puerto figura cerrado: revisa el doble NAT, el firewall del equipo destino y que el servicio escuche en la IP correcta.</li>
-          <li>Para servicios locales, conecta primero desde la red interna; si funciona ahi, el problema es el reenvio.</li>
-        </ul>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">powershell — probar un puerto remoto</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
-          <pre><span class="cmd-prompt">PS&gt;</span> <span class="cmd-keyword">Test-NetConnection</span> <span class="cmd-value">mi-ip-publica</span> <span class="cmd-flag">-Port</span> <span class="cmd-value">8080</span></pre>
-        </div>
-      </div></div>
-    </div>
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=91wmFEe6gQE" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Todo sobre NAT en 3 minutos</span>
+        <span class="v-chan">Kurosaki</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -280,8 +236,10 @@ flowchart LR
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

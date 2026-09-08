@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes Electronicos - Placa Base | TechGuide</title>
+  <meta name="description" content="Sobre la placa base viven miles de componentes electronicos miniatura. Estos mismos componentes se usan en cualquier circuito. Entenderlos permite...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Componentes Electronicos - Placa Base | TechGuide">
+  <meta property="og:description" content="Sobre la placa base viven miles de componentes electronicos miniatura. Estos mismos componentes se usan en cualquier circuito. Entenderlos permite...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <style>
+    .usb-chip { display: inline-block; padding: .1rem .55rem; border-radius: 4px; font-weight: 700; font-size: .78rem; color: #fff; }
+    .usb-2 { background: #2b2d33; }
+    .usb-3 { background: #3b82c4; }
+    .usb-31 { background: #3bc2c9; }
+    .usb-32 { background: #d8433d; }
+    .usb-c-chip { background: #6b7280; }
+    .port-pill { display: inline-block; padding: .12rem .6rem; border-radius: 999px; font-weight: 700; font-size: .78rem; margin: .1rem; }
+    .pill-atx { background: rgba(216,67,61,.16); color: #f08a86; border: 1px solid rgba(216,67,61,.4); }
+    .pill-matx { background: rgba(75,176,87,.14); color: #7fd08a; border: 1px solid rgba(75,176,87,.4); }
+    .pill-itx { background: rgba(59,130,196,.16); color: #6bb7e8; border: 1px solid rgba(59,130,196,.4); }
+    .pill-eatx { background: rgba(138,92,245,.16); color: #b39af7; border: 1px solid rgba(138,92,245,.4); }
+  </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/placa-base/componentes-electronicos.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Componentes Electronicos - Placa Base | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/placa-base/componentes-electronicos.html",
+  "description": "Sobre la placa base viven miles de componentes electronicos miniatura. Estos mismos componentes se usan en cualquier circuito. Entenderlos permite...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Placa Base - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/placa-base.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-activity"></i></div>
+      <h1>Componentes Electronicos</h1>
+      <p>Transistor · resistencia · capacitor · diodo · LED · bobina · chip · cristal · fusible · termistor · relay · mas</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../placa-base.html">Placa Base</a><span class="sep">/</span><span class="current">Componentes Electronicos</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p class="text-sm text-secondary mb-2">Sobre la placa base viven miles de componentes electronicos miniatura. Estos mismos componentes se usan en cualquier circuito. Entenderlos permite diagnosticar fallas visuales (capacitores hinchados, fusibles quemados) y leer sus valores.</p>
+          <div class="cable-3d-grid tight" data-aos="fade-up">
+            <div class="three-canvas" data-model="resistor" data-title="Resistencia con bandas de color">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Resistencia (limita corriente)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="capacitor" data-title="Capacitor electrolitico">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Capacitor (guarda carga)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="transistor" data-title="Transistor TO-92 con 3 patas">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Transistor (amplifica/commuta)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="diode" data-title="Diodo con banda de catodo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Diodo (deja pasar 1 direccion)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="led" data-title="LED 5mm con cupula">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">LED (diodo que emite luz)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="inductor" data-title="Bobina / inductor con nucleo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Bobina (filtra corrientes)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="ic-chip" data-title="Circuito integrado DIP-14">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Circuito integrado (chip)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="crystal" data-title="Oscilador de cristal">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cristal (marca el reloj)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="fuse" data-title="Fusible de vidrio">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fusible (se quema por proteccion)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="potentiometer" data-title="Potenciometro con eje">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Potenciometro (resistencia variable)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="thermistor" data-title="Termistor NTC (sensor de temperatura)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Termistor (cambia con la temperatura)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="varistor" data-title="Varistor MOV (protege contra picos)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Varistor (absorbe picos de voltaje)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="relay" data-title="Relay (interruptor electromagnetico)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Relay (commuta con un electroiman)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="transformer" data-title="Transformador con bobinados">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Transformador (cambia voltajes AC)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="pushbutton" data-title="Pulsador tactil de PCB">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Pulsador tactil (boton de placa)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="buzzer" data-title="Buzzer piezoelectrico">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Buzzer (emisor de beeps)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+            <div class="three-canvas" data-model="photoresistor" data-title="Fotoresistor LDR (sensor de luz)">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Fotoresistor (cambia con la luz)</span><span class="three-hint">girar / zoom</span></div>
+            </div>
+          </div>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Componente</th><th>Que es / para que sirve</th><th>En la placa aparece en...</th></tr>
+            <tr><td><strong>Resistencia</strong></td><td>Oponerse al paso de la corriente; limita corriente y divide voltajes. Se identifica por sus bandas de color (ohms).</td><td>Por todas partes, en miniatura (SMD)</td></tr>
+            <tr><td><strong>Capacitor</strong></td><td>Almacena carga electrica; filtra ruido y estabiliza voltajes. Se mide en faradios (uF, pF).</td><td>Alrededor del VRM y de cada chip</td></tr>
+            <tr><td><strong>Transistor</strong></td><td>Amplifica senales y funciona como interruptor electronico (la base de todos los circuitos logicos).</td><td>En el VRM (los "MOSFET" de las fases)</td></tr>
+            <tr><td><strong>Diodo</strong></td><td>Deja pasar corriente en un solo sentido (protege contra polaridad inversa).</td><td>En entradas de alimentacion</td></tr>
+            <tr><td><strong>LED</strong></td><td>Diodo emisor de luz: indica encendido, actividad de disco, diagnosticos (Q-LED).</td><td>Panel frontal, LEDs de la placa</td></tr>
+            <tr><td><strong>Bobina / Inductor</strong></td><td>Almacena energia en un campo magnetico; filtra y suaviza la corriente de los VRM.</td><td>Las piezas cubicas negras junto a los MOSFET</td></tr>
+            <tr><td><strong>Circuito integrado</strong></td><td>Chip que contiene miles/millones de transistores: gestiona funciones especificas.</td><td>Chipset, controladores, chips de audio/LAN</td></tr>
+            <tr><td><strong>Cristal</strong></td><td>Genera una frecuencia exacta (el "reloj" que sincroniza el sistema).</td><td>Cerca de los chips, en su caja metalica</td></tr>
+            <tr><td><strong>Fusible</strong></td><td>Se quema internamente si pasa demasiada corriente, cortando el circuito y protegiendo la placa.</td><td>En las lineas de alimentacion (puertos USB)</td></tr>
+            <tr><td><strong>Potenciometro</strong></td><td>Resistencia variable: ajusta voltajes o volumen girando un eje.</td><td>Placas viejas o circuitos de ajuste (trimmers)</td></tr>
+            <tr><td><strong>Termistor</strong></td><td>Resistencia que cambia con la temperatura; monitorea la temperatura del VRM o la CPU.</td><td>Junto al socket y en el VRM (los "NTC")</td></tr>
+            <tr><td><strong>Varistor (MOV)</strong></td><td>Absorbe picos transitorios de voltaje; protege contra sobretensiones.</td><td>En la fuente de poder o protectores</td></tr>
+            <tr><td><strong>Relay</strong></td><td>Interruptor accionado por un electroiman; permite commutar circuitos de potencia con senales debiles.</td><td>Fuentes, cargadores y circuitos de control</td></tr>
+            <tr><td><strong>Transformador</strong></td><td>Cambia voltajes de corriente alterna (reduce 220V a los voltajes internos).</td><td>Dentro de la fuente de poder</td></tr>
+            <tr><td><strong>Pulsador tactil</strong></td><td>Boton momentaneo que cierra el circuito mientras se presiona.</td><td>Botones de power/reset/clear CMOS de la placa</td></tr>
+            <tr><td><strong>Buzzer</strong></td><td>Emisor piezoelectrico de sonido: los "beeps" de diagnostico del POST.</td><td>Speaker interno / buzzer de la placa</td></tr>
+            <tr><td><strong>Fotoresistor (LDR)</strong></td><td>Resistencia que cambia con la luz; se usa como sensor de luz.</td><td>Circuitos de sensores y automatizacion</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>Inspeccion visual</strong> Al diagnosticar, revisa si hay capacitores electroliticos con la tapa abultada o el liquido seco (indica falla), fusibles ennegrecidos o areas quemadas. Esos son los primeros sospechosos de una placa muerta.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../placa-base.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="puertos-de-la-placa-base.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Puertos de la Placa Base</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="chips-de-la-placa-bios-audio-lan-wi-fi.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Chips de la Placa (BIOS, Audio, LAN, Wi-Fi)</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../../../assets/js/cables-3d.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

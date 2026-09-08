@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Recuperacion de Datos - Mantenimiento | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos.html",
+  "description": "Mantenimiento · Recuperacion de datos. Fallos logicos vs fisicos, pasos previos (no escribir sobre el disco), herramientas (Recuva, TestDisk, PhotoRec, R-Studio), imagenes de disco y cuando derivar a un profesional.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -89,20 +96,35 @@
     <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip active' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Recuperacion de Datos</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=TNZiVSBrj24" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Como Recuperar Archivos de Disco Duro DANADO</span>
-        <span class="v-chan">Wondershare Recoverit Espanol</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="recuperacion" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-database"></i></div>
@@ -117,121 +139,73 @@
         <div><strong>Regla de oro:</strong> en cuanto sospeches de un disco con datos importantes, DEJALO DE USAR. Cada escritura nueva puede sobrescribir los datos que quieres recuperar. Conectalo como disco secundario y trabaja con imagenes.</div>
       </div>
 
-      <div class="accordion open" id="rd-tipos">
-        <div class="accordion-header" onclick="toggleAccordion('rd-tipos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Fallo logico vs fallo fisico</div><div class="accordion-subtitle">Define la estrategia y el precio</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tipo</th><th>Sintomas</th><th>Recuperable en casa</th></tr>
-            <tr><td>Logico (tabla de archivos, particion borrada, formato accidental)</td><td>El disco "no se ve", pide formatear, aparece vacio</td><td>Si, con software</td></tr>
-            <tr><td>Fisico leve (sectores malos)</td><td>Ruidos, archivos que fallan al copiar, SMART con atributos rojos</td><td>Con cuidado y una imagen sector a sector</td></tr>
-            <tr><td>Fisico grave (cabezal dañado, plato rayado, motor)</td><td>Clics, no detecta, "zumbidos"</td><td>NO — solo laboratorio profesional</td></tr>
-            <tr><td>Firmware/controlador</td><td>No detectado por BIOS pero gira</td><td>Segun caso, herramientas de fabricante</td></tr>
-          </table></div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="rd-primeros">
-        <div class="accordion-header" onclick="toggleAccordion('rd-primeros')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-patch-check"></i></span><div><div class="accordion-title">Primeros pasos del tecnico</div><div class="accordion-subtitle">Diagnostica antes de actuar</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-recuperacion-datos/fallo-logico-vs-fallo-fisico.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Fallo logico vs fallo fisico</div>
+          <div class="lesson-index-desc">Define la estrategia y el precio</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Pregunta al usuario que paso (borrado, virus, apagon, ruido) y si hay respaldo.</li>
-            <li>Revisa el estado SMART con CrystalDiskInfo o la herramienta del fabricante (no hagas reparacion SMART).</li>
-            <li>Conecta el disco como unidad secundaria en un equipo sano (nunca arranques desde el disco dañado).</li>
-            <li>Haz una <strong>imagen bit a bit</strong> del disco antes de cualquier intento de reparacion.</li>
-            <li>Trabaja SIEMPRE sobre la imagen, no sobre el original.</li>
-          </ol>
+      </a>
+      <a class="lesson-index-card" href="man-recuperacion-datos/primeros-pasos-del-tecnico.html">
+        <div class="lesson-index-icon"><i class="bi bi-patch-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Primeros pasos del tecnico</div>
+          <div class="lesson-index-desc">Diagnostica antes de actuar</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rd-herramientas">
-        <div class="accordion-header" onclick="toggleAccordion('rd-herramientas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-tools"></i></span><div><div class="accordion-title">Herramientas de recuperacion</div><div class="accordion-subtitle">El software correcto segun el escenario</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="man-recuperacion-datos/herramientas-de-recuperacion.html">
+        <div class="lesson-index-icon"><i class="bi bi-tools"></i></div>
+        <div>
+          <div class="lesson-index-title">Herramientas de recuperacion</div>
+          <div class="lesson-index-desc">El software correcto segun el escenario</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Herramienta</th><th>Mejor para</th><th>Tipo</th></tr>
-            <tr><td>Recuva</td><td>Archivos borrados recientes en sistemas en buen estado</td><td>Gratuita (Windows)</td></tr>
-            <tr><td>TestDisk</td><td>Reparar tabla de particiones, recuperar MBR/GPT, bootear</td><td>Gratuita (multi-OS)</td></tr>
-            <tr><td>PhotoRec</td><td>Recuperar archivos por firma (fotos, docs) sin depender del sistema de archivos</td><td>Gratuita (multi-OS)</td></tr>
-            <tr><td>R-Studio / DMDE</td><td>Casos complejos, imagenes, RAID, particiones perdidas</td><td>Comercial</td></tr>
-            <tr><td>dd / Clonezilla</td><td>Crear imagenes bit a bit y clonar</td><td>Gratuita (Linux)</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Recuva</strong> funciona solo si el disco sigue accesible y no se escribio encima. <strong>PhotoRec</strong> no restaura nombres ni carpetas (agrupa por tipo), pero rescata lo que el sistema de archivos ya no ve.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="man-recuperacion-datos/imagen-bit-a-bit-el-seguro-antes-del-trabajo.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd-network"></i></div>
+        <div>
+          <div class="lesson-index-title">Imagen bit a bit — el seguro antes del trabajo</div>
+          <div class="lesson-index-desc">dd y Clonezilla</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rd-imagen">
-        <div class="accordion-header" onclick="toggleAccordion('rd-imagen')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-network"></i></span><div><div class="accordion-title">Imagen bit a bit — el seguro antes del trabajo</div><div class="accordion-subtitle">dd y Clonezilla</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="man-recuperacion-datos/fallo-mecanico-cuando-llamar-al-profesional.html">
+        <div class="lesson-index-icon"><i class="bi bi-exclamation-octagon"></i></div>
+        <div>
+          <div class="lesson-index-title">Fallo mecanico — cuando llamar al profesional</div>
+          <div class="lesson-index-desc">Senales de que NO hay que tocar</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>En Linux (Live USB), identifica el disco: <code>lsblk</code> o <code>fdisk -l</code>.</li>
-            <li>Crea la imagen: <code>sudo dd if=/dev/sdX of=/ruta/imagen.img bs=4M status=progress</code> (sdX = disco dañado).</li>
-            <li>Con sectores malos, usa <strong>ddrescue</strong>: <code>ddrescue -d /dev/sdX imagen.img logfile.log</code> — reintenta los sectores dificiles y no se detiene.</li>
-            <li>Trabaja sobre la imagen: <strong>testdisk imagen.img</strong> o montala como loop para explorar.</li>
-            <li>Nunca apagues durante el proceso; asegura espacio libre igual o mayor al tamanio del disco.</li>
-          </ol>
-          <div class="alert-box alert-warn">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Ojo:</strong> si el disco hace clics o ruidos raros, NO lo dejes correr horas: cada lectura puede degradarlo. En ese caso, para y deriva a laboratorio con sala limpia.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="man-recuperacion-datos/errores-que-arruinan-la-recuperacion.html">
+        <div class="lesson-index-icon"><i class="bi bi-x-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Errores que arruinan la recuperacion</div>
+          <div class="lesson-index-desc">Lo que NUNCA debes hacer</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rd-fisico">
-        <div class="accordion-header" onclick="toggleAccordion('rd-fisico')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-exclamation-octagon"></i></span><div><div class="accordion-title">Fallo mecanico — cuando llamar al profesional</div><div class="accordion-subtitle">Senales de que NO hay que tocar</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Senal</th><th>Que indica</th><th>Accion</th></tr>
-            <tr><td>Click-click repetido</td><td>Cabezal atascado o dañado</td><td>Apagar YA, laboratorio</td></tr>
-            <tr><td>No detecta BIOS pero el motor gira</td><td>Posible fallo de firmware o electronica</td><td>Solo lab profesional (o PCB igual exacto en casos extremos)</td></tr>
-            <tr><td>Plato con marcas/polvo (abierto)</td><td>Dano fisico irreparable</td><td>No abrir discos en ambiente normal</td></tr>
-            <tr><td>Olor a quemado</td><td>Electronica dañada</td><td>Lab (suelen recuperarse datos con PCB compatible en muchos casos)</td></tr>
-          </table></div>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>No abras un HDD en casa:</strong> el polvo del ambiente daña los platos al instante. La recuperacion mecanica requiere sala limpia, herramientas especiales y, a veces, donante de discos. Es trabajo de laboratorio.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="rd-evitar">
-        <div class="accordion-header" onclick="toggleAccordion('rd-evitar')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-x-circle"></i></span><div><div class="accordion-title">Errores que arruinan la recuperacion</div><div class="accordion-subtitle">Lo que NUNCA debes hacer</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>No instales Windows ni aplicaciones sobre el disco dañado.</strong></li>
-            <li><strong>No ejecutes chkdsk /f</strong> ("reparar") sobre el disco con datos: modifica estructuras y puede borrar lo recuperable.</li>
-            <li><strong>No dejes el disco "arreglando" horas</strong> si hace ruidos raros (sectores malos se multiplican).</li>
-            <li><strong>No congeles ni golpees el disco</strong> (mitos de internet que causan dano real).</li>
-            <li><strong>No intentes "reparar" una particion</strong> sin antes sacar la imagen.</li>
-          </ul>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>En resumen:</strong> imagen primero, herramientas despues, laboratorio cuando el problema es fisico. Y la mejor recuperacion es la que nunca hace falta: un buen plan de respaldo.</div>
-          </div>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=TNZiVSBrj24" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Como Recuperar Archivos de Disco Duro DANADO</span>
+        <span class="v-chan">Wondershare Recoverit Espanol</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -255,8 +229,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

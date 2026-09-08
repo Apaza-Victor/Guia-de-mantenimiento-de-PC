@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-seguridad-redes.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Seguridad de Red - Redes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-seguridad-redes.html",
+  "description": "Redes · Seguridad de red. AAA (autenticacion, autorizacion, contabilidad), RADIUS vs TACACS+, 802.1X con EAP/PEAP/EAP-TLS, FreeRADIUS, port security, DHCP snooping y mejores practicas.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,20 +99,38 @@
     <a class='chip active' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip active' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Seguridad de Red</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=dF1Zm9WWFGs" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">QUE ES UN FIREWALL Y POR QUE ES EL ESCUDO DE LA RED</span>
-        <span class="v-chan">INFRA FACIL</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="seguridad-red" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-shield-lock"></i></div>
@@ -120,148 +145,80 @@
         <div><strong>Concepto:</strong> en una red corporativa no basta con WPA2/WPA3. Hay que saber QUIEN accede, con QUE derechos y QUE hizo. Eso es exactamente lo que resuelve el modelo AAA.</div>
       </div>
 
-      <div class="accordion open" id="sr-aaa">
-        <div class="accordion-header" onclick="toggleAccordion('sr-aaa')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-person-check"></i></span><div><div class="accordion-title">AAA — Autenticacion, Autorizacion y Contabilidad</div><div class="accordion-subtitle">El modelo de control de acceso</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Componente</th><th>Que responde</th><th>Ejemplo</th></tr>
-            <tr><td>Autenticacion</td><td>Quien eres</td><td>Usuario + contrasena, certificado, token</td></tr>
-            <tr><td>Autorizacion</td><td>Que puedes hacer</td><td>Nivel de acceso (usuario, admin, VLAN asignada)</td></tr>
-            <tr><td>Contabilidad</td><td>Que hiciste y cuando</td><td>Logs de sesion, tiempo conectado, consumo</td></tr>
-          </table></div>
-          <ul>
-            <li><strong>Implementacion tipica:</strong> el switch/router (autenticador) reenvia las credenciales a un servidor central (RADIUS/TACACS+) que autentica contra un directorio (Active Directory, LDAP).</li>
-            <li><strong>Beneficio:</strong> si alguien cambia de contrasena o es despedido, se le revoca el acceso desde UN solo lugar, no desde cada equipo de red.</li>
-          </ul>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="sr-radius">
-        <div class="accordion-header" onclick="toggleAccordion('sr-radius')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">RADIUS vs TACACS+</div><div class="accordion-subtitle">Los dos protocolos AAA, cuando usar cada uno</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-seguridad-redes/aaa-autenticacion-autorizacion-y-contabilidad.html">
+        <div class="lesson-index-icon"><i class="bi bi-person-check"></i></div>
+        <div>
+          <div class="lesson-index-title">AAA — Autenticacion, Autorizacion y Contabilidad</div>
+          <div class="lesson-index-desc">El modelo de control de acceso</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Criterio</th><th>RADIUS</th><th>TACACS+</th></tr>
-            <tr><td>Encriptacion</td><td>Solo la contrasena</td><td>Todo el paquete (total)</td></tr>
-            <tr><td>Protocolo</td><td>UDP (1812/1813)</td><td>TCP (49)</td></tr>
-            <tr><td>Separa auth/author/accounting</td><td>Un solo paquete para todo</td><td>Si, por separado (mas granular)</td></tr>
-            <tr><td>Uso tipico</td><td>Acceso de usuarios finales (Wi-Fi, VPN, 802.1X)</td><td>Administracion de dispositivos de red (SSH)</td></tr>
-          </table></div>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>En la practica:</strong> RADIUS domina en autenticacion de usuarios de red (es el estandar para Wi-Fi empresarial y VPN). TACACS+ (Cisco) es preferido para controlar quien administra los switches/routers. Un buen entorno suele usar ambos.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/radius-vs-tacacs.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div>
+          <div class="lesson-index-title">RADIUS vs TACACS+</div>
+          <div class="lesson-index-desc">Los dos protocolos AAA, cuando usar cada uno</div>
         </div>
-      </div>
-
-      <div class="accordion" id="sr-8021x">
-        <div class="accordion-header" onclick="toggleAccordion('sr-8021x')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-shield-check"></i></span><div><div class="accordion-title">802.1X — el estandar de acceso por puerto</div><div class="accordion-subtitle">Suplicante · Autenticador · Servidor</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/802-1x-el-estandar-de-acceso-por-puerto.html">
+        <div class="lesson-index-icon"><i class="bi bi-shield-check"></i></div>
+        <div>
+          <div class="lesson-index-title">802.1X — el estandar de acceso por puerto</div>
+          <div class="lesson-index-desc">Suplicante · Autenticador · Servidor</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Suplicante:</strong> el dispositivo que pide acceso (PC, telefono) con su credencial o certificado.</li>
-            <li><strong>Autenticador:</strong> el switch o punto de acceso que deja pasar el trafico SOLO si la autenticacion funciona.</li>
-            <li><strong>Servidor de autenticacion:</strong> RADIUS (ej. FreeRADIUS, NPS de Windows) que decide y devuelve la VLAN asignada.</li>
-            <li>Antes de autenticar, el puerto solo permite tramas EAP (protocolo de autenticacion) — nada de trafico normal.</li>
-            <li>Util en redes cableadas (evita que alguien conecte una laptop a un puerto y obtenga red) y Wi-Fi empresarial.</li>
-          </ul>
-          <div class="alert-box alert-info">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Ejemplo Wi-Fi:</strong> con WPA2/3-Enterprise (802.1X + RADIUS), cada usuario ingresa su usuario/contrasena de la empresa en lugar de una clave Wi-Fi compartida. Se puede revocar acceso individual al instante.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/metodos-eap.html">
+        <div class="lesson-index-icon"><i class="bi bi-key"></i></div>
+        <div>
+          <div class="lesson-index-title">Metodos EAP</div>
+          <div class="lesson-index-desc">PEAP, EAP-TLS y compania</div>
         </div>
-      </div>
-
-      <div class="accordion" id="sr-eap">
-        <div class="accordion-header" onclick="toggleAccordion('sr-eap')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-key"></i></span><div><div class="accordion-title">Metodos EAP</div><div class="accordion-subtitle">PEAP, EAP-TLS y compania</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/freeradius-basico.html">
+        <div class="lesson-index-icon"><i class="bi bi-server"></i></div>
+        <div>
+          <div class="lesson-index-title">FreeRADIUS basico</div>
+          <div class="lesson-index-desc">Pon a prueba 802.1X en un lab</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Metodo EAP</th><th>Como autentica</th><th>Seguridad</th></tr>
-            <tr><td>PEAP (EAP-MSCHAPv2)</td><td>Usuario + contrasena dentro de un tunel TLS hacia el servidor</td><td>Buena (si se valida el certificado del servidor)</td></tr>
-            <tr><td>EAP-TLS</td><td>Certificados digitales en CLIENTE y servidor</td><td>Excelente (sin contrasenas que robar)</td></tr>
-            <tr><td>EAP-TTLS</td><td>Similar a PEAP, con mas flexibilidad</td><td>Buena</td></tr>
-            <tr><td>EAP-MD5 / LEAP</td><td>Contrasena simple</td><td>Debil — NO usar</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Recomendacion:</strong> EAP-TLS con certificados por dispositivo es el mas seguro (ideal para empresas con gestion de certificados tipo Intune/AD CS). PEAP con contrasenas es el mas practico para empezar; exige validar el certificado del servidor para evitar "evil twin".</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/proteccion-de-puertos-port-security-y-dhcp-snooping.html">
+        <div class="lesson-index-icon"><i class="bi bi-plug"></i></div>
+        <div>
+          <div class="lesson-index-title">Proteccion de puertos — Port Security y DHCP Snooping</div>
+          <div class="lesson-index-desc">Medidas en el switch contra intrusiones locales</div>
         </div>
-      </div>
-
-      <div class="accordion" id="sr-freeradius">
-        <div class="accordion-header" onclick="toggleAccordion('sr-freeradius')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-server"></i></span><div><div class="accordion-title">FreeRADIUS basico</div><div class="accordion-subtitle">Pon a prueba 802.1X en un lab</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-seguridad-redes/mejores-practicas-resumidas.html">
+        <div class="lesson-index-icon"><i class="bi bi-list-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Mejores practicas resumidas</div>
+          <div class="lesson-index-desc">La checklist del administrador</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Instala FreeRADIUS: <code>apt install freeradius</code> (Debian/Ubuntu).</li>
-            <li>Anade un cliente: en <code>clients.conf</code>, define la IP del switch/AP y el secreto compartido.</li>
-            <li>Anade un usuario de prueba en <code>users</code> o en <code>mods-available/sql</code> (base de datos).</li>
-            <li>Prueba manualmente: <code>radtest usuario pass 127.0.0.1 0 secreto</code>.</li>
-            <li>En el switch, configura el puerto 802.1X apuntando al servidor RADIUS (IP, secreto) y el metodo (dot1x pae authenticator, aaa authentication dot1x default group radius).</li>
-            <li>Prueba conectando una laptop con supplicant (Windows "Autenticacion de red 802.1X" o wpa_supplicant en Linux).</li>
-          </ol>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Logs:</strong> si la autenticacion falla, revisa <code>/var/log/freeradius/radius.log</code>. La causa mas comun es un secreto compartido distinto entre switch y servidor, o credenciales incorrectas.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="sr-portsecurity">
-        <div class="accordion-header" onclick="toggleAccordion('sr-portsecurity')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-plug"></i></span><div><div class="accordion-title">Proteccion de puertos — Port Security y DHCP Snooping</div><div class="accordion-subtitle">Medidas en el switch contra intrusiones locales</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Mecanismo</th><th>Que bloquea</th><th>Comando ejemplo</th></tr>
-            <tr><td>Port Security</td><td>Mas de N MACs por puerto (evita hubs/envenenar ARP)</td><td><code>switchport port-security maximum 2</code></td></tr>
-            <tr><td>Port Security violation</td><td>MAC no autorizada conectada al puerto</td><td><code>switchport port-security violation restrict</code></td></tr>
-            <tr><td>DHCP Snooping</td><td>Servidores DHCP falsos (rogue DHCP)</td><td><code>ip dhcp snooping vlan 10</code></td></tr>
-            <tr><td>Dynamic ARP Inspection</td><td>ARP spoofing dentro de la LAN</td><td><code>ip arp inspection vlan 10</code></td></tr>
-            <tr><td>BPDU Guard</td><td>Switchs rogue que rompan STP</td><td><code>spanning-tree portfast bpduguard enable</code></td></tr>
-          </table></div>
-          <div class="alert-box alert-warn">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Cuidado:</strong> activar Port Security con un limite demasiado bajo bloquea equipos legitimos (impresoras con varios dispositivos, laptops con VLAN de voz+datos). Prueba en un puerto no critico y monitorea los logs.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="sr-practicas">
-        <div class="accordion-header" onclick="toggleAccordion('sr-practicas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-list-check"></i></span><div><div class="accordion-title">Mejores practicas resumidas</div><div class="accordion-subtitle">La checklist del administrador</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li>Cambia contrasenas por defecto de TODOS los equipos de red.</li>
-            <li>Usa RADIUS para acceso de usuarios (Wi-Fi/VPN/802.1X) y TACACS+ para administracion.</li>
-            <li>Segmenta con VLANs y limita el inter-VLAN con ACLs.</li>
-            <li>Activa 802.1X en puertos de oficina y WPA3-Enterprise en Wi-Fi.</li>
-            <li>Combina Port Security, DHCP Snooping y DAI en los switches de acceso.</li>
-            <li>Desactiva servicios no usados (SNMP v1/v2c con default, telnet, UPnP).</li>
-            <li>Actualiza firmware y certificados (no dejes expirar los CA de 802.1X).</li>
-            <li>Registra y monitorea logs de acceso e intrusiones.</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=dF1Zm9WWFGs" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">QUE ES UN FIREWALL Y POR QUE ES EL ESCUDO DE LA RED</span>
+        <span class="v-chan">INFRA FACIL</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -285,8 +242,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-router-practico.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Router Practico - Redes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-router-practico.html",
+  "description": "Redes · Configuracion practica del router domestico. Acceso al panel, WAN, Wi-Fi (canal, 2.4/5GHz), seguridad (cambiar admin, WPA3), DHCP, reservas, port forwarding, QoS y mesh.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,20 +99,38 @@
     <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip active' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Router Practico</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=VUZekXa1l9w" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">CONFIGURANDO ROUTER PASO A PASO</span>
-        <span class="v-chan">CONFIGURANDO ROUTERS</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="router-practico" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-router"></i></div>
@@ -120,138 +145,80 @@
         <div><strong>Seguridad base:</strong> la mayoria de los routers vienen con usuario "admin" y contrasena por defecto (admin/1234). Es la primera puerta que abre un atacante. Cambiala en la primera configuracion.</div>
       </div>
 
-      <div class="accordion open" id="rp-acceso">
-        <div class="accordion-header" onclick="toggleAccordion('rp-acceso')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box-arrow-in-right"></i></span><div><div class="accordion-title">Acceso al panel de administracion</div><div class="accordion-subtitle">Como entrar al router</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Conectate por cable (o Wi-Fi) al router y averigua la IP de acceso: normalmente <code>192.168.1.1</code>, <code>192.168.0.1</code> o <code>192.168.1.254</code>. En Windows: <code>ipconfig</code> → "Puerta de enlace predeterminada".</li>
-            <li>Escribe esa IP en el navegador y entra con las credenciales (etiqueta del router o manual).</li>
-            <li>Si no sabes la contrasena, resetea el router con el boton de reset (10s) y configura de cero.</li>
-            <li>Explora los menus: WAN, LAN, Wi-Fi, Seguridad, Firewall, QoS.</li>
-          </ol>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Tip:</strong> haz una copia del respaldo de configuracion del router (boton "Backup/Restore") antes de hacer cambios grandes. Asi si algo sale mal, restauras en un clic.</div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="rp-wan">
-        <div class="accordion-header" onclick="toggleAccordion('rp-wan')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-globe2"></i></span><div><div class="accordion-title">Configuracion WAN (conexion a internet)</div><div class="accordion-subtitle">DHCP, PPPoE o IP estatica segun tu ISP</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-router-practico/acceso-al-panel-de-administracion.html">
+        <div class="lesson-index-icon"><i class="bi bi-box-arrow-in-right"></i></div>
+        <div>
+          <div class="lesson-index-title">Acceso al panel de administracion</div>
+          <div class="lesson-index-desc">Como entrar al router</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tipo de conexion</th><th>Cuando se usa</th><th>Datos que pide</th></tr>
-            <tr><td>IP automatica (DHCP)</td><td>Cablemodem, fibra optica (ONT puente)</td><td>Ninguno</td></tr>
-            <tr><td>PPPoE</td><td>ADSL y algunos proveedores de fibra</td><td>Usuario y contrasena del ISP</td></tr>
-            <tr><td>IP estatica</td><td>Pequenas empresas / servidores</td><td>IP, mascara, gateway, DNS</td></tr>
-          </table></div>
-          <ul>
-            <li>Pregunta a tu proveedor el metodo correcto o prueba "DHCP" primero (el 90% de las conexiones actuales lo usan).</li>
-            <li>Configura <strong>DNS:</strong> puedes usar los del proveedor o publicos (8.8.8.8, 1.1.1.1) para mayor velocidad de resolucion en algunos casos.</li>
-          </ul>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/configuracion-wan-conexion-a-internet.html">
+        <div class="lesson-index-icon"><i class="bi bi-globe2"></i></div>
+        <div>
+          <div class="lesson-index-title">Configuracion WAN (conexion a internet)</div>
+          <div class="lesson-index-desc">DHCP, PPPoE o IP estatica segun tu ISP</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rp-wifi">
-        <div class="accordion-header" onclick="toggleAccordion('rp-wifi')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-wifi"></i></span><div><div class="accordion-title">Wi-Fi — SSID, canal y bandas</div><div class="accordion-subtitle">2.4GHz vs 5GHz y seleccion de canal</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/wi-fi-ssid-canal-y-bandas.html">
+        <div class="lesson-index-icon"><i class="bi bi-wifi"></i></div>
+        <div>
+          <div class="lesson-index-title">Wi-Fi — SSID, canal y bandas</div>
+          <div class="lesson-index-desc">2.4GHz vs 5GHz y seleccion de canal</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Banda</th><th>Alcance</th><th>Velocidad</th><th>Ideal para</th></tr>
-            <tr><td>2.4 GHz</td><td>Largo (penetra paredes)</td><td>Menor (hasta ~300-600 Mbps)</td><td>IoT, distancias largas, compatibilidad</td></tr>
-            <tr><td>5 GHz</td><td>Corto</td><td>Alta (hasta ~1+ Gbps)</td><td>Streaming, gaming, videollamadas cerca del router</td></tr>
-            <tr><td>6 GHz (Wi-Fi 6E/7)</td><td>Corto</td><td>Muy alta</td><td>Dispositivos compatibles, entornos densos</td></tr>
-          </table></div>
-          <ul>
-            <li><strong>SSID:</strong> da un nombre claro (ej. "Casa") y separa 2.4/5 GHz con sufijos ("Casa_5G") si tu router no hace band steering bien.</li>
-            <li><strong>Canal:</strong> en 2.4GHz usa canales 1, 6 u 11 (no se solapan). En 5GHz elige un canal poco saturado segun la app de analisis (ej. WifiInfoView).</li>
-            <li><strong>Ancho de canal:</strong> 40MHz en 2.4 solo si la zona esta despejada; 80MHz en 5GHz para max velocidad.</li>
-            <li>Activa <strong>band steering</strong> si existe: el router mueve al dispositivo a la banda que mejor le convenga.</li>
-          </ul>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/seguridad-del-wi-fi.html">
+        <div class="lesson-index-icon"><i class="bi bi-shield-lock"></i></div>
+        <div>
+          <div class="lesson-index-title">Seguridad del Wi-Fi</div>
+          <div class="lesson-index-desc">WPA3, cambio de admin, WPS off</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rp-seguridad">
-        <div class="accordion-header" onclick="toggleAccordion('rp-seguridad')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-shield-lock"></i></span><div><div class="accordion-title">Seguridad del Wi-Fi</div><div class="accordion-subtitle">WPA3, cambio de admin, WPS off</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/dhcp-y-reservas-de-ip.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-3"></i></div>
+        <div>
+          <div class="lesson-index-title">DHCP y reservas de IP</div>
+          <div class="lesson-index-desc">Que el router reparta bien las direcciones</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Opcion</th><th>Recomendacion</th></tr>
-            <tr><td>Encriptacion</td><td>WPA2-AES como minimo; WPA3 si todos tus dispositivos lo soportan. NUNCA WEP ni WPA abierto.</td></tr>
-            <tr><td>Contrasena del panel</td><td>Cambiar usuario/contrasena por defecto por una larga y unica.</td></tr>
-            <tr><td>WPS</td><td>Desactivado (facilita ataques por PIN).</td></tr>
-            <tr><td>UPnP</td><td>Desactivado salvo que un juego/app lo exija; abre vectores de ataque.</td></tr>
-            <tr><td>Red de invitados</td><td>Activa una red guest aislada para visitas e IoT (con su propia contrasena).</td></tr>
-          </table></div>
-          <div class="alert-box alert-info">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Contrasena Wi-Fi:</strong> usa al menos 12-16 caracteres con mezcla. Una contrasena corta se crackea en minutos con diccionarios. La clave larga se ingresa una sola vez por dispositivo.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/port-forwarding-dmz.html">
+        <div class="lesson-index-icon"><i class="bi bi-signpost-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Port forwarding / DMZ</div>
+          <div class="lesson-index-desc">Abrir puertos hacia un equipo interno</div>
         </div>
-      </div>
-
-      <div class="accordion" id="rp-dhcp">
-        <div class="accordion-header" onclick="toggleAccordion('rp-dhcp')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3"></i></span><div><div class="accordion-title">DHCP y reservas de IP</div><div class="accordion-subtitle">Que el router reparta bien las direcciones</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-router-practico/qos-y-firmware.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div>
+          <div class="lesson-index-title">QoS y firmware</div>
+          <div class="lesson-index-desc">Prioriza trafico y mantente actualizado</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Rango DHCP:</strong> por defecto el router asigna IPs automaticas (ej. 192.168.1.100-199). Deja el servidor DHCP activo.</li>
-            <li><strong>Reserva DHCP (static lease):</strong> fija la misma IP a un dispositivo (por MAC) para que no cambie — util para impresoras, NAS, CCTV.</li>
-            <li><strong>Lease time:</strong> tiempo de concesion; bajalo (1h) en redes publicas, dejalo alto (24h+) en casa para menor trafico DHCP.</li>
-            <li>Si pones IP estatica manual a un equipo, sacala del rango DHCP para evitar conflictos.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion" id="rp-puertos">
-        <div class="accordion-header" onclick="toggleAccordion('rp-puertos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-signpost-2"></i></span><div><div class="accordion-title">Port forwarding / DMZ</div><div class="accordion-subtitle">Abrir puertos hacia un equipo interno</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Fija una IP estatica (reserva) al equipo objetivo.</li>
-            <li>En "Port Forwarding / Virtual Server": servicio (o puerto externo), IP interna, puerto interno y protocolo (TCP/UDP).</li>
-            <li>Ejemplo: servidor web local en 192.168.1.50 → externo 80 → interno 80 TCP.</li>
-            <li><strong>DMZ:</strong> expone TODOS los puertos de un equipo; evitalo salvo emergencias. Prefiere abrir solo los puertos necesarios.</li>
-            <li>Comprueba desde fuera con herramientas de "open port check" (con el servicio corriendo).</li>
-          </ol>
-          <div class="alert-box alert-warn">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Seguridad:</strong> cada puerto abierto es una puerta de entrada. Solo abre lo que uses, usa puertos no estandar cuando puedas y mantiene actualizado el software del servicio expuesto.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="rp-qos">
-        <div class="accordion-header" onclick="toggleAccordion('rp-qos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">QoS y firmware</div><div class="accordion-subtitle">Prioriza trafico y mantente actualizado</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>QoS:</strong> prioriza aplicaciones (juegos, videollamadas) sobre descargas. Configuralo por dispositivo o por tipo de trafico.</li>
-            <li><strong>Actualizacion de firmware:</strong> revisa mensualmente en "Firmware Update" (auto-update si existe). Los parches corrigen vulnerabilidades criticas del router.</li>
-            <li><strong>Reinicio programado:</strong> muchos routers permiten reiniciarse en madrugada; libera memoria y reconecta enlaces sueltos.</li>
-            <li><strong>Mesh:</strong> para casas grandes, un sistema mesh (2-3 nodos) da mejor cobertura que un repetidor; el roaming entre nodos es automatico.</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=VUZekXa1l9w" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">CONFIGURANDO ROUTER PASO A PASO</span>
+        <span class="v-chan">CONFIGURANDO ROUTERS</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -275,8 +242,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

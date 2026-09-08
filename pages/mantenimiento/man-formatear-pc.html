@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-formatear-pc.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Formatear PC o Laptop - Mantenimiento de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-formatear-pc.html",
+  "description": "Mantenimiento · Formatear PC o laptop paso a paso: respaldo de datos, crear USB booteable, arrancar desde USB, particionar e instalar Windows 10/11 o Ubuntu, drivers y post-instalacion.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -76,8 +81,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -97,21 +104,36 @@
     <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip active' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip active' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Formatear PC o Laptop</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=UghRL8nJA8k" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Como FORMATEAR tu PC e INSTALAR Windows 10 desde USB</span>
-        <span class="v-chan">Jesus Puican - Descargandolo</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="antes-de-formatear" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-save"></i></div>
@@ -181,752 +203,190 @@
 
     <p class="text-sm text-secondary mb-2">Necesitas un USB de 8 GB minimo (16 GB recomendado para Windows 11). El USB se formateara por completo: no debe contener nada importante.</p>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-windows accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Opcion A: Media Creation Tool (oficial, facil)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ol>
-          <li>Entra a <strong>microsoft.com/software-download/windows11</strong> (o /windows10).</li>
-          <li>Descarga la <strong>Media Creation Tool</strong> y ejecutala.</li>
-          <li>Acepta la licencia y elige "Crear medios de instalacion (USB)" .</li>
-          <li>Selecciona idioma y edicion, elige el USB y deja que descargue y lo configure (puede tardar 20-60 min).</li>
-        </ol>
-        <div class="alert-box alert-info" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>Es la via mas segura: la herramienta descarga la ISO oficial y configura el USB en el formato correcto (FAT32 + GPT para UEFI).</div>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-formatear-pc/opcion-a-media-creation-tool-oficial-facil.html">
+        <div class="lesson-index-icon"><i class="bi bi-windows"></i></div>
+        <div>
+          <div class="lesson-index-title">Opcion A: Media Creation Tool (oficial, facil)</div>
+          <div class="lesson-index-desc">Entra a microsoft.com/software-download/windows11 (o /windows10). Descarga la Media Creation Tool y...</div>
         </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-hdd accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Opcion B: Rufus (ISO, mas control)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ol>
-          <li>Descarga la ISO de Windows desde la pagina de Microsoft (usando el selector de descarga de la ISO) o la ISO de Ubuntu desde ubuntu.com.</li>
-          <li>Descarga <strong>Rufus</strong> (rufus.ie), versione portable si quieres.</li>
-          <li>Conecta el USB y seleccionalo en Rufus, elige la ISO y configura:</li>
-        </ol>
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Opcion</th><th>Valor recomendado</th></tr>
-          <tr><td>Esquema de particion</td><td>GPT</td></tr>
-          <tr><td>Sistema destino</td><td>UEFI (sin CSM)</td></tr>
-          <tr><td>Sistema de archivos</td><td>FAT32 (Windows); en ISO mayores a 4 GB usa NTFS o exFAT</td></tr>
-          <tr><td>Tamano cluster</td><td>Por defecto</td></tr>
-        </table></div>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>MBR vs GPT:</strong> si tu PC es moderno (UEFI), usa GPT. Solo usa MBR si tienes una placa antigua con BIOS legacy o un equipo 32-bit.</div>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/opcion-b-rufus-iso-mas-control.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd"></i></div>
+        <div>
+          <div class="lesson-index-title">Opcion B: Rufus (ISO, mas control)</div>
+          <div class="lesson-index-desc">Descarga la ISO de Windows desde la pagina de Microsoft (usando el selector de descarga de la ISO) o la ISO...</div>
         </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-collection accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Opcion C: Ventoy (multi-ISO)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>Ventoy convierte el USB en un cargador multiple: solo copias las ISOs al USB (Windows, Ubuntu, herramientas de rescate) y al arrancar eliges cual cargar. Ideal para tecnicos que llevan varias ISOs en un solo USB. <a href="../instalacion.html#usb-boot">Ver guia detallada de USB booteable</a>.</p>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="content-section" id="configurar-bios" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-gear"></i></div>
-      <div class="section-title">
-        <h2>Paso 2: Arrancar desde el USB</h2>
-        <p>// BIOS / UEFI y menu de arranque</p>
-      </div>
-    </div>
-
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">1</span>
-          <span class="step-title">Conecta el USB y reinicia</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/opcion-c-ventoy-multi-iso.html">
+        <div class="lesson-index-icon"><i class="bi bi-collection"></i></div>
+        <div>
+          <div class="lesson-index-title">Opcion C: Ventoy (multi-ISO)</div>
+          <div class="lesson-index-desc">Ventoy convierte el USB en un cargador multiple: solo copias las ISOs al USB (Windows, Ubuntu, herramientas...</div>
         </div>
-        <div class="step-desc">Con el USB insertado, reinicia el equipo y pulsa repetidamente la tecla de arranque o de BIOS apenas encienda.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">2</span>
-          <span class="step-title">Elige el metodo de entrada</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/ajustes-recomendados-en-la-bios.html">
+        <div class="lesson-index-icon"><i class="bi bi-sliders"></i></div>
+        <div>
+          <div class="lesson-index-title">Ajustes recomendados en la BIOS</div>
+          <div class="lesson-index-desc">Boot mode: UEFI (no Legacy/CSM) en equipos modernos. Secure Boot: dejalo activado para Windows 11;...</div>
         </div>
-        <div class="step-desc"><strong>Menu de arranque (boot menu):</strong> F11, F12, F8 o Esc (segun fabricante) te deja elegir el USB sin tocar la configuracion. <strong>BIOS/UEFI:</strong> DEL o F2 para entrar y cambiar el orden de arranque.</div>
-      </div>
-    </div>
-
-    <div class="table-scroll"><table class="cmd-table">
-      <tr><th>Fabricante</th><th>Boot menu</th><th>BIOS / UEFI</th></tr>
-      <tr><td>ASUS</td><td>F8</td><td>F2 / Supr</td></tr>
-      <tr><td>MSI</td><td>F11</td><td>Supr</td></tr>
-      <tr><td>Gigabyte</td><td>F12</td><td>Supr</td></tr>
-      <tr><td>ASRock</td><td>F11</td><td>F2 / Supr</td></tr>
-      <tr><td>HP (PC/Laptop)</td><td>F9 (o F12)</td><td>F10</td></tr>
-      <tr><td>Dell</td><td>F12</td><td>F2</td></tr>
-      <tr><td>Lenovo</td><td>F12 (ThinkPad: F12)</td><td>F1 / F2</td></tr>
-      <tr><td>Acer</td><td>F12 (habilitar en BIOS)</td><td>F2</td></tr>
-      <tr><td>Toshiba / Dynabook</td><td>F12</td><td>F2</td></tr>
-      <tr><td>Samsung</td><td>F10</td><td>F2</td></tr>
-    </table></div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-sliders accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Ajustes recomendados en la BIOS</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Boot mode:</strong> UEFI (no Legacy/CSM) en equipos modernos.</li>
-          <li><strong>Secure Boot:</strong> dejalo activado para Windows 11; desactivalo solo si la instalacion falla o usas Linux con drivers propietarios.</li>
-          <li><strong>Fast Boot:</strong> desactivalo temporalmente si el USB no aparece.</li>
-          <li><strong>TPM:</strong> en la mayoria ya viene activo; Windows 11 lo exige.</li>
-        </ul>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div>Si el USB no aparece en el menu de arranque, prueba: otro puerto USB (usa un puerto directo del motherboard, no un hub), desactiva Fast Boot, y verifica que el USB este creado en GPT/UEFI.</div>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/configuracion-inicial-primera-conexion.html">
+        <div class="lesson-index-icon"><i class="bi bi-sliders2"></i></div>
+        <div>
+          <div class="lesson-index-title">Configuracion inicial (primera conexion)</div>
+          <div class="lesson-index-desc">Region e idioma: elige tu pais y la distribucion del teclado (en espanol suele ser &quot;Latin America&quot; o...</div>
         </div>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="content-section" id="instalar-windows" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-window"></i></div>
-      <div class="section-title">
-        <h2>Paso 3: Instalar Windows 10/11</h2>
-        <p>// Particionar y formatear el disco</p>
-      </div>
-    </div>
-
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">1</span>
-          <span class="step-title">Arranca el instalador</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/navegadores.html">
+        <div class="lesson-index-icon"><i class="bi bi-globe2"></i></div>
+        <div>
+          <div class="lesson-index-title">Navegadores</div>
+          <div class="lesson-index-desc">Programa Para que Notas Mozilla Firefox Navegador principal Rapido, privado por defecto, sincroniza...</div>
         </div>
-        <div class="step-desc">Elige tu idioma y haz clic en "Instalar ahora". Si el equipo tenia un sistema anterior, puedes elegir "Reparar" si solo quieres recuperar el sistema sin perder datos.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">2</span>
-          <span class="step-title">Ingresa la clave o continua</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/ofimatica-y-pdf.html">
+        <div class="lesson-index-icon"><i class="bi bi-file-earmark-text"></i></div>
+        <div>
+          <div class="lesson-index-title">Ofimatica y PDF</div>
+          <div class="lesson-index-desc">Programa Para que Notas LibreOffice Documentos, hojas y presentaciones Gratis, compatible con archivos de...</div>
         </div>
-        <div class="step-desc">Si es una licencia digital u OEM, selecciona "No tengo una clave" y se reactivara luego. Selecciona la edicion correcta (Home o Pro) segun tu licencia.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">3</span>
-          <span class="step-title">Elige instalacion personalizada</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/compresores-de-archivos.html">
+        <div class="lesson-index-icon"><i class="bi bi-file-archive"></i></div>
+        <div>
+          <div class="lesson-index-title">Compresores de archivos</div>
+          <div class="lesson-index-desc">Programa Para que Notas 7-Zip Comprimir y descomprimir Gratis y de codigo abierto; formato 7z WinRAR RAR y...</div>
         </div>
-        <div class="step-desc">Selecciona "Instalacion personalizada: solo Windows (avanzado)". Ahi ves la lista de discos y particiones.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">4</span>
-          <span class="step-title">Borra las particiones del disco destino</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/multimedia.html">
+        <div class="lesson-index-icon"><i class="bi bi-play-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Multimedia</div>
+          <div class="lesson-index-desc">Programa Para que Notas VLC Reproduce casi todo Gratis; video, audio y discos sin codecs extra OBS Studio...</div>
         </div>
-        <div class="step-desc"><strong>MUY IMPORTANTE:</strong> identifica el disco correcto (por tamano). Selecciona cada particion de ese disco y pulsa "Eliminar" hasta dejar "Espacio no asignado". No borres discos con tus datos respaldados. En laptops suele haber particiones de recuperacion y EFI: borrar todas es correcto si ya respaldaste.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">5</span>
-          <span class="step-title">Instala en el espacio no asignado</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/utilitarios-del-sistema.html">
+        <div class="lesson-index-icon"><i class="bi bi-tools"></i></div>
+        <div>
+          <div class="lesson-index-title">Utilitarios del sistema</div>
+          <div class="lesson-index-desc">Programa Para que Notas PowerToys Utilidades avanzadas de Windows Gratis de Microsoft: FancyZones,...</div>
         </div>
-        <div class="step-desc">Selecciona "Espacio no asignado" y pulsa "Siguiente". Windows crea solo las particiones necesarias (EFI, MSR, Recuperacion y Principal) y formatea en NTFS automaticamente. Si quieres separar datos, crea particiones extra despues con Administrador de discos.</div>
-      </div>
-    </div>
-
-    <div class="alert-box alert-info">
-      <i class="bi bi-info-circle"></i>
-      <div><strong>Consejo de particionado:</strong> si quieres mantener tus datos separados del sistema, crea C: (100-150 GB para Windows y programas) y deja el resto como D: para datos. Asi, futuros formateos solo tocan C:.</div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-sliders2 accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Configuracion inicial (primera conexion)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Region e idioma:</strong> elige tu pais y la distribucion del teclado (en espanol suele ser "Latin America" o "Espana").</li>
-          <li><strong>Cuenta:</strong> si quieres una cuenta local, desconecta la red (cable y WiFi) y elige "Opciones de conexion" &gt; "Cuenta local". Windows 11 Home a veces lo oculta: usa Shift+F10 y ejecuta <code>oobe\bypassnro</code> para saltar el requisito de internet.</li>
-          <li><strong>Privacidad:</strong> desactiva lo que no quieras compartir (ubicacion, diagnostico, anuncios).</li>
-          <li><strong>Primer arranque:</strong> el escritorio puede tardar varios minutos configurandose. Se reinicia una o dos veces solo.</li>
-        </ul>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">cmd &#183; saltar requisito de internet (Windows 11 Home)</span></div>
-          <pre><span class="cmd-comment"># En la pantalla de "Escribamos tus datos": Shift+F10 y ejecuta</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">oobe</span>\<span class="cmd-flag">bypassnro</span>
-  <span class="cmd-comment"># Se reinicia y aparece "No tengo acceso a internet" -> Continuar con instalacion limitada</span></pre>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/seguridad.html">
+        <div class="lesson-index-icon"><i class="bi bi-shield-lock"></i></div>
+        <div>
+          <div class="lesson-index-title">Seguridad</div>
+          <div class="lesson-index-desc">Programa Para que Notas Windows Defender Antivirus en tiempo real Ya viene activo; es suficiente para la...</div>
         </div>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="content-section" id="instalar-ubuntu" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-ubuntu"></i></div>
-      <div class="section-title">
-        <h2>Paso alterno: Instalar Ubuntu (Linux)</h2>
-        <p>// Si quieres un sistema libre o recuperar un PC lento</p>
-      </div>
-    </div>
-
-    <ol>
-      <li>Descarga la ISO de <strong>ubuntu.com/download</strong> y crea el USB con Rufus (GPT/UEFI) o Ventoy.</li>
-      <li>Arranca desde el USB y elige "Probar o instalar Ubuntu".</li>
-      <li>Elige <strong>"Borrar disco e instalar Ubuntu"</strong> (reemplaza todo) o <strong>"Instalar Ubuntu junto a Windows"</strong> (crea doble arranque).</li>
-      <li>En el paso de particiones, puedes dejar la opcion automatica. Si quieres control manual, usa <strong>Ext4</strong> para la raiz (/) y <strong>swap</strong> como area de intercambio (equivale a la memoria virtual).</li>
-      <li>Crea tu usuario y espera la instalacion. Al terminar, reinicia y quita el USB.</li>
-    </ol>
-
-    <div class="alert-box alert-warn">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div><strong>Doble arranque:</strong> instala Ubuntu DESPUES de Windows (o primero desactiva Windows Fast Startup). Linux instalado antes que Windows suele perder el arranque al instalar Windows despues.</div>
-    </div>
-  </div>
-
-  <div class="content-section" id="post-instalacion" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-check2-circle"></i></div>
-      <div class="section-title">
-        <h2>Paso 4: Que hacer despues de formatear (paso a paso)</h2>
-        <p>// La secuencia completa para dejar el equipo al dia</p>
-      </div>
-    </div>
-
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">1</span>
-          <span class="step-title">Primer arranque: region, cuenta y privacidad</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/mensajeria-y-comunicacion.html">
+        <div class="lesson-index-icon"><i class="bi bi-chat-dots"></i></div>
+        <div>
+          <div class="lesson-index-title">Mensajeria y comunicacion</div>
+          <div class="lesson-index-desc">Programa Para que Notas WhatsApp Mensajeria Escritorio oficial Telegram Mensajeria Gratis Discord Chat y...</div>
         </div>
-        <div class="step-desc">Configura idioma, teclado y crea tu cuenta. Si elegiste cuenta local, anota bien el nombre y la contrasena. Decide que opciones de privacidad quieres mantener. Espera a que el escritorio termine de configurarse (puede tardar varios minutos y reiniciarse).</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">2</span>
-          <span class="step-title">Verifica la conexion a internet</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/desarrollo-opcional.html">
+        <div class="lesson-index-icon"><i class="bi bi-code-slash"></i></div>
+        <div>
+          <div class="lesson-index-title">Desarrollo (opcional)</div>
+          <div class="lesson-index-desc">Programa Para que Notas Visual Studio Code Editor de codigo Gratis, el mas popular Git Control de versiones...</div>
         </div>
-        <div class="step-desc">Conecta por cable o WiFi y comprueba que navegas. Si no hay red, es que falta el driver de red: instala el que bajaste antes en el USB (o conecta el cable Ethernet). Sin internet no podras actualizar ni descargar el resto.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">3</span>
-          <span class="step-title">Ejecuta Windows Update completo</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/nube-y-sincronizacion.html">
+        <div class="lesson-index-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+        <div>
+          <div class="lesson-index-title">Nube y sincronizacion</div>
+          <div class="lesson-index-desc">Programa Para que Notas OneDrive Respaldo en la nube Ya viene en Windows; 5 GB gratis Google Drive Respaldo y...</div>
         </div>
-        <div class="step-desc">Configuracion &gt; Windows Update &gt; "Buscar actualizaciones". Instala todo y reinicia cuantas veces pida. Repite hasta que diga "No hay actualizaciones disponibles". Este paso tambien baja drivers basicos y parches de seguridad.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">4</span>
-          <span class="step-title">Instala los drivers oficiales (en este orden)</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/instalar-varios-programas-de-golpe.html">
+        <div class="lesson-index-icon"><i class="bi bi-terminal"></i></div>
+        <div>
+          <div class="lesson-index-title">Instalar varios programas de golpe</div>
+          <div class="lesson-index-desc">Ninite: marca las apps que quieras en ninite.com , descarga el instalador y el se encarga de todo (sin adware...</div>
         </div>
-        <div class="step-desc"><strong>Chipset</strong> (sitio del fabricante de la placa o laptop) &rarr; <strong>Grafica</strong> (NVIDIA, AMD o Intel) &rarr; <strong>Red</strong> (Wi-Fi/Ethernet) &rarr; <strong>Audio</strong> &rarr; <strong>Opcionales</strong> (Bluetooth, SATA/RAID, USB, touchpad en laptop). Reinicia entre grupos si el sistema lo pide.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">5</span>
-          <span class="step-title">Activa Windows</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/webs-para-descargar-e-instalar-programas.html">
+        <div class="lesson-index-icon"><i class="bi bi-download"></i></div>
+        <div>
+          <div class="lesson-index-title">Webs para descargar e instalar programas</div>
+          <div class="lesson-index-desc">Estas son las webs mas recomendadas para bajar programas tras formatear. Descarga siempre desde el sitio...</div>
         </div>
-        <div class="step-desc">Configuracion &gt; Sistema &gt; Activacion. Con licencia digital se reactiva al iniciar sesion con tu cuenta Microsoft. Si no, introduce la clave en "Cambiar clave de producto". Verifica que diga "Windows esta activado".</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">6</span>
-          <span class="step-title">Revisa el Administrador de dispositivos</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/alternativas-gratis-a-programas-de-pago.html">
+        <div class="lesson-index-icon"><i class="bi bi-stars"></i></div>
+        <div>
+          <div class="lesson-index-title">Alternativas gratis a programas de pago</div>
+          <div class="lesson-index-desc">La mayoria de programas de pago tienen una alternativa gratuita y legal que cubre lo esencial. Usa estas...</div>
         </div>
-        <div class="step-desc">Clic derecho en el boton Inicio &gt; Administrador de dispositivos. No debe haber iconos amarillos (!). Si los hay, es un driver pendiente: instala el correspondiente y reinicia.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">7</span>
-          <span class="step-title">Instala los programas esenciales</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/programas-esenciales-en-linux-ubuntu.html">
+        <div class="lesson-index-icon"><i class="bi bi-ubuntu"></i></div>
+        <div>
+          <div class="lesson-index-title">Programas esenciales en Linux (Ubuntu)</div>
+          <div class="lesson-index-desc">Ubuntu ya trae navegador (Firefox), ofimatica (LibreOffice) y reproductor incluidos. Instala el resto desde...</div>
         </div>
-        <div class="step-desc">Navegador, paquete ofimatico, compresor y reproductor como minimo. Ve a la seccion <a href="#programas-esenciales">Programas esenciales</a> de esta guia y elige por categoria.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">8</span>
-          <span class="step-title">Restaura tus datos</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/cuanto-tarda-en-formatear-e-instalar-windows.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Cuanto tarda en formatear e instalar Windows?</div>
+          <div class="lesson-index-desc">De 15 a 40 minutos la instalacion base en un SSD, mas los reinicios y las actualizaciones (que pueden sumar...</div>
         </div>
-        <div class="step-desc">Copia tus archivos respaldados, importa marcadores y contrasenas del navegador, y vuelve a configurar tu correo. No borres el respaldo hasta confirmar que todo esta y funciona.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">9</span>
-          <span class="step-title">Verifica temperaturas y rendimiento</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/perdere-mi-windows-si-lo-formateo.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Perdere mi Windows si lo formateo?</div>
+          <div class="lesson-index-desc">No, si la licencia es digital/OEM: se reactiva automaticamente al reinstalar la misma edicion (Home/Pro) en...</div>
         </div>
-        <div class="step-desc">Con HWiNFO, HWMonitor o MSI Afterburner revisa temperaturas en reposo y en carga. Un CPU/GPU al 100% no debe pasar de los 85-90°C. Si algo se calienta de mas, revisa la pasta termica y el flujo de aire. Ver <a href="man-software-diag.html">software de diagnostico</a>.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">10</span>
-          <span class="step-title">Crea un punto de restauracion</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/formatear-hace-mas-rapido-mi-pc.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Formatear hace mas rapido mi PC?</div>
+          <div class="lesson-index-desc">En equipos con muchos programas y malware, si: deja el sistema limpio y sin procesos de fondo. Pero si el...</div>
         </div>
-        <div class="step-desc">Con el sistema recien instalado es el mejor momento para tener una "foto limpia": activa Proteccion del sistema en C: y crea un punto de restauracion. Asi podras volver a este estado si algo falla. Para algo mas completo, haz una imagen de disco con Macrium Reflect o Rescuezilla.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">11</span>
-          <span class="step-title">Desinstala bloatware y limpia el inicio</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/que-diferencia-hay-entre-formatear-y-reinstalar.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Que diferencia hay entre "formatear" y "reinstalar"?</div>
+          <div class="lesson-index-desc">Formatear borra el contenido de la particion (prepara el sistema de archivos). Reinstalar copia el sistema...</div>
         </div>
-        <div class="step-desc">Elimina programas que no usaras (juegos de prueba, aplicaciones preinstaladas) y revisa que no se auto-inicien cosas innecesarias (Ctrl+Shift+Esc &gt; Inicio). Ver <a href="man-optimizacion.html">guia de optimizacion</a>.</div>
-      </div>
-    </div>
-    <div class="step-item" data-aos="fade-up">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-num">12</span>
-          <span class="step-title">Configura tu respaldo automatico</span>
+      </a>
+      <a class="lesson-index-card" href="man-formatear-pc/debo-desconectar-el-disco-de-datos-al-formatear.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Debo desconectar el disco de datos al formatear?</div>
+          <div class="lesson-index-desc">Si tienes un segundo disco con datos importantes, es lo mas seguro: desconectalo fisicamente o identificalo...</div>
         </div>
-        <div class="step-desc">Programa copias de seguridad de tus datos (OneDrive, historial de archivos, o un respaldo local). El mejor momento para configurarlo es ahora, con el sistema limpio. Ver <a href="man-plan-respaldo.html">plan de respaldo</a>.</div>
-      </div>
+      </a>
     </div>
 
-    <div class="alert-box alert-warn" style="margin-top:12px;">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div><strong>Evita los "Driver Booster" y actualizadores genericos:</strong> instalan drivers incorrectos o con adware. Descarga siempre desde el sitio oficial del fabricante.</div>
     </div>
-  </div>
+</div>
 
-  <div class="content-section" id="programas-esenciales" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-boxes"></i></div>
-      <div class="section-title">
-        <h2>Programas esenciales para el sistema operativo</h2>
-        <p>// Los que no pueden faltar tras formatear</p>
-      </div>
-    </div>
 
-    <p class="text-sm text-secondary mb-2">Descarga siempre desde los sitios oficiales. En la pagina de <a href="../recursos.html">recursos curados</a> tienes mas herramientas con enlaces verificados. Para instalar varios de golpe sin adware, usa <a href="https://ninite.com" target="_blank" rel="noopener">Ninite</a> o la terminal con <code>winget</code> (ver abajo).</p>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-globe2 accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Navegadores</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://www.mozilla.org/es-ES/firefox/" target="_blank" rel="noopener">Mozilla Firefox</a></td><td>Navegador principal</td><td>Rapido, privado por defecto, sincroniza marcadores y contrasenas</td></tr>
-          <tr><td><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Google Chrome</a></td><td>Navegador principal</td><td>El mas usado; amplio soporte de extensiones</td></tr>
-          <tr><td><a href="https://brave.com/es/" target="_blank" rel="noopener">Brave</a></td><td>Navegador con bloqueo</td><td>Bloquea anuncios y rastreadores de fabrica</td></tr>
-          <tr><td><a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a></td><td>Ya viene con Windows</td><td>Perfectamente valido; eficiente con Windows</td></tr>
-        </table></div>
-        <div class="alert-box alert-info" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div><strong>Consejo:</strong> no instales "navegadores" que te ofrecen en webs raras ni barras de busqueda. Usa solo los oficiales.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-file-earmark-text accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Ofimatica y PDF</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://es.libreoffice.org/" target="_blank" rel="noopener">LibreOffice</a></td><td>Documentos, hojas y presentaciones</td><td>Gratis, compatible con archivos de Office</td></tr>
-          <tr><td><a href="https://www.office.com/" target="_blank" rel="noopener">Microsoft 365 (Office)</a></td><td>Word, Excel, PowerPoint</td><td>De pago; la version web es gratis</td></tr>
-          <tr><td><a href="https://www.sumatrapdfreader.org/" target="_blank" rel="noopener">SumatraPDF</a></td><td>Lector de PDF liviano</td><td>Gratis, rapidisimo, sin publicidad</td></tr>
-          <tr><td><a href="https://www.pdf24.org/es/" target="_blank" rel="noopener">PDF24</a></td><td>Editar, unir y convertir PDF</td><td>Gratis, herramientas utiles</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-file-archive accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Compresores de archivos</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-Zip</a></td><td>Comprimir y descomprimir</td><td>Gratis y de codigo abierto; formato 7z</td></tr>
-          <tr><td><a href="https://www.win-rar.com/" target="_blank" rel="noopener">WinRAR</a></td><td>RAR y ZIP</td><td>De evaluacion pero funcional; muy usado</td></tr>
-          <tr><td><a href="https://peazip.github.io/" target="_blank" rel="noopener">PeaZip</a></td><td>Multiples formatos</td><td>Gratis, alternativa a WinRAR</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-play-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Multimedia</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">VLC</a></td><td>Reproduce casi todo</td><td>Gratis; video, audio y discos sin codecs extra</td></tr>
-          <tr><td><a href="https://obsproject.com/es" target="_blank" rel="noopener">OBS Studio</a></td><td>Grabar y transmitir pantalla</td><td>Gratis, estandar en streaming</td></tr>
-          <tr><td><a href="https://www.spotify.com/" target="_blank" rel="noopener">Spotify</a></td><td>Musica</td><td>Freemium</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-tools accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Utilitarios del sistema</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://learn.microsoft.com/es-es/windows/powertoys/" target="_blank" rel="noopener">PowerToys</a></td><td>Utilidades avanzadas de Windows</td><td>Gratis de Microsoft: FancyZones, PowerRename, etc.</td></tr>
-          <tr><td><a href="https://www.voidtools.com/" target="_blank" rel="noopener">Everything</a></td><td>Buscar archivos al instante</td><td>Gratis, busca por nombre en segundos</td></tr>
-          <tr><td><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a></td><td>Editor de texto y codigo</td><td>Gratis, ligero</td></tr>
-          <tr><td><a href="https://diskanalyzer.com/" target="_blank" rel="noopener">WizTree</a></td><td>Ver que ocupa tu disco</td><td>Gratis, escanea discos rapidisimo</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-shield-lock accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Seguridad</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td>Windows Defender</td><td>Antivirus en tiempo real</td><td>Ya viene activo; es suficiente para la mayoria</td></tr>
-          <tr><td><a href="https://es.malwarebytes.com/" target="_blank" rel="noopener">Malwarebytes</a></td><td>Limpieza bajo demanda</td><td>Gratis; usalo para un escaneo puntual, no en tiempo real junto a Defender</td></tr>
-          <tr><td><a href="https://bitwarden.com/" target="_blank" rel="noopener">Bitwarden</a></td><td>Administrador de contrasenas</td><td>Gratis y de codigo abierto</td></tr>
-        </table></div>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>No instales dos antivirus en tiempo real.</strong> Pelean entre si, suben el uso de CPU y dan falsos positivos. Windows Defender + un escaneador puntual es la combinacion recomendada.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-chat-dots accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Mensajeria y comunicacion</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://www.whatsapp.com/download" target="_blank" rel="noopener">WhatsApp</a></td><td>Mensajeria</td><td>Escritorio oficial</td></tr>
-          <tr><td><a href="https://telegram.org/" target="_blank" rel="noopener">Telegram</a></td><td>Mensajeria</td><td>Gratis</td></tr>
-          <tr><td><a href="https://discord.com/" target="_blank" rel="noopener">Discord</a></td><td>Chat y llamadas</td><td>Ideal para comunidades y gaming</td></tr>
-          <tr><td><a href="https://zoom.us/" target="_blank" rel="noopener">Zoom</a></td><td>Videollamadas</td><td>Freemium</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-code-slash accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Desarrollo (opcional)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></td><td>Editor de codigo</td><td>Gratis, el mas popular</td></tr>
-          <tr><td><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></td><td>Control de versiones</td><td>Gratis</td></tr>
-          <tr><td><a href="https://www.python.org/" target="_blank" rel="noopener">Python</a></td><td>Lenguaje de programacion</td><td>Gratis</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-cloud-arrow-up accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Nube y sincronizacion</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa</th><th>Para que</th><th>Notas</th></tr>
-          <tr><td><a href="https://www.microsoft.com/microsoft-365/onedrive" target="_blank" rel="noopener">OneDrive</a></td><td>Respaldo en la nube</td><td>Ya viene en Windows; 5 GB gratis</td></tr>
-          <tr><td><a href="https://www.google.com/drive/" target="_blank" rel="noopener">Google Drive</a></td><td>Respaldo y documentos</td><td>15 GB gratis</td></tr>
-          <tr><td><a href="https://www.dropbox.com/" target="_blank" rel="noopener">Dropbox</a></td><td>Sincronizacion</td><td>2 GB gratis</td></tr>
-        </table></div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-terminal accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Instalar varios programas de golpe</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p><strong>Ninite:</strong> marca las apps que quieras en <a href="https://ninite.com" target="_blank" rel="noopener">ninite.com</a>, descarga el instalador y el se encarga de todo (sin adware ni barras). Perfecto justo despues de formatear.</p>
-        <p><strong>winget:</strong> el instalador de paquetes oficial de Windows funciona desde PowerShell. Ejemplos:</p>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">powershell &#183; instalar programas con winget</span></div>
-          <pre><span class="cmd-comment"># Instalar de uno en uno</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">winget</span> install --id Mozilla.Firefox -e
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">winget</span> install --id VideoLAN.VLC -e
-  <span class="cmd-comment"># Varios a la vez</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">winget</span> install Mozilla.Firefox VideoLAN.VLC 7zip.7zip --accept-package-agreements --accept-source-agreements
-  <span class="cmd-comment"># Buscar un paquete por nombre</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">winget</span> search notepad</pre>
-        </div>
-        <div class="alert-box alert-info" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div><strong>Winget ya esta en Windows 11</strong> y en Windows 10 recientes (App Installer). Si no lo tienes, instala "App Installer" desde la Microsoft Store.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-download accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Webs para descargar e instalar programas</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>Estas son las webs mas recomendadas para bajar programas tras formatear. Descarga <strong>siempre</strong> desde el sitio oficial del programa o desde estas paginas de confianza; nunca desde ventanas emergentes ni enlaces de terceros.</p>
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Web</th><th>Para que</th><th>Enlace</th></tr>
-          <tr><td><strong>Ninite</strong></td><td>Instalar varios programas de golpe sin adware ni barras. Marca las apps y genera un instalador unico</td><td><a href="https://ninite.com" target="_blank" rel="noopener">ninite.com</a></td></tr>
-          <tr><td><strong>Winstall</strong></td><td>Explorar y generar comandos de winget desde el navegador; instala con un clic</td><td><a href="https://winstall.app" target="_blank" rel="noopener">winstall.app</a></td></tr>
-          <tr><td><strong>winget (App Installer)</strong></td><td>Gestor de paquetes oficial de Windows desde PowerShell o CMD</td><td><a href="https://apps.microsoft.com/detail/9nblggh4nns1" target="_blank" rel="noopener">Microsoft Store</a></td></tr>
-          <tr><td><strong>Chocolatey</strong></td><td>Gestor de paquetes por terminal (estilo Linux) para automatizar instalaciones</td><td><a href="https://chocolatey.org" target="_blank" rel="noopener">chocolatey.org</a></td></tr>
-          <tr><td><strong>Scoop</strong></td><td>Gestor de paquetes portable: instala programas sin permisos de administrador</td><td><a href="https://scoop.sh" target="_blank" rel="noopener">scoop.sh</a></td></tr>
-          <tr><td><strong>Patch My PC</strong></td><td>Detecta y actualiza en lote programas desactualizados (bueno tras formatear)</td><td><a href="https://patchmypc.com" target="_blank" rel="noopener">patchmypc.com</a></td></tr>
-          <tr><td><strong>Microsoft Software Download</strong></td><td>ISOs y Media Creation Tool oficiales de Windows</td><td><a href="https://www.microsoft.com/software-download" target="_blank" rel="noopener">microsoft.com/software-download</a></td></tr>
-          <tr><td><strong>MajorGeeks</strong></td><td>Descargas limpias y revisadas; detecta instaladores con adware</td><td><a href="https://www.majorgeeks.com" target="_blank" rel="noopener">majorgeeks.com</a></td></tr>
-          <tr><td><strong>Uptodown</strong></td><td>Repositorio de software con versiones antiguas y muchas apps</td><td><a href="https://www.uptodown.com" target="_blank" rel="noopener">uptodown.com</a></td></tr>
-          <tr><td><strong>AlternativeTo</strong></td><td>Buscar alternativas gratis a cualquier programa de pago</td><td><a href="https://alternativeto.net" target="_blank" rel="noopener">alternativeto.net</a></td></tr>
-        </table></div>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>Descarga segura:</strong> evita webs con botones "Descargar" falsos, instaladores que agregan barras de busqueda y versiones "crackeadas". Revisa siempre que el archivo venga del dominio correcto y que tenga la extension esperada (.exe, .msi, .zip).</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-stars accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Alternativas gratis a programas de pago</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>La mayoria de programas de pago tienen una alternativa <strong>gratuita y legal</strong> que cubre lo esencial. Usa estas antes de recurrir a versiones piratas (que ademas suelen traer malware):</p>
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Programa de pago</th><th>Alternativa gratis</th><th>Enlace</th></tr>
-          <tr><td>Microsoft Office / Word</td><td>LibreOffice, OnlyOffice o la version web de Office</td><td><a href="https://es.libreoffice.org/" target="_blank" rel="noopener">libreoffice.org</a></td></tr>
-          <tr><td>Adobe Photoshop</td><td>GIMP, Photopea (en el navegador) o Krita</td><td><a href="https://www.gimp.org/" target="_blank" rel="noopener">gimp.org</a></td></tr>
-          <tr><td>Adobe Illustrator</td><td>Inkscape (vectores)</td><td><a href="https://inkscape.org/" target="_blank" rel="noopener">inkscape.org</a></td></tr>
-          <tr><td>Adobe Premiere / After Effects</td><td>DaVinci Resolve, Shotcut o OpenShot</td><td><a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">davinciresolve</a></td></tr>
-          <tr><td>WinRAR (de pago)</td><td>7-Zip o PeaZip (mismos formatos)</td><td><a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-zip.org</a></td></tr>
-          <tr><td>Anti-malware extra</td><td>Malwarebytes (gratis, escaneo bajo demanda) + Windows Defender</td><td><a href="https://es.malwarebytes.com/" target="_blank" rel="noopener">malwarebytes.com</a></td></tr>
-          <tr><td>CCleaner / limpiadores</td><td>No los necesitas; Windows hace el mantenimiento solo</td><td>—</td></tr>
-          <tr><td>Nero / grabadores</td><td>ImgBurn (gratis)</td><td><a href="https://www.imgburn.com/" target="_blank" rel="noopener">imgburn.com</a></td></tr>
-          <tr><td>Virtualizacion (VMware Player)</td><td>VirtualBox (gratis y codigo abierto)</td><td><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">virtualbox.org</a></td></tr>
-          <tr><td>Antivirus de pago</td><td>Windows Defender + sentido comun</td><td>—</td></tr>
-        </table></div>
-        <div class="alert-box alert-info" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div><strong>Consejo:</strong> usa <a href="https://alternativeto.net" target="_blank" rel="noopener">AlternativeTo</a> para encontrar la alternativa exacta a cualquier programa: filtra por gratis, codigo abierto o multiplataforma.</div>
-        </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-ubuntu accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Programas esenciales en Linux (Ubuntu)</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>Ubuntu ya trae navegador (Firefox), ofimatica (LibreOffice) y reproductor incluidos. Instala el resto desde la Tienda de software o con apt:</p>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">bash &#183; programas esenciales en Ubuntu</span></div>
-          <pre><span class="cmd-comment"># Actualizar el sistema</span>
-  <span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo</span> <span class="cmd-flag">apt update &amp;&amp; sudo apt upgrade -y</span>
-  <span class="cmd-comment"># Paquetes recomendados tras instalar</span>
-  <span class="cmd-prompt">$</span> <span class="cmd-keyword">sudo</span> <span class="cmd-flag">apt install -y vlc gimp htop neofetch timeshift</span>
-  <span class="cmd-comment"># Timeshift crea instantaneas del sistema (como puntos de restauracion)</span></pre>
-        </div>
-        <ul>
-          <li><strong>GIMP:</strong> edicion de imagenes (alternativa a Photoshop).</li>
-          <li><strong>VLC:</strong> reproductor multimedia.</li>
-          <li><strong>htop:</strong> monitor de procesos desde terminal.</li>
-          <li><strong>Timeshift:</strong> instantaneas del sistema para poder volver atras.</li>
-          <li><strong>Visual Studio Code, Chrome, Discord:</strong> se instalan desde los .deb oficiales o Snap/Flatpak.</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="alert-box alert-warn" style="margin-top:12px;">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div><strong>Que evitar instalar:</strong> "optimizadores", "aceleradores de RAM", "limpiadores de registro", barras de busqueda y versiones pirata de programas. Suelen traer adware, ralentizan el equipo y muchas veces son malware. Windows moderno se mantiene solo; un antivirus real y sentido comun bastan.</div>
-    </div>
-  </div>
-
-  <div class="content-section" id="formatear-laptop" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-laptop"></i></div>
-      <div class="section-title">
-        <h2>Notas especificas para laptop</h2>
-        <p>// Diferente a una PC de escritorio</p>
-      </div>
-    </div>
-
-    <ul>
-      <li><strong>Bateria:</strong> con la laptop enchufada durante toda la instalacion para evitar cortes por apagado.</li>
-      <li><strong>Teclas de arranque:</strong> usa la tabla de arriba por fabricante (HP F9, Dell F12, Lenovo F12, Acer F12). En algunas laptops el boot menu esta deshabilitado y hay que activarlo en BIOS.</li>
-      <li><strong>Drivers OEM:</strong> las laptops usan drivers especificos del fabricante. Descargalos ANTES desde el soporte del fabricante (chipset, grafica, Wi-Fi, teclado/panel tactil, audio) y guardalos en un USB. Sin el driver de Wi-Fi la laptop queda sin red tras instalar.</li>
-      <li><strong>Modulos soldados:</strong> el formateo no toca el hardware, pero verifica cuanta RAM tiene antes de exigir mas a Windows 11.</li>
-      <li><strong>Particion de recuperacion:</strong> al eliminar todas las particiones pierdes la "Recuperacion" del fabricante. Asegurate de haber creado tu propio USB o la ISO antes.</li>
-      <li><strong>BitLocker:</strong> si el disco estaba cifrado y la laptop pide clave de recuperacion al arrancar desde USB, necesitas la clave de 48 digitos (guardada en tu cuenta Microsoft). Si no la tienes, los datos se pierden.</li>
-    </ul>
-  </div>
-
-  <div class="content-section" id="reset-windows" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-arrow-repeat"></i></div>
-      <div class="section-title">
-        <h2>Alternativa sin USB: Restablecer este PC</h2>
-        <p>// Cuando Windows aun arranca</p>
-      </div>
-    </div>
-
-    <p>Si Windows inicia correctamente pero quieres dejarlo limpio sin crear un USB, usa la funcion integrada:</p>
-    <ol>
-      <li>Configuracion &gt; Sistema &gt; Recuperacion.</li>
-      <li>En "Restablecer este PC" pulsa "Restablecer PC".</li>
-      <li>Elige <strong>"Quitar todo"</strong> (borra programas, configuracion y archivos) o <strong>"Conservar mis archivos"</strong> (quita programas y configuracion, mantiene tus archivos personales).</li>
-      <li>Elige la instalacion de Windows: local o en la nube (descarga los archivos de instalacion de Microsoft).</li>
-      <li>Confirma y espera: el equipo se reinicia, formatea y reinstala Windows.</li>
-    </ol>
-
-    <div class="alert-box alert-warn" style="margin-top:12px;">
-      <i class="bi bi-exclamation-triangle"></i>
-      <div><strong>"Quitar todo" no es borrado seguro:</strong> los datos quedan recuperables con software. Si vas a vender o regalar el equipo, usa <a href="man-borrado-seguro.html">borrado seguro</a> antes de reinstalar.</div>
-    </div>
-
-    <div class="alert-box alert-info" style="margin-top:12px;">
-      <i class="bi bi-info-circle"></i>
-      <div><strong>Windows no arranca?</strong> Entra al entorno de recuperacion (WinRE) reiniciando 3 veces durante el inicio, o con el USB en "Reparar el equipo". Ahí puedes usar "Restablecer", "Restaurar sistema" o "Solucionar problemas".</div>
-    </div>
-  </div>
-
-  <div class="content-section" id="faq-formateo" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-question-circle"></i></div>
-      <div class="section-title">
-        <h2>Preguntas frecuentes</h2>
-        <p>// Dudas comunes al formatear</p>
-      </div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Cuanto tarda en formatear e instalar Windows?</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>De 15 a 40 minutos la instalacion base en un SSD, mas los reinicios y las actualizaciones (que pueden sumar otra hora). En un HDD viejo puede tardar el doble.</p>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Perdere mi Windows si lo formateo?</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>No, si la licencia es digital/OEM: se reactiva automaticamente al reinstalar la misma edicion (Home/Pro) en el mismo equipo. Guarda tu clave antes por si acaso con <code>wmic path SoftwareLicensingService get OA3xOriginalProductKey</code>.</p>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Formatear hace mas rapido mi PC?</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>En equipos con muchos programas y malware, si: deja el sistema limpio y sin procesos de fondo. Pero si el equipo es viejo, la mayor mejora es cambiar el disco HDD por un SSD. Un formateo no arregla hardware fallando (RAM, disco fisico o bateria).</p>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Que diferencia hay entre "formatear" y "reinstalar"?</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>Formatear borra el contenido de la particion (prepara el sistema de archivos). Reinstalar copia el sistema operativo nuevo. En la practica se usan juntos: el instalador de Windows te deja eliminar particiones (formatear) y en ese espacio instala el sistema nuevo.</p>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Debo desconectar el disco de datos al formatear?</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p>Si tienes un segundo disco con datos importantes, es lo mas seguro: desconectalo fisicamente o identificalo con mucha atencion por tamano en el instalador. Un error al seleccionar disco borra todo.</p>
-      </div></div>
-    </div>
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=UghRL8nJA8k" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Como FORMATEAR tu PC e INSTALAR Windows 10 desde USB</span>
+        <span class="v-chan">Jesus Puican - Descargandolo</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -950,8 +410,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

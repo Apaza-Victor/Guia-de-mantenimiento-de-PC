@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-cable-management.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Cable Management - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-cable-management.html",
+  "description": "Ensamblaje · Cable management. Herramientas, zonas del gabinete, rutas de cables por tipo, orden de conexion y como lograr un interior limpio que mejore el flujo de aire.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,20 +101,40 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip active' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip active' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Cable Management</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=yvMWmlY6SHc" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Como ORGANIZAR Cables de mi SETUP y mejorar el setup</span>
-        <span class="v-chan">YouTutosJeff</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="cable-management" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-hdd-network"></i></div>
@@ -122,99 +149,66 @@
         <div><strong>No es solo estetica:</strong> cables sueltos bloquean el paso del aire, dificultan cada futura reparacion y en contacto con componentes calientes pueden degradarse. Un cableado limpio es mantenimiento preventivo.</div>
       </div>
 
-      <div class="accordion open" id="cm-beneficios">
-        <div class="accordion-header" onclick="toggleAccordion('cm-beneficios')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-stars"></i></span><div><div class="accordion-title">Beneficios y herramientas</div><div class="accordion-subtitle">Por que invertir 20 minutos</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Herramienta</th><th>Uso</th></tr>
-            <tr><td>Bridas (cintas zip)</td><td>Fijar cables agrupados a puntos de anclaje del gabinete</td></tr>
-            <tr><td>Cinta velcro reutilizable</td><td>Agrupar sin quedar permanente (ideal para ajustes)</td></tr>
-            <tr><td>Canaletas</td><td>Ocultar cables en la parte trasera del panel lateral</td></tr>
-            <tr><td>Clip adhesivos</td><td>Guiar cables por rutas del panel trasero</td></tr>
-            <tr><td>PSU modular</td><td>Solo conectas los cables que usas (menos cables = menos trabajo)</td></tr>
-          </table></div>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Regla:</strong> no aprietes bridas a tope sobre cables de datos ni de video (el cable plano y los de alto voltaje se dañan con presion). Deja siempre un pequeno margen.</div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="cm-zonas">
-        <div class="accordion-header" onclick="toggleAccordion('cm-zonas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-box"></i></span><div><div class="accordion-title">Zonas del gabinete</div><div class="accordion-subtitle">Dos mundos: delantero y trasero</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-cable-management/beneficios-y-herramientas.html">
+        <div class="lesson-index-icon"><i class="bi bi-stars"></i></div>
+        <div>
+          <div class="lesson-index-title">Beneficios y herramientas</div>
+          <div class="lesson-index-desc">Por que invertir 20 minutos</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Zona</th><th>Que va ahi</th><th>Consejo</th></tr>
-            <tr><td>Frente de la bandeja</td><td>Todo lo que se ve: motherboard, GPU, coolers</td><td>Solo los cables que se conectan a la placa, por la ruta mas corta</td></tr>
-            <tr><td>Panel trasero (espacio de cableado)</td><td>24-pin, EPS, SATA, RGB, cabezales del gabinete</td><td>Agrupa y fija con bridas; deja el panel sin abultamientos</td></tr>
-            <tr><td>Ventanas de goma</td><td>Paso de cables entre frente y trasero</td><td>Usa las mas cercanas a cada conector para no estirar cables</td></tr>
-          </table></div>
+      </a>
+      <a class="lesson-index-card" href="ens-cable-management/zonas-del-gabinete.html">
+        <div class="lesson-index-icon"><i class="bi bi-box"></i></div>
+        <div>
+          <div class="lesson-index-title">Zonas del gabinete</div>
+          <div class="lesson-index-desc">Dos mundos: delantero y trasero</div>
         </div>
-      </div>
-
-      <div class="accordion" id="cm-rutas">
-        <div class="accordion-header" onclick="toggleAccordion('cm-rutas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-signpost"></i></span><div><div class="accordion-title">Rutas por tipo de cable</div><div class="accordion-subtitle">El orden en que conectas importa</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-cable-management/rutas-por-tipo-de-cable.html">
+        <div class="lesson-index-icon"><i class="bi bi-signpost"></i></div>
+        <div>
+          <div class="lesson-index-title">Rutas por tipo de cable</div>
+          <div class="lesson-index-desc">El orden en que conectas importa</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Cable</th><th>Ruta recomendada</th></tr>
-            <tr><td>24-pin (placa)</td><td>Baja desde la fuente hacia la ventana de goma junto al borde derecho de la placa</td></tr>
-            <tr><td>EPS 4+4/8-pin (CPU)</td><td>Sube por el borde SUPERIOR del gabinete (o por detras) hasta el conector de arriba de la placa</td></tr>
-            <tr><td>PCIe GPU</td><td>Baja hasta el corte inferior o pasa por la ventana junto a la tarjeta; nunca sobre los ventiladores</td></tr>
-            <tr><td>SATA</td><td>Por la parte trasera, agrupado en un "tren" de datos</td></tr>
-            <tr><td>Panel frontal (Power/LED/Audio)</td><td>Agrupados en un solo mazo pegado al borde del gabinete</td></tr>
-            <tr><td>RGB/ARGB</td><td>Hacia el hub de la placa o un hub RGB, evitando cruces con ventiladores</td></tr>
-          </table></div>
+      </a>
+      <a class="lesson-index-card" href="ens-cable-management/orden-de-conexion-y-finalizacion.html">
+        <div class="lesson-index-icon"><i class="bi bi-list-ol"></i></div>
+        <div>
+          <div class="lesson-index-title">Orden de conexion y finalizacion</div>
+          <div class="lesson-index-desc">Conecta primero lo que va por atras</div>
         </div>
-      </div>
-
-      <div class="accordion" id="cm-orden">
-        <div class="accordion-header" onclick="toggleAccordion('cm-orden')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-list-ol"></i></span><div><div class="accordion-title">Orden de conexion y finalizacion</div><div class="accordion-subtitle">Conecta primero lo que va por atras</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-cable-management/nivel-clean-build.html">
+        <div class="lesson-index-icon"><i class="bi bi-star"></i></div>
+        <div>
+          <div class="lesson-index-title">Nivel "clean build"</div>
+          <div class="lesson-index-desc">Trucos para dejar el interior de revista</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Conecta los cables traseros primero (EPS, 24-pin, SATA) pasandolos por las ventanas correctas.</li>
-            <li>Fija cada mazo en el panel trasero con bridas/velcro antes de cerrar.</li>
-            <li>Instala la GPU y conecta su alimentacion con la ruta mas corta.</li>
-            <li>Conecta los cabezales del panel frontal agrupados.</li>
-            <li>Revisa que ningun cable toque ventiladores ni quede muy tenso.</li>
-            <li>Cierra el panel lateral: si el trasero hace "bulto", redistribuye (mas bridas, menos bulto).</li>
-          </ol>
-          <div class="info-box info-warn">
-            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
-            <div class="content"><strong>Ojo:</strong> forzar el panel lateral contra un mazo grueso puede dañar cables o el mismo panel. Si no cierra, reorganiza el cableado antes que empujar.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="cm-limpio">
-        <div class="accordion-header" onclick="toggleAccordion('cm-limpio')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-star"></i></span><div><div class="accordion-title">Nivel "clean build"</div><div class="accordion-subtitle">Trucos para dejar el interior de revista</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Cables extension (sleeved):</strong> reemplazan los cables de la PSU por versiones trenzadas con colores uniformes (ej. todo negro o blanco).</li>
-            <li><strong>Cabezales armados con combs:</strong> peines que mantienen separados los hilos del 24-pin o PCIe para un efecto "hilo perfecto".</li>
-            <li><strong>Hubs de ventiladores/RGB:</strong> concentran 6-8 ventiladores en un solo cabezal y esconden el mazo detras de la placa.</li>
-            <li><strong>Ocultar la fuente:</strong> gabinetes con cubierta de PSU ocultan fuente y parte del cableado.</li>
-            <li><strong>Etiquetar:</strong> pequenas etiquetas en los conectores del panel frontal (Power, Reset, HDD LED) ahorran horas en el siguiente mantenimiento.</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=yvMWmlY6SHc" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Como ORGANIZAR Cables de mi SETUP y mejorar el setup</span>
+        <span class="v-chan">YouTutosJeff</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -238,8 +232,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

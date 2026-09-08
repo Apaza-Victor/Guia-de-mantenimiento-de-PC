@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-cableado.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Cableado - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-cableado.html",
+  "description": "Ensamblaje · Cableado. Conectores de alimentacion, datos y video.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,20 +101,40 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip active' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Cableado</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=7gmT2Yg8K6A" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">ASI SE CONECTAN LOS CABLES DE LA FUENTE</span>
-        <span class="v-chan">Edu Camps</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="cableado" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.25);color:var(--accent3);"><i class="bi bi-usb"></i></div>
@@ -122,768 +149,99 @@
         <div>Los colores de los cables de la PSU siguen un estandar: Amarillo = +12V, Rojo = +5V, Naranja = +3.3V, Negro = Tierra (GND). Consulta siempre el manual de tu motherboard.</div>
       </div>
 
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-lightning accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Cables de Alimentacion Internos</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-cableado/cables-de-alimentacion-internos.html">
+        <div class="lesson-index-icon"><i class="bi bi-lightning"></i></div>
+        <div>
+          <div class="lesson-index-title">Cables de Alimentacion Internos</div>
+          <div class="lesson-index-desc">ATX 24-pin Suministro electrico principal de la PSU a la placa madre. Es el primer cable que se conecta al...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>ATX 24-pin</h5>
-              <p>Suministro electrico principal de la PSU a la placa madre. Es el primer cable que se conecta al ensamblar. Tiene llave antipolariedad: solo entra en un sentido.</p>
-              <span class="card-tag">+3.3V, +5V, +12V</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>EPS / ATX 12V 8-pin (CPU)</h5>
-              <p>Provee +12V al regulador de voltaje del procesador. Sin este conector el sistema no enciende aunque todo este conectado. Existe en versiones 4 pines (legacy) y 8 pines.</p>
-              <span class="card-tag">+12V x4, GND x4</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>PCIe 6+2 pin (GPU)</h5>
-              <p>Alimenta la GPU directamente desde la PSU. El conector 6-pin entrega 75W; anadir el +2 convierte en 8-pin (150W). Las RTX 40xx usan el nuevo conector 16-pin (600W).</p>
-              <span class="card-tag">6-pin: 75W, 8-pin: 150W</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>SATA Power 15-pin</h5>
-              <p>Conector plano que alimenta discos SATA, SSDs y unidades opticas. Tres grupos: +3.3V (naranja), +5V (rojo) y +12V (amarillo). Forma en L garantiza insercion correcta.</p>
-              <span class="card-tag">15 pines, 3 grupos</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>Conector Molex 4-pin</h5>
-              <p>Conector blanco con 4 pines redondos. Alimenta ventiladores adicionales, tiras LED y dispositivos IDE o PATA. Aun presente en muchas PSU modernas como adaptador.</p>
-              <span class="card-tag">+12V, +5V</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-toggle-on"></i>
-              <h5>Cables del Panel Frontal</h5>
-              <p>Power SW (sin polaridad), Reset SW (sin polaridad), Power LED+/- (con polaridad), HDD LED (con polaridad). Consulta SIEMPRE el mapa de pines del manual.</p>
-              <span class="card-tag">Señales de control</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>Conector IEC C13/C14</h5>
-              <p>Conector estandar de alimentacion IEC 60320 C13/C14. El cable tipo 'kettle lead' que va del tomacorriente a la PSU. C13 (macho, en el cable) / C14 (hembra, en la PSU). Soporta hasta 10A/250V. Formato trapezoidal que evita insercion incorrecta.</p>
-              <span class="card-tag">Alimentacion AC</span>
-            </div>
-          </div>
-
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="atx24" data-title="ATX 24-pin (20+4)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">ATX 24-pin (20+4)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="eps8" data-title="EPS / ATX 12V 8-pin (CPU)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">EPS 8-pin (CPU)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="pcie62" data-title="PCIe 6+2 pin (GPU)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">PCIe 6+2 pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="sata-power" data-title="SATA Power 15-pin">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">SATA Power 15-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="molex" data-title="Molex 4-pin">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Molex 4-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="eps4" data-title="EPS 4-pin (ATX12V auxiliar)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">EPS 4-pin (CPU)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="12vhpwr" data-title="12VHPWR 16-pin (PCIe 5.0)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">12VHPWR 16-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="atx20" data-title="ATX 20-pin (legado)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">ATX 20-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-
-          <!-- Detalle de pines Molex -->
-          <div class="alert-box alert-info" style="margin-top:16px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Colores del conector Molex (estandar ATX):</strong><br>
-            Amarillo = +12V | Rojo = +5V | Negro = GND (Tierra) | Naranja = +3.3V<br>
-            <strong>Pin 1 (Amarillo):</strong> +12V | <strong>Pin 2 (Negro):</strong> GND | <strong>Pin 3 (Negro):</strong> GND | <strong>Pin 4 (Rojo):</strong> +5V</div>
-          </div>
-
-          <!-- Detalle SATA Data pinout -->
-          <div class="alert-box alert-info">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Cable SATA Data — 7 pines (detallado):</strong><br>
-            Pin 1: GND (Tierra) | Pin 2: A+ (Transmit+) | Pin 3: A- (Transmit-) | Pin 4: GND | Pin 5: B- (Receive-) | Pin 6: B+ (Receive+) | Pin 7: GND<br>
-            Usa señal diferencial (serialize/deserialize) para alta velocidad a bajo voltaje. Maximo 1 metro de longitud.</div>
-          </div>
-
-          <!-- TABLA: Conectores PSU y potencia -->
-          <div class="table-scroll" style="margin-top:16px;"><table class="cmd-table">
-            <tr><th>Conector</th><th>Pines</th><th>Voltaje</th><th>Potencia</th><th>Uso principal</th></tr>
-            <tr><td>ATX 24-pin</td><td>24 (20+4)</td><td>+3.3V / +5V / +12V</td><td>~450W (rail 12V)</td><td>Alimenta la placa base completa</td></tr>
-            <tr><td>EPS / ATX 12V</td><td>8 (4+4)</td><td>+12V</td><td>~235W (hasta 336W con 2x EPS)</td><td>Alimenta el VRM del CPU</td></tr>
-            <tr><td>PCIe 6-pin</td><td>6</td><td>+12V</td><td>75W</td><td>GPU de gama media</td></tr>
-            <tr><td>PCIe 8-pin</td><td>8 (6+2)</td><td>+12V</td><td>150W</td><td>GPU de gama alta</td></tr>
-            <tr><td>PCIe 12VHPWR</td><td>16 (12+4)</td><td>+12V</td><td>600W</td><td>RTX 40xx / RX 7000 de gama alta</td></tr>
-            <tr><td>SATA Power</td><td>15</td><td>+3.3V / +5V / +12V</td><td>~54W</td><td>Discos SATA, SSDs y opticas</td></tr>
-            <tr><td>Molex</td><td>4</td><td>+12V / +5V</td><td>~11W (5V) / ~50W (12V)</td><td>Ventiladores, LED y dispositivos legacy</td></tr>
-          </table></div>
-          <div class="alert-box alert-warn" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Importante:</strong> las potencias indicadas son el maximo que el conector puede entregar bajo el estandar ATX. Una GPU que consume 250W necesita al menos 2 conectores de 8-pin (2x150W). Nunca uses adaptadores Molex a PCIe para GPUs potentes: riesgo de sobrecalentamiento.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-hdd accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Cables de Datos y Almacenamiento</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/cables-de-datos-y-almacenamiento.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd"></i></div>
+        <div>
+          <div class="lesson-index-title">Cables de Datos y Almacenamiento</div>
+          <div class="lesson-index-desc">Cable SATA III (Datos) Cable delgado de 7 pines con conectores en L que impiden insercion incorrecta. Conecta...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cable"></i>
-              <h5>Cable SATA III (Datos)</h5>
-              <p>Cable delgado de 7 pines con conectores en L que impiden insercion incorrecta. Conecta placa madre con HDD, SSD SATA y unidades opticas. Maximo 1 metro.</p>
-              <span class="card-tag">6 Gbps</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cable"></i>
-              <h5>SSD M.2 / NVMe (sin cable)</h5>
-              <p>No usa cable externo: se inserta directamente en el slot M.2 de la placa a 30 grados y se atornilla. Formato 2280 es el mas comun. PCIe 5.0 alcanza 14 GB/s.</p>
-              <span class="card-tag">PCIe 4.0: ~7 GB/s</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cable"></i>
-              <h5>Cable IDE / PATA (Legado)</h5>
-              <p>Cable plano y gris con 40 o 80 conductores. El cable rojo/azul indica el pin 1. Permite dos dispositivos (maestro + esclavo). Completamente reemplazado por SATA.</p>
-              <span class="card-tag">Hasta 133 MB/s</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cable"></i>
-              <h5>Cable Floppy / FDD (Legado)</h5>
-              <p>Cable plano de 34 pines para disqueteras. Tiene un giro (twist) en los conductores 10-16 que identifica la unidad A: (con twist) y B: (sin twist). Obsoleto desde 2010. Capacidad maxima 1.44 MB.</p>
-              <span class="card-tag">34 pines, obsoleto</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-cable"></i>
-              <h5>eSATA (SATA Externo)</h5>
-              <p>Puerto externo para conectar unidades de almacenamiento SATA con velocidades iguales a las internas (hasta 6 Gbps). Reemplazado por USB 3.0/3.1 y Thunderbolt. Sin alimentacion — el dispositivo necesita fuente propia.</p>
-              <span class="card-tag">6 Gbps externo</span>
-            </div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="sata-data" data-title="SATA Data 7-pin">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">SATA Data 7-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="m2" data-title="SSD M.2 / NVMe (sin cable)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">SSD M.2 / NVMe</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="ide" data-title="Cable IDE / PATA (legado)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">IDE / PATA (cinta)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="port-esata" data-title="eSATA (SATA externo, 7 pines)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">eSATA</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-display accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Cables de Video</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/cables-de-video.html">
+        <div class="lesson-index-icon"><i class="bi bi-display"></i></div>
+        <div>
+          <div class="lesson-index-title">Cables de Video</div>
+          <div class="lesson-index-desc">Los cables de video llevan la imagen (y en algunos casos el audio) desde la PC hasta el monitor o TV. El...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Los cables de video llevan la imagen (y en algunos casos el audio) desde la PC hasta el monitor o TV. El conector que uses depende del puerto de tu GPU, placa o portatil. A continuacion los estandares actuales, sus variantes compactas y los legados que aun encontraras en equipos viejos.</p>
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>HDMI</h5>
-              <p>Audio + video en un cable. HDMI 2.0: 4K@60Hz. HDMI 2.1: 8K@60Hz y 4K@120Hz con VRR. El estandar actual para monitores y TVs. 19 pines.</p>
-              <span class="card-tag">HDMI 2.1: 48 Gbps</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>DisplayPort (DP)</h5>
-              <p>Estandar VESA preferido en monitores para PC. DP 1.4: 8K@60Hz o 4K@120Hz. DP 2.1: 16K@60Hz. Permite conectar multiples monitores en cadena (daisy-chain).</p>
-              <span class="card-tag">DP 2.1: 80 Gbps</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>HDMI Mini (Tipo C) / Micro (Tipo D)</h5>
-              <p>Variantes compactas del HDMI con los mismos 19 pines. El Mini se usa en portatiles, camaras y Raspberry Pi; el Micro en tablets y telefonos. Necesitas un adaptador o cable Mini/Micro-a-HDMI.</p>
-              <span class="card-tag">Mismo estandar, menor tamano</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>Mini DisplayPort (mDP)</h5>
-              <p>Version reducida del DisplayPort (20 pines). Comun en portatiles, iMac y antiguos MacBook. Soporta las mismas resoluciones que el DP y daisy-chain. Suele conectarse con adaptador mDP-a-DP.</p>
-              <span class="card-tag">Portatiles y Apple</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>Cable VGA (D-Sub 15)</h5>
-              <p>Conector azul trapezoidal con 15 pines. Senal analogica: calidad degrada con cables largos. Presente en monitores hasta ~2015. Hoy reemplazado por HDMI y DP.</p>
-              <span class="card-tag">Analogico, legado</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>Cable DVI</h5>
-              <p>Digital Visual Interface. Tres variantes: DVI-D (digital), DVI-A (analogico) y DVI-I (ambos). Single Link: 1920x1200; Dual Link: 2560x1600.</p>
-              <span class="card-tag">Digital, legado</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>USB-C Alt Mode (video)</h5>
-              <p>El USB-C puede llevar video por "Alternate Mode": DP y HDMI viajan por los mismos pines. Con un cable USB-C a HDMI/DP conectas el monitor. Si es Thunderbolt, ademas soporta 8K y cadena de pantallas.</p>
-              <span class="card-tag">Todo en uno</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>S-Video</h5>
-              <p>Conector redondo mini-DIN de 4 pines. Separa la senal en luminancia (Y) y crominancia (C), mejorando al video compuesto. Uso analogico en tarjetas antiguas, consolas retro y camaras.</p>
-              <span class="card-tag">Analogico, SD</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>Video por Componentes (YPbPr)</h5>
-              <p>Tres conectores RCA: Y (verde), Pb (azul) y Pr (rojo). Analogo de alta calidad que llega a 1080p. Comun en consolas de la generacion PS2/Xbox y DVD players.</p>
-              <span class="card-tag">Analogico, hasta 1080p</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-display"></i>
-              <h5>Video Compuesto (RCA amarillo)</h5>
-              <p>Un solo cable RCA amarillo que mezcla toda la imagen (luminancia + crominancia) en una senal SD de baja calidad. Junto al blanco/rojo de audio formaba el cable "RCA" de toda la vida.</p>
-              <span class="card-tag">Analogico, SD</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-arrow-left-right"></i>
-              <h5>Adaptadores de Video</h5>
-              <p>Convierten un conector en otro: HDMI a VGA, DP a HDMI, USB-C a HDMI, Mini/Micro a HDMI, mDP a DP y DVI a VGA. Importante: muchos HDMI-a-VGA son unidireccionales (solo de PC a monitor).</p>
-              <span class="card-tag">Compatibilidad entre generaciones</span>
-            </div>
-          </div>
-
-          <div class="table-wrap" style="margin-top:14px;">
-            <table>
-              <thead>
-                <tr>
-                  <th>Cable</th>
-                  <th>Senal</th>
-                  <th>Resolucion maxima</th>
-                  <th>Audio</th>
-                  <th>Ancho de banda</th>
-                  <th>Pines</th>
-                  <th>Uso actual</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>VGA (D-Sub 15)</td><td>Analogica</td><td>2048x1536</td><td>No</td><td>~400 MHz</td><td>15</td><td>Proyectores y equipos legacy</td></tr>
-                <tr><td>DVI-D (Dual Link)</td><td>Digital</td><td>2560x1600@60Hz</td><td>No</td><td>~9.9 Gbps</td><td>24+1</td><td>Monitores antiguos sin HDMI</td></tr>
-                <tr><td>HDMI 2.1</td><td>Digital</td><td>10K@60Hz / 8K@60Hz / 4K@120Hz</td><td>Si</td><td>48 Gbps</td><td>19</td><td>TVs, gaming y GPUs</td></tr>
-                <tr><td>DisplayPort 2.1</td><td>Digital</td><td>16K@60Hz / 8K@120Hz</td><td>Si</td><td>80 Gbps</td><td>20</td><td>Monitores pro y multi-monitor</td></tr>
-                <tr><td>Mini DisplayPort</td><td>Digital</td><td>Igual que DP (por vers.)</td><td>Si</td><td>Igual que DP</td><td>20</td><td>Portatiles y Apple</td></tr>
-                <tr><td>USB-C Alt Mode / TB4</td><td>Digital</td><td>8K@60Hz</td><td>Si</td><td>40 Gbps (USB4/TB4)</td><td>24</td><td>Portatiles modernos, monitores USB-C</td></tr>
-                <tr><td>S-Video</td><td>Analogica (Y/C)</td><td>480i / 576i</td><td>No</td><td>~10 MHz</td><td>4</td><td>Consolas retro y tarjetas antiguas</td></tr>
-                <tr><td>Componentes (YPbPr)</td><td>Analogica</td><td>1080p</td><td>No</td><td>~100 MHz</td><td>3x RCA</td><td>Consolas PS2/Xbox, DVD players</td></tr>
-                <tr><td>Compuesto (RCA)</td><td>Analogica</td><td>480i / 576i</td><td>No (separado)</td><td>~4 MHz</td><td>1x RCA</td><td>Tarjetas de captura y equipos SD</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Elegir cable de video:</strong> Para un monitor de PC usa <strong>DisplayPort</strong> (soporta las frecuencias mas altas y daisy-chain). Para una TV usa <strong>HDMI</strong> (audio + video en un cable). En un portatil revisa si tiene <strong>USB-C con Alt Mode</strong> o <strong>Mini HDMI</strong>. El <strong>VGA</strong> solo envia video analogico y degrada con cables largos; los estandares analogicos (VGA, S-Video, compuesto, componentes) ya quedaron relegados a equipos legacy y retro.</div>
-          </div>
-
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="hdmi" data-title="HDMI (19 pines, audio + video)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">HDMI 19 pines</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="hdmi-mini" data-title="HDMI Mini (Tipo C, portatiles)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">HDMI Mini (C)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="hdmi-micro" data-title="HDMI Micro (Tipo D, tablets)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">HDMI Micro (D)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="dp" data-title="DisplayPort (20 pines, alta gama)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">DisplayPort</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="minidp" data-title="Mini DisplayPort (portatiles / Apple)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Mini DP</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="vga" data-title="VGA (D-Sub 15, analogico)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">VGA (D-Sub 15)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="dvi" data-title="DVI (24+5, digital + analogico)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">DVI (24+5)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="svideo" data-title="S-Video (mini-DIN 4, analogico)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">S-Video</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="ypbpr" data-title="Componentes YPbPr (verde / azul / rojo)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Componentes YPbPr</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="rca-video" data-title="Video compuesto (RCA amarillo)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Compuesto (RCA)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="adapter-hdmi-vga" data-title="Adaptador HDMI a VGA">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Adaptador HDMI→VGA</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-usb accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Familia USB</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/familia-usb.html">
+        <div class="lesson-index-icon"><i class="bi bi-usb"></i></div>
+        <div>
+          <div class="lesson-index-title">Familia USB</div>
+          <div class="lesson-index-desc">USB Tipo A El conector rectangular universal. No reversible. USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.1...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB Tipo A</h5>
-              <p>El conector rectangular universal. No reversible. USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.1 (10 Gbps), USB 3.2 (20 Gbps). El color del interior indica la version.</p>
-              <span class="card-tag">Universal</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB-C (Type-C)</h5>
-              <p>Conector reversible de 24 pines. Soporta datos (USB4: 40 Gbps), video (Alt Mode), carga (Power Delivery hasta 240W) y Thunderbolt. Estandar universal moderno.</p>
-              <span class="card-tag">Reversible, moderno</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB Tipo B</h5>
-              <p>Conector cuadrado con dos esquinas biseladas. Usado en impresoras, escaneres, hubs USB y monitores. Extremo dispositivo del cable USB-A a USB-B.</p>
-              <span class="card-tag">Impresoras, escaneres</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightning"></i>
-              <h5>Thunderbolt 3/4/5</h5>
-              <p>Desarrollado por Intel. Usa conector USB-C pero con logo del rayo. TB3/4: 40 Gbps, carga 100W, video 8K. TB5: 120 Gbps. Compatible con USB-C pero no al reves.</p>
-              <span class="card-tag">TB5: 120 Gbps</span>
-            </div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="usb-a" data-title="USB Tipo A">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB Tipo A</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="usb-c" data-title="USB-C (24 pines, reversible)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB-C</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="usb-b" data-title="USB Tipo B">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB Tipo B</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="usb-mini" data-title="USB Mini-B (camaras)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB Mini-B</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="usb-micro" data-title="USB Micro-B (Android antiguo)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB Micro-B</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="thunderbolt" data-title="Thunderbolt 3/4 (USB-C con rayo)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Thunderbolt</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- CABLES FRONTALES DEL GABINETE -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-diagram-3 accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Cables Frontales del Gabinete (F_Panel)</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/cables-frontales-del-gabinete-f-panel.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-3"></i></div>
+        <div>
+          <div class="lesson-index-title">Cables Frontales del Gabinete (F_Panel)</div>
+          <div class="lesson-index-desc">Los cables que salen del panel frontal del gabinete (boton de encendido, reset y LEDs) se conectan al header...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Los cables que salen del panel frontal del gabinete (boton de encendido, reset y LEDs) se conectan al header <strong>F_Panel</strong> de la placa. Cada uno es un jumper de 2 pines; la polaridad solo importa en los LEDs (el cable de color es el positivo).</p>
-          <div class="alert-box alert-warning" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Ojo con la polaridad de los LEDs:</strong> HDD LED y POWER LED se invierten facilmente. Si el LED no enciende, gira el conector 180&deg;. Los botones POWER SW y RESET SW no tienen polaridad.</div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="fpanel" data-title="Header F_Panel con jumpers">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Header F_Panel</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="pwsw" data-title="POWER SW (encendido)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">POWER SW</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="resetsw" data-title="RESET SW (reset)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">RESET SW</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="hddled" data-title="HDD LED (actividad de disco)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">HDD LED</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="pwled" data-title="POWER LED (indicador de encendido)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">POWER LED</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="speaker4" data-title="PC Speaker interno (bocina)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">PC Speaker</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- HEADERS INTERNOS, VENTILADORES Y RGB -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-motherboard accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Headers Internos, Ventiladores y RGB</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/headers-internos-ventiladores-y-rgb.html">
+        <div class="lesson-index-icon"><i class="bi bi-motherboard"></i></div>
+        <div>
+          <div class="lesson-index-title">Headers Internos, Ventiladores y RGB</div>
+          <div class="lesson-index-desc">La placa tiene headers internos para los puertos USB y audio del panel frontal, ademas de conectores para...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>La placa tiene headers internos para los puertos USB y audio del panel frontal, ademas de conectores para ventiladores y tiras RGB. Cada uno tiene un pin faltante o una llave que impide invertirlo.</p>
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB 2.0 interno (9-pin)</h5>
-              <p>Header de 2x5 pines (falta uno). Alimenta hasta 2 puertos USB 2.0 del panel frontal (480 Mbps). La llave marca el pin 1 para no invertirlo.</p>
-              <span class="card-tag">Panel frontal</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>USB 3.0 interno (19-pin)</h5>
-              <p>Header de 2x10 pines. Alimenta hasta 2 puertos USB 3.0/3.1 (5-10 Gbps). Mas ancho que el USB 2.0 y con la llave en un extremo.</p>
-              <span class="card-tag">Panel frontal</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-headphones"></i>
-              <h5>HD Audio interno (9-pin)</h5>
-              <p>Header de 2x5 pines (falta uno) que conecta los audifonos y microfono del panel frontal. Maneja HD Audio (AC&apos;97 / Intel HD).</p>
-              <span class="card-tag">Panel frontal</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-fan"></i>
-              <h5>Ventilador 4-pin (PWM)</h5>
-              <p>CPU_FAN / CHA_FAN: +12V, GND, TACH (velocidad) y PWM (control). El 4&ordm; pin permite control automatico de velocidad por temperatura.</p>
-              <span class="card-tag">PWM / 3-pin</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-lightning-charge"></i>
-              <h5>RGB 4-pin (12V)</h5>
-              <p>Header 12V RGB: pines +12V, G, R, B. Solo colores estaticos de una vez (la tira cambia de color entera). No mezclar con ARGB.</p>
-              <span class="card-tag">12V RGB</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-palette"></i>
-              <h5>ARGB 3-pin (5V)</h5>
-              <p>Header direccionable: +5V, GND, D (datos). Cada LED se controla individualmente (efectos, arcoiris). Incompatible con RGB 12V.</p>
-              <span class="card-tag">5V ARGB</span>
-            </div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="usb20-int" data-title="USB 2.0 interno (9-pin)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB 2.0 interno</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="usb30-int" data-title="USB 3.0 interno (19-pin)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">USB 3.0 interno</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="hdaudio" data-title="HD Audio interno (9-pin)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">HD Audio interno</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="casefan" data-title="Ventilador de caja + PWM 4-pin">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Ventilador PWM</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="fan4" data-title="Conector 4-pin PWM">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Fan 4-pin PWM</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="fan3" data-title="Conector 3-pin (sin PWM)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Fan 3-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="rgb4" data-title="Header RGB 4-pin (12V)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">RGB 4-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="argb3" data-title="Header ARGB 3-pin (5V)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">ARGB 3-pin</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- TABLA: Normas RJ-45 T568A / T568B -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-ethernet accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Normas de Conexion RJ-45 (T568A / T568B)</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/normas-de-conexion-rj-45-t568a-t568b.html">
+        <div class="lesson-index-icon"><i class="bi bi-ethernet"></i></div>
+        <div>
+          <div class="lesson-index-title">Normas de Conexion RJ-45 (T568A / T568B)</div>
+          <div class="lesson-index-desc">Para armar un cable de red UTP necesitas conocer las dos normas de cableado estandar. T568B es la mas comun...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Para armar un cable de red UTP necesitas conocer las dos normas de cableado estandar. T568B es la mas comun en instalaciones residenciales y comerciales en America Latina. Ambas normas definen que color de par trenzado va a cada pin del conector RJ-45.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Pin</th>
-                  <th>T568A</th>
-                  <th>T568B</th>
-                  <th>Par</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td>Blanco/Verde rayado</td><td>Blanco/Naranja rayado</td><td>Par 2 (Tx+)</td></tr>
-                <tr><td>2</td><td>Verde entero</td><td>Naranja entero</td><td>Par 2 (Tx-)</td></tr>
-                <tr><td>3</td><td>Blanco/Naranja rayado</td><td>Blanco/Verde rayado</td><td>Par 3 (Rx+)</td></tr>
-                <tr><td>4</td><td>Azul entero</td><td>Azul entero</td><td>Par 1</td></tr>
-                <tr><td>5</td><td>Blanco/Azul rayado</td><td>Blanco/Azul rayado</td><td>Par 1</td></tr>
-                <tr><td>6</td><td>Naranja entero</td><td>Verde entero</td><td>Par 3 (Rx-)</td></tr>
-                <tr><td>7</td><td>Blanco/Marron rayado</td><td>Blanco/Marron rayado</td><td>Par 4</td></tr>
-                <tr><td>8</td><td>Marron entero</td><td>Marron entero</td><td>Par 4</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="three-note">Visualizacion 3D del orden de los pares — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid two" data-aos="fade-up">
-            <div class="three-canvas" data-model="rj45" data-mode="b" data-title="RJ-45 T568A / T568B">
-              <div class="three-stage"></div>
-              <div class="three-bar">
-                <span class="three-title">RJ-45 T568A / T568B</span>
-                <span class="three-actions">
-                  <button class="three-btn" data-norm="a">T568A</button>
-                  <button class="three-btn active" data-norm="b">T568B</button>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="alert-box alert-info" style="margin-top:12px;">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Cable directo vs cruzado:</strong> Si ambos extremos usan la <em>misma</em> norma (T568B-T568B) obtienes un cable <strong>directo</strong> (PC&rarr;Router, PC&rarr;Switch). Si un extremo usa T568A y el otro T568B obtienes un cable <strong>cruzado</strong> (PC&rarr;PC, Switch&rarr;Switch). Los switches modernos auto-detectan esto con Auto-MDIX.</div>
-          </div>
-          <ul>
-            <li><strong>CAT5e:</strong> hasta 1 Gbps a 100m. Estandar minimo para redes modernas.</li>
-            <li><strong>CAT6:</strong> hasta 10 Gbps a 55m. Mejor proteccion contra interferencias.</li>
-            <li><strong>CAT6a:</strong> hasta 10 Gbps a 100m. Recomendado para instalaciones nuevas.</li>
-            <li><strong>CAT7/8:</strong> para centros de datos y redes de alta velocidad.</li>
-          </ul>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-volume-up accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Cables de Audio y Red</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/cables-de-audio-y-red.html">
+        <div class="lesson-index-icon"><i class="bi bi-volume-up"></i></div>
+        <div>
+          <div class="lesson-index-title">Cables de Audio y Red</div>
+          <div class="lesson-index-desc">Jack 3.5 mm (TRS/TRRS) Conector circular de 3.5 mm. Verde = salida, Rosa = microfono, Azul = entrada de...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-volume-up"></i>
-              <h5>Jack 3.5 mm (TRS/TRRS)</h5>
-              <p>Conector circular de 3.5 mm. Verde = salida, Rosa = microfono, Azul = entrada de linea. TRS (3 contactos) para audio estereo; TRRS (4 contactos) anade microfono.</p>
-              <span class="card-tag">Audio analogico</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-volume-up"></i>
-              <h5>S/PDIF Optico (TOSLINK)</h5>
-              <p>Transmite audio digital por fibra optica. Conector cuadrado negro; cuando esta activo emite luz roja visible. Soporta Dolby Digital y DTS. Inmune a interferencias electromagneticas.</p>
-              <span class="card-tag">Audio digital</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-ethernet"></i>
-              <h5>Cable UTP Cat5e / Cat6 (RJ-45)</h5>
-              <p>Cable de red mas usado con conector RJ-45 de 8 pines. 4 pares trenzados por colores con estandar T568B. Cat5e: 1 Gbps. Cat6: 10 Gbps a 55m.</p>
-              <span class="card-tag">Ethernet</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-fan"></i>
-              <h5>Conector de Ventilador 3/4-pin</h5>
-              <p>Conecta ventiladores de CPU y caja a la placa madre. 3 pines (+12V, GND, tacometro). 4 pines anaden senal PWM para control digital preciso de velocidad.</p>
-              <span class="card-tag">CPU_FAN / SYS_FAN</span>
-            </div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="jack35" data-title="Jack 3.5mm (TRS / TRRS)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Jack 3.5mm</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="toslink" data-title="S/PDIF optico (TOSLINK)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">TOSLINK</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- CONECTORES LEGADOS Y ESPECIALIZADOS -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-history accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Conectores Legados y Especializados</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/conectores-legados-y-especializados.html">
+        <div class="lesson-index-icon"><i class="bi bi-history"></i></div>
+        <div>
+          <div class="lesson-index-title">Conectores Legados y Especializados</div>
+          <div class="lesson-index-desc">Estos conectores aparecieron en epocas anteriores de la informatica. Aunque la mayoria estan obsoletos, es...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Estos conectores aparecieron en epocas anteriores de la informatica. Aunque la mayoria estan obsoletos, es importante conocerlos por si los encuentras en equipos viejos o en entornos industriales.</p>
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-printer"></i>
-              <h5>Puerto Paralelo (LPT / DB-25)</h5>
-              <p>El famoso conector de impresora: puerto en paralelo de 36 pines (DB-25 en el lado de la PC) diseñado originalmente para impresoras y escaneres. Fue retirado del mercado con la llegada de USB. Enviaba varios bits simultaneamente.</p>
-              <span class="card-tag">Obsoleto, 36 pines</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-camera-video"></i>
-              <h5>FireWire (IEEE 1394)</h5>
-              <p>Interfaz de alta velocidad (hasta 800 Mbit/s) usada para video digital MiniDV y dispositivos de almacenamiento externo. Muy popular en el mundo Mac. Reemplazado por USB 3.0 y Thunderbolt.</p>
-              <span class="card-tag">400-800 Mbit/s</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-keyboard"></i>
-              <h5>PS/2 (Mini-DIN 6 pines)</h5>
-              <p>Puertos redondos para teclado (morado) y raton (verde). Ventaja tecnica: envia senales por interrupcion directa (sin polling), ideal para N-Key Rollover en teclados gaming. Reemplazado por USB.</p>
-              <span class="card-tag">Legado, 6 pines</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-usb"></i>
-              <h5>Puerto Serie (RS-232 / COM)</h5>
-              <p>Interfaz de comunicacion antigua que transmite datos bit a bit. Se usaba para modems, ratones antiguos y equipos industriales. Conector DB-9 o DB-25. Velocidad maxima 115.2 kbps.</p>
-              <span class="card-tag">9600-115200 bps</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-hdd"></i>
-              <h5>SCSI (Small Computer System Interface)</h5>
-              <p>Estandar de conexion paralelo para discos duros, escaneres y unidades de cinta en servidores. Permitia encadenar hasta 7-15 dispositivos en un mismo bus. Reemplazado por SATA y SAS.</p>
-              <span class="card-tag">50-80 pines</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-camera-reels"></i>
-              <h5>RCA / Video Compuesto</h5>
-              <p>Conjunto de tres conectores: amarillo (video compuesto), blanco (audio izquierdo) y rojo (audio derecho). Muy usado en TVs, videocaseteras y tarjetas de captura antiguas.</p>
-              <span class="card-tag">Analogico, SD</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-ethernet"></i>
-              <h5>BNC (Bayonet Neill-Concelman)</h5>
-              <p>Conector coaxial de conexion rapida por bayoneta (un cuarto de vuelta). Usado en redes Ethernet 10BASE2 y equipos de video profesional/CCTV. Conexion firme a prueba de desconexiones accidentales.</p>
-              <span class="card-tag">Coaxial, 50 ohm</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-volume-up"></i>
-              <h5>Toslink (S/PDIF Optico)</h5>
-              <p>Version fisica del S/PDIF que transmite audio digital mediante fibra optica (haz de luz). Inmune a interferencias electromagneticas. Soporta Dolby Digital y DTS. Conector cuadrado negro.</p>
-              <span class="card-tag">Audio digital optico</span>
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <!-- PUERTOS Y CONECTORES (PANELES) -->
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-grid-3x3-gap accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Puertos y Conectores (Paneles)</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="ens-cableado/puertos-y-conectores-paneles.html">
+        <div class="lesson-index-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+        <div>
+          <div class="lesson-index-title">Puertos y Conectores (Paneles)</div>
+          <div class="lesson-index-desc">Ejemplos visuales de los paneles de puertos: el panel I/O trasero de la placa base y el bracket de la GPU ....</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Ejemplos visuales de los paneles de puertos: el <strong>panel I/O trasero</strong> de la placa base y el <strong>bracket de la GPU</strong>. Tambien incluye puertos individuales y la alimentacion externa (AC y DC).</p>
-          <div class="tools-grid">
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-grid-3x3-gap"></i>
-              <h5>Panel I/O trasero</h5>
-              <p>La placa de metal trasera concentra los puertos: PS/2 (morado/verde), USB, Ethernet (RJ-45 con LEDs), audio (verde/rosa/azul), HDMI, DisplayPort, USB-C y VGA.</p>
-              <span class="card-tag">Placa base</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-gpu-card"></i>
-              <h5>Bracket de GPU</h5>
-              <p>Los conectores de la tarjeta de video: HDMI (gama alta), 3x DisplayPort y DVI en tarjetas mas antiguas. La GPU no usa VGA nativo (solo adaptador).</p>
-              <span class="card-tag">GPU</span>
-            </div>
-            <div class="tool-card" data-aos="fade-up">
-              <i class="bi bi-plug"></i>
-              <h5>Alimentacion AC / DC</h5>
-              <p>El cordon C13/C14 lleva 110-240V AC desde la pared a la PSU. Los portatiles usan un conector DC de barril (19-20V) que sale del cargador o ladrillo.</p>
-              <span class="card-tag">Externo</span>
-            </div>
-          </div>
-          <p class="three-note">Visualizacion 3D — arrastra para girar, usa la rueda para acercar:</p>
-          <div class="cable-3d-grid two" data-aos="fade-up">
-            <div class="three-canvas" data-model="io-panel" data-title="Panel I/O trasero de la placa">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Panel I/O trasero</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="gpu-ports" data-title="Bracket de GPU (HDMI + DP + DVI)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Bracket de GPU</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-          <div class="cable-3d-grid tight" data-aos="fade-up">
-            <div class="three-canvas" data-model="ps2" data-title="Puerto PS/2 (morado, teclado)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">PS/2</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="com" data-title="Puerto serie COM (DB-9)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">COM (DB-9)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="ac-cable" data-title="Cordon AC C13/C14 (PSU)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">Cordon AC</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-            <div class="three-canvas" data-model="dc-jack" data-title="Conector DC de portatil (barril)">
-              <div class="three-stage"></div>
-              <div class="three-bar"><span class="three-title">DC jack (laptop)</span><span class="three-hint">girar / zoom</span></div>
-            </div>
-          </div>
-        </div></div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=7gmT2Yg8K6A" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">ASI SE CONECTAN LOS CABLES DE LA FUENTE</span>
+        <span class="v-chan">Edu Camps</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -910,8 +268,10 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="../../assets/js/cables-3d.js"></script>
 <script src="../../assets/js/visuals-2d.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

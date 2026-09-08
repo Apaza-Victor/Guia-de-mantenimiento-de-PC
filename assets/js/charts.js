@@ -20,7 +20,7 @@
       textSec: cssVar('--text-sec', '#8b8fa3'),
       grid: cssVar('--border', '#2a2e3a'),
       card: cssVar('--bg-card', '#1a1d27'),
-      accent: cssVar('--accent', '#6c63ff'),
+      accent: cssVar('--accent', '#3d7bff'),
       accent2: cssVar('--accent2', '#00d4aa'),
       accent3: cssVar('--accent3', '#ff6b6b'),
       cyan: cssVar('--accent-cyan', '#39d0d8'),

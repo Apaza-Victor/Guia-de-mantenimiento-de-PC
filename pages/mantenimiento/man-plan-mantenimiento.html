@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Plan de Mantenimiento - Mantenimiento de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento.html",
+  "description": "Mantenimiento · Plan de Mantenimiento. Calendario de tareas diarias, semanales, mensuales y anuales, hoja de registro del tecnico, checklist por equipo y plan para empresas.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -89,21 +96,36 @@
     <a class='chip active' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip active' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Plan de Mantenimiento</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=qkTi9l7dpAQ" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Mantenimiento Preventivo de PC: aumenta la vida util y rendimiento</span>
-        <span class="v-chan">Mantenimiento PC y MAC</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="plan-mantenimiento" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-calendar-check"></i></div>
@@ -118,105 +140,57 @@
       <div><strong>Por que un plan:</strong> un equipo que recibe mantenimiento preventivo regular dura mas, falla menos y rinde mejor. Llevar registro permite detectar tendencias (temps subiendo, discos degradandose) antes de la falla.</div>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-calendar-week accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Frecuencias de tareas</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Frecuencia</th><th>Tareas</th></tr>
-          <tr><td>Diaria / semanal</td><td>Backups automaticos, antivirus al dia, monitoreo rapido de espacio en disco</td></tr>
-          <tr><td>Mensual</td><td>Actualizaciones de SO y drivers, limpieza de temporales, revisar S.M.A.R.T., copia de seguridad manual</td></tr>
-          <tr><td>Trimestral</td><td>Limpieza de polvo (filtros y fans), revision de cables y conectores, verificar respaldos</td></tr>
-          <tr><td>Semestral</td><td>Limpieza interna profunda, revision de temperaturas bajo carga, desfragmentar HDD (si aplica), test de RAM</td></tr>
-          <tr><td>Anual</td><td>Cambio de pasta termica, revision de bateria (laptops), inspeccion de la PSU, backup completo e inventario</td></tr>
-        </table></div>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Ajusta las frecuencias al uso: una PC de oficina 8 horas al dia no necesita el mismo ritmo que una laptop de un tecnico que viaja. El <a href="man-preventivo.html">Mantenimiento Preventivo</a> explica cada tarea en detalle.</div>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-plan-mantenimiento/frecuencias-de-tareas.html">
+        <div class="lesson-index-icon"><i class="bi bi-calendar-week"></i></div>
+        <div>
+          <div class="lesson-index-title">Frecuencias de tareas</div>
+          <div class="lesson-index-desc">Frecuencia Tareas Diaria / semanal Backups automaticos, antivirus al dia, monitoreo rapido de espacio en...</div>
         </div>
-      </div></div>
+      </a>
+      <a class="lesson-index-card" href="man-plan-mantenimiento/checklist-por-tipo-de-equipo.html">
+        <div class="lesson-index-icon"><i class="bi bi-clipboard-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Checklist por tipo de equipo</div>
+          <div class="lesson-index-desc">Escritorio (PC de oficina / hogar) [ ] Limpieza externa e interna (polvo de fans y filtros). [ ] Verificar...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-plan-mantenimiento/hoja-de-registro-del-tecnico.html">
+        <div class="lesson-index-icon"><i class="bi bi-journal-text"></i></div>
+        <div>
+          <div class="lesson-index-title">Hoja de registro del tecnico</div>
+          <div class="lesson-index-desc">Llena una fila por servicio. Puedes llevarla en una hoja de calculo o un cuaderno; lo importante es la...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-plan-mantenimiento/plan-para-empresas-y-redes.html">
+        <div class="lesson-index-icon"><i class="bi bi-buildings"></i></div>
+        <div>
+          <div class="lesson-index-title">Plan para empresas y redes</div>
+          <div class="lesson-index-desc">Inventario: listado de equipos con numero de serie, ubicacion, usuario y garantia. Agenda anual: calendario...</div>
+        </div>
+      </a>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-clipboard-check accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Checklist por tipo de equipo</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="subhead">Escritorio (PC de oficina / hogar)</p>
-        <ul>
-          <li>[ ] Limpieza externa e interna (polvo de fans y filtros).</li>
-          <li>[ ] Verificar ventiladores y temperaturas.</li>
-          <li>[ ] Actualizaciones de SO y programas.</li>
-          <li>[ ] Estado del disco (S.M.A.R.T.) y espacio libre.</li>
-          <li>[ ] Backups verificados.</li>
-        </ul>
-        <p class="subhead">Laptop</p>
-        <ul>
-          <li>[ ] Todo lo anterior + bateria (informe y desgaste).</li>
-          <li>[ ] Limpieza interna (mas frecuente por el calor concentrado).</li>
-          <li>[ ] Bisagras, cargador y puertos.</li>
-          <li>[ ] Pasta termica cada 1-3 anos.</li>
-        </ul>
-        <p class="subhead">Servidor / NAS</p>
-        <ul>
-          <li>[ ] Temperaturas y estado de discos (RAID y S.M.A.R.T.).</li>
-          <li>[ ] Verificar respaldo y politicas de retencion.</li>
-          <li>[ ] Revision de firmware y parches de seguridad.</li>
-          <li>[ ] Limpieza de polvo y revision de la PSU.</li>
-        </ul>
-      </div></div>
     </div>
+</div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-journal-text accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Hoja de registro del tecnico</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <p class="text-sm text-secondary">Llena una fila por servicio. Puedes llevarla en una hoja de calculo o un cuaderno; lo importante es la constancia.</p>
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Fecha</th><th>Equipo</th><th>Tareas realizadas</th><th>Observaciones</th><th>Tecnico</th></tr>
-          <tr><td>dd/mm/aaaa</td><td>PC-001 (Dell OptiPlex)</td><td>Limpieza interna, pasta nueva, S.M.A.R.T. OK</td><td>Temps pasaron de 92 a 68 °C en carga</td><td>Juan</td></tr>
-          <tr><td>dd/mm/aaaa</td><td>LTP-014 (Lenovo)</td><td>Reemplazo de bateria (desgaste 72%)</td><td>Nueva bateria original</td><td>Maria</td></tr>
-          <tr><td>dd/mm/aaaa</td><td>NAS-01</td><td>Backup verificado, firmware actualizado</td><td>RAID 1 healthy</td><td>Juan</td></tr>
-        </table></div>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>En un registro de servicio tambien puede ser util anotar: numero de serie, garantia, repuestos usados y proxima fecha de mantenimiento.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-buildings accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Plan para empresas y redes</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Inventario:</strong> listado de equipos con numero de serie, ubicacion, usuario y garantia.</li>
-          <li><strong>Agenda anual:</strong> calendario con las fechas de cada equipo para que no se acumule todo.</li>
-          <li><strong>Prioridad por criticidad:</strong> servidores y equipos de facturacion primero.</li>
-          <li><strong>Politica de respaldo:</strong> que se respalda, donde, cada cuanto y como se restaura (ver <a href="man-plan-respaldo.html">Plan de Respaldo</a>).</li>
-          <li><strong>Proveedores y stock:</strong> repuestos frecuentes (RAM, SSD, pasta, fuentes) para reducir tiempos de espera.</li>
-          <li><strong>Documentacion:</strong> registro de cada intervencion para auditorias y seguimiento.</li>
-        </ul>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Una herramienta de inventario simple (hoja de calculo o software como GLPI) convierte el "mantenimiento cuando falla" en un proceso profesional y medible.</div>
-        </div>
-      </div></div>
-    </div>
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=qkTi9l7dpAQ" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Mantenimiento Preventivo de PC: aumenta la vida util y rendimiento</span>
+        <span class="v-chan">Mantenimiento PC y MAC</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -240,8 +214,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

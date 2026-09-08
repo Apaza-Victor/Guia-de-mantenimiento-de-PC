@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer arranque: entrar a BIOS y configurar - Primer Encendido y POST | TechGuide</title>
+  <meta name="description" content="Presiona repetidamente la tecla de BIOS (DEL/F2 segun placa) apenas encienda. Activa el perfil de RAM XMP/EXPO para la velocidad correcta. Configura...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Primer arranque: entrar a BIOS y configurar - Primer Encendido y POST | TechGuide">
+  <meta property="og:description" content="Presiona repetidamente la tecla de BIOS (DEL/F2 segun placa) apenas encienda. Activa el perfil de RAM XMP/EXPO para la velocidad correcta. Configura...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-primer-encendido/primer-arranque-entrar-a-bios-y-configurar.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Primer arranque: entrar a BIOS y configurar - Primer Encendido y POST | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-primer-encendido/primer-arranque-entrar-a-bios-y-configurar.html",
+  "description": "Presiona repetidamente la tecla de BIOS (DEL/F2 segun placa) apenas encienda. Activa el perfil de RAM XMP/EXPO para la velocidad correcta. Configura...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Primer Encendido y POST - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-primer-encendido.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-keyboard"></i></div>
+      <h1>Primer arranque: entrar a BIOS y configurar</h1>
+      <p>Ensamblaje · Primer Encendido y POST — Leccion 6 de 6</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-primer-encendido.html">Primer Encendido y POST</a><span class="sep">/</span><span class="current">Primer arranque: entrar a BIOS y configurar</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+        <ol>
+          <li>Presiona repetidamente la tecla de BIOS (DEL/F2 segun placa) apenas encienda.</li>
+          <li>Activa el perfil de RAM <strong>XMP/EXPO</strong> para la velocidad correcta.</li>
+          <li>Configura la <strong>fecha y hora</strong>.</li>
+          <li>Revisa que se detecten el CPU, la RAM, los discos y la GPU (monitor de la placa).</li>
+          <li>Pon el USB de instalacion primero en la <strong>prioridad de arranque</strong>.</li>
+          <li>Deja <strong>Secure Boot</strong> y <strong>TPM</strong> segun tu sistema operativo (Windows 11 los pide).</li>
+          <li>Guarda con <strong>Save &amp; Exit</strong> (F10).</li>
+        </ol>
+        <div class="alert-box alert-tip" style="margin-top:12px;">
+          <i class="bi bi-lightbulb"></i>
+          <div>Detalles de teclas por fabricante en <a "../ens-atajos-bios.html">Atajos BIOS</a> y configuraciones utiles. Cuando el POST pasa, sigue con <a "../ens-instalacion-so.html">instalar el sistema operativo</a>.</div>
+        </div>
+      </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-primer-encendido.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="si-el-pc-no-enciende.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Si el PC no enciende</span></a>
+    <span class="lesson-nav-empty"></span>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

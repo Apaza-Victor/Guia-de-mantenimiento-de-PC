@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-overclocking.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Overclocking - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-overclocking.html",
+  "description": "Ensamblaje · Overclocking practico. Como subir la frecuencia de CPU, GPU y RAM de forma segura: requisitos, pasos en BIOS, XMP/EXPO, undervolting, pruebas de estabilidad y errores comunes.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,20 +101,40 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip active' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Overclocking</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=2v7OxUNkeC0" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Que es el OVERCLOCK y como hacerlo</span>
-        <span class="v-chan">Lettux</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="overclocking" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-speedometer2"></i></div>
@@ -122,169 +149,87 @@
         <div><strong>Advertencia:</strong> el overclocking conlleva riesgo de inestabilidad, sobrecalentamiento y en casos extremos danos del hardware. Nunca se recomienda en equipos que se usan para trabajo critico. Antes de empezar: actualiza la BIOS, anota los valores originales y prepara un sistema de refrigeracion adecuado.</div>
       </div>
 
-      <div class="accordion open" id="oc-requisitos">
-        <div class="accordion-header" onclick="toggleAccordion('oc-requisitos')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-clipboard-check"></i></span><div><div class="accordion-title">Requisitos y hardware recomendado</div><div class="accordion-subtitle">Que necesitas antes de subir frecuencias</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Componente</th><th>Requisito minimo</th><th>Recomendado</th></tr>
-            <tr><td>CPU</td><td>Multiplicador desbloqueado (Intel "K" / AMD "X" o Ryzen normal)</td><td>Refrigeracion por aire de gama alta o AIO 240mm+</td></tr>
-            <tr><td>Placa base</td><td>Chipset que permita OC (Intel Z / AMD B650-X670)</td><td>VRM robusto (12+ fases), BIOS actualizada</td></tr>
-            <tr><td>RAM</td><td>Perfil XMP/EXPO disponible</td><td>DDR4 3600+ o DDR5 6000+ certificada por la placa</td></tr>
-            <tr><td>PSU</td><td>Margen de al menos 100W sobre el consumo total</td><td>80 PLUS Gold o superior</td></tr>
-            <tr><td>Software</td><td>HWMonitor / HWiNFO, Cinebench, Prime95, MemTest86</td><td>OCCT, 3DMark, MSI Afterburner</td></tr>
-          </table></div>
-          <div class="info-box info-tip mt-2">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Regla de oro:</strong> cada cambio que hagas en BIOS debes probarlo con una sesion de stress test antes de seguir subiendo. Si crashea, baja un escalon. La estabilidad se define por horas de carga, no por minutos.</div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="oc-cpu-intel">
-        <div class="accordion-header" onclick="toggleAccordion('oc-cpu-intel')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Overclocking de CPU — Intel</div><div class="accordion-subtitle">Multiplicador · Core Ratio · voltaje VCore</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-overclocking/requisitos-y-hardware-recomendado.html">
+        <div class="lesson-index-icon"><i class="bi bi-clipboard-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Requisitos y hardware recomendado</div>
+          <div class="lesson-index-desc">Que necesitas antes de subir frecuencias</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Entra a la BIOS (Del/F2) y ve al menu de overclocking (ej. "AI Tweaker" en ASUS, "OC" en MSI/Gigabyte).</li>
-            <li>Localiza <strong>CPU Core Ratio</strong> o <strong>Multiplier</strong>. Sube de a 1x (ej. de 46 a 47) por intento.</li>
-            <li>Opcional: ajusta <strong>AVX Offset</strong> (baja el ratio bajo cargas AVX) para mejorar estabilidad en stress tests modernos.</li>
-            <li>Voltaje <strong>VCore</strong>: parte del valor auto, sube de a 0.01-0.02V solo si crashea. No superes ~1.35-1.4V en aire sin riesgo de degradacion.</li>
-            <li>Guarda y prueba con Cinebench R23 multi-core y Prime95 (small FFTs) durante 30-60 min.</li>
-          </ol>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>PBO en AMD (equivalente automatico):</strong> en placas AMD activa <strong>Precision Boost Overdrive</strong> (PBO) y sube los limites de potencia (PPT/TDC/EDC) en lugar de fijar un multiplicador manual. Es el metodo seguro: el CPU se regula solo mientras no pase de temperatura.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/overclocking-de-cpu-intel.html">
+        <div class="lesson-index-icon"><i class="bi bi-cpu"></i></div>
+        <div>
+          <div class="lesson-index-title">Overclocking de CPU — Intel</div>
+          <div class="lesson-index-desc">Multiplicador · Core Ratio · voltaje VCore</div>
         </div>
-      </div>
-
-      <div class="accordion" id="oc-cpu-amd">
-        <div class="accordion-header" onclick="toggleAccordion('oc-cpu-amd')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-cpu"></i></span><div><div class="accordion-title">Overclocking de CPU — AMD (PBO y Curve Optimizer)</div><div class="accordion-subtitle">Boost automatico seguro + undervolting fino</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/overclocking-de-cpu-amd-pbo-y-curve-optimizer.html">
+        <div class="lesson-index-icon"><i class="bi bi-cpu"></i></div>
+        <div>
+          <div class="lesson-index-title">Overclocking de CPU — AMD (PBO y Curve Optimizer)</div>
+          <div class="lesson-index-desc">Boost automatico seguro + undervolting fino</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Opcion BIOS</th><th>Que hace</th><th>Nivel de riesgo</th></tr>
-            <tr><td>PBO (Enabled/Advanced)</td><td>Permite que el CPU use mas potencia y suba mas el boost hasta el limite termico</td><td>Bajo (se autorregula)</td></tr>
-            <tr><td>PBO Limits (PPT/TDC/EDC)</td><td>Sube los limites de energia y corriente (ej. Motherboard preset)</td><td>Bajo-medio</td></tr>
-            <tr><td>Curve Optimizer</td><td>Aplica voltaje negativo por nucleo (-5 a -30) para bajar temperatura y subir boost</td><td>Medio (hay que probar estabilidad)</td></tr>
-            <tr><td>Manual multiplier</td><td>Fija frecuencia fija ignorando boost</td><td>Alto (pierde single-core)</td></tr>
-          </table></div>
-          <p class="text-sm text-secondary mt-2">El <strong>Curve Optimizer con offset negativo</strong> es el metodo estrella en Ryzen 5000/7000: bajas temperatura, el CPU mantiene mas tiempo su boost maximo y el resultado es "overclock gratis". Empieza con -10 all-core y baja de a -5 probando con OCCT.</p>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/overclocking-de-ram-xmp-expo-y-ajustes-manuales.html">
+        <div class="lesson-index-icon"><i class="bi bi-memory"></i></div>
+        <div>
+          <div class="lesson-index-title">Overclocking de RAM — XMP / EXPO y ajustes manuales</div>
+          <div class="lesson-index-desc">Activa el perfil · o afina timings</div>
         </div>
-      </div>
-
-      <div class="accordion" id="oc-ram">
-        <div class="accordion-header" onclick="toggleAccordion('oc-ram')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-memory"></i></span><div><div class="accordion-title">Overclocking de RAM — XMP / EXPO y ajustes manuales</div><div class="accordion-subtitle">Activa el perfil · o afina timings</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/overclocking-de-gpu-msi-afterburner.html">
+        <div class="lesson-index-icon"><i class="bi bi-gpu-card"></i></div>
+        <div>
+          <div class="lesson-index-title">Overclocking de GPU — MSI Afterburner</div>
+          <div class="lesson-index-desc">Core clock · memory clock · curva de ventilador</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Paso 1 — XMP (Intel) / EXPO (AMD):</strong> activa el perfil del fabricante. Sin esto la RAM corre a velocidad base (2133/4800) aunque la compres para mas.</li>
-            <li><strong>Paso 2 — Verifica:</strong> confirma en CPU-Z (pestana Memory) que corre a la velocidad y timing anunciados.</li>
-            <li><strong>Paso 3 — Subir un escalon:</strong> si el kit da margen, intenta la siguiente velocidad (ej. 3200→3600) manteniendo los mismos timings o subiendo CL en 1-2.</li>
-            <li><strong>Timings:</strong> valores como CL16-18-18-38. Bajar CL mejora latencia; subir frecuencia mejora ancho de banda. Equilibrio: manten la <strong>latencia real (CL/frecuencia x 2000)</strong> en ~10ns o menos.</li>
-            <li><strong>Voltaje:</strong> DDR4 hasta 1.35-1.40V es razonable para OC; DDR5 hasta 1.35-1.40V con perfil. No subas sin refrigeracion activa sobre los modulos.</li>
-            <li><strong>Prueba siempre con MemTest86</strong> (o TestMem5) 4+ horas: los errores de RAM causan BSOD aleatorios y corrupcion de datos.</li>
-          </ul>
-          <div class="alert-box alert-warn">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Si el PC no arranca:</strong> la placa hara 2-3 reintentos y restaurara valores por defecto (o queda en negro: resetea CMOS quitando la pila 5 min). Nunca fuerces voltaje alto "a ciegas".</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/undervolting-el-overclock-que-ahorra-energia.html">
+        <div class="lesson-index-icon"><i class="bi bi-flower1"></i></div>
+        <div>
+          <div class="lesson-index-title">Undervolting — el "overclock" que ahorra energia</div>
+          <div class="lesson-index-desc">Menos calor, menos consumo, mismas frecuencias</div>
         </div>
-      </div>
-
-      <div class="accordion" id="oc-gpu">
-        <div class="accordion-header" onclick="toggleAccordion('oc-gpu')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-gpu-card"></i></span><div><div class="accordion-title">Overclocking de GPU — MSI Afterburner</div><div class="accordion-subtitle">Core clock · memory clock · curva de ventilador</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/pruebas-de-estabilidad-que-usar-y-cuanto-tiempo.html">
+        <div class="lesson-index-icon"><i class="bi bi-shield-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Pruebas de estabilidad — que usar y cuanto tiempo</div>
+          <div class="lesson-index-desc">CPU · RAM · GPU · red completa</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Instala <strong>MSI Afterburner</strong> + <strong>HWMonitor</strong> y abre una prueba de referencia (3DMark o un juego exigente) para tomar la linea base de temperatura y FPS.</li>
-            <li>Sube <strong>Core Clock</strong> de a +20 MHz y prueba con 10-15 min de carga. Repite hasta que veas artefactos, crasheo o fallo de driver.</li>
-            <li>Baja al ultimo valor estable y sigue con <strong>Memory Clock</strong> de a +50-100 MHz (menos sensible a ganancias, mas a errores visuales).</li>
-            <li>Configura una <strong>curva de ventilador</strong> personalizada (mas agresiva al llegar a 70°C) para sostener el OC sin sobrecalentar.</li>
-            <li>Guarda el perfil y activa "Aplicar al inicio".</li>
-          </ol>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Nota:</strong> en GPUs modernas el rendimiento ya viene muy optimizado de fabrica. Un OC manual suele dar 3-8% extra. El undervolting de GPU (bajar el voltaje manteniendo frecuencia) es mas util: reduce calor, ruido y consumo casi sin perder FPS.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="ens-overclocking/errores-comunes-y-como-volver-atras.html">
+        <div class="lesson-index-icon"><i class="bi bi-exclamation-octagon"></i></div>
+        <div>
+          <div class="lesson-index-title">Errores comunes y como volver atras</div>
+          <div class="lesson-index-desc">El plan B siempre existe</div>
         </div>
-      </div>
-
-      <div class="accordion" id="oc-undervolt">
-        <div class="accordion-header" onclick="toggleAccordion('oc-undervolt')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-flower1"></i></span><div><div class="accordion-title">Undervolting — el "overclock" que ahorra energia</div><div class="accordion-subtitle">Menos calor, menos consumo, mismas frecuencias</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p>El undervolting baja el voltaje que recibe el chip mientras mantiene (o hasta aumenta) la frecuencia de boost. El chip genera menos calor y el sistema de refrigeracion trabaja mas holgado.</p>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Componente</th><th>Herramienta</th><th>Valor tipico</th></tr>
-            <tr><td>CPU AMD Ryzen</td><td>BIOS → Curve Optimizer</td><td>-10 a -30 all-core (probar de a -5)</td></tr>
-            <tr><td>CPU Intel</td><td>Intel XTU (Windows) o BIOS → VCore offset</td><td>-0.05 a -0.10V</td></tr>
-            <tr><td>GPU NVIDIA/AMD</td><td>MSI Afterburner → curva VF</td><td>-50 a -100 mV a la curva stock</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Diferencia clave:</strong> en overclocking buscas MES frecuencia subiendo voltaje; en undervolting bajas voltaje SIN bajar frecuencia. El resultado es un chip mas frio y silencioso que rinde igual. Si pides demasiado undervolt, el sistema se vuelve inestable (crasheos aleatorios) — vuelve 5 unidades atras.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="oc-estabilidad">
-        <div class="accordion-header" onclick="toggleAccordion('oc-estabilidad')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-shield-check"></i></span><div><div class="accordion-title">Pruebas de estabilidad — que usar y cuanto tiempo</div><div class="accordion-subtitle">CPU · RAM · GPU · red completa</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Componente</th><th>Programa</th><th>Carga</th><th>Tiempo minimo</th><th>Que indica falla</th></tr>
-            <tr><td>CPU</td><td>Prime95 (small FFTs)</td><td>Maxima extrema</td><td>30-60 min</td><td>Error "FATAL ERROR", BSOD, reinicio</td></tr>
-            <tr><td>CPU (realista)</td><td>Cinebench R23 / OCCT</td><td>Alta</td><td>10-30 min</td><td>Crasheo, temperatura >95°C</td></tr>
-            <tr><td>RAM</td><td>MemTest86 / TestMem5</td><td>Escritura/lectura</td><td>4+ horas</td><td>Cualquier error listado en rojo</td></tr>
-            <tr><td>GPU</td><td>3DMark / Unigine / FurMark</td><td>Grafica</td><td>15-30 min</td><td>Artefactos visuales, driver se cae</td></tr>
-            <tr><td>Todo</td><td>OCCT "Combined" / AIDA64</td><td>Mixta</td><td>30-60 min</td><td>Cualquier inestabilidad</td></tr>
-          </table></div>
-          <div class="info-box info-warn">
-            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
-            <div class="content"><strong>No te fies de 5 minutos:</strong> un OC que pasa 5 min de Prime95 puede fallar a la hora. El margen "estable" del dia a dia (juegos, navegacion) es menor que Prime95 small FFTs, pero si tu objetivo es dejar el PC "stable forever", prueba al menos 1 hora con cargas mixtas y monitoriza temperaturas maximas con HWiNFO.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="oc-errores">
-        <div class="accordion-header" onclick="toggleAccordion('oc-errores')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-exclamation-octagon"></i></span><div><div class="accordion-title">Errores comunes y como volver atras</div><div class="accordion-subtitle">El plan B siempre existe</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Problema</th><th>Causa probable</th><th>Solucion</th></tr>
-            <tr><td>El PC no enciende tras el cambio</td><td>Voltaje/frecuencia demasiado alto</td><td>Resetea CMOS (jumper, boton o pila 5 min)</td></tr>
-            <tr><td>BSOD en juegos pero no en bench</td><td>Inestabilidad de RAM o cache (L3)</td><td>Prueba MemTest86; sube un timing o baja la velocidad de RAM</td></tr>
-            <tr><td>Temperatura >95°C en CPU</td><td>Refrigeracion insuficiente o pasta seca</td><td>Mejora cooler, re-aplica pasta, o baja el voltaje</td></tr>
-            <tr><td>Pequenos "glitches" en pantalla</td><td>Memory clock de GPU demasiado alto</td><td>Baja el OC de VRAM 50-100 MHz</td></tr>
-            <tr><td>El sistema pasa pruebas pero falla al suspender</td><td>Offset de voltaje inestable en idle</td><td>Aplica "offset positivo" en idle o baja el undervolt</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Consejo profesional:</strong> guarda siempre un perfil BIOS "Default" con nombre antes de tocar nada (la mayoria de placas permite guardar 2-4 perfiles). Asi cualquier experimento fallido se revierte en segundos.</div>
-          </div>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=2v7OxUNkeC0" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Que es el OVERCLOCK y como hacerlo</span>
+        <span class="v-chan">Lettux</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -308,8 +253,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

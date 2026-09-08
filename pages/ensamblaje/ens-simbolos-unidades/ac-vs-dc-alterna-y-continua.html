@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC vs DC: alterna y continua - ens-simbolos-unidades | TechGuide</title>
+  <meta name="description" content="La toma de corriente entrega corriente alterna (AC, alternating current) : el voltaje cambia de polaridad unas 50 veces por segundo (50 Hz) y los...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AC vs DC: alterna y continua - ens-simbolos-unidades | TechGuide">
+  <meta property="og:description" content="La toma de corriente entrega corriente alterna (AC, alternating current) : el voltaje cambia de polaridad unas 50 veces por segundo (50 Hz) y los...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <style>
+    .sym { display: block; width: 68px; height: 34px; margin: 0 auto; }
+    .sym path, .sym circle { stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .sym circle { fill: none; }
+    .sym-td { text-align: center; width: 88px; }
+    .band-chip { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(127,127,127,.35); vertical-align: -2px; margin-right: 6px; }
+    .unit-symbol { font-family: var(--font-mono); color: var(--accent); font-weight: 700; }
+    .magnitude-symbol { font-family: var(--font-mono); color: var(--accent2); font-weight: 700; }
+  </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/ac-vs-dc-alterna-y-continua.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AC vs DC: alterna y continua - ens-simbolos-unidades | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/ac-vs-dc-alterna-y-continua.html",
+  "description": "La toma de corriente entrega corriente alterna (AC, alternating current) : el voltaje cambia de polaridad unas 50 veces por segundo (50 Hz) y los...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "ens-simbolos-unidades - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+<div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-lightning-charge-fill"></i></div>
+      <h1>AC vs DC: alterna y continua</h1>
+      <p>Por que el PC trabaja en DC y la pared en AC</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-simbolos-unidades.html">ens-simbolos-unidades</a><span class="sep">/</span><span class="current">AC vs DC: alterna y continua</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p class="text-sm text-secondary mb-2">La toma de corriente entrega <strong>corriente alterna (AC, alternating current)</strong>: el voltaje cambia de polaridad unas 50 veces por segundo (50 Hz) y los electrones van y vienen. El interior del PC funciona con <strong>corriente continua (DC)</strong>: voltaje fijo que fluye siempre en el mismo sentido. La PSU convierte una en la otra.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Caracteristica</th>
+                  <th>AC (alterna)</th>
+                  <th>DC (continua)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Simbolo</td><td class="unit-symbol">~</td><td class="unit-symbol">= o ÔÄô</td></tr>
+                <tr><td>Flujo de electrones</td><td>Cambia de sentido (50/60 Hz)</td><td>Un solo sentido constante</td></tr>
+                <tr><td>Voltaje tipico</td><td>230 V (Europa) / 120 V (America)</td><td>12 V, 5 V y 3.3 V en la PC</td></tr>
+                <tr><td>Donde la encuentras</td><td>Toma de corriente, primario de la PSU</td><td>Todo el interior del PC y USB</td></tr>
+                <tr><td>En el multimetro</td><td>Posicion V~ (onda)</td><td>Posicion V= (linea)</td></tr>
+                <tr><td>Ventaja</td><td>Se transporta a larga distancia con pocas perdidas</td><td>Estable y facil de controlar</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tools-grid mt-2">
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-plug"></i>
+              <h5>La PSU convierte AC a DC</h5>
+              <p>La fuente toma 230 V AC, los <strong>rectifica, filtra y regula</strong> en rieles de 12 V, 5 V y 3.3 V. Por eso la etiqueta marca "100-240 V ~ 50/60 Hz" (entrada) y "+12V / +5V / +3.3V" (salida).</p>
+              <span class="card-tag">Rectificacion + regulacion</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-lightning-charge-fill"></i>
+              <h5>230 V es un valor RMS</h5>
+              <p>El voltaje de la pared es alterno y su pico real es 230 ├ù 1.41 Ôëê <strong>325 V</strong>. El valor 230 V (RMS) equivale a la DC que produciria el mismo calentamiento. Nunca midas ni toques el primario de la PSU.</p>
+              <span class="card-tag">Pico = RMS ├ù ÔêÜ2</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-usb"></i>
+              <h5>USB y SATA son DC</h5>
+              <p>El USB entrega 5 V DC (y 9/20 V en Power Delivery). Los SSD NVMe toman 3.3 V DC. Por eso invertir la polaridad en estos conectores destruye el dispositivo: la DC no "se adapta" sola.</p>
+              <span class="card-tag">5 V y 3.3 V DC</span>
+            </div>
+          </div>
+          <div class="alert-box alert-warning" style="margin-top:12px;">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Peligro real:</strong> el primario de una PSU trabaja con ~325 V DC internos despues del rectificador. Aunque el equipo este apagado, los capacitores grandes mantienen carga durante varios minutos. <strong>No abras la fuente</strong> salvo que tengas la experiencia y las herramientas adecuadas.</div>
+          </div>
+        </div>
+  </div></div>
+<div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-simbolos-unidades.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="prefijos-de-unidades-kilo-mega-micro.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Prefijos de Unidades (kilo, mega, micro...)</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="unidades-de-informatica-y-datos.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Unidades de informatica y datos</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

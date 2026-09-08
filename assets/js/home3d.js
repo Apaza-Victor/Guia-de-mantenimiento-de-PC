@@ -17,7 +17,7 @@
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const C = {
-    line: '#39d0d8', glow: '#00d4aa', accent: '#6c63ff',
+    line: '#39d0d8', glow: '#00d4aa', accent: '#3d7bff',
     dark: '#14161c', chip: '#2a2d36', gold: '#c9a45c',
     pcb: '#0f7a4d', metal: '#8b93a1'
   };

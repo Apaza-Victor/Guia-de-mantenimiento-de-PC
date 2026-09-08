@@ -4,7 +4,7 @@
    ============================================================ */
 
 @import url('layout.css');
-@import url('components.css');
+@import url('components.css?v=5');
 @import url('responsive.css');
 /* === DESIGN TOKENS === */
 :root {
@@ -14,11 +14,11 @@
   --bg-nav: #151820;
   --bg-topbar: rgba(15,17,23,.92);
   --bg-code: #0d0f14;
-  --bg-hero: linear-gradient(135deg, #0f1117 0%, #1a1040 50%, #0f1117 100%);
+--bg-hero: linear-gradient(135deg, #0f1117 0%, #0e1a3a 50%, #0f1117 100%);
   --border: #2a2e3a;
   --border-hover: #3d4255;
-  --accent: #6c63ff;
-  --accent-rgb: 108,99,255;
+  --accent: #3d7bff;
+  --accent-rgb: 61,123,255;
   --accent2: #00d4aa;
   --accent2-rgb: 0,212,170;
   --accent3: #ff6b6b;
@@ -35,7 +35,7 @@
   --info: #17a2b8;
   --text: #e4e6ed;
   --text-sec: #8b8fa3;
-  --text-muted: #5a5e72;
+  --text-muted: #9aa0b5;
   --shadow: 0 4px 24px rgba(0,0,0,.3);
   --shadow-lg: 0 8px 40px rgba(0,0,0,.5);
   --radius: 12px;
@@ -53,12 +53,12 @@
   --bg-nav: #ffffff;
   --bg-topbar: rgba(255,255,255,.92);
   --bg-code: #f4f5f7;
-  --bg-hero: linear-gradient(135deg, #f0f2f5 0%, #e8e0ff 50%, #f0f2f5 100%);
+  --bg-hero: linear-gradient(135deg, #f0f2f5 0%, #dde7ff 50%, #f0f2f5 100%);
   --border: #dee2e6;
   --border-hover: #adb5bd;
   --text: #1a1d27;
   --text-sec: #495057;
-  --text-muted: #868e96;
+  --text-muted: #5b6170;
   --shadow: 0 4px 24px rgba(0,0,0,.08);
   --shadow-lg: 0 8px 40px rgba(0,0,0,.12);
 }

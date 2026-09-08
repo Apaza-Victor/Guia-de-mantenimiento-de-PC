@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ y Solucion de Problemas | TechGuide</title>
+  <meta name="description" content="Errores comunes de hardware y software con sus soluciones: no enciende, no hay video, pantalla azul, ruidos, sobrecalentamiento y mas.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ y Solucion de Problemas | TechGuide">
+  <meta property="og:description" content="Errores comunes de hardware y software con sus soluciones: no enciende, no hay video, pantalla azul, ruidos, sobrecalentamiento y mas.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/herramientas/faq.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "FAQ y Solucion de Problemas | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/herramientas/faq.html",
+  "description": "Errores comunes de hardware y software con sus soluciones: no enciende, no hay video, pantalla azul, ruidos, sobrecalentamiento y mas.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--warn-rgb),.1);border:1px solid rgba(var(--warn-rgb),.25);color:var(--warn);"><i class="bi bi-life-preserver"></i></div>
+      <h1>FAQ y <span class="hl">Solucion de Problemas</span></h1>
+      <p>Errores comunes de hardware y software con sus causas y pasos de solucion.</p>
+    </div>
+  </div>
+
+  <nav class='subnav' aria-label='Secciones'>
+    <a class='chip active' href='faq.html'><i class='bi-question-circle'></i>FAQ</a>
+    <a class='chip' href='comparativas.html'><i class='bi-git-compare'></i>Comparativas</a>
+    <a class='chip' href='cuestionarios.html'><i class='bi-journal-check'></i>Cuestionarios</a>
+    <a class='chip' href='presupuesto.html'><i class='bi-cash-coin'></i>Presupuesto</a>
+    <a class='chip' href='referencia.html'><i class='bi-cpu'></i>Referencia</a>
+    <a class='chip' href='instalacion.html'><i class='bi-hdd'></i>Instalacion</a>
+    <a class='chip' href='memoria-ram.html'><i class='bi-memory'></i>Memoria RAM</a>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><span class="current">FAQ y Solucion de Problemas</span></nav>
+<div class="content-section" id="no-enciende" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent3-rgb),.12);border-color:rgba(var(--accent3-rgb),.25);color:var(--accent3);"><i class="bi bi-power"></i></div>
+      <div class="section-title">
+        <h2>La PC no enciende</h2>
+        <p>// Diagnostico paso a paso</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> No hay ninguna luz ni ventilador al presionar el boton de encendido</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> fuente desconectada, interruptor trasero apagado, boton frontal mal conectado, fuente danada.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Verifica que el cable de corriente este bien conectado a la PSU y al tomacorriente.</li>
+          <li>Comprueba que el interruptor de la fuente (I/O) este en la posicion <strong>I</strong>.</li>
+          <li>Prueba otro tomacorriente o regleta que sepas que funciona.</li>
+          <li>Revisa la conexion del boton de encendido en la placa (conector POWER SW).</li>
+          <li>Haz la <strong>prueba del clip</strong>: con la PSU desconectada del resto, puentea los pines 16 y 17 del conector ATX de 24 pines con un clip. Si la fuente enciende, el problema es la placa; si no, es la fuente.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Encienden los ventiladores pero no hay imagen</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> cable de video mal conectado, RAM mal insertada, tarjeta grafica no asentada, monitor en entrada incorrecta.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Conecta el cable de video a la <strong>GPU dedicada</strong> y no a la placa (si tienes procesador sin video integrado).</li>
+          <li>Verifica que el monitor este en la entrada correcta (HDMI/DP/VGA).</li>
+          <li>Reinserta la RAM: retirala, limpia los contactos con goma de borrar y vuelve a colocarla hasta que los clips hagan clic.</li>
+          <li>Prueba con una sola memoria en cada slot.</li>
+          <li>Resetea la BIOS puenteando el jumper CLR_CMOS o retirando la pila por 30 segundos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La PC se apaga sola despues de unos minutos</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> sobrecalentamiento de CPU/GPU, pasta termica seca, ventiladores sucios o detenidos, fuente insuficiente.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Monitorea temperaturas con HWMonitor o Core Temp (CPU por encima de 90°C es peligroso).</li>
+          <li>Limpia el polvo de ventiladores y disipadores con aire comprimido.</li>
+          <li>Verifica que todos los ventiladores giren al arrancar.</li>
+          <li>Reemplaza la pasta termica de la CPU (grano de arroz en el centro).</li>
+          <li>Revisa que el disipador este bien anclado y con presion uniforme.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="pantalla-azul" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:var(--accent-cyan);"><i class="bi bi-display"></i></div>
+      <div class="section-title">
+        <h2>Pantalla azul (BSOD)</h2>
+        <p>// Errores de Windows</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Pantalla azul al iniciar Windows</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> drivers corruptos, RAM defectuosa, disco con errores, sobrecalentamiento, overclock inestable.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Anota el <strong>codigo de error</strong> (ej: IRQL_NOT_LESS_OR_EQUAL, MEMORY_MANAGEMENT).</li>
+          <li>Arranca en <strong>Modo seguro</strong> (Shift + Reiniciar) y desinstala los ultimos drivers instalados.</li>
+          <li>Ejecuta <code>sfc /scannow</code> y <code>DISM /Online /Cleanup-Image /RestoreHealth</code> en CMD como administrador.</li>
+          <li>Prueba la RAM con <strong>Windows Memory Diagnostic</strong> o MemTest86.</li>
+          <li>Verifica el disco con <code>chkdsk /f</code> o la herramienta de la marca (CrystalDiskInfo).</li>
+          <li>Revisa la temperatura de CPU y GPU; restablece cualquier overclock a valores de fabrica.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="ruidos" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-volume-up"></i></div>
+      <div class="section-title">
+        <h2>Ruidos extraños</h2>
+        <p>// Identificar el origen del ruido</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Ruido fuerte o de rasquido</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> rodamiento de ventilador seco, disco mecanico fallando, cable rozando un ventilador.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Deten cada ventilador brevemente con un lapiz para identificar el que hace ruido.</li>
+          <li>Limpia el polvo de las aspas; si persiste, reemplaza el ventilador.</li>
+          <li>Si el ruido viene del disco, <strong>haz una copia de seguridad inmediata</strong> y verifica con CrystalDiskInfo (revisa atributos Reallocated Sectors).</li>
+          <li>Revisa que ningun cable toque las aspas de los ventiladores.</li>
+          <li>Un <strong>pitido continuo</strong> al encender indica falla de RAM; un pitido largo y cortos, problema de video (ver codigos POST).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="lentitud" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(61,123,255,.12);border-color:rgba(61,123,255,.25);color:var(--accent);"><i class="bi bi-hourglass-split"></i></div>
+      <div class="section-title">
+        <h2>Computadora lenta</h2>
+        <p>// Optimizacion de rendimiento</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La PC va lenta incluso en tareas basicas</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> disco mecanico, programas en inicio, RAM insuficiente, malware, disco casi lleno.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Migra el sistema a un <strong>SSD</strong>: es la mejora de rendimiento mas grande por precio.</li>
+          <li>Desactiva programas de inicio en el Administrador de tareas (pestana Inicio).</li>
+          <li>Mantén libre al menos un 15-20% del disco.</li>
+          <li>Amplia la RAM si usas mas del 90% habitualmente.</li>
+          <li>Ejecuta un analisis con Windows Defender o Malwarebytes.</li>
+          <li>En un HDD, ejecuta <code>defrag C:</code> de vez en cuando (nunca en SSD).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="sin-internet" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(var(--accent3-rgb),.12);border-color:rgba(var(--accent3-rgb),.25);color:var(--accent3);"><i class="bi bi-wifi-off"></i></div>
+      <div class="section-title">
+        <h2>Problemas de conexion</h2>
+        <p>// Red y WiFi</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Sin internet aunque el cable esta conectado</div>
+      <div class="faq-a">
+        <p><strong>Solucion (en orden):</strong></p>
+        <ul>
+          <li><code>ipconfig /release</code> y luego <code>ipconfig /renew</code> en CMD.</li>
+          <li><code>ipconfig /flushdns</code> para limpiar la cache DNS.</li>
+          <li>Reinicia el <strong>router y el modem</strong>: apagalos 30 segundos y vuelvelos a encender.</li>
+          <li>Verifica si el problema es solo de un equipo (conecta otro dispositivo).</li>
+          <li>Desactiva y reactiva el adaptador de red en <em>Configuracion de red</em>.</li>
+          <li>Si todo falla, llama a tu proveedor de internet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> El Wi-Fi es lento o se corta constantemente</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> interferencia de canales, router en mala ubicacion, demasiados dispositivos conectados, firmware desactualizado, adaptador Wi-Fi con drivers viejos.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Coloca el router en un lugar central y elevado, lejos de microondas, monitores y paredes gruesas.</li>
+          <li>Cambia el canal Wi-Fi: en la banda de 2.4 GHz usa los canales 1, 6 u 11 (no se superponen).</li>
+          <li>Prefiere la banda de <strong>5 GHz</strong> para mayor velocidad cuando estas cerca del router.</li>
+          <li>Actualiza el firmware del router desde su panel de administracion.</li>
+          <li>Actualiza el driver del adaptador Wi-Fi desde el Administrador de dispositivos.</li>
+          <li>Si la casa es grande, considera un sistema <strong>Mesh Wi-Fi</strong> en lugar de un repetidor.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Windows dice "Red sin acceso a Internet" y la IP es 169.254.x.x</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> el equipo no recibio IP del DHCP (falla del router, cable o adaptador).</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Una IP 169.254.x.x (APIPA) significa que el DHCP fallo: el equipo se autoasigno una direccion.</li>
+          <li>Reinicia el router/modem 30 segundos.</li>
+          <li>En CMD como administrador: <code>ipconfig /release</code> y luego <code>ipconfig /renew</code>.</li>
+          <li>Desactiva y reactiva el adaptador de red.</li>
+          <li>Si es por cable, prueba otro puerto LAN del router y otro cable.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> El DNS no resuelve las paginas aunque hay conexion a Internet</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> cache DNS corrupta, servidores DNS del proveedor caidos o lentos.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Limpia la cache: <code>ipconfig /flushdns</code>.</li>
+          <li>Cambia los DNS a uno publico y confiable: en las propiedades IPv4 del adaptador, usa <strong>1.1.1.1</strong> (Cloudflare) o <strong>8.8.8.8</strong> (Google) como DNS principal y secundario.</li>
+          <li>Prueba si el problema es solo de DNS: navega directamente a una IP conocida o usa <code>nslookup google.com</code> para comprobar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Como abrir puertos (port forwarding) para un juego o servidor</div>
+      <div class="faq-a">
+        <p><strong>Procedimiento:</strong></p>
+        <ul>
+          <li>Configura una <strong>IP estatica</strong> en el equipo (o reserva la IP en el router por MAC).</li>
+          <li>Entra al panel del router (generalmente http://192.168.0.1 o 192.168.1.1) y busca la seccion "Port Forwarding" o "Redireccionamiento de puertos".</li>
+          <li>Crea una regla: puerto externo e interno (ej: TCP/UDP 25565 para un servidor Minecraft), protocolo, y la IP local del equipo.</li>
+          <li>Guarda y reinicia el router si lo pide.</li>
+          <li>Verifica desde afuera con herramientas como <em>yougetsignal.com</em> o un dispositivo en otra red.</li>
+        </ul>
+        <div class="alert-box alert-warn" style="margin-top:12px;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div><strong>Precaucion:</strong> Abrir puertos expone ese servicio a Internet. Solo abre los puertos estrictamente necesarios y mantén el equipo actualizado.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Doble NAT: mi router se conecta al router del proveedor</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> dos routers haciendo NAT en cadena (el del ISP y el tuyo), lo que impide abrir puertos y causa latencia extra.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Pon tu router en <strong>modo bridge</strong> (o modo AP) y deja que solo el router del ISP haga NAT.</li>
+          <li>O pide al proveedor poner su equipo en modo bridge y que tu router haga todo el trabajo.</li>
+          <li>Tambien puedes desactivar el DHCP del segundo router y conectar por puerto LAN (el segundo queda como switch).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="arranque" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,193,7,.12);border-color:rgba(255,193,7,.25);color:var(--warn);"><i class="bi bi-bootstrap"></i></div>
+      <div class="section-title">
+        <h2>Problemas de arranque</h2>
+        <p>// Errores al iniciar el sistema</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La PC se reinicia en bucle antes de cargar Windows</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> sobrecalentamiento, RAM o disco con errores, drivers incompatibles, actualizacion fallida.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Entra en <strong>Modo seguro</strong>: presiona F8 durante el arranque o fuerza 3 apagados seguidos para abrir la recuperacion.</li>
+          <li>Desinstala la ultima actualizacion o driver instalado (Reparacion de inicio / Desinstalar actualizaciones).</li>
+          <li>Ejecuta <code>sfc /scannow</code> y <code>DISM /Online /Cleanup-Image /RestoreHealth</code> desde CMD en WinRE.</li>
+          <li>Prueba la RAM con MemTest86 y el disco con CrystalDiskInfo.</li>
+          <li>Revisa temperaturas: si se reinicia bajo carga, es sobrecalentamiento (limpia y cambia pasta termica).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Error "No bootable device" o "Bootmgr is missing"</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> orden de arranque incorrecto, disco desconectado, MBR/BCD danado, disco que falla.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Entra a la BIOS y verifica el orden de arranque: el disco con Windows debe estar primero.</li>
+          <li>Revisa que el cable de datos SATA/M.2 este bien conectado y el disco aparezca en la BIOS.</li>
+          <li>Arranca desde un USB de Windows y en CMD (Shift+F10) ejecuta <code>bootrec /fixmbr</code>, <code>bootrec /fixboot</code> y <code>bootrec /rebuildbcd</code>.</li>
+          <li>Si el disco no aparece en la BIOS ni en Windows, sospecha falla fisica y haz copia de seguridad ya.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Pantalla negra con cursor parpadeante</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> BCD danado, disco de arranque incorrecto, falla de la tabla de particiones.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Arranca desde un USB de Windows y abre CMD con Shift+F10.</li>
+          <li>Ejecuta <code>bootrec /rebuildbcd</code> para reconstruir el gestor de arranque.</li>
+          <li>Si falla, verifica con <code>diskpart</code> (list disk, list volume) que la particion del sistema exista y este activa.</li>
+          <li>Como ultimo recurso, usa la Reparacion de inicio de WinRE.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Windows no arranca y muestra la pantalla de recuperacion (WinRE)</div>
+      <div class="faq-a">
+        <p><strong>Procedimiento:</strong></p>
+        <ul>
+          <li>Elige <strong>Reparacion de inicio</strong> primero: es la opcion mas segura y automatica.</li>
+          <li>Si no funciona, usa <strong>Restaurar sistema</strong> con un punto anterior al problema.</li>
+          <li>Desde <strong>Simbolo del sistema</strong> ejecuta <code>sfc /scannow</code> y <code>DISM /Online /Cleanup-Image /RestoreHealth</code>.</li>
+          <li>Si nada funciona, elige <strong>Restablecer este PC</strong> (conserva tus archivos) antes de reinstalar de cero.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="migracion" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(61,123,255,.12);border-color:rgba(61,123,255,.25);color:var(--accent);"><i class="bi bi-arrow-left-right"></i></div>
+      <div class="section-title">
+        <h2>Migracion e instalacion</h2>
+        <p>// Pasar datos, clonar discos y dual boot</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Como pasar mis archivos a la PC nueva</div>
+      <div class="faq-a">
+        <p><strong>Opciones:</strong></p>
+        <ul>
+          <li><strong>Disco USB</strong>: copia documentos, fotos y descargas en un pendrive o disco externo.</li>
+          <li><strong>Compartir en red</strong>: conecta ambas PC a la misma red y comparte carpetas o usa la nube (OneDrive, Google Drive).</li>
+          <li><strong>Clonar el disco</strong>: si quieres conservar Windows, programas y configuracion, clona el disco viejo al nuevo (ver pregunta de clonado).</li>
+          <li><strong>Cable de transferencia</strong>: para equipos muy antiguos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Como clonar mi disco HDD a un SSD</div>
+      <div class="faq-a">
+        <p><strong>Procedimiento:</strong></p>
+        <ul>
+          <li>Conecta el SSD como segundo disco (SATA o M.2) y que Windows lo reconozca.</li>
+          <li>Usa <strong>Macrium Reflect Free</strong> o <strong>Clonezilla</strong>: elige "Clonar disco" (disco a disco).</li>
+          <li>Selecciona el HDD como origen y el SSD como destino; desmarca la opcion de ignorar errores si el HDD esta sano.</li>
+          <li>Despues del clonado, arranca desde el SSD y elimina las particiones del HDD para usarlo como almacenamiento.</li>
+        </ul>
+        <div class="alert-box alert-info" style="margin-top:12px;">
+          <i class="bi bi-info-circle"></i>
+          <div><strong>Consejo:</strong> desconecta otros discos de datos durante el proceso para evitar escribir en el disco equivocado. El clonado es a prueba de fallos: nada de tocar, no interrumpir.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Como instalar Windows 11 junto a Linux (dual boot)</div>
+      <div class="faq-a">
+        <p><strong>Requisitos y pasos:</strong></p>
+        <ul>
+          <li>Instala <strong>primero Windows</strong> y deja espacio sin particionar para Linux (ej: 50-100 GB).</li>
+          <li>Desactiva BitLocker y el inicio rapido de Windows antes de instalar Linux.</li>
+          <li>Instala Linux (Ubuntu/Debian) y elige "Instalar junto a Windows": el instalador creara el arranque dual.</li>
+          <li>Al encender, el gestor <strong>GRUB</strong> te dejara elegir entre Linux y Windows.</li>
+          <li>Para desinstalar el dual boot, borra las particiones de Linux desde Windows y repara el arranque con <code>bootrec /fixmbr</code>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Como restaurar Windows desde una imagen o punto de restauracion</div>
+      <div class="faq-a">
+        <p><strong>Punto de restauracion (reversible):</strong></p>
+        <ul>
+          <li>Panel de control > Recuperacion > Abrir Restauracion del sistema, y elige un punto anterior al problema.</li>
+          <li>No afecta tus archivos, solo programas y configuracion recientes.</li>
+        </ul>
+        <p><strong>Imagen de sistema (restauracion total):</strong></p>
+        <ul>
+          <li>Entra en WinRE (Shift + Reiniciar) y elige Solucionar problemas > Restaurar desde imagen del sistema.</li>
+          <li>Elige la imagen guardada (en disco externo o red) y confirma la restauracion completa.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="perifericos" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-usb-plug"></i></div>
+      <div class="section-title">
+        <h2>Hardware y perifericos</h2>
+        <p>// Sonido, USB, impresoras y pantalla</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> No hay sonido en los altavoces o audifonos</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> dispositivo de salida incorrecto, volumen al minimo, drivers de audio desactualizados, jack mal conectado.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Verifica que el dispositivo de salida sea el correcto (clic en el icono de volumen > selecciona el dispositivo).</li>
+          <li>Revisa el volumen del sistema y que no este en silencio.</li>
+          <li>Prueba el jack trasero (verde) de la placa y no solo el frontal.</li>
+          <li>Reinstala el driver de audio desde el Administrador de dispositivos o el sitio del fabricante.</li>
+          <li>Ejecuta el solucionador de problemas de audio de Windows.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Un puerto USB dejo de funcionar</div>
+      <div class="faq-a">
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Prueba el dispositivo en otro puerto para descartar que sea el periferico.</li>
+          <li>En el Administrador de dispositivos, desinstala el controlador del hub USB y reinicia (Windows lo reinstala).</li>
+          <li>Verifica en la BIOS que los puertos USB no esten desactivados.</li>
+          <li>Si es un puerto del panel frontal, revisa que el header USB de la placa este bien conectado.</li>
+          <li>Si sigue fallando, el puerto puede estar danado fisicamente; usa un hub USB.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La impresora aparece como "sin conexion"</div>
+      <div class="faq-a">
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Verifica el cable USB o la conexion Wi-Fi de la impresora (impresion de pagina de prueba desde su panel).</li>
+          <li>Asegurate de que este encendida y sin errores (papel atascado, sin tinta).</li>
+          <li>En Windows: Configuracion > Dispositivos > Impresoras, y elige "Usar sin conexion" para quitarlo.</li>
+          <li>Reinicia el servicio de cola de impresion: en CMD como admin <code>net stop spooler</code> y <code>net start spooler</code>.</li>
+          <li>Reinstala el driver desde el sitio del fabricante.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La pantalla parpadea o muestra artefactos (lineas, pixeles de colores)</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> cable de video danado, GPU sobrecalentada, drivers de GPU corruptos, falla de la GPU o del monitor.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Reemplaza o reajusta el cable HDMI/DisplayPort y prueba otro puerto.</li>
+          <li>Monitorea la temperatura de la GPU con GPU-Z o MSI Afterburner durante juegos.</li>
+          <li>Limpia los drivers de GPU con DDU e instala una version limpia.</li>
+          <li>Prueba el monitor en otro equipo y otra GPU en este, para aislar la causa.</li>
+          <li>Si solo aparece al mover el cable, es cable o conector: cambialo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Olvide mi contrasena de Windows</div>
+      <div class="faq-a">
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Si usas cuenta Microsoft, restablece la contrasena desde account.microsoft.com en otro dispositivo y vuelve a iniciar sesion.</li>
+          <li>Si es cuenta local, usa las <strong>preguntas de seguridad</strong> en la pantalla de inicio de sesion.</li>
+          <li>Desde una cuenta administrador adicional puedes crear otra cuenta y cambiar la contrasena de la tuya.</li>
+          <li>Como ultimo recurso: restaurar o reinstalar (perderas los archivos del perfil si no hay respaldo).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" id="software" data-aos="fade-up">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:var(--accent-cyan);"><i class="bi bi-gear"></i></div>
+      <div class="section-title">
+        <h2>Software</h2>
+        <p>// Actualizaciones, programas y congelamientos</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Windows Update falla al instalar actualizaciones</div>
+      <div class="faq-a">
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Reinicia la PC e intenta de nuevo: muchas fallas son temporales.</li>
+          <li>Libera espacio en disco (Windows Update necesita espacio temporal).</li>
+          <li>Ejecuta el solucionador de problemas de Windows Update.</li>
+          <li>Deten el servicio y limpia la cache: <code>net stop wuauserv</code>, borra <code>C:\Windows\SoftwareDistribution\Download</code>, y <code>net start wuauserv</code>.</li>
+          <li>Si persiste, usa <code>DISM /Online /Cleanup-Image /RestoreHealth</code> y luego <code>sfc /scannow</code>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> Un programa no se desinstala o se queda colgado</div>
+      <div class="faq-a">
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Reinicia la PC e intenta desinstalar de nuevo (muchos bloqueos son temporales).</li>
+          <li>Usa Configuracion > Aplicaciones > Aplicaciones instaladas, y elige Desinstalar.</li>
+          <li>Si no funciona, usa la herramienta de desinstalacion del propio fabricante (ej: Revo Uninstaller para restos).</li>
+          <li>Si un proceso bloquea el desinstalador, cierralo desde el Administrador de tareas.</li>
+          <li>No borres manualmente la carpeta del programa: deja restos en el registro. Mejor un desinstalador dedicado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> La PC se congela unos segundos y vuelve (freeze)</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> disco mecanico saturado, RAM insuficiente, programa que usa demasiado disco/CPU, sobrecalentamiento.</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Abre el Administrador de tareas y observa que proceso satura disco, CPU o memoria en esos momentos.</li>
+          <li>Si es un HDD, el "thrashing" (disco al 100%) es tipico: migra a SSD o amplia la RAM.</li>
+          <li>Revisa temperaturas con HWMonitor: un throttle por calor produce micro-congelamientos.</li>
+          <li>Desactiva programas de inicio innecesarios.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-q"><i class="bi bi-question-circle"></i> El ventilador del CPU hace mucho ruido</div>
+      <div class="faq-a">
+        <p><strong>Causas probables:</strong> polvo, rodamiento desgastado, curva de ventilador agresiva, CPU caliente (pasta termica seca).</p>
+        <p><strong>Solucion:</strong></p>
+        <ul>
+          <li>Limpia el polvo del disipador y del ventilador con aire comprimido.</li>
+          <li>Revisa la temperatura del CPU: si esta alta en reposo, cambia la pasta termica.</li>
+          <li>Ajusta la curva de ventilador en la BIOS (menos ruidoso a temperaturas normales).</li>
+          <li>Si el ruido es de rodamiento (gira y "traquetea"), reemplaza el ventilador.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">FAQ</span>
+      <span class="footer-tag">Troubleshooting</span>
+      <span class="footer-tag">Hardware</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/subnet.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
+<script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

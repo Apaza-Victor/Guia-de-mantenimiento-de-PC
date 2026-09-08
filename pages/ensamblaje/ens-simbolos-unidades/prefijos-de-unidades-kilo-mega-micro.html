@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prefijos de Unidades (kilo, mega, micro...) - Simbolos y Unidades | TechGuide</title>
+  <meta name="description" content="Los prefijos multiplican (o dividen) la unidad base. En electronica veras casi siempre k, M, G para arriba y m, µ, n, p para abajo. Ejemplos reales:...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prefijos de Unidades (kilo, mega, micro...) - Simbolos y Unidades | TechGuide">
+  <meta property="og:description" content="Los prefijos multiplican (o dividen) la unidad base. En electronica veras casi siempre k, M, G para arriba y m, µ, n, p para abajo. Ejemplos reales:...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <style>
+    .sym { display: block; width: 68px; height: 34px; margin: 0 auto; }
+    .sym path, .sym circle { stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .sym circle { fill: none; }
+    .sym-td { text-align: center; width: 88px; }
+    .band-chip { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(127,127,127,.35); vertical-align: -2px; margin-right: 6px; }
+    .unit-symbol { font-family: var(--font-mono); color: var(--accent); font-weight: 700; }
+    .magnitude-symbol { font-family: var(--font-mono); color: var(--accent2); font-weight: 700; }
+  </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/prefijos-de-unidades-kilo-mega-micro.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Prefijos de Unidades (kilo, mega, micro...) - Simbolos y Unidades | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/prefijos-de-unidades-kilo-mega-micro.html",
+  "description": "Los prefijos multiplican (o dividen) la unidad base. En electronica veras casi siempre k, M, G para arriba y m, µ, n, p para abajo. Ejemplos reales:...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Simbolos y Unidades - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-arrow-up-down"></i></div>
+      <h1>Prefijos de Unidades (kilo, mega, micro...)</h1>
+      <p>La escala que aparece en k&amp;Omega;, MHz, µF, mA y GB</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-simbolos-unidades.html">Simbolos y Unidades</a><span class="sep">/</span><span class="current">Prefijos de Unidades (kilo, mega, micro...)</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p class="text-sm text-secondary mb-2">Los prefijos multiplican (o dividen) la unidad base. En electronica veras casi siempre <strong>k, M, G</strong> para arriba y <strong>m, µ, n, p</strong> para abajo. Ejemplos reales: 10k&Omega;, 220µF, 3.5GHz, 12V y 5A en la PSU.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Prefijo</th>
+                  <th>Simbolo</th>
+                  <th>Factor</th>
+                  <th>Ejemplos en PC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Tera</td><td class="unit-symbol">T</td><td>10<sup>12</sup></td><td>TB (terabytes)</td></tr>
+                <tr><td>Giga</td><td class="unit-symbol">G</td><td>10<sup>9</sup></td><td>GHz, GB, Gbps</td></tr>
+                <tr><td>Mega</td><td class="unit-symbol">M</td><td>10<sup>6</sup></td><td>MHz, M&Omega;, MB</td></tr>
+                <tr><td>Kilo</td><td class="unit-symbol">k</td><td>10<sup>3</sup></td><td>kHz, k&Omega;, kW, kB</td></tr>
+                <tr><td>Hecto</td><td class="unit-symbol">h</td><td>10<sup>2</sup></td><td>hPa (raramente en electronica)</td></tr>
+                <tr><td>Deca</td><td class="unit-symbol">da</td><td>10<sup>1</sup></td><td>dal (raro)</td></tr>
+                <tr><td>(base)</td><td></td><td>10<sup>0</sup></td><td>V, A, &Omega;, W, F, H, Hz</td></tr>
+                <tr><td>Deci</td><td class="unit-symbol">d</td><td>10<sup>-1</sup></td><td>dB (decibel, escala logaritmica)</td></tr>
+                <tr><td>Centi</td><td class="unit-symbol">c</td><td>10<sup>-2</sup></td><td>cm</td></tr>
+                <tr><td>Mili</td><td class="unit-symbol">m</td><td>10<sup>-3</sup></td><td>mA, mV, ms, mm</td></tr>
+                <tr><td>Micro</td><td class="unit-symbol">µ</td><td>10<sup>-6</sup></td><td>µF (capacitores), µs, µm</td></tr>
+                <tr><td>Nano</td><td class="unit-symbol">n</td><td>10<sup>-9</sup></td><td>nF, ns (nanosegundos de RAM)</td></tr>
+                <tr><td>Pico</td><td class="unit-symbol">p</td><td>10<sup>-12</sup></td><td>pF (capacitores SMD diminutos)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Ojo con la k minuscula:</strong> el kilo se escribe con <strong>k minuscula</strong> (10k&Omega;, kW) y el mega con <strong>M mayuscula</strong> (MHz, M&Omega;). En informatica, K/M/G a veces son binarios (1 KB = 1024 bytes), pero en electronica de potencia son decimales (1 kW = 1000 W).</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-simbolos-unidades.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="simbolos-de-circuito.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Simbolos de Circuito</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="ac-vs-dc-alterna-y-continua.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">AC vs DC: alterna y continua</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo OSI y Pila TCP/IP - TCP/IP y OSI | TechGuide</title>
+  <meta name="description" content="Modelo OSI (7 capas) 7 Aplicacion HTTP, FTP, DNS, SMTP, SNMP, RIP 6 Presentacion SSL/TLS, JPEG, ZIP — semantica 5 Sesion NetBIOS, RPC — mantiene...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Modelo OSI y Pila TCP/IP - TCP/IP y OSI | TechGuide">
+  <meta property="og:description" content="Modelo OSI (7 capas) 7 Aplicacion HTTP, FTP, DNS, SMTP, SNMP, RIP 6 Presentacion SSL/TLS, JPEG, ZIP — semantica 5 Sesion NetBIOS, RPC — mantiene...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <link href="../../../assets/css/visuals.css" rel="stylesheet">
+
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-tcp-osi/modelo-osi-y-pila-tcp-ip.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Modelo OSI y Pila TCP/IP - TCP/IP y OSI | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-tcp-osi/modelo-osi-y-pila-tcp-ip.html",
+  "description": "Modelo OSI (7 capas) 7 Aplicacion HTTP, FTP, DNS, SMTP, SNMP, RIP 6 Presentacion SSL/TLS, JPEG, ZIP — semantica 5 Sesion NetBIOS, RPC — mantiene...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "TCP/IP y OSI - Redes | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-tcp-osi.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+<div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-layers"></i></div>
+      <h1>Modelo OSI y Pila TCP/IP</h1>
+      <p>Comparativa de capas · protocolos · PDUs · correspondencia funcional</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../redes.html">Redes</a><span class="sep">/</span><a href="../red-tcp-osi.html">TCP/IP y OSI</a><span class="sep">/</span><span class="current">Modelo OSI y Pila TCP/IP</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <div class="grid-2">
+            <div>
+              <p class="subhead">Modelo OSI (7 capas)</p>
+              <table class="osi-table">
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">7</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Aplicacion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">HTTP, FTP, DNS, SMTP, SNMP, RIP</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">6</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Presentacion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">SSL/TLS, JPEG, ZIP — semantica</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-cyan)">5</span></td><td style="color:var(--accent-cyan);font-weight:700;font-size:.8rem">Sesion</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">NetBIOS, RPC — mantiene enlace</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-green)">4</span></td><td style="color:var(--accent-green);font-weight:700;font-size:.8rem">Transporte</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">TCP, UDP — Segmento</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-yellow)">3</span></td><td style="color:var(--accent-yellow);font-weight:700;font-size:.8rem">Red</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">IP, ICMP, ARP, IGMP — Paquete</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-orange)">2</span></td><td style="color:var(--accent-orange);font-weight:700;font-size:.8rem">Enlace datos</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">Ethernet, Wi-Fi, Frame Relay — Trama</td></tr>
+                <tr><td><span style="font-family:var(--mono);font-weight:700;color:var(--accent-orange)">1</span></td><td style="color:var(--accent-orange);font-weight:700;font-size:.8rem">Fisica</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:.65rem">Cable, señal electrica/optica, bits</td></tr>
+              </table>
+            </div>
+            <div>
+              <p class="subhead">Pila TCP/IP (4 capas)</p>
+              <div class="tcpip-stack">
+                <div class="layer-block layer-app"><span class="layer-name">Aplicacion</span><span class="layer-pdu">HTTP · FTP · DNS · SMTP</span></div>
+                <div class="layer-block layer-trans"><span class="layer-name">Transporte</span><span class="layer-pdu">TCP · UDP · Segmento</span></div>
+                <div class="layer-block layer-inet"><span class="layer-name">Internet</span><span class="layer-pdu">IP · ICMP · ARP · Paquete</span></div>
+                <div class="layer-block layer-link"><span class="layer-name">Acceso a Red</span><span class="layer-pdu">Ethernet · Wi-Fi · Trama</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Mnemonico OSI (7→1)</strong> "All People Seem To Need Data Processing" → Application, Presentation, Session, Transport, Network, Data-link, Physical. En español: "Para Suele Trabajar Nuestra Enseñanza De La Física". TCP/IP se remonta a 1972 cuando el Departamento de Defensa de EE.UU. lo uso para enlazar su red.</div>
+          </div>
+          <div class="info-box info-note mt-1">
+            <span class="icon"><i class="bi bi-box-seam"></i></span>
+            <div class="content"><strong>Contenido de los paquetes de red</strong> Cada paquete contiene Cabecera (Direcciones MAC + Direcciones IP + Puertos) + Datos + CRC (Comprobacion de Redundancia Ciclica para deteccion de errores). El overhead es toda la informacion adicional a los datos puros.</div>
+          </div>
+
+          <div class="vis" data-aos="fade-up">
+            <div class="vis-title"><i class="bi bi-layers"></i> Modelo OSI y Pila TCP/IP — Vista comparada</div>
+            <div class="vis-sub">Cada capa envuelve los datos con su cabecera (encapsulamiento). Al subir, cada capa la quita (desencapsulamiento).</div>
+            <div class="vis-grid vis-2">
+              <div>
+                <div class="osi-bars">
+                  <div class="osi-bar osi-l7"><span class="n">7</span><span class="nm">Aplicacion</span><span class="pd">HTTP · FTP · DNS</span></div>
+                  <div class="osi-bar osi-l6"><span class="n">6</span><span class="nm">Presentacion</span><span class="pd">SSL/TLS · JPEG</span></div>
+                  <div class="osi-bar osi-l5"><span class="n">5</span><span class="nm">Sesion</span><span class="pd">NetBIOS · RPC</span></div>
+                  <div class="osi-bar osi-l4"><span class="n">4</span><span class="nm">Transporte</span><span class="pd">TCP · UDP → Segmento</span></div>
+                  <div class="osi-bar osi-l3"><span class="n">3</span><span class="nm">Red</span><span class="pd">IP · ICMP → Paquete</span></div>
+                  <div class="osi-bar osi-l2"><span class="n">2</span><span class="nm">Enlace de datos</span><span class="pd">Ethernet · Wi-Fi → Trama</span></div>
+                  <div class="osi-bar osi-l1"><span class="n">1</span><span class="nm">Fisica</span><span class="pd">Cable · señal → Bits</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="osi-bars">
+                  <div class="osi-bar osi-l7"><span class="n">4</span><span class="nm">Aplicacion</span><span class="pd">OSI 5-7 unidas</span></div>
+                  <div class="osi-bar osi-l4"><span class="n">3</span><span class="nm">Transporte</span><span class="pd">TCP · UDP</span></div>
+                  <div class="osi-bar osi-l3"><span class="n">2</span><span class="nm">Internet</span><span class="pd">IP · ICMP · ARP</span></div>
+                  <div class="osi-bar osi-l1"><span class="n">1</span><span class="nm">Acceso a Red</span><span class="pd">Ethernet · Wi-Fi</span></div>
+                </div>
+                <div class="vis-note"><strong>Regla de las PDUs:</strong> al bajar, los datos se envuelven: Datos → Segmento → Paquete → Trama → Bits. Al subir, cada capa lee y descarta su cabecera.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vis" data-aos="fade-up">
+            <div class="vis-title"><i class="bi bi-list-task"></i> Protocolos esenciales por capa</div>
+            <div class="vis-sub">Agrupados por funcion: aplicacion, transporte y red</div>
+            <div class="vis-grid vis-3">
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-globe"></i></div><div><div class="nm">HTTP / HTTPS</div><div class="fd">Web cifrada y no</div><div class="prt">80 / 443</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-file-earmark-arrow-down"></i></div><div><div class="nm">FTP / SFTP</div><div class="fd">Transferencia de archivos</div><div class="prt">21 / 22</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-hdd"></i></div><div><div class="nm">DNS</div><div class="fd">Nombres → IPs</div><div class="prt">53</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-wifi"></i></div><div><div class="nm">DHCP</div><div class="fd">IP automatica</div><div class="prt">67/68 UDP</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-envelope"></i></div><div><div class="nm">SMTP / IMAP</div><div class="fd">Correo saliente/entrante</div><div class="prt">25 / 143</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(57,208,216,.12);color:#39d0d8;"><i class="bi bi-terminal"></i></div><div><div class="nm">SSH</div><div class="fd">Acceso remoto seguro</div><div class="prt">22</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-arrow-left-right"></i></div><div><div class="nm">TCP</div><div class="fd">Fiable, con conexion</div><div class="prt">Transporte</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(63,185,80,.12);color:#3fb950;"><i class="bi bi-send"></i></div><div><div class="nm">UDP</div><div class="fd">Rapido, sin garantia</div><div class="prt">Transporte</div></div></div>
+              <div class="proto-card"><div class="ico" style="background:rgba(227,179,65,.12);color:#e3b341;"><i class="bi bi-diagram-2"></i></div><div><div class="nm">IP / ICMP</div><div class="fd">Direccion y control</div><div class="prt">Red</div></div></div>
+            </div>
+          </div>
+
+          <p class="subhead mt-2">Capa por capa — ¿Que hace cada nivel del modelo OSI?</p>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Capa</th><th>Funcion principal</th><th>PDU</th><th>Dispositivo</th><th>Ejemplo</th></tr>
+            <tr><td>7 Aplicacion</td><td>Interfaz con el usuario y sus programas</td><td>Datos</td><td>Host (software)</td><td>Navegador con HTTP, cliente de correo</td></tr>
+            <tr><td>6 Presentacion</td><td>Traduce formato: cifrado, compresion, codificacion</td><td>Datos</td><td>Host (software)</td><td>SSL/TLS cifrando, JPEG, MP4, ZIP</td></tr>
+            <tr><td>5 Sesion</td><td>Establece, mantiene y cierra sesiones de comunicacion</td><td>Datos</td><td>Host (software)</td><td>NetBIOS, RPC, control de dialogo</td></tr>
+            <tr><td>4 Transporte</td><td>Entrega extremo a extremo, fiabilidad (TCP) o rapidez (UDP)</td><td>Segmento</td><td>Host (SO)</td><td>TCP confirmando datos, UDP para VoIP</td></tr>
+            <tr><td>3 Red</td><td>Direccionamiento logico y enrutamiento entre redes</td><td>Paquete</td><td>Router</td><td>IP eligiendo la ruta, ICMP (ping)</td></tr>
+            <tr><td>2 Enlace de datos</td><td>Acceso al medio, direccion MAC, control de errores de trama</td><td>Trama</td><td>Switch</td><td>Ethernet en la LAN, Wi-Fi, ARP</td></tr>
+            <tr><td>1 Fisica</td><td>Transmision de bits por el medio (voltaje, luz, ondas)</td><td>Bits</td><td>Hub / Repetidor / NIC</td><td>Cable UTP, fibra optica, WiFi radio</td></tr>
+          </table></div>
+          <div class="info-box info-warn mt-2">
+            <span class="icon"><i class="bi bi-journey"></i></span>
+            <div class="content"><strong>Regla para recordar las PDUs:</strong> "Datos - Segmento - Paquete - Trama - Bits" de arriba hacia abajo. Al bajar por las capas los datos se envuelven cada vez mas: eso es el encapsulamiento. Al subir, cada capa lee y descarta su cabecera (desencapsulamiento).</div>
+          </div>
+        </div>
+  </div></div>
+<div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../red-tcp-osi.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <span class="lesson-nav-empty"></span>
+    <a class="lesson-nav-card lesson-nav-next" href="tipos-de-redes-por-extension.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Tipos de Redes por Extension</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

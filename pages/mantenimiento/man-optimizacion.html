@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-optimizacion.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Optimizacion de Windows - Mantenimiento | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-optimizacion.html",
+  "description": "Mantenimiento · Optimizacion de Windows. Limpieza de disco, inicio, servicios, desinstalacion de bloatware, TRIM, plan de energia, actualizaciones y mantenimiento programado.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -89,20 +96,35 @@
     <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip active' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Optimizacion de Windows</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=FG8xx1aBzOo" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">La GUIA DEFINITIVA para Optimizar Windows 10</span>
-        <span class="v-chan">Gamers De Carton</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="optimizacion" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-gear"></i></div>
@@ -117,132 +139,80 @@
         <div><strong>Regla anti-mitos:</strong> evita los "optimizadores" y "limpiadores" de dudosa procedencia. Windows incluye casi todas las herramientas que necesitas. El 90% de la lentitud se arregla con disco, inicio y desinstalaciones.</div>
       </div>
 
-      <div class="accordion open" id="opt-disk">
-        <div class="accordion-header" onclick="toggleAccordion('opt-disk')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd"></i></span><div><div class="accordion-title">Limpieza de disco — Storage Sense y Liberador de espacio</div><div class="accordion-subtitle">Libera GB con las herramientas de Windows</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li><strong>Configuracion → Sistema → Almacenamiento</strong>: activa <strong>Storage Sense</strong> (limpieza automatica de archivos temporales) con frecuencia mensual.</li>
-            <li>Ejecuta la <strong>Limpieza de archivos temporales</strong> del mismo panel: cache, archivos de actualizacion anteriores, descargas temporales.</li>
-            <li><strong>Liberador de espacio (cleanmgr):</strong> tecla Win, escribe "cleanmgr"; marca "Archivos de instalacion temporales" y "Windows Update Cleanup" (los actualizadores viejos ocupan mucho).</li>
-            <li>Revisa la carpeta <strong>Descargas</strong> y <strong>Escritorio</strong>; mueve a disco externo lo que no uses.</li>
-          </ol>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Tip profesional:</strong> "Limpiar archivos del sistema" en el Liberador es lo que borra los Windows Update antiguos. Un equipo con menos de 15% de espacio libre rinde visiblemente peor (SWAP y temporales).</div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="opt-inicio">
-        <div class="accordion-header" onclick="toggleAccordion('opt-inicio')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-rocket-takeoff"></i></span><div><div class="accordion-title">Arranque — controla los programas de inicio</div><div class="accordion-subtitle">Menos programas = arranque mas rapido</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-optimizacion/limpieza-de-disco-storage-sense-y-liberador-de-espacio.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd"></i></div>
+        <div>
+          <div class="lesson-index-title">Limpieza de disco — Storage Sense y Liberador de espacio</div>
+          <div class="lesson-index-desc">Libera GB con las herramientas de Windows</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li>Abre el <strong>Administrador de tareas</strong> (Ctrl+Shift+Esc) → pestana <strong>Aplicaciones de inicio</strong>.</li>
-            <li>Desactiva todo lo que no necesitas al arrancar: updaters, launchers, mensajeria, suites de impresora.</li>
-            <li>Revisa la <strong>columna "Impacto"</strong>: los de impacto alto y que no usas, fuera.</li>
-            <li>Mira tambien <strong>Servicios</strong> (Win+R → <code>msconfig</code> → pestana Servicios): desmarca los de terceros si sospechas que cargan.</li>
-          </ul>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Balance:</strong> desactivar el antivirus o el controlador de la grafica es contraproducente. Desactiva lo que es prescindible: juegos, actualizadores de apps y "helpers" de software que ya no usas.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/arranque-controla-los-programas-de-inicio.html">
+        <div class="lesson-index-icon"><i class="bi bi-rocket-takeoff"></i></div>
+        <div>
+          <div class="lesson-index-title">Arranque — controla los programas de inicio</div>
+          <div class="lesson-index-desc">Menos programas = arranque mas rapido</div>
         </div>
-      </div>
-
-      <div class="accordion" id="opt-desinstalar">
-        <div class="accordion-header" onclick="toggleAccordion('opt-desinstalar')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-trash"></i></span><div><div class="accordion-title">Desinstalacion y bloatware</div><div class="accordion-subtitle">Fuera software que nunca usas</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/desinstalacion-y-bloatware.html">
+        <div class="lesson-index-icon"><i class="bi bi-trash"></i></div>
+        <div>
+          <div class="lesson-index-title">Desinstalacion y bloatware</div>
+          <div class="lesson-index-desc">Fuera software que nunca usas</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li><strong>Configuracion → Aplicaciones → Aplicaciones instaladas:</strong> desinstala lo que no reconozcas ni uses (pruebas, juegos viejos, toolbars).</li>
-            <li>Para programas con muchas migas (antivirus de terceros, suites): usa el <strong>desinstalador oficial</strong> o un remover (ej. Geek Uninstaller) que limpia registros y carpetas residuales.</li>
-            <li>En PCs de fabrica, elimina el <strong>bloatware</strong> preinstalado (pruebas de apps, "utilities" de marca). Con PowerShell: <code>Get-AppxPackage | Remove-AppxPackage</code> para los de usuario (consulta antes que lista).</li>
-            <li>Reinicia y comprueba con el Administrador de tareas que el uso de RAM bajo mejoro.</li>
-          </ol>
-          <div class="alert-box alert-info">
-            <i class="bi bi-info-circle"></i>
-            <div><strong>Precaucion:</strong> no desinstales drivers, ni componentes de la placa (chipset, audio, LAN) ni cosas que Windows marque como "nucleo del sistema". La regla es: no sabes que es y esta en el sistema, no lo toques.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/optimizar-unidades-trim-ssd-y-desfragmentacion-hdd.html">
+        <div class="lesson-index-icon"><i class="bi bi-hdd-network"></i></div>
+        <div>
+          <div class="lesson-index-title">Optimizar unidades — TRIM (SSD) y desfragmentacion (HDD)</div>
+          <div class="lesson-index-desc">Cada tipo de disco se optimiza distinto</div>
         </div>
-      </div>
-
-      <div class="accordion" id="opt-unidades">
-        <div class="accordion-header" onclick="toggleAccordion('opt-unidades')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-hdd-network"></i></span><div><div class="accordion-title">Optimizar unidades — TRIM (SSD) y desfragmentacion (HDD)</div><div class="accordion-subtitle">Cada tipo de disco se optimiza distinto</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/rendimiento-visual-y-plan-de-energia.html">
+        <div class="lesson-index-icon"><i class="bi bi-speedometer2"></i></div>
+        <div>
+          <div class="lesson-index-title">Rendimiento visual y plan de energia</div>
+          <div class="lesson-index-desc">Ajustes finos que se notan en equipos modestos</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>SSD:</strong> Windows ejecuta <strong>TRIM</strong> automaticamente. No desfragmentes un SSD: reduce su vida util sin ganar nada. Verifica en el panel "Optimizar unidades" (Win+R → <code>dfrgui</code>) que el SSD este "optimizado" y con TRIM activo.</li>
-            <li><strong>HDD:</strong> la desfragmentacion reorganiza archivos y acelera la lectura mecanica. Programa el desfragmentado automatico semanal en el mismo panel.</li>
-            <li>Comprueba el estado del disco con <code>chkdsk</code> (lectura) y las SMART del fabricante o CrystalDiskInfo.</li>
-          </ul>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Como saberlo:</strong> en "Optimizar unidades" la columna "Tipo de medio" te dice SSD o Disco duro. Windows ya aplica el metodo correcto para cada uno; solo verifica que este programado.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/mantenimiento-programado.html">
+        <div class="lesson-index-icon"><i class="bi bi-calendar-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Mantenimiento programado</div>
+          <div class="lesson-index-desc">Automatiza para no olvidar</div>
         </div>
-      </div>
-
-      <div class="accordion" id="opt-rendimiento">
-        <div class="accordion-header" onclick="toggleAccordion('opt-rendimiento')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-speedometer2"></i></span><div><div class="accordion-title">Rendimiento visual y plan de energia</div><div class="accordion-subtitle">Ajustes finos que se notan en equipos modestos</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="man-optimizacion/checklist-rapida-del-tecnico.html">
+        <div class="lesson-index-icon"><i class="bi bi-clipboard-check"></i></div>
+        <div>
+          <div class="lesson-index-title">Checklist rapida del tecnico</div>
+          <div class="lesson-index-desc">10 minutos y listo</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Efectos visuales:</strong> Win+R → <code>sysdm.cpl</code> → Opciones avanzadas → Rendimiento → Ajustes. Desactiva animaciones y transparencias si el equipo es viejo.</li>
-            <li><strong>Plan de energia:</strong> Panel de control → Energia → "Alto rendimiento" o "Ultimo rendimiento" (oculto) en laptops de escritorio. En portatiles usa "Equilibrado" con brillo sensato.</li>
-            <li><strong>Memory integrity / Hardware-accelerated scheduling:</strong> en equipos modernos deja activadas las funciones de seguridad de Windows; en PCs muy antiguos pueden costar rendimiento.</li>
-            <li>Actualiza el <strong>driver de la GPU</strong> (DDU + driver nuevo) si notas stutter en video o juegos.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion" id="opt-mantenimiento">
-        <div class="accordion-header" onclick="toggleAccordion('opt-mantenimiento')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-calendar-check"></i></span><div><div class="accordion-title">Mantenimiento programado</div><div class="accordion-subtitle">Automatiza para no olvidar</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tarea</th><th>Frecuencia</th><th>Donde</th></tr>
-            <tr><td>Storage Sense (temporales)</td><td>Mensual</td><td>Configuracion → Almacenamiento</td></tr>
-            <tr><td>Optimizar unidades (TRIM/defrag)</td><td>Semanal (automatico)</td><td>Panel Optimizar unidades</td></tr>
-            <tr><td>Actualizaciones de Windows</td><td>Automatico</td><td>Windows Update</td></tr>
-            <tr><td>Backup del sistema</td><td>Semanal-mensual</td><td>Historial de archivos / herramientas de respaldo</td></tr>
-            <tr><td>Antivirus + escaneo</td><td>Diario (en tiempo real) / escaneo semanal</td><td>Windows Defender</td></tr>
-          </table></div>
-        </div>
-      </div>
-
-      <div class="accordion" id="opt-checklist">
-        <div class="accordion-header" onclick="toggleAccordion('opt-checklist')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-clipboard-check"></i></span><div><div class="accordion-title">Checklist rapida del tecnico</div><div class="accordion-subtitle">10 minutos y listo</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li>Activa Storage Sense y limpia temporales + Windows Update old.</li>
-            <li>Desactiva programas de inicio con impacto alto innecesarios.</li>
-            <li>Desinstala bloatware y pruebas sin miedo (manteniendo drivers).</li>
-            <li>Verifica TRIM en SSD y desfragmentacion en HDD.</li>
-            <li>Confirma actualizaciones y el antivirus activos.</li>
-            <li>Anota el tiempo de arranque ANTES y DESPUES para medir el resultado.</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=FG8xx1aBzOo" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">La GUIA DEFINITIVA para Optimizar Windows 10</span>
+        <span class="v-chan">Gamers De Carton</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -266,8 +236,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

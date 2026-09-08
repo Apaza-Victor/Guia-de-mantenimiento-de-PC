@@ -133,8 +133,52 @@ function initTilt() {
   });
 }
 
+/* === FONDO DE GRADIENTE ANIMADO (colores aleatorios) === */
+function initHeroGradient() {
+  const top = document.getElementById('heroBgTop');
+  const bottom = document.getElementById('heroBgBottom');
+  if (!top || !bottom) return;
+
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDark = () => (document.documentElement.getAttribute('data-theme') || 'dark') !== 'light';
+
+  const rand = (min, max) => min + Math.random() * (max - min);
+  /* tonos masculinos: verde -> cian -> azul (sin morado/rojo/rosado) */
+  const hue = () => Math.floor(150 + Math.random() * 110);
+
+  function buildGradient() {
+    const dark = isDark();
+    const s = dark ? Math.round(50 + Math.random() * 40) : Math.round(55 + Math.random() * 35);
+    const l1 = dark ? Math.round(9 + Math.random() * 11) : Math.round(84 + Math.random() * 8);
+    const l2 = dark ? Math.round(14 + Math.random() * 14) : Math.round(74 + Math.random() * 12);
+    const h1 = hue(), h2 = hue(), h3 = hue();
+    return 'radial-gradient(at 18% 18%, hsl(' + h1 + ',' + s + '%,' + l1 + '%) 0%, transparent 55%),' +
+           'radial-gradient(at 82% 72%, hsl(' + h2 + ',' + s + '%,' + l2 + '%) 0%, transparent 55%),' +
+           'linear-gradient(135deg, hsl(' + h3 + ',' + s + '%,' + (dark ? 10 : 88) + '%) 0%, hsl(' + ((h3 + 45) % 360) + ',' + s + '%,' + (dark ? 18 : 76) + '%) 100%)';
+  }
+
+  let active = top, idle = bottom;
+  active.style.background = buildGradient();
+  active.style.opacity = 1;
+
+  if (reduceMotion) return;
+
+  const timer = setInterval(function () {
+    if (!document.body.contains(active)) { clearInterval(timer); return; }
+    idle.style.background = buildGradient();
+    idle.style.opacity = 1;
+    active.style.opacity = 0;
+    const tmp = active; active = idle; idle = tmp;
+  }, 5000);
+
+  new MutationObserver(function () {
+    active.style.background = buildGradient();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeroAnime();
+  initHeroGradient();
   initCounters();
   initCardReveal();
   if (window.VanillaTilt) initTilt();

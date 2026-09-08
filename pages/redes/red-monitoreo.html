@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-monitoreo.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Monitoreo de Red - Redes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-monitoreo.html",
+  "description": "Redes · Monitoreo de red. Que monitorear, fundamentos SNMP, herramientas (Zabbix, PRTG, Nagios, Cacti), monitoreo de disponibilidad y trafico (NetFlow/sFlow) y alertas.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,20 +99,38 @@
     <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip active' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Monitoreo</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=u0aHPeuAU1E" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Metodologia de analisis de trafico con Wireshark</span>
-        <span class="v-chan">David Pereira</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="monitoreo" data-aos="fade-up">
       <div class="section-header">
         <div class="section-icon" style="background:rgba(57,208,216,.12);border-color:rgba(57,208,216,.25);color:#39d0d8;"><i class="bi bi-activity"></i></div>
@@ -120,119 +145,80 @@
         <div><strong>Objetivo del monitoreo:</strong> detectar problemas ANTES de que los usuarios los vean (enlace caido, trafico anormal, disco del servidor lleno) y tener historicos para dimensionar la red.</div>
       </div>
 
-      <div class="accordion open" id="mon-que">
-        <div class="accordion-header" onclick="toggleAccordion('mon-que')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-search"></i></span><div><div class="accordion-title">Que monitorear</div><div class="accordion-subtitle">Disponibilidad, trafico y salud</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Metrica</th><th>Que detecta</th><th>Como se obtiene</th></tr>
-            <tr><td>Disponibilidad (up/down)</td><td>Equipo caido, enlace perdido</td><td>Ping / SNMP status</td></tr>
-            <tr><td>Latencia y perdida</td><td>Degradacion de enlace, bufferbloat</td><td>Ping continuo, ICMP</td></tr>
-            <tr><td>Uso de CPU/RAM de switches/routers</td><td>Hardware sobrecargado</td><td>SNMP (OIDs de CPU/memoria)</td></tr>
-            <tr><td>Trafico por interfaz (bps)</td><td>Saturacion, picos anormales</td><td>SNMP contadores / NetFlow-sFlow</td></tr>
-            <tr><td>Errores CRC, discards</td><td>Cables o puertos defectuosos</td><td>SNMP contadores de errores</td></tr>
-            <tr><td>Salud de servidores (disco, RAM)</td><td>Recursos de servidores</td><td>Agentes (Zabbix agent, NRPE)</td></tr>
-          </table></div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="mon-snmp">
-        <div class="accordion-header" onclick="toggleAccordion('mon-snmp')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-2"></i></span><div><div class="accordion-title">Fundamentos de SNMP</div><div class="accordion-subtitle">El lenguaje de gestion de la red</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-monitoreo/que-monitorear.html">
+        <div class="lesson-index-icon"><i class="bi bi-search"></i></div>
+        <div>
+          <div class="lesson-index-title">Que monitorear</div>
+          <div class="lesson-index-desc">Disponibilidad, trafico y salud</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>SNMP</strong> (Simple Network Management Protocol) permite a un gestor leer/alterar informacion de dispositivos (agent).</li>
-            <li><strong>OID</strong> (Object Identifier): identificador numerico jerarquico de cada dato (ej. <code>.1.3.6.1.2.1.1.5.0</code> = nombre del sistema).</li>
-            <li><strong>Versiones:</strong> v1 (insegura), v2c (community string en claro), v3 (autenticacion y cifrado — la recomendada).</li>
-            <li><strong>Community:</strong> en v1/v2c la contrasena se llama "community" (public/private por defecto). SIEMPRE cambiala o usa v3.</li>
-            <li><strong>Trampas (traps):</strong> el agente avisa al gestor de eventos (link down, temperatura) sin que el gestor pregunte.</li>
-          </ul>
-          <div class="info-box info-tip">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Herramienta rapida:</strong> con <code>snmpwalk -v2c -c community IP</code> (Net-SNMP) recorres todos los OIDs de un dispositivo y ves que datos expone. Ideal para saber que vas a poder monitorear antes de configurar el gestor.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/fundamentos-de-snmp.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-2"></i></div>
+        <div>
+          <div class="lesson-index-title">Fundamentos de SNMP</div>
+          <div class="lesson-index-desc">El lenguaje de gestion de la red</div>
         </div>
-      </div>
-
-      <div class="accordion" id="mon-herramientas">
-        <div class="accordion-header" onclick="toggleAccordion('mon-herramientas')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-tools"></i></span><div><div class="accordion-title">Herramientas de monitoreo</div><div class="accordion-subtitle">Delas caseras a las enterprise</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/herramientas-de-monitoreo.html">
+        <div class="lesson-index-icon"><i class="bi bi-tools"></i></div>
+        <div>
+          <div class="lesson-index-title">Herramientas de monitoreo</div>
+          <div class="lesson-index-desc">Delas caseras a las enterprise</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Herramienta</th><th>Tipo</th><th>Para que</th></tr>
-            <tr><td>fping / nagios-ping</td><td>CLI</td><td>Monitoreo simple de disponibilidad en scripts</td></tr>
-            <tr><td>Zabbix</td><td>Servidor completo</td><td>Todo: agentes, SNMP, alertas, dashboards</td></tr>
-            <tr><td>PRTG</td><td>Servidor completo (comercial)</td><td>Facil de usar, graficas rapidas, sensores SNMP</td></tr>
-            <tr><td>Nagios / Icinga</td><td>Servidor completo</td><td>Monitoreo de servicios y hosts con plugins</td></tr>
-            <tr><td>Cacti / Observium</td><td>Graficador de trafico</td><td>Graficas RRD de interfaces por SNMP</td></tr>
-            <tr><td>LibreNMS</td><td>Autodeteccion SNMP</td><td>Descubre toda la red y grafica todo automatico</td></tr>
-          </table></div>
-          <div class="info-box info-note">
-            <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Para empezar:</strong> LibreNMS o Zabbix instalados en una VM son la opcion gratuita mas completa. En redes muy pequenas, un script con fping + correo de alerta ya cubre el 80%.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/monitoreo-de-disponibilidad-y-alertas.html">
+        <div class="lesson-index-icon"><i class="bi bi-check-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Monitoreo de disponibilidad y alertas</div>
+          <div class="lesson-index-desc">Configura el &quot;aviso&quot; correcto</div>
         </div>
-      </div>
-
-      <div class="accordion" id="mon-disponibilidad">
-        <div class="accordion-header" onclick="toggleAccordion('mon-disponibilidad')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-check-circle"></i></span><div><div class="accordion-title">Monitoreo de disponibilidad y alertas</div><div class="accordion-subtitle">Configura el "aviso" correcto</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/monitoreo-de-trafico-netflow-sflow.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrows-move"></i></div>
+        <div>
+          <div class="lesson-index-title">Monitoreo de trafico — NetFlow / sFlow</div>
+          <div class="lesson-index-desc">Quien habla con quien y cuanto</div>
         </div>
-        <div class="accordion-body">
-          <ol class="steps">
-            <li>Agrega los hosts (IPs) de switches, routers, servidores y equipos criticos.</li>
-            <li>Define el intervalo de chequeo: 1 minuto para criticos, 5 para el resto.</li>
-            <li>Configura umbrales: latencia > 50ms en la LAN, perdida > 0%, CPU del switch > 80%.</li>
-            <li>Configura las alertas: correo / Telegram / Slack. Evita el "ruido": agrupa y define mantenimientos programados para no recibir falsos positivos.</li>
-            <li>Prueba una alerta manualmente (baja un enlace a proposito) para confirmar que el aviso llega.</li>
-          </ol>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/monitoreo-en-una-red-pequena-o-domestica.html">
+        <div class="lesson-index-icon"><i class="bi bi-house"></i></div>
+        <div>
+          <div class="lesson-index-title">Monitoreo en una red pequena o domestica</div>
+          <div class="lesson-index-desc">Lo practico sin servidores</div>
         </div>
-      </div>
-
-      <div class="accordion" id="mon-trafico">
-        <div class="accordion-header" onclick="toggleAccordion('mon-trafico')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrows-move"></i></span><div><div class="accordion-title">Monitoreo de trafico — NetFlow / sFlow</div><div class="accordion-subtitle">Quien habla con quien y cuanto</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-monitoreo/analisis-de-paquetes-con-wireshark.html">
+        <div class="lesson-index-icon"><i class="bi bi-activity"></i></div>
+        <div>
+          <div class="lesson-index-title">Analisis de paquetes con Wireshark</div>
+          <div class="lesson-index-desc">El microscopio de la red</div>
         </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>NetFlow/sFlow:</strong> protocolos que exportan estadisticas de flujo (IP origen/destino, puertos, bytes) desde switches/routers al colector.</li>
-            <li><strong>Utilidad:</strong> detectar quien consume el ancho de banda (un PC con backup o malware), top talks, comportamiento inusual.</li>
-            <li><strong>Alternativa en la LAN domestica:</strong> herramientas como ntopng o el trafico por IP del propio router dan una vista parcial.</li>
-            <li><strong>SPAN (port mirroring):</strong> en switches gestionados, copiar todo el trafico de un puerto a otro para analizarlo con Wireshark sin interferir.</li>
-          </ul>
-          <div class="alert-box alert-warn">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Privacidad:</strong> el monitoreo de trafico puede leer comunicaciones. Avisa a los usuarios, respeta la legislacion local y limita la captura a metadatos y volumenes, no al contenido.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion" id="mon-casa">
-        <div class="accordion-header" onclick="toggleAccordion('mon-casa')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-house"></i></span><div><div class="accordion-title">Monitoreo en una red pequena o domestica</div><div class="accordion-subtitle">Lo practico sin servidores</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Log del router:</strong> activa los logs y revisa eventos de login, conexion WAN y dispositivos desconocidos.</li>
-            <li><strong>Herramientas de escritorio:</strong> Angry IP Scanner o Advanced IP Scanner para ver que equipos hay conectados.</li>
-            <li><strong>fping script:</strong> un cron que hace ping a tus equipos y te avisa por Telegram si alguno no responde.</li>
-            <li><strong>Uptime Kuma:</strong> herramienta auto-hosteada muy simple para vigilar servicios (web, ping, puertos) con alertas.</li>
-            <li><strong>Dashboards:</strong> un Raspberry Pi con Grafana + Prometheus da un panel moderno para la red de casa sin costo.</li>
-          </ul>
-        </div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=u0aHPeuAU1E" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Metodologia de analisis de trafico con Wireshark</span>
+        <span class="v-chan">David Pereira</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -256,8 +242,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

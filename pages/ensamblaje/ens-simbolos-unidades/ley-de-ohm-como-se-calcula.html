@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ley de Ohm: como se calcula - Simbolos y Unidades | TechGuide</title>
+  <meta name="description" content="La Ley de Ohm relaciona voltaje, corriente y resistencia con tres formulas que son la misma: V = I · R . Con dos valores conocidos siempre puedes...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ley de Ohm: como se calcula - Simbolos y Unidades | TechGuide">
+  <meta property="og:description" content="La Ley de Ohm relaciona voltaje, corriente y resistencia con tres formulas que son la misma: V = I · R . Con dos valores conocidos siempre puedes...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <style>
+    .sym { display: block; width: 68px; height: 34px; margin: 0 auto; }
+    .sym path, .sym circle { stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .sym circle { fill: none; }
+    .sym-td { text-align: center; width: 88px; }
+    .band-chip { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(127,127,127,.35); vertical-align: -2px; margin-right: 6px; }
+    .unit-symbol { font-family: var(--font-mono); color: var(--accent); font-weight: 700; }
+    .magnitude-symbol { font-family: var(--font-mono); color: var(--accent2); font-weight: 700; }
+  </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/ley-de-ohm-como-se-calcula.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ley de Ohm: como se calcula - Simbolos y Unidades | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/ley-de-ohm-como-se-calcula.html",
+  "description": "La Ley de Ohm relaciona voltaje, corriente y resistencia con tres formulas que son la misma: V = I · R . Con dos valores conocidos siempre puedes...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Simbolos y Unidades - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-calculator"></i></div>
+      <h1>Ley de Ohm: como se calcula</h1>
+      <p>Triangulo de Ohm · formulas despejadas · ejemplos resueltos</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-simbolos-unidades.html">Simbolos y Unidades</a><span class="sep">/</span><span class="current">Ley de Ohm: como se calcula</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p class="text-sm text-secondary mb-2">La <strong>Ley de Ohm</strong> relaciona voltaje, corriente y resistencia con tres formulas que son la misma: <span class="unit-symbol">V = I · R</span>. Con dos valores conocidos siempre puedes calcular el tercero. Es la herramienta mas usada para verificar fuentes, elegir resistencias para LEDs y saber cuantos amperios consume cada componente.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Formula</th>
+                  <th>Busca</th>
+                  <th>Ejemplo real</th>
+                  <th>Calculo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="magnitude-symbol">V = I · R</td><td>Voltaje</td><td>Resistor de 10&Omega; con 2 A</td><td>V = 2 × 10 = <strong>20 V</strong></td></tr>
+                <tr><td class="magnitude-symbol">I = V / R</td><td>Corriente</td><td>CPU de 65 W alimentado a 12 V</td><td>I = 65 / 12 = <strong>5.4 A</strong></td></tr>
+                <tr><td class="magnitude-symbol">R = V / I</td><td>Resistencia</td><td>LED de 2 V a 20 mA desde 5 V</td><td>R = (5 - 2) / 0.02 = <strong>150 &Omega;</strong></td></tr>
+                <tr><td class="magnitude-symbol">P = V · I</td><td>Potencia</td><td>Riel +12V que entrega 54 A</td><td>P = 12 × 54 = <strong>648 W</strong></td></tr>
+                <tr><td class="magnitude-symbol">P = V² / R</td><td>Potencia</td><td>Resistor 1k&Omega; a 12 V</td><td>P = 144 / 1000 = <strong>0.14 W</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>El triangulo de Ohm:</strong> tapa con el dedo la incognita. Con <strong>V</strong> arriba y <strong>I · R</strong> abajo: si tapas la V queda <em>I × R</em>; si tapas la I queda <em>V ÷ R</em>; si tapas la R queda <em>V ÷ I</em>. El mismo truco funciona con el triangulo <strong>P · V · I</strong> para potencia.</div>
+          </div>
+          <div class="tools-grid mt-2">
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-lightbulb"></i>
+              <h5>Resistencia para un LED</h5>
+              <p>LED de 2 V que consume 20 mA a 5 V: caida en la resistencia = 5 - 2 = 3 V. R = 3 / 0.02 = <strong>150 &Omega;</strong>. Con 330 &Omega; enciende con menos brillo y dura mas.</p>
+              <span class="card-tag">R = (Vfuente - Vled) / I</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-fan"></i>
+              <h5>Consumo de un ventilador</h5>
+              <p>Un fan de 0.3 A a 12 V consume <strong>3.6 W</strong>. Tres fans mas el LED RGB (5 W) totalizan unos 16 W: cualquier fan hub de la placa los alimenta sin problema.</p>
+              <span class="card-tag">P = V · I</span>
+            </div>
+            <div class="tool-card" data-aos="fade-up">
+              <i class="bi bi-motherboard"></i>
+              <h5>Amperaje por riel de la PSU</h5>
+              <p>La etiqueta dice <strong>+12V / 54A</strong>. La potencia disponible es 12 × 54 = 648 W. Si tu GPU pide 300 W y el resto 150 W, el riel sobra con margen.</p>
+              <span class="card-tag">P = V · I</span>
+            </div>
+          </div>
+          <div class="alert-box alert-info" style="margin-top:12px;">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Regla de oro:</strong> si duplicas el voltaje y mantienes la resistencia, la corriente se duplica y la <strong>potencia se cuadruplica</strong> (P = V² / R). Por eso un resistor "funde" cuando le metes demasiado voltaje: la potencia que debe disipar crece al cuadrado.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-simbolos-unidades.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="que-es-la-resistencia.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Que es la Resistencia</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="serie-y-paralelo.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Serie y paralelo</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

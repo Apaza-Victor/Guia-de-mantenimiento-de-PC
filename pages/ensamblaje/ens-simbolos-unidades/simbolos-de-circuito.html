@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simbolos de Circuito - Simbolos y Unidades | TechGuide</title>
+  <meta name="description" content="En los diagramas (schematic) cada componente se representa con un simbolo estandar. El simbolo de la resistencia es un zigzag (estilo ANSI americano)...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simbolos de Circuito - Simbolos y Unidades | TechGuide">
+  <meta property="og:description" content="En los diagramas (schematic) cada componente se representa con un simbolo estandar. El simbolo de la resistencia es un zigzag (estilo ANSI americano)...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+  <style>
+    .sym { display: block; width: 68px; height: 34px; margin: 0 auto; }
+    .sym path, .sym circle { stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .sym circle { fill: none; }
+    .sym-td { text-align: center; width: 88px; }
+    .band-chip { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(127,127,127,.35); vertical-align: -2px; margin-right: 6px; }
+    .unit-symbol { font-family: var(--font-mono); color: var(--accent); font-weight: 700; }
+    .magnitude-symbol { font-family: var(--font-mono); color: var(--accent2); font-weight: 700; }
+  </style>
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/simbolos-de-circuito.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Simbolos de Circuito - Simbolos y Unidades | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades/simbolos-de-circuito.html",
+  "description": "En los diagramas (schematic) cada componente se representa con un simbolo estandar. El simbolo de la resistencia es un zigzag (estilo ANSI americano)...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Simbolos y Unidades - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-simbolos-unidades.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-diagram-2"></i></div>
+      <h1>Simbolos de Circuito</h1>
+      <p>Como se dibujan resistencia, capacitor, diodo, transistor...</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-simbolos-unidades.html">Simbolos y Unidades</a><span class="sep">/</span><span class="current">Simbolos de Circuito</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p class="text-sm text-secondary mb-2">En los diagramas (schematic) cada componente se representa con un simbolo estandar. El simbolo de la <strong>resistencia</strong> es un zigzag (estilo ANSI americano) o un rectangulo (estilo IEC europeo); su funcion es la misma. Estos son los simbolos mas comunes:</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Simbolo</th>
+                  <th>Componente</th>
+                  <th>Unidad / Valor</th>
+                  <th>Funcion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H8 L11 7 L17 25 L23 7 L29 25 L35 7 L41 25 L47 7 L52 16 H58"/></svg></td>
+                  <td><strong>Resistencia</strong></td>
+                  <td>Ohm (&Omega;)</td>
+                  <td>Limita la corriente; disipa calor</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 6 V26 M40 6 V26"/></svg></td>
+                  <td><strong>Capacitor (no polarizado)</strong></td>
+                  <td>Faradio (F, µF, nF, pF)</td>
+                  <td>Guarda carga y filtra voltaje</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 6 V26 M40 9 Q37 16 40 23 M26 12 V20 M23 16 H29"/></svg></td>
+                  <td><strong>Capacitor electrolitico</strong></td>
+                  <td>µF (polaridad: la placa curva es negativo)</td>
+                  <td>Guarda carga; respeta la polaridad</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H10 A5 5 0 0 1 20 16 A5 5 0 0 1 30 16 A5 5 0 0 1 40 16 A5 5 0 0 1 50 16 H58"/></svg></td>
+                  <td><strong>Inductor / bobina</strong></td>
+                  <td>Henrio (H, µH, mH)</td>
+                  <td>Filtra cambios bruscos de corriente</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H12 L40 8 V24 Z M42 6 V26 M42 16 H58"/></svg></td>
+                  <td><strong>Diodo</strong></td>
+                  <td>Voltaje de caida (~0.7V en silicio)</td>
+                  <td>Deja pasar corriente en una sola direccion</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H12 L36 8 V24 Z M38 6 V26 M38 16 H46 M48 6 L56 10 M56 10 L52 12 M56 10 L54 7 M48 26 L56 22 M56 22 L52 20 M56 22 L54 25"/></svg></td>
+                  <td><strong>LED</strong></td>
+                  <td>mA y voltaje (~2V)</td>
+                  <td>Diodo que emite luz (necesita resistencia)</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H18 M42 16 H58 M18 9 H42 V23 H18 Z"/></svg></td>
+                  <td><strong>Fusible</strong></td>
+                  <td>Amperios (A)</td>
+                  <td>Se quema si pasa demasiada corriente</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M40 16 H58 M20 16 L30 23"/></svg></td>
+                  <td><strong>Interruptor (switch)</strong></td>
+                  <td>A / V (contacto)</td>
+                  <td>Abre o cierra el circuito</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H20 M32 16 H58 M20 10 V22 M32 13 V19 M26 12 V20 M23 16 H29"/></svg></td>
+                  <td><strong>Bateria</strong></td>
+                  <td>Voltios (V) y mAh</td>
+                  <td>Fuente de voltaje (linea larga = positivo)</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M30 2 V16 M10 16 H50 M18 22 H42 M26 28 H34"/></svg></td>
+                  <td><strong>Tierra (GND)</strong></td>
+                  <td>0 V (referencia)</td>
+                  <td>Referencia de 0 voltios del circuito</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><path d="M2 16 H16 M44 16 H58 M16 8 H44 V24 H16 Z M30 8 V24"/></svg></td>
+                  <td><strong>Cristal / cuarzo</strong></td>
+                  <td>MHz (reloj)</td>
+                  <td>Marca la frecuencia del reloj (32.768 kHz, 25 MHz...)</td>
+                </tr>
+                <tr>
+                  <td class="sym-td"><svg class="sym" viewBox="0 0 60 32" aria-hidden="true"><circle cx="30" cy="16" r="15"/><path d="M15 16 H26 M30 1 V12 M30 20 L38 27 M36 24 L38 27 L34 29"/></svg></td>
+                  <td><strong>Transistor NPN</strong></td>
+                  <td>Ganancia (hFE), V, A</td>
+                  <td>Amplifica o commuta (base controla el paso)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-box info-tip mt-2">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <div class="content"><strong>Polaridad:</strong> los componentes que llevan flecha o signo en su simbolo tienen polaridad: el diodo deja pasar la corriente hacia la barra (catodo), el capacitor electrolitico exige conectar el + en la placa recta, y el LED enciende solo con la pata larga (anodo) hacia el positivo.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-simbolos-unidades.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="serie-y-paralelo.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Serie y paralelo</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="prefijos-de-unidades-kilo-mega-micro.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Prefijos de Unidades (kilo, mega, micro...)</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

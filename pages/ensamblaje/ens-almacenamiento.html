@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-almacenamiento.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Almacenamiento - Ensamblaje de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-almacenamiento.html",
+  "description": "Ensamblaje · Almacenamiento. SSD vs HDD vs NVMe, factores de forma M.2, interfaces SATA y PCIe, tipos de celda NAND, RAID 0/1/5/10 y como elegir almacenamiento para tu PC.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
     <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
     <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
     <a class='chip active' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
@@ -94,21 +101,41 @@
     <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
     <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
     <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='ens-herramientas.html'><i class='bi-tools'></i>Herramientas</a>
+    <a class='chip' href='ens-componentes.html'><i class='bi-motherboard'></i>Componentes</a>
+    <a class='chip' href='ens-elegir-psu.html'><i class='bi-lightning-charge'></i>Elegir Fuente</a>
+    <a class='chip active' href='ens-almacenamiento.html'><i class='bi-device-ssd'></i>Almacenamiento</a>
+    <a class='chip' href='ens-tipos.html'><i class='bi-collection'></i>Tipos</a>
+    <a class='chip' href='ens-simbolos-unidades.html'><i class='bi-rulers'></i>Simbolos y Unidades</a>
+    <a class='chip' href='placa-base.html'><i class='bi-cpu'></i>Placa Base</a>
+    <a class='chip' href='ens-paso-a-paso.html'><i class='bi-list-check'></i>Paso a Paso</a>
+    <a class='chip' href='ens-cableado.html'><i class='bi-usb'></i>Cableado</a>
+    <a class='chip' href='ens-checklist.html'><i class='bi-clipboard-check'></i>Checklist</a>
+    <a class='chip' href='ens-primer-encendido.html'><i class='bi-power'></i>Primer Encendido</a>
+    <a class='chip' href='ens-instalacion-detallada.html'><i class='bi-tools'></i>Instalacion Detallada</a>
+    <a class='chip' href='ens-instalacion-so.html'><i class='bi-hdd'></i>Sistema Operativo</a>
+    <a class='chip' href='ens-electronica-gabinete.html'><i class='bi-layout-text-window'></i>Electronica Gabinete</a>
+    <a class='chip' href='ens-guia-puertos.html'><i class='bi-usb-plug'></i>Guia de Puertos</a>
+    <a class='chip' href='ens-gabinete.html'><i class='bi-pc-display'></i>Gabinete</a>
+    <a class='chip' href='ens-atajos-bios.html'><i class='bi-keyboard'></i>Atajos BIOS</a>
+    <a class='chip' href='ens-bios-update.html'><i class='bi-arrow-up-circle'></i>Actualizar BIOS</a>
+    <a class='chip' href='ens-conceptos-clave.html'><i class='bi-book'></i>Conceptos Clave</a>
+    <a class='chip' href='ens-overclocking.html'><i class='bi-speedometer2'></i>Overclocking</a>
+    <a class='chip' href='ens-refrigeracion-liquida.html'><i class='bi-droplet'></i>Refrigeracion Liquida</a>
+    <a class='chip' href='ens-upgrade.html'><i class='bi-arrow-up-circle'></i>Upgrade</a>
+    <a class='chip' href='ens-upgrade-laptop.html'><i class='bi-laptop'></i>Upgrade Laptop</a>
+    <a class='chip' href='ens-guia-compra.html'><i class='bi-cart'></i>Guia de Compra</a>
+    <a class='chip' href='ens-cable-management.html'><i class='bi-hdd-network'></i>Cable Management</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="ensamblaje.html">Ensamblaje</a><span class="sep">/</span><span class="current">Ensamblaje · Almacenamiento</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=I1bY5fuXY3A" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">TODOS Los TIPOS De ALMACENAMIENTO Explicados En 18 Minutos</span>
-        <span class="v-chan">Explicando Tecnologia</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="almacenamiento" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(var(--accent-rgb),.12);border-color:rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-device-ssd"></i></div>
@@ -123,167 +150,85 @@
       <div><strong>La mejor combinacion:</strong> un SSD NVMe para el sistema operativo y programas, y un HDD grande o SSD de capacidad para datos, juegos y copias de seguridad.</div>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-question-circle accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Tipos de almacenamiento</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Tipo</th><th>Velocidad</th><th>Precio por GB</th><th>Uso tipico</th></tr>
-          <tr><td>HDD (mecanico)</td><td>80-200 MB/s</td><td>Muy bajo</td><td>Datos, backups, bibliotecas grandes</td></tr>
-          <tr><td>SSD SATA 2.5"</td><td>500-560 MB/s</td><td>Bajo</td><td>SO en equipos viejos, datos rapidos</td></tr>
-          <tr><td>SSD M.2 SATA</td><td>500-560 MB/s</td><td>Bajo</td><td>Igual que SATA 2.5 pero sin cables</td></tr>
-          <tr><td>SSD M.2 NVMe</td><td>1.400-7.000 MB/s</td><td>Medio</td><td>Sistema operativo y programas (recomendado)</td></tr>
-          <tr><td>SSD PCIe 5.0</td><td>10.000-14.000 MB/s</td><td>Alto</td><td>Workstations y tope de gama</td></tr>
-        </table></div>
-        <div class="chart-box">
-          <canvas id="chart-storage-speeds" aria-label="Velocidades de lectura de HDD, SSD y NVMe en escala logaritmica" role="img"></canvas>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="ens-almacenamiento/tipos-de-almacenamiento.html">
+        <div class="lesson-index-icon"><i class="bi bi-question-circle"></i></div>
+        <div>
+          <div class="lesson-index-title">Tipos de almacenamiento</div>
+          <div class="lesson-index-desc">Tipo Velocidad Precio por GB Uso tipico HDD (mecanico) 80-200 MB/s Muy bajo Datos, backups, bibliotecas...</div>
         </div>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>Ojo:</strong> la velocidad anunciada suele ser de lectura secuencial. En el uso diario (archivos chicos y aleatorios) la diferencia entre NVMe y SATA se nota pero es menor que entre SSD y HDD.</div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/factores-de-forma.html">
+        <div class="lesson-index-icon"><i class="bi bi-fullscreen"></i></div>
+        <div>
+          <div class="lesson-index-title">Factores de forma</div>
+          <div class="lesson-index-desc">Factor Tamano Interfaz Comentarios 3.5" HDD de escritorio SATA Capacidades de 1-24 TB 2.5" HDD portatil o SSD...</div>
         </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-fullscreen accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Factores de forma</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Factor</th><th>Tamano</th><th>Interfaz</th><th>Comentarios</th></tr>
-          <tr><td>3.5"</td><td>HDD de escritorio</td><td>SATA</td><td>Capacidades de 1-24 TB</td></tr>
-          <tr><td>2.5"</td><td>HDD portatil o SSD</td><td>SATA</td><td>El clasico SSD de laptop/desktop</td></tr>
-          <tr><td>M.2 2280</td><td>22 × 80 mm</td><td>SATA o NVMe</td><td>El mas comun hoy; usa un slot en la placa</td></tr>
-          <tr><td>M.2 2230 / 2260 / 22110</td><td>Largos 30/60/110 mm</td><td>SATA o NVMe</td><td>2230 se usa en Steam Deck; 22110 en servidores</td></tr>
-          <tr><td>mSATA</td><td>Tarjeta mini</td><td>SATA</td><td>Antiguo, en laptops viejas</td></tr>
-          <tr><td>U.2</td><td>2.5" reforzado</td><td>PCIe</td><td>Empresarial</td></tr>
-        </table></div>
-        <p class="subhead">Claves de los M.2</p>
-        <ul>
-          <li><strong>Keys:</strong> la muesca de la tarjeta. Key M = PCIe/NVMe (y SATA en algunos), Key B = SATA (o PCIe x2). Los slots de placa moderna aceptan M.2 Key M (y algunos duales B+M).</li>
-          <li><strong>Revision:</strong> el slot puede ser PCIe 3.0, 4.0 o 5.0. Un NVMe 4.0 en slot 3.0 funciona, pero a la velocidad del slot.</li>
-          <li><strong>Disipador:</strong> los NVMe 4.0/5.0 rapidos generan calor; muchas placas traen un heatsink sobre el slot M.2.</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-ethernet accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Interfaces: SATA y PCIe/NVMe</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Interfaz</th><th>Ancho de banda</th><th>Nota</th></tr>
-          <tr><td>SATA I</td><td>1.5 Gb/s</td><td>Obsoleto</td></tr>
-          <tr><td>SATA II</td><td>3 Gb/s (~300 MB/s)</td><td>En placas/laptops viejas</td></tr>
-          <tr><td>SATA III</td><td>6 Gb/s (~600 MB/s)</td><td>Maximo de los SSD SATA (real ~560 MB/s)</td></tr>
-          <tr><td>PCIe 3.0 x4 (NVMe)</td><td>32 Gb/s (~3.500 MB/s)</td><td>Estandar gama media actual</td></tr>
-          <tr><td>PCIe 4.0 x4 (NVMe)</td><td>64 Gb/s (~7.000 MB/s)</td><td>Recomendado para placa/CPU recientes</td></tr>
-          <tr><td>PCIe 5.0 x4 (NVMe)</td><td>128 Gb/s (~14.000 MB/s)</td><td>Tope de gama; requiere disipador</td></tr>
-        </table></div>
-        <div class="alert-box alert-note" style="margin-top:12px;">
-          <i class="bi bi-info-circle"></i>
-          <div>NVMe es el protocolo sobre PCIe; el formato M.2 es solo fisico. Un M.2 puede ser SATA (mas lento) o NVMe (mas rapido). Revisa que tu placa lo soporte antes de comprar.</div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/interfaces-sata-y-pcie-nvme.html">
+        <div class="lesson-index-icon"><i class="bi bi-ethernet"></i></div>
+        <div>
+          <div class="lesson-index-title">Interfaces: SATA y PCIe/NVMe</div>
+          <div class="lesson-index-desc">Interfaz Ancho de banda Nota SATA I 1.5 Gb/s Obsoleto SATA II 3 Gb/s (~300 MB/s) En placas/laptops viejas...</div>
         </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-cpu accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Como son las celdas NAND</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Tipo</th><th>Bits por celda</th><th>Velocidad / costo</th><th>Endurance (TBW)</th><th>Uso</th></tr>
-          <tr><td>SLC</td><td>1</td><td>Muy rapida / cara</td><td>Alta</td><td>Cache de escritura, empresarial</td></tr>
-          <tr><td>MLC</td><td>2</td><td>Rapida</td><td>Media-alta</td><td>SSD gama alta</td></tr>
-          <tr><td>TLC</td><td>3</td><td>Balanceada</td><td>Media</td><td>La mas comun en consumo</td></tr>
-          <tr><td>QLC</td><td>4</td><td>Mas barata</td><td>Baja-media</td><td>SSD de capacidad economica</td></tr>
-        </table></div>
-        <ul>
-          <li><strong>TBW</strong> (Terabytes Written): cuantos TB puedes escribir antes de que las celdas se degraden. Para uso normal, 300-600 TBW duran anos.</li>
-          <li><strong>DRAM vs sin DRAM:</strong> un SSD con cache DRAM mantiene mejores velocidades sostenidas. Los sin DRAM (usualmente los economicos) bajan la velocidad al escribir archivos grandes.</li>
-          <li><strong>S.M.A.R.T.:</strong> todos los discos reportan datos de salud (temperatura, errores, horas). Se revisa con herramientas como CrystalDiskInfo.</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-disc accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">HDD: RPM, cache y CMR vs SMR</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>5400 RPM</strong>: mas silencioso y fresco, para almacenamiento masivo.</li>
-          <li><strong>7200 RPM</strong>: mas rapido, para discos de datos/uso frecuente.</li>
-          <li><strong>Cache:</strong> 32-256 MB; ayuda con operaciones repetidas.</li>
-          <li><strong>CMR</strong>: las pistas no se superponen; escritura estable. Ideal para RAID y NAS.</li>
-          <li><strong>SMR</strong>: mas capacidad por plato pero escrituras sostenidas lentas. NO recomendado para RAID.</li>
-        </ul>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div>Los HDD de escritorio y los de NAS parecen iguales, pero los NAS estan disenados para vibracion y uso 24/7 con funcionalidades especificas. Para un NAS o servidor, compra discos NAS/Enterprise.</div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/como-son-las-celdas-nand.html">
+        <div class="lesson-index-icon"><i class="bi bi-cpu"></i></div>
+        <div>
+          <div class="lesson-index-title">Como son las celdas NAND</div>
+          <div class="lesson-index-desc">Tipo Bits por celda Velocidad / costo Endurance (TBW) Uso SLC 1 Muy rapida / cara Alta Cache de escritura,...</div>
         </div>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-layers accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">RAID</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Nivel</th><th>Minimo de discos</th><th>Capacidad usable</th><th>Beneficio</th><th>Riesgo</th></tr>
-          <tr><td>RAID 0</td><td>2</td><td>100% (suma)</td><td>Velocidad (striping)</td><td>Si falla un disco, se pierde todo</td></tr>
-          <tr><td>RAID 1</td><td>2</td><td>50%</td><td>Mirror: tolerancia a 1 falla</td><td>Menor capacidad</td></tr>
-          <tr><td>RAID 5</td><td>3</td><td>N-1 discos</td><td>Paridad + velocidad</td><td>Reconstruccion lenta, un solo disco</td></tr>
-          <tr><td>RAID 10</td><td>4</td><td>50%</td><td>Velocidad + tolerancia</td><td>Caro en discos</td></tr>
-        </table></div>
-        <ul>
-          <li><strong>Hardware RAID:</strong> controladora propia (placa o tarjeta). Mas confiable y sin carga al CPU.</li>
-          <li><strong>Software RAID / Storage Spaces / mdadm:</strong> usa el SO; facil de configurar, sin hardware extra.</li>
-          <li>RAID <strong>no es una copia de seguridad</strong>: no protege de borrados, virus ni incendios. Siempre respalda aparte.</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-boxes accordion-icon" style="color:var(--accent);"></i>
-        <span class="accordion-title">Como elegir para tu caso</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>PC de oficina / hogar:</strong> 1 SSD NVMe de 512 GB - 1 TB para todo.</li>
-          <li><strong>Gaming:</strong> NVMe 1 TB para SO + juegos activos, HDD o SSD 2 TB para la biblioteca.</li>
-          <li><strong>Creator / video:</strong> NVMe 4.0 rapido para el proyecto y discos grandes para material.</li>
-          <li><strong>NAS / servidor:</strong> discos NAS/Enterprise con RAID 1 o 5 + respaldo externo.</li>
-          <li><strong>Laptop:</strong> prioriza NVMe de bajo consumo (los QLC con cache funcionan bien).</li>
-        </ul>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Para particionar y elegir formato de archivos al instalar el sistema, consulta <a href="ens-instalacion-so.html">Sistema Operativo</a> e <a href="../instalacion.html#sistemas-archivos">Instalacion y Almacenamiento</a>.</div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/hdd-rpm-cache-y-cmr-vs-smr.html">
+        <div class="lesson-index-icon"><i class="bi bi-disc"></i></div>
+        <div>
+          <div class="lesson-index-title">HDD: RPM, cache y CMR vs SMR</div>
+          <div class="lesson-index-desc">5400 RPM : mas silencioso y fresco, para almacenamiento masivo. 7200 RPM : mas rapido, para discos de...</div>
         </div>
-      </div></div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/raid.html">
+        <div class="lesson-index-icon"><i class="bi bi-layers"></i></div>
+        <div>
+          <div class="lesson-index-title">RAID</div>
+          <div class="lesson-index-desc">Nivel Minimo de discos Capacidad usable Beneficio Riesgo RAID 0 2 100% (suma) Velocidad (striping) Si falla...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/como-elegir-para-tu-caso.html">
+        <div class="lesson-index-icon"><i class="bi bi-boxes"></i></div>
+        <div>
+          <div class="lesson-index-title">Como elegir para tu caso</div>
+          <div class="lesson-index-desc">PC de oficina / hogar: 1 SSD NVMe de 512 GB - 1 TB para todo. Gaming: NVMe 1 TB para SO + juegos activos, HDD...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="ens-almacenamiento/monitorizacion-y-clonado-de-discos.html">
+        <div class="lesson-index-icon"><i class="bi bi-heart-pulse"></i></div>
+        <div>
+          <div class="lesson-index-title">Monitorizacion y Clonado de Discos</div>
+          <div class="lesson-index-desc">SMART, CrystalDiskInfo, clonado de discos de HDD a SSD, TRIM y monitoreo de salud del almacenamiento...</div>
+        </div>
+      </a>
     </div>
+
+    </div>
+</div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=I1bY5fuXY3A" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">TODOS Los TIPOS De ALMACENAMIENTO Explicados En 18 Minutos</span>
+        <span class="v-chan">Explicando Tecnologia</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -309,8 +254,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

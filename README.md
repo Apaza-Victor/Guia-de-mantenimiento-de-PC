@@ -117,7 +117,7 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 
 ## ✨ Características
 
-- **Home 3D**: héroe con núcleo tecnológico procedural (Babylon.js, partículas GPU) y constelación + anillos orbitales (Three.js), con parallax y adaptación al tema claro/oscuro
+- **Home 3D**: héroe con constelación + anillos orbitales (Three.js), iconos de hardware flotantes y parallax, con adaptación al tema claro/oscuro
 - **Responsiva**: se adapta desde 368px hasta pantallas grandes
 - **Modo oscuro/claro**: toggle con persistencia en localStorage
 - **Buscador global**: indexa los títulos, encabezados y términos de todas las páginas
@@ -146,7 +146,6 @@ Plataforma educativa **100% en español** con guías completas de **ensamblaje, 
 | AOS | Animaciones al hacer scroll |
 | anime.js | Animaciones del hero y contadores |
 | Three.js | Constelación y anillos orbitales 3D del home |
-| Babylon.js | Núcleo 3D procedural del hero con partículas |
 | CDN | Librerías servidas desde jsDelivr (sin build step) |
 
 ---
@@ -188,7 +187,7 @@ assets/
     subnet.js           → Calculadora de subred
     home.js             → Animaciones del home con anime.js (hero, contadores, tarjetas)
     home3d.js           → Constelación + anillos orbitales 3D del home (Three.js)
-    home-babylon.js     → Núcleo 3D procedural del hero con partículas (Babylon.js)
+    circuit-board.js    → Iconos de hardware flotantes del hero
     cables-3d.js        → Visores 3D de cables, conectores y refrigeración
     search.js           → Buscador global
     search-index.js     → Índice de búsqueda (generado automáticamente)
@@ -202,11 +201,17 @@ pages/
   redes/                → Módulo de redes
     redes.html          → Hub (índice de subsecciones)
     red-*.html          → Subsecciones (tcp-osi, topologías, ip-address, ...)
+  herramientas/         → Módulo de herramientas
+    herramientas.html   → Hub (índice de subsecciones)
+    faq.html            → FAQ / Troubleshooting
+    comparativas.html   → Comparativas
+    cuestionarios.html  → Cuestionarios
+    presupuesto.html    → Armado por presupuesto
+    referencia.html     → Referencia rápida de hardware
+    instalacion.html    → Instalación y almacenamiento
+    memoria-ram.html    → Memoria RAM
   comandos.html         → Comandos técnicos y atajos de teclado
   recursos.html         → Recursos web (enlaces curados)
-  referencia.html       → Referencia rápida de hardware (RAM, PCIe, SATA, PSU, MB, beep)
-  memoria-ram.html      → Memoria RAM (generaciones DDR, velocidades, tipos y latencias)
-  instalacion.html      → Instalación y almacenamiento (FS, RAID, USB boot, particionado, post-install)
   glosario.html         → Glosario de términos técnicos
 ```
 

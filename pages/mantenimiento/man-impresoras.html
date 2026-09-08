@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-impresoras.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Mantenimiento de Impresoras - Mantenimiento de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-impresoras.html",
+  "description": "Mantenimiento · Impresoras. Tipos de impresora, mantenimiento preventivo laser y de tinta, cabezales, atascos de papel, consumibles y problemas comunes de impresion en red.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -89,21 +96,36 @@
     <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip active' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip active' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Impresoras</span></nav>
 
   
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=6KmVFwKGXGs" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">COMO LIMPIAR CABEZALES DE IMPRESORA EPSON RAPIDO</span>
-        <span class="v-chan">buscoideas</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="impresoras" data-aos="fade-up">
     <div class="section-header">
       <div class="section-icon" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.25);color:var(--accent2);"><i class="bi bi-printer"></i></div>
@@ -118,133 +140,71 @@
       <div><strong>Regla basica:</strong> lee el manual de tu modelo. Cada impresora tiene sus pasos de limpieza y sus repuestos; forzar piezas puede danar los rodillos o los cabezales.</div>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-collection accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Tipos de impresora</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Tipo</th><th>Ventajas</th><th>Desventajas</th><th>Uso tipico</th></tr>
-          <tr><td>Laser</td><td>Rapida, texto nitido, tinta no se seca, bajo costo por pagina</td><td>Cara de comprar, no ideal para fotos</td><td>Oficina, texto en volumen</td></tr>
-          <tr><td>Inkjet (tinta)</td><td>Barata, fotos de calidad</td><td>Tinta cara y se seca si no se usa, cabezales se obstruyen</td><td>Hogar, fotos</td></tr>
-          <tr><td>Multifuncion</td><td>Imprime, escanea, copia y fax</td><td>Mas piezas que cuidar</td><td>Oficina</td></tr>
-          <tr><td>Termica</td><td>Sin tinta, compacta</td><td>Papel especial, corta duracion</td><td>Etiquetas, recibos, facturacion</td></tr>
-        </table></div>
-      </div></div>
+    
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-impresoras/tipos-de-impresora.html">
+        <div class="lesson-index-icon"><i class="bi bi-collection"></i></div>
+        <div>
+          <div class="lesson-index-title">Tipos de impresora</div>
+          <div class="lesson-index-desc">Tipo Ventajas Desventajas Uso tipico Laser Rapida, texto nitido, tinta no se seca, bajo costo por pagina Cara...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-impresoras/mantenimiento-preventivo-laser.html">
+        <div class="lesson-index-icon"><i class="bi bi-fire"></i></div>
+        <div>
+          <div class="lesson-index-title">Mantenimiento preventivo laser</div>
+          <div class="lesson-index-desc">Limpia el polvo del interior con un pincel suave o un pano antiestatico (el toner en polvo puede manchar: usa...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-impresoras/mantenimiento-de-impresoras-de-tinta.html">
+        <div class="lesson-index-icon"><i class="bi bi-droplet"></i></div>
+        <div>
+          <div class="lesson-index-title">Mantenimiento de impresoras de tinta</div>
+          <div class="lesson-index-desc">Usalas seguido: la tinta se seca si la impresora pasa semanas sin usarse. Imprime una pagina de prueba...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-impresoras/atascos-de-papel.html">
+        <div class="lesson-index-icon"><i class="bi bi-file-earmark-x"></i></div>
+        <div>
+          <div class="lesson-index-title">Atascos de papel</div>
+          <div class="lesson-index-desc">Apaga la impresora y desconectala. Abre las compuertas de acceso indicadas en el panel/mensaje para liberar...</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-impresoras/consumibles.html">
+        <div class="lesson-index-icon"><i class="bi bi-cart"></i></div>
+        <div>
+          <div class="lesson-index-title">Consumibles</div>
+          <div class="lesson-index-desc">Toner: el original rinde y no danas la impresora. Los compatibles son mas baratos pero de calidad variable....</div>
+        </div>
+      </a>
+      <a class="lesson-index-card" href="man-impresoras/impresion-en-red-y-problemas-comunes.html">
+        <div class="lesson-index-icon"><i class="bi bi-wifi"></i></div>
+        <div>
+          <div class="lesson-index-title">Impresion en red y problemas comunes</div>
+          <div class="lesson-index-desc">Problema Solucion Impresora "sin conexion / offline" Verifica que este encendida y en la misma red. En...</div>
+        </div>
+      </a>
     </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-fire accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Mantenimiento preventivo laser</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li>Limpia el <strong>polvo</strong> del interior con un pincel suave o un pano antiestatico (el toner en polvo puede manchar: usa guantes).</li>
-          <li>Revisa y limpia los <strong>rodillos</strong> de arrastre y el separador con un pano humedo con agua destilada (nunca alcohol en el laser).</li>
-          <li>Consulta el manual para la <strong>cuenta de mantenimiento</strong>: muchos modelos piden kit de mantenimiento (fusor, rodillos) cada X paginas.</li>
-          <li>Usa papel seco y de buena calidad; el papel humedo causa atascos.</li>
-          <li>Ventila el area: el laser libera ozono y particulas de toner.</li>
-        </ul>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div><strong>No uses alcohol</strong> para limpiar el tambor (drum) ni los rodillos de goma de una laser: los danas. Para el tambor usa un pano seco o el metodo del fabricante.</div>
-        </div>
-      </div></div>
     </div>
+</div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-droplet accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Mantenimiento de impresoras de tinta</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Usalas seguido:</strong> la tinta se seca si la impresora pasa semanas sin usarse. Imprime una pagina de prueba semanal.</li>
-          <li><strong>Limpieza de cabezales:</strong> desde el software de la impresora usa la utilidad "Limpieza de cabezales". No la repitas de forma desmedida: gasta tinta.</li>
-          <li>Si la calidad sigue mala, haz una <strong>calibracion/alineacion</strong> de cabezales.</li>
-          <li>Limpia el <strong>carro</strong> y los contactos con un pano humedo (sin desmontar de mas).</li>
-          <li>Manten los <strong>cartuchos</strong> tapados cuando estan fuera y no los dejes en el sol.</li>
-        </ul>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Si la impresora de tinta se va a quedar meses sin uso, extrae los cartuchos y guardalos en una bolsa sellada para que no se sequen.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-file-earmark-x accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Atascos de papel</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ol>
-          <li>Apaga la impresora y desconectala.</li>
-          <li>Abre las <strong>compuertas de acceso</strong> indicadas en el panel/mensaje para liberar la presion del rodillo.</li>
-          <li>Retira el papel <strong>en la direccion del rodillo</strong> (sin jalar en contra: rasgaria hojas).</li>
-          <li>Si queda un pedazo, retira todos los restos; los restos de papel son la causa de atascos repetidos.</li>
-          <li>Revisa el camino de papel: hojas dobladas, grapas o bordes mojados lo bloquean.</li>
-        </ol>
-        <div class="alert-box alert-warn" style="margin-top:12px;">
-          <i class="bi bi-exclamation-triangle"></i>
-          <div>No introduzcas objetos (pinzas, destornilladores) en el camino de papel. Si no sale, revisa el manual para desmontar la unidad o llama a soporte.</div>
-        </div>
-      </div></div>
-    </div>
 
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-cart accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Consumibles</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <ul>
-          <li><strong>Toner:</strong> el original rinde y no danas la impresora. Los compatibles son mas baratos pero de calidad variable.</li>
-          <li><strong>Cartuchos de tinta:</strong> guardalos sellados; agitalos suavemente antes de instalar (en algunos modelos).</li>
-          <li><strong>Drum / tambor:</strong> pieza de desgaste que se reemplaza cada varios toners (segun modelo).</li>
-          <li><strong>Kit de mantenimiento</strong> (laser): rodillos de arrastre, separador y fusor; se cambia segun la cuenta de paginas.</li>
-          <li>Compra <strong>consumibles originales</strong> para equipos criticos y verifica el numero de pagina rendido vs el costo por pagina.</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="accordion-item" data-aos="fade-up">
-      <div class="accordion-header">
-        <i class="bi bi-wifi accordion-icon" style="color:var(--accent2);"></i>
-        <span class="accordion-title">Impresion en red y problemas comunes</span>
-        <i class="bi bi-chevron-down accordion-chevron"></i>
-      </div>
-      <div class="accordion-body"><div class="accordion-content">
-        <div class="table-scroll"><table class="cmd-table">
-          <tr><th>Problema</th><th>Solucion</th></tr>
-          <tr><td>Impresora "sin conexion / offline"</td><td>Verifica que este encendida y en la misma red. En Windows: Configuracion > Dispositivos > Impresoras, desmarca "Usar la impresora sin conexion".</td></tr>
-          <tr><td>No aparece en la red</td><td>Reinicia impresora y router; verifica el IP fijo o la reserva DHCP; revisa firewall.</td></tr>
-          <tr><td>Cola de impresion atascada</td><td>Borrala: en la cola de impresion o reinicia el servicio <code>Print Spooler</code>.</td></tr>
-          <tr><td>Impresiones lentas / se cortan</td><td>Revisa el nivel de tinta, la conexion WiFi y los drivers.</td></tr>
-          <tr><td>Calidad pobre (rayas, borrosa)</td><td>Limpieza de cabezales (tinta) o limpieza del tambor/fusor (laser).</td></tr>
-          <tr><td>Codigos de error en el panel</td><td>Busca el codigo en el manual: indican atasco, puerta abierta, consumible o pieza de mantenimiento.</td></tr>
-        </table></div>
-        <div class="alert-box alert-tip" style="margin-top:12px;">
-          <i class="bi bi-lightbulb"></i>
-          <div>Reiniciar el spooler suele desbloquear la cola:</div>
-        </div>
-        <div class="code-block">
-          <div class="code-block-header"><span class="code-lang">cmd — reiniciar Print Spooler</span><button class="code-copy" onclick="copyCode(this)">COPIAR</button></div>
-          <pre><span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">net</span> <span class="cmd-value">stop spooler</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">net</span> <span class="cmd-value">start spooler</span></pre>
-        </div>
-      </div></div>
-    </div>
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=6KmVFwKGXGs" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">COMO LIMPIAR CABEZALES DE IMPRESORA EPSON RAPIDO</span>
+        <span class="v-chan">buscoideas</span>
+      </span>
+    </a>
   </div>
 
 </div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -268,8 +228,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

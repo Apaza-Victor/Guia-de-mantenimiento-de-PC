@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pruebas y Validacion Post-Ensamblaje - Instalacion Detallada de Componentes | TechGuide</title>
+  <meta name="description" content="Antes de cerrar el gabinete y de instalar el sistema operativo, valida que el hardware funcione correctamente. Esto ahorra horas de diagnostico...">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pruebas y Validacion Post-Ensamblaje - Instalacion Detallada de Componentes | TechGuide">
+  <meta property="og:description" content="Antes de cerrar el gabinete y de instalar el sistema operativo, valida que el hardware funcione correctamente. Esto ahorra horas de diagnostico...">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/pruebas-y-validacion-post-ensamblaje.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Pruebas y Validacion Post-Ensamblaje - Instalacion Detallada de Componentes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/pruebas-y-validacion-post-ensamblaje.html",
+  "description": "Antes de cerrar el gabinete y de instalar el sistema operativo, valida que el hardware funcione correctamente. Esto ahorra horas de diagnostico...",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Instalacion Detallada de Componentes - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-graph-up"></i></div>
+      <h1>Pruebas y Validacion Post-Ensamblaje</h1>
+      <p>Ensamblaje · Instalacion Detallada de Componentes — Leccion 11 de 13</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-instalacion-detallada.html">Instalacion Detallada de Componentes</a><span class="sep">/</span><span class="current">Pruebas y Validacion Post-Ensamblaje</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Antes de cerrar el gabinete y de instalar el sistema operativo, valida que el hardware funcione correctamente. Esto ahorra horas de diagnostico cuando el PC ya esta montado.</p>
+          <ul>
+            <li><strong>Bench test previo:</strong> Sobre la caja antiestatica de la placa (fuera del gabinete) arma el minimo: PSU, placa, CPU con cooler y una sola RAM. Esto confirma el POST antes de perder tiempo montando todo.</li>
+            <li><strong>Primer POST:</strong> Si escuchas un pitido y aparece el logo del fabricante, el hardware basico funciona. Sin pitido y con pantalla negra, revisa la RAM, los conectores ATX/EPS y el cable de video.</li>
+          </ul>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Prueba</th><th>Herramienta</th><th>Duracion</th><th>Que verificar</th></tr>
+            <tr><td>Memoria RAM</td><td>MemTest86 (USB booteable)</td><td>2-4 pasadas</td><td>Sin errores en ninguna pasada</td></tr>
+            <tr><td>CPU bajo carga</td><td>Prime95 (modo Small FFT)</td><td>15-30 min</td><td>Temperatura estable por debajo de 90 grados y sin throttling</td></tr>
+            <tr><td>GPU bajo carga</td><td>FurMark o 3DMark</td><td>15-30 min</td><td>Temperatura de la GPU por debajo de 85 grados, sin artefactos ni cierres</td></tr>
+            <tr><td>Almacenamiento</td><td>CrystalDiskInfo / CrystalDiskMark</td><td>5 min</td><td>Estado "Bueno", SMART sin errores y velocidades acordes al modelo</td></tr>
+          </table></div>
+          <div class="alert-box alert-danger" style="margin-top:12px;">
+            <i class="bi bi-exclamation-octagon"></i>
+            <div><strong>Temperaturas seguras:</strong> El CPU en reposo debe estar por debajo de 50 grados y bajo carga por debajo de 90 grados (los Ryzen 7000 y Core de 13/14 generacion toleran hasta 95 grados pero con throttling). La GPU no debe superar los 85 grados bajo carga. Valores mas altos de forma sostenida indican un problema de montaje, flujo de aire o pasta termica.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-instalacion-detallada.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="instalacion-de-gpu-vertical-riser-cable.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Instalacion de GPU Vertical (Riser Cable)</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="actualizacion-de-bios-flashing.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Actualizacion de BIOS (Flashing)</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

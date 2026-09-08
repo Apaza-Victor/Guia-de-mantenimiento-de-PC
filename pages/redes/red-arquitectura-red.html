@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-arquitectura-red.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Arquitectura - Redes de Computadoras | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/redes/red-arquitectura-red.html",
+  "description": "Redes · Arquitectura. Cliente-servidor vs P2P, dominio broadcast.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
     <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
     <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
     <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
@@ -92,20 +99,38 @@
     <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
     <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
     <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='red-tcp-osi.html'><i class='bi-globe2'></i>TCP/IP y OSI</a>
+    <a class='chip' href='red-topologias.html'><i class='bi-diagram-3'></i>Topologias</a>
+    <a class='chip' href='red-dispositivos-red.html'><i class='bi-router'></i>Dispositivos</a>
+    <a class='chip' href='red-ip-address.html'><i class='bi-ethernet'></i>Direccionamiento IP</a>
+    <a class='chip' href='red-ipv6.html'><i class='bi-globe'></i>IPv4/IPv6</a>
+    <a class='chip' href='red-dns.html'><i class='bi-server'></i>DNS</a>
+    <a class='chip' href='red-dhcp.html'><i class='bi-ethernet'></i>DHCP</a>
+    <a class='chip' href='red-routing.html'><i class='bi-signpost-split'></i>Enrutamiento</a>
+    <a class='chip' href='red-so-red.html'><i class='bi-hdd-network'></i>SO de Red</a>
+    <a class='chip' href='red-componentes-red.html'><i class='bi-hdd-network'></i>Componentes</a>
+    <a class='chip' href='red-medios-transmision.html'><i class='bi-usb-cable'></i>Medios</a>
+    <a class='chip' href='red-cables-conectores.html'><i class='bi-plug'></i>Cables y Conectores</a>
+    <a class='chip' href='red-wifi.html'><i class='bi-wifi'></i>Inalambricas</a>
+    <a class='chip active' href='red-arquitectura-red.html'><i class='bi-diagram-3'></i>Arquitectura</a>
+    <a class='chip' href='red-router-practico.html'><i class='bi-router'></i>Router Practico</a>
+    <a class='chip' href='red-nat.html'><i class='bi-arrow-left-right'></i>NAT y Port Forwarding</a>
+    <a class='chip' href='red-troubleshooting.html'><i class='bi-wrench'></i>Troubleshooting</a>
+    <a class='chip' href='red-monitoreo.html'><i class='bi-activity'></i>Monitoreo</a>
+    <a class='chip' href='red-vlan.html'><i class='bi-layers'></i>VLAN</a>
+    <a class='chip' href='red-switch.html'><i class='bi-hdd-network'></i>Switches</a>
+    <a class='chip' href='red-seguridad-redes.html'><i class='bi-shield-lock'></i>Seguridad de Red</a>
+    <a class='chip' href='red-vpn.html'><i class='bi-shield-lock'></i>VPN</a>
+    <a class='chip' href='red-laboratorio.html'><i class='bi-laptop'></i>Laboratorio</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="redes.html">Redes</a><span class="sep">/</span><span class="current">Redes · Arquitectura</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=p85dXRGwJBQ" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Arquitectura Cliente Servidor: que es y como funciona</span>
-        <span class="v-chan">Arsys</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="arquitectura-red" data-aos="fade-up">
       <h2 class="section-title"><i class="bi bi-diagram-3"></i> Arquitectura de Red</h2>
       <p class="section-subtitle">Cliente-Servidor vs P2P · Dominio de broadcast · OSI vs TCP/IP · Topologia</p>
@@ -115,104 +140,70 @@
         <div class="content"><strong>Que es la arquitectura de red?</strong> Es el plan con el que se conectan los protocolos y otros programas de software. La arquitectura de una red viene definida por su topologia, el metodo de acceso a la red y los protocolos de comunicacion.</div>
       </div>
 
-      <div class="accordion open" id="cliente-servidor-p2p">
-        <div class="accordion-header" onclick="toggleAccordion('cliente-servidor-p2p')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-arrow-left-right"></i></span><div><div class="accordion-title">Cliente-Servidor vs Peer-to-Peer</div><div class="accordion-subtitle">Modelos de red · ventajas y desventajas</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Caracteristica</th><th>Cliente-Servidor</th><th>Peer-to-Peer (P2P)</th></tr>
-            <tr><td>Control</td><td>Centralizado en el servidor</td><td>Distribuido entre todos los nodos</td></tr>
-            <tr><td>Costo</td><td>Alto (requiere servidor dedicado)</td><td>Bajo (sin servidor dedicado)</td></tr>
-            <tr><td>Seguridad</td><td>Alta (autenticacion centralizada)</td><td>Baja (cada usuario gestiona su seguridad)</td></tr>
-            <tr><td>Escalabilidad</td><td>Alta (agregar clientes es facil)</td><td>Baja (degrada con mas nodos)</td></tr>
-            <tr><td>Administracion</td><td>Centralizada, mas facil</td><td>Distribuida, mas compleja</td></tr>
-            <tr><td>Dependencia</td><td>Si el servidor falla, la red cae</td><td>No hay punto unico de fallo</td></tr>
-          </table></div>
-        </div>
-      </div>
+      
 
-      <div class="accordion" id="dominio-broadcast">
-        <div class="accordion-header" onclick="toggleAccordion('dominio-broadcast')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-broadcast"></i></span><div><div class="accordion-title">Dominio de Broadcast</div><div class="accordion-subtitle">Area de difusion · colision de paquetes</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-arquitectura-red/cliente-servidor-vs-peer-to-peer.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div>
+          <div class="lesson-index-title">Cliente-Servidor vs Peer-to-Peer</div>
+          <div class="lesson-index-desc">Modelos de red · ventajas y desventajas</div>
         </div>
-        <div class="accordion-body">
-          <p class="text-sm text-secondary mb-2">Un dominio de broadcast es el conjunto de todos los dispositivos que pueden recibir paquetes de difusion (broadcast) entre si. En una LAN con un switch, todos los puertos pertenecen al mismo dominio de broadcast. Los routers separan dominios de broadcast, limitando el trafico innecesario.</p>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tipo</th><th>Descripcion</th></tr>
-            <tr><td>Dominio de colision</td><td>Grupo de dispositivos donde las transmisiones pueden colisionar (segmento CSMA/CD). Un switch divide los dominios de colision.</td></tr>
-            <tr><td>Dominio de broadcast</td><td>Grupo de dispositivos que reciben los paquetes broadcast. Un router separa dominios de broadcast.</td></tr>
-          </table></div>
+      </a>
+      <a class="lesson-index-card" href="red-arquitectura-red/dominio-de-broadcast.html">
+        <div class="lesson-index-icon"><i class="bi bi-broadcast"></i></div>
+        <div>
+          <div class="lesson-index-title">Dominio de Broadcast</div>
+          <div class="lesson-index-desc">Area de difusion · colision de paquetes</div>
         </div>
-      </div>
-
-      <div class="accordion" id="osi-vs-tcpip">
-        <div class="accordion-header" onclick="toggleAccordion('osi-vs-tcpip')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-layers"></i></span><div><div class="accordion-title">Comparativa OSI vs TCP/IP</div><div class="accordion-subtitle">7 capas vs 4 capas · modelo teorico vs practico</div></div></div>
-          <span class="accordion-chevron">▼</span>
+      </a>
+      <a class="lesson-index-card" href="red-arquitectura-red/comparativa-osi-vs-tcp-ip.html">
+        <div class="lesson-index-icon"><i class="bi bi-layers"></i></div>
+        <div>
+          <div class="lesson-index-title">Comparativa OSI vs TCP/IP</div>
+          <div class="lesson-index-desc">7 capas vs 4 capas · modelo teorico vs practico</div>
         </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>OSI (7 capas)</th><th>TCP/IP (4 capas)</th><th>Protocolos</th></tr>
-            <tr><td>7. Aplicacion</td><td rowspan="3">Aplicacion</td><td>HTTP, FTP, DNS, SMTP</td></tr>
-            <tr><td>6. Presentacion</td><td>SSL/TLS, JPEG</td></tr>
-            <tr><td>5. Sesion</td><td>NetBIOS, RPC</td></tr>
-            <tr><td>4. Transporte</td><td>Transporte</td><td>TCP, UDP</td></tr>
-            <tr><td>3. Red</td><td>Internet</td><td>IP, ICMP, ARP</td></tr>
-            <tr><td>2. Enlace de datos</td><td rowspan="2">Acceso a Red</td><td>Ethernet, Wi-Fi</td></tr>
-            <tr><td>1. Fisica</td><td>Cable, senal electrica/optica</td></tr>
-          </table></div>
-          <div class="info-box info-note mt-2">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Modelo OSI vs TCP/IP</strong> OSI es un modelo teorico de referencia (ISO). TCP/IP es el modelo practico implementado en Internet. TCP/IP combina las capas 5, 6 y 7 de OSI en una sola capa de aplicacion.</div>
-          </div>
+      </a>
+      <a class="lesson-index-card" href="red-arquitectura-red/topologia-fisica-vs-logica.html">
+        <div class="lesson-index-icon"><i class="bi bi-diagram-3-fill"></i></div>
+        <div>
+          <div class="lesson-index-title">Topologia Fisica vs Logica</div>
+          <div class="lesson-index-desc">Diseno del medio vs trayectoria de la senal</div>
         </div>
-      </div>
-
-      <div class="accordion" id="topologia-fisica-logica">
-        <div class="accordion-header" onclick="toggleAccordion('topologia-fisica-logica')">
-          <div class="accordion-title-row"><span class="accordion-icon"><i class="bi bi-diagram-3-fill"></i></span><div><div class="accordion-title">Topologia Fisica vs Logica</div><div class="accordion-subtitle">Diseno del medio vs trayectoria de la senal</div></div></div>
-          <span class="accordion-chevron">▼</span>
-        </div>
-        <div class="accordion-body">
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tipo</th><th>Definicion</th><th>Ejemplo</th></tr>
-            <tr><td>Topologia Fisica</td><td>Se refiere al diseno actual del medio de transmision de la red — como estan conectados fisicamente los cables y dispositivos.</td><td>Cable UTP conectando PCs a un switch en forma de estrella</td></tr>
-            <tr><td>Topologia Logica</td><td>Se refiere a la trayectoria logica que sigue una senal a su paso por los nodos de la red — como viajan los datos.</td><td>Un anillo token ring puede ser fisicamente estrella pero logicamente anillo</td></tr>
-          </table></div>
-        </div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-globe2 accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Tecnologias WAN y Backbones</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
-        </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>Una <strong>WAN</strong> (Wide Area Network) interconecta redes locales a traves de grandes distancias usando infraestructura de operadores. El <strong>backbone</strong> es la red troncal de alta capacidad que une ciudades y paises y sobre la que viaja la mayoria del trafico de Internet.</p>
-          <ul>
-            <li><strong>MPLS:</strong> enrutamiento por etiquetas. Cada paquete entra a la red del operador con una etiqueta que decide el camino; es rapido, ofrece circuitos virtuales (VPN MPLS) y no depende del destino final.</li>
-            <li><strong>Lineas dedicadas (leased lines):</strong> enlace exclusivo punto a punto con ancho de banda garantizado (E1, T3, Ethernet dedicado). Son confiables pero caras.</li>
-            <li><strong>Satelital / VSAT:</strong> enlaces satelitales para zonas sin fibra ni cobre; latencia alta (ida y vuelta ~500 ms) y afectados por clima, usados en areas rurales y maritimas.</li>
-            <li><strong>Microondas:</strong> enlaces de radio punto a punto entre torres (LOS, linea de vista), comunes para unir sucursales de una ciudad sin tendido fisico.</li>
-            <li><strong>Frame relay / ATM:</strong> tecnologias WAN legacy de los 90; hoy en desuso pero aun operan en redes corporativas migrandose a MPLS o Ethernet.</li>
-            <li><strong>ISP, IXP y peering:</strong> los ISPs se interconectan en puntos de intercambio (IXP) donde acuerdan intercambiar trafico sin costo (peering); el backbone se compone de estos enlaces y los de los grandes operadores.</li>
-          </ul>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Tecnologia</th><th>Medio</th><th>Velocidad tipica</th><th>Latencia</th><th>Uso tipico</th></tr>
-            <tr><td>Linea dedicada</td><td>Fibra / cobre</td><td>10 Mbps - 100 Gbps</td><td>Baja</td><td>Corporativo con SLA</td></tr>
-            <tr><td>MPLS</td><td>Red del operador</td><td>Variable con QoS</td><td>Baja-media</td><td>VPNs corporativas</td></tr>
-            <tr><td>Microondas</td><td>Radio LOS</td><td>Hasta 1+ Gbps</td><td>Baja</td><td>Uniones urbanas sin cable</td></tr>
-            <tr><td>Satelital</td><td>Radio espacial</td><td>10 - 500 Mbps</td><td>Muy alta</td><td>Rural, maritimo, emergencia</td></tr>
-          </table></div>
-        </div></div>
-      </div>
+      </a>
     </div>
 
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="red-arquitectura-red/tecnologias-wan-y-backbones.html">
+        <div class="lesson-index-icon"><i class="bi bi-globe2"></i></div>
+        <div>
+          <div class="lesson-index-title">Tecnologias WAN y Backbones</div>
+          <div class="lesson-index-desc">Una WAN (Wide Area Network) interconecta redes locales a traves de grandes distancias usando infraestructura...</div>
+        </div>
+      </a>
+    </div>
+
+    </div>
 </div>
+</div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=p85dXRGwJBQ" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Arquitectura Cliente Servidor: que es y como funciona</span>
+        <span class="v-chan">Arsys</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -236,8 +227,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

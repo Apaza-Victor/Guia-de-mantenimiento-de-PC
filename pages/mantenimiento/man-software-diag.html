@@ -15,7 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="../../assets/css/styles.css" rel="stylesheet">
+  <link href="../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Software de Diag. - Mantenimiento de PC | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag.html",
+  "description": "Mantenimiento · Software de Diag.. HWMonitor, CrystalDiskInfo, MemTest86 y mas.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "TechGuide - Guia Integral de Hardware, Mantenimiento y Redes",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/"
+  }
+}
+</script>
 </head>
 <body>
 <div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
@@ -29,19 +46,7 @@
     <li class="nav-item"><a href="../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
     <li class="nav-item"><a href="mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
     <li class="nav-item"><a href="../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item">
-      <button class="nav-drop-btn">Herramientas <i class="bi bi-chevron-down nav-chevron"></i></button>
-      <div class="nav-dropdown">
-        <a href="../faq.html"><i class="bi bi-question-circle"></i> FAQ / Troubleshooting</a>
-        <a href="../comparativas.html"><i class="bi bi-git-compare"></i> Comparativas</a>
-        <a href="../cuestionarios.html"><i class="bi bi-journal-check"></i> Cuestionarios</a>
-        <a href="../presupuesto.html"><i class="bi bi-cash-coin"></i> Armado por Presupuesto</a>
-
-        <a href="../referencia.html#ref-hardware"><i class="bi bi-cpu"></i> Referencia Hardware</a>
-        <a href="../instalacion.html#sistemas-archivos"><i class="bi bi-hdd"></i> Instalacion y Almacenamiento</a>
-        <a href="../memoria-ram.html"><i class="bi bi-memory"></i> Memoria RAM</a>
-      </div>
-    </li>
+    <li class="nav-item"><a href="../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
     <li class="nav-item"><a href="../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
     <li class="nav-item"><a href="../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
     <li class="nav-item"><a href="../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
@@ -68,8 +73,10 @@
     </div>
   </div>
 
-  <nav class='subnav' aria-label='Secciones'>
-    <a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <div class="chip-marquee" aria-label="Secciones">
+    <div class="chip-marquee-track">
+      <div class="chip-marquee-group">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
     <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
     <a class='chip active' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
     <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
@@ -89,23 +96,38 @@
     <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
     <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
     <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
-  </nav>
+      </div>
+      <div class="chip-marquee-group" aria-hidden="true">
+<a class='chip' href='man-preventivo.html'><i class='bi-shield-check'></i>Preventivo</a>
+    <a class='chip' href='man-correctivo.html'><i class='bi-heart-pulse'></i>Correctivo</a>
+    <a class='chip active' href='man-software-diag.html'><i class='bi-terminal'></i>Software de Diag.</a>
+    <a class='chip' href='man-seguridad-malware.html'><i class='bi-shield-lock'></i>Malware</a>
+    <a class='chip' href='man-kit-tecnico.html'><i class='bi-tools'></i>Kit del Tecnico</a>
+    <a class='chip' href='man-pasta-termica.html'><i class='bi-droplet-half'></i>Pasta Termica</a>
+    <a class='chip' href='man-gestion-termica.html'><i class='bi-thermometer-half'></i>Gestion Termica</a>
+    <a class='chip' href='man-laptop.html'><i class='bi-laptop'></i>Mantenimiento Laptop</a>
+    <a class='chip' href='man-diagnostico-sintomas.html'><i class='bi-search'></i>Diagnostico</a>
+    <a class='chip' href='man-conceptos-clave.html'><i class='bi-lightbulb'></i>Conceptos Clave</a>
+    <a class='chip' href='man-cables-alimentacion.html'><i class='bi-plug'></i>Cables de PSU</a>
+    <a class='chip' href='man-headers-motherboard.html'><i class='bi-usb-symbol'></i>Headers</a>
+    <a class='chip' href='man-optimizacion.html'><i class='bi-gear'></i>Optimizacion</a>
+    <a class='chip' href='man-borrado-seguro.html'><i class='bi-trash'></i>Borrado Seguro</a>
+    <a class='chip' href='man-recuperacion-datos.html'><i class='bi-database'></i>Recuperacion Datos</a>
+    <a class='chip' href='man-banco-pruebas-psu.html'><i class='bi-lightning-charge'></i>Pruebas PSU</a>
+    <a class='chip' href='man-plan-respaldo.html'><i class='bi-cloud-arrow-up'></i>Plan de Respaldo</a>
+    <a class='chip' href='man-plan-mantenimiento.html'><i class='bi-calendar-check'></i>Plan Mantenimiento</a>
+    <a class='chip' href='man-impresoras.html'><i class='bi-printer'></i>Impresoras</a>
+    <a class='chip' href='man-formatear-pc.html'><i class='bi-hdd'></i>Formatear PC</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="breadcrumbs" aria-label="Ruta"><a href="../../index.html">Inicio</a><span class="sep">/</span><a href="mantenimiento.html">Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento · Software de Diag.</span></nav>
 
-  <div class="video-list">
-    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
-    <a class="video-item" href="https://www.youtube.com/watch?v=KjumrruD0YQ" target="_blank" rel="noopener">
-      <i class="bi bi-youtube"></i>
-      <span class="v-meta">
-        <span class="v-title">Programas para diagnosticar y testear el hardware de tu Pc</span>
-        <span class="v-chan">compuyadigital Pluss</span>
-      </span>
-    </a>
-  </div>
+  
 <div class="content-section" id="software-diag" data-aos="fade-up">
       <div class="section-header">
-        <div class="section-icon" style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25);"><i class="bi bi-terminal"></i></div>
+        <div class="section-icon" style="background:rgba(61,123,255,.12);border-color:rgba(61,123,255,.25);"><i class="bi bi-terminal"></i></div>
         <div class="section-title">
           <h2>Software de Diagnostico</h2>
           <p>// Herramientas para diagnosticar tu PC</p>
@@ -264,177 +286,64 @@
         <div class="content"><strong>Orden recomendado:</strong> empieza por lo mas barato de descartar — temperatura (HWMonitor) y disco (CrystalDiskInfo) — antes de lanzar tests de estres. Un test de estres con una falla termica previa puede danar el equipo.</div>
       </div>
 
-      <div class="accordion-item" data-aos="fade-up" style="margin-top:1.5rem;">
-        <div class="accordion-header">
-          <i class="bi bi-terminal accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Comandos de diagnostico integrados en Windows</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      
+    <div class="lesson-index-grid">
+      <a class="lesson-index-card" href="man-software-diag/comandos-de-diagnostico-integrados-en-windows.html">
+        <div class="lesson-index-icon"><i class="bi bi-terminal"></i></div>
+        <div>
+          <div class="lesson-index-title">Comandos de diagnostico integrados en Windows</div>
+          <div class="lesson-index-desc">cmd / powershell · ejecutar como Administrador # INTEGRIDAD DE ARCHIVOS DEL SISTEMA > sfc /scannow # Escanea...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <div class="code-block">
-            <div class="code-block-header">
-              <span class="code-lang">cmd / powershell · ejecutar como Administrador</span>
-            </div>
-            <pre><span class="cmd-comment"># INTEGRIDAD DE ARCHIVOS DEL SISTEMA</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">sfc</span> <span class="cmd-flag">/scannow</span>                        <span class="cmd-comment"># Escanea y repara archivos de sistema</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">DISM</span> <span class="cmd-flag">/Online /Cleanup-Image /CheckHealth</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">DISM</span> <span class="cmd-flag">/Online /Cleanup-Image /RestoreHealth</span>
-
-  <span class="cmd-comment"># VERIFICAR DISCO (reinicia si C: esta en uso)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">chkdsk</span> <span class="cmd-value">C:</span> <span class="cmd-flag">/f /r /x</span>              <span class="cmd-comment"># /f=corregir /r=sectores /x=forzar desmontaje</span>
-
-  <span class="cmd-comment"># REPORTE DE BATERIA (portatiles)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">powercfg</span> <span class="cmd-flag">/batteryreport</span> <span class="cmd-value">/output C:\battery.html</span>
-
-  <span class="cmd-comment"># TEST DE MEMORIA (programa reinicio)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">mdsched.exe</span>
-
-  <span class="cmd-comment"># INFORMACION DEL SISTEMA</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">systeminfo</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">msinfo32</span>                           <span class="cmd-comment"># GUI completa con hardware y software</span>
-
-  <span class="cmd-comment"># HARDWARE DETALLADO (WMIC)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic cpu get</span> Name,NumberOfCores,MaxClockSpeed
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic memorychip get</span> Capacity,Speed,MemoryType
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">wmic diskdrive get</span> Model,Size,Status
-
-  <span class="cmd-comment"># EVENTOS DE ERROR RECIENTES (PowerShell)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-EventLog</span> <span class="cmd-flag">-LogName</span> System <span class="cmd-flag">-EntryType</span> Error <span class="cmd-flag">-Newest</span> <span class="cmd-value">20</span></pre>
-          </div>
-
-          <div class="alert-box alert-info" data-aos="fade-up" style="margin-top:1rem;">
-            <i class="bi bi-info-circle"></i>
-            <div>
-              <strong>WhoCrashed:</strong> Analiza automaticamente los archivos de volcado en C:\Windows\Minidump y senala el driver o modulo responsable de un BSOD. Gratuito para uso personal.<br>
-              <strong>BlueScreenView (NirSoft):</strong> Muestra el driver causante en lenguaje simple sobre los archivos minidump. Alternativa ligera sin instalacion.
-            </div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-memory accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Como Usar MemTest86</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="man-software-diag/como-usar-memtest86.html">
+        <div class="lesson-index-icon"><i class="bi bi-memory"></i></div>
+        <div>
+          <div class="lesson-index-title">Como Usar MemTest86</div>
+          <div class="lesson-index-desc">MemTest86 es el test de RAM mas confiable: arranca desde un USB sin cargar Windows y prueba cada celda de...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>MemTest86 es el test de RAM mas confiable: arranca desde un USB sin cargar Windows y prueba cada celda de memoria. Es lento a proposito — una pasada completa puede tardar 1-2 horas.</p>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Paso</th><th>Accion</th></tr>
-            <tr><td>1</td><td>Descarga la imagen ISO gratuita de MemTest86 del sitio oficial (memtest86.com) — la version Free es suficiente.</td></tr>
-            <tr><td>2</td><td>Crea el USB booteable con Rufus: conecta un USB (minimo 2GB), selecciona la ISO y elige modo "MBR" o "UEFI" segun el firmware de tu PC.</td></tr>
-            <tr><td>3</td><td>Reinicia, entra al menu de arranque (F12, F11 o Esc segun la placa) y arranca desde el USB.</td></tr>
-            <tr><td>4</td><td>Configuracion recomendada: deja el test en "Auto" y deja pasar al menos 4 pasadas (varias horas). Cuantas mas pasadas, mas confiable el resultado.</td></tr>
-            <tr><td>5</td><td>Lee el resultado en pantalla: si aparece "Errors: 0", la RAM esta sana. Cualquier error aparece en rojo con la direccion de memoria donde fallo.</td></tr>
-            <tr><td>6</td><td>Si hay errores, prueba cada modulo individualmente en distintos slots para aislar la memoria o el slot defectuoso.</td></tr>
-          </table></div>
-          <div class="info-box info-tip" style="margin-top:12px;">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Alternativa rapida en Windows:</strong> ejecuta mdsched.exe (Diagnostico de memoria de Windows) y elige reiniciar ahora. Es menos exhaustivo que MemTest86 pero detecta fallas graves rapidamente y no requiere USB.</div>
-          </div>
-          <div class="alert-box alert-danger" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Importante:</strong> la RAM con errores causa BSOD aleatorios, corrupcion de archivos y cuelgues sin motivo aparente. Si MemTest86 marca errores, reemplaza el modulo — no hay software que "repare" memoria fisicamente defectuosa.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-stopwatch accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Metodologia de Pruebas de Estabilidad (Stress Tests)</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="man-software-diag/metodologia-de-pruebas-de-estabilidad-stress-tests.html">
+        <div class="lesson-index-icon"><i class="bi bi-stopwatch"></i></div>
+        <div>
+          <div class="lesson-index-title">Metodologia de Pruebas de Estabilidad (Stress Tests)</div>
+          <div class="lesson-index-desc">El stress test verifica que el sistema sea estable bajo carga maxima. Cada componente tiene su prueba...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>El stress test verifica que el sistema sea estable bajo carga maxima. Cada componente tiene su prueba especifica; el objetivo es detectar errores de calculo, calor y artefactos.</p>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Componente</th><th>Prueba</th><th>Duracion sugerida</th><th>Que vigilar</th></tr>
-            <tr><td>CPU</td><td>Prime95 (Small FFTs) u OCCT CPU</td><td>30-60 min</td><td>Errores de calculo, throttling, temperatura &gt;90°C</td></tr>
-            <tr><td>GPU</td><td>FurMark u OCCT GPU</td><td>15-30 min</td><td>Artefactos visuales, temperatura &gt;90°C, cuelgues</td></tr>
-            <tr><td>RAM</td><td>MemTest86 (USB) u OCCT Memory</td><td>4+ pasadas / 1-2 horas</td><td>Errores de memoria en rojo</td></tr>
-            <tr><td>Disco</td><td>CrystalDiskMark o HD Tune</td><td>Varias pasadas</td><td>Velocidad fuera de spec, errores de lectura</td></tr>
-            <tr><td>PSU</td><td>OCCT PSU Test (GPU + CPU juntos)</td><td>15-30 min</td><td>Apagados, voltajes fuera de tolerancia</td></tr>
-          </table></div>
-          <ul>
-            <li><strong>Errores WHEA:</strong> en el Visor de eventos (Registros de Windows → Sistema) el codigo 19 o 18 en el origen "WHEA-Logger" indica error de hardware — el 19 apunta a CPU/RAM, el 18 a PCIe (a menudo GPU o NVMe). Tras un BSOD, revisa este log antes de culpar a un driver.</li>
-            <li><strong>Artefactos en GPU:</strong> triangulos, rayas o puntos de colores durante FurMark indican VRAM o nucleo grafico inestable (sobrecalentamiento, overclock extremo o falla fisica).</li>
-            <li><strong>Orden tras overclock:</strong> primero MemTest86 (RAM estable), luego Prime95 30 min (CPU), despues FurMark (GPU) y por ultimo OCCT PSU test. Nunca saltees pasos: una inestabilidad de RAM invalida los demas tests.</li>
-          </ul>
-          <div class="alert-box alert-warn" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Monitorea temperaturas SIEMPRE durante el stress:</strong> deja HWiNFO abierto en segundo plano con el registro activo y revisa que las temperaturas no superen los limites del fabricante. Un test de estres sobre un equipo con falla termica previa puede danar componentes.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-journal-text accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Visor de Eventos en Profundidad</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="man-software-diag/visor-de-eventos-en-profundidad.html">
+        <div class="lesson-index-icon"><i class="bi bi-journal-text"></i></div>
+        <div>
+          <div class="lesson-index-title">Visor de Eventos en Profundidad</div>
+          <div class="lesson-index-desc">El Visor de Eventos registra todo lo que ocurre en Windows y es la primera fuente de verdad ante BSOD,...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p>El Visor de Eventos registra todo lo que ocurre en Windows y es la primera fuente de verdad ante BSOD, reinicios o servicios que fallan. Abrelo con <code>eventvwr.msc</code> (Win+R o desde el menu inicio).</p>
-          <ul>
-            <li><strong>Logs a revisar:</strong> "Registros de Windows → Sistema" (errores de hardware, controladores y servicios) y "Registros de Windows → Aplicaciones" (errores de programas).</li>
-            <li><strong>Event ID 41 (Kernel-Power):</strong> el equipo se apago sin un apagado limpio (corte de energia, PSU o crash de hardware). Muy comun tras un BSOD o un apagon.</li>
-            <li><strong>Event ID 1001 (BugCheck):</strong> se produjo un BSOD. Filtra este ID para ver la frecuencia exacta de las pantallas azules.</li>
-            <li><strong>Event ID 6008:</strong> apagado inesperado detectado en el ultimo arranque (suele acompanar al 41).</li>
-            <li><strong>Event ID 7000/7001:</strong> un servicio no pudo iniciarse o depende de otro que fallo. Tipico de drivers rotos tras una actualizacion.</li>
-            <li><strong>Filtros y vistas personalizadas:</strong> crea una "Vista personalizada" por nivel de error critico y por intervalo para no leer el log completo cada vez.</li>
-            <li><strong>Que ignorar:</strong> errores de discos externos desconectados bruscamente (Event ID 157 Kernel-Disk), cortes de WLAN intermitentes y errores de servicios de telemetria que no afectan el sistema.</li>
-          </ul>
-          <div class="code-block">
-            <div class="code-block-header">
-              <span class="code-lang">powershell &#183; consultar eventos por ID</span>
-            </div>
-            <pre><span class="cmd-comment"># Ultimos 50 errores del Sistema en las ultimas 24 horas</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; Level=1,2; StartTime=(Get-Date).AddDays(-1)} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">50</span>
-
-  <span class="cmd-comment"># Buscar BSOD (Event ID 1001) en el registro Sistema</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; Id=1001} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">10</span>
-
-  <span class="cmd-comment"># Errores WHEA de hardware (Provider WHEA-Logger)</span>
-  <span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">Get-WinEvent</span> <span class="cmd-flag">-FilterHashtable</span> @{LogName='System'; ProviderName='Microsoft-Windows-WHEA-Logger'} <span class="cmd-flag">-MaxEvents</span> <span class="cmd-value">10</span></pre>
-          </div>
-          <div class="info-box info-tip" style="margin-top:12px;">
-            <span class="icon"><i class="bi bi-lightbulb"></i></span>
-            <div class="content"><strong>Practica:</strong> cuando diagnostiques un reinicio misterioso, filtra por Event ID 41 y 1001 en las ultimas 2 semanas y compara las horas con tu historial de BSOD. La correlacion de horas resuelve la mayoria de los casos.</div>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="accordion-item" data-aos="fade-up">
-        <div class="accordion-header">
-          <i class="bi bi-arrow-repeat accordion-icon" style="color:var(--accent);"></i>
-          <span class="accordion-title">Limpieza Completa de Drivers de GPU (DDU)</span>
-          <i class="bi bi-chevron-down accordion-chevron"></i>
+      </a>
+      <a class="lesson-index-card" href="man-software-diag/limpieza-completa-de-drivers-de-gpu-ddu.html">
+        <div class="lesson-index-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div>
+          <div class="lesson-index-title">Limpieza Completa de Drivers de GPU (DDU)</div>
+          <div class="lesson-index-desc">Display Driver Uninstaller (DDU) elimina por completo los drivers de la tarjeta grafica, incluidos registros,...</div>
         </div>
-        <div class="accordion-body"><div class="accordion-content">
-          <p><strong>Display Driver Uninstaller (DDU)</strong> elimina por completo los drivers de la tarjeta grafica, incluidos registros, archivos sobrantes y servicios ocultos que el desinstalador normal deja atras.</p>
-          <ul>
-            <li><strong>Cuando usar DDU:</strong> cambiar de NVIDIA a AMD o viceversa, drivers corruptos o instalaciones fallidas, BSOD relacionados con display, o artefactos tras actualizar el driver.</li>
-            <li><strong>Descarga previa:</strong> baja la ultima version de DDU (wagnardsoft.com) y los drivers nuevos de tu GPU (NVIDIA o AMD) ANTES de limpiar — despues de DDU el sistema queda sin driver de video.</li>
-          </ul>
-          <div class="table-scroll"><table class="cmd-table">
-            <tr><th>Paso</th><th>Accion</th></tr>
-            <tr><td>1</td><td>Descarga DDU y los drivers nuevos. Extrae DDU a una carpeta (no hace falta instalar).</td></tr>
-            <tr><td>2</td><td>Arranca en modo seguro: Shift + Reiniciar → Solucionar problemas → Opciones avanzadas → Modo seguro.</td></tr>
-            <tr><td>3</td><td>Ejecuta Display Driver Uninstaller.exe y selecciona "Limpiar y reiniciar" (elige el fabricante correcto: NVIDIA, AMD o Intel).</td></tr>
-            <tr><td>4</td><td>Windows se reinicia solo y arranca con el driver generico de Microsoft.</td></tr>
-            <tr><td>5</td><td>Instala el driver nuevo descargado (ejecuta el instalador como administrador) y reinicia una vez mas.</td></tr>
-            <tr><td>6</td><td>Verifica con GPU-Z que el driver, la frecuencia y la resolucion correctas esten activas.</td></tr>
-          </table></div>
-          <div class="alert-box alert-danger" style="margin-top:12px;">
-            <i class="bi bi-exclamation-triangle"></i>
-            <div><strong>Advertencia:</strong> DDU borra TODOS los drivers de GPU del fabricante seleccionado, incluidos los de otros adaptadores. No lo uses "por curiosidad" sobre un sistema estable — si tu PC funciona bien, no necesitas DDU.</div>
-          </div>
-        </div></div>
-      </div>
+      </a>
     </div>
 
+    </div>
 </div>
+
+
+
+<div class="video-list">
+    <p class="text-secondary text-sm" style="margin-bottom:.5rem;">Video tutorial en espanol para reforzar este tema:</p>
+    <a class="video-item" href="https://www.youtube.com/watch?v=KjumrruD0YQ" target="_blank" rel="noopener">
+      <i class="bi bi-youtube"></i>
+      <span class="v-meta">
+        <span class="v-title">Programas para diagnosticar y testear el hardware de tu Pc</span>
+        <span class="v-chan">compuyadigital Pluss</span>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-inner">
@@ -458,8 +367,10 @@
 <script src="../../assets/js/nav.js"></script>
 <script src="../../assets/js/ui.js"></script>
 <script src="../../assets/js/subnet.js"></script>
-<script src="../../assets/js/search-index.js"></script>
 <script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/lesson-nav.js"></script>
 <script src="../../assets/js/reading-progress.js"></script>
+
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
