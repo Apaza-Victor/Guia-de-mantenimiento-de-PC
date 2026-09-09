@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -72,6 +72,25 @@
 <div class="content-section" data-aos="fade-up"><div class="lesson-body">
 
           <p class="text-sm text-secondary">Con Intel XTU o AMD Ryzen Master, reducir el voltaje del CPU un 5-10% puede bajar temperaturas 10-15 grados C sin perdida de rendimiento. Es lo opuesto al overclocking — busca eficiencia termica sin sacrificar velocidad. Muy util en laptops donde la refrigeracion es limitada. Un undervolt excesivo puede causar inestabilidad y cuelgues.</p>
+
+          <h3>Por que funciona el undervolt</h3>
+          <p>Los fabricantes dejan un margen de seguridad generoso en el voltaje para cubrir chips de mala muestra y condiciones extremas. En una buena muestra, ese margen sobra y se traduce en calor innecesario: <strong>con menos voltaje, el chip consume menos, ahorra watts, baja las temperaturas y el boost se mantiene estable sin throttling.</strong></p>
+
+          <h3>Como hacerlo sin romper nada</h3>
+          <ol>
+            <li><strong>Empeza pequeno:</strong> bajada de -25 a -50mV en el offset de Vcore (Intel XTU, AMD Ryzen Master o BIOS).</li>
+            <li><strong>Test de carga:</strong> 15-20 min de Cinebench o Prime95 vigilando temperaturas y ausencia de cuelgues.</li>
+            <li><strong>Baja en pasos</strong> de -10/-15mV hasta el punto justo de inestabilidad y luego volve 10-20mV atras como margen de seguridad.</li>
+            <li><strong>Persistencia:</strong> el perfil se guarda en la BIOS o en el software con "arrancar con Windows"; el software hay que volver a aplicarlo en cada boot si no se configura.</li>
+          </ol>
+          <div class="alert-box alert-warning">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Signos de undervolt excesivo:</strong> BSOD a minutos del arranque, reinicios aleatorios bajo carga o errores "WHEA" en el Visor de Eventos. Ese es el limite; da marcha atras ese mismo dia. En laptops de 13/14a gen Intel con problemas de voltaje, aplicar el undervolt oficial (microcodigo/BIOS) es mas seguro que tocar manualmente.</div>
+          </div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>El combo ganador en laptop:</strong> undervolt moderado + limite del paquete TDP (PL1/PL2) + bueno pasta termica. Esas tres cosas solas dejan a la laptop con el rendimiento de fabrica pero 10 grados mas fresca y sin ventiladores a full.</div>
+          </div>
         </div>
   </div></div>
   <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-conceptos-clave.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>

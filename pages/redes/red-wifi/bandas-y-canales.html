@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -76,12 +76,19 @@
           <tr><td>2.4 GHz</td><td>1-13 (no solapados: 1, 6, 11)</td><td>Largo (atraviesa paredes)</td><td>Menor</td><td>Compatibilidad, cobertura</td></tr>
           <tr><td>5 GHz</td><td>36-165</td><td>Medio</td><td>Alta</td><td>Velocidad, menos saturado</td></tr>
           <tr><td>6 GHz</td><td>Canales de 160 MHz</td><td>Corto</td><td>Muy alta</td><td>Wi-Fi 6E/7, poca interferencia</td></tr>
-        </table></div>
+</table></div>
         <ul>
           <li>En 2.4 GHz solo hay <strong>3 canales que no se solapan</strong> (1, 6 y 11): elegir uno de ellos evita interferencias con vecinos.</li>
           <li>Los canales DFS (5 GHz) requieren que el router se aparte si detecta radar; pueden causar desconexiones.</li>
           <li>Un router moderno ofrece <strong>band steering</strong>: conecta al cliente a la banda mas conveniente.</li>
         </ul>
+        <h3>Como elegir el canal en la practica</h3>
+        <ol>
+          <li><strong>Escanea con tu telefono</strong> (WiFi Analyzer) y mira que canales usan los vecinos.</li>
+          <li>En 2.4 GHz elige el mas libre entre <strong>1, 6 y 11</strong>; no pongas "auto" para siempre, porque el auto rara vez se mueve aunque el vecindario sature.</li>
+          <li>En 5 GHz prioriza los canales mas altos SIN DFS (36-48 suelen ser los de mayor disponibilidad domestica) y deja los DFS para entornos saturados.</li>
+          <li>Ancho de canal: prueba con 80 MHz en 5 GHz; si un dispositivo da fallas, baja a 40 MHz. El ancho maximo no siempre es lo mas estable.</li>
+        </ol>
         <div class="alert-box alert-tip" style="margin-top:12px;">
           <i class="bi bi-lightbulb"></i>
           <div>Si tu red va lenta en un edificio lleno de Wi-Fi, mueve a un canal menos saturado. Apps como Wi-Fi Analyzer muestran la ocupacion de cada canal.</div>

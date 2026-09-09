@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -71,6 +71,26 @@
 <nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-guia-compra.html">Guia de Compra</a><span class="sep">/</span><span class="current">CPU por rango de presupuesto</span></nav>
 <div class="content-section" data-aos="fade-up"><div class="lesson-body">
 
+          <p>No elijas el CPU por la gama de mercado de la generacion anterior: al valor actual importa cuantos nucleos e hilos tenes, cuanta cache L3, si trae graficos integrados y cuanto consume. La regla practica: <strong>la gama la define el uso, no el presupuesto</strong>. Un i5 de hace dos generaciones puede rendir mas que un i3 nuevo.</p>
+
+          <h3>Que mirar mas alla del nombre</h3>
+          <ul>
+            <li><strong>Nucleos e hilos:</strong> los hilos (threads) ayudan en multitarea y edicion; en juegos pesan mas el IPC y la frecuencia de un solo nucleo.</li>
+            <li><strong>Cache L3:</strong> cuanto mas grande, mejor para juegos (los X3D de AMD son el ejemplo extremo).</li>
+            <li><strong>Con graficos integrados (iGPU):</strong> un CPU con iGPU te salva si la GPU dedicada falla; los Ryzen "G" y los Intel con UHD/Arc integrado bastan para ofimatica sin GPU dedicada.</li>
+            <li><strong>TDP / consumo:</strong> un CPU de 65W arma mas facil en cualquier placa; uno de 120W+ pide buena placa, disipador y PSU.</li>
+          </ul>
+
+          <div class="three-canvas" data-model="cpu-ladder" data-title="Referencia orientativa de gamas por hilos">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Gama por hilos</span><span class="three-hint">2D esquematico</span></div>
+            </div>
+
+          <div class="alert-box alert-info">
+            <i class="bi bi-info-circle"></i>
+            <div><strong>Guardate de los errores clasicos:</strong> pagar de mas por un CPU "para hacerla durar" cuando el uso real es ofimatica; comprar el tope de gama de una plataforma muerta (AM4 / LGA1700 terminado) en vez de entrar a plataforma nueva; y olvidar que el CPU debe tener socket y placa compatibles con la generacion comprada.</div>
+          </div>
+
           <div class="table-scroll"><table class="cmd-table">
             <tr><th>Gama</th><th>Intel</th><th>AMD</th><th>Ideal para</th></tr>
             <tr><td>Entrada</td><td>Core i3 (12ª+)</td><td>Ryzen 5 7000/9000 basico</td><td>Ofimatica, navegacion, multimedia</td></tr>
@@ -78,6 +98,10 @@
             <tr><td>Alta</td><td>Core i7 / i9</td><td>Ryzen 7 / 9</td><td>1440p-4K, streaming, edicion</td></tr>
             <tr><td>Entusiasta</td><td>i9 K</td><td>Ryzen 9 / X3D</td><td>Juego extremo y carga pesada</td></tr>
           </table></div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Guia de 30 segundos:</strong> fps gaming - CPU de 6 nucleos/12 hilos actual + X3D si el juego lo pide; productividad - 8+ nucleos; oficina y navegacion - lo mejor que el presupuesto permite de la gama de entrada con iGPU.</div>
+          </div>
         </div>
   </div></div>
   <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-guia-compra.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
@@ -106,6 +130,7 @@
 <script src="../../../assets/js/nav.js"></script>
 <script src="../../../assets/js/ui.js"></script>
 <script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
 <script src="../../../assets/js/search.js"></script>
 <script src="../../../assets/js/lesson-nav.js"></script>
 <script src="../../../assets/js/reading-progress.js"></script>

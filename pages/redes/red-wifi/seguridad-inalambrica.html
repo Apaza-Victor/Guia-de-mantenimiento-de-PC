@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -77,14 +77,25 @@
           <tr><td>WPA</td><td>TKIP</td><td>Obsoleto, vulnerable. No usar.</td></tr>
           <tr><td>WPA2</td><td>CCMP/AES</td><td>Seguro; el estandar minimo actual.</td></tr>
           <tr><td>WPA3</td><td>AES-GCMP, SAE</td><td>Recomendado; protege la red contra ataques de diccionario.</td></tr>
-        </table></div>
+</table></div>
         <ul>
           <li>Usa <strong>WPA2/WPA3</strong> o WPA3 si todos tus dispositivos lo soportan.</li>
           <li><strong>PMF</strong> (Protected Management Frames) evita ataques de desautenticacion.</li>
           <li><strong>Desactiva WPS</strong> si no lo usas: es un vector de ataque conocido.</li>
           <li>No dejes la red abierta (sin contrasena) salvo una <strong>red de invitados</strong> aislada.</li>
-          <li>El <strong>SSID oculto</strong> NO es seguridad real: esconde la red pero cualquier sniffer la ve.</li>
         </ul>
+        <h3>La lista de 5 puntos del wifi seguro</h3>
+        <ol>
+          <li><strong>Cifrado WPA2/WPA3</strong> con PMF activado. Si el router es viejo (solo WPA), planifica reemplazarlo: WPA se rompe con un ataque de reinyeccion en minutos.</li>
+          <li><strong>Contrasena larga y unica</strong> (16+ caracteres, no el nombre de la familia): el wifi se ataca por diccionario, no por "fuerza bruta de prueba numeros".</li>
+          <li><strong>Red de invitados aislada</strong>: imagenes, luces y visitas van a una SSID separada sin acceso a tu LAN.</li>
+          <li><strong>WPS apagado</strong> y broadcast de SSID discreto (ocultar el SSID no es seguridad real, pero reduce el ruido).</li>
+          <li><strong>Firmware actualizado</strong> y cambiar el acceso al panel de administracion por defecto (admin/admin).</li>
+        </ol>
+        <div class="info-box info-tip">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Camuflar la SSID no es seguridad:</strong> un atacante ve el nombre igual con un analizador. La seguridad real es el cifrado, la contrasena y el aislamiento de invitados. Oculta la SSID solo si te molesta que aparezca en la lista de redes de todos.</div>
+        </div>
       </div>
   </div></div>
   <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../red-wifi.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>

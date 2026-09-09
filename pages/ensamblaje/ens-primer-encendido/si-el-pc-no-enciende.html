@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -71,6 +71,13 @@
 <nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-primer-encendido.html">Primer Encendido y POST</a><span class="sep">/</span><span class="current">Si el PC no enciende</span></nav>
 <div class="content-section" data-aos="fade-up"><div class="lesson-body">
 
+          <p>Cuando presionas el power y algo falla, el metodo es siempre el mismo: <strong>aislar por descarte</strong>. Empieza con el minimo absoluto (PSU, placa, CPU con cooler y una sola RAM) fuera del gabinete sobre la caja de la placa y ve agregando componentes de a uno.</p>
+
+          <div class="three-canvas" data-model="diagnostico-post" data-title="Los 4 sintomas clasicos del primer arranque y su camino de solucion">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Diagnostico POST</span><span class="three-hint">2D esquematico</span></div>
+            </div>
+
         <div class="table-scroll"><table class="cmd-table">
           <tr><th>Sintoma</th><th>Que revisar</th></tr>
           <tr><td>Nada se enciende, no hay leds</td><td>Interruptor de la PSU en I, cable de corriente, toma con corriente. Prueba el "paperclip test" o un tester de PSU.</td></tr>
@@ -82,7 +89,19 @@
         </table></div>
         <div class="alert-box alert-warn" style="margin-top:12px;">
           <i class="bi bi-exclamation-triangle"></i>
-          <div>Si nada funciona, aplica el metodo de <strong>respaldo por descarte</strong>: retira todo lo no esencial (discos, GPU, RAM extra, fans) y ve agregando de a uno. Esto casi siempre aisla la pieza defectuosa.</div>
+          <div>Si nada funciona, aplica el metodo de <strong>respaldo por descarte</strong>: retira todo lo no esencial (discos, GPU, RAM extra, fans) y ve agregando de a uno. Esto casi siempre aísla la pieza defectuosa.</div>
+        </div>
+        <h3>Orden de descarte recomendado</h3>
+        <ul>
+          <li><strong>1. PSU:</strong> paperclip test o tester PSU. Sin 12V/5V/3.3V no hay nada que revisar despues.</li>
+          <li><strong>2. RAM:</strong> dos modulos = prueba con uno en el slot A2, luego el otro. El 80% de los "no enciende" quedan resueltos aca.</li>
+          <li><strong>3. GPU:</strong> saca la dedicada y usa video integrado (si tu CPU lo tiene); al reves si solo hay integrado.</li>
+          <li><strong>4. Disco:</strong> desconecta todos los discos para ver si el POST llega al logo; despues conecta de a uno.</li>
+          <li><strong>5. Placa/CPU:</strong> si con el minimo sigue sin POST, revisa pines del socket, conectores y pila CMOS; ahi la falla es de placa o CPU.</li>
+        </ul>
+        <div class="info-box info-tip">
+          <span class="icon"><i class="bi bi-lightbulb"></i></span>
+          <div class="content"><strong>Los pitidos dicen quien es:</strong> antes de abrir el equipo, busca el codigo de beeps de tu BIOS (Award, AMI, Phoenix...). Un pitido largo + dos cortos casi siempre es RAM o GPU, no la placa completa.</div>
         </div>
       </div>
   </div></div>
@@ -112,6 +131,7 @@
 <script src="../../../assets/js/nav.js"></script>
 <script src="../../../assets/js/ui.js"></script>
 <script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
 <script src="../../../assets/js/search.js"></script>
 <script src="../../../assets/js/lesson-nav.js"></script>
 <script src="../../../assets/js/reading-progress.js"></script>

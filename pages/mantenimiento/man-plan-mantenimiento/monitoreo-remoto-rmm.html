@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoreo remoto (RMM) - Plan de Mantenimiento | TechGuide</title>
+  <meta name="description" content="Que es un RMM, que supervisar, agentes, parches y scripting en clientes; seguridad del acceso remoto y como convertirlo en ingresos recurrentes.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Monitoreo remoto (RMM) - Plan de Mantenimiento | TechGuide">
+  <meta property="og:description" content="Supervisa equipos clientes 24x7 y cobra por valor, no por horas.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/monitoreo-remoto-rmm.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Monitoreo remoto (RMM) - Plan de Mantenimiento | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/monitoreo-remoto-rmm.html",
+  "description": "Que es un RMM, que supervisar, agentes, parches y scripting en clientes; seguridad del acceso remoto y como convertirlo en ingresos recurrentes.",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Plan de Mantenimiento - Mantenimiento | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <p>Mantenimiento · Plan de Mantenimiento - Leccion 6 de 6</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../mantenimiento.html">Mantenimiento</a><span class="sep">/</span><a href="../man-plan-mantenimiento.html">Plan de Mantenimiento</a><span class="sep">/</span><span class="current">Monitoreo remoto (RMM)</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Un RMM (Remote Monitoring and Management) instala un agente ligero en cada equipo del cliente que reporta salud, alertas y se deja administrar a distancia. Es la herramienta con la que un tecnico maneja 100 equipos sin moverse del escritorio, y la base del modelo de negocio de "mantenimiento recurrente".</p>
+
+          <h3>Que debe monitorear un RMM como minimo</h3>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Metrica</th><th>Umbral tipico de alerta</th><th>Que evita</th></tr>
+            <tr><td>CPU / RAM de servidor</td><td>85% sostenido 10 min</td><td>Cuellos de botella silenciosos</td></tr>
+            <tr><td>Disco lleno</td><td>&gt; 85%</td><td>Servidores caidos por disco lleno</td></tr>
+            <tr><td>Temperatura / salud SMART</td><td>Throttle visible / atributos rojo</td><td>Fallos de disco no diagnosticados</td></tr>
+            <tr><td>Servicios criticos</td><td>Caido &gt; 2 min</td><td>Aplicaciones de negocio detenidas</td></tr>
+            <tr><td>Backup status</td><td>Sin exito en 24 hs</td><td>Restauraciones imposibles</td></tr>
+            <tr><td>Patches pendientes</td><td>Critical sin instalar &gt; 7 dias</td><td>Equipos vulnerables</td></tr>
+          </table></div>
+          <p>Las alertas se clasifican en <strong>notificaciones</strong> (info, no molesta a nadie), <strong>warnings</strong> (se maneja en la semana) y <strong>critical</strong> (se atiende y se llama por telefono). Si todo suena a critical, el sistema se ignora: afina los umbrales para que la gravedad se respete.</p>
+
+          <h3>Patch management y scripting</h3>
+          <ul>
+            <li><strong>Patches:</strong> el RMM instala los updates de Windows en ventanas programadas con reboot automatico fuera de horario. La regla: test en un piloto primero, el resto el segundo miercoles del mes.</li>
+            <li><strong>Scripts automatizados:</strong> limpieza de temporales, optimizacion de volumenes, reinicio de servicios pegados. Todo script debe probarse en un equipo de laboratorio antes de desplegar a clientes.</li>
+            <li><strong>Portal de cliente:</strong> el cliente ve su tablero (equipos OK, pendientes, backups) y la factura recurrente tiene justificacion visual. Eso convierte el servicio en "suscripcion" en vez de "llamada por incidencia".</li>
+          </ul>
+
+          <h3>Seguridad del acceso remoto: garantia de empleo y de reparto</h3>
+          <div class="alert-box alert-danger">
+            <i class="bi bi-shield-exclamation"></i>
+            <div><strong>Un RMM sin seguridad es una puerta trasera a toda la red del cliente.</strong> El agente corre como administrador en cada equipo: si la consola del RMM se compromete, todos tus clientes se comprometen. No hay excusa para recortar esto.</div>
+          </div>
+          <ul>
+            <li>MFA obligatorio en la consola del RMM y en los conectores de acceso remoto.</li>
+            <li>Credenciales de agente separadas por cliente (no las mismas para toda la flota).</li>
+            <li>Registro y alerta de sesiones remotas; revocacion inmediata al terminar el contrato.</li>
+            <li>VPN/Zero Trust con token efimero para el acceso a equipos sensibles.</li>
+          </ul>
+
+          <h3>Herramientas para empezar</h3>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Herramienta</th><th>Nota</th></tr>
+            <tr><td>Action1</td><td>RMM con patch management gratis para hasta 200 endpoints; ideal para arrancar</td></tr>
+            <tr><td>NinjaOne / ConnectWise / Datto RMM</td><td>Todo-en-uno par a tecnico profesional; pricing por endpoint</td></tr>
+            <tr><td>PDQ Deploy + Inventory</td><td>Patch y software a equipos locales sin agente, dedicado a redes pequenas</td></tr>
+            <tr><td>Atera / TacticalRMM</td><td>Modelo SaaS barato (Tactical es open source self-host)</td></tr>
+          </table></div>
+
+          <h3>Modelo de negocio y venta</h3>
+          <ol>
+            <li><strong>Siembra:</strong> cada reparacion de un equipo del cliente suma "un endpoint" con RMM a cambio de menos costo en la proxima visita.</li>
+            <li><strong>Documenta el valor:</strong> el informe mensual de alertas resueltas antes de que fueran crisis es tu argumento de venta.</li>
+            <li><strong>Precio:</strong> paquetes por endpoint y por alcance (solo monitor / +parches / full con soporte). El contrato anual con SLA reemplaza las llamadas de urgencia y te da previsibilidad.</li>
+          </ol>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>La regla del minuto:</strong> si en el primer RMM ves mas de 10 alerts activas por cada 10 equipos, hay un problema de configuracion, no de monitoreo. Empieza por solo <em>5 umbrales criticos</em>, agrega el resto cuando el proceso respire.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../man-plan-mantenimiento.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="mantenimiento-de-servidores-y-racks.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Mantenimiento de servidores y racks</span></a>
+    <span class="lesson-nav-empty"></span>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

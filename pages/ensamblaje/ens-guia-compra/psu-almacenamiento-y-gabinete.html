@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -70,6 +70,38 @@
   </div>
 <nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-guia-compra.html">Guia de Compra</a><span class="sep">/</span><span class="current">PSU, almacenamiento y gabinete</span></nav>
 <div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Estos tres componentes no dan streams ni FPS, pero determinan si el equipo es estable, silencioso y facil de actualizar. La regla de oro: <strong>nunca estire el presupuesto en un disipador caro o RGB antes de tener una PSU honesta y un gabinete con aire.</strong></p>
+
+          <h3>PSU: la cuenta rapida de potencia</h3>
+          <ul>
+            <li>Suma el consumo estimado de CPU + GPU (techo de cada uno) y agrega un margen del 30-40%. Ejemplo: CPU 105W + GPU 320W = 425W base, con margen estas cerca de los 600W reales, asi que una PSU de <strong>650W</strong> con 80+ y cables de sobra rinde.</li>
+            <li><strong>Nunca compres una PSU "generica"</strong> aunque diga 750W: el wattaje real y la proteccion son la mitad. Las marcas serias (Corsair, EVGA, Seasonic, MSI, Cooler Master, Gigabyte) publican sus especificaciones.</li>
+            <li><strong>Modular vs no modular:</strong> la modular suma unos pesos pero te deja cablear solo lo que usas. El ahorro del no modular se paga en cable management.</li>
+            <li><strong>Extremidades al futuro:</strong> si hoy usas 450W y vas a meter una GPU mas grande en 2 anos, compra ya una 750W Gold: la PSU no se estira.</li>
+          </ul>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Unica excepcion a la regla modular:</strong> en equipos de oficina de 250W donde el gabinete es chico, la PSU no modular de 450W Bronze alcanza y sobra.</div>
+          </div>
+
+          <h3>Almacenamiento: la regla de los 2 discos</h3>
+          <ul>
+            <li><strong>NVMe PCIe 4.0 de 1TB</strong> para sistema, programas y juegos activos: se nota la diferencia con el SATA y cuesta casi lo mismo.</li>
+            <li><strong>Segundo disco para datos frios:</strong> fotos, videos y backups van en un HDD de 2TB+ (o SSD SATA si el presupuesto lo permite). Separar el sistema de los datos hace que el formateo y el backup sean triviales.</li>
+            <li><strong>M.2 vs SATA:</strong> si la placa tiene 2-3 ranuras M.2, el segundo disco puede ser otro NVMe; si no, un SATA de 2.5" es la salida barata.</li>
+          </ul>
+
+          <h3>Gabinete: las 3 medidas que se fijan de memoria</h3>
+          <ul>
+            <li><strong>Largo de la GPU:</strong> se mide el slot de las tarjetas grandes (320-400mm en gama alta). El largo maximo del gabinete viene en la ficha del fabricante.</li>
+            <li><strong>Altura del disipador:</strong> un torre de 160mm no entra en todos los torres. Los refrigeradores liquidos (AIO) exigen el soporte de radiador de 240/360mm.</li>
+            <li><strong>Ancho para la PSU y los cables:</strong> los gabinetes angostos dan andar; con malla frontal y 4 ventiladores el flujo de aire se respira solo.</li>
+          </ul>
+          <div class="alert-box alert-warning">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>La regla de la compatibilidad no es optativa:</strong> antes de pagar, verifica ancho del gabinete contra la altura del cooler y el largo contra la GPU, y que la PSU entre con las bahias del gabinete. Las "compatibilidades que no fueron" son el 80% de los retornos.</div>
+          </div>
 
           <div class="table-scroll"><table class="cmd-table">
             <tr><th>Componente</th><th>Recomendacion</th></tr>

@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -78,9 +78,24 @@
             <tr><td>Diferencial</td><td>Solo lo cambiado desde el ultimo COMPLETO</td><td>Mas rapido que full, restaura con 2 archivos</td><td>Cada dia crece mas</td></tr>
             <tr><td>Imagen del sistema</td><td>Todo el disco (SO incluido) en un archivo</td><td>Recupera el equipo completo "tal cual"</td><td>Ocupa mucho, se rehace al cambiar hardware</td></tr>
           </table></div>
+          <div class="three-canvas" data-model="backup-chain" data-title="Que se necesita para restaurar en cada tipo">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Cadenas de restauracion</span><span class="three-hint">2D esquematico</span></div>
+            </div>
+          <h3>Ejemplo de cadena concreta</h3>
+          <p>Imagina un completo el dia 1 (F) y backups hasta el dia 4. Para recuperarte del dia 4:</p>
+          <ul>
+            <li><strong>Con incrementales</strong> (F, I1, I2, I3) debes restaurar los 4 en orden: si falta el I1, el I2 no sirve para nada.</li>
+            <li><strong>Con diferenciales</strong> (F, D1, D2, D3) solo usas el F y el D3: si un diferencial intermedio se pierde, los posteriores igual valen.</li>
+          </ul>
+          <p>Por eso la regla practica: <strong>un completo mensual + diferenciales semanales</strong> baja al minimo los archivos a manejar en una restauracion. Para el usuario medio, el respaldo de archivos (no imagen) suele ser suficiente; la imagen entera es para equipos de trabajo o cuando el tiempo de instalacion es valioso.</p>
           <div class="info-box info-note">
             <span class="icon"><i class="bi bi-info-circle"></i></span>
-            <div class="content"><strong>Practica comun:</strong> un completo mensual + incrementales diarios. Para el usuario medio, respaldo de archivos (no imagen) suele ser suficiente; la imagen es para equipos de trabajo o cuando el tiempo de instalacion es valioso.</div>
+            <div class="content"><strong>Imagen vs archivos:</strong> la imagen recupera el equipo "tal cual" (SO + programas + datos), pero se rehace al cambiar de hardware. El respaldo de archivos resta es simple, portatile y no depende de la maquina: para datos personales, siempre gana el respaldo de archivos sobre la imagen.</div>
+          </div>
+          <div class="alert-box alert-danger">
+            <i class="bi bi-shield-exclamation"></i>
+            <div><strong>Un backup que no se prueba no existe:</strong> la cadena incremental se valida restaurando de verdad en un disco vacio al menos una vez al mes (ver leccion de pruebas de restauracion). Una restauracion que falla por una cadena rota es peor que no tener backup: te da la falsa seguridad de que todo funciona.</div>
           </div>
         </div>
   </div></div>
@@ -110,6 +125,7 @@
 <script src="../../../assets/js/nav.js"></script>
 <script src="../../../assets/js/ui.js"></script>
 <script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
 <script src="../../../assets/js/search.js"></script>
 <script src="../../../assets/js/lesson-nav.js"></script>
 <script src="../../../assets/js/reading-progress.js"></script>

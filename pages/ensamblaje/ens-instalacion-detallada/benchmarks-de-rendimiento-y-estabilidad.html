@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benchmarks de rendimiento y estabilidad - Instalacion Detallada de Componentes | TechGuide</title>
+  <meta name="description" content="Como probar que tu ensamblaje rinde como debe: Cinebench, 3DMark, Prime95, FurMark y como interpretar resultados y temperaturas.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Benchmarks de rendimiento y estabilidad - Instalacion Detallada de Componentes | TechGuide">
+  <meta property="og:description" content="Bateria de pruebas para validar rendimiento y estabilidad del PC recien ensamblado.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/benchmarks-de-rendimiento-y-estabilidad.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Benchmarks de rendimiento y estabilidad - Instalacion Detallada de Componentes | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/benchmarks-de-rendimiento-y-estabilidad.html",
+  "description": "Como probar que tu ensamblaje rinde como debe: Cinebench, 3DMark, Prime95, FurMark y como interpretar resultados y temperaturas.",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Instalacion Detallada de Componentes - Ensamblaje | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+<div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <p>Ensamblaje · Instalacion Detallada de Componentes - Leccion 12 de 14</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../ensamblaje.html">Ensamblaje</a><span class="sep">/</span><a href="../ens-instalacion-detallada.html">Instalacion Detallada de Componentes</a><span class="sep">/</span><span class="current">Benchmarks de rendimiento y estabilidad</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Si el POST fue bien, ahora toca saber <em>si el equipo rinde como deberia</em>. Un benchmark no solo da un numero: detecta montajes malos (pasta termica mal aplicada = puntaje bajo y caliente), RAM con XMP/EXPO desactivado, o una PSU que se cae bajo carga.</p>
+
+          <div class="three-canvas" data-model="bench-scores" data-title="Bateria recomendada: sintetico + carga real + termal">
+              <div class="three-stage"></div>
+              <div class="three-bar"><span class="three-title">Que mide cada test</span><span class="three-hint">2D esquematico</span></div>
+            </div>
+
+          <h3>La bateria minima</h3>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Prueba</th><th>Que valida</th><th>Como se lee</th></tr>
+            <tr><td>Cinebench (multi)</td><td>Todo el CPU bajo carga sostenida</td><td>Puntaje cercano al de reviews del modelo; temperatura estable &lt; 90 °C</td></tr>
+            <tr><td>Cinebench (single)</td><td>Un nucleo full boost</td><td>Si es bajo, revisa que el boost funcione y no haya throttling bizarro</td></tr>
+            <tr><td>3DMark Time Spy</td><td>GPU + CPU en escenas 3D</td><td>Compara el puntaje con el oficial del modelo online</td></tr>
+            <tr><td>Prime95 (Small FFT)</td><td>Estabilidad del CPU y RAM</td><td>20-30 min sin cuelgues ni errores; temperatura a tope</td></tr>
+            <tr><td>FurMark u OCCT</td><td>Termal peor caso de la GPU</td><td>Sin artefactos, sin crash de driver, GPU &lt; 85 °C</td></tr>
+          </table></div>
+
+          <h3>Antes de correr nada</h3>
+          <ul>
+            <li><strong>Activa XMP (Intel) / EXPO (AMD)</strong> en el BIOS para que la RAM corra a su velocidad nominal. Con DDR5 olvidado, pierdes 10-15% de rendimiento silenciosamente.</li>
+            <li><strong>Instala el driver de la GPU</strong> limpio (DDU + ultimo driver). Benchmarks con drivers genericos de Windows dan numeros falsos.</li>
+            <li><strong>Fija el perfil de energia</strong> en "Rendimiento maximo" para que el CPU no se contenga.</li>
+            <li><strong>Deja el HWiNFO o MSI Afterburner abierto</strong> para leer temperaturas en vivo mientras corre el test.</li>
+          </ul>
+
+          <div class="code-block">
+            <div class="code-head"><span class="code-lang">Lectura de sensores (HWiNFO)</span><span class="code-copy" onclick="navigator.clipboard?.writeText(this.parentNode.nextElementSibling.textContent)">Copiar</span></div>
+            <pre><span class="cmd-comment"># Columnas que importan en HWiNFO durante un test</span>
+<span class="cmd-keyword">CPU Package Power</span>          <span class="cmd-value">% lo que consume el CPU bajo carga</span>
+<span class="cmd-keyword">CPU Package Temp</span>          <span class="cmd-value">°C maximo sostenido (repojo: 40-50, carga: 70-90)</span>
+<span class="cmd-keyword">Core Clock (effective)</span>     <span class="cmd-value">MHz alcanzados; si bajan a la mitad = throttling</span>
+<span class="cmd-keyword">GPU Temp / GPU Hotspot</span>     <span class="cmd-value">ambas; si hotspot supera por 20+ a la temp, revisa montaje</span></pre>
+          </div>
+
+          <h3>Como interpretar los numeros</h3>
+          <ul>
+            <li><strong>Compara con reviews del modelo exacto.</strong> Busca "Cinebench R23 [tu CPU]" y veras el rango esperado. Un 5-10% menos puede ser RAM sin XMP, BIOS antigua o refrigeracion deficiente.</li>
+            <li><strong>Los FPS verdaderos se miden en el juego</strong> con un overlay (Afterburner + RivaTuner). Los sinteticos sirven para igualdad, no para tu experiencia real.</li>
+            <li><strong>Un puntaje correcto pero temperatura alta</strong> = arregla la refrigeracion (pasta, airflow) aunque el numero te sirva: en verano o meses despues se volvera un problema.</li>
+          </ul>
+          <div class="alert-box alert-warning">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Cuelgue, reinicio o artefactos durante el test = fallo real:</strong> no lo ignores como "el programa se cerro". Sigue el orden: XMP/EXPO apagado como control, montaje de CPU/RAM, PSU insuficiente, BIOS actualizada. Si el PC se apaga bajo carga, sospecha primero de la PSU.</div>
+          </div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Guarda los puntajes:</strong> anota Cinebench multi/single y 3DMark con fecha y config (RAM XMP si/no, version de driver). En 6 meses, repetir el test te dira si la pasta o el ventilador estan degradados antes de que falle la GPU.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-instalacion-detallada.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="pruebas-y-validacion-post-ensamblaje.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Pruebas y Validacion Post-Ensamblaje</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="actualizacion-de-bios-flashing.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Actualizacion de BIOS (Flashing)</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

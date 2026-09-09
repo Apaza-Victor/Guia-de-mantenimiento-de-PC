@@ -937,9 +937,16 @@ body.reading-mode *{transition:none !important;}
   font-family:var(--font-mono);font-weight:600;
   color:var(--text);
   font-size:.72rem;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  line-height:1.4;
+  white-space:normal;overflow:visible;text-overflow:clip;
+  flex:1 1 auto;min-width:0;
 }
-.three-hint{white-space:nowrap;}
+.three-hint{white-space:nowrap;flex-shrink:0;}
+@media(min-width:768px){
+  .three-bar{flex-wrap:wrap;}
+  .three-bar .three-title{flex:1 1 100%;}
+  .three-bar .three-hint{flex:1 1 100%;}
+}
 .three-actions{display:flex;gap:.35rem;align-items:center;}
 .three-btn{
   font-family:var(--font-mono);font-size:.62rem;

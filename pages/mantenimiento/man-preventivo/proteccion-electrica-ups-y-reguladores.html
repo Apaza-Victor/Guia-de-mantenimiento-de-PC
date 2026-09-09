@@ -43,14 +43,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -86,6 +86,31 @@
             <li><strong>Conecta solo lo critico:</strong> PC y monitor. No conectes impresoras laser ni aspiradoras.</li>
             <li><strong>Prueba la bateria:</strong> muchos UPS tienen boton de autotest; reemplaza la bateria cada 2-3 anios.</li>
           </ul>
+
+          <h3>Tipos de UPS</h3>
+          <div class="table-scroll mt-2"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Como trabaja</th><th>Para quien</th></tr>
+            <tr><td>Offline (standby)</td><td>Pasa la red directa; conmuta a bateria cuando se cae el voltaje (4-10 ms)</td><td>PC de oficina y hogar</td></tr>
+            <tr><td>Line-interactive</td><td>Regula con auto-regulacion y respaldo constante; aguanta cortes frecuentes</td><td>El equilibrio recomendado para la mayoria</td></tr>
+            <tr><td>Online (doble conversion)</td><td>Siempre trabaja con bateria/inversor; tiempo de conmutacion cero</td><td>Servidores, NAS y equipos criticos</td></tr>
+          </table></div>
+          <p>Para la mayoria de los clientes el <strong>line-interactive</strong> es la mejor compra: cuesta poco mas que un regulador y protege de cortes y de voltaje fluctuante.</p>
+
+          <h3>El calculo VA con un ejemplo</h3>
+          <p>Si el equipo consume 400W reales (suma del techo de CPU + GPU + monitor), buscas un UPS que aguante <strong>al menos 550-600VA</strong> con factor de potencia realista (los VA se convierten a watts multiplicando por ~0.6-0.7 en equipos de gama media). Regla simple: 700VA cubre una PC de gama media con monitor; 1000-1500VA para gama alta con varios monitores.</p>
+
+          <h3>Reglas de instalacion que ningun tutorial menciona</h3>
+          <ul>
+            <li><strong>Tierra real:</strong> un UPS sin conexion a tierra no filtra nada; verifica con un probador de tomas que el toma tenga tierra y la polaridad correcta.</li>
+            <li><strong>Nada de regletas detras:</strong> el UPS se conecta directo a la pared, no encadenar regletas ni extensiones de baja calidad.</li>
+            <li><strong>Bateria:</strong> la bateria de plomo del UPS se reemplaza cada 2-3 anos (o cuando el autotest falla); no esperes a que se baje durante un corte para descubrirlo.</li>
+            <li><strong>Software de apagado:</strong> instala la utilidad del fabricante (PowerChute, etc.) para que el equipo se apague solo si el corte supera la autonomia.</li>
+            <li><strong>Proteccion de datos:</strong> muchos UPS traen proteccion para el cable de red/RJ45: usala, evita que un rayo entre por el cable de internet.</li>
+          </ul>
+          <div class="info-box info-warn">
+            <span class="icon"><i class="bi bi-exclamation-triangle"></i></span>
+            <div class="content"><strong>No confundas proteccion con respaldo:</strong> el regulador protege el voltaje pero NO da bateria; el UPS da bateria pero casi siempre conectado a un toma protegido del mismo circuito electrico. Un combo minimo recomendado: protector de picos en la pared + UPS line-interactive para lo critico.</div>
+          </div>
         </div>
   </div></div>
   <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../man-preventivo.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>

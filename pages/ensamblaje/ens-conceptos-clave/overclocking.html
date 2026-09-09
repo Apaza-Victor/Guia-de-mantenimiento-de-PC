@@ -41,14 +41,14 @@
     <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="../../../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-    <li class="nav-item"><a href="../ensamblaje.html"><i class="bi bi-tools"></i> Ensamblaje</a></li>
-    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html"><i class="bi bi-shield-check"></i> Mantenimiento</a></li>
-    <li class="nav-item"><a href="../../redes/redes.html"><i class="bi bi-globe2"></i> Redes</a></li>
-    <li class="nav-item"><a href="../../herramientas/herramientas.html"><i class="bi bi-wrench"></i> Herramientas</a></li>
-    <li class="nav-item"><a href="../../recursos.html#recursos"><i class="bi bi-link-45deg"></i> Recursos</a></li>
-    <li class="nav-item"><a href="../../comandos.html#comandos"><i class="bi bi-terminal"></i> Comandos</a></li>
-    <li class="nav-item"><a href="../../glosario.html"><i class="bi bi-book"></i> Glosario</a></li>
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../../mantenimiento/mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
   </ul>
   <div class="topbar-actions">
 
@@ -72,6 +72,22 @@
 <div class="content-section" data-aos="fade-up"><div class="lesson-body">
 
           <p class="text-sm text-secondary">El overclocking consiste en aumentar la frecuencia de reloj de la CPU, GPU o RAM por encima de los valores de fabrica para obtener mayor rendimiento. Requiere buena refrigeracion, una fuente de poder estable y una placa base con opciones de overclocking en la BIOS. Aumenta el consumo electrico y genera mas calor. Puede acortar la vida util del componente.</p>
+
+          <h3>Que se ajusta y en que orden</h3>
+          <ul>
+            <li><strong>Multiplicador (ratio):</strong> la base del overclock de CPU moderna: 43x a 46x en un CPU desbloqueado (sufijo K / SKU que lo permite).</li>
+            <li><strong>Voltaje Vcore:</strong> se sube lo minimo para estabilizar el multiplicador (1.25V → 1.30V por pasos de 0.01-0.015V). Mas voltaje = mas calor, mucho cuidado.</li>
+            <li><strong>RAM:</strong> activar el perfil EXPO/XMP es un overclock oficial de memoria; subir mas alla (timings o frecuencia) rinde muy poco y rompe facil.</li>
+            <li><strong>Debajo de todo:</strong> un OC solo vale si la temperatura de carga queda bajo 90C en CPU y 75C en RAM/DDR5; el primer punto de control despues de cada cambio.</li>
+          </ul>
+          <div class="alert-box alert-danger">
+            <i class="bi bi-shield-exclamation"></i>
+            <div><strong>Los limites no son el maximo:</strong> en CPUs modernos el "auto OC" y PBO (AMD) ya dejan poco en la mesa. Voltear un i9/K a 1.4V para ganar 3% es regalarle vida util al chip. El overclock serio se hace por pasos chicos, test de estabilidad en cada uno y con reset del CMOS como cobertura.</div>
+          </div>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Test de estabilidad minimo:</strong> media hora de Prime95/Cinebench para CPU y una pasada de MemTest86 para RAM antes de dar por bueno el perfil. Si un test crashea o da errores, volve un paso atras.</div>
+          </div>
         </div>
   </div></div>
   <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../ens-conceptos-clave.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>

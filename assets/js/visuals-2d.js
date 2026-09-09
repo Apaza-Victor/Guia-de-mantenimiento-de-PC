@@ -37,7 +37,7 @@
       circle(cx - r * 0.3, cy - r * 0.3, Math.max(0.6, r * 0.32), '#f3dc9a');
   }
   function frameLabel(name) {
-    return '<g opacity=".55">' + text(80, 24, name, 9, '#9aa0ab') + '</g>';
+    return '<g opacity=".9">' + text(80, 19, name, 12.5, '#c9cdd6') + '</g>';
   }
 
   /* === PUERTOS HEMBRA (vista frontal: cavidad + pines) === */
@@ -576,7 +576,7 @@
     var inner = frameLabel('USB Ventoy');
     inner += rect(40, 36, 72, 18, '#0d0f14');
     inner += rect(112, 38, 16, 14, '#3bc2c9');
-    inner += text(76, 49, 'Ventoy', 8, '#3bc2c9');
+    inner += text(76, 49, 'Ventoy', 9.5, '#3bc2c9');
     return svg(160, 92, inner);
   };
   MODELS.spudger = function () {
@@ -592,7 +592,7 @@
     inner += rect(26, 40, 14, 12, '#8a5cf5');
     inner += rect(44, 40, 72, 12, '#3b82c4');
     inner += rect(120, 40, 14, 12, '#e27d2b');
-    inner += text(24, 80, 'MBR 512B + 4 particiones primarias', 8, '#9aa0ab', 'start');
+    inner += text(24, 80, 'MBR: 512B + 4 primarias', 9.5, '#aeb4bf', 'start');
     return svg(160, 92, inner);
   };
   MODELS['disk-gpt'] = function () {
@@ -602,7 +602,8 @@
     inner += rect(42, 40, 60, 12, '#3b82c4');
     inner += rect(106, 40, 16, 12, '#e27d2b');
     inner += rect(126, 40, 8, 12, '#4cb057');
-    inner += text(24, 80, 'GPT: tablas espejadas + 128 particiones', 8, '#9aa0ab', 'start');
+    inner += text(24, 74, 'GPT: tablas espejadas', 9.5, '#aeb4bf', 'start');
+    inner += text(24, 87, '128 particiones posibles', 9, '#aeb4bf', 'start');
     return svg(160, 92, inner);
   };
 
@@ -610,10 +611,10 @@
     var inner = frameLabel('Hub vs Switch');
     inner += rect(20, 26, 50, 40, '#e27d2b');
     inner += text(45, 48, 'HUB', 12, '#fff');
-    inner += text(45, 60, 'comparte', 7, '#fff');
+    inner += text(45, 60, 'comparte', 8, '#fff');
     inner += rect(90, 26, 50, 40, '#4cb057');
     inner += text(115, 48, 'SWITCH', 9, '#fff');
-    inner += text(115, 60, 'segmenta', 7, '#fff');
+    inner += text(115, 60, 'segmenta', 8, '#fff');
     for (var i = 0; i < 3; i++) inner += circle(30, 80, 4, '#e27d2b') + circle(115, 80, 4, '#4cb057');
     return svg(160, 92, inner);
   };
@@ -650,7 +651,7 @@
     inner += rect(28, 52, 104, 10, '#2a2d36');
     for (var i = 0; i < 8; i++) { inner += rect(34 + i * 12, 42, 8, 8, '#3b82c4'); }
     inner += rect(60, 40, 40, 12, '#0d0f14');
-    inner += text(80, 49, 'Bomba', 7, '#e9ebee');
+    inner += text(80, 49, 'Bomba', 8.5, '#e9ebee');
     return svg(160, 92, inner);
   };
   MODELS['air-cooler'] = function () {
@@ -680,7 +681,7 @@
     rows.forEach(function (r, i) {
       var y = 34 + i * 14;
       inner += rect(30, y, 44, 10, r[1]);
-      inner += text(86, y + 8, r[0], 9, '#c8ccd4', 'start');
+      inner += text(86, y + 8, r[0], 10.5, '#c8ccd4', 'start');
     });
     return svg(160, 92, inner);
   };
@@ -769,16 +770,154 @@
     return svg(160, 92, inner);
   };
 
+  /* === MONITORES Y PRESUPUESTO (ens-guia-compra) === */
+  MODELS['monitor-panels'] = function () {
+    var inner = frameLabel('Tipos de panel');
+    var rows = [
+      ['TN', '#d8433d', 'Velocidad'], ['VA', '#e3b341', 'Contraste'],
+      ['IPS', '#3b82c4', 'Color/Angulo'], ['OLED', '#4cb057', 'Negros puros']
+    ];
+    rows.forEach(function (r, i) {
+      var y = 28 + i * 16;
+      inner += rect(20, y, 34, 10, r[1]);
+      inner += text(60, y + 8, r[0], 9.5, '#e9ebee', 'start');
+      inner += text(100, y + 8, r[2], 8, '#aeb4bf', 'start');
+    });
+    return svg(160, 96, inner);
+  };
+  MODELS['monitor-refresh'] = function () {
+    var inner = frameLabel('Frecuencia de refresco');
+    var vals = [60, 75, 144, 240];
+    vals.forEach(function (h, i) {
+      var y = 30 + i * 14;
+      var w = Math.max(8, h * 0.35);
+      inner += rect(24, y, w, 8, ['#9aa0ab', '#3b82c4', '#3b82c4', '#4cb057'][i]);
+      inner += text(24 + w + 8, y + 8, h + ' Hz', 8.5, '#c8ccd4', 'start');
+    });
+    return svg(160, 96, inner);
+  };
+  MODELS['build-budget'] = function () {
+    var inner = frameLabel('Armado por presupuesto');
+    var tiers = [
+      ['Basico', '#4cb057', 40, '~$600'],
+      ['Medio', '#e3b341', 70, '~$1.1K'],
+      ['Alto', '#d8433d', 100, '~$2K+']
+    ];
+    tiers.forEach(function (t, i) {
+      var y = 32 + i * 20;
+      inner += rect(20, y, t[2], 12, t[1]);
+      inner += text(20 + t[2] + 8, y + 9, t[0] + '  ' + t[3], 9.5, '#e9ebee', 'start');
+    });
+    return svg(160, 96, inner);
+  };
+
+  MODELS['smart-attr'] = function () {
+    var inner = frameLabel('Atributos SMART');
+    var rows = [
+      ['Reallocated', '#e3b341', 'Vigilar'],
+      ['Pending', '#e3b341', 'Revisar'],
+      ['Temp (50C)', '#4cb057', 'OK'],
+      ['Raw ERR', '#d8433d', 'Crash']
+    ];
+    rows.forEach(function (r, i) {
+      var y = 30 + i * 15;
+      inner += rect(20, y, 40, 9, r[1]);
+      inner += text(66, y + 8, r[0], 9, '#e9ebee', 'start');
+      inner += text(130, y + 8, r[2], 8, '#c8ccd4', 'middle');
+    });
+    return svg(160, 96, inner);
+  };
+  MODELS['laptop-layers'] = function () {
+    var inner = frameLabel('Laptop por capas');
+    var rows = [
+      ['Bezel + panel LCD', '#3a3e49'],
+      ['Cable eDP / antenas', '#3b82c4'],
+      ['Deck + teclado', '#4cb057'],
+      ['Base + placa + bateria', '#2a2d36']
+    ];
+    rows.forEach(function (r, i) {
+      var y = 28 + i * 16;
+      inner += rect(20, y, 120, 10, r[1]);
+      inner += text(80, y + 8, r[0], 7.5, '#e9ebee');
+    });
+    return svg(160, 96, inner);
+  };
+  MODELS['cpu-ladder'] = function () {
+    var inner = frameLabel('Gama y cantidad de hilos');
+    var rows = [
+      ['Entrada', 20, '#4cb057', '4C / 8T'],
+      ['Media', 32, '#e3b341', '6C / 12T'],
+      ['Alta', 46, '#d98f3e', '8C / 16T'],
+      ['Top', 58, '#d8433d', '16C+']
+    ];
+    rows.forEach(function (r, i) {
+      var y = 30 + i * 17;
+      inner += text(14, y + 8, r[0], 7.5, '#c8ccd4', 'start');
+      inner += rect(66, y, r[1], 9, r[2]);
+      inner += text(66 + r[1] + 3, y + 8, r[3], 7.5, '#e9ebee', 'start');
+    });
+    return svg(160, 98, inner);
+  };
+  MODELS['backup-chain'] = function () {
+    var inner = frameLabel('Cadenas de restauracion');
+    function row(y, names, color, label) {
+      var s = '', x = 20;
+      names.forEach(function (n) {
+        s += rect(x, y, 8, 8, color);
+        x += 11;
+      });
+      return s + text(70, y + 8, label, 8, '#c8ccd4', 'start');
+    }
+    inner += row(28, ['F'], '#4cb057', 'Full: 1');
+    inner += row(46, ['F', 'I1', 'I2', 'I3'], '#e3b341', 'Incremental: 4');
+    inner += row(64, ['F', 'D1', 'D2', 'D3'], '#3b82c4', 'Diferencial: 2');
+    return svg(160, 96, inner);
+  };
+  MODELS['diagnostico-post'] = function () {
+    var inner = frameLabel('Diagnostico POST');
+    inner += rect(10, 30, 60, 16, '#d8433d', ' rx="2"');
+    inner += text(40, 40, 'No enciende', 7.5, '#fff');
+    inner += rect(90, 30, 70, 16, '#e3b341', ' rx="2"');
+    inner += text(125, 40, '1s y corta', 7.5, '#1c1f29');
+    inner += rect(10, 56, 60, 16, '#e3b341', ' rx="2"');
+    inner += text(40, 66, 'Pitidos RAM', 7.5, '#1c1f29');
+    inner += rect(90, 56, 70, 16, '#3b82c4', ' rx="2"');
+    inner += text(125, 66, 'Sin video', 7.5, '#fff');
+    inner += path('M70 38 H88', '#9aa0ab', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M40 46 V52', '#9aa0ab', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += path('M125 46 V52', '#9aa0ab', ' stroke="#9aa0ab" stroke-width="1.5"');
+    inner += rect(20, 74, 120, 12, '#4cb057', ' rx="2"');
+    inner += text(80, 82, 'Minimo: placa + CPU + 1 RAM', 8.5, '#fff');
+    return svg(160, 96, inner);
+  };
+  MODELS['bench-scores'] = function () {
+    var inner = frameLabel('Que mide cada test');
+    var rows = [
+      ['Cinebench', '#3b82c4', 'CPU multi'],
+      ['3DMark', '#e27d2b', 'GPU + CPU'],
+      ['Prime95', '#d8433d', 'Estabilidad'],
+      ['FurMark', '#e3b341', 'GPU termal']
+    ];
+    rows.forEach(function (r, i) {
+      var y = 30 + i * 15;
+      inner += rect(20, y, 44, 9, r[1]);
+      inner += text(70, y + 8, r[0], 9, '#e9ebee', 'start');
+      inner += text(134, y + 8, r[2], 8, '#aeb4bf', 'middle');
+    });
+    return svg(160, 96, inner);
+  };
+
   /* === PLANES DE MANTENIMIENTO (man-preventivo) === */
   MODELS['backup-321'] = function () {
     var inner = frameLabel('Regla 3-2-1');
     for (var i = 0; i < 3; i++) {
       var x = 24 + i * 40;
-      inner += rect(x, 34, 28, 24, i === 2 ? '#4cb057' : '#3b82c4');
-      inner += circle(x + 14, 40, 6, '#0d0f14');
-      inner += text(x + 14, 52, ['Original', 'Local', 'Remoto'][i], 6.5, '#fff');
+      inner += rect(x, 28, 26, 20, i === 2 ? '#4cb057' : '#3b82c4');
+      inner += circle(x + 13, 36, 5.5, '#0d0f14');
+      inner += text(x + 13, 43, String(i + 1), 8.5, '#fff');
+      inner += text(x + 13, 62, ['Original', 'Local', 'Remoto'][i], 7.5, '#c8ccd4');
     }
-    inner += text(24, 76, '3 copias · 2 medios · 1 externo', 8, '#9aa0ab', 'start');
+    inner += text(80, 80, '3 copias · 2 medios · 1 externo', 8.5, '#aeb4bf', 'middle');
     return svg(160, 92, inner);
   };
   MODELS['plan-calendar'] = function () {
@@ -798,8 +937,23 @@
     inner += rect(44, 38, 26, 22, '#4cb057');
     inner += rect(76, 40, 30, 12, '#0d0f14');
     inner += rect(80, 44, 6, 4, '#f6c344');
-    inner += text(80, 70, 'Bateria + regulador', 7, '#9aa0ab');
+    inner += text(80, 70, 'Bateria + regulador', 8.5, '#aeb4bf');
     return svg(160, 92, inner);
+  };
+
+  /* Nombre legible de cada conector para la tarjeta .port-2d */
+  var DISPLAY = {
+    atx24: 'ATX 24 pines', atx20: 'ATX 20 pines', eps8: 'EPS 8 pines (CPU)', eps4: 'EPS 4 pines',
+    pcie62: 'PCIe 6+2 pines', '12vhpwr': '12VHPWR 16 pines', 'sata-power': 'SATA Power 15',
+    'sata-data': 'SATA Data 7', molex: 'Molex 4', berg: 'Berg 4 (FDD)', hdmi: 'HDMI (19 pines)',
+    'hdmi-mini': 'HDMI Mini', 'hdmi-micro': 'HDMI Micro', dp: 'DisplayPort (20 pines)',
+    minidp: 'Mini DisplayPort', vga: 'VGA (DB-15)', dvi: 'DVI (24+1)', svideo: 'S-Video',
+    'rca-video': 'RCA compuesto', ypbpr: 'Componentes YPbPr', 'usb-a': 'USB-A',
+    'usb-b': 'USB-B', 'usb-c': 'USB-C 24 pines', thunderbolt: 'Thunderbolt 3/4',
+    'usb-mini': 'USB Mini-B', 'usb-micro': 'USB Micro-B', jack35: 'Jack 3.5 mm',
+    toslink: 'S/PDIF optico', rj45: 'RJ-45', rj11: 'RJ-11 (telefono)', ps2: 'PS/2',
+    com: 'COM (DB-9)', 'ac-cable': 'IEC C14', 'dc-jack': 'Jack DC (barrel)',
+    'coax-fconn': 'Coaxial F', 'fiber-sc': 'Fibra SC', 'fiber-lc': 'Fibra LC (duplex)', 'fiber-st': 'Fibra ST'
   };
 
   function resolve(name, dataMode) {
@@ -817,7 +971,8 @@
   function portBlock(name, dataMode) {
     var d = document.createElement('div');
     d.className = 'port-2d';
-    d.innerHTML = '<div class="port-2d-title"><i class="bi bi-hdd"></i> Puerto hembra (2D)</div>' + resolve(name, dataMode);
+    var label = DISPLAY[name] || name;
+    d.innerHTML = '<div class="port-2d-title" title="' + esc(label) + '"><i class="bi bi-hdd"></i> ' + esc(label) + ' · vista frontal</div>' + resolve(name, dataMode);
     return d;
   }
 
@@ -849,8 +1004,14 @@
         stage.classList.add('stage-2d');
         var hint = el.querySelector('.three-hint');
         if (hint) hint.textContent = 'diagrama 2D';
-        var t = el.querySelector('.three-title');
-        if (t && FEMALE[name]) t.textContent = t.textContent.replace(/ \u00b7 macho \+ hembra/, '') + ' · puerto';
+      }
+      var tv = el.querySelector('.three-title');
+      if (tv) {
+        var full = el.dataset.title || null;
+        if (full) {
+          tv.textContent = full;
+          tv.title = full;
+        }
       }
     });
     if (!is3D) document.body.classList.add('page-vis2d');

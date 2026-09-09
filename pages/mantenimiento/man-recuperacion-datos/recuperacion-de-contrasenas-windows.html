@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperacion de contrasenas en Windows - Recuperacion de Datos | TechGuide</title>
+  <meta name="description" content="Que hacer cuando el cliente no recuerda la contrasena de Windows: utilman trick, net user, medios de arranque y cuando es ilegal hacerlo.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recuperacion de contrasenas en Windows - Recuperacion de Datos | TechGuide">
+  <meta property="og:description" content="Metodos tecnicos para recuperar acceso a Windows y los limites legales.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/recuperacion-de-contrasenas-windows.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Recuperacion de contrasenas en Windows - Recuperacion de Datos | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/recuperacion-de-contrasenas-windows.html",
+  "description": "Que hacer cuando el cliente no recuerda la contrasena de Windows: utilman trick, net user, medios de arranque y cuando es ilegal hacerlo.",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Recuperacion de Datos - Mantenimiento | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <div class="page-hero-icon" style="background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.25);color:var(--accent);"><i class="bi bi-key"></i></div>
+      <h1>Recuperacion de contrasenas en Windows</h1>
+      <p>El acceso se pierde: los datos no</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../mantenimiento.html">Mantenimiento</a><span class="sep">/</span><a href="../man-recuperacion-datos.html">Recuperacion de Datos</a><span class="sep">/</span><span class="current">Recuperacion de contrasenas en Windows</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Es de los pedidos mas frecuentes en un taller: "se me olvido la contrasena". Antes de tocar nada, aclara la variante: no es lo mismo local perder una contrasena local, una de Microsoft online, un PIN o el acceso a BitLocker. Cada caso tiene su camino.</p>
+
+          <h3>Primero: con que te quedaste afuera</h3>
+          <div class="table-scroll"><table class="cmd-table">
+            <tr><th>Tipo</th><th>Como se resuelve</th><th>Dificultad</th></tr>
+            <tr><td>Contrasena local (offline)</td><td>Con utillmenos, un arrancable o el restore de SAM</td><td>Media</td></tr>
+            <tr><td>PIN de Windows Hello</td><td>Se puede resetear desde "Olvide mi PIN" con la contrasena de la cuenta Microsoft</td><td>Baja</td></tr>
+            <tr><td>Cuenta Microsoft (online)</td><td>Resetear en account.microsoft.com en otro dispositivo</td><td>Baja</td></tr>
+            <tr><td>BitLocker cifrado</td><td>Necesitas la clave de recuperacion o el chip TPM del equipo original</td><td>Alta / a veces imposible</td></tr>
+          </table></div>
+          <div class="alert-box alert-warning">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Caso BitLocker:</strong> no pierdas horas forzando errores de arranque que piden la clave. La clave de recuperacion esta en la cuenta Microsoft del propietario (account.microsoft.com &gt; Dispositivos) o impresa cuando se activo. Sin clave ni TPM del equipo original, los datos quedan cifrados y eso se lo explicas educadamente al cliente.</div>
+          </div>
+
+          <h3>Metodo utilman (Windows local, sin cifrado)</h3>
+          <p>En versiones de Windows con la pantalla de acceso, se puede abrir el Símbolo del sistema antes de loguearse reemplazando la aplicacion de accesibilidad: en realidad es el clasico truco del "Azul de Windows". Necesitas arrancar con un medio de instalacion de Windows (o la Recovery) y en el teclado presionar Shift+F10 en la reparacion avanzada.</p>
+          <ol>
+            <li>Arranca desde el USB de Windows e ingresa a "Reparar el equipo" (Shift+F10).</li>
+            <li>Ubica la particion del sistema (suele ser C:) y reemplaza <strong>utilman.exe</strong> por <strong>cmd.exe</strong> con reinicio (copia del archivo original primero).</li>
+            <li>Reinicia normal, en la pantalla de login presiona la accesibilidad (Usuarios / utilidad).</li>
+            <li>Ejecuta <strong>net user</strong> para listar usuarios y luego <strong>net user usuario contrasenanueva</strong>.</li>
+            <li>Logueate con la nueva contrasena y restaura utilman.exe original.</li>
+          </ol>
+
+          <div class="code-block">
+            <div class="code-head"><span class="code-lang">Consola de recuperacion (desplazamiento)</span><span class="code-copy" onclick="navigator.clipboard?.writeText(this.parentNode.nextElementSibling.textContent)">Copiar</span></div>
+            <pre><span class="cmd-comment"># desde la consola de reparacion (Shift+F10) sobre C:\Windows</span>
+<span class="cmd-keyword">cd</span> \Windows\System32
+<span class="cmd-keyword">ren</span> utilman.exe utilman.bak
+<span class="cmd-keyword">copy</span> cmd.exe utilman.exe
+<span class="cmd-comment"># reiniciar e ingresar a accesibilidad</span>
+<span class="cmd-keyword">net user</span> <span class="cmd-value"># lista los usuarios locales</span>
+<span class="cmd-keyword">net user</span> pedro nuevaClave123
+<span class="cmd-comment"># restaura el archivo original despues</span></pre>
+          </div>
+          <div class="info-box info-danger">
+            <span class="icon"><i class="bi bi-shield-exclamation"></i></span>
+            <div class="content"><strong>Solo con autorizacion:</strong> este metodo da acceso total a la maquina. Hacelo unicamente con el propietario presente y constancia del pedido. Usarlo en equipos ajenos sin consentimiento es delito en casi todos los paises.</div>
+          </div>
+
+          <h3>Medios de recuperacion (Hiren's BootCD / Lazesoft)</h3>
+          <ul>
+            <li>USB booteable tipo Ventoy con una herramienta de restablecer contrasena de SAM (por ejemplo Lazesoft Recovery Suite Home u Offline NT Password).</li>
+            <li>Funcionan borrando o cambiando la contrasena local directamente en el archivo SAM, sin necesidad de la Recovery de Windows.</li>
+            <li>No funcionan con cuentas Microsoft ni BitLocker activo.</li>
+          </ul>
+
+          <h3>El flujo correcto del tecnico</h3>
+          <ol>
+            <li><strong>Pregunta por la cuenta:</strong> local vs Microsoft; BitLocker on/off.</li>
+            <li><strong>Descarta lo simple:</strong> PIN olvidado, mayusculas activadas, teclado en otro layout.</li>
+            <li><strong>Respalda el disco antes de manipular el SAM</strong> (los metodos tocan el archivo de cuentas; un fallo ahi deja la maquina inaccesible peor que antes).</li>
+            <li><strong>Documenta</strong> el pedido y el metodo usado en la hoja de registro.</li>
+          </ol>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Recomendacion para el cliente:</strong> vincular la cuenta a Microsoft, activar PIN y anotar la clave BitLocker. Ese tridente evita el 90% de los pedidos de recuperacion y reduce el servicio a 5 minutos.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../man-recuperacion-datos.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="errores-que-arruinan-la-recuperacion.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Errores que arruinan la recuperacion</span></a>
+    <span class="lesson-nav-empty"></span>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

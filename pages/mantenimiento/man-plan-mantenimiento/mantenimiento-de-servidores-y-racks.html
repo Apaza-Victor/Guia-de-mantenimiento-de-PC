@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento de servidores y racks - Plan de Mantenimiento | TechGuide</title>
+  <meta name="description" content="Reglas de operacion de rack: unidades, PDU, flujo de aire, paradas programadas, respaldo de cache raid, firmware y el orden correcto de trabajo en un rack.">
+  <meta name="theme-color" content="#0f1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mantenimiento de servidores y racks - Plan de Mantenimiento | TechGuide">
+  <meta property="og:description" content="Trabaja sobre un rack sin tumbar la sala y sin despertar al administrador.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="../../../assets/css/styles.css?v=3" rel="stylesheet">
+
+<link rel="canonical" href="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/mantenimiento-de-servidores-y-racks.html">
+<meta property="og:image" content="https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/assets/img/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Mantenimiento de servidores y racks - Plan de Mantenimiento | TechGuide",
+  "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/mantenimiento-de-servidores-y-racks.html",
+  "description": "Reglas de operacion de rack: unidades, PDU, flujo de aire, paradas programadas, respaldo de cache raid, firmware y el orden correcto de trabajo en un rack.",
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Plan de Mantenimiento - Mantenimiento | TechGuide",
+    "url": "https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento.html"
+  }
+}
+</script>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"><div class="reading-progress-fill"></div></div>
+<header class="topbar">
+  <div class="topbar-brand">
+    <a href="../../../index.html" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;"><i class="bi bi-cpu"></i><span>Tech<span>Guide</span></span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a href="../../../index.html">Inicio</a></li>
+    <li class="nav-item"><a href="../../ensamblaje/ensamblaje.html">Ensamblaje</a></li>
+    <li class="nav-item"><a href="../mantenimiento.html">Mantenimiento</a></li>
+    <li class="nav-item"><a href="../../redes/redes.html">Redes</a></li>
+    <li class="nav-item"><a href="../../herramientas/herramientas.html">Herramientas</a></li>
+    <li class="nav-item"><a href="../../recursos.html#recursos">Recursos</a></li>
+    <li class="nav-item"><a href="../../comandos.html#comandos">Comandos</a></li>
+    <li class="nav-item"><a href="../../glosario.html">Glosario</a></li>
+  </ul>
+  <div class="topbar-actions">
+
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">
+      <i class="bi bi-sun-fill"></i><span>Claro</span>
+    </button>
+    <button class="nav-toggle" id="navToggle"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="main-content">
+  <div class="page-hero">
+    <div class="page-hero-glow"></div>
+    <p>Mantenimiento · Plan de Mantenimiento - Leccion 5 de 6</p>
+    </div>
+  </div>
+<nav class="breadcrumbs" aria-label="Ruta"><a href="../../../index.html">Inicio</a><span class="sep">/</span><a href="../mantenimiento.html">Mantenimiento</a><span class="sep">/</span><a href="../man-plan-mantenimiento.html">Plan de Mantenimiento</a><span class="sep">/</span><span class="current">Mantenimiento de servidores y racks</span></nav>
+<div class="content-section" data-aos="fade-up"><div class="lesson-body">
+
+          <p>Un rack es un ecosistema: servidores, switch, PDU, UPS y un flujo de aire que solo funciona si todo esta en su lugar. El error clasico del tecnico novato es apagar "el servidor" sin saber quien mas vive en ese rack. Antes de tocar un solo riel, dibuja el mapa.</p>
+
+          <h3>Unidades de rack y el flujo de aire</h3>
+          <ul>
+            <li><strong>1U / 2U:</strong> la altura se mide en unidades de rack (1U = 1.75 pulgadas). Entre un equipo y otro conviene dejar un 1U de separacion para ventilacion, salvo que uses paneles ciegos.</li>
+            <li><strong>Flujo de aire:</strong> los servidores chupan frio del frente y tiran caliente por detras. No tapes la llave del frente, no metas un switch "rack-mount" sin espacio de ventilacion lateral.</li>
+            <li><strong>Bloquea los espacios vacios</strong> con paneles ciegos: el aire caliente que recircula por un hueco libre baja la eficiencia de toda la fila.</li>
+            <li><strong>PDU y UPS:</strong> distribuye la carga entre las dos phases de la PDU y anota los dos enchufes de red de cada PSU del servidor en el mapa del rack.</li>
+          </ul>
+          <div class="alert-box alert-warning">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>Nunca desenchufes una PDU solo por mirar:</strong> cada PDU puede alimentar equipos de clientes distintos. La regla de oro es etiquetar "rack de empalme" y pedir ventana de FECHA Y HORA de trabajo antes de tocar alimentacion.</div>
+          </div>
+
+          <h3>Paradas programadas (maintenance window)</h3>
+          <ol>
+            <li><strong>Anuncia y confirma</strong> la ventana con el responsable (inicio, fin, alcance, riesgo de impacto). Nunca en horario de pico del negocio si no es urgente.</li>
+            <li><strong>Orden de apagado:</strong> primero las aplicaciones (Stop-Service / shut), despues el sistema, despues el servidor desde el controlador (BMC/iLO/iDRAC), y por ultimo la electricidad.</li>
+            <li><strong>Orden de encendido inverso:</strong> PDU/UPS, red, servidores, aplicaciones. Verifica boot con el controlador remoto antes de dar el disco por bueno.</li>
+            <li><strong>Ventana documentada:</strong> registra que se toco, duracion y veredicto en la hoja de registro del tecnico.</li>
+          </ol>
+
+          <h3>Limpiar con responsabilidad</h3>
+          <ul>
+            <li>Aire comprimido <strong>nunca dentro del rack encendido</strong>: la carga electrostatica y las particulas en los ventiladores no se discuten. Parada de sala o limpieza localizada con aspirador de bajo riesgo y aire a baja presion.</li>
+            <li>Los filtros frontales de los gabinetes se lavan/rellenan cada 6-12 meses; un filtro satiado se nota en la temperatura del plato de la puerta trasera.</li>
+            <li>Limpia el piso de las pasillos y el cableado de red suelto: el 90% de los "voltajes de red intermitentes" en racks no son el equipo, son cables pateados por mantenimiento.</li>
+          </ul>
+
+          <h3>El detalle que salva el RAID: la bateria de cache</h3>
+          <p>Los controladores RAID con cache (HP Smart Array, Dell PERC, LSI MegaRAID) tienen una bateria o supercapacitor que mantiene el cache en una parada abrupta. <strong>Si la bateria no esta saludable, el controlador desactiva el cache de escritura</strong> y el rendimiento se cae a la mitad. En cada mantenimiento:</p>
+          <ul>
+            <li>Revisa el estado de la bateria en el BIOS del RAID o en la utilidad del armazón (sus estados: OK, recharge, failed).</li>
+            <li>Si dice "failed", el cache se apaga solo: programa el reemplazo de la pieza en la proxima ventana, no es una urgencia de incendio.</li>
+            <li>La cache de escritura sin bateria es un riesgo de corrupcion: resolvelo antes de tocar el OS.</li>
+          </ul>
+
+          <h3>Firmware: la deuda que se paga cada trimestre</h3>
+          <p>Los servidores de marca traen actualizaciones de firmware agrupadas (SMU de HP, Lifecycle de Dell, Simplify de Lenovo) que se instalan con un solo bundle. Programa <strong>una ventana de firmware por trimestre</strong> despues del patch de sistemas: el firmware se toca solo si el bundle lo exige o el parche de seguridad lo requiere.</p>
+          <div class="info-box info-tip">
+            <span class="icon"><i class="bi bi-lightbulb"></i></span>
+            <div class="content"><strong>Que verificar en cada visita al rack:</strong> temperatura del plato trasero (hand test), LED de las PSU y discos, battery del RAID, sync del reloj NTP y el ultimo log de eventos del BMC/OS. Con esos 5 puntos en 10 minutos sabes si tu rack respira.</div>
+          </div>
+        </div>
+  </div></div>
+  <div class="lesson-nav-backwrap"><a class="lesson-nav-back" href="../man-plan-mantenimiento.html"><i class="bi bi-grid-3x3-gap"></i> Volver a la subseccion</a></div>
+  <nav class="lesson-nav" aria-label="Navegacion de la leccion">
+    <a class="lesson-nav-card lesson-nav-prev" href="plan-para-empresas-y-redes.html"><span class="lesson-nav-label"><i class="bi bi-arrow-left"></i> Anterior</span><span class="lesson-nav-title">Plan para empresas y redes</span></a>
+    <a class="lesson-nav-card lesson-nav-next" href="monitoreo-remoto-rmm.html"><span class="lesson-nav-label">Siguiente <i class="bi bi-arrow-right"></i></span><span class="lesson-nav-title">Monitoreo remoto (RMM)</span></a>
+  </nav>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TechGuide v1.0</div>
+      <div class="footer-copy">Guia integral de Hardware, Mantenimiento y Redes</div>
+      <div class="footer-legal">© 2026 TechGuide · Apaza-Victor. Todos los derechos reservados.<br>Ninguna parte de esta guia puede ser copiada, reproducida, modificada, distribuida, publicada ni utilizada de ninguna otra forma sin la autorizacion escrita previa del titular de los derechos de autor.</div>
+    </div>
+    <div class="footer-tags">
+      <span class="footer-tag">Hardware</span>
+      <span class="footer-tag">Mantenimiento</span>
+      <span class="footer-tag">Redes</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" title="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/nav.js"></script>
+<script src="../../../assets/js/ui.js"></script>
+<script src="../../../assets/js/subnet.js"></script>
+<script src="../../../assets/js/visuals-2d.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/lesson-nav.js"></script>
+<script src="../../../assets/js/reading-progress.js"></script>
+<script data-goatcounter="https://techguide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

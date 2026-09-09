@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/index.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/comandos.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-almacenamiento.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-almacenamiento/como-elegir-para-tu-caso.html</loc></url>
@@ -100,10 +101,12 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-gabinete/tipos-de-gabinete-y-factores-de-forma.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-gabinete/ventiladores-del-gabinete.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/armado-por-presupuesto.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/checklist-definitiva-antes-de-pagar.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/como-leer-las-especificaciones.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/cpu-por-rango-de-presupuesto.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/gpu-por-resolucion-objetivo.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/guia-de-monitores.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/placa-base-por-chipset.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/plataformas-actuales-2026.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-guia-compra/psu-almacenamiento-y-gabinete.html</loc></url>
@@ -119,6 +122,7 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-herramientas/preparacion-del-espacio-de-trabajo.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/actualizacion-de-bios-flashing.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/benchmarks-de-rendimiento-y-estabilidad.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/errores-comunes-y-su-solucion.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/instalacion-de-almacenamiento-sata-ssd-2-5-hdd.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/ensamblaje/ens-instalacion-detallada/instalacion-de-fuente-de-poder-psu.html</loc></url>
@@ -345,6 +349,7 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/herramientas-y-preparacion.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/limpieza-interna-ventilador-y-disipador.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/reemplazo-de-disco-ssd-en-portatil.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/reemplazo-de-teclado-bisagras-y-pantalla.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/reparaciones-comunes.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/troubleshooting-rapido-de-laptop.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-laptop/upgrades-de-ram-en-laptop.html</loc></url>
@@ -367,6 +372,8 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/checklist-por-tipo-de-equipo.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/frecuencias-de-tareas.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/hoja-de-registro-del-tecnico.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/mantenimiento-de-servidores-y-racks.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/monitoreo-remoto-rmm.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-mantenimiento/plan-para-empresas-y-redes.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-respaldo.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-plan-respaldo/checklist-del-plan-de-respaldo.html</loc></url>
@@ -403,6 +410,7 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/herramientas-de-recuperacion.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/imagen-bit-a-bit-el-seguro-antes-del-trabajo.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/primeros-pasos-del-tecnico.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-recuperacion-datos/recuperacion-de-contrasenas-windows.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-seguridad-malware.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-seguridad-malware/buenas-practicas-de-seguridad.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-seguridad-malware/canales-de-infeccion-mas-comunes.html</loc></url>
@@ -412,6 +420,7 @@
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/comandos-de-diagnostico-integrados-en-windows.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/como-usar-memtest86.html</loc></url>
+  <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/diagnostico-de-discos-con-herramientas-de-fabricante.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/limpieza-completa-de-drivers-de-gpu-ddu.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/metodologia-de-pruebas-de-estabilidad-stress-tests.html</loc></url>
   <url><loc>https://apaza-victor.github.io/Guia-de-mantenimiento-de-PC/pages/mantenimiento/man-software-diag/visor-de-eventos-en-profundidad.html</loc></url>
