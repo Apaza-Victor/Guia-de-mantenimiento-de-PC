@@ -1,8 +1,9 @@
 /* === RESPONSIVE === */
+html,body{overflow-x:hidden;}
 @media(max-width:1100px){
   .modulos-grid-3{grid-template-columns:repeat(2,1fr);}
 }
-@media(max-width:991px){
+@media(max-width:1100px){
   .global-search{display:none;}
   .nav-menu{
     position:fixed;top:var(--topbar-h);left:0;right:0;bottom:0;
@@ -61,10 +62,10 @@
   .nav-item > a i:first-child,.nav-item > button.nav-drop-btn i:first-child{width:18px;text-align:center;}
 }
 
-/* Buscador: boton circular (solo icono) junto al boton de tema, desde 360px en adelante.
+/* Buscador: boton circular (solo icono) junto al boton de tema, en todo ancho <1280px.
    Al enfocarse se expande como overlay (position:absolute) sin empujar a los iconos
    de tema y hamburguesa; se cierra al tocar fuera o con Escape. */
-@media(min-width:360px) and (max-width:991px){
+@media(max-width:1279px){
   .topbar-actions{position:relative;}
   .global-search{
     display:flex;justify-content:center;
@@ -96,8 +97,22 @@
     min-width:0;max-width:none;
   }
 }
+
+/* Compacto en laptops / tablets (1101-1279px): nav mas denso para que el topbar
+   (marca + nav horizontal 8 items + acciones) entre sin cortarse. */
+@media(min-width:1101px) and (max-width:1279px){
+  .topbar{padding:0 1rem;}
+  .nav-item > a,
+  .nav-item > button.nav-drop-btn{padding:.5rem .6rem;font-size:.78rem;gap:.25rem;}
+  .nav-dropdown a{padding:.45rem .6rem;font-size:.76rem;}
+}
+
 @media(max-width:767px){
   .content-section{padding:2rem 1rem;}
+  .hero{overflow:hidden;}
+  .page-hero{overflow:hidden;}
+  .feat-card{overflow:hidden;}
+  .topbar::before{backdrop-filter:none;-webkit-backdrop-filter:none;}
   .hero{padding:3rem 1.5rem 2.5rem;min-height:calc(100vh - var(--topbar-h));}
   .page-hero{padding:5rem 1.5rem 2.5rem;min-height:auto;}
   .hero h1{font-size:2rem;}
@@ -119,8 +134,12 @@
   .footer-inner{flex-direction:column;align-items:flex-start;}
 }
 @media(max-width:480px){
-  .topbar-brand{font-size:.9rem;}
-  .topbar{padding:0 1rem;}
+  .topbar-brand{font-size:.85rem;}
+  .topbar{padding:0 .75rem;}
+  .topbar-actions{gap:.4rem;}
+  .global-search{width:36px;height:36px;}
+  .btn-theme{padding:7px 9px;}
+  .nav-toggle{padding:7px 9px;}
   .hero h1{font-size:1.7rem;}
   .page-hero-icon{width:52px;height:52px;border-radius:12px;font-size:1.3rem;}
   .home-modulos{padding:2rem .75rem;}
@@ -135,6 +154,8 @@
   .topbar-actions .btn-reading span{display:none;}
 }
 @media(max-width:368px){
+  .topbar{padding:0 .75rem;}
+  .topbar-brand{font-size:.85rem;}
   .hero h1{font-size:1.4rem;}
   .topbar-brand span.brand-full{display:none;}
   .section-title h2{font-size:1.1rem;}

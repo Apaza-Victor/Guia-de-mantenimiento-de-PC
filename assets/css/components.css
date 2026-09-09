@@ -880,7 +880,7 @@ body.reading-mode *{transition:none !important;}
   }
   body{font-size:11pt;line-height:1.5;}
   .topbar,.subnav,.chip-marquee,.nav-overlay,.back-to-top,.btn-theme,
-  .footer,.code-copy,.reading-progress,.breadcrumbs,.topbar-btn,
+  .footer,.code-copy,.reading-progress,.breadcrumbs,
   .page-hero-glow,.page-hero::before,.hero::before,.hero-glow,
   .home-stats-bar,.global-search,.nav-toggle,.lesson-nav{display:none !important;}
   .main-content{margin-top:0 !important;}

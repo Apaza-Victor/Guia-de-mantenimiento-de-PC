@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCodeCopy();
   initSearch();
   initRecSearch();
-  initPrintButton();
   initActiveNav();
   AOS.init({ duration: 800, once: true, offset: 80, easing: 'ease-out-cubic' });
 });
@@ -244,21 +243,6 @@ function copyCode(btn) {
       btn.style.borderColor = '';
     }, 1500);
   });
-}
-
-/* === PRINT / PDF BUTTON === */
-function initPrintButton() {
-  var actions = document.querySelector('.topbar-actions');
-  if (!actions || document.getElementById('printBtn')) return;
-  var btn = document.createElement('button');
-  btn.type = 'button';
-  btn.id = 'printBtn';
-  btn.className = 'topbar-btn';
-  btn.title = 'Imprimir / Guardar PDF';
-  btn.setAttribute('aria-label', 'Imprimir');
-  btn.innerHTML = '<i class="bi bi-printer"></i>';
-  btn.addEventListener('click', () => window.print());
-  actions.insertBefore(btn, actions.firstChild);
 }
 
 /* === ACTIVE TOP NAV === */
